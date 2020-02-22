@@ -1,0 +1,55 @@
+## Script to build the BAC email signature.
+Start-Transcript "$env:USERPROFILE\set-signature-template.log"
+
+$template = Get-Content "\\bacvssccm02\source\GPO\Signatures\BAC.htm"
+$templateDestination = "$env:APPDATA\Microsoft\Signatures"
+$username = $env:USERNAME
+
+#Create template folder
+New-Item -ItemType Directory -Force -Path $templateDestination
+
+#Search for user in AD
+Write-Host "Searching for user in AD..."
+$search = [adsisearcher]"(&(ObjectCategory=Person)(ObjectClass=User)(SamAccountName=$username))"
+$users = $search.FindAll()
+Write-Host "Found $($users.Count) account."
+
+foreach($user in $users) 
+{
+    #Get AD attributes
+    $samAccountName = $user.Properties['SamAccountName']
+    $upn = $user.Properties['UserPrincipalName']
+
+    $displayName = $user.Properties['DisplayName']
+    $title = $user.Properties['Title']
+    $division = $user.Properties['Division']
+    $telephone = $user.Properties['TelephoneNumber']
+    $mobile = $user.Properties['mobile']
+    $email = $user.Properties['mail']
+
+    Write-Host "User account: $samAccountName"
+    Write-Host "UPN: $upn"
+    Write-Host "Display name: $displayName"
+    Write-Host "Title: $title"
+    Write-Host "Division: $division"
+    Write-Host "Telephone: $telephone"
+    Write-Host "Mobile: $mobile"
+    Write-Host "Email: $email"
+    
+    #Find and replace variables in the template with the user's AD attributes
+    Write-Host "Updating template with user's AD attributes..."
+    $template = $template.replace("[DisplayName]",$displayName)
+    $template = $template.replace("[Title]",$title)
+    $template = $template.replace("[Division]",$division)
+    $template = $template.replace("[Telephone]",$telephone.replace("+617",""))
+    $template = $template.replace("[Mobile]",$mobile.replace("+61",""))
+    $template = $template.replace("[Email]",$email.ToLower())
+    Write-Host "Update completed"
+
+    #Save template file to the user's appdata
+    Write-Host "Saving template to $templateDestination"
+    Set-Content "$templateDestination\BAC.htm" $template
+
+}
+
+Stop-Transcript

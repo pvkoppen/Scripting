@@ -1,0 +1,18 @@
+
+
+$lastpatch = Get-WmiObject -ComputerName "COMPUTERNAME" Win32_Quickfixengineering | select @{Name="InstalledOn";Expression={$_.InstalledOn -as [datetime]}} | Sort-Object -Property Installedon | select-object -property installedon -last 1
+Get-Date $lastpatch.InstalledOn -format yyyy-MM-dd
+
+$lastboot = Get-WmiObject -ComputerName "COMPUTERNAME" win32_operatingsystem | select @{Name="LastBootUpTime";Expression={$_.ConverttoDateTime($_.lastbootuptime)}} | Select-Object -Property lastbootuptime
+Get-Date $lastboot.lastbootuptime -Format "yyyy-MM-dd hh:mm:ss tt"
+
+bulk: 
+---------------------------------------------------------
+
+(get-hotfix -computername DSK-1 | sort installedon)[-1] >> 
+C:\FolderLocation\test\file.txt
+
+Get-Content c:\computers_list.txt  | Where {$_ -AND (Test-Connection $_ -Quiet)} | foreach { Get-Hotfix -computername $_ | sort installedon)[-1] >> C:\FolderLocation\test\file.txt
+
+
+(Get-HotFix | sort installedon)[-1]

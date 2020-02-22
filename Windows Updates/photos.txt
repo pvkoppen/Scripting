@@ -1,0 +1,4 @@
+https://answers.microsoft.com/en-us/windows/forum/windows_10-windows_store-winpc/windows-10-store-apps-not-working/af290d48-4d5b-4462-8639-47740b4617f6?auth=1
+
+
+Get-AppxPackage -AllUsers| Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}

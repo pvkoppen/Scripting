@@ -1,0 +1,120 @@
+C:\Users\adm-pvankoppen>certreq /?
+Usage:
+  CertReq -?
+  CertReq [-v] -?
+  CertReq [-Command] -?
+
+  CertReq [-Submit] [Options] [RequestFileIn [CertFileOut [CertChainFileOut [Ful
+lResponseFileOut]]]]
+    Submit a request to a Certification Authority.
+
+  Options:
+    -attrib AttributeString
+    -binary
+    -PolicyServer PolicyServer
+    -config ConfigString
+    -Anonymous
+    -Kerberos
+    -ClientCertificate ClientCertId
+    -UserName UserName
+    -p Password
+    -crl
+    -rpc
+    -AdminForceMachine
+    -RenewOnBehalfOf
+    -NoChallenge
+
+  CertReq -Retrieve [Options] RequestId [CertFileOut [CertChainFileOut [FullResp
+onseFileOut]]]
+    Retrieve a response to a previous request from a Certification Authority.
+
+  Options:
+    -binary
+    -PolicyServer PolicyServer
+    -config ConfigString
+    -Anonymous
+    -Kerberos
+    -ClientCertificate ClientCertId
+    -UserName UserName
+    -p Password
+    -crl
+    -rpc
+    -AdminForceMachine
+
+  CertReq -New [Options] [PolicyFileIn [RequestFileOut]]
+    Create a new request as directed by PolicyFileIn
+
+  Options:
+    -attrib AttributeString
+    -binary
+    -cert CertId
+    -PolicyServer PolicyServer
+    -config ConfigString
+    -Anonymous
+    -Kerberos
+    -ClientCertificate ClientCertId
+    -UserName UserName
+    -p Password
+    -pin Pin
+    -user
+    -machine
+    -xchg ExchangeCertFile
+
+  CertReq -Accept [Options] [CertChainFileIn | FullResponseFileIn | CertFileIn]
+    Accept and install a response to a previous new request.
+
+  Options:
+    -user
+    -machine
+    -pin Pin
+
+  CertReq -Policy [Options] [RequestFileIn [PolicyFileIn [RequestFileOut [PKCS10
+FileOut]]]]
+    Construct a cross certification or qualified subordination request
+    from an existing CA certificate or from an existing request.
+
+  Options:
+    -attrib AttributeString
+    -binary
+    -cert CertId
+    -PolicyServer PolicyServer
+    -Anonymous
+    -Kerberos
+    -ClientCertificate ClientCertId
+    -UserName UserName
+    -p Password
+    -pin Pin
+    -noEKU
+    -AlternateSignatureAlgorithm
+    -HashAlgorithm HashAlgorithm
+
+  CertReq -Sign [Options] [RequestFileIn [RequestFileOut]]
+    Sign a certificate request with an enrollment agent or qualified
+    subordination signing certificate.
+
+  Options:
+    -binary
+    -cert CertId
+    -PolicyServer PolicyServer
+    -Anonymous
+    -Kerberos
+    -ClientCertificate ClientCertId
+    -UserName UserName
+    -p Password
+    -pin Pin
+    -crl
+    -noEKU
+    -HashAlgorithm HashAlgorithm
+
+  CertReq -Enroll [Options] TemplateName
+  CertReq -Enroll -cert CertId [Options] Renew [ReuseKeys]
+    Enroll for or renew a certificate.
+
+  Options:
+    -PolicyServer PolicyServer
+    -user
+    -machine
+    -pin Pin
+
+
+C:\Users\adm-pvankoppen>certreq /?

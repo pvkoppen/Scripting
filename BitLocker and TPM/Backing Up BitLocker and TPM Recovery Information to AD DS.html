@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx -->
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="canonical" href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx"><script type="text/javascript" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/ai.0.js" async=""></script><script type="text/javascript" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/wt.js"></script>
+    <title>Backing Up BitLocker and TPM Recovery Information to AD DS</title>
+
+        
+
+
+
+
+
+
+<meta name="DCS.dcsuri" content="/en-us/library/dd875529(d=default,l=en-us,v=ws.10).aspx">
+
+<meta name="NormalizedUrl" content="https://technet.microsoft.com/en-us/library/dd875529(d=default,l=en-us,v=ws.10).aspx">
+
+<meta name="ms.normalizedurl" content="https://technet.microsoft.com/en-us/library/dd875529(d=default,l=en-us,v=ws.10).aspx">
+
+<meta name="DCSext.WCarea" content="_library_">
+
+<meta name="DCSext.WClifecycle" content="_operate_">
+
+<meta name="DCSext.WClocale" content="_en-us_">
+
+<meta name="DCSext.WCphase" content="_discover_">
+
+<meta name="DCSext.WCtask" content="_security_">
+
+<meta name="DCSext.WCversion" content="_W7_">
+
+<meta name="DCSext.WCzone" content="_security_">
+
+<meta name="VotingContextUrl" content="https://technet.microsoft.com/en-us/library/dd875529(d=default,l=en-us,v=ws.10).aspx">
+
+<meta name="MN" content="EE4293BF-5:35:15 PM">
+
+<meta name="Search.ShortId" content="dd875529">
+
+<meta name="ms.shortidmsdn" content="dd875529">
+
+<meta name="Ms.Locale" content="en-us">
+
+<meta name="ms.prodver" content="WS.10">
+
+<meta name="ms.contentlang" content="EN">
+
+<meta name="ms.lang" content="en">
+
+<meta name="ms.loc" content="us">
+
+<meta name="ms.sitever" content="2016.01.10.1">
+
+<meta name="ms.assetid" content="df3c96b4-1781-4e18-a826-883dc89d8698">
+
+<meta name="ms.auth" content="0">
+    
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" data-do-not-move="true">
+        //<![CDATA[
+        var AmbientContext = null;
+
+        (function(){
+            var root = (function(){return this;}).call(null);
+
+            var GetCookie = function(name){
+                var cookies = root.document.cookie ? root.document.cookie.split('; ') : [];
+                for (var i = 0; i < cookies.length; i++) {
+                    var pos = cookies[i].indexOf('=');
+                    if (name === root.decodeURIComponent(cookies[i].slice(0, pos)))
+                    {
+                        var cookie = cookies[i].slice(pos + 1).replace(/\+/g, ' ');
+                        cookie = root.decodeURIComponent(cookie);
+                        return cookie;
+                    }
+                }
+            };
+
+            var JsonDeserialize = function(content) {
+                return root.JSON && root.JSON.parse ? root.JSON.parse(content) : (new Function('return (' + content + ')'))();
+            };
+
+            try {
+                AmbientContext = GetCookie('AmbientContext');
+                AmbientContext = AmbientContext && JsonDeserialize(AmbientContext);
+            } catch(ex) {
+            } finally {
+                AmbientContext = AmbientContext || null;
+            }
+        })();
+        //]]>
+    </script>
+
+    <script type="text/javascript" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/jquery-1.9.1.min.js" data-do-not-move="true" data-provides="jQuery"></script><script type="text/javascript" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/sizzle_1.min.js" async="true" defer="true"></script><script type="text/javascript" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/optimize.js" async="true" defer="true"></script>
+    
+<link rel="stylesheet" type="text/css" href="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/Combined.css"><script class="mtps-injected">try {
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "https://i-technet.sec.s-msft.com", 
+	"js": "https://i2-technet.sec.s-msft.com", 
+	"css": "https://i-technet.sec.s-msft.com", 
+	"xap": "https://technet.microsoft.com"
+});
+/**/
+} finally { MTPS._injectNextScript_0 && MTPS._injectNextScript_0(); }</script><script class="mtps-injected">try {
+//
+  var literalNormalizedUrl = '/en-us/library/dd875529(l=en-us,v=ws.10).aspx';
+  var wt_nvr_ru = 'WT_NVR_RU';
+  var wt_fpcdom = '.microsoft.com';
+  var wt_domlist = 'technet.microsoft.com';
+  var wt_pathlist = '/technet/';
+  var wt_paramlist = 'DCSext.mtps_techcenter';
+  var wt_siteid = 'TECHNET';
+  var gDomain = 'm.webtrends.com';
+  var gDcsId = 'dcsjwb9vb00000c932fd0rjc7_5p3t';
+  var gFpc = 'WT_FPC';
+
+
+
+  if (document.cookie.indexOf(gFpc + "=") == -1) {
+    var wtidJs = document.createElement("script");
+    wtidJs.src = "//" + gDomain + "/" + gDcsId + "/wtid.js";
+    document.getElementsByTagName("head")[0].appendChild(wtidJs);
+  }
+
+
+
+  var detectedLocale = 'en-us';
+  var wtsp = '_technet_library_win7_';
+  var gTrackEvents = '0';
+/**/
+} finally { MTPS._injectNextScript_1 && MTPS._injectNextScript_1(); }</script><script class="mtps-injected">try {
+//
+
+        window.appInsightsId = '34ac8cd9-5026-4b8c-bd79-e0c26f67812a';
+        //
+} finally { MTPS._injectNextScript_2 && MTPS._injectNextScript_2(); }</script><script class="mtps-injected" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/Combined.js"></script><script type="text/javascript" async="true" defer="true" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/2"></script><link href="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/PrintView.css" rel="stylesheet" type="text/css" media="print"><meta name="ms.layout_limit_max_width" content="true"><meta name="ms.AmbientContextId" content="63BF8252-F45C-454C-9AD1-5088309A36F2"><meta name="ms.display_use_large_font" content="true"><meta name="ms.insight_perf_timing" content="true"><meta name="ms.AmbientContextDownstream" content="%7B%7D"><meta name="ms.display_high_contrast" content="false"><meta name="ms.insight_use_wedcs_vnext" content="true"><meta name="ms.env" content="production"><meta name="ms.sitesec" content="library"><meta name="ms.mktglfcyl" content="operate"><meta name="ms.prod" content="W7"><meta name="ms.pagetype" content="security"><meta name="ms.title" content="library;backing up bitlocker and tpm recovery information to ad ds"><script type="text/javascript" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/ms.js"></script><script type="text/javascript" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/jsll-3.2.0.js"></script><script class="mtps-injected">try {
+var omnitureTracking = "false";
+} finally { MTPS._injectNextScript_4 && MTPS._injectNextScript_4(); }</script><script class="mtps-injected" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/Combined(1).js"></script><script class="mtps-injected" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/SearchBox.jss"></script><script type="text/javascript" async="true" defer="true" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/2(1)"></script><script class="mtps-injected" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/Combined(2).js"></script><script class="mtps-injected" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/jquery.tmpl.min.js"></script><script class="mtps-injected" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/Combined(3).js"></script><script src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/broker.js"></script><script class="mtps-injected">try {
+$(document).ready(function() {
+        try {
+            var token = $("#globalRequestVerification input[name='__RequestVerificationToken']").clone();
+            $("#siteFeedbackForm").append(token);
+        } catch(err) {
+            
+        }
+    });
+} finally { MTPS._injectNextScript_10 && MTPS._injectNextScript_10(); }</script><meta name="ms.opt_pnm" content="undefined"><meta name="ms.opt_tid" content="undefined"><meta name="ms.opt_eid" content="undefined"><meta name="ms.opt_sta" content="MASTERFALLBACK_TIMER_ERROR"><meta name="ms.opt_grp" content="undefined"><meta name="ms.opt_typ" content="undefined"><meta name="ms.expe" content="wto"></head>
+<body class="library Chrome">
+    <div id="page">
+
+        
+
+        
+    <link type="text/css" rel="stylesheet" href="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/Megablade.1.css" data-do-not-move="true">
+        
+
+    <div id="megabladeContainer">
+        <div id="megabladeContainerCenter">
+            <ul id="megabladeItems">
+                <li class="Logo"><a href="https://technet.microsoft.com/" title="TechNet">TechNet</a></li>
+                        <li data-value="hh326172" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">Products</a><span class="caret"></span></li>
+                        <li data-value="hh880860" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">IT Resources</a><span class="caret"></span></li>
+                        <li data-value="hh371326" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">Downloads</a><span class="caret"></span></li>
+                        <li data-value="jj837158" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">Training</a><span class="caret"></span></li>
+                        <li data-value="hh371327" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">Support</a><span class="caret"></span></li>
+            </ul>
+            <div class="bladeItemMenuContainer">
+                    <div data-value="hh326172" class="bladeItemMenu" style="display: none;">
+                        <div class="navpage">
+  <div>
+    <ul id="Products">
+      <li>
+        <a href="https://technet.microsoft.com/windows">Windows</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/windowsserver">Windows Server</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/systemcenter">System Center</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/browser">Browser</a>
+      </li>
+    </ul>
+    <ul id="">
+      <li>
+        <a href="https://technet.microsoft.com/office">Office</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/office365">Office 365</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/exchange">Exchange Server</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a href="https://technet.microsoft.com/sql">SQL Server</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/sharepoint">SharePoint Products</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/en-us/office/dn788773">Skype for Business</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/en-us/bb421517.aspx?wt.svl=more_centers_link">See all products »</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                    </div>
+                    <div data-value="hh880860" class="bladeItemMenu" style="display: none;">
+                        <div class="navpage">
+  <div>
+    <ul id="Resources">
+      <li>
+        <a href="https://www.microsoft.com/click/services/redirect2.ashx?cr_cc=200157772">Evaluation Center</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/bb291022">Learning Resources</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/en-us/dn440144">Microsoft Tech Companion App</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/dn550853" title="Microsoft Technical Communities">Microsoft Technical Communities</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/click/services/redirect2.ashx?cr_cc=200157774">Microsoft Virtual Academy</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/scriptcenter">Script Center</a>
+      </li>
+      <li>
+        <a href="http://blogs.technet.com/serverandtools">Server and Tools Blogs</a>
+      </li>
+      <li>
+        <a href="http://blogs.technet.com/">TechNet Blogs</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a href="https://technet.microsoft.com/cc543196">TechNet Flash Newsletter</a>
+      </li>
+      <li>
+        <a href="http://gallery.technet.microsoft.com/">TechNet Gallery</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/library/default.aspx">TechNet Library</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/magazine">TechNet Magazine</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/subscriptions">TechNet Subscriptions</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/video">TechNet Video</a>
+      </li>
+      <li>
+        <a href="http://social.technet.microsoft.com/wiki">TechNet Wiki</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/sysinternals">Windows Sysinternals</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/virtuallabs">Virtual Labs</a>
+      </li>
+    </ul>
+    <ul id="Solutions">
+      <li>
+        <a href="https://technet.microsoft.com/network">Networking</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/cloud/private-cloud">Cloud and Datacenter</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/security">Security</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/virtualization">Virtualization</a>
+      </li>
+    </ul>
+    <p>&nbsp;</p>
+  </div>
+</div>
+                    </div>
+                    <div data-value="hh371326" class="bladeItemMenu" style="display: none;">
+                        <div class="navpage">
+  <div>
+    <ul id="Updates">
+      <li>
+        <a href="http://support.microsoft.com/default.aspx?id=fh;en-us;sp&amp;fr=0&amp;sd=gn&amp;ln=en-us&amp;ct=sd&amp;se=nona">Service Packs</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/security/bulletin">Security Bulletins</a>
+      </li>
+      <li>
+        <a href="http://fe1.update.microsoft.com/microsoftupdate/v6/vistadefault.aspx?ln=en-us">Microsoft Update</a>
+      </li>
+    </ul>
+    <ul id="Trials">
+      <li>
+        <a href="https://www.microsoft.com/click/services/redirect2.ashx?cr_cc=200229291">Windows Server 2012 R2</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/click/services/redirect2.ashx?cr_cc=200229349">System Center 2012 R2</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/click/services/redirect2.ashx?cr_cc=200156426">Microsoft SQL Server 2012 SP1</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/en-us/evalcenter/hh699156">Windows 8.1 Enterprise</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/click/services/redirect2.ashx?cr_cc=200157775" title="See all trials">See all trials »</a>
+      </li>
+    </ul>
+    <ul id="Related Sites">
+      <li>
+        <a href="https://www.microsoft.com/downloads/search.aspx">Microsoft Download Center</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/click/services/redirect2.ashx?cr_cc=200157776">TechNet Evaluation Center</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/download/driver.aspx?q=driver">Drivers</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/sysinternals">Windows Sysinternals</a>
+      </li>
+      <li>
+        <a href="http://gallery.technet.microsoft.com/">TechNet Gallery</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                    </div>
+                    <div data-value="jj837158" class="bladeItemMenu" style="display: none;">
+                        <div class="navpage">
+  <div>
+    <ul id="Training">
+      <li>
+        <a href="https://www.microsoft.com/en-us/learning/training.aspx">Training Catalog</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/learning/en/us/classlocator.aspx">Class Locator</a>
+      </li>
+      <li>
+        <a href="http://www.microsoftvirtualacademy.com/">Microsoft Virtual Academy</a>
+      </li>
+      <li>
+        <a href="http://www.microsoftvirtualacademy.com/training-courses/windows-server-2012-technical-overview">Free Windows Server 2012 courses</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/click/services/redirect2.ashx?cr_cc=200155697" title="Free Windows 8 courses">Free Windows 8 courses</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/learning/en/us/training/sql-server.aspx">SQL Server training</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/learning/en/us/training/format-online.aspx">e-Learning overview</a>
+      </li>
+    </ul>
+    <ul id="Certifications">
+      <li>
+        <a href="https://www.microsoft.com/learning/en/us/certification/cert-overview.aspx">Certification overview</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/learning/en/us/windows-certification.aspx" title="MCSA: Windows 8 ">MCSA: Windows 8</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/learning/en/us/certification/cert-windowsserver.aspx">Windows Server Certification (MCSE)</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/learning/en/us/certification/cert-private-cloud.aspx">Private Cloud Certification (MCSE)</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/learning/en/us/certification/cert-sql-server.aspx">SQL Server Certification (MCSE)</a>
+      </li>
+    </ul>
+    <ul id="Other resources">
+      <li>
+        <a href="http://www.technetevents.com/">TechNet Events</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/learning/en/us/offers/secondshot.aspx">Second shot for certification</a>
+      </li>
+      <li>
+        <a href="http://borntolearn.mslearn.net/btl/b/default.aspx">Born To Learn blog</a>
+      </li>
+      <li>
+        <a href="https://www.technicalcommunity.com/map.aspx" title="Microsoft Technical Communities">Find technical communities in your area</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                    </div>
+                    <div data-value="hh371327" class="bladeItemMenu" style="display: none;">
+                        <div class="navpage">
+  <div id="">
+    <ul id="Support options">
+      <li>
+        <a href="http://smallbusiness.support.microsoft.com/en-us/contact">For small and midsize businesses</a>
+      </li>
+      <li>
+        <a href="https://premier.microsoft.com/">For enterprises</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/en-us/hh361695">For developers</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/en-us/ms772425">For IT professionals</a>
+      </li>
+      <li>
+        <a href="http://pinpoint.microsoft.com/en-us/home">From partners</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a href="https://support.microsoft.com/oas">For technical support</a>
+      </li>
+      <li>
+        <a href="http://support.microsoft.com/gp/contactus81?audience=commercial">Support offerings</a>
+      </li>
+      <li>
+        <a href="http://support.microsoft.com/">For home users</a>
+      </li>
+    </ul>
+    <ul id="More support">
+      <li>
+        <a href="https://premier.microsoft.com/">Microsoft Premier Online</a>
+      </li>
+      <li>
+        <a href="http://support.microsoft.com/fixit/">Microsoft Fix It Center</a>
+      </li>
+      <li>
+        <a href="http://social.technet.microsoft.com/forums/en-us/categories/">TechNet Forums</a>
+      </li>
+      <li>
+        <a href="http://social.msdn.microsoft.com/forums/en-us/categories/">MSDN Forums</a>
+      </li>
+      <li>
+        <a href="https://technet.microsoft.com/en-us/security/bulletin">Security Bulletins &amp; Advisories</a>
+      </li>
+      <li>
+        <a href="http://support.microsoft.com/common/international.aspx">International support solutions</a>
+      </li>
+      <li>
+        <a href="http://support.microsoft.com/select/default.aspx?target=assistance">Log a support ticket</a>
+      </li>
+    </ul>
+    <ul id="Not an IT pro?">
+      <li>
+        <a href="http://support.microsoft.com/">Microsoft Customer Support</a>
+      </li>
+      <li>
+        <a href="http://answers.microsoft.com/en-us">Microsoft Community Forums</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+  
+    <div id="ux-header" class="ltr isd">
+        <div class="upperBand">
+            <a href="https://technet.microsoft.com/" title="Windows"><img alt="Windows" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/BrandLogoWindows.png"></a>               
+            <div class="upperRight">
+                <div class="controls">
+                    
+    <form class="selectLocale" id="selectLocaleForm" action="https://technet.microsoft.com/en-us/SelectLocale">
+        <input type="hidden" name="fromPage" value="https%3a%2f%2ftechnet.microsoft.com%2fen-us%2flibrary%2fdd875529(v%3dws.10).aspx">
+        <a href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#" onclick="$(&#39;#selectLocaleForm&#39;).submit();return false;" title="Change your language">United States (English)</a>
+    </form>
+
+
+                    <a class="scarabLink" href="https://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=12&amp;ct=1454376915&amp;rver=6.0.5276.0&amp;wp=mcmbi&amp;wlcxt=technet%24technet%24technet&amp;wreply=https%3a%2f%2ftechnet.microsoft.com%2fen-us%2flibrary%2fdd875529%2528v%3dws.10%2529.aspx&amp;lc=1033&amp;id=254354&amp;mkt=en-us" title="Sign in">Sign in</a>
+                </div>
+                
+
+    <div class="SearchBox">   
+        <form id="HeaderSearchForm" name="HeaderSearchForm" method="get" onsubmit="return Epx.Controls.SearchBox.searchBoxOnSubmit(this);">
+            <input id="HeaderSearchTextBox" name="query" type="text" maxlength="200" onfocus="Epx.Controls.SearchBox.watermarkFocus(event, this.title)" onblur="Epx.Controls.SearchBox.watermarkBlur(event, this.title)" aria-labelledby="HeaderSearchButton" autocomplete="off" data-searchtype="searchbox" title="Search Windows with Bing" style="color: rgb(170, 170, 170); font-style: italic;">            
+        <button id="HeaderSearchButton" value="" type="submit" class="header-search-button" data-searchtype="icon" title="Search Windows with Bing"></button>
+        <div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; color: rgb(112, 112, 112); font-family: &#39;Segoe UI&#39;, &#39;Lucida Grande&#39;, Verdana, Arial, Helvetica, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);"><div id="SuggestionContainer"><ul data-searchtype="search dropdown" style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></form>
+         
+            
+             
+    
+    </div>
+
+            </div>
+        </div>
+        <div class="lowerBand">
+            <div class="ux-nav">
+                <div class="TocNavigation">
+   
+   <div class="toclevel1">
+          <a class="normal" href="https://technet.microsoft.com/windows/cc468658" title="Home">Home</a>
+          <a class="normal" href="https://technet.microsoft.com/windows/dn798751" title="Windows 10">Windows 10</a>
+          <a class="normal" href="https://technet.microsoft.com/windows/mt631176" title="Windows 10 Mobile">Windows 10 Mobile</a>
+          <a class="normal" href="https://technet.microsoft.com/windows/hh771457" title="Windows 8.1">Windows 8.1</a>
+          <a class="normal" href="https://technet.microsoft.com/windows/dn633472" title="Previous Versions">Previous Versions</a>
+          <a class="normal" href="https://technet.microsoft.com/windows/bb899442" title="MDOP">MDOP</a>
+          <a class="normal" href="https://technet.microsoft.com/windows/dn903161" title="Surface">Surface</a>
+          <a class="active" href="https://technet.microsoft.com/library/cc498727.aspx" title="Library">Library</a>
+          <a class="normal" href="http://social.technet.microsoft.com/forums/en/category/windows10itpro,w8itpro,w7itpro,windowsvistaitpro,windowsxpitpro" title="Forums">Forums</a>
+
+    </div>
+  
+</div>
+            </div>
+        </div>
+    </div>
+
+  
+    <div class="printExportMenus ltr">
+      <a id="provideFeedback2" href="javascript:void(0)"><ins class="suggestion"></ins>Any suggestions?</a>
+      <a id="isd_printABook" href="https://technet.microsoft.com/en-us/library/export/help/?returnurl=%2fen-us%2flibrary%2fdd875529(v%3dws.10).aspx" style="display: inline;">
+        Export (<span class="count">0</span>)
+      </a>
+      <a id="isd_print" href="https://technet.microsoft.com/en-us/library/dd875529(d=printer,v=ws.10).aspx" rel="nofollow">
+        Print 
+      </a>
+      <a id="isd_archiveControl" style="display:none;" data-include-archive="Include Previous Version" data-exclude-archive="Exclude Previous Version">
+      </a>
+    </div>
+    
+    
+      <div class="printExportMenus ltr">
+        <a id="expandCollapseAll" accesskey="e" href="javascript:void(0)" title="Expand/Collapse all sections by pressing Ctrl + Shift + e" style="display: none;">Expand All</a>
+    </div>
+
+  
+  
+
+
+        <div id="body">
+            <span id="tabletView_large"></span>
+            <span id="tabletView_small"></span>
+            <span id="mobileView"></span>
+            
+
+
+
+
+        <div id="leftNav" style="width: 280px; max-width: 480px; min-height: 8399px;">
+
+
+
+
+<div id="tocnav" class="hide-archive">
+
+
+            <div class="toclevel0 " data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#" aria-label="Expand the table of content"></a><a data-tochassubtree="true" href="https://technet.microsoft.com/en-us/library/aa991542.aspx" id="bb126093_TechNet.10_en-us" mtpsaliasid="" mtpsassetid="7fb9516e-5f92-4e34-8e32-4307b6091e4f_TechNet.10_en-us" mtpsshortid="aa991542_MSDN.10_en-us" title="TechNet Library" data-pmcucidx="0" ms.cmpgrp="table of contents" ms.cmpnm="technet library;0" ms.index="0">TechNet Library</a>            </div>
+            <div class="toclevel0 " data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#" aria-label="Expand the table of content"></a><a data-tochassubtree="true" href="https://technet.microsoft.com/en-us/library/cc498727.aspx" id="mt561623_VS.85_en-us" mtpsaliasid="" mtpsassetid="5af88827-e418-4ce5-990e-5103acd5fe6a_VS.85_en-us" mtpsshortid="cc498727_MSDN.10_en-us" title="Windows" data-pmcucidx="1" ms.cmpgrp="table of contents" ms.cmpnm="windows;0" ms.index="1">Windows</a>            </div>
+            <div class="toclevel0 " data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#" aria-label="Expand the table of content"></a><a data-tochassubtree="true" href="https://technet.microsoft.com/en-us/library/dd349779.aspx" id="dd349779_TechNet.10_en-us" mtpsaliasid="" mtpsassetid="TechNet|Win7TOC|$\win7toc.hxt@0,0_TechNet.10_en-us" mtpsshortid="dd349779_TechNet.10_en-us" title="Windows 7" data-pmcucidx="2" ms.cmpgrp="table of contents" ms.cmpnm="windows 7;0" ms.index="2">Windows 7</a>            </div>
+            <div class="toclevel0 " data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#" aria-label="Expand the table of content"></a><a data-tochassubtree="true" href="https://technet.microsoft.com/en-us/library/dd349342(v=ws.10).aspx" id="dd349780_TechNet.10_en-us" mtpsaliasid="" mtpsassetid="0d0806c4-06cd-478d-bff5-1ed8a43da4ac_TechNet.10_en-us" mtpsshortid="dd349342_WS.10_en-us" title="Windows 7 Technical Library Roadmap" data-pmcucidx="3" ms.cmpgrp="table of contents" ms.cmpnm="windows 7 technical library roadmap;0" ms.index="3">Windows 7 Technical Library Roadmap</a>            </div>
+            <div class="toclevel0 " data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#" aria-label="Expand the table of content"></a><a data-tochassubtree="true" href="https://technet.microsoft.com/en-us/library/dd571075(v=ws.10).aspx" id="dd727977_WS.10_en-us" mtpsaliasid="" mtpsassetid="7d923e82-34ad-449d-8ee8-43c86ffaf58d_WS.10_en-us" mtpsshortid="dd571075_WS.10_en-us" title="Security and Protection" data-pmcucidx="4" ms.cmpgrp="table of contents" ms.cmpnm="security and protection;0" ms.index="4">Security and Protection</a>            </div>
+            <div class="toclevel0 " data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#" aria-label="Expand the table of content"></a><a data-tochassubtree="true" href="https://technet.microsoft.com/en-us/library/cc731549(v=ws.10).aspx" id="ee706517_WS.10_en-us" mtpsaliasid="" mtpsassetid="a2ba17e6-153b-4269-bc46-6866df4b253c_WS.10_en-us" mtpsshortid="cc731549_WS.10_en-us" title="BitLocker Drive Encryption" data-pmcucidx="5" ms.cmpgrp="table of contents" ms.cmpnm="bitlocker drive encryption;0" ms.index="5">BitLocker Drive Encryption</a>            </div>
+            <div class="toclevel0 " data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#" aria-label="Expand the table of content"></a><a data-tochassubtree="true" href="https://technet.microsoft.com/en-us/library/dd875547(v=ws.10).aspx" id="ee706535_WS.10_en-us" mtpsaliasid="" mtpsassetid="abf0af1c-d8a5-4a23-8305-3b43a1c05444_WS.10_en-us" mtpsshortid="dd875547_WS.10_en-us" title="BitLocker Drive Encryption Deployment Guide for Windows 7" data-pmcucidx="6" ms.cmpgrp="table of contents" ms.cmpnm="bitlocker drive encryption deployment guide for windows 7;0" ms.index="6">BitLocker Drive Encryption Deployment Guide for Windows 7</a>            </div>
+            <div class="toclevel1 current " data-toclevel="1" data-childrenloaded="true" style="padding-left: 17px;">
+<a class="toc_expanded" href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#" aria-label="Collapse the table of content"></a><a data-tochassubtree="true" href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx" id="ee706532_WS.10_en-us" mtpsaliasid="" mtpsassetid="df3c96b4-1781-4e18-a826-883dc89d8698_WS.10_en-us" mtpsshortid="dd875529_WS.10_en-us" title="Backing Up BitLocker and TPM Recovery Information to AD DS" data-pmcucidx="7" ms.cmpgrp="table of contents" ms.cmpnm="backing up bitlocker and tpm recovery information to ad ds;1" ms.index="0">Backing Up BitLocker and TPM Recovery Information to AD DS</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/dd875533(v=ws.10).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Verify BitLocker and TPM Schema Objects" data-pmcucidx="8" ms.cmpgrp="table of contents" ms.cmpnm="backing up bitlocker and tpm recovery information to ad ds;2" ms.index="0">Verify BitLocker and TPM Schema Objects</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/dd875531(v=ws.10).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="BitLocker Recovery Password Viewer for Active Directory" data-pmcucidx="9" ms.cmpgrp="table of contents" ms.cmpnm="backing up bitlocker and tpm recovery information to ad ds;2" ms.index="1">BitLocker Recovery Password Viewer for Active Directory</a>            </div>
+</div>                <div style="display:none">
+                    <div id="CollapseLocalizeString">Collapse the table of content</div>
+                    <div id="ExpandLocalizeString">Expand the table of content</div>
+                </div>
+
+            
+
+            
+
+            
+
+            <div id="toc-resizable-ew" class="toc-resizable-ew"></div>
+            
+
+<a id="NavigationResize" href="javascript:void(0)" style="left: 280px; display: inline-block;">
+    <img class="cl_nav_resize_open" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/ImageSprite.png" title="Expand" alt="Expand">
+    <img class="cl_nav_resize_close" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/ImageSprite.png" title="Minimize" alt="Minimize" style="display: none;">
+</a>
+
+
+
+        </div>
+    <div id="content" class="content" style="margin-left: 280px; width: auto;">
+
+
+
+
+
+
+
+<div xmlns="http://www.w3.org/1999/xhtml">
+<div class="topic" xmlns="http://www.w3.org/1999/xhtml" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:cs="http://msdn.microsoft.com/en-us/">
+  <h1 class="title">Backing Up BitLocker and TPM Recovery Information to AD DS</h1>
+  
+  <p>Updated: July 10, 2014</p><p>Applies To: Windows 7, Windows Server 2008 R2</p><div id="mainSection">
+    <div id="mainBody">
+      <p>You can configure BitLocker Drive Encryption to back up recovery information for BitLocker-protected drives and the Trusted Platform Module (TPM) to Active Directory Domain Services (AD&nbsp;DS). Recovery information includes the recovery password for each BitLocker-protected drive, the TPM owner password, and the information required to identify which computers and drives the recovery information applies to. Optionally, you can also save a package containing the actual keys used to encrypt the data as well as the recovery password required to access those keys.</p>
+      <h2 class="heading">Using AD&nbsp;DS to store BitLocker recovery information</h2>
+      <div id="sectionSection0" class="section">
+        <p>Backing up recovery passwords for a BitLocker-protected drive allows administrators to recover the drive if it is locked. This ensures that encrypted data belonging to the enterprise can always be accessed by authorized users.</p>
+        <p>Backing up the TPM owner information for a computer allows administrators to locally and remotely configure the TPM security hardware on that computer. As an example, an administrator might want to reset the TPM to factory defaults when decommissioning or repurposing computers. </p>
+        <p>In a default BitLocker installation, recovery information is not backed up and local users must be responsible for keeping a copy of the recovery password or recovery key. If the user loses that information or neglects to decrypt the drive before leaving the organization, the administrator cannot easily get access to the drive. To mitigate this situation, administrators can configure Group Policy settings to enable backup of BitLocker and TPM recovery information. Before configuring these settings, as a domain administrator you must ensure that the Active Directory schema has the necessary storage locations and that access permissions have been granted to perform the backup.</p>
+        <p>You should also configure AD&nbsp;DS before configuring BitLocker on client computers. If BitLocker is enabled first, recovery information for those computers will not be automatically added to AD&nbsp;DS.  If necessary, recovery information can be backed up to AD DS after BitLocker has been enabled by using either the Manage-bde command-line tool or the BitLocker Windows Management Instrumentation (WMI) provider. For more information about the WMI provider, see the MSDN topic <a href="http://go.microsoft.com/fwlink/?linkid=167132">BackupRecoveryInformationToActiveDirectory Method of the Win32_EncryptableVolume Class</a> (http://go.microsoft.com/fwlink/?LinkId=167132).</p>
+        <div class="alert">
+          <table>
+            <tbody><tr>
+              <th align="left">
+                <img id="Important" alt="Important" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/clear.gif" title="Important" xmlns="" class="cl_IC160177">Important </th>
+            </tr>
+            <tr>
+              <td>
+						You can save recovery information in AD&nbsp;DS if your domain controllers are running Windows Server&nbsp;2003 with Service Pack&nbsp;1 (SP1) or Service Pack&nbsp;2 (SP2), Windows Server&nbsp;2003&nbsp;R2, Windows Server&nbsp;2008, or Windows Server&nbsp;2008&nbsp;R2. You cannot save recovery information in AD&nbsp;DS if the domain controller is running a version of Windows&nbsp;Server earlier than Windows&nbsp;Server&nbsp;2003 with SP1. <p></p></td>
+            </tr>
+          </tbody></table>
+          <p>
+            
+          </p>
+        </div>
+        <p>If you are running Windows Server&nbsp;2008&nbsp;R2 or Windows Server&nbsp;2008, follow the same process described for Windows Server&nbsp;2003 with SP1 or later, with one exception: you do not need to update the schema as described later in this document.</p>
+        <div class="alert">
+          <table>
+            <tbody><tr>
+              <th align="left">
+                <img id="Important" alt="Important" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/clear.gif" title="Important" xmlns="" class="cl_IC160177">Important </th>
+            </tr>
+            <tr>
+              <td>
+						You should perform the steps described in the following topics in a test or pre-production environment prior to deploying to production environments. <p></p></td>
+            </tr>
+          </tbody></table>
+          <p>
+            
+          </p>
+        </div>
+        <h3 class="subHeading">Before you begin</h3>
+        <div class="subSection">
+          <p>Download and review the following sample scripts, which are used in the following procedures to configure AD&nbsp;DS for backing up BitLocker recovery information:</p>
+          <ul>
+            <li class="unordered">
+              <a href="http://go.microsoft.com/fwlink/?linkid=167133">Add-TPMSelfWriteACE.vbs</a> (http://go.microsoft.com/fwlink/?LinkId=167133)<br><br>
+									This script adds the access control entry (ACE) for the TPM to AD&nbsp;DS so that the computer can back up TPM recovery information in AD&nbsp;DS.  <br><br></li>
+            <li class="unordered">
+              <a href="http://go.microsoft.com/fwlink/?linkid=167134">List-ACEs.vbs</a> (http://go.microsoft.com/fwlink/?LinkId=167134)<br><br>
+									This script lists or removes the ACEs configured on BitLocker and TPM schema objects for the top-level domain so that you can verify that the expected ACEs have been added appropriately or to remove any ACEs related to BitLocker or the TPM if necessary. <br><br></li>
+            <li class="unordered">
+              <a href="http://go.microsoft.com/fwlink/?linkid=167135">Get-TPMOwnerInfo.vbs</a> (http://go.microsoft.com/fwlink/?LinkId=167135)<br><br>
+									This script retrieves TPM recovery information from AD&nbsp;DS for a particular computer so that you can verify that only domain administrators (or delegated roles) can read backed up TPM recovery information and verify that the information is being backed up correctly.<br><br></li>
+            <li class="unordered">
+              <a href="http://go.microsoft.com/fwlink/?linkid=167136">Get-BitLockerRecoveryInfo.vbs</a> (http://go.microsoft.com/fwlink/?LinkId=167136)<br><br>
+									This script retrieves BitLocker recovery information from AD&nbsp;DS for a particular computer so that you can verify that only domain administrators (or delegated roles) can read backed up BitLocker recovery information and verify that the information is being backed up correctly.<br><br></li>
+          </ul>
+          <div class="alert">
+            <table>
+              <tbody><tr>
+                <th align="left">
+                  <img id="note" alt="note" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/clear.gif" title="note" xmlns="" class="cl_IC101471">Note </th>
+              </tr>
+              <tr>
+                <td>
+								If you will use a domain controller running Windows Server&nbsp;2003 with SP1 or SP2, you will need to apply the schema extension (BitLockerTPMSchemaExtension.ldf) to store BitLocker and TPM passwords in Active Directory. This file can be downloaded from the <a href="https://www.microsoft.com/download/details.aspx?id=13432">Configuring Active Directory to Back up Windows BitLocker Drive Encryption and Trusted Platform Module Recovery Information</a> download page.<p></p></td>
+              </tr>
+            </tbody></table>
+            <p>
+              
+            </p>
+          </div>
+          <p>This topic includes the following sections:</p>
+          <ul>
+            <li class="unordered">
+              <a href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#BKMK_1">Storing BitLocker recovery information in AD&nbsp;DS</a>
+              <br>
+              <br>
+            </li>
+            <li class="unordered">
+              <a href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#BKMK_2">Storing TPM recovery information in AD&nbsp;DS</a>
+              <br>
+              <br>
+            </li>
+            <li class="unordered">
+              <a href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#BKMK_3">Configuring AD&nbsp;DS</a>
+              <br>
+              <br>
+            </li>
+            <li class="unordered">
+              <a href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#BKMK_4">Testing your Active Directory configuration</a>
+              <br>
+              <br>
+            </li>
+            <li class="unordered">
+              <a href="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx#BKMK_5">Troubleshooting common problems with AD DS backup</a>
+              <br>
+              <br>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a id="BKMK_1">
+        
+      </a>
+      <h2 class="heading">Storing BitLocker recovery information in AD&nbsp;DS</h2>
+      <div id="sectionSection1" class="section">
+        <p>Backed up BitLocker recovery information is stored in a child object of the computer object. That is, the computer object is the container for a BitLocker recovery object. </p>
+        <p>Each BitLocker recovery object includes the recovery password and other recovery information. More than one BitLocker recovery object can exist under each computer object because multiple recovery passwords can be associated with a BitLocker-protected drive and multiple BitLocker-protected drives can be associated with a computer.  </p>
+        <p>The name of the BitLocker recovery object incorporates a globally unique identifier (GUID) and date and time information, for a fixed length of 63 characters. The form is: </p>
+        <p>
+          <em>&lt;Object Creation Date and Time&gt;&lt;Recovery GUID&gt;</em>
+        </p>
+        <p>For example:</p>
+        <p>2005-09-30T17:08:23-08:00{063EA4E1-220C-4293-BA01-4754620A96E7}</p>
+        <p>The common name (CN) for the BitLocker recovery object is ms-FVE-RecoveryInformation. Each ms-FVE-RecoveryInformation object has the following attributes: </p>
+        <ul>
+          <li class="unordered">
+							ms-FVE-RecoveryPassword<br><br>
+							This attribute contains the 48-digit recovery password used to recover a BitLocker-protected drive. Users enter this password to unlock a drive when BitLocker enters recovery mode.<br><br></li>
+          <li class="unordered">
+							ms-FVE-RecoveryGuid<br><br>
+							This attribute contains the GUID associated with a BitLocker recovery password. When in BitLocker's operating system drive recovery mode and when attempting to recover a data drive from within the operating system, this GUID is displayed to the user so that the correct recovery password can be located to unlock the drive. This GUID is also included in the name of the recovery object.<br><br></li>
+          <li class="unordered">
+							ms-FVE-VolumeGuid<br><br>
+							This attribute contains the GUID associated with a BitLocker-protected drive.<br><br>
+							While the password (stored in ms-FVE-RecoveryGuid) is unique for each recovery password, this drive identifier is unique for each BitLocker-protected drive. <br><br></li>
+          <li class="unordered">
+							ms-FVE-KeyPackage<br><br>
+							This attribute contains a drive's BitLocker encryption key secured by the corresponding recovery password.<br><br>
+							With this key package and the recovery password (stored in ms-FVE-RecoveryPassword), you can decrypt portions of a BitLocker-protected drive if the disk is corrupted. Each key package will work only for a drive that has the corresponding drive identifier (stored in ms-FVE-VolumeGuid). You must use the BitLocker Recovery Password Viewer to make use of this key package. For more information, see <a href="https://technet.microsoft.com/en-us/library/dd875531(v=ws.10).aspx">BitLocker Recovery Password Viewer for Active Directory</a>. <br><br></li>
+        </ul>
+        <p>If you want to verify that your AD&nbsp;DS (or Active Directory) schema has the required attributes to back up TPM and BitLocker recovery information, follow the instructions in <a href="https://technet.microsoft.com/en-us/library/dd875533(v=ws.10).aspx">Verify BitLocker and TPM Schema Objects</a>.</p>
+      </div>
+      <a id="BKMK_2">
+        
+      </a>
+      <h2 class="heading">Storing TPM recovery information in AD&nbsp;DS</h2>
+      <div id="sectionSection2" class="section">
+        <p>There is only one TPM owner password per computer. When the TPM is initialized or when this password is changed, the hash of the TPM ownership password gets backed up as an attribute of the computer object. </p>
+        <p>The common name (CN) for the TPM attribute is <strong>ms-TPM-OwnerInformation</strong>.</p>
+      </div>
+      <a id="BKMK_3">
+        
+      </a>
+      <h2 class="heading">Configuring AD&nbsp;DS</h2>
+      <div id="sectionSection3" class="section">
+        <p>Complete the following tasks to configure AD DS to back up BitLocker and TPM recovery information.</p>
+        <h3 class="subHeading">Check general prerequisites</h3>
+        <div class="subSection">
+          <p>Ensure that the following prerequisites are met:</p>
+          <ol class="ordered">
+            <li>
+									All domain controllers accessible by BitLocker-capable client computers are running Windows Server&nbsp;2003 with SP1 or SP2. On each domain controller, click <strong>Start</strong>, right-click <strong>My Computer</strong>, and then click the <strong>General</strong> tab. <br><br><div class="alert"><table><tbody><tr><th align="left"><img id="Important" alt="Important" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/clear.gif" title="Important" xmlns="" class="cl_IC160177">Important </th></tr><tr><td>
+										If the <strong>General</strong> tab lists Windows Server&nbsp;2003 but no service pack information, you need to install a service pack to be able to back up BitLocker recovery information to AD&nbsp;DS. For more information, see <a href="http://go.microsoft.com/fwlink/?linkid=43106">Windows Server 2003 Service Packs</a> (http://go.microsoft.com/fwlink/?LinkID=43106).<p></p>
+										The BitLocker and TPM schema extension marks selected attributes as "confidential" by using the "searchFlags" property. The "confidential" flag is a feature available in Windows Server&nbsp;2003 with SP1 and later. With this feature, only domain administrators and appropriate delegates have Read access to attributes marked with the confidential flag. <p></p>
+										BitLocker does not impose any requirements on domain or forest functional levels. However, domain controllers running operating systems earlier than Windows Server&nbsp;2003 with SP1 should be removed from mixed-functional-level environments (or upgraded), because backed up BitLocker and TPM information will not be protected on those domain controllers.<p></p></td></tr></tbody></table><p></p></div></li>
+            <li>
+									You have domain administrator privileges in the target forest or are using an account that has been granted appropriate permissions to extend the schema for the target forest. Members of the  <strong>Schema Admins</strong> groups are examples of accounts that have the appropriate permissions.<br><br></li>
+            <li>
+									You have obtained the following files:<br><br><ul><li class="unordered">
+											BitLockerTPMSchemaExtension.ldf if you need to extend the Active Directory schema. <br><br></li><li class="unordered">
+											Add-TPMSelfWriteACE.vbs to allow the computer account to back up the TPM owner information to AD&nbsp;DS.<br><br></li></ul></li>
+          </ol>
+        </div>
+        <h3 class="subHeading">Extend the schema (Windows Server 2003 domain controllers only)</h3>
+        <div class="subSection">
+          <p>The following procedure extends the schema to allow information to be saved in Active Directory.</p>
+          <div class="alert">
+            <table>
+              <tbody><tr>
+                <th align="left">
+                  <img id="Important" alt="Important" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/clear.gif" title="Important" xmlns="" class="cl_IC160177">Important </th>
+              </tr>
+              <tr>
+                <td>
+								If your domain controller is running Windows Server&nbsp;2008 or Windows Server&nbsp;2008&nbsp;R2, you do not need to complete this procedure. These operating systems already include the necessary schema extensions.<p></p></td>
+              </tr>
+            </tbody></table>
+            <p>
+              
+            </p>
+          </div>
+          <h4 class="subHeading">To extend the Active Directory schema with BitLocker and TPM attributes</h4>
+          <div class="subSection">
+            <ol class="ordered">
+              <li>
+                <p>Log on with a domain account in the <strong>Schema Admins</strong> group. This account must be used to extend the schema.</p>
+                <p>By default, the built-in Administrator account in the forest root domain is part of the <strong>Schema Admins</strong> group. For more information, see the section "Granting access rights to make schema changes" in <a href="http://go.microsoft.com/fwlink/?linkid=79649">How the Active Directory Schema Works</a> (http://go.microsoft.com/fwlink/?LinkID=79649).</p>
+              </li>
+              <li>
+                <p>Verify that your Windows Server installation enables schema updates.</p>
+                <p>In Windows Server&nbsp;2003, Active Directory schema updates are enabled by default. For more information, including the steps required to enable schema updates, see <a href="http://go.microsoft.com/fwlink/?linkid=79644">article 285172</a> in the Microsoft Knowledge Base (http://go.microsoft.com/fwlink/?LinkId=79644).</p>
+              </li>
+              <li>
+                <p>Verify that you have access to the domain controller that is the schema operations master in the Active Directory forest. Schema updates can only be performed at the schema operations master.</p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://www.microsoft.com/download/details.aspx?id=13432">Download and review BitLockerTPMSchemaExtension.ldf from the Configuring Active Directory to Back up Windows BitLocker Drive Encryption and Trusted Platform Module Recovery Information</a> download page. (http://go.microsoft.com/fwlink/?LinkID=167137). This file contains the schema extension. </p>
+                <p>For reference information about schema extensions, see <a href="http://go.microsoft.com/fwlink/?linkid=79649">How the Active Directory Schema Works</a> (http://go.microsoft.com/fwlink/?LinkId=79649).</p>
+              </li>
+              <li>
+                <p>Use the Ldifde command-line tool to extend the schema on the domain controller that serves as the schema operations master. For example, to import the schema extension on a domain named nttest.microsoft.com, log on as a user in the <strong>Schema Admins</strong> group, and then type the following at a command prompt: </p>
+                <p>
+                  <strong>ldifde -i -v -f BitLockerTPMSchemaExtension.ldf -c "DC=X" "DC=nttest,dc=microsoft,dc=com" -k -j .</strong>
+                </p>
+                <p>This command should be entered as one line. The trailing period (.) is part of the command.</p>
+                <p>The use of <strong>-k</strong> suppresses "Object Already Exists" errors if the portions of the schema already exist. The use of <strong>-j .</strong> saves an extended log file to the current working directory.</p>
+              </li>
+            </ol>
+          </div>
+          <p>For more information about Ldifde parameters, see <a href="http://go.microsoft.com/fwlink/?linkid=79650">article 237677</a> in the Microsoft Knowledge Base (http://go.microsoft.com/fwlink/?LinkId=79650). </p>
+        </div>
+        <h3 class="subHeading">Set the required permissions for backing up TPM password information</h3>
+        <div class="subSection">
+          <p>The following procedure adds an access control entry (ACE) so that backing up TPM recovery information is possible.</p>
+          <p>A client computer running Windows&nbsp;7 can back up BitLocker recovery information under the computer object's default permission. However, a client computer running Windows&nbsp;7 cannot back up TPM owner information unless this additional ACE is added.</p>
+          <p>Review the topic <a href="https://technet.microsoft.com/en-us/library/dd875539(v=ws.10).aspx">Default AD DS Permissions for a Computer Object</a>, in the appendices, to learn about the default AD&nbsp;DS permissions on the computer class object that contains the BitLocker recovery information class and the TPM owner information attribute. </p>
+          <h4 class="subHeading">To add an ACE to allow TPM recovery information to be backed up</h4>
+          <div class="subSection">
+            <ol class="ordered">
+              <li>
+                <p>Download and review <a href="http://go.microsoft.com/fwlink/?linkid=167133">Add-TPMSelfWriteACE.vbs</a> (http://go.microsoft.com/fwlink/?LinkId=167133) from the download page.</p>
+              </li>
+              <li>
+                <p>Modify Add-TPMSelfWriteACE.vbs as appropriate for your environment.</p>
+              </li>
+              <li>
+                <p>Type the following at a command prompt, and then press ENTER:</p>
+                <p>
+                  <strong>cscript Add-TPMSelfWriteACE.vbs</strong>
+                </p>
+              </li>
+            </ol>
+          </div>
+          <p>This script adds a single ACE to the top-level domain object. The ACE is an inheritable permission that allows SELF (the computer itself) to write to the <strong>ms-TPM-OwnerInformation</strong> attribute for computer objects in the domain.</p>
+          <p>The sample script provided operates under the following assumptions:</p>
+          <ul>
+            <li class="unordered">
+									You have domain administrator privileges to set permissions for the top-level domain object. <br><br></li>
+            <li class="unordered">
+									Your target domain is the same as the domain for the user account running the script.<br><br>
+									For example, running the script as TESTDOMAIN\admin will extend permissions for TESTDOMAIN. You might need to modify the sample script if you want to set permissions for multiple domains but do not have domain administrator accounts for each of those domains. Find the variable <strong>strPathToDomain</strong> in the script, and modify it for your target domain. The following is an example:<br><br>
+									"<code>LDAP://DC=testdomain,DC=nttest,DC=microsoft,DC=com</code>"<br><br></li>
+            <li class="unordered">
+									Your domain is configured so that permissions inherit from the top-level domain object to targeted computer objects.<br><br>
+									Permissions will not go into effect if any container in the hierarchy does not allow inherited permissions from the parent. By default, inheritance of permissions is set by AD&nbsp;DS. If you are not sure whether your configuration differs from this default, you can continue with the setup steps to set the permission. You can then verify your configuration as described later in this document, or by clicking the <strong>Effective Permissions</strong> button while viewing the properties of a computer object, to check that SELF can write the <strong>msTPM-OwnerInformation</strong> attribute.<br><br></li>
+          </ul>
+        </div>
+        <h3 class="subHeading">Configure Group Policy to enable backup of BitLocker and TPM recovery information in AD&nbsp;DS</h3>
+        <div class="subSection">
+          <p>These instructions are for configuring the local policy on a client computer running Windows&nbsp;7. In a production environment, you would likely edit a Group Policy object (GPO) that applies to computers in the domain instead. </p>
+          <p>For more information about configuring a GPO in a Windows Server 2008 domain, see the <a href="http://go.microsoft.com/fwlink/?linkid=147296">Group Policy Planning and Deployment Guide</a> (http://go.microsoft.com/fwlink/?LinkID=147296).</p>
+          <div class="alert">
+            <table>
+              <tbody><tr>
+                <th align="left">
+                  <img id="note" alt="note" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/clear.gif" title="note" xmlns="" class="cl_IC101471">Note </th>
+              </tr>
+              <tr>
+                <td>
+								We recommend that you keep the default options when you enable each Group Policy setting. Be sure to read the Explain text before making any changes to understand the impact of the different options.<p></p></td>
+              </tr>
+            </tbody></table>
+            <p>
+              
+            </p>
+          </div>
+          <p>There are two separate procedures in this section: one for configuring the policy setting that is applied to computers running Windows&nbsp;Vista or Windows Server&nbsp;2008 and the other for configuring the policy setting that is applied computers running Windows&nbsp;7 or Windows Server&nbsp;2008&nbsp;R2.</p>
+          <h4 class="subHeading">To enable the local policy settings to back up BitLocker and TPM recovery information to AD&nbsp;DS from computers running Windows&nbsp;Vista or Windows Server&nbsp;2008</h4>
+          <div class="subSection">
+            <ol class="ordered">
+              <li>
+                <p>Log on to the computer with an account that has administrative credentials.</p>
+              </li>
+              <li>
+                <p>Click <strong>Start</strong>, type <strong>gpedit.msc</strong> in the <strong>Search programs and files</strong> box, and then press ENTER to open the Local Group Policy Editor.</p>
+              </li>
+              <li>
+                <p>In the console tree under <strong>Computer Configuration\Administrative Templates\Windows Components</strong>, click <strong>BitLocker Drive Encryption</strong>.</p>
+              </li>
+              <li>
+                <p>In the details pane, double-click <strong>Store BitLocker recovery information in Active Directory (Windows Server 2008 and Windows Vista)</strong>.</p>
+              </li>
+              <li>
+                <p>Click <strong>Enabled</strong>, and then configure the following settings as appropriate for your environment:</p>
+                <ul>
+                  <li class="unordered">
+													Select <strong>Require BitLocker backup to AD DS</strong> if you want to prevent users from enabling BitLocker on computers that are not currently able to connect to a domain controller. If this setting is not selected, BitLocker will attempt to store recovery information in AD DS, but if it fails for any reason BitLocker will still be enabled and the recovery information will not be present in AD DS for that drive.<br><br></li>
+                  <li class="unordered">
+													In <strong>Select BitLocker recovery information to store</strong>, select either <strong>Recovery passwords and key packages</strong> or <strong>Recovery passwords only</strong>. Key packages are used with the Repair-bde command-line tool to perform specialized recovery when the disk is damaged or corrupted. For more information, see the <a href="https://technet.microsoft.com/en-us/library/ee706528(v=ws.10).aspx">Repair-bde.exe Parameter Reference</a>.<br><br></li>
+                  <li class="unordered">
+													Click <strong>OK</strong> to apply the policy settings and close the dialog box.<br><br></li>
+                </ul>
+              </li>
+              <li>
+                <p>In the console tree under <strong>Computer Configuration\Administrative Templates\System</strong>, click <strong>Trusted Platform Module Services</strong>. </p>
+              </li>
+              <li>
+                <p>In the details pane, double-click <strong>Turn on TPM backup to Active Directory Domain Services</strong>.</p>
+              </li>
+              <li>
+                <p>Click <strong>Enabled</strong>.</p>
+              </li>
+              <li>
+                <p>The <strong>Require TPM back to AD DS</strong> check box is selected by default. When this option is selected, the TPM owner password cannot be set or changed unless the computer is connected to the domain and AD&nbsp;DS backup succeeds. </p>
+              </li>
+            </ol>
+          </div>
+          <h4 class="subHeading">To enable the local policy settings to back up BitLocker and TPM recovery information to AD&nbsp;DS from computers running Windows&nbsp;7 or Windows Server&nbsp;2008&nbsp;R2 </h4>
+          <div class="subSection">
+            <ol class="ordered">
+              <li>
+                <p>Log on to the computer with an account that has administrative credentials.</p>
+              </li>
+              <li>
+                <p>Click <strong>Start</strong>, type <strong>gpedit.msc</strong> in the <strong>Search programs and files</strong> box, and then press ENTER to open the Local Group Policy Editor.</p>
+              </li>
+              <li>
+                <p>In the console tree under <strong>Computer Configuration\Administrative Templates\Windows Components</strong>, click <strong>BitLocker Drive Encryption</strong>.</p>
+              </li>
+              <li>
+                <p>In the details pane, double-click the drive type subfolder—either <strong>Operating System Drive</strong>, <strong>Fixed Data Drive</strong>, or <strong>Removable Data Drive</strong>—for which you want to store recovery information in AD&nbsp;DS. Each drive type may have recovery information stored. The remainder of this procedure will use <strong>Fixed Data Drive</strong> as the example, but each drive type follows the same configuration steps and includes the same setting options. </p>
+              </li>
+              <li>
+                <p>In the details pane, double-click <strong>Choose how BitLocker-protected fixed drives can be recovered</strong>.</p>
+              </li>
+              <li>
+                <p>Click <strong>Enabled</strong>, and then configure the following settings as appropriate for your environment:</p>
+                <ul>
+                  <li class="unordered">
+													By default, <strong>Save BitLocker recovery information to Active Directory Domain Services</strong> is selected.  <br><br></li>
+                  <li class="unordered">
+													In <strong>Select BitLocker recovery information to store</strong>, select either <strong>Recovery passwords and key packages</strong> or <strong>Recovery passwords only</strong>. Key packages are used with the Repair-bde command-line tool to perform specialized recovery when the disk is damaged or corrupted. For more information, see the <a href="https://technet.microsoft.com/en-us/library/ee706528(v=ws.10).aspx">Repair-bde.exe Parameter Reference</a>.<br><br></li>
+                  <li class="unordered">
+													Select the <strong>Do not enable BitLocker until recovery information is stored in AD DS for fixed data drives</strong> check box if you want to prevent users from enabling BitLocker unless the computer is connected to the domain and the backup of BitLocker recovery information to AD&nbsp;DS succeeds. When this setting is selected, a recovery password is automatically generated.<br><br></li>
+                  <li class="unordered">
+													Click <strong>OK</strong> to apply the policy settings and close the dialog box.<br><br></li>
+                </ul>
+              </li>
+              <li>
+                <p>In the console tree under <strong>Computer Configuration\Administrative Templates\System</strong>, click <strong>Trusted Platform Module Services</strong>. </p>
+              </li>
+              <li>
+                <p>Double-click <strong>Turn on TPM backup to Active Directory Domain Services</strong>.</p>
+              </li>
+              <li>
+                <p>Click <strong>Enabled</strong>.</p>
+              </li>
+              <li>
+                <p>The <strong>Require TPM back to AD DS</strong> check box is selected by default. When this option is selected, the TPM owner password cannot be set or changed unless the computer is connected to the domain and AD&nbsp;DS backup succeeds. </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <a id="BKMK_4">
+        
+      </a>
+      <h2 class="heading">Testing your Active Directory configuration</h2>
+      <div id="sectionSection4" class="section">
+        <p>By joining the Windows&nbsp;7–based client computers to the domain that you just configured and enabling BitLocker, you can test whether BitLocker and TPM recovery information is backed up to AD&nbsp;DS successfully.</p>
+        <p>All user interfaces and programming interfaces within BitLocker and TPM Management features will adhere to your configured Group Policy settings. When these settings are enabled, recovery information (such as recovery passwords) will be automatically backed up to AD&nbsp;DS whenever this information is created and changed. </p>
+        <p>If you select the option to require backup, initializing the TPM or enabling BitLocker through any method is blocked until the backup succeeds. In that case, no one will be allowed to turn on BitLocker or initialize the TPM unless the domain controller is configured correctly, the client computer has network connectivity to the domain controller, and no other errors occur during the backup process.</p>
+        <h3 class="subHeading">Testing the backup with Windows 7</h3>
+        <div class="subSection">
+          <p>You should use a client computer running Windows&nbsp;7 to test the backup process.</p>
+          <p>BitLocker recovery information is backed up when you:</p>
+          <ul>
+            <li class="unordered">
+									Create a recovery password during BitLocker setup, using the wizard available through the Control Panel.<br><br></li>
+            <li class="unordered">
+									Create a recovery password after the disk has already been encrypted, using the Manage-bde.exe command-line tool.<br><br></li>
+          </ul>
+          <p>TPM recovery information is backed up when you:</p>
+          <ul>
+            <li class="unordered">
+									Set the TPM owner password during TPM initialization.<br><br></li>
+            <li class="unordered">
+									Change the TPM owner password.<br><br></li>
+          </ul>
+        </div>
+        <h3 class="subHeading">Sample test scenario with Windows&nbsp;7</h3>
+        <div class="subSection">
+          <p>This sample test scenario illustrates how to verify your Active Directory configuration by using Windows&nbsp;7. It uses the <a href="http://gallery.technet.microsoft.com/scriptcenter/780d167f-2d57-4eb7-bd18-84c5293d93e3">BitLocker Deployment Sample Scripts</a> that are available to download to assist in the test process. </p>
+          <div class="alert">
+            <table>
+              <tbody><tr>
+                <th align="left">
+                  <img id="Important" alt="Important" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/clear.gif" title="Important" xmlns="" class="cl_IC160177">Important </th>
+              </tr>
+              <tr>
+                <td>
+								You should perform additional tests as required to verify that everything is working correctly in your environment; do not assume that this scenario will completely test all aspects of your configuration. <p></p></td>
+              </tr>
+            </tbody></table>
+            <p>
+              
+            </p>
+          </div>
+          <p>Test scenarios can also vary based on your organization's policies. For example, in organizations where users are the Creator Owner of computer objects that they join to the domain, it might be possible for these users to read the TPM owner information for their own computer objects.</p>
+          <h4 class="subHeading">To perform the sample test</h4>
+          <div class="subSection">
+            <ol class="ordered">
+              <li>
+                <p>Log on to a domain controller as a domain administrator.</p>
+              </li>
+              <li>
+                <p>Copy the sample script files to a location accessible by both the domain controller and the client computers.</p>
+              </li>
+              <li>
+                <p>Open a Command Prompt window, and change the default location to the location of the sample script files.</p>
+              </li>
+              <li>
+                <p>At the command prompt, type the following:</p>
+                <p>
+                  <strong>cscript List-ACEs.vbs </strong>
+                </p>
+                <p>Expected result: Assuming that the default Add-TPMSelfWriteACE.vbs was used and other deprecated ACEs have been removed, there is only one ACE related to BitLocker and the TPM. The following is an example of the output:</p>
+                <p>
+                  <code>Accessing</code>
+                </p>
+                <p>
+                  
+                </p>
+                <p>
+                  <code>&gt;            AceFlags: 10</code>
+                </p>
+                <p>
+                  <code>&gt;             AceType: 5</code>
+                </p>
+                <p>
+                  <code>&gt;               Flags: 3</code>
+                </p>
+                <p>
+                  <code>&gt;          AccessMask: 32</code>
+                </p>
+                <p>
+                  <code>&gt;          ObjectType: {AA4E1A6D-550D-4E05-8C35-4AFCB917A9FE}</code>
+                </p>
+                <p>
+                  <code>&gt; InheritedObjectType: {BF967A86-0DE6-11D0-A285-00AA003049E2}</code>
+                </p>
+                <p>
+                  <code>&gt;             Trustee: NT AUTHORITY\SELF</code>
+                </p>
+                <p>
+                  
+                </p>
+                <p>
+                  <code>1 ACE(s) found in DC=nttest,DC=microsoft,DC=com related to BitLocker   and TPM</code>
+                </p>
+              </li>
+              <li>
+                <p>Log on as a local administrator (non-domain administrator) to a Windows&nbsp;7–based client computer that is a member of the domain.</p>
+              </li>
+              <li>
+                <p>Click <strong>Start</strong>, type <strong>tpm.msc</strong> in the <strong>Search programs and files</strong> box, and then press ENTER.</p>
+              </li>
+              <li>
+                <p>Click either the <strong>Initialize TPM</strong> or <strong>Change Owner Password</strong> link. </p>
+              </li>
+              <li>
+                <p>Set an owner password, and select the option to back up the information by printing or saving to a file as needed.</p>
+                <p>Expected result: The action succeeds without an error message.</p>
+              </li>
+              <li>
+                <p>Using this same account, open an elevated Command Prompt window, and then change to the folder in which you have saved a copy of the sample scripts provided with this document.</p>
+                <div class="alert">
+                  <table>
+                    <tbody><tr>
+                      <th align="left">
+                        <img id="note" alt="note" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/clear.gif" title="note" xmlns="" class="cl_IC101471">Note </th>
+                    </tr>
+                    <tr>
+                      <td>
+												To open an elevated Command Prompt window, click <strong>Start</strong>, click <strong>All Programs</strong>, click <strong>Accessories</strong>, right-click <strong>Command Prompt</strong>, and then click <strong>Run as administrator</strong>.<p></p></td>
+                    </tr>
+                  </tbody></table>
+                  <p>
+                    
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p>At the command prompt, type the following:</p>
+                <p>
+                  <strong>cscript Get-TPMOwnerInfo.vbs</strong>
+                </p>
+                <p>Expected result: The error "Active Directory: The directory property cannot be found in the cache" appears. No information is displayed because a non-domain administrator should not be able to read the ms-TPM-OwnerInformation attribute.</p>
+                <div class="alert">
+                  <table>
+                    <tbody><tr>
+                      <th align="left">
+                        <img id="note" alt="note" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/clear.gif" title="note" xmlns="" class="cl_IC101471">Note </th>
+                    </tr>
+                    <tr>
+                      <td>
+												If users are the Creator Owner of computer objects that they join to the domain, it might be possible for these users to read the TPM owner information for their own computer objects.<p></p></td>
+                    </tr>
+                  </tbody></table>
+                  <p>
+                    
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p>Log on as a domain administrator on the same client computer.</p>
+              </li>
+              <li>
+                <p>Using this domain administrator account, open an elevated Command Prompt window, and change to the directory in which you have saved a copy of the sample scripts provided with this document.</p>
+              </li>
+              <li>
+                <p>At the command prompt, type the following:</p>
+                <p>
+                  <strong>cscript Get-TPMOwnerInfo.vbs</strong>
+                </p>
+                <p>Expected result: A string that is the hash of the password you created earlier is displayed.</p>
+                <p>As a domain administrator, you should have Read access to the ms-TPM-OwnerInformation attribute. </p>
+              </li>
+              <li>
+                <p>At the elevated command prompt, type the following to turn on BitLocker and create a recovery password:</p>
+                <p>
+                  <strong>manage-bde -on C: -RecoveryPassword </strong>
+                </p>
+                <p>Expected result: The action succeeds without an error message.</p>
+              </li>
+              <li>
+                <p>After the drive has completed encryption, at the command prompt, type the following to back up the recovery password to AD&nbsp;DS, replacing <em>recoveryGUID</em> with the full recovery key identification GUID of the recovery password you are storing in AD DS:</p>
+                <p>
+                  <strong>manage-bde -protectors -adbackup C: -id </strong>
+                  <strong>{</strong>
+                  <em>recoveryGUID</em>
+                  <strong>}</strong>
+                </p>
+                <div class="alert">
+                  <table>
+                    <tbody><tr>
+                      <th align="left">
+                        <img id="note" alt="note" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/clear.gif" title="note" xmlns="" class="cl_IC101471">Note </th>
+                    </tr>
+                    <tr>
+                      <td>
+												The full recovery key identification GUID is printed when you print the BitLocker recovery key.<p></p></td>
+                    </tr>
+                  </tbody></table>
+                  <p>
+                    
+                  </p>
+                </div>
+              </li>
+              <li>
+                <p>At the command prompt, type the following to read all BitLocker child objects of the client computer's Active Directory object:</p>
+                <p>
+                  <strong>cscript Get-BitLockerRecoveryInfo.vbs</strong>
+                </p>
+                <p>Expected result: One or more recovery passwords is displayed, including the one created in the previous step. </p>
+                <p>A non-domain administrator will not be able to read these passwords. </p>
+              </li>
+              <li>
+                <p>Delete any created BitLocker recovery child objects by using Active Directory tools such as the Active Directory Users and Computers snap-in. By default, client computers running Windows&nbsp;7 do not have permissions to delete BitLocker recovery passwords.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <a id="BKMK_5">
+        
+      </a>
+      <h2 class="heading">Troubleshooting common problems with AD DS backup</h2>
+      <div id="sectionSection5" class="section">
+        <p>The following section discusses some potential problems and their solutions. </p>
+        <h3 class="subHeading">Access permission problems</h3>
+        <div class="subSection">
+          <p>If you are able to read backed up BitLocker and TPM recovery information by using a non–domain administrator account, check that you are running supported installations of Windows Server on all the domain controllers in your network. </p>
+          <div class="alert">
+            <table>
+              <tbody><tr>
+                <th align="left">
+                  <img id="Important" alt="Important" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/clear.gif" title="Important" xmlns="" class="cl_IC160177">Important </th>
+              </tr>
+              <tr>
+                <td>
+								Domain controllers must be running Windows Server&nbsp;2003&nbsp;SP1 or SP2 to support backing up BitLocker and TPM recovery information.<p></p></td>
+              </tr>
+            </tbody></table>
+            <p>
+              
+            </p>
+          </div>
+        </div>
+        <h3 class="subHeading">Script errors</h3>
+        <div class="subSection">
+          <p>You might receive an error message when you run a script. The following sections explain the causes of and solutions for the most frequent script errors.</p>
+          <h4 class="subHeading">Get-TPMOwnerInfo.vbs</h4>
+          <div class="subSection">
+            <p>When running Get-TPMOwnerInfo.vbs, if an error appears stating "Active Directory: The directory property cannot be found in the cache," it means that you are logged on with an account that does not have permission to read the TPM owner information attribute object in AD&nbsp;DS.</p>
+          </div>
+          <h4 class="subHeading">General</h4>
+          <div class="subSection">
+            <p>If an error appears stating "The specified domain either does not exist or could not be contacted," ensure that the computer is joined to the domain and that network connectivity is available.</p>
+            <p>If an error appears stating "There is no such object on the server," check that any computer specified by name on the command line is currently connected to the network.</p>
+            <p>If an error is accompanied by the line number in which the error occurred, consult the script source code to assist in troubleshooting the issue.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>
+      
+    </p>
+  </div>
+</div></div>
+
+
+
+
+
+<script id="CommentTemplate" type="text/x-jquery-tmpl">
+    <div class="communityContentAnnotation">
+        <a name="${Index}"></a>
+        <h3>
+            ${Title}
+        </h3>
+        <div class="communityContentAnnotationBody">
+            {{html Body}}
+        </div>
+        <div class="communityContentAnnotationInfo">
+            <div class="communityContentAnnotationAvatarContainer">
+                <a href="${useravatar.href}" title="${UserAvatar.ToolTip}" class="communityContentAnnotationAvatar"><img src="${UserAvatar.ImageUrl}" alt="${UserAvatar.ImageAltText}" width="34" height="34" /></a>
+            </div>
+            <div class="communityContentAnnotationUserDateContainer">
+                <div class="communityContentAnnotationUserContainer">
+                    <a href="${useravatar.href}">
+                        ${User}
+                    </a>
+                </div>
+                <div class="communityContentAnnotationDateContainer">
+                    <span>${Date}</span>
+                    
+                    {{if EditLink}}
+                        <span>
+                            <a href="${editlink.href}" title="${EditLink.ToolTip}" class="communityContentCommentEditLink">${EditLink.Title}</a>
+                        </span>
+                    {{/if}}
+
+                    {{if DeleteLink}}
+                        <span>
+                            <a href="${deletelink.href}" title="${DeleteLink.ToolTip}" class="communityContentDeleteLink">${DeleteLink.Title}</a>
+                        </span>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<div class="communityContentContainer">
+    <div id="CommunityContentHeader" class="communityContentHeader">
+        <div class="communityContentHeaderTitleContainer">
+            <h2>Community Additions</h2>
+                <a class="communityContentAddLink" href="https://technet.microsoft.com/en-us/library/community/add/dd875529(v=ws.10).aspx">
+                    <span class="communityContentAddButton" title="Add">
+                        ADD
+                    </span>
+                </a>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    
+    <div id="CommunityComments" data-url="/en-us/library/community/comments/dd875529(v=ws.10).aspx"></div>
+</div>
+
+
+
+
+<div class="libraryMemberFilter">
+    <div class="filterContainer">
+        <span>Show:</span>
+        <label>
+            <input type="checkbox" class="libraryFilterInherited" checked="checked" value="Inherit">Inherited
+        </label>
+        <label>
+            <input type="checkbox" class="libraryFilterProtected" checked="checked" value="Protected">Protected
+        </label>
+    </div>
+</div>
+    
+<input type="hidden" id="libraryMemberFilterEmptyWarning" value="There are no members available with your current filter settings.">
+
+
+
+    </div>
+
+
+        </div>
+        <div class="clear"></div>
+
+        
+
+<input name="__RequestVerificationToken" type="hidden" value="pt49iI9IWgucRSlan8zOqvKp7Fa-8KqPuu5n1aL70aV1WI1QM_S3FNMRMpKl7pcYk5tRN0NdN4sxIkRhXHSMeGEGHy41">
+<input id="ratingValueSubmitUrl" type="hidden" value="https://technet.microsoft.com/en-us/library/feedback/rate/dd875529(v=ws.10).aspx">
+<input id="ratingAdditionalSubmitUrl" type="hidden" value="https://technet.microsoft.com/en-us/library/feedback/additional/dd875529(v=ws.10).aspx">
+<input id="isTopicRated" type="hidden" value="false">
+
+
+
+    <div id="lib-footer">
+      <div id="responsiveRating" ms.pgarea="rating" class="show">
+        
+
+
+    <div id="skinnyRating">
+        <div class="closeSmallWhite"></div>
+        <div class="rating">
+            <div id="s_ratingSection1">
+                <div class="title">
+                    Was this page helpful?
+                </div>
+                <div class="buttons">
+                    <button class="button" id="s_ratingYes" aria-label="Yes, this page was helpful">Yes</button>
+                    <button class="button" id="s_ratingNo" aria-label="No, this page was not helpful">No</button>
+                </div>
+                <input id="s_ratingValue" type="hidden" value="">
+            </div>
+            <div id="s_ratingSection2">
+                <div id="s_skinnyRatingForm">
+                    <div class="title">
+                        Additional feedback?
+                    </div>
+                    <textarea id="s_ratingText" rows="6" cols="" maxlength="1500"></textarea>
+                    <div class="right">
+                        <div class="counter">
+                            <span id="feedbackTextCounter">1500</span> characters remaining
+                        </div>
+                        <div class="buttons">
+                            <button class="button" id="s_ratingSubmit" aria-label="Submit my additional feedback">Submit</button>
+                            <button class="button" id="s_ratingSkipThis" aria-label="Skip additional feedback">Skip this</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="s_ratingSection3" style="display: none">
+                <div class="title">
+                    Thank you!
+                </div>
+                <div class="description">
+                    We appreciate your feedback.
+                </div>
+            </div>
+            
+            <div id="contentFeedbackQAContainer" style="display: none;"></div>
+        </div>
+    </div>
+    
+
+      </div>
+      
+   <div id="ux-footer" class="ltr">
+    <div class="ux-footer-clear"></div>
+    <div id="footerRight">
+        <div id="FooterLogoContainer"><div id="FooterLogo"></div></div>
+        <div id="FooterCopyright">© 2016 Microsoft</div>
+    </div>
+    <div id="footerLeft">
+        <div id="footerProfileLink">
+        <div data-fragmentname="ManageProfileLink" id="Fragment_ManageProfileLink" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="http://go.microsoft.com/?linkid=8786243" xmlns="http://www.w3.org/1999/xhtml">Manage Your Profile</a>
+</div>
+        </div>
+        <div id="footerGroup">
+            <div id="LinkGroup">
+                <div id="Links1"><div data-fragmentname="FooterLinks" id="Fragment_FooterLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <ul class="links horizontal">
+      <li>
+        <a href="https://technet.microsoft.com/cc543196.aspx" xmlns="http://www.w3.org/1999/xhtml">Newsletter</a>
+      </li>
+      <li class="divider">|</li>
+      <li>
+        <a href="https://technet.microsoft.com/cc512759.aspx" xmlns="http://www.w3.org/1999/xhtml">Contact Us</a>
+      </li>
+      <li class="divider">|</li>
+      <li>
+        <a href="http://go.microsoft.com/fwlink/?linkid=248681" xmlns="http://www.w3.org/1999/xhtml">Privacy Statement</a>
+      </li>
+      <li class="divider">|</li>
+      <li>
+        <a href="https://technet.microsoft.com/cc300389.aspx" xmlns="http://www.w3.org/1999/xhtml">Terms of Use</a>
+      </li>
+      <li class="divider">|</li>
+      <li>
+        <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/en-us.aspx" xmlns="http://www.w3.org/1999/xhtml">Trademarks</a>
+      </li>
+      <li class="divider">|</li>
+    </ul>
+  </div>
+</div></div>
+            </div>
+            <div id="Feedback">
+                <div class="feedbackListItem">
+                    <div class="divider">|</div>                    
+                        
+
+
+
+
+
+<div class="FooterSiteFeedBack">
+    <a id="SiteFeedbackLinkOpener" href="javascript:void(0)">
+        <span class="FeedbackButton clip20x21" id="FeedbackButton">
+            <img id="feedBackImg" class="cl_footer_feedback_icon" src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/ImageSprite.png" alt="Site Feedback">
+        </span>
+        Site Feedback
+    </a>
+    
+    <div id="SiteFeedbackLinkContainer" class="SiteFeedbackLinkContainer" style="display: none;">
+    <form id="siteFeedbackForm" method="post" action="https://technet.microsoft.com/en-us/library/feedback/add/dd875529(v=ws.10).aspx">
+        <div class="SiteFeedbackLinkTitleContainer">
+            <div class="SiteFeedbackLinkTitle">
+                Site Feedback
+            </div>
+            <div class="SiteFeedbackLinkCancel">
+                <a id="SiteFeedbackLinkCloser" href="javascript:void(0)">x</a>
+            </div>
+        </div>
+        <div class="SiteFeedbackLinkData">
+            <div class="SiteFeedbackLinkInfoText">
+                Tell us about your experience...
+            </div>
+            <div class="QuestionText">
+                Did the page load quickly?
+            </div>
+            <div class="AnswerText">
+                
+                <span>
+                    Yes<span>
+                        <input id="searchBox" name="searchBox" type="radio" value="1"></span></span>
+                
+                <span>
+                    No<span>
+                        <input id="searchBox" name="searchBox" type="radio" value="0"></span></span>
+                
+            </div>
+            <div class="QuestionText">
+                Do you like the page design?
+            </div>
+            <div class="AnswerText">
+                
+                <span>
+                    Yes<span>
+                        <input id="tabbedCode" name="tabbedCode" type="radio" value="1"></span></span>
+                
+                <span>
+                    No<span>
+                        <input id="tabbedCode" name="tabbedCode" type="radio" value="0"></span></span>
+                
+            </div>
+            <div class="QuestionText">
+                Tell us more
+            </div>
+            <div class="SiteFeedbackLinkTextAreaContainer">
+                <textarea id="feedbackText" data-maxlength="4000" name="feedbackText" cols="25" rows="5" class="SiteFeedbackLinkTextArea"></textarea>
+                
+                <input type="hidden" id="feedbackSiteName" name="feedbackSiteName" value="">
+                <input type="hidden" id="feedbackPriority" name="feedbackPriority" value="">
+                <input type="hidden" id="feedbackSourceUrl" name="feedbackSourceUrl" value="">
+                <input type="hidden" id="ClientIP" name="ClientIP" value="">
+                <input type="hidden" id="ClientOS" name="ClientOS" value="">
+                <input type="hidden" id="ClientBrowser" name="ClientBrowser" value="">
+                <input type="hidden" id="ClientTime" name="ClientTime" value="">
+                <input type="hidden" id="ClientDate" name="ClientDate" value="">
+                
+            </div>
+            <div>
+                <input id="siteFeedbackSubmit" type="submit" value="Send" class="SiteFeedbackLinkSubmit">
+            </div>
+        </div>
+        <input type="hidden" id="returnUrl" name="returnUrl" value="https://technet.microsoft.com/en-us/library/dd875529(v=ws.10).aspx">
+    <input name="__RequestVerificationToken" type="hidden" value="I7WezLoegl9gODyRVzlgLVb8ijzI2EFhuKCUG2OHzHbDGMRwaSEfRLa8GaxVO0TiHKm5psGFnNQF-em3UgRB-9bJvVw1"></form>
+</div>
+    
+    
+</div>
+                    
+                </div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <div id="Links2"></div>
+    </div>
+</div> 
+
+    </div>
+
+        <div class="footerPrintView">
+            <div class="footerCopyrightPrintView">© 2016 Microsoft</div>
+        </div>
+
+        
+        
+  
+  
+    
+      
+
+  <input id="tocPaddingPerLevel" type="hidden" value="17">
+
+
+
+        <input id="MtpsDevice" type="hidden" value="Default">
+
+
+<!--[CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]-->
+
+        
+        
+        
+            
+        
+
+
+
+
+
+
+<noscript>&lt;div&gt;&lt;img alt="DCSIMG" id="Img1" width="1" height="1" src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No" /&gt;&lt;/div&gt;</noscript>
+
+
+
+
+
+
+
+
+<div id="globalRequestVerification">
+    <input name="__RequestVerificationToken" type="hidden" value="I7WezLoegl9gODyRVzlgLVb8ijzI2EFhuKCUG2OHzHbDGMRwaSEfRLa8GaxVO0TiHKm5psGFnNQF-em3UgRB-9bJvVw1">
+</div>
+
+
+    </div>
+
+    
+    
+
+    
+
+    
+    
+    
+<script type="text/javascript" class="mtps-injected">
+/*<![CDATA[*/
+(function(window,document){"use strict";function preload(scripts){for(var result=[],script,e,i=0;i<scripts.length;i++)script=scripts[i],script.hasOwnProperty("url")&&(e=document.createElement("script"),e.src=script.url,script.throwaway=e),result.push(script);return result}function inject(scripts,index){var script,elem;if(index>=scripts.length){delete mtps.injectScripts;return}script=scripts[index];elem=document.createElement("script");elem.className="mtps-injected";elem.async=!1;var isLoaded=!1,timeoutId=0,injectNextFnName="",injectNext=elem.onerror=function(){isLoaded||(isLoaded=!0,inject(scripts,index+1),window.clearTimeout(timeoutId),elem.onload=elem.onerror=elem.onreadystatechange=null,injectNextFnName&&delete mtps[injectNextFnName],elem.removeEventListener&&elem.removeEventListener("load",injectNext,!1))};elem.addEventListener?elem.addEventListener("load",injectNext,!1):elem.readyState==="uninitialized"?elem.onreadystatechange=function(){(this.readyState==="loaded"||this.readyState==="complete")&&injectNext()}:elem.onload=injectNext;script.hasOwnProperty("url")?(timeoutId=window.setTimeout(injectNext,12e4),elem.src=script.url):(injectNextFnName="_injectNextScript_"+index,mtps[injectNextFnName]=injectNext,timeoutId=window.setTimeout(injectNext,2e3),elem.text="try {\n"+script.txt+"\n} finally { MTPS."+injectNextFnName+" && MTPS."+injectNextFnName+"(); }");parent.appendChild(elem)}var mtps=window.MTPS||(window.MTPS={}),parent=document.getElementsByTagName("head")[0];mtps.injectScripts=function(scripts){inject(preload(scripts),0)}})(window,document);
+MTPS.injectScripts([
+	{ txt: "/**/\r\n(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { \r\n\t\"image\": \"https://i-technet.sec.s-msft.com\", \r\n\t\"js\": \"https://i2-technet.sec.s-msft.com\", \r\n\t\"css\": \"https://i-technet.sec.s-msft.com\", \r\n\t\"xap\": \"https://technet.microsoft.com\"\r\n});\r\n/**/" },
+	{ txt: "//\n  var literalNormalizedUrl = \u0027/en-us/library/dd875529(l=en-us,v=ws.10).aspx\u0027;\n  var wt_nvr_ru = \u0027WT_NVR_RU\u0027;\n  var wt_fpcdom = \u0027.microsoft.com\u0027;\n  var wt_domlist = \u0027technet.microsoft.com\u0027;\n  var wt_pathlist = \u0027/technet/\u0027;\n  var wt_paramlist = \u0027DCSext.mtps_techcenter\u0027;\n  var wt_siteid = \u0027TECHNET\u0027;\n  var gDomain = \u0027m.webtrends.com\u0027;\n  var gDcsId = \u0027dcsjwb9vb00000c932fd0rjc7_5p3t\u0027;\n  var gFpc = \u0027WT_FPC\u0027;\n\n\n\n  if (document.cookie.indexOf(gFpc + \"=\") == -1) {\n    var wtidJs = document.createElement(\"script\");\n    wtidJs.src = \"//\" + gDomain + \"/\" + gDcsId + \"/wtid.js\";\n    document.getElementsByTagName(\"head\")[0].appendChild(wtidJs);\n  }\n\n\n\n  var detectedLocale = \u0027en-us\u0027;\n  var wtsp = \u0027_technet_library_win7_\u0027;\n  var gTrackEvents = \u00270\u0027;\n/**/" },
+	{ txt: "//\n\n        window.appInsightsId = \u002734ac8cd9-5026-4b8c-bd79-e0c26f67812a\u0027;\n        //" },
+	{ url: "https://i2-technet.sec.s-msft.com/Combined.js?resources=0:Utilities,1:SkinnyRating,0:Topic,2:webtrendsscript,0:AppInsightsPerf,3:Toc,0:ABTestControl,4:WEDCS,0:livefyre,0:Comment;/Areas/Epx/Content/Scripts:0,/Areas/Library/Themes/TechNet/Content:1,/Areas/Global/Content/Webtrends/resources:2,/Areas/Library/Content:3,/Areas/Library/Themes/Base/Content:4\u0026amp;hashKey=5198141833F8A2B74EF9429D0F937B26\u0026amp;v=218CEAFC33F0D1D607ACC0542E75DA17" },
+	{ txt: "var omnitureTracking = \"false\";" },
+	{ url: "https://i2-technet.sec.s-msft.com/Combined.js?resources=0:megablade.1,1:SearchBox;/Areas/Epx/Themes/Shared/Content:0,/Areas/Epx/Themes/Base/Content:1\u0026amp;hashKey=CF7F44EE3B4E55D263769D4D5EF3B434\u0026amp;v=218CEAFC33F0D1D607ACC0542E75DA17" },
+	{ url: "https://i2.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=HeaderSearchTextBox\u0026btnid=HeaderSearchButton\u0026brand=TechNet\u0026loc=en-us\u0026Refinement=1002\u0026watermark=Windows\u0026focusOnInit=false\u0026iroot=windows" },
+	{ url: "https://i2-technet.sec.s-msft.com/Combined.js?resources=0:PrintExportButton,1:AnySuggestion,2:NavigationResize;/Areas/Library/Themes/Base/Content:0,/Areas/Library/Themes/Technet/Content:1,/Areas/Library/Content:2\u0026amp;hashKey=537F3E59E09975829C6E0F7927B9AF7E\u0026amp;v=218CEAFC33F0D1D607ACC0542E75DA17" },
+	{ url: "https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js" },
+	{ url: "https://i2-technet.sec.s-msft.com/Combined.js?resources=0:CommunityContent,0:LibraryMemberFilter,1:SiteFeedbackLink,1:CodeSnippet,1:TopicNotInScope,1:CollapsibleArea,1:VersionSelector,1:SurveyBroker;/Areas/Library/Content:0,/Areas/Epx/Content/Scripts:1\u0026amp;hashKey=9DF6EF1D8A3095CEFCC7543D408109C5\u0026amp;v=218CEAFC33F0D1D607ACC0542E75DA17" },
+	{ txt: "$(document).ready(function() {\n        try {\n            var token = $(\"#globalRequestVerification input[name=\u0027__RequestVerificationToken\u0027]\").clone();\n            $(\"#siteFeedbackForm\").append(token);\n        } catch(err) {\n            \n        }\n    });" }
+]);
+
+/*]]>*/
+</script>
+
+<script src="./Backing Up BitLocker and TPM Recovery Information to AD DS_files/broker-config.js"></script></body></html>

@@ -1,0 +1,3 @@
+cmd.exe /c DISM /Online /NoRestart /Enable-Feature /FeatureName:NetFx3
+
+cmd.exe /c DISM.EXE /Online /Add-Package /PackagePath:"C:\Installs\DotNet3.5\Microsoft-Windows-NetFx3-OnDemand-Package.cab"

@@ -23,6 +23,7 @@
     1: Start download files from McAfee Updates site and downloads to fixed folder path, Will clean up filles that no longer exist.
 #>
 
+# -- Untrusted Cert Fix ----------------------------------------------------
 process {
     # -- Untrusted Cert Fix ----------------------------------------------------
     add-type @"
@@ -31,15 +32,16 @@ process {
         public class TrustAllCertsPolicy : ICertificatePolicy {
             public bool CheckValidationResult(
                 ServicePoint srvPoint, X509Certificate certificate,
-                WebRequest request, int certificateProblem) {
+                WebRequest request, int certificateProblem
+	    ) {
                 return true;
-            }
-        }
-"@
-  $AllProtocols = [System.Net.SecurityProtocolType]'Ssl3,Tls,Tls11,Tls12'
-  [System.Net.ServicePointManager]::SecurityProtocol = $AllProtocols
-  [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
-  # -- Untrusted Cert Fix ----------------------------------------------------
+            } # Public bool CheckValidationResult
+        } # Public Class TrustAllCertsPolicy
+    "@ # Add-Type
+    $AllProtocols = [System.Net.SecurityProtocolType]'Ssl3,Tls,Tls11,Tls12'
+    [System.Net.ServicePointManager]::SecurityProtocol = $AllProtocols
+    [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
+    # -- Untrusted Cert Fix ----------------------------------------------------
 
     function ProcessWebFolder{
         Param( $WebPath, $LocalFolder)
@@ -252,4 +254,4 @@ if (Test-Path -Path $strLogName) {
     ProcessWebFolder $DownloadURL $DownloadToFolder
     Start-Sleep -Seconds 5
 
-}
+} # Process
