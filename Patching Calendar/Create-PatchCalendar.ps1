@@ -1,10 +1,11 @@
 ﻿
 Param (
-    [parameter(Mandatory=$false)][datetime]$Date
+    [parameter(Mandatory=$false)][datetime]$Date,
+    [parameter(Mandatory=$false)][bool]$iCalendar
 )
 
 Begin {
-    Write-Host "Beginning..."
+    Write-Host "[INFO ] -- Beginning..."
 }
 
 Process {
@@ -79,8 +80,8 @@ END:VALARM
     function StopCalendar() {
         Write-Host "END:VCALENDAR"
     }
-    $date = (get-date).AddMonths(0)
     if ($Date) {
+        #$date = (get-date).AddMonths(0)
         $ProcessDate = Get-Date -Date (($Date).ToString("yyyy-MM-05"))
     } else {
         $ProcessDate = Get-Date -Date (Get-Date -format "yyyy-MM-05")
@@ -90,34 +91,37 @@ END:VALARM
     Write-Host "Check for Month: '$($ProcessDate.ToLongDateString())'"
     Write-Host "Patch Tuesday: '$(($PatchTuesday).ToLongDateString())'"
     #Friday after second Tuesday
-    $TestChangeLogStart     = ($PatchTuesday).AddDays(03).AddHours(09) 
+    $TestChangeLogStart     = ($PatchTuesday).AddDays(03).AddHours(09)
     $TestChangeLogEnd       = ($TestChangeLogStart).AddHours(00).AddMinutes(30)
     #Friday-Week after second Tuesday
-    $ProdChangeLogStart     = ($PatchTuesday).AddDays(10).AddHours(09) 
+    $ProdChangeLogStart     = ($PatchTuesday).AddDays(10).AddHours(09)
     $ProdChangeLogEnd       = ($ProdChangeLogStart).AddHours(00).AddMinutes(30)
     #Wednesday-Week after second Tuesday
-    $TestCheckStart         = ($PatchTuesday).AddDays(08).AddHours(09) 
+    $TestNotifyStart        = ($PatchTuesday).AddDays(08).AddHours(09)
+    $TestNotifyEnd          = ($TestNotifyStart).AddHours(00).AddMinutes(30)
+    #Wednesday-Week after second Tuesday
+    $TestCheckStart         = ($PatchTuesday).AddDays(08).AddHours(09).AddMinutes(30)
     $TestCheckEnd           = ($TestCheckStart).AddHours(00).AddMinutes(30)
     #Thursday-Week after second Tuesday
-    $TestPatchStart         = ($PatchTuesday).AddDays(09).AddHours(15) 
+    $TestPatchStart         = ($PatchTuesday).AddDays(09).AddHours(15)
     $TestPatchEnd           = ($TestPatchStart).AddHours(03).AddMinutes(00)
     #Monday-Week after second Tuesday
-    $ProdFirstNotifyStart   = ($PatchTuesday).AddDays(13).AddHours(09) 
+    $ProdFirstNotifyStart   = ($PatchTuesday).AddDays(13).AddHours(09)
     $ProdFirstNotifyEnd     = ($ProdFirstNotifyStart).AddHours(00).AddMinutes(30)
     #Wednesday-2Week after second Tuesday
-    $ProdSecondNotifyStart  = ($PatchTuesday).AddDays(15).AddHours(09) 
+    $ProdSecondNotifyStart  = ($PatchTuesday).AddDays(15).AddHours(09)
     $ProdSecondNotifyEnd    = ($ProdSecondNotifyStart).AddHours(00).AddMinutes(30)
     #Thursday-2Week after second Tuesday
-    $ProdStanddownStart     = ($PatchTuesday).AddDays(16).AddHours(08) 
+    $ProdStanddownStart     = ($PatchTuesday).AddDays(16).AddHours(08)
     $ProdStanddownEnd       = ($ProdStanddownStart).AddHours(04).AddMinutes(00)
     #Thursday-2Week after second Tuesday
-    $ProdCheckStart         = ($PatchTuesday).AddDays(16).AddHours(16) 
+    $ProdCheckStart         = ($PatchTuesday).AddDays(16).AddHours(16)
     $ProdCheckEnd           = ($ProdCheckStart).AddHours(00).AddMinutes(30)
     #Thursday-2Week after second Tuesday
-    $ProdFirstPatchStart    = ($PatchTuesday).AddDays(16).AddHours(19) 
+    $ProdFirstPatchStart    = ($PatchTuesday).AddDays(16).AddHours(19)
     $ProdFirstPatchEnd      = ($ProdFirstPatchStart).AddHours(05).AddMinutes(-1)
     #Friday-2Week after second Tuesday
-    $ProdSecondPatchStart   = ($PatchTuesday).AddDays(17).AddHours(09) 
+    $ProdSecondPatchStart   = ($PatchTuesday).AddDays(17).AddHours(09)
     $ProdSecondPatchEnd     = ($ProdSecondPatchStart).AddHours(03).AddMinutes(00)
     #First workday of next month
     $ScheduleNextMonthStart = ($ProcessDate).AddMonths(1).AddHours(09)
@@ -126,36 +130,39 @@ END:VALARM
         $ScheduleNextMonthStart = $ScheduleNextMonthStart.AddDays(1)
     }
     $ScheduleNextMonthEnd   = ($ScheduleNextMonthStart).AddHours(00).AddMinutes(30)
-<#
-    Write-Host "Patch Tuesday: '$($PatchTuesday.ToLongDateString())'."
-    Write-Host "Test change logged: '$($TestChangeLogStart.ToString('f'))', finish at '$($TestChangeLogEnd.ToShortTimeString())'."
-    Write-Host "Test check: '$($TestCheckStart.ToString('f'))', finish at '$($TestCheckEnd.ToShortTimeString())'."
-    Write-Host "Test patch: '$($TestPatchStart.ToString('f'))', finish at '$($TestPatchEnd.ToShortTimeString())'."
-    Write-Host "Prod change logged: '$($ProdChangeLogStart.ToString('f'))', finish at '$($ProdChangeLogEnd.ToShortTimeString())'."
-    Write-Host "Prod first notify: '$($ProdFirstNotifyStart.ToString('f'))', finish at '$($ProdFirstNotifyEnd.ToShortTimeString())'."
-    Write-Host "Prod second notify: '$($ProdSecondNotifyStart.ToString('f'))', finish at '$($ProdSecondNotifyEnd.ToShortTimeString())'."
-    Write-Host "Prod check: '$($ProdCheckStart.ToString('f'))', finish at '$($ProdCheckEnd.ToShortTimeString())'."
-    Write-Host "Prod stand-down: '$($ProdStanddownStart.ToString('f'))', finish at '$($ProdStanddownEnd.ToShortTimeString())'."
-    Write-Host "Prod first patch: '$($ProdFirstPatchStart.ToString('f'))', finish at '$($ProdFirstPatchEnd.ToShortTimeString())'."
-    Write-Host "Prod second patch: '$($ProdSecondPatchStart.ToString('f'))', finish at '$($ProdSecondPatchEnd.ToShortTimeString())'."
-    Write-Host "Schedule next month: '$($ScheduleNextMonthStart.ToString('f'))', finish at '$($ScheduleNextMonthEnd.ToShortTimeString())'."
-#>
-StartCalendar -Occurances 12 -Subject "$(($ProcessDate).ToString("yyyy-MM (MMM)"))"
-AddCalendarDate -Instance 01 -Start ($PatchTuesday).AddHours(09) -Finish ($PatchTuesday).AddHours(09) -Subject "Patch Tuesday"
-AddCalendarDate -Instance 02 -Start $TestChangeLogStart -Finish $TestChangeLogEnd -Subject "Test change logged"
-AddCalendarDate -Instance 03 -Start $TestCheckStart -Finish $TestCheckEnd -Subject "Test check"
-AddCalendarDate -Instance 04 -Start $TestPatchStart -Finish $TestPatchEnd -Subject "Test patch"
-AddCalendarDate -Instance 05 -Start $ProdChangeLogStart -Finish $ProdChangeLogEnd -Subject "Prod change logged"
-AddCalendarDate -Instance 06 -Start $ProdFirstNotifyStart -Finish $ProdFirstNotifyEnd -Subject "Prod first notify"
-AddCalendarDate -Instance 07 -Start $ProdSecondNotifyStart -Finish $ProdSecondNotifyEnd -Subject "Prod second notify"
-AddCalendarDate -Instance 08 -Start $ProdCheckStart -Finish $ProdCheckEnd -Subject "Prod check"
-AddCalendarDate -Instance 09 -Start $ProdStanddownStart -Finish $ProdStanddownEnd -Subject "Prod stand-down"
-AddCalendarDate -Instance 10 -Start $ProdFirstPatchStart -Finish $ProdFirstPatchEnd -Subject "Prod first patch"
-AddCalendarDate -Instance 11 -Start $ProdSecondPatchStart -Finish $ProdSecondPatchEnd -Subject "Prod second patch"
-AddCalendarDate -Instance 12 -Start $ScheduleNextMonthStart -Finish $ScheduleNextMonthEnd -Subject "Schedule next month"
-StopCalendar
+    if ($iCalendar) {
+        StartCalendar -Occurances 13 -Subject "$(($ProcessDate).ToString("yyyy-MM (MMM)"))"
+        AddCalendarDate -Instance 01 -Start ($PatchTuesday).AddHours(09) -Finish ($PatchTuesday).AddHours(09) -Subject "Patch Tuesday"
+        AddCalendarDate -Instance 02 -Start $TestChangeLogStart -Finish $TestChangeLogEnd -Subject "Test patching change logged in SDPlus"
+        AddCalendarDate -Instance 03 -Start $TestNotifyStart -Finish $TestNotifyEnd -Subject "Phase 1 - Test patching - Send notification"
+        AddCalendarDate -Instance 04 -Start $TestCheckStart -Finish $TestCheckEnd -Subject "Phase 1 - Test patching - Servers Check"
+        AddCalendarDate -Instance 05 -Start $TestPatchStart -Finish $TestPatchEnd -Subject "Phase 1 - Test patching"
+        AddCalendarDate -Instance 06 -Start $ProdChangeLogStart -Finish $ProdChangeLogEnd -Subject "Production patching change logged in SDPlus"
+        AddCalendarDate -Instance 07 -Start $ProdFirstNotifyStart -Finish $ProdFirstNotifyEnd -Subject "Phase 2 - Production patching - Send first notification"
+        AddCalendarDate -Instance 08 -Start $ProdSecondNotifyStart -Finish $ProdSecondNotifyEnd -Subject "Phase 2 - Production patching - Send second notification"
+        AddCalendarDate -Instance 09 -Start $ProdCheckStart -Finish $ProdCheckEnd -Subject "Phase 2 - Production patching - Servers Check"
+        AddCalendarDate -Instance 10 -Start $ProdStanddownStart -Finish $ProdStanddownEnd -Subject "Prod stand-down"
+        AddCalendarDate -Instance 11 -Start $ProdFirstPatchStart -Finish $ProdFirstPatchEnd -Subject "Phase 2 - Production patching"
+        AddCalendarDate -Instance 12 -Start $ProdSecondPatchStart -Finish $ProdSecondPatchEnd -Subject "Phase 3 - Production patching - Plant and CCTV systems"
+        AddCalendarDate -Instance 13 -Start $ScheduleNextMonthStart -Finish $ScheduleNextMonthEnd -Subject "Schedule patching for next month"
+        StopCalendar
+    } else {
+        #Write-Host "Patch Tuesday: '$($PatchTuesday.ToLongDateString())'."
+        Write-Host "Test patching change logged in SDPlus: '$($TestChangeLogStart.ToString('f'))', finish at: '$($TestChangeLogEnd.ToShortTimeString())'."
+        Write-Host "Phase 1 - Test patching – Send notification: '$($TestNotifyStart.ToString('f'))', finish at: '$($TestNotifyEnd.ToShortTimeString())'."
+        Write-Host "Phase 1 - Test patching - Servers check: '$($TestCheckStart.ToString('f'))', finish at: '$($TestCheckEnd.ToShortTimeString())'."
+        Write-Host "Phase 1 - Test patching: '$($TestPatchStart.ToString('f'))', finish at: '$($TestPatchEnd.ToShortTimeString())'."
+        Write-Host "Production patching change logged in SDPlus: '$($ProdChangeLogStart.ToString('f'))', finish at: '$($ProdChangeLogEnd.ToShortTimeString())'."
+        Write-Host "Phase 2 - Production patching - Send first notification: '$($ProdFirstNotifyStart.ToString('f'))', finish at: '$($ProdFirstNotifyEnd.ToShortTimeString())'."
+        Write-Host "Phase 2 - Production patching - Send second notification: '$($ProdSecondNotifyStart.ToString('f'))', finish at: '$($ProdSecondNotifyEnd.ToShortTimeString())'."
+        Write-Host "Phase 2 - Production patching - Server check: '$($ProdCheckStart.ToString('f'))', finish at: '$($ProdCheckEnd.ToShortTimeString())'."
+        Write-Host "Phase 2 - Production patching - Stand-down period: '$($ProdStanddownStart.ToString('f'))', finish at: '$($ProdStanddownEnd.ToShortTimeString())'."
+        Write-Host "Phase 2 - Production patching: '$($ProdFirstPatchStart.ToString('f'))', finish at: '$($ProdFirstPatchEnd.ToShortTimeString())'."
+        Write-Host "Phase 3 - Production patching - Plant and CCTV systems: '$($ProdSecondPatchStart.ToString('f'))', finish at: '$($ProdSecondPatchEnd.ToShortTimeString())'."
+        Write-Host "Schedule patching for next month: '$($ScheduleNextMonthStart.ToString('f'))', finish at: '$($ScheduleNextMonthEnd.ToShortTimeString())'."
+    }
 }
 
 End{
-    Write-Host "Ending."
+    Write-Host "[INFO ] -- Ending."
 }
