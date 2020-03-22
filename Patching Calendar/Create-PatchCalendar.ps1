@@ -8,6 +8,14 @@ Begin {
     Write-Host "[INFO ] -- Beginning..."
 }
 
+<#
+Make sure you have "X-MS-OLK-FORCEINSPECTOROPEN:TRUE" in the VCALENDAR part of your file. This allows an ICS file with multiple VEVENTs to import into your default calendar in Outlook. No new calendar created.
+
+Tested this and it doesn't appear to work fully, at least in O365 Outlook. It prompts to add only the first VEVENT in the file - any others are no added to the main calendar.
+
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE only effects the outlook calendar the event is added to. If you are only processing the first VEVENT, the there is another issue with your ICS file. Issues relatred witrh the UID or start times/dates so the system can match the VEVENTS.
+#>
+
 Process {
     function WriteDateTime ([parameter(Mandatory=$true)]$DateTime) {
         ($DateTime).ToUniversalTime().ToString('yyyyMMddTHHmmssZ')

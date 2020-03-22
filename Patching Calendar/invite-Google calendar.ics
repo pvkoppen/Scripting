@@ -1,0 +1,41 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20200327T040000Z
+DTEND:20200329T020000Z
+DTSTAMP:20200317T175717Z
+ORGANIZER;CN=pvkoppen@gmail.com:mailto:pvkoppen@gmail.com
+UID:ckpmcp1jcorj0b9n68r6cb9kcpij4bb26sojebb4cdhj0dhi6lj66ob168@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=pvkoppen@gmail.com;X-NUM-GUESTS=0:mailto:pvkoppen@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Peter van Koppen - work;X-NUM-GUESTS=0:mailto:pvankoppen@tussocklin
+ e.co.nz
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=peter.laura@gmail.com;X-NUM-GUESTS=0:mailto:peter.laura@gmail.com
+X-MICROSOFT-CDO-OWNERAPPTID:823631369
+CREATED:20200317T175716Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nPlease do not edit this section of the descriptio
+ n.\n\nView your event at https://www.google.com/calendar/event?action=VIEW&
+ eid=Y2twbWNwMWpjb3JqMGI5bjY4cjZjYjlrY3BpajRiYjI2c29qZWJiNGNkaGowZGhpNmxqNjZ
+ vYjE2OCBwdmFua29wcGVuQHR1c3NvY2tsaW5lLmNvLm56&tok=MTgjcHZrb3BwZW5AZ21haWwuY
+ 29tZTdkYTFiODRmNTgwMWRmNDE0NzdmM2JkMWZiMzlmMDdiNjY0ZmZiYg&ctz=Pacific%2FAuc
+ kland&hl=en&es=1.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20200317T175716Z
+LOCATION:
+SEQUENCE:1
+STATUS:TENTATIVE
+SUMMARY:Cossgrove at topec 
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT0H30M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR
