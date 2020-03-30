@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Calendly//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTAMP:20200329T182549Z
+UID:calendly-110291050
+DTSTART:20200329T214500Z
+DTEND:20200329T220000Z
+CLASS:PRIVATE
+DESCRIPTION:Event Name: 15 Minute Meeting\nAdditional Guests:\n- dhruv@sofs
+ ol.co.nz\nDate & Time: 10:45am - 11:00am (Auckland Time) on Monday\, March
+  30\, 2020\n\nPlease share anything that will help prepare for our meeting
+ .: OpUtils - currently running version 8.0\, and needs to upgrade to versi
+ on 12.  Peter van Koppen	+64 27 419 4455\n\nNeed to make changes to this e
+ vent?\nCancel: https://calendly.com/cancellations/FGLWXIFV3TSGNSWR\nResche
+ dule: https://calendly.com/reschedulings/FGLWXIFV3TSGNSWR\n
+SUMMARY:15 Minute Meeting with Dhruv Patel
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
