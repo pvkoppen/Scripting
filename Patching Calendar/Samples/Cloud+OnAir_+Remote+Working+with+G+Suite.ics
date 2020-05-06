@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+METHOD:PUBLISH
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+BEGIN:VEVENT
+UID:3105e954845945d3
+DTSTAMP:20200414T052109Z
+DTSTART:20200416T033000Z
+DTEND:20200416T053000Z
+SUMMARY:Cloud OnAir: Remote Working with G Suite
+LOCATION:https://cloudonair.withgoogle.com/events/remote-working-with-g-suite
+DESCRIPTION:Thu April 16 | Ep 1-2: Remote Work\, Ep 3-4: Virtual Teams\n\nThank you for your interest in Cloud OnAir: Remote Working with G Suite. On the day of the event\, you can log into all sessions using this link:\n\nhttps://cloudonair.withgoogle.com/events/remote-working-with-g-suite\n\nHere is a reminder of the agenda\, each episode is 30 min. You are welcome to attend any session\, or only the sessions you are most interested in.\n\nEpisode 1: Work Remotely with G Suite - An Overview\nTopic: Remote Work | For all\n\nEpisode 2: Set Up Remote Work Essentials - How to Establish You and Your Team’s Home Workspace\nTopic: Remote Work | For G Suite administrators and advanced G Suite users\n\nEpisode 3: Manage Virtual Teams - How to Keep Everyone Connected\nTopic: Virtual Teams | For all\n\nEpisode 4: Prepare Teams for Remote Work - How IT Admins Begin the Work-from-Home Process\nTopic: Remote Work | For G Suite administrators and advanced G Suite users
+END:VEVENT
+END:VCALENDAR

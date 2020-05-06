@@ -11,7 +11,7 @@
 .OUTPUTS
     Output is on console directly.
 .NOTES
-  Version:        1.9a
+  Version:        1.9
   Author:         Peter van Koppen
   Creation Date:  6 January 2019
   Last Updated:   1 May 2020
@@ -36,8 +36,8 @@ process {
                 WebRequest request, int certificateProblem
 	    ) {
                 return true;
-            }
-        }
+            } # Public bool CheckValidationResult
+        } # Public Class TrustAllCertsPolicy
 "@ # Add-Type
     $AllProtocols = [System.Net.SecurityProtocolType]'Ssl3,Tls,Tls11,Tls12'
     [System.Net.ServicePointManager]::SecurityProtocol = $AllProtocols
@@ -256,12 +256,6 @@ if (Test-Path -Path $strLogName) {
     Write-host "[INFO ] Start Download (2)..." -ForegroundColor Green
     ProcessWebFolder $DownloadURL $DownloadToFolder
     Start-Sleep -Seconds 5
-
-    if (-not (test-path "$DownloadToFolder\..\config.web")) {
-        if (test-path "$PSScriptRoot\config.web") { 
-            Write-Host "[INFO] Copying file: $PSScriptRoot\config.web to: $DownloadToFolder\..\config.web"
-            Copy-Item "$PSScriptRoot\config.web" "$DownloadToFolder\..\config.web" }
-    } else { Write-Host "[INFO] IIS Configured." }
 
     Stop-Transcript
 

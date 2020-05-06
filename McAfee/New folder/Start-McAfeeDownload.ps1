@@ -11,7 +11,7 @@
 .OUTPUTS
     Output is on console directly.
 .NOTES
-  Version:        1.9a
+  Version:        1.9
   Author:         Peter van Koppen
   Creation Date:  6 January 2019
   Last Updated:   1 May 2020
@@ -211,7 +211,7 @@ process {
     $DaysToDelete     = 21+1
     $SmallFiles       = 8000000
     $DownloadURL      = 'https://update.nai.com/products/commonupdater/'
-    $DownloadToFolder = 'C:\Data\ePO-Repository\commonupdater\'
+    $DownloadToFolder = 'D:\Data\ePO-Repository\commonupdater\'
 #    $Proxy            = "http://10.200.35.46:3128" #DMZMOT
 #    $Proxy            = "http://10.100.35.45:3128" #DMZWVL
     $Proxy            = ""
@@ -238,7 +238,7 @@ if (Test-Path -Path $strLogName) {
     Out-File -FilePath $strLogName -Append -InputObject $strMsg
 }
 
-    Start-Transcript -Path (Join-Path -path (Join-Path -Path $DownloadToFolder -ChildPath "..") -ChildPath "McAfeeDownload.log") 
+    Start-Transcript -Path (Join-Path -path (Join-Path -Path $DownloadToFolder -ChildPath "..") -ChildPath "McAfeeDownload-$(Get-Date -Format dd).log") 
 
 #    DeleteOldFiles $DownloadToFolder $DaysToDelete
 #    Start-Sleep -Seconds 5
@@ -256,12 +256,6 @@ if (Test-Path -Path $strLogName) {
     Write-host "[INFO ] Start Download (2)..." -ForegroundColor Green
     ProcessWebFolder $DownloadURL $DownloadToFolder
     Start-Sleep -Seconds 5
-
-    if (-not (test-path "$DownloadToFolder\..\config.web")) {
-        if (test-path "$PSScriptRoot\config.web") { 
-            Write-Host "[INFO] Copying file: $PSScriptRoot\config.web to: $DownloadToFolder\..\config.web"
-            Copy-Item "$PSScriptRoot\config.web" "$DownloadToFolder\..\config.web" }
-    } else { Write-Host "[INFO] IIS Configured." }
 
     Stop-Transcript
 
