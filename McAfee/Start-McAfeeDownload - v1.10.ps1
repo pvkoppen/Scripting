@@ -11,12 +11,11 @@
 .OUTPUTS
     Output is on console directly.
 .NOTES
-  Version:        1.9
-  Author:         Peter van Koppen
-  Creation Date:  6 January 2019
-  Last Updated:   1 May 2020
-  Purpose/Change: Automated way to download files from McAfee (https://update.nai.com/products/)
-  Useful URLs:    http://vcloud-lab.com
+    Version:        1.10
+    Author:         Peter van Koppen
+    Last Updated:   6 May 2020
+    Purpose/Change: Automated way to download files from McAfee (https://update.nai.com/products/)
+    Useful URLs:    http://vcloud-lab.com
 .EXAMPLE 1
     PS C:\>Start-McAfeeDownload
 
@@ -36,8 +35,8 @@ process {
                 WebRequest request, int certificateProblem
 	    ) {
                 return true;
-            } # Public bool CheckValidationResult
-        } # Public Class TrustAllCertsPolicy
+            }
+        }
 "@ # Add-Type
     $AllProtocols = [System.Net.SecurityProtocolType]'Ssl3,Tls,Tls11,Tls12'
     [System.Net.ServicePointManager]::SecurityProtocol = $AllProtocols
@@ -72,9 +71,7 @@ process {
                     if ($itemContent.Name -eq $(Split-Path -Leaf -Path $itemWeb.href)) { $found = $true}
                 }
                 If (-not $found) {
-                    $strMsg = "[INFO ] Delete: '$($itemContent)'"
-                    Write-Host $strMsg -ForegroundColor Magenta
-                    Out-File -FilePath $strLogName -Append -InputObject $strMsg
+                    Write-Host "[INFO ] Delete: '$($itemContent)'" -ForegroundColor Magenta
                     Remove-Item -Path $(Join-Path -Path $LocalFolder -ChildPath $itemContent) -Recurse -Force
                 }
             }
@@ -86,9 +83,7 @@ process {
                 $NewLocalFolder = Join-Path $LocalFolder $strLeaf
                 ProcessWebFolder $NewWebPath $NewLocalFolder
                 }
-            $strMsg = "$WebPath"
-            Write-Host $strMsg -ForegroundColor Green
-            Out-File -FilePath $strLogName -Append -InputObject $strMsg
+            Write-Host "$WebPath" -ForegroundColor Green
             # Filter for Files
             $WebPageFiles = $WebPage.links | Where-Object {$_.href -notlike "*/" -and $_.href -notlike "*..*" -and $_.href -notlike "*=*"}
             #$WebPageFiles
@@ -101,9 +96,7 @@ process {
                     if ($itemContent.Name -eq $(Split-Path -Leaf -Path $itemWeb.href)) { $found = $true}
                 }
                 if (-not $found) {
-                    $strMsg = "[INFO ] Delete: '$($itemContent)'"
-                    Write-Host $strMsg -ForegroundColor Magenta
-                    Out-File -FilePath $strLogName -Append -InputObject $strMsg
+                    Write-Host "[INFO ] Delete: '$($itemContent)'" -ForegroundColor Magenta
                     Remove-Item -Path $(Join-Path -Path $LocalFolder -ChildPath $itemContent) -Recurse -Force
                 }
             }
@@ -123,8 +116,6 @@ process {
                             Invoke-WebRequest -proxy $Proxy -Uri $NewWebFile -OutFile $NewLocalFile
                         }
                         Write-Host "`t[Done]" -ForegroundColor Green
-                        $strMsg = " | $strLeaf `t[New file: downloading...]`t[Done]"
-                        Out-File -FilePath $strLogName -Append -InputObject $strMsg
                     } else {
                         Write-Host " | $strLeaf " -ForegroundColor Yellow -NoNewline
                         if ($Proxy -eq '') {
@@ -147,8 +138,6 @@ process {
                                 Invoke-WebRequest -proxy $Proxy -Uri $NewWebFile -OutFile $NewLocalFile
                             }
                             Write-Host "`t[Done]" -ForegroundColor Green
-                            $strMsg = " | $strLeaf `t[File size ($onlineLength!=$localLength): downloading...]`t[Done]"
-                            Out-File -FilePath $strLogName -Append -InputObject $strMsg
                         } elseif ($onlineModified -ge $localModified) {
                             # Checked: Date.
                             Write-Host "`t[File date ($($onlineModified.ToString('yyyyMMdd-hhmm'))>=$($localModified.ToString('yyyyMMdd-hhmm'))): downloading...]" -NoNewline #: Online=$onlineLength, Local=$localLength.
@@ -158,8 +147,6 @@ process {
                                 Invoke-WebRequest -proxy $Proxy -Uri $NewWebFile -OutFile $NewLocalFile
                             }
                             Write-Host "`t[Done]" -ForegroundColor Green
-                            $strMsg = " | $strLeaf `t[File date ($($onlineModified.ToString('yyyyMMdd-hhmm'))>=$($localModified.ToString('yyyyMMdd-hhmm'))): downloading...]`t[Done]"
-                            Out-File -FilePath $strLogName -Append -InputObject $strMsg
                         } else {
                             # All Good!
                             Write-Host "`t[File size and date good: no action.]"
@@ -167,16 +154,12 @@ process {
                     }
                 }
                 catch {
-                    $strMsg = "`t[ERROR] $($error[0])"
-                    Write-Host $strMsg -ForegroundColor Red
-                    Out-File -FilePath $strLogName -Append -InputObject $strMsg
+                    Write-Host "`t[ERROR] $($error[0])" -ForegroundColor Red
                 }
             }
         }
         catch {
-            $strMsg = "`t[ERROR] $($error[0])"
-            Write-Host $strMsg -ForegroundColor Red
-            Out-File -FilePath $strLogName -Append -InputObject $strMsg
+            Write-Host "`t[ERROR] $($error[0])" -ForegroundColor Red
         }
     }
 
@@ -211,34 +194,20 @@ process {
     $DaysToDelete     = 21+1
     $SmallFiles       = 8000000
     $DownloadURL      = 'https://update.nai.com/products/commonupdater/'
-    $DownloadToFolder = 'C:\Data\ePO-Repository\commonupdater\'
+    $DownloadToFolder = 'D:\Data\ePO-Repository\commonupdater\'
 #    $Proxy            = "http://10.200.35.46:3128" #DMZMOT
 #    $Proxy            = "http://10.100.35.45:3128" #DMZWVL
     $Proxy            = ""
-#
-    if ($PSCommandPath -eq '') {
-        $strScriptPath     = split-path -parent $global:MyInvocation.MyCommand.Definition
-        $strScriptName     = [System.IO.Path]::GetFileNameWithoutExtension($global:MyInvocation.MyCommand.Definition)
-    } else {
-        $strScriptPath     = split-path -parent $PSCommandPath
-        $strScriptName     = [System.IO.Path]::GetFileNameWithoutExtension($PSCommandPath)
-    }
-    $strLogPath        = join-path -path $(join-path -path $strScriptPath -ChildPath "..") -ChildPath "LogFiles"
-    $strLogName        = join-path -path ".\" -ChildPath "$strScriptName-$(Get-Date -Format dd).log"
 
-$strMsg = "[INFO ] -------- $(Get-Date) --------"
-Write-Host $strMsg -ForegroundColor White
-if (Test-Path -Path $strLogName) { 
-    if ($(Get-ChildItem -Path $strLogName).LastWriteTime -gt $((get-date).AddDays(-1))) {
-        Out-File -FilePath $strLogName -Append -InputObject $strMsg
-    } else {
-        Out-File -FilePath $strLogName <#-Append#> -InputObject $strMsg
-    }
-} else {
-    Out-File -FilePath $strLogName -Append -InputObject $strMsg
-}
+    # -- Start Transcript.
+    $KeepDays   = 8
+    $DaysAgo    = (Get-Date).AddDays(-$KeepDays)
+    $FileFilter = "*.log"
+    $ScriptPath = Split-Path -Path $script:MyInvocation.InvocationName -Parent
+    $ScriptShortName = [System.IO.Path]::GetFileNameWithoutExtension($script:MyInvocation.InvocationName)
+    Start-Transcript -Path "$(Join-Path -Path $ScriptPath -ChildPath $ScriptShortName)-$(Get-Date -Format "dd").log" -Append
 
-    Start-Transcript -Path (Join-Path -path (Join-Path -Path $DownloadToFolder -ChildPath "..") -ChildPath "McAfeeDownload.log") 
+    Write-Host "[INFO ] -------- $(Get-Date) --------" -ForegroundColor White
 
 #    DeleteOldFiles $DownloadToFolder $DaysToDelete
 #    Start-Sleep -Seconds 5
@@ -257,6 +226,18 @@ if (Test-Path -Path $strLogName) {
     ProcessWebFolder $DownloadURL $DownloadToFolder
     Start-Sleep -Seconds 5
 
+    # -- Copy web.config To download location. 
+    if (-not (test-path "$DownloadToFolder\..\web.config")) {
+        if (test-path "$PSScriptRoot\web.config") { 
+            Write-Host "[INFO] Copying file: $PSScriptRoot\web.config to: $DownloadToFolder\..\web.config"
+            Copy-Item "$PSScriptRoot\web.config" "$DownloadToFolder\..\web.config" 
+	} else { Write-Host "[ERROR] IIS NOT configured, no file to copy." }
+    } else { Write-Host "[INFO ] IIS configured." }
+
+    # - Cleanup LogFiles and Stop Transcript.
+    Write-Host "[INFO ] Remove Transcript Logs: [$FileFilter] older then: '$DaysAgo' from folder: '$ScriptPath' ."
+    Get-ChildItem -Path $ScriptPath -Force -File -Filter $FileFilter | 
+    	Where-Object { !$_.PSIsContainer -and $_.LastWriteTime -lt $DaysAgo } | Remove-Item -Force -Verbose
     Stop-Transcript
 
 } # Process
