@@ -1,0 +1,44 @@
+function FindProxyForURL(url, host)
+//hostip = dnsResolve(host); 
+
+// If the hostname matches, send direct
+
+ {
+if (dnsDomainIs(host, "mike-nz")) {
+	return "DIRECT";
+}
+
+ 
+if (isPlainHostName(host)) {
+	return "DIRECT";
+}
+
+   if (isInNet(host, "10.0.0.0", "255.0.0.0")
+	|| isInNet(host, "172.16.0.0", "255.240.0.0")
+	|| isInNet(host, "192.168.0.0", "255.255.0.0")) {
+            return "DIRECT";
+   }
+   
+   if ((host == "localhost") ||   
+   (shExpMatch(host, "localhost.*")) ||
+   (shExpMatch(url, "http://mxnz*")) || 
+   (shExpMatch(url, "https://mxnz*")) ||
+   (dnsDomainIs(host, ".payglobal.com")) ||
+   (host == "127.0.0.1")) {
+   return "DIRECT";
+   }
+   
+// If the IP address of the local machine is within a defined 
+// subnet, send to a specific proxy.     
+   if (isInNet(myIpAddress(), "172.23.44.128", "255.255.255.192")
+   ||  isInNet(myIpAddress(), "172.23.116.0", "255.255.255.224")        
+   ||  isInNet(myIpAddress(), "172.23.116.64", "255.255.255.224")) {
+      return "DIRECT";
+   }
+   
+   if (dnsDomainIs(host, ".methanex.com")) {
+   return "DIRECT";
+   }
+   
+return "PROXY mxnznpy60:8080; DIRECT";
+ }

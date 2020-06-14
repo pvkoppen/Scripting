@@ -1,7 +1,7 @@
 ﻿
 Param (
     [parameter(Mandatory=$false)][datetime]$Date,
-    [parameter(Mandatory=$false)][bool]$iCalendar = $false
+    [parameter(Mandatory=$false)][bool]$iCalendar = $true
 )
 
 Begin {
