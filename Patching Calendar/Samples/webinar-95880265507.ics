@@ -1,0 +1,58 @@
+BEGIN:VCALENDAR
+PRODID:-//zoom.us//iCalendar Event//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+CLASS:PUBLIC
+BEGIN:VTIMEZONE
+TZID:Asia/Singapore
+TZURL:http://tzurl.org/zoneinfo-outlook/Asia/Singapore
+X-LIC-LOCATION:Asia/Singapore
+BEGIN:STANDARD
+TZOFFSETFROM:+0800
+TZOFFSETTO:+0800
+TZNAME:SGT
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20200814T082841Z
+DTSTART;TZID=Asia/Singapore:20200825T130000
+DTEND;TZID=Asia/Singapore:20200825T134500
+SUMMARY:Partner Solutions Webinar: Running Production Applications in Azu
+ re Using Azure NetApp Files
+UID:20200814T082841Z-95880265507@fe80:0:0:0:c88:93ff:fe81:bac9eth0
+TZID:Asia/Singapore
+DESCRIPTION:Join from a PC\, Mac\, iPad\, iPhone or Android device:\n    
+ Please click this URL to join. https://netapp.zoom.us/w/95880265507?tk=t
+ GWWnzpSAO1KfHcAJDjJ_d2wCPp6_QgkXBnj8ZQLyuI.DQIAAAAWUui_IxYyT1VhekdqSVREL
+ VpBQVlHN1FhN0RnAAAAAAAAAAAAAAAAAAAAAAAAAAAA&uuid=WN_p9e3-PM-TA6Zn9jm9Oe8
+ Rg\n	Description: Organizations are looking to migrate workloads to Azur
+ e or to build new applications in Azure to take advantage of cloud servi
+ ces and elasticity\, plus reduce the amount of infrastructure they need 
+ to own and operate. However\, many applications require file services th
+ at deliver high availability\, high performance\, and advanced data-mana
+ gement capabilities. Now you can get all this using Azure NetApp Files (
+ ANF).\n\nANF is Microsoft’s new\, native\, first-party file protocol ser
+ vice. Delivered directly through the Azure portal and with built-in Azur
+ e tools\, you get the familiar interface and features of any other Azure
+  storage service. \n\nJoin us for this webinar and learn more about: \n•
+ 	Discover how to create performance so good you’ll think you’re on premi
+ se.\n•	Learn how to deploy an enterprise environment in Azure in 60 seco
+ nds.\n•	Uncover the key use cases and workloads for Azure NetApp Files.\
+ n\nOr join by phone:\n    Dial(for higher quality\, dial a number based 
+ on your current location):\n        US: +1 669 900 6833  or +1 253 215 8
+ 782  or +1 301 715 8592  or +1 312 626 6799  or +1 346 248 7799  or +1 6
+ 46 558 8656  or 888 475 4499 (Toll Free) or 877 853 5257 (Toll Free)\n  
+   Webinar ID: 958 8026 5507\n    International numbers available: https:
+ //netapp.zoom.us/u/axK4diXEx\n\n
+LOCATION:https://netapp.zoom.us/w/95880265507?tk=tGWWnzpSAO1KfHcAJDjJ_d2w
+ CPp6_QgkXBnj8ZQLyuI.DQIAAAAWUui_IxYyT1VhekdqSVRELVpBQVlHN1FhN0RnAAAAAAAA
+ AAAAAAAAAAAAAAAAAAAA&uuid=WN_p9e3-PM-TA6Zn9jm9Oe8Rg
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR

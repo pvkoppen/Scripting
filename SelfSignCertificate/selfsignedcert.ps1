@@ -1,7 +1,7 @@
 $cert = new-selfsignedcert -certstore cert:\localmachine\my -dnzmane testcert.techsnip.io
 $cert
 
-$secpassword - convertto-securestring -string 'password' -force -asplaintext
+$secpassword = convertto-securestring -string 'password' -force -asplaintext
 
 $certpath = "cert:\localmachine\my\$($cert.thumprint)"
 

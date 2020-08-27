@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+METHOD:PUBLISH
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+BEGIN:VEVENT
+UID:280445f447c65c028b
+DTSTAMP:20200825T025013Z
+DTSTART:20200909T010000Z
+DTEND:20200909T020000Z
+SUMMARY:Accelerate your Journey to the Cloud with Azure VMware Solution
+LOCATION:Webinar
+DESCRIPTION:https://event.on24.com/interface/registration/autoreg/index.html?eventid=2584536&sessionid=1&key=3B676CEDD01E3FB605C1E2DD08698131&firstname=Peter&lastname=van+Koppen&email=pvankoppen@tussockline.co.nz&job_title=Technical+Consultant&company=TussockLine+Ltd&country=&zip=&work_phone=\n\nWe understand many organizations are faced with challenges when looking to migrate their legacy applications to the cloud. Most notably\, a lack of cloud skilling\, risk of business disruption and concerns around refactoring complexities.\n\nIn this Virtual event\, we will outline how Azure VMware Solution (AVS) empowers customers to accelerate and simplify their journey to the cloud\, by seamlessly extending or completely migrating their existing on-premises VMware applications to Azure without the cost\, effort\, or risk of re-architecting applications or retooling operations.\n\nIn the session we will learn:\n\n• How our AVS offering allows you to run native VMware workloads on Azure.\n\n• See technical demos on how you can seamlessly run\, manage\, and secure applications across VMware environments and Microsoft Azure with a common operating framework.\n\n• Understand how you can capitalise on your existing VMware investments\, skills\, and tools while leveraging the scale\, performance\, and innovation of Azure\n\n• Gain insight into how you can accelerate your cloud journey\, whilst modernising your applications at your own pace.\n\nRegister now and hear how Azure VMWare Solution can accelerate and simplify your journey to the cloud.\n\nThe session will be Level 200 or intermediate. Whilst it would be advantageous to have a good understanding of Azure and VMware concepts it is not critical. 
+END:VEVENT
+END:VCALENDAR

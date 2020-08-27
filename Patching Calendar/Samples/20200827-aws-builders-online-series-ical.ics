@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+CLASS:PUBLIC
+DESCRIPTION:Australia > 1:00PM - 6:00PM (AEST)\n\nNew Zealand > 3:00PM - 8:00PM (NZST)\n\nSingapore/ Malaysia/ Philippines > 11:00AM - 4:00PM (SGT/ MYT/ PHT) \n\nThailand/ Vietnam > 10:00AM - 3:00PM (ICT) \n\nIndonesia > 10:00 - 15:00 (WIB) \n\nPakistan > 8:00AM - 1:00PM (PKT) \n\nIndia > 8:30AM - 1:30PM (IST) \n\nSri Lanka > 8:30AM - 1:30PM (SLT) \n\nKorea > 12:00PM - 5:00PM (KST)\n
+DTSTART:20200827T030000Z
+DTEND:20200827T080000Z
+LOCATION:Online
+SUMMARY;LANGUAGE=en-us:AWS Builders Online Series
+END:VEVENT
+END:VCALENDAR

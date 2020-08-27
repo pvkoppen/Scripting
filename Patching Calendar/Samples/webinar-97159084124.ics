@@ -1,0 +1,49 @@
+BEGIN:VCALENDAR
+PRODID:-//zoom.us//iCalendar Event//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+CLASS:PUBLIC
+BEGIN:VTIMEZONE
+TZID:Asia/Singapore
+TZURL:http://tzurl.org/zoneinfo-outlook/Asia/Singapore
+X-LIC-LOCATION:Asia/Singapore
+BEGIN:STANDARD
+TZOFFSETFROM:+0800
+TZOFFSETTO:+0800
+TZNAME:SGT
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20200814T083006Z
+DTSTART;TZID=Asia/Singapore:20200819T113000
+DTEND;TZID=Asia/Singapore:20200819T121500
+SUMMARY:Join NetApp CEO George Kurian for our APAC Partner Webcast
+UID:20200814T083006Z-97159084124@fe80:0:0:0:c34:89ff:fe8e:da73eth0
+TZID:Asia/Singapore
+DESCRIPTION:Join from a PC\, Mac\, iPad\, iPhone or Android device:\n    
+ Please click this URL to join. https://netapp.zoom.us/w/97159084124?tk=w
+ LfwsDKBtj9pWSCEzIIb-eKTx94JdthiCgoHkmxZIqU.DQIAAAAWnyH4XBZxcTdrSjNIMlN0N
+ nlNWU5JWFlnU053AAAAAAAAAAAAAAAAAAAAAAAAAAAA&uuid=WN_42n6K79RTNK6dW-mS2Qu
+ Xg\n	Description: Join us on Wednesday\, August 19\, for our quarterly p
+ artner webcast for the latest updates on NetApp’s strategies\, technolog
+ ies\, and programs. \n\nIn this session\, we will be joined by a special
+  guest\, NetApp CEO George Kurian. Find out what’s top of mind for our C
+ EO and key APAC executives as well as our strategic focus and priorities
+  to drive profitable growth.\n\nOr join by phone:\n    Dial(for higher q
+ uality\, dial a number based on your current location):\n        US: +1 
+ 646 558 8656  or +1 669 900 6833  or +1 253 215 8782  or +1 301 715 8592
+   or +1 312 626 6799  or +1 346 248 7799  or 877 853 5257 (Toll Free) or
+  888 475 4499 (Toll Free)\n    Webinar ID: 971 5908 4124\n    Internatio
+ nal numbers available: https://netapp.zoom.us/u/adN715GeUG\n\n
+LOCATION:https://netapp.zoom.us/w/97159084124?tk=wLfwsDKBtj9pWSCEzIIb-eKT
+ x94JdthiCgoHkmxZIqU.DQIAAAAWnyH4XBZxcTdrSjNIMlN0NnlNWU5JWFlnU053AAAAAAAA
+ AAAAAAAAAAAAAAAAAAAA&uuid=WN_42n6K79RTNK6dW-mS2QuXg
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR

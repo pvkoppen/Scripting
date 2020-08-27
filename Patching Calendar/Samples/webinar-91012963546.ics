@@ -1,0 +1,56 @@
+BEGIN:VCALENDAR
+PRODID:-//zoom.us//iCalendar Event//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+CLASS:PUBLIC
+BEGIN:VTIMEZONE
+TZID:Asia/Singapore
+TZURL:http://tzurl.org/zoneinfo-outlook/Asia/Singapore
+X-LIC-LOCATION:Asia/Singapore
+BEGIN:STANDARD
+TZOFFSETFROM:+0800
+TZOFFSETTO:+0800
+TZNAME:SGT
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20200823T213113Z
+DTSTART;TZID=Asia/Singapore:20200827T130000
+DTEND;TZID=Asia/Singapore:20200827T134500
+SUMMARY:NetApp Alliance Webinar: Data - The Backbone of Business
+UID:20200823T213113Z-91012963546@fe80:0:0:0:c1a:91ff:fed5:cb29eth0
+TZID:Asia/Singapore
+DESCRIPTION:Join from a PC\, Mac\, iPad\, iPhone or Android device:\n    
+ Please click this URL to join. https://netapp.zoom.us/w/91012963546?tk=r
+ POfMwsl1SnM_XRMdF_vRtK99J-Aw9Uh0taNaHU8AwI.DQIAAAAVMMuc2hZoams5S0dfTFRiR
+ 3BfQXZKZ0pmUUFRAAAAAAAAAAAAAAAAAAAAAAAAAAAA&uuid=WN_HskT95GDRNupGn_QzXji
+ yQ\n	Description: Data is at the backbone of every business and Data lie
+ s at the heart of almost every Digital Transformation. \n\nThe last deca
+ de saw the chance of an outage drop\, but the impact/cost of an outage s
+ oar. IT became more complex\, while cloud and IT architect skills became
+  scarce.\n\nJoin this webinar to learn how customers are betting on the 
+ joint Commvault and NetApp solutions to drive value of their Data and bu
+ ild on their Transformation Journey.\n\nAmong the topics covered here wi
+ ll be the new threats to your data\, why the old ones haven’t gone away 
+ and why simplification and consolidation are a must for the coming decad
+ e. The topics to be covered include: \n•	Why backup strategies are under
+  scrutiny\n•	The key considerations for modernizing data protection\n•	W
+ hy the benefits of change go way beyond backup\n\nOr join by phone:\n   
+  Dial(for higher quality\, dial a number based on your current location)
+ :\n        US: +1 312 626 6799  or +1 346 248 7799  or +1 646 558 8656  
+ or +1 669 900 6833  or +1 253 215 8782  or +1 301 715 8592  or 877 853 5
+ 257 (Toll Free) or 888 475 4499 (Toll Free)\n    Webinar ID: 910 1296 35
+ 46\n    International numbers available: https://netapp.zoom.us/u/adWgSV
+ kUqu\n\n
+LOCATION:https://netapp.zoom.us/w/91012963546?tk=rPOfMwsl1SnM_XRMdF_vRtK9
+ 9J-Aw9Uh0taNaHU8AwI.DQIAAAAVMMuc2hZoams5S0dfTFRiR3BfQXZKZ0pmUUFRAAAAAAAA
+ AAAAAAAAAAAAAAAAAAAA&uuid=WN_HskT95GDRNupGn_QzXjiyQ
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
