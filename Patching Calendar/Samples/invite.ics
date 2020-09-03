@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+PRODID:-//Splash Event Planning System
+VERSION:2.0
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTAMP:20200827T065406Z
+UID:6a7a3207b28a0630e47fb9611a4686adb27cc65b@awsdevelopersle
+ tscode.splashthat.com
+URL:https://awsdevelopersletscode.splashthat.com
+DTSTART:20200826T010000Z
+DTEND:20200826T020000Z
+ORGANIZER;CN="Join the series to build your skills on AWS":m
+ ailto:awsdevelopersletscode@splash.events
+SUMMARY:Developers, Let's Code
+DESCRIPTION:For more information - https://awsdeveloperslets
+ code.splashthat.com
+LOCATION:Watch on Twitch.Tv/AWS
+END:VEVENT
+END:VCALENDAR
