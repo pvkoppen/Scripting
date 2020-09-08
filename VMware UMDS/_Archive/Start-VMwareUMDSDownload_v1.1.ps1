@@ -1,3 +1,25 @@
+<#
+.SYNOPSIS
+    Capture command output.
+.DESCRIPTION
+    The Start-VMwareUMDSDownload cmdlet starts the VMware-UMDS -D process.
+.PARAMETER
+    No Parameters
+.INPUTS
+    No Input
+.OUTPUTS
+    Creates a log file.
+.NOTES
+    Version:        1.1
+    Author:         Peter van Koppen
+    Change Date:    8 Sep 2020
+    Purpose/Change: Wrap logging around the vmware-umds download process.
+.EXAMPLE 1
+    Start-VMwareUMDSDownload
+
+    This command:
+    1: Starts the VMware-UMDS -D process and captures the output in a log file.
+#>
 
 $KeepDays   = 21
 $DaysAgo    = (Get-Date).AddDays(-$KeepDays)
@@ -8,24 +30,23 @@ Start-Transcript -Path "$(Join-Path -Path $ScriptPath -ChildPath $ScriptShortNam
 
 #Config
 <#
-. "D:\VMware\Infrastructure\Update Manager\vmware-umds.exe" -S --disable-host
-. "D:\VMware\Infrastructure\Update Manager\vmware-umds.exe" -S -e embeddedEsx-6.5.0
-. "D:\VMware\Infrastructure\Update Manager\vmware-umds.exe" -S -e embeddedEsx-6.7.0
-#. "D:\VMware\Infrastructure\Update Manager\vmware-umds.exe" -S -e embeddedEsx-7.0.0
+. 'D:\Services\VMware\Infrastructure\Update Manager\vmware-umds.exe' -S --disable-host
+. 'D:\Services\VMware\Infrastructure\Update Manager\vmware-umds.exe' -S -e embeddedEsx-6.5.0
+. 'D:\Services\VMware\Infrastructure\Update Manager\vmware-umds.exe' -S -e embeddedEsx-6.7.0
+#. 'D:\Services\VMware\Infrastructure\Update Manager\vmware-umds.exe' -S -e embeddedEsx-7.0.0
 #>
 
 #Actions
-. "D:\VMware\Infrastructure\Update Manager\vmware-umds.exe" -G
-. "D:\VMware\Infrastructure\Update Manager\vmware-umds.exe" -D 2>&1
+. 'D:\Services\VMware\Infrastructure\Update Manager\vmware-umds.exe' -G
+. 'D:\Services\VMware\Infrastructure\Update Manager\vmware-umds.exe' -D 2>&1
 
-
-Write-Host "[INFO ] Remove Transcript Logs: [$FileFilter] older then: '$DaysAgo' from folder: '$ScriptPath' ."
+Write-Host "[INFO ] Remove Transcript Logs: [$FileFilter] older then: '$DaysAgo' from folder: '$ScriptPath'."
 Get-ChildItem -Path $ScriptPath -Force -File -Filter $FileFilter | 
     Where-Object { !$_.PSIsContainer -and $_.LastWriteTime -lt $DaysAgo } | Remove-Item -Force -Verbose
 Stop-Transcript
 
 <#
-PS C:\Windows\system32> . "D:\VMware\Infrastructure\Update Manager\vmware-umds.exe"
+PS C:\Windows\system32> . "D:\Services\VMware\Infrastructure\Update Manager\vmware-umds.exe"
 Allowed Options:
 
 Basic Commands:
