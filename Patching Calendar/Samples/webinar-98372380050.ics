@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+PRODID:-//zoom.us//iCalendar Event//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+CLASS:PUBLIC
+BEGIN:VTIMEZONE
+TZID:Asia/Singapore
+TZURL:http://tzurl.org/zoneinfo-outlook/Asia/Singapore
+X-LIC-LOCATION:Asia/Singapore
+BEGIN:STANDARD
+TZOFFSETFROM:+0800
+TZOFFSETTO:+0800
+TZNAME:SGT
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20201005T200945Z
+DTSTART;TZID=Asia/Singapore:20201006T130000
+DTEND;TZID=Asia/Singapore:20201006T133000
+SUMMARY:Partner Webinar: Enabling greater agility through DevOps and Hybr
+ id Multi-cloud
+UID:20201005T200945Z-98372380050@fe80:0:0:0:145b:2cff:fe0a:2341ens5
+TZID:Asia/Singapore
+DESCRIPTION:Join from a PC\, Mac\, iPad\, iPhone or Android device:\n    
+ Please click this URL to join. https://netapp.zoom.us/w/98372380050?tk=e
+ gqS4taRghXABRzKoJpPVkboyriIQRAHU-iYG-NoCyY.DQIAAAAW53NlkhZwTmROUGlqZFFiN
+ jdFM2xfazhWMHJRAAAAAAAAAAAAAAAAAAAAAAAAAAAA&uuid=WN_9y7FSr5vSBiWRJ0KolCO
+ aQ\n	Description: The pace of business change is increasing all the time
+  and IT is under pressure to keep up. However\, traditional IT delivery 
+ models – focused on stability and cost – are not geared towards the fast
+  pace of change expected by business users in today’s climate.\n\nIT nee
+ ds to transform by adopting new technologies and ways of working such as
+  DevOps\, containers\, microservices and the Cloud in order to meet the 
+ needs and expectations of the business. In this session we will share Ne
+ tApp’s experience of transforming our own IT function as well as the met
+ hodology we use to help enterprises on the same journey. By employing be
+ st practices from the Cloud and learning to operate as a service provide
+ r\, IT organizations can increase agility\, reduce cost\, improve servic
+ e quality and become regarded by users as a trusted business partner for
+  the journey ahead.\n\nJoin us for this webinar and learn how to:\n\n•	I
+ ncrease security and performance without sacrificing agility and simplic
+ ity\n•	Cut IT infrastructure TCO in half\n•	Accelerate the business\n\nO
+ r join by phone:\n    Dial(for higher quality\, dial a number based on y
+ our current location):\n        US: +1 253 215 8782  or +1 301 715 8592 
+  or +1 312 626 6799  or +1 346 248 7799  or +1 646 558 8656  or +1 669 9
+ 00 6833  or 877 853 5257 (Toll Free) or 888 475 4499 (Toll Free)\n    We
+ binar ID: 983 7238 0050\n    International numbers available: https://ne
+ tapp.zoom.us/u/acTzdeRckr\n\n
+LOCATION:https://netapp.zoom.us/w/98372380050?tk=egqS4taRghXABRzKoJpPVkbo
+ yriIQRAHU-iYG-NoCyY.DQIAAAAW53NlkhZwTmROUGlqZFFiNjdFM2xfazhWMHJRAAAAAAAA
+ AAAAAAAAAAAAAAAAAAAA&uuid=WN_9y7FSr5vSBiWRJ0KolCOaQ
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
