@@ -23,10 +23,10 @@
 
 $KeepDays   = 21
 $DaysAgo    = (Get-Date).AddDays(-$KeepDays)
-$FileFilter = "*.log"
 $ScriptPath = Split-Path -Path $script:MyInvocation.InvocationName -Parent
 $ScriptShortName = [System.IO.Path]::GetFileNameWithoutExtension($script:MyInvocation.InvocationName)
-Start-Transcript -Path "$(Join-Path -Path $ScriptPath -ChildPath $ScriptShortName)-$(Get-Date -Format "dd").log" -Append
+$FileFilter = "$ScriptShortName-*.log"
+Start-Transcript -Path "$(Join-Path -Path $ScriptPath -ChildPath $ScriptShortName)-$(Get-Date -Format "yyyyMMdd").log" -Append
 
 #Variable
 $strInstallFolder='D:\Services\VMware\Infrastructure\Update Manager'
