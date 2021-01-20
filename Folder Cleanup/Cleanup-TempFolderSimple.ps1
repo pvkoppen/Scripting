@@ -1,13 +1,15 @@
-ï»¿
-$KeepDays        = 21
-$DaysAgo         = (Get-Date).AddDays(-$KeepDays)
-$ScriptPath      = Split-Path -Path $script:MyInvocation.InvocationName -Parent
+
+$KeepDays   = 21
+$DaysAgo    = (Get-Date).AddDays(-$KeepDays)
+$ScriptPath = Split-Path -Path $script:MyInvocation.InvocationName -Parent
 $ScriptShortName = [System.IO.Path]::GetFileNameWithoutExtension($script:MyInvocation.InvocationName)
-$FileFilter      = "$ScriptShortName#*.log"
+$FileFilter = "$ScriptShortName#*.log"
 Start-Transcript -Path "$(Join-Path -Path $ScriptPath -ChildPath $ScriptShortName)#$(Get-Date -Format "yyyyMMdd").log" -Append
 
-#Actions
-
+# nVision
+$DaysToKeep = 8
+$TempFolder = "D:\GROUP\Finance\nVision temp data\"
+Get-ChildItem –Path $TempFolder –Recurse | Where-Object {$_.CreationTime –lt (Get-Date).AddDays(-$DaysToKeep)} | Remove-Item -Force -Recurse -Verbose -WhatIf
 
 Write-Host "[INFO ] Remove Transcript Logs: [$FileFilter] older then: '$DaysAgo' from folder: '$ScriptPath'."
 Get-ChildItem -Path $ScriptPath -Force -File -Filter $FileFilter | 
