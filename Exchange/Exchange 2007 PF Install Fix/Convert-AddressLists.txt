@@ -1,0 +1,1725 @@
+
+         Welcome to the Exchange Management Shell!
+
+ Full list of cmdlets:          get-command
+ Only Exchange cmdlets:         get-excommand
+ Cmdlets for a specific role:   get-help -role *UM* or *Mailbox*
+ Get general help:              help
+ Get help for a cmdlet:         help <cmdlet-name> or <cmdlet-name> -?
+ Show quick reference guide:    quickref
+ Exchange team blog:            get-exblog
+ Show full output for a cmd:    <cmd> | format-list
+
+Tip of the day #38:
+
+To set the dial restrictions on a specific Unified Messaging dial plan, type:
+
+ $Dp = Get-UmDialPlan -Identity <Your_DialPlan_Identity>
+ $Dp.ConfiguredInCountryGroups.Add("Group1,91xxxxxxxxxx,91xxxxxxxxxx")
+ $Dp.ConfiguredInCountryGroups.Add("Group1,9xxxxxxxxxx,91xxxxxxxxxx")
+ $Dp.ConfiguredInCountryGroups.Add("Group1,9xxxxxxx,9xxxxxxx")
+ $Dp.AllowedInCountryGroups.Add("Group1")
+ $Dp.OutsideLineAccessCode = 9
+ $Dp | Set-UmDialPlan
+
+[PS] C:\Documents and Settings\peter>C:\Scripts\Run-PowerShell.cmd /Log C:\Scrip
+ts\PowerShell\Add-DefaultMailboxSettings.ps1
+A subdirectory or file C:\Scripts\LogFiles already exists.
+[PS] C:\Documents and Settings\peter>C:\Scripts\Run-PowerShell.cmd C:\Scripts\Po
+werShell\Add-DefaultMailboxSettings.ps1
+# Set Variables.
+  # ---------------------------------------------------------------
+  # Colors: Plain, Header, Info, Good, Bad.
+# Checking for DPM Snapin.
+Get-PSSnapin : No Windows PowerShell snap-in matches criteria Microsoft.Exchang
+e.Management.PowerShell.Admin.
+At C:\Scripts\PowerShell\Add-DefaultMailboxSettings.ps1:17 char:21
++   if (!(Get-PSSnapin  <<<< Microsoft.Exchange.Management.PowerShell.Admin)) {
+  # Adding PS Snapin for DPM.
+Set-Mailbox : Cannot bind argument to parameter 'Identity' because it is null.
+At C:\Scripts\PowerShell\Add-DefaultMailboxSettings.ps1:37 char:21
++ $objMB | Set-Mailbox  <<<< -ApplyMandatoryProperties
+
+Identity                                LastSuccessSync
+--------                                ---------------
+Peter.vanKoppen@tuiora.co.nz\AirSync... 4/12/2009 1:34:18 a.m.
+Dean.Raven@tuiora.co.nz\AirSync-Pock... 28/10/2009 11:43:05 p.m.
+Dean.Raven@tuiora.co.nz\AirSync-Pock... 4/12/2009 1:42:18 a.m.
+Jane.Hawkins-Jones@tuiora.co.nz\AirS... 30/10/2009 1:43:19 a.m.
+Jane.Hawkins-Jones@tuiora.co.nz\AirS... 4/12/2009 1:26:03 a.m.
+Evan.Watson@tuiora.co.nz\AirSync-Poc... 2/12/2009 8:47:25 a.m.
+Hayden.Wano@tuiora.co.nz\AirSync-Poc... 18/10/2009 6:18:25 p.m.
+Hayden.Wano@tuiora.co.nz\AirSync-Poc... 4/12/2009 1:41:33 a.m.
+Matiu.Julian@tuiora.co.nz\AirSync-Sm... 4/12/2009 1:31:27 a.m.
+Rangimahora.Reddy@tuiora.co.nz\AirSy... 2/12/2009 3:11:49 a.m.
+Barbara.Purdie@htpho.co.nz\AirSync-P... 3/12/2009 9:21:15 p.m.
+Pauline.Cruickshank@htpho.co.nz\AirS... 30/10/2009 12:06:50 a.m.
+Pauline.Cruickshank@htpho.co.nz\AirS... 3/12/2009 6:25:24 a.m.
+Carleen.Broughton@thph.tuiora.co.nz\... 4/12/2009 1:39:01 a.m.
+Rhiannon.Huntley@teraupani.co.nz\Air... 2/12/2009 6:20:37 a.m.
+Terry.Huntley@teraupani.co.nz\AirSyn... 3/12/2009 9:55:27 p.m.
+Christine.Nicholas@pikiteora.tuiora.... 20/11/2009 12:12:42 a.m.
+Jo.Bertrand@pikiteora.tuiora.co.nz\A... 4/12/2009 1:15:01 a.m.
+Paul.Tooley@tuiora.co.nz\AirSync-Poc... 4/12/2009 1:39:54 a.m.
+Deeanna.Ritai@manaaki.tuiora.co.nz\A... 17/10/2009 12:44:10 a.m.
+Deeanna.Ritai@manaaki.tuiora.co.nz\A... 5/11/2009 12:52:12 a.m.
+Mihi.Kahu@raumanotrust.co.nz\AirSync... 4/12/2009 1:41:37 a.m.
+Rosemary.Ireland@htpho.co.nz\AirSync... 3/12/2009 10:24:44 p.m.
+Marcel.Schadt@tuiora.co.nz\AirSync-P... 29/10/2009 7:40:20 p.m.
+Marcel.Schadt@tuiora.co.nz\AirSync-P... 3/12/2009 2:11:24 a.m.
+Hinemoerangi.NgataiTangirua@teraupan... 4/12/2009 1:29:09 a.m.
+Brad.Huntley@yts.tuiora.co.nz\AirSyn... 3/12/2009 10:10:52 p.m.
+
+
+Set-CASMailbox : Cannot bind argument to parameter 'Identity' because it is nul
+l.
+At C:\Scripts\PowerShell\Add-DefaultMailboxSettings.ps1:43 char:24
++ $objMB | Set-CASMailbox  <<<< -ActiveSyncMailboxPolicy(Get-ActiveSyncMailboxP
+olicy | Where-Object {$_.Identity -like '*(Default)'}).Identity
+[PS] C:\Documents and Settings\peter>notepad C:\Scripts\PowerShell\Add-DefaultMa
+ilboxSettings.ps1
+[PS] C:\Documents and Settings\peter>C:\Scripts\Run-PowerShell.cmd /Log C:\Scrip
+ts\PowerShell\Add-DefaultMailboxSettings.ps1
+A subdirectory or file C:\Scripts\LogFiles already exists.
+[PS] C:\Documents and Settings\peter>Start-Transcript /?
+Start-Transcript : Transcription cannot be started.
+At line:1 char:17
++ Start-Transcript  <<<< /?
+[PS] C:\Documents and Settings\peter>help Start-Transcript /?
+Get-Help : Cannot validate argument "/?" because it does not belong to the set
+"Alias, Cmdlet, Provider, General, FAQ, Glossary, HelpFile, All".
+At line:94 char:42
++                  get-help $Name -Category  <<<< $Category  | more.com
+[PS] C:\Documents and Settings\peter>help Start-Transcript
+
+NAME
+    Start-Transcript
+
+SYNOPSIS
+    Creates a record of all or part of a Windows PowerShell session in a text f
+    ile.
+
+
+SYNTAX
+    Start-Transcript [[-path] <string>] [-force] [-noClobber] [-append] [-whatI
+    f] [-confirm] [<CommonParameters>]
+
+
+DETAILED DESCRIPTION
+    The Start-Transcript cmdlet creates a record of all or part of a Windows Po
+    werShell session in a text file. The transcript includes all command that t
+    he user types and all output that appears on the console.
+
+
+RELATED LINKS
+    Stop-Transcript
+
+REMARKS
+    For more information, type: "get-help Start-Transcript -detailed".
+    For technical information, type: "get-help Start-Transcript -full".
+
+
+
+
+[PS] C:\Documents and Settings\peter>help '*address*'
+
+Name                       Category                   Synopsis
+----                       --------                   --------
+Get-AddressList            Cmdlet                     Use the Get-AddressLis...
+Get-GlobalAddressList      Cmdlet                     Use the Get-GlobalAddr...
+Get-EmailAddressPolicy     Cmdlet                     Use the Get-EmailAddre...
+New-AddressList            Cmdlet                     Use the New-AddressLis...
+New-GlobalAddressList      Cmdlet                     Use the New-GlobalAddr...
+New-EmailAddressPolicy     Cmdlet                     Use the New-EmailAddre...
+Remove-AddressList         Cmdlet                     Use the Remove-Address...
+Remove-GlobalAddressList   Cmdlet                     Use the Remove-GlobalA...
+Remove-EmailAddressPolicy  Cmdlet                     Use the Remove-EmailAd...
+Set-AddressList            Cmdlet                     Use the Set-AddressLis...
+Set-GlobalAddressList      Cmdlet                     Use the Set-GlobalAddr...
+Set-EmailAddressPolicy     Cmdlet                     Use the Set-EmailAddre...
+Update-AddressList         Cmdlet                     Use the Update-Address...
+Update-GlobalAddressList   Cmdlet                     Use the Update-GlobalA...
+Move-AddressList           Cmdlet                     Use the Move-AddressLi...
+Update-EmailAddressPolicy  Cmdlet                     Use the Update-EmailAd...
+New-OfflineAddressBook     Cmdlet                     Use the New-OfflineAdd...
+Get-OfflineAddressBook     Cmdlet                     Use the Get-OfflineAdd...
+Remove-OfflineAddressBook  Cmdlet                     Use the Remove-Offline...
+Move-OfflineAddressBook    Cmdlet                     Use the Move-OfflineAd...
+Set-OfflineAddressBook     Cmdlet                     Use the Set-OfflineAdd...
+Update-OfflineAddressBook  Cmdlet                     Use the Update-Offline...
+Get-AvailabilityAddress... Cmdlet                     Use the Get-Availabili...
+Add-AvailabilityAddress... Cmdlet                     Use the Add-Availabili...
+Remove-AvailabilityAddr... Cmdlet                     Use the Remove-Availab...
+
+
+
+[PS] C:\Documents and Settings\peter>help Set-AddressList
+
+NAME
+    Set-AddressList
+
+SYNOPSIS
+    Use the Set-AddressList cmdlet to modify an existing address list.
+
+
+SYNTAX
+    Set-AddressList -Identity <AddressListIdParameter> [-ConditionalCompany <Mu
+    ltiValuedProperty>] [-ConditionalCustomAttribute1 <String>] [-ConditionalCu
+    stomAttribute10 <String>] [-ConditionalCustomAttribute11 <String>] [-Condit
+    ionalCustomAttribute12 <String>] [-ConditionalCustomAttribute13 <String>] [
+    -ConditionalCustomAttribute14 <String>] [-ConditionalCustomAttribute15 <Str
+    ing>] [-ConditionalCustomAttribute2 <String>] [-ConditionalCustomAttribute3
+     <String>] [-ConditionalCustomAttribute4 <String>] [-ConditionalCustomAttri
+    bute5 <String>] [-ConditionalCustomAttribute6 <String>] [-ConditionalCustom
+    Attribute7 <String>] [-ConditionalCustomAttribute8 <String>] [-ConditionalC
+    ustomAttribute9 <String>] [-ConditionalDepartment <MultiValuedProperty>] [-
+    ConditionalStateOrProvince <MultiValuedProperty>] [-DisplayName <String>] [
+    -DomainController <Fqdn>] [-ForceUpgrade <SwitchParameter>] [-IncludedRecip
+    ients <Nullable>] [-Name <String>] [-RecipientFilter <String>] [<CommonPara
+    meters>]
+
+    Set-AddressList [-ConditionalCompany <MultiValuedProperty>] [-ConditionalCu
+    stomAttribute1 <String>] [-ConditionalCustomAttribute10 <String>] [-Conditi
+    onalCustomAttribute11 <String>] [-ConditionalCustomAttribute12 <String>] [-
+    ConditionalCustomAttribute13 <String>] [-ConditionalCustomAttribute14 <Stri
+    ng>] [-ConditionalCustomAttribute15 <String>] [-ConditionalCustomAttribute2
+     <String>] [-ConditionalCustomAttribute3 <String>] [-ConditionalCustomAttri
+    bute4 <String>] [-ConditionalCustomAttribute5 <String>] [-ConditionalCustom
+    Attribute6 <String>] [-ConditionalCustomAttribute7 <String>] [-ConditionalC
+    ustomAttribute8 <String>] [-ConditionalCustomAttribute9 <String>] [-Conditi
+    onalDepartment <MultiValuedProperty>] [-ConditionalStateOrProvince <MultiVa
+    luedProperty>] [-DisplayName <String>] [-DomainController <Fqdn>] [-ForceUp
+    grade <SwitchParameter>] [-IncludedRecipients <Nullable>] [-Instance <Addre
+    ssList>] [-Name <String>] [-RecipientFilter <String>] [<CommonParameters>]
+
+
+DETAILED DESCRIPTION
+    To run the Set-AddressList cmdlet on a computer that has the Mailbox server
+     role installed, you must log on by using a domain account that has the per
+    missions assigned to the Exchange Organization Administrators group. The ac
+    count must also be a member of the local Administrators group on that compu
+    ter.
+    If you want to use the Exchange Management Console to manage address lists
+    that were created in Microsoft Exchange Server 2003 or Exchange 2000 Server
+    , you must do the following:
+    * Update the version attribute of the address list using the ForceUpgrade p
+      arameter.
+    * Change the recipient filter using either the RecipientFilter parameter or
+       one of the following filter parameters:
+
+
+RELATED LINKS
+
+REMARKS
+    For more information, type: "get-help Set-AddressList -detailed".
+    For technical information, type: "get-help Set-AddressList -full".
+
+
+
+
+[PS] C:\Documents and Settings\peter>Get-AddressList
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+All Rooms                 All Rooms                 (Alias -ne $null -and (Reci
+                                                    pientDisplayType -eq 'Confe
+                                                    renceRoomMailbox' -or Recip
+                                                    ientDisplayType -eq 'Synced
+                                                    ConferenceRoomMailbox'))
+All Users                 All Users
+All Groups                All Groups
+All Contacts              All Contacts
+Public Folders            Public Folders
+
+
+[PS] C:\Documents and Settings\peter>Get-AddressList | Set-AddressList -ForceUpd
+ate
+Set-AddressList : A parameter cannot be found that matches parameter name 'Forc
+eUpdate'.
+At line:1 char:46
++ Get-AddressList | Set-AddressList -ForceUpdate <<<<
+[PS] C:\Documents and Settings\peter>Get-AddressList | Set-AddressList -ForceUpg
+rade
+WARNING: The command completed successfully but no settings of '\All Users'
+have been modified.
+WARNING: The command completed successfully but no settings of '\All Groups'
+have been modified.
+WARNING: The command completed successfully but no settings of '\All Contacts'
+have been modified.
+WARNING: The command completed successfully but no settings of '\Public
+Folders' have been modified.
+[PS] C:\Documents and Settings\peter>cd\
+The term 'cd\' is not recognized as a cmdlet, function, operable program, or sc
+ript file. Verify the term and try again.
+At line:1 char:3
++ cd\ <<<<
+[PS] C:\Documents and Settings\peter>cd \
+[PS] C:\>Get-AddressList
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+All Rooms                 All Rooms                 (Alias -ne $null -and (Reci
+                                                    pientDisplayType -eq 'Confe
+                                                    renceRoomMailbox' -or Recip
+                                                    ientDisplayType -eq 'Synced
+                                                    ConferenceRoomMailbox'))
+All Users                 All Users
+All Groups                All Groups
+All Contacts              All Contacts
+Public Folders            Public Folders
+
+
+[PS] C:\>Get-AddressList |fl
+
+
+Container                    : \
+DisplayName                  : All Rooms
+Name                         : All Rooms
+RecipientFilter              : (Alias -ne $null -and (RecipientDisplayType -eq
+                               'ConferenceRoomMailbox' -or RecipientDisplayType
+                                -eq 'SyncedConferenceRoomMailbox'))
+LdapRecipientFilter          : (&(mailNickname=*)(|(msExchRecipientDisplayType=
+                               7)(msExchRecipientDisplayType=-2147481850)))
+LastUpdatedRecipientFilter   : (Alias -ne $null -and (RecipientDisplayType -eq
+                               'ConferenceRoomMailbox' -or RecipientDisplayType
+                                -eq 'SyncedConferenceRoomMailbox'))
+RecipientFilterApplied       : True
+IncludedRecipients           :
+ConditionalDepartment        :
+ConditionalCompany           :
+ConditionalStateOrProvince   :
+ConditionalCustomAttribute1  :
+ConditionalCustomAttribute2  :
+ConditionalCustomAttribute3  :
+ConditionalCustomAttribute4  :
+ConditionalCustomAttribute5  :
+ConditionalCustomAttribute6  :
+ConditionalCustomAttribute7  :
+ConditionalCustomAttribute8  :
+ConditionalCustomAttribute9  :
+ConditionalCustomAttribute10 :
+ConditionalCustomAttribute11 :
+ConditionalCustomAttribute12 :
+ConditionalCustomAttribute13 :
+ConditionalCustomAttribute14 :
+ConditionalCustomAttribute15 :
+RecipientFilterType          : Custom
+IsValid                      : True
+OriginatingServer            : TOLDV02.tol.local
+ExchangeVersion              : 0.1 (8.0.535.0)
+DistinguishedName            : CN=All Rooms,CN=All Address Lists,CN=Address Lis
+                               ts Container,CN=Tui Ora Ltd,CN=Microsoft Exchang
+                               e,CN=Services,CN=Configuration,DC=tol,DC=local
+Identity                     : \All Rooms
+Guid                         : 6716c6d0-b633-4d08-94a6-4221ccdece4d
+ObjectCategory               : tol.local/Configuration/Schema/Address-Book-Cont
+                               ainer
+ObjectClass                  : {top, addressBookContainer}
+WhenChanged                  : 4/12/2009 2:53:06 p.m.
+WhenCreated                  : 28/01/2008 11:34:26 a.m.
+
+Container                    : \
+DisplayName                  : All Users
+Name                         : All Users
+RecipientFilter              :
+LdapRecipientFilter          : (& (mailnickname=*) (| (&(objectCategory=person)
+                               (objectClass=user)(!(homeMDB=*))(!(msExchHomeSer
+                               verName=*)))(&(objectCategory=person)(objectClas
+                               s=user)(|(homeMDB=*)(msExchHomeServerName=*))) )
+                               )
+LastUpdatedRecipientFilter   :
+RecipientFilterApplied       : False
+IncludedRecipients           :
+ConditionalDepartment        :
+ConditionalCompany           :
+ConditionalStateOrProvince   :
+ConditionalCustomAttribute1  :
+ConditionalCustomAttribute2  :
+ConditionalCustomAttribute3  :
+ConditionalCustomAttribute4  :
+ConditionalCustomAttribute5  :
+ConditionalCustomAttribute6  :
+ConditionalCustomAttribute7  :
+ConditionalCustomAttribute8  :
+ConditionalCustomAttribute9  :
+ConditionalCustomAttribute10 :
+ConditionalCustomAttribute11 :
+ConditionalCustomAttribute12 :
+ConditionalCustomAttribute13 :
+ConditionalCustomAttribute14 :
+ConditionalCustomAttribute15 :
+RecipientFilterType          : Legacy
+IsValid                      : True
+OriginatingServer            : TOLDV02.tol.local
+ExchangeVersion              : 0.0 (6.5.6500.0)
+DistinguishedName            : CN=All Users,CN=All Address Lists,CN=Address Lis
+                               ts Container,CN=Tui Ora Ltd,CN=Microsoft Exchang
+                               e,CN=Services,CN=Configuration,DC=tol,DC=local
+Identity                     : \All Users
+Guid                         : 34be455e-eb9b-4408-a624-c095da5640cf
+ObjectCategory               : tol.local/Configuration/Schema/Address-Book-Cont
+                               ainer
+ObjectClass                  : {top, addressBookContainer}
+WhenChanged                  : 27/03/2007 4:21:43 p.m.
+WhenCreated                  : 27/03/2007 4:21:28 p.m.
+
+Container                    : \
+DisplayName                  : All Groups
+Name                         : All Groups
+RecipientFilter              :
+LdapRecipientFilter          : (& (mailnickname=*) (| (objectCategory=group) ))
+LastUpdatedRecipientFilter   :
+RecipientFilterApplied       : False
+IncludedRecipients           :
+ConditionalDepartment        :
+ConditionalCompany           :
+ConditionalStateOrProvince   :
+ConditionalCustomAttribute1  :
+ConditionalCustomAttribute2  :
+ConditionalCustomAttribute3  :
+ConditionalCustomAttribute4  :
+ConditionalCustomAttribute5  :
+ConditionalCustomAttribute6  :
+ConditionalCustomAttribute7  :
+ConditionalCustomAttribute8  :
+ConditionalCustomAttribute9  :
+ConditionalCustomAttribute10 :
+ConditionalCustomAttribute11 :
+ConditionalCustomAttribute12 :
+ConditionalCustomAttribute13 :
+ConditionalCustomAttribute14 :
+ConditionalCustomAttribute15 :
+RecipientFilterType          : Legacy
+IsValid                      : True
+OriginatingServer            : TOLDV02.tol.local
+ExchangeVersion              : 0.0 (6.5.6500.0)
+DistinguishedName            : CN=All Groups,CN=All Address Lists,CN=Address Li
+                               sts Container,CN=Tui Ora Ltd,CN=Microsoft Exchan
+                               ge,CN=Services,CN=Configuration,DC=tol,DC=local
+Identity                     : \All Groups
+Guid                         : 79282484-8264-4d65-8ba5-343995635b3f
+ObjectCategory               : tol.local/Configuration/Schema/Address-Book-Cont
+                               ainer
+ObjectClass                  : {top, addressBookContainer}
+WhenChanged                  : 27/03/2007 4:21:43 p.m.
+WhenCreated                  : 27/03/2007 4:21:28 p.m.
+
+Container                    : \
+DisplayName                  : All Contacts
+Name                         : All Contacts
+RecipientFilter              :
+LdapRecipientFilter          : (& (mailnickname=*) (| (&(objectCategory=person)
+                               (objectClass=contact)) ))
+LastUpdatedRecipientFilter   :
+RecipientFilterApplied       : False
+IncludedRecipients           :
+ConditionalDepartment        :
+ConditionalCompany           :
+ConditionalStateOrProvince   :
+ConditionalCustomAttribute1  :
+ConditionalCustomAttribute2  :
+ConditionalCustomAttribute3  :
+ConditionalCustomAttribute4  :
+ConditionalCustomAttribute5  :
+ConditionalCustomAttribute6  :
+ConditionalCustomAttribute7  :
+ConditionalCustomAttribute8  :
+ConditionalCustomAttribute9  :
+ConditionalCustomAttribute10 :
+ConditionalCustomAttribute11 :
+ConditionalCustomAttribute12 :
+ConditionalCustomAttribute13 :
+ConditionalCustomAttribute14 :
+ConditionalCustomAttribute15 :
+RecipientFilterType          : Legacy
+IsValid                      : True
+OriginatingServer            : TOLDV02.tol.local
+ExchangeVersion              : 0.0 (6.5.6500.0)
+DistinguishedName            : CN=All Contacts,CN=All Address Lists,CN=Address
+                               Lists Container,CN=Tui Ora Ltd,CN=Microsoft Exch
+                               ange,CN=Services,CN=Configuration,DC=tol,DC=loca
+                               l
+Identity                     : \All Contacts
+Guid                         : 578e10cb-681b-4f23-a4dc-f67dc45249cd
+ObjectCategory               : tol.local/Configuration/Schema/Address-Book-Cont
+                               ainer
+ObjectClass                  : {top, addressBookContainer}
+WhenChanged                  : 27/03/2007 4:21:43 p.m.
+WhenCreated                  : 27/03/2007 4:21:28 p.m.
+
+Container                    : \
+DisplayName                  : Public Folders
+Name                         : Public Folders
+RecipientFilter              :
+LdapRecipientFilter          : (& (mailnickname=*) (| (objectCategory=publicFol
+                               der) ))
+LastUpdatedRecipientFilter   :
+RecipientFilterApplied       : False
+IncludedRecipients           :
+ConditionalDepartment        :
+ConditionalCompany           :
+ConditionalStateOrProvince   :
+ConditionalCustomAttribute1  :
+ConditionalCustomAttribute2  :
+ConditionalCustomAttribute3  :
+ConditionalCustomAttribute4  :
+ConditionalCustomAttribute5  :
+ConditionalCustomAttribute6  :
+ConditionalCustomAttribute7  :
+ConditionalCustomAttribute8  :
+ConditionalCustomAttribute9  :
+ConditionalCustomAttribute10 :
+ConditionalCustomAttribute11 :
+ConditionalCustomAttribute12 :
+ConditionalCustomAttribute13 :
+ConditionalCustomAttribute14 :
+ConditionalCustomAttribute15 :
+RecipientFilterType          : Legacy
+IsValid                      : True
+OriginatingServer            : TOLDV02.tol.local
+ExchangeVersion              : 0.0 (6.5.6500.0)
+DistinguishedName            : CN=Public Folders,CN=All Address Lists,CN=Addres
+                               s Lists Container,CN=Tui Ora Ltd,CN=Microsoft Ex
+                               change,CN=Services,CN=Configuration,DC=tol,DC=lo
+                               cal
+Identity                     : \Public Folders
+Guid                         : aafb0fe7-a6ea-42ca-a0ce-17c806fc705e
+ObjectCategory               : tol.local/Configuration/Schema/Address-Book-Cont
+                               ainer
+ObjectClass                  : {top, addressBookContainer}
+WhenChanged                  : 27/03/2007 4:21:43 p.m.
+WhenCreated                  : 27/03/2007 4:21:28 p.m.
+
+
+
+[PS] C:\>Get-AddressList | Set-AddressList -ForceUpgrade -RecipientFilter $_.LDA
+Precipientfilter
+[PS] C:\>Get-AddressList |fl
+
+
+Container                    : \
+DisplayName                  : All Rooms
+Name                         : All Rooms
+RecipientFilter              :
+LdapRecipientFilter          :
+LastUpdatedRecipientFilter   : (Alias -ne $null -and (RecipientDisplayType -eq
+                               'ConferenceRoomMailbox' -or RecipientDisplayType
+                                -eq 'SyncedConferenceRoomMailbox'))
+RecipientFilterApplied       : False
+IncludedRecipients           :
+ConditionalDepartment        :
+ConditionalCompany           :
+ConditionalStateOrProvince   :
+ConditionalCustomAttribute1  :
+ConditionalCustomAttribute2  :
+ConditionalCustomAttribute3  :
+ConditionalCustomAttribute4  :
+ConditionalCustomAttribute5  :
+ConditionalCustomAttribute6  :
+ConditionalCustomAttribute7  :
+ConditionalCustomAttribute8  :
+ConditionalCustomAttribute9  :
+ConditionalCustomAttribute10 :
+ConditionalCustomAttribute11 :
+ConditionalCustomAttribute12 :
+ConditionalCustomAttribute13 :
+ConditionalCustomAttribute14 :
+ConditionalCustomAttribute15 :
+RecipientFilterType          : Custom
+IsValid                      : True
+OriginatingServer            : TOLDV02.tol.local
+ExchangeVersion              : 0.1 (8.0.535.0)
+DistinguishedName            : CN=All Rooms,CN=All Address Lists,CN=Address Lis
+                               ts Container,CN=Tui Ora Ltd,CN=Microsoft Exchang
+                               e,CN=Services,CN=Configuration,DC=tol,DC=local
+Identity                     : \All Rooms
+Guid                         : 6716c6d0-b633-4d08-94a6-4221ccdece4d
+ObjectCategory               : tol.local/Configuration/Schema/Address-Book-Cont
+                               ainer
+ObjectClass                  : {top, addressBookContainer}
+WhenChanged                  : 4/12/2009 2:58:22 p.m.
+WhenCreated                  : 28/01/2008 11:34:26 a.m.
+
+Container                    : \
+DisplayName                  : All Users
+Name                         : All Users
+RecipientFilter              :
+LdapRecipientFilter          :
+LastUpdatedRecipientFilter   :
+RecipientFilterApplied       : False
+IncludedRecipients           :
+ConditionalDepartment        :
+ConditionalCompany           :
+ConditionalStateOrProvince   :
+ConditionalCustomAttribute1  :
+ConditionalCustomAttribute2  :
+ConditionalCustomAttribute3  :
+ConditionalCustomAttribute4  :
+ConditionalCustomAttribute5  :
+ConditionalCustomAttribute6  :
+ConditionalCustomAttribute7  :
+ConditionalCustomAttribute8  :
+ConditionalCustomAttribute9  :
+ConditionalCustomAttribute10 :
+ConditionalCustomAttribute11 :
+ConditionalCustomAttribute12 :
+ConditionalCustomAttribute13 :
+ConditionalCustomAttribute14 :
+ConditionalCustomAttribute15 :
+RecipientFilterType          : Custom
+IsValid                      : True
+OriginatingServer            : TOLDV02.tol.local
+ExchangeVersion              : 0.1 (8.0.535.0)
+DistinguishedName            : CN=All Users,CN=All Address Lists,CN=Address Lis
+                               ts Container,CN=Tui Ora Ltd,CN=Microsoft Exchang
+                               e,CN=Services,CN=Configuration,DC=tol,DC=local
+Identity                     : \All Users
+Guid                         : 34be455e-eb9b-4408-a624-c095da5640cf
+ObjectCategory               : tol.local/Configuration/Schema/Address-Book-Cont
+                               ainer
+ObjectClass                  : {top, addressBookContainer}
+WhenChanged                  : 4/12/2009 2:58:22 p.m.
+WhenCreated                  : 27/03/2007 4:21:28 p.m.
+
+Container                    : \
+DisplayName                  : All Groups
+Name                         : All Groups
+RecipientFilter              :
+LdapRecipientFilter          :
+LastUpdatedRecipientFilter   :
+RecipientFilterApplied       : False
+IncludedRecipients           :
+ConditionalDepartment        :
+ConditionalCompany           :
+ConditionalStateOrProvince   :
+ConditionalCustomAttribute1  :
+ConditionalCustomAttribute2  :
+ConditionalCustomAttribute3  :
+ConditionalCustomAttribute4  :
+ConditionalCustomAttribute5  :
+ConditionalCustomAttribute6  :
+ConditionalCustomAttribute7  :
+ConditionalCustomAttribute8  :
+ConditionalCustomAttribute9  :
+ConditionalCustomAttribute10 :
+ConditionalCustomAttribute11 :
+ConditionalCustomAttribute12 :
+ConditionalCustomAttribute13 :
+ConditionalCustomAttribute14 :
+ConditionalCustomAttribute15 :
+RecipientFilterType          : Custom
+IsValid                      : True
+OriginatingServer            : TOLDV02.tol.local
+ExchangeVersion              : 0.1 (8.0.535.0)
+DistinguishedName            : CN=All Groups,CN=All Address Lists,CN=Address Li
+                               sts Container,CN=Tui Ora Ltd,CN=Microsoft Exchan
+                               ge,CN=Services,CN=Configuration,DC=tol,DC=local
+Identity                     : \All Groups
+Guid                         : 79282484-8264-4d65-8ba5-343995635b3f
+ObjectCategory               : tol.local/Configuration/Schema/Address-Book-Cont
+                               ainer
+ObjectClass                  : {top, addressBookContainer}
+WhenChanged                  : 4/12/2009 2:58:22 p.m.
+WhenCreated                  : 27/03/2007 4:21:28 p.m.
+
+Container                    : \
+DisplayName                  : All Contacts
+Name                         : All Contacts
+RecipientFilter              :
+LdapRecipientFilter          :
+LastUpdatedRecipientFilter   :
+RecipientFilterApplied       : False
+IncludedRecipients           :
+ConditionalDepartment        :
+ConditionalCompany           :
+ConditionalStateOrProvince   :
+ConditionalCustomAttribute1  :
+ConditionalCustomAttribute2  :
+ConditionalCustomAttribute3  :
+ConditionalCustomAttribute4  :
+ConditionalCustomAttribute5  :
+ConditionalCustomAttribute6  :
+ConditionalCustomAttribute7  :
+ConditionalCustomAttribute8  :
+ConditionalCustomAttribute9  :
+ConditionalCustomAttribute10 :
+ConditionalCustomAttribute11 :
+ConditionalCustomAttribute12 :
+ConditionalCustomAttribute13 :
+ConditionalCustomAttribute14 :
+ConditionalCustomAttribute15 :
+RecipientFilterType          : Custom
+IsValid                      : True
+OriginatingServer            : TOLDV02.tol.local
+ExchangeVersion              : 0.1 (8.0.535.0)
+DistinguishedName            : CN=All Contacts,CN=All Address Lists,CN=Address
+                               Lists Container,CN=Tui Ora Ltd,CN=Microsoft Exch
+                               ange,CN=Services,CN=Configuration,DC=tol,DC=loca
+                               l
+Identity                     : \All Contacts
+Guid                         : 578e10cb-681b-4f23-a4dc-f67dc45249cd
+ObjectCategory               : tol.local/Configuration/Schema/Address-Book-Cont
+                               ainer
+ObjectClass                  : {top, addressBookContainer}
+WhenChanged                  : 4/12/2009 2:58:22 p.m.
+WhenCreated                  : 27/03/2007 4:21:28 p.m.
+
+Container                    : \
+DisplayName                  : Public Folders
+Name                         : Public Folders
+RecipientFilter              :
+LdapRecipientFilter          :
+LastUpdatedRecipientFilter   :
+RecipientFilterApplied       : False
+IncludedRecipients           :
+ConditionalDepartment        :
+ConditionalCompany           :
+ConditionalStateOrProvince   :
+ConditionalCustomAttribute1  :
+ConditionalCustomAttribute2  :
+ConditionalCustomAttribute3  :
+ConditionalCustomAttribute4  :
+ConditionalCustomAttribute5  :
+ConditionalCustomAttribute6  :
+ConditionalCustomAttribute7  :
+ConditionalCustomAttribute8  :
+ConditionalCustomAttribute9  :
+ConditionalCustomAttribute10 :
+ConditionalCustomAttribute11 :
+ConditionalCustomAttribute12 :
+ConditionalCustomAttribute13 :
+ConditionalCustomAttribute14 :
+ConditionalCustomAttribute15 :
+RecipientFilterType          : Custom
+IsValid                      : True
+OriginatingServer            : TOLDV02.tol.local
+ExchangeVersion              : 0.1 (8.0.535.0)
+DistinguishedName            : CN=Public Folders,CN=All Address Lists,CN=Addres
+                               s Lists Container,CN=Tui Ora Ltd,CN=Microsoft Ex
+                               change,CN=Services,CN=Configuration,DC=tol,DC=lo
+                               cal
+Identity                     : \Public Folders
+Guid                         : aafb0fe7-a6ea-42ca-a0ce-17c806fc705e
+ObjectCategory               : tol.local/Configuration/Schema/Address-Book-Cont
+                               ainer
+ObjectClass                  : {top, addressBookContainer}
+WhenChanged                  : 4/12/2009 2:58:22 p.m.
+WhenCreated                  : 27/03/2007 4:21:28 p.m.
+
+
+
+[PS] C:\>Get-AddressList
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+All Rooms                 All Rooms
+All Users                 All Users
+All Groups                All Groups
+All Contacts              All Contacts
+Public Folders            Public Folders
+
+
+[PS] C:\>$al= Get-AddressList
+[PS] C:\>$al
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+All Rooms                 All Rooms
+All Users                 All Users
+All Groups                All Groups
+All Contacts              All Contacts
+Public Folders            Public Folders
+
+
+[PS] C:\>$al[0]
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+All Rooms                 All Rooms
+
+
+[PS] C:\>Set-AddressList -ForceUpgrade -RecipientFilter (Alias -ne $null -and (R
+ecipientDisplayType -eq 'ConferenceRoomMailbox' -or RecipientDisplayType -eq 'Sy
+ncedConferenceRoomMailbox'))
+The term 'RecipientDisplayType' is not recognized as a cmdlet, function, operab
+le program, or script file. Verify the term and try again.
+At line:1 char:91
++ Set-AddressList -ForceUpgrade -RecipientFilter (Alias -ne $null -and (Recipie
+ntDisplayType  <<<< -eq 'ConferenceRoomMailbox' -or RecipientDisplayType -eq 'S
+yncedConferenceRoomMailbox'))
+[PS] C:\>Set-AddressList -ForceUpgrade -RecipientFilter "(Alias -ne $null -and (
+RecipientDisplayType -eq 'ConferenceRoomMailbox' -or RecipientDisplayType -eq 'S
+yncedConferenceRoomMailbox'))"
+Set-AddressList : Cannot bind parameter 'RecipientFilter' to the target. Except
+ion setting "RecipientFilter": "Invalid filter syntax. For a description of the
+ filter parameter syntax see the command help.
+"(Alias -ne  -and (RecipientDisplayType -eq 'ConferenceRoomMailbox' -or Recipie
+ntDisplayType -eq 'SyncedConferenceRoomMailbox'))" at position 13."
+At line:1 char:47
++ Set-AddressList -ForceUpgrade -RecipientFilter  <<<< "(Alias -ne $null -and (
+RecipientDisplayType -eq 'ConferenceRoomMailbox' -or RecipientDisplayType -eq '
+SyncedConferenceRoomMailbox'))"
+[PS] C:\>help Set-AddressList
+
+NAME
+    Set-AddressList
+
+SYNOPSIS
+    Use the Set-AddressList cmdlet to modify an existing address list.
+
+
+SYNTAX
+    Set-AddressList -Identity <AddressListIdParameter> [-ConditionalCompany <Mu
+    ltiValuedProperty>] [-ConditionalCustomAttribute1 <String>] [-ConditionalCu
+    stomAttribute10 <String>] [-ConditionalCustomAttribute11 <String>] [-Condit
+    ionalCustomAttribute12 <String>] [-ConditionalCustomAttribute13 <String>] [
+    -ConditionalCustomAttribute14 <String>] [-ConditionalCustomAttribute15 <Str
+    ing>] [-ConditionalCustomAttribute2 <String>] [-ConditionalCustomAttribute3
+     <String>] [-ConditionalCustomAttribute4 <String>] [-ConditionalCustomAttri
+    bute5 <String>] [-ConditionalCustomAttribute6 <String>] [-ConditionalCustom
+    Attribute7 <String>] [-ConditionalCustomAttribute8 <String>] [-ConditionalC
+    ustomAttribute9 <String>] [-ConditionalDepartment <MultiValuedProperty>] [-
+    ConditionalStateOrProvince <MultiValuedProperty>] [-DisplayName <String>] [
+    -DomainController <Fqdn>] [-ForceUpgrade <SwitchParameter>] [-IncludedRecip
+    ients <Nullable>] [-Name <String>] [-RecipientFilter <String>] [<CommonPara
+    meters>]
+
+    Set-AddressList [-ConditionalCompany <MultiValuedProperty>] [-ConditionalCu
+    stomAttribute1 <String>] [-ConditionalCustomAttribute10 <String>] [-Conditi
+    onalCustomAttribute11 <String>] [-ConditionalCustomAttribute12 <String>] [-
+    ConditionalCustomAttribute13 <String>] [-ConditionalCustomAttribute14 <Stri
+    ng>] [-ConditionalCustomAttribute15 <String>] [-ConditionalCustomAttribute2
+     <String>] [-ConditionalCustomAttribute3 <String>] [-ConditionalCustomAttri
+    bute4 <String>] [-ConditionalCustomAttribute5 <String>] [-ConditionalCustom
+    Attribute6 <String>] [-ConditionalCustomAttribute7 <String>] [-ConditionalC
+    ustomAttribute8 <String>] [-ConditionalCustomAttribute9 <String>] [-Conditi
+    onalDepartment <MultiValuedProperty>] [-ConditionalStateOrProvince <MultiVa
+    luedProperty>] [-DisplayName <String>] [-DomainController <Fqdn>] [-ForceUp
+    grade <SwitchParameter>] [-IncludedRecipients <Nullable>] [-Instance <Addre
+    ssList>] [-Name <String>] [-RecipientFilter <String>] [<CommonParameters>]
+
+
+DETAILED DESCRIPTION
+    To run the Set-AddressList cmdlet on a computer that has the Mailbox server
+     role installed, you must log on by using a domain account that has the per
+    missions assigned to the Exchange Organization Administrators group. The ac
+    count must also be a member of the local Administrators group on that compu
+    ter.
+    If you want to use the Exchange Management Console to manage address lists
+    that were created in Microsoft Exchange Server 2003 or Exchange 2000 Server
+    , you must do the following:
+    * Update the version attribute of the address list using the ForceUpgrade p
+      arameter.
+    * Change the recipient filter using either the RecipientFilter parameter or
+       one of the following filter parameters:
+
+
+RELATED LINKS
+
+REMARKS
+    For more information, type: "get-help Set-AddressList -detailed".
+    For technical information, type: "get-help Set-AddressList -full".
+
+
+
+
+[PS] C:\>Set-AddressList -ForceUpgrade -RecipientFilter '(Alias -ne $null -and (
+RecipientDisplayType -eq ''ConferenceRoomMailbox'' -or RecipientDisplayType -eq
+''SyncedConferenceRoomMailbox''))'
+
+cmdlet Set-AddressList at command pipeline position 1
+Supply values for the following parameters:
+Identity: [PS] C:\>Set-AddressList -identity $al[0] -ForceUpgrade -RecipientFilt
+er '(Alias -ne $null -and (RecipientDisplayType -eq ''ConferenceRoomMailbox'' -o
+r RecipientDisplayType -eq ''SyncedConferenceRoomMailbox''))'
+[PS] C:\>Get-AddressList
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+All Rooms                 All Rooms                 (Alias -ne $null -and (Reci
+                                                    pientDisplayType -eq 'Confe
+                                                    renceRoomMailbox' -or Recip
+                                                    ientDisplayType -eq 'Synced
+                                                    ConferenceRoomMailbox'))
+All Users                 All Users
+All Groups                All Groups
+All Contacts              All Contacts
+Public Folders            Public Folders
+
+
+[PS] C:\>$al
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+All Rooms                 All Rooms
+All Users                 All Users
+All Groups                All Groups
+All Contacts              All Contacts
+Public Folders            Public Folders
+
+
+[PS] C:\>$al[1]
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+All Users                 All Users
+
+
+[PS] C:\>Set-AddressList -identity $al[0] -ForceUpgrade -RecipientFilter '(& (ma
+ilnickname=*) (| (&(objectCategory=person)(objectClass=user)(!(homeMDB=*))(!(msE
+xchHomeServerName=*)))(&(objectCategory=person)(objectClass=user)(|(homeMDB=*)(m
+sExchHomeServerName=*))) ))'
+Set-AddressList : Cannot bind parameter 'RecipientFilter' to the target. Except
+ion setting "RecipientFilter": "Invalid filter syntax. For a description of the
+ filter parameter syntax see the command help.
+"(& (mailnickname=*) (| (&(objectCategory=person)(objectClass=user)(!(homeMDB=*
+))(!(msExchHomeServerName=*)))(&(objectCategory=person)(objectClass=user)(|(hom
+eMDB=*)(msExchHomeServerName=*))) ))" at position 2."
+At line:1 char:64
++ Set-AddressList -identity $al[0] -ForceUpgrade -RecipientFilter  <<<< '(& (ma
+ilnickname=*) (| (&(objectCategory=person)(objectClass=user)(!(homeMDB=*))(!(ms
+ExchHomeServerName=*)))(&(objectCategory=person)(objectClass=user)(|(homeMDB=*)
+(msExchHomeServerName=*))) ))'
+[PS] C:\>$al[2]
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+All Groups                All Groups
+
+
+[PS] C:\>Set-AddressList -identity $al[2] -ForceUpgrade -RecipientFilter '(Recip
+ientType -eq ''MailUniversalDistributionGroup'' -or RecipientType -eq ''MailUniv
+ersalSecurityGroup'' -or RecipientType -eq ''MailNonUniversalGroup'' -or Recipie
+ntType -eq ''DynamicDistributionGroup'')'
+[PS] C:\>Get-AddressList
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+All Rooms                 All Rooms                 (Alias -ne $null -and (Reci
+                                                    pientDisplayType -eq 'Confe
+                                                    renceRoomMailbox' -or Recip
+                                                    ientDisplayType -eq 'Synced
+                                                    ConferenceRoomMailbox'))
+All Users                 All Users
+All Groups                All Groups                (((RecipientType -eq 'MailU
+                                                    niversalDistributionGroup'
+                                                    -or RecipientType -eq 'Mail
+                                                    UniversalSecurityGroup') -o
+                                                    r RecipientType -eq 'MailNo
+                                                    nUniversalGroup') -or Recip
+                                                    ientType -eq 'DynamicDistri
+                                                    butionGroup')
+All Contacts              All Contacts
+Public Folders            Public Folders
+
+
+[PS] C:\>Set-AddressList -identity $al[1] -ForceUpgrade -RecipientFilter '(Recip
+ientType -eq ''UserMailbox'' -or RecipientType -eq ''MailUser'')'
+[PS] C:\>Get-AddressList
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+All Rooms                 All Rooms                 (Alias -ne $null -and (Reci
+                                                    pientDisplayType -eq 'Confe
+                                                    renceRoomMailbox' -or Recip
+                                                    ientDisplayType -eq 'Synced
+                                                    ConferenceRoomMailbox'))
+All Users                 All Users                 (RecipientType -eq 'UserMai
+                                                    lbox' -or RecipientType -eq
+                                                     'MailUser')
+All Groups                All Groups                (((RecipientType -eq 'MailU
+                                                    niversalDistributionGroup'
+                                                    -or RecipientType -eq 'Mail
+                                                    UniversalSecurityGroup') -o
+                                                    r RecipientType -eq 'MailNo
+                                                    nUniversalGroup') -or Recip
+                                                    ientType -eq 'DynamicDistri
+                                                    butionGroup')
+All Contacts              All Contacts
+Public Folders            Public Folders
+
+
+[PS] C:\>Set-AddressList -identity $al[3] -ForceUpgrade -RecipientFilter 'Recipi
+entType -eq ''MailContact'''
+[PS] C:\>Get-AddressList
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+All Rooms                 All Rooms                 (Alias -ne $null -and (Reci
+                                                    pientDisplayType -eq 'Confe
+                                                    renceRoomMailbox' -or Recip
+                                                    ientDisplayType -eq 'Synced
+                                                    ConferenceRoomMailbox'))
+All Users                 All Users                 (RecipientType -eq 'UserMai
+                                                    lbox' -or RecipientType -eq
+                                                     'MailUser')
+All Groups                All Groups                (((RecipientType -eq 'MailU
+                                                    niversalDistributionGroup'
+                                                    -or RecipientType -eq 'Mail
+                                                    UniversalSecurityGroup') -o
+                                                    r RecipientType -eq 'MailNo
+                                                    nUniversalGroup') -or Recip
+                                                    ientType -eq 'DynamicDistri
+                                                    butionGroup')
+All Contacts              All Contacts              RecipientType -eq 'MailCont
+                                                    act'
+Public Folders            Public Folders
+
+
+[PS] C:\>help '*mail*'
+
+Name                       Category                   Synopsis
+----                       --------                   --------
+Move-Mailbox               Cmdlet                     Use the Move-Mailbox c...
+Move-ClusteredMailboxSe... Cmdlet                     This topic explains ho...
+Start-ClusteredMailboxS... Cmdlet                     This topic explains ho...
+Get-ClusteredMailboxSer... Cmdlet                     Use the Get-ClusteredM...
+Stop-ClusteredMailboxSe... Cmdlet                     This topic explains ho...
+Set-MailboxCalendarSett... Cmdlet                     Use the Set-MailboxCal...
+Get-MailboxCalendarSett... Cmdlet                     Use the Get-MailboxCal...
+Get-EmailAddressPolicy     Cmdlet                     Use the Get-EmailAddre...
+New-EmailAddressPolicy     Cmdlet                     Use the New-EmailAddre...
+Remove-EmailAddressPolicy  Cmdlet                     Use the Remove-EmailAd...
+Set-EmailAddressPolicy     Cmdlet                     Use the Set-EmailAddre...
+Update-EmailAddressPolicy  Cmdlet                     Use the Update-EmailAd...
+Disable-Mailbox            Cmdlet                     Use the Disable-Mailbo...
+Get-Mailbox                Cmdlet                     Use the Get-Mailbox cm...
+Get-MailboxFolderStatis... Cmdlet                     Use the Get-MailboxFol...
+Get-MailboxStatistics      Cmdlet                     Use the Get-MailboxSta...
+New-Mailbox                Cmdlet                     Use the New-Mailbox cm...
+Remove-Mailbox             Cmdlet                     Use the Remove-Mailbox...
+Connect-Mailbox            Cmdlet                     Use the Connect-Mailbo...
+Restore-Mailbox            Cmdlet                     Use the Restore-Mailbo...
+Export-Mailbox             Cmdlet                     Use the Export-Mailbox...
+Enable-Mailbox             Cmdlet                     Use the Enable-Mailbox...
+Set-Mailbox                Cmdlet                     Use the Set-Mailbox cm...
+New-MailUser               Cmdlet                     Use the New-MailUser c...
+Remove-MailUser            Cmdlet                     Use the Remove-MailUse...
+Enable-MailUser            Cmdlet                     Use the Enable-MailUse...
+Disable-MailUser           Cmdlet                     Use the Disable-MailUs...
+Get-MailUser               Cmdlet                     Use the Get-MailUser c...
+Set-MailUser               Cmdlet                     Use the Set-MailUser c...
+Enable-MailContact         Cmdlet                     Use the Enable-MailCon...
+Disable-MailContact        Cmdlet                     Use the Disable-MailCo...
+New-MailContact            Cmdlet                     You can use the New-Ma...
+Remove-MailContact         Cmdlet                     Use the Remove-MailCon...
+Get-MailContact            Cmdlet                     Use the Get-MailContac...
+Set-MailContact            Cmdlet                     Use the Set-MailContac...
+Get-MailboxServer          Cmdlet                     Use the Get-MailboxSer...
+Set-MailboxServer          Cmdlet                     Use the Set-MailboxSer...
+Clean-MailboxDatabase      Cmdlet                     Use the Clean-MailboxD...
+Get-MailboxDatabase        Cmdlet                     Use the Get-MailboxDat...
+New-MailboxDatabase        Cmdlet                     Use the New-MailboxDat...
+Remove-MailboxDatabase     Cmdlet                     Use the Remove-Mailbox...
+Set-MailboxDatabase        Cmdlet                     Use the Set-MailboxDat...
+New-ManagedFolderMailbo... Cmdlet                     Use the New-ManagedFol...
+Remove-ManagedFolderMai... Cmdlet                     Use the Remove-Managed...
+Get-ManagedFolderMailbo... Cmdlet                     Use the Get-ManagedFol...
+Set-ManagedFolderMailbo... Cmdlet                     Use the Set-ManagedFol...
+New-UMMailboxPolicy        Cmdlet                     The New-UMMailboxPolic...
+Remove-UMMailboxPolicy     Cmdlet                     The Remove-UMMailboxPo...
+Get-UMMailboxPolicy        Cmdlet                     The Get-UMMailboxPolic...
+Set-UMMailboxPolicy        Cmdlet                     The Set-UMMailboxPolic...
+New-ActiveSyncMailboxPo... Cmdlet                     The New-ActiveSyncMail...
+Remove-ActiveSyncMailbo... Cmdlet                     The Remove-ActiveSyncM...
+Get-ActiveSyncMailboxPo... Cmdlet                     The Get-ActiveSyncMail...
+Set-ActiveSyncMailboxPo... Cmdlet                     The Set-ActiveSyncMail...
+Get-UMMailbox              Cmdlet                     The Get-UMMailbox cmdl...
+Set-UMMailbox              Cmdlet                     The Set-UMMailbox cmdl...
+Get-CASMailbox             Cmdlet                     The Get-CASMailbox cmd...
+Set-CASMailbox             Cmdlet                     The Set-CASMailbox cmd...
+Test-Mailflow              Cmdlet                     Use the Test-Mailflow ...
+Enable-MailPublicFolder    Cmdlet                     Use the Enable-MailPub...
+Disable-MailPublicFolder   Cmdlet                     Use the Disable-MailPu...
+Get-MailPublicFolder       Cmdlet                     Use the Get-MailPublic...
+Set-MailPublicFolder       Cmdlet                     Use the Set-MailPublic...
+Get-MailboxPermission      Cmdlet                     Use the Get-MailboxPer...
+Add-MailboxPermission      Cmdlet                     Use the Add-MailboxPer...
+Remove-MailboxPermission   Cmdlet                     Use the remove-mailbox...
+Enable-UMMailbox           Cmdlet                     The Enable-UMMailbox c...
+Disable-UMMailbox          Cmdlet                     The Disable-UMMailbox ...
+Set-UMMailboxPIN           Cmdlet                     The Set-UMMailboxPIN c...
+Get-UMMailboxPIN           Cmdlet                     The Get-UMMailboxPIN c...
+
+
+
+[PS] C:\>help '*glo*'
+
+Name                       Category                   Synopsis
+----                       --------                   --------
+Get-MessageTrackingLog     Cmdlet                     Use the Get-MessageTra...
+Get-GlobalAddressList      Cmdlet                     Use the Get-GlobalAddr...
+New-GlobalAddressList      Cmdlet                     Use the New-GlobalAddr...
+Remove-GlobalAddressList   Cmdlet                     Use the Remove-GlobalA...
+Set-GlobalAddressList      Cmdlet                     Use the Set-GlobalAddr...
+Update-GlobalAddressList   Cmdlet                     Use the Update-GlobalA...
+about_globbing             HelpFile                   See Wildcard
+
+
+
+[PS] C:\>help set-GlobalAddressList
+
+NAME
+    Set-GlobalAddressList
+
+SYNOPSIS
+    Use the Set-GlobalAddressList cmdlet to modify the attributes in the Active
+     Directory directory service for a global address list (GAL).
+
+
+SYNTAX
+    Set-GlobalAddressList -Identity <GlobalAddressListIdParameter> [-Conditiona
+    lCompany <MultiValuedProperty>] [-ConditionalCustomAttribute1 <String>] [-C
+    onditionalCustomAttribute10 <String>] [-ConditionalCustomAttribute11 <Strin
+    g>] [-ConditionalCustomAttribute12 <String>] [-ConditionalCustomAttribute13
+     <String>] [-ConditionalCustomAttribute14 <String>] [-ConditionalCustomAttr
+    ibute15 <String>] [-ConditionalCustomAttribute2 <String>] [-ConditionalCust
+    omAttribute3 <String>] [-ConditionalCustomAttribute4 <String>] [-Conditiona
+    lCustomAttribute5 <String>] [-ConditionalCustomAttribute6 <String>] [-Condi
+    tionalCustomAttribute7 <String>] [-ConditionalCustomAttribute8 <String>] [-
+    ConditionalCustomAttribute9 <String>] [-ConditionalDepartment <MultiValuedP
+    roperty>] [-ConditionalStateOrProvince <MultiValuedProperty>] [-DomainContr
+    oller <Fqdn>] [-ForceUpgrade <SwitchParameter>] [-IncludedRecipients <Nulla
+    ble>] [-Name <String>] [-RecipientFilter <String>] [<CommonParameters>]
+
+    Set-GlobalAddressList [-ConditionalCompany <MultiValuedProperty>] [-Conditi
+    onalCustomAttribute1 <String>] [-ConditionalCustomAttribute10 <String>] [-C
+    onditionalCustomAttribute11 <String>] [-ConditionalCustomAttribute12 <Strin
+    g>] [-ConditionalCustomAttribute13 <String>] [-ConditionalCustomAttribute14
+     <String>] [-ConditionalCustomAttribute15 <String>] [-ConditionalCustomAttr
+    ibute2 <String>] [-ConditionalCustomAttribute3 <String>] [-ConditionalCusto
+    mAttribute4 <String>] [-ConditionalCustomAttribute5 <String>] [-Conditional
+    CustomAttribute6 <String>] [-ConditionalCustomAttribute7 <String>] [-Condit
+    ionalCustomAttribute8 <String>] [-ConditionalCustomAttribute9 <String>] [-C
+    onditionalDepartment <MultiValuedProperty>] [-ConditionalStateOrProvince <M
+    ultiValuedProperty>] [-DomainController <Fqdn>] [-ForceUpgrade <SwitchParam
+    eter>] [-IncludedRecipients <Nullable>] [-Instance <GlobalAddressList>] [-N
+    ame <String>] [-RecipientFilter <String>] [<CommonParameters>]
+
+
+DETAILED DESCRIPTION
+    The Set-GlobalAddressList cmdlet modifies the properties on a GAL.
+    To run the Set-GlobalAddressList cmdlet on a computer that has the Mailbox
+    server role installed, you must log on by using a domain account that has t
+    he permissions assigned to the Exchange Organization Administrators group.
+    The account must also be a member of the local Administrators group on that
+     computer.
+
+
+RELATED LINKS
+
+REMARKS
+    For more information, type: "get-help Set-GlobalAddressList -detailed".
+    For technical information, type: "get-help Set-GlobalAddressList -full".
+
+
+
+
+[PS] C:\>Get-GlobalAddressList | Set-GlobalAddressList -forceupgrade
+WARNING: The command completed successfully but no settings of '\Default Global
+ Address List' have been modified.
+WARNING: The command completed successfully but no settings of '\Ex07 Global
+Address List' have been modified.
+[PS] C:\>Get-GlobalAddressList
+
+Name                                    RecipientFilter
+----                                    ---------------
+Default Global Address List
+Ex07 Global Address List                Alias -ne $null
+
+
+[PS] C:\>Get-GlobalAddressList | fl
+
+
+IsDefaultGlobalAddressList   : True
+RecipientFilter              :
+LdapRecipientFilter          : (& (mailnickname=*) (| (&(objectCategory=person)
+                               (objectClass=user)(!(homeMDB=*))(!(msExchHomeSer
+                               verName=*)))(&(objectCategory=person)(objectClas
+                               s=user)(|(homeMDB=*)(msExchHomeServerName=*)))(&
+                               (objectCategory=person)(objectClass=contact))(ob
+                               jectCategory=group)(objectCategory=publicFolder)
+                               (objectCategory=msExchDynamicDistributionList) )
+                               )
+LastUpdatedRecipientFilter   :
+RecipientFilterApplied       : False
+IncludedRecipients           :
+ConditionalDepartment        :
+ConditionalCompany           :
+ConditionalStateOrProvince   :
+ConditionalCustomAttribute1  :
+ConditionalCustomAttribute2  :
+ConditionalCustomAttribute3  :
+ConditionalCustomAttribute4  :
+ConditionalCustomAttribute5  :
+ConditionalCustomAttribute6  :
+ConditionalCustomAttribute7  :
+ConditionalCustomAttribute8  :
+ConditionalCustomAttribute9  :
+ConditionalCustomAttribute10 :
+ConditionalCustomAttribute11 :
+ConditionalCustomAttribute12 :
+ConditionalCustomAttribute13 :
+ConditionalCustomAttribute14 :
+ConditionalCustomAttribute15 :
+RecipientFilterType          : Legacy
+IsValid                      : True
+OriginatingServer            : TOLDV02.tol.local
+ExchangeVersion              : 0.0 (6.5.6500.0)
+Name                         : Default Global Address List
+DistinguishedName            : CN=Default Global Address List,CN=All Global Add
+                               ress Lists,CN=Address Lists Container,CN=Tui Ora
+                                Ltd,CN=Microsoft Exchange,CN=Services,CN=Config
+                               uration,DC=tol,DC=local
+Identity                     : \Default Global Address List
+Guid                         : dc95c15b-8ce5-43f5-9cac-93818373617e
+ObjectCategory               : tol.local/Configuration/Schema/Address-Book-Cont
+                               ainer
+ObjectClass                  : {top, addressBookContainer}
+WhenChanged                  : 27/03/2007 4:21:43 p.m.
+WhenCreated                  : 27/03/2007 4:21:28 p.m.
+
+IsDefaultGlobalAddressList   : False
+RecipientFilter              : Alias -ne $null
+LdapRecipientFilter          : (mailNickname=*)
+LastUpdatedRecipientFilter   : Alias -ne $null
+RecipientFilterApplied       : True
+IncludedRecipients           : AllRecipients
+ConditionalDepartment        : {}
+ConditionalCompany           : {}
+ConditionalStateOrProvince   : {}
+ConditionalCustomAttribute1  :
+ConditionalCustomAttribute2  :
+ConditionalCustomAttribute3  :
+ConditionalCustomAttribute4  :
+ConditionalCustomAttribute5  :
+ConditionalCustomAttribute6  :
+ConditionalCustomAttribute7  :
+ConditionalCustomAttribute8  :
+ConditionalCustomAttribute9  :
+ConditionalCustomAttribute10 :
+ConditionalCustomAttribute11 :
+ConditionalCustomAttribute12 :
+ConditionalCustomAttribute13 :
+ConditionalCustomAttribute14 :
+ConditionalCustomAttribute15 :
+RecipientFilterType          : Precanned
+IsValid                      : True
+OriginatingServer            : TOLDV02.tol.local
+ExchangeVersion              : 0.1 (8.0.535.0)
+Name                         : Ex07 Global Address List
+DistinguishedName            : CN=Ex07 Global Address List,CN=All Global Addres
+                               s Lists,CN=Address Lists Container,CN=Tui Ora Lt
+                               d,CN=Microsoft Exchange,CN=Services,CN=Configura
+                               tion,DC=tol,DC=local
+Identity                     : \Ex07 Global Address List
+Guid                         : a58ffe3e-1f55-430b-abc1-df2bc7886cd1
+ObjectCategory               : tol.local/Configuration/Schema/Address-Book-Cont
+                               ainer
+ObjectClass                  : {top, addressBookContainer}
+WhenChanged                  : 7/10/2009 1:59:04 p.m.
+WhenCreated                  : 7/10/2009 1:14:31 p.m.
+
+
+
+[PS] C:\>help '*recip*'
+
+Name                       Category                   Synopsis
+----                       --------                   --------
+Get-RecipientFilterConfig  Cmdlet                     Use the Get-RecipientF...
+Set-RecipientFilterConfig  Cmdlet                     Use the Set-RecipientF...
+Get-Recipient              Cmdlet                     Use the Get-Recipient ...
+
+
+
+[PS] C:\>get-recipient
+
+Name                                    RecipientType
+----                                    -------------
+Anna Broughton                          UserMailbox
+Amanda Kiss                             UserMailbox
+Arohananda Luke                         UserMailbox
+Tui Ora Ltd (TOL) Administration        MailNonUniversalGroup
+Te Rau Pani (TRP) Admin Email           MailNonUniversalGroup
+Avenue Medical Center (AMC) Admin       MailNonUniversalGroup
+Administrator                           UserMailbox
+Arif Ahmed                              UserMailbox
+Affiliated Providers                    MailNonUniversalGroup
+Ali Marsh                               UserMailbox
+Alice Doorbar                           MailContact
+Anthony Waru                            UserMailbox
+Ann Edwards                             UserMailbox
+Allie Te Hiini                          UserMailbox
+Avenue Medical Center (AMC) Nurse       MailNonUniversalGroup
+Anaru Marshall                          UserMailbox
+Alex Nash                               UserMailbox
+Barbara Hughes                          UserMailbox
+Barbara Purdie                          UserMailbox
+Brad Huntley                            UserMailbox
+Bronwyn Robinson                        UserMailbox
+Bronwyn Collier                         UserMailbox
+Brooke Ovenden                          UserMailbox
+Bridget Powell                          UserMailbox
+Beverley Anaru                          UserMailbox
+Christine Nicholas                      UserMailbox
+Christina Priest                        UserMailbox
+Charlene Kelly                          UserMailbox
+Central Medical - Dr Veitch             MailContact
+Central Medical - Gadd                  MailContact
+Cliff T. Rona                           UserMailbox
+Chris Taylor Dental                     MailContact
+CJS Bonnie                              MailContact
+Carleen Broughton                       UserMailbox
+Te Rau Pani (TRP) Clinical Email        MailNonUniversalGroup
+Cheryl Jackson                          UserMailbox
+Te Ihi Rangi Clinical                   UserMailbox
+Caroline Winstanley                     UserMailbox
+Carlo Hamahona                          UserMailbox
+Cindy Knuckey                           UserMailbox
+Debra Tuuta                             UserMailbox
+David Tamatea                           MailContact
+Deeanna Ritai                           UserMailbox
+Dean Raven                              UserMailbox
+Denise Brouwers                         UserMailbox
+Dianne Chubb                            UserMailbox
+Denise Hunter                           UserMailbox
+Diane Sharpe                            UserMailbox
+Devon Medical Centre                    MailContact
+Dee Weir                                UserMailbox
+Denise Matangi                          UserMailbox
+Deborah Wade                            UserMailbox
+Diarmuid Cahill                         UserMailbox
+Del Field                               UserMailbox
+Domett Street Health                    MailContact
+Erana Coutts                            UserMailbox
+Emere Wano - Tihi                       MailContact
+Te Rau Pani (TRP) Employment Email      MailNonUniversalGroup
+Evan Watson                             UserMailbox
+Erana Coutts                            MailContact
+Esther Timu                             UserMailbox
+Tui Ora Ltd (TOL) Users                 MailNonUniversalGroup
+Hauora Taranaki PHO (HTPHO) Users       MailNonUniversalGroup
+Manaaki Oranga Ltd (MOL) Users          MailNonUniversalGroup
+Piki Te Ora (PTO) Users                 MailNonUniversalGroup
+Te Aroha Medcare (TAM) Users            MailNonUniversalGroup
+Te Hauora Pou Heretanga (THPH) Users    MailNonUniversalGroup
+Te Rau Pani (TRP) Users                 MailNonUniversalGroup
+Youth Transition Service (YTS) Users    MailNonUniversalGroup
+Raumano Health Trust (RHT) Users        MailNonUniversalGroup
+Avenue Medical Center (AMC) Users       MailNonUniversalGroup
+Te Ihi Rangi (TIR) Users                MailNonUniversalGroup
+Family Health Centre                    MailContact
+Tui Ora Ltd (TOL) Finance               MailNonUniversalGroup
+Fraulein Rawiri                         UserMailbox
+Gina Newman                             UserMailbox
+Gaylene Corry                           UserMailbox
+Support - Gen-i                         UserMailbox
+Gloria Goff                             UserMailbox
+Gloria Farquhar                         UserMailbox
+Glenarr Huntley                         UserMailbox
+Hauora Taranaki PHO (HTPHO) Reception   MailNonUniversalGroup
+Hawera Health Care                      MailContact
+Helpdesk Service Account                UserMailbox
+Hinemoerangi Ngatai Tangirua            UserMailbox
+Hayden Wano (HTPHO)                     UserMailbox
+Hone Rata                               UserMailbox
+Tui Ora Ltd (TOL) HR                    MailNonUniversalGroup
+HTPHO - GP's                            MailNonUniversalGroup
+HTPHO ITServices                        PublicFolder
+Hayden Wano                             UserMailbox
+Inglewood - Dr Finnigan                 MailContact
+Inglewood - Dr Jones                    MailContact
+Tui Ora Ltd (TOL) IT Services           MailNonUniversalGroup
+ITServices                              PublicFolder
+Jemma Wineera                           UserMailbox
+Julie Brandt                            UserMailbox
+Jane Hawkins-Jones (HTPHO)              UserMailbox
+Janine Lineham                          UserMailbox
+Janine Sirett                           UserMailbox
+Jane Hawkins-Jones                      UserMailbox
+Joanah Phillips                         UserMailbox
+Jocelyn Merwood                         UserMailbox
+Jemaima O'Brien                         UserMailbox
+Jo-an Bridger                           UserMailbox
+Jan Gelston                             UserMailbox
+Jean Hikaka                             UserMailbox
+Jo Bertrand                             UserMailbox
+Janis Little                            UserMailbox
+Joy Siebert                             UserMailbox
+Kaiawhina Users                         MailNonUniversalGroup
+Karangaora Inc (KOI) Admin              MailNonUniversalGroup
+Karangaora Inc (KOI) Users              MailNonUniversalGroup
+Karl Broughton - Mahia Mai              MailContact
+Katrina Seu                             UserMailbox
+Karena Terry                            UserMailbox
+Kume Leilua                             UserMailbox
+Khushi Mitchell                         UserMailbox
+Krystyna Foulkes                        UserMailbox
+Kim Marshall                            UserMailbox
+Kirsten Gamby                           UserMailbox
+Kristy Faloon                           UserMailbox
+Karena Taylor                           UserMailbox
+Kathy Glass                             UserMailbox
+Kirsty Montgomery                       UserMailbox
+Lisa Brill                              UserMailbox
+Leila Hunter                            UserMailbox
+Leanne Horo                             UserMailbox
+Linda - Tu Tama Wahine                  MailContact
+Lindsay MacLeod                         MailContact
+Lynn Davies                             UserMailbox
+HTPHO Locum Nurse                       UserMailbox
+Lyn Hoskin                              UserMailbox
+Liz Fife                                UserMailbox
+Maria Hemara-Wahanui                    UserMailbox
+Mahia Mai a Whai Tara (Reception)       MailContact
+Fe (Maria) Marsh                        UserMailbox
+Manaaki Oranga Ltd (MOL) BalanceMe      MailNonUniversalGroup
+Manaaki Oranga Ltd (MOL) Reception      MailNonUniversalGroup
+Marcel Schadt                           UserMailbox
+Melissa Willis                          UserMailbox
+Marina Versteeg                         UserMailbox
+Marama Witehira                         UserMailbox
+Mere Brooks                             UserMailbox
+Mobile Bus Service Account              UserMailbox
+Merran Dixon                            UserMailbox
+Maxine Whakaruru                        UserMailbox
+Te Ihi Rangi Manager                    UserMailbox
+Bronwyn Collier                         UserMailbox
+Mihi Kahu                               UserMailbox
+Merle Bendixen                          UserMailbox
+Marama Corcoran                         UserMailbox
+Marion Hurunui                          UserMailbox
+Admin MOL                               UserMailbox
+Manu Matthews                           UserMailbox
+Matiu Julian                            UserMailbox
+Ngapuke Kahukuranui                     UserMailbox
+Ngatitama                               MailContact
+Naomi Brown                             UserMailbox
+Nora - Tu Tama Wahine                   MailContact
+Oakura Medical                          MailContact
+Offline Address Book - First Adminis... PublicFolder
+Opunake Medical Centre                  MailContact
+Otaraua Management Committee            MailContact
+Patea & District Comm Med Trust         MailContact
+Paul Tooley                             UserMailbox
+Paula Walsh                             UserMailbox
+Pue Whakaruru                           UserMailbox
+Pauline Cruickshank                     UserMailbox
+Peter van Koppen                        UserMailbox
+HTPHO Graduate Nurse                    UserMailbox
+Patsy Bodger                            UserMailbox
+Pam Hikuroa                             UserMailbox
+Pmoeahu                                 MailContact
+Powderham Medical Centre                MailContact
+Peter Hokopaura                         UserMailbox
+Pamela Ritai                            UserMailbox
+Pukeariki Maori Womens Welfare League   MailContact
+Patu Maruera                            UserMailbox
+Queenie Gripp                           UserMailbox
+Queenie Mackey                          UserMailbox
+Raumano Health Trust (RHT) Reception    MailNonUniversalGroup
+Roina Graham                            UserMailbox
+Tui Ora Ltd (TOL) Reception             MailNonUniversalGroup
+Te Hauora Pou Heretanga (THPH) Recep... MailNonUniversalGroup
+Te Rau Pani (TRP) Reception             MailNonUniversalGroup
+Regan Street Medical Centre             MailContact
+Rochelle Hall                           UserMailbox
+Royce Richards                          UserMailbox
+Rose Taikato                            UserMailbox
+Roberta Graham                          UserMailbox
+Rangimahora Reddy                       UserMailbox
+Rhiannon Huntley                        UserMailbox
+Rona Hancock                            MailContact
+Rosemary Ireland                        UserMailbox
+Sandra Hawkins                          UserMailbox
+Sonya Popovich                          UserMailbox
+Schedule+ Free Busy Information - Fi... PublicFolder
+Shannon Balsom                          UserMailbox
+Sarah MacAvoy                           UserMailbox
+Sharyn Tamarapa                         UserMailbox
+Surinder Dhulip Singh                   UserMailbox
+Suzy Dymock                             UserMailbox
+Terina Gladding                         UserMailbox
+Te Ao Marama                            UserMailbox
+Te Aroha Medcare (TAM) Reception        MailNonUniversalGroup
+Te Ihi Rangi                            MailContact
+Te Kahu Mai Rangi (TKMR)                MailContact
+Te Kiikini Trust                        MailContact
+Te Maunga Hauora                        MailContact
+Tendele Medical Centre                  MailContact
+TestUser Account                        UserMailbox
+Te Whare Puawai o Te Tangata            MailContact
+Terry Huntley                           UserMailbox
+Trish Martin                            UserMailbox
+Te Aorangi Russell                      UserMailbox
+Denis - Toiora                          MailContact
+Donna - Toiora                          MailContact
+Toni  Spice                             MailContact
+TuiOra Reception                        UserMailbox
+Training                                UserMailbox
+Te Rau Davis                            UserMailbox
+Trevor Lau                              UserMailbox
+TRP Nurse                               UserMailbox
+TS User                                 UserMailbox
+Tui Ora (All Users - Maru Wehi Hauor... MailNonUniversalGroup
+Tui Ora (All Users & All Affiliated ... MailNonUniversalGroup
+Tui Ora (E-Group - Tui Ora Trustees)    MailNonUniversalGroup
+Tui Ora (Provider Managers)             MailNonUniversalGroup
+Tui Ora (Provider Mgrs & Non Contrac... MailNonUniversalGroup
+Tukapa - Dr I Price                     MailContact
+Tu Tama Wahine (Reception)              MailContact
+Tracey Eru                              UserMailbox
+Vera Kershaw                            UserMailbox
+Wharehoka Wano - Tihi                   MailContact
+Wendy Eynon                             UserMailbox
+Youth Transition Service (YTS) Hawer... MailNonUniversalGroup
+YTS Reception                           UserMailbox
+Zhang Xianwen                           UserMailbox
+
+
+[PS] C:\>$al[4]
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+Public Folders            Public Folders
+
+
+[PS] C:\>Set-AddressList -identity $al[4] -ForceUpgrade -RecipientFilter 'Recipi
+entType -eq ''PublicFolder'''
+[PS] C:\>Get-AddressList
+
+Name                      DisplayName               RecipientFilter
+----                      -----------               ---------------
+All Rooms                 All Rooms                 (Alias -ne $null -and (Reci
+                                                    pientDisplayType -eq 'Confe
+                                                    renceRoomMailbox' -or Recip
+                                                    ientDisplayType -eq 'Synced
+                                                    ConferenceRoomMailbox'))
+All Users                 All Users                 (RecipientType -eq 'UserMai
+                                                    lbox' -or RecipientType -eq
+                                                     'MailUser')
+All Groups                All Groups                (((RecipientType -eq 'MailU
+                                                    niversalDistributionGroup'
+                                                    -or RecipientType -eq 'Mail
+                                                    UniversalSecurityGroup') -o
+                                                    r RecipientType -eq 'MailNo
+                                                    nUniversalGroup') -or Recip
+                                                    ientType -eq 'DynamicDistri
+                                                    butionGroup')
+All Contacts              All Contacts              RecipientType -eq 'MailCont
+                                                    act'
+Public Folders            Public Folders            RecipientType -eq 'PublicFo
+                                                    lder'
+
+
+[PS] C:\>Get-GlobalAddressList
+
+Name                                    RecipientFilter
+----                                    ---------------
+Default Global Address List
+Ex07 Global Address List                Alias -ne $null
+
+
+[PS] C:\>Get-GlobalAddressList | Set-GlobalAddressList -ForceUpgrade -RecipientF
+ilter 'Alias -ne $null'
+Set-GlobalAddressList : The input string "Alias -ne $null" is not a valid recip
+ient filter for Default Global Address List "\Default Global Address List". To
+upgrade Exchange Version of the object, please use "-RecipientFilter {(Alias -n
+e $null -and (ObjectClass -eq 'user' -or ObjectClass -eq 'contact' -or ObjectCl
+ass -eq 'msExchSystemMailbox' -or ObjectClass -eq 'msExchDynamicDistributionLis
+t' -or ObjectClass -eq 'group' -or ObjectClass -eq 'publicFolder'))}".
+At line:1 char:46
++ Get-GlobalAddressList | Set-GlobalAddressList  <<<< -ForceUpgrade -RecipientF
+ilter 'Alias -ne $null'
+[PS] C:\>$gal = Get-GlobalAddressList
+[PS] C:\>$gal
+
+Name                                    RecipientFilter
+----                                    ---------------
+Default Global Address List
+Ex07 Global Address List                Alias -ne $null
+
+
+[PS] C:\>$gal[0]
+
+Name                                    RecipientFilter
+----                                    ---------------
+Default Global Address List
+
+
+[PS] C:\>Set-GlobalAddressList -identity $gal[0] -ForceUpgrade -RecipientFilter
+-RecipientFilter {(Alias -ne $null -and (ObjectClass -eq 'user' -or ObjectClass
+-eq 'contact' -or ObjectClass -eq 'msExchSystemMailbox' -or ObjectClass -eq 'msE
+xchDynamicDistributionList' -or ObjectClass -eq 'group' -or ObjectClass -eq 'pub
+licFolder'))}
+Set-GlobalAddressList : Missing an argument for parameter 'RecipientFilter'. Sp
+ecify a parameter of type 'System.String' and try again.
+At line:1 char:71
++ Set-GlobalAddressList -identity $gal[0] -ForceUpgrade -RecipientFilter  <<<<
+-RecipientFilter {(Alias -ne $null -and (ObjectClass -eq 'user' -or ObjectClass
+ -eq 'contact' -or ObjectClass -eq 'msExchSystemMailbox' -or ObjectClass -eq 'm
+sExchDynamicDistributionList' -or ObjectClass -eq 'group' -or ObjectClass -eq '
+publicFolder'))}
+[PS] C:\>Set-GlobalAddressList -identity $gal[0] -ForceUpgrade -RecipientFilter
+-RecipientFilter '{(Alias -ne $null -and (ObjectClass -eq ''user'' -or ObjectCla
+ss -eq ''contact'' -or ObjectClass -eq ''msExchSystemMailbox'' -or ObjectClass -
+eq ''msExchDynamicDistributionList'' -or ObjectClass -eq ''group'' -or ObjectCla
+ss -eq ''publicFolder''))}'
+Set-GlobalAddressList : Missing an argument for parameter 'RecipientFilter'. Sp
+ecify a parameter of type 'System.String' and try again.
+At line:1 char:71
++ Set-GlobalAddressList -identity $gal[0] -ForceUpgrade -RecipientFilter  <<<<
+
+ Recipients Update
+    Finished
+    [oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo]
+
+'{(Alias -ne $null -and (ObjectClass -eq ''user'' -or ObjectClass -eq ''contact'
+' -or ObjectClass -eq ''msExchSystemMailbox'' -or ObjectClass -eq ''msExchDynami
+cDistributionList'' -or ObjectClass -eq ''group'' -or ObjectClass -eq ''publicFo
+lder''))}'
+Set-GlobalAddressList : Cannot bind parameter 'RecipientFilter' to the target.
+Exception setting "RecipientFilter": "Invalid filter syntax. For a description
+of the filter parameter syntax see the command help.
+"{(Alias -ne $null -and (ObjectClass -eq 'user' -or ObjectClass -eq 'contact' -
+or ObjectClass -eq 'msExchSystemMailbox' -or ObjectClass -eq 'msExchDynamicDist
+ributionList' -or ObjectClass -eq 'group' -or ObjectClass -eq 'publicFolder'))}
+" at position 1."
+At line:1 char:71
++ Set-GlobalAddressList -identity $gal[0] -ForceUpgrade -RecipientFilter  <<<<
+'{(Alias -ne $null -and (ObjectClass -eq ''user'' -or ObjectClass -eq ''contact
+'' -or ObjectClass -eq ''msExchSystemMailbox'' -or ObjectClass -eq ''msExchDyna
+micDistributionList'' -or ObjectClass -eq ''group'' -or ObjectClass -eq ''publi
+cFolder''))}'
+[PS] C:\>Set-GlobalAddressList -identity $gal[0] -ForceUpgrade -RecipientFilter
+'(Alias -ne $null -and (ObjectClass -eq ''user'' -or ObjectClass -eq ''contact''
+ -or ObjectClass -eq ''msExchSystemMailbox'' -or ObjectClass -eq ''msExchDynamic
+DistributionList'' -or ObjectClass -eq ''group'' -or ObjectClass -eq ''publicFol
+der''))'
+[PS] C:\>Get-GlobalAddressList
+
+Name                                    RecipientFilter
+----                                    ---------------
+Default Global Address List             (Alias -ne $null -and (((((ObjectClass
+                                        -eq 'user' -or ObjectClass -eq 'contact
+                                        ') -or ObjectClass -eq 'msExchSystemMai
+                                        lbox') -or ObjectClass -eq 'msExchDynam
+                                        icDistributionList') -or ObjectClass -e
+                                        q 'group') -or ObjectClass -eq 'publicF
+                                        older'))
+Ex07 Global Address List                Alias -ne $null
+
+
+[PS] C:\>help '*glo*'
+
+Name                       Category                   Synopsis
+----                       --------                   --------
+Get-MessageTrackingLog     Cmdlet                     Use the Get-MessageTra...
+Get-GlobalAddressList      Cmdlet                     Use the Get-GlobalAddr...
+New-GlobalAddressList      Cmdlet                     Use the New-GlobalAddr...
+Remove-GlobalAddressList   Cmdlet                     Use the Remove-GlobalA...
+Set-GlobalAddressList      Cmdlet                     Use the Set-GlobalAddr...
+Update-GlobalAddressList   Cmdlet                     Use the Update-GlobalA...
+about_globbing             HelpFile                   See Wildcard
+
+
+
+[PS] C:\>Get-GlobalAddressList | Update-GlobalAddressList
+[PS] C:\>Get-AddressList | Update-AddressList
+[PS] C:\>help '*pol*'
+
+Name                       Category                   Synopsis
+----                       --------                   --------
+Get-ExecutionPolicy        Cmdlet                     Gets the current execu...
+Set-ExecutionPolicy        Cmdlet                     Changes the user prefe...
+Get-EmailAddressPolicy     Cmdlet                     Use the Get-EmailAddre...
+New-EmailAddressPolicy     Cmdlet                     Use the New-EmailAddre...
+Remove-EmailAddressPolicy  Cmdlet                     Use the Remove-EmailAd...
+Set-EmailAddressPolicy     Cmdlet                     Use the Set-EmailAddre...
+Update-EmailAddressPolicy  Cmdlet                     Use the Update-EmailAd...
+New-ManagedFolderMailbo... Cmdlet                     Use the New-ManagedFol...
+Remove-ManagedFolderMai... Cmdlet                     Use the Remove-Managed...
+Get-ManagedFolderMailbo... Cmdlet                     Use the Get-ManagedFol...
+Set-ManagedFolderMailbo... Cmdlet                     Use the Set-ManagedFol...
+New-UMMailboxPolicy        Cmdlet                     The New-UMMailboxPolic...
+Remove-UMMailboxPolicy     Cmdlet                     The Remove-UMMailboxPo...
+Get-UMMailboxPolicy        Cmdlet                     The Get-UMMailboxPolic...
+Set-UMMailboxPolicy        Cmdlet                     The Set-UMMailboxPolic...
+New-ActiveSyncMailboxPo... Cmdlet                     The New-ActiveSyncMail...
+Remove-ActiveSyncMailbo... Cmdlet                     The Remove-ActiveSyncM...
+Get-ActiveSyncMailboxPo... Cmdlet                     The Get-ActiveSyncMail...
+Set-ActiveSyncMailboxPo... Cmdlet                     The Set-ActiveSyncMail...
+
+
+
+[PS] C:\>Get-EmailAddressPolicy
+
+Name                       Priority                   RecipientFilter
+----                       --------                   ---------------
+Default Policy             Lowest
+Email Address Policy: HTPH 1
+O Users
+Email Address Policy: THPH 8
+ Users
+Email Address Policy: TOL  9
+Users
+Email Address Policy: TRP  10
+Users
+Email Address Policy: PTO  5
+Users
+Email Address Policy: TAM  7
+Users
+Email Address Policy: MOL  4
+Users
+Email Address Policy: RHT  6
+Users
+Email Address Policy: YTS  11
+Users
+Email Address Policy: Publ 12
+ic Folders
+Email Address Policy: KAIA 2
+WHINA Users
+Email Address Policy: KOI  3
+Users
+Email Address Policy: AMC  13
+Users
+Email Address Policy: TIR  14
+Users
+Email Address Policy: Syst 15
+em
+
+
+[PS] C:\>Get-EmailAddressPolicy | Set-EmailAddressPolicy -ForceUpgrade
+WARNING: The command completed successfully but no settings of 'Default Policy'
+ have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: HTPHO Users' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: THPH Users' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: TOL Users' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: TRP Users' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: PTO Users' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: TAM Users' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: MOL Users' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: RHT Users' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: YTS Users' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: Public Folders' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: KAIAWHINA Users' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: KOI Users' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: AMC Users' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: TIR Users' have been modified.
+WARNING: The command completed successfully but no settings of 'Email Address
+Policy: System' have been modified.
+[PS] C:\>

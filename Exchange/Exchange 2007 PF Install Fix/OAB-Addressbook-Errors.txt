@@ -1,0 +1,251 @@
+"Microsoft Exchange offline address book" 0X80200013
+
+
+Cmdlet          Get-AddressList                 Get-AddressList [[-Identity]...
+Cmdlet          Get-GlobalAddressList           Get-GlobalAddressList [[-Ide...
+Cmdlet          Get-OfflineAddressBook          Get-OfflineAddressBook [[-Id...
+
+Cmdlet          Move-AddressList                Move-AddressList [-Identity]...
+Cmdlet          Move-OfflineAddressBook         Move-OfflineAddressBook [-Id...
+
+Cmdlet          New-AddressList                 New-AddressList [-Name] <Str...
+Cmdlet          New-GlobalAddressList           New-GlobalAddressList [-Name...
+Cmdlet          New-OfflineAddressBook          New-OfflineAddressBook [-Nam...
+
+Cmdlet          Remove-AddressList              Remove-AddressList [-Identit...
+Cmdlet          Remove-GlobalAddressList        Remove-GlobalAddressList [-I...
+Cmdlet          Remove-OfflineAddressBook       Remove-OfflineAddressBook [-...
+
+Cmdlet          Set-AddressList                 Set-AddressList [-Identity] ...
+Cmdlet          Set-GlobalAddressList           Set-GlobalAddressList [-Iden...
+Cmdlet          Set-OfflineAddressBook          Set-OfflineAddressBook [-Ide...
+
+Cmdlet          Update-AddressList              Update-AddressList [-Identit...
+Cmdlet          Update-GlobalAddressList        Update-GlobalAddressList [-I...
+Cmdlet          Update-OfflineAddressBook       Update-OfflineAddressBook [-...
+
+-------------------------------------------------------------------------------
+
+Summary: 2 item(s). 2 succeeded, 0 failed. 
+Elapsed time: 00:00:10
+
+
+New Ex2007 Global Address List
+Completed
+
+Exchange Management Shell command completed:
+new-AddressList -Name 'Ex2007 Global Address List' -Container '\' -IncludedRecipients 'AllRecipients'
+
+Elapsed Time: 00:00:01
+
+
+Apply Ex2007 Global Address List
+Completed
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Schedule+ Free Busy Information - First Administrative Group" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Offline Address Book - First Administrative Group" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/TuiOra Contacts" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Car Pool" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/HTPHO Group Contact List" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Monthly Practice Data & Reports" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/09 - September" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/01 January 2007" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/03 March" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/04 - April" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/05 - May 2007" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/06 - June 2007" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Processed - Clinical Indicators" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/07- July 2007" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/08 - August" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/December 05" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/November 05" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/October 05" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/September 05" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/1 - December 2006" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/April 2006" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/August 2006" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/February 2006" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/January 2006 " is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/July 2006" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/June 2006" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/March 2006" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Register Management" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Clinical Indicators Jan 06" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Southcare - Histology Results" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/September 2006" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/October 2006" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/November 2006" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/May 2006" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Maru Wehi Hauora Boardroom" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Notice Board Archive" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Notice Board" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Getz - EZL882" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Getz - FAL34" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Accent - DRU297" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Accent - DRU291" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Maru Wehi Hauora Meetingroom" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/TRP Contacts" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/CHG258 Expired" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/CFJ783 Expired" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/CFA778 Expired1" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/CFA778 Expired" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/CDR241 Expired" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/CCU678 Expired" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/CCU677 Expired" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/BZG272 Expired" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/BZF249 Expired" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/EDQ803 Carlo" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/EDH810 Terry" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/EBU558 (Y) Allie" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/DZT634 (Y) Pue" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/DZT633 (T) Matua Tony" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/DYW375 Maxine" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/DTA195 (Y) Terina" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/DTA194 (T) Bindy" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/DCE101 Carolyn" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/DAM665 Carlo" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/Te Hauora Pou Heretanga Contacts" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/YTS Contacts" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/HTPHO ITServices" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/YTS Hawera" is invalid and could not be updated.
+
+Warning:
+The recipient "tol.local/Microsoft Exchange System Objects/DAM665 Carlo 63140430" is invalid and could not be updated.
+
+
+Exchange Management Shell command completed:
+update-AddressList -Identity '\Ex2007 Global Address List'
+
+Elapsed Time: 00:00:08
+

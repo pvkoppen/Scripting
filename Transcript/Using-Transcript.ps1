@@ -6,6 +6,8 @@ $ScriptShortName = [System.IO.Path]::GetFileNameWithoutExtension($script:MyInvoc
 $FileFilter      = "$ScriptShortName#*.log"
 Start-Transcript -Path "$(Join-Path -Path $ScriptPath -ChildPath $ScriptShortName)#$(Get-Date -Format "yyyyMMdd").log" -Append
 
+#Functions
+
 #Actions
 
 

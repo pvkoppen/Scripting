@@ -1,0 +1,15 @@
+Set-PopSettings -LoginType PlainTextLogin
+
+restart-service -service msExchangePOP3
+
+Set-IMAPSettings -LoginType PlainTextLogin
+
+restart-service -service msExchangeIMAP4
+
+
+Get-ReceiveConnector "Relay connector" | Add-ADPermission -User "NT AUTHORITY\ANONYMOUS LOGON" -ExtendedRights "ms-Exch-SMTP-Accept-Any-Recipient"
+
+
+
+
+
