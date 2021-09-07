@@ -1,4 +1,10 @@
-﻿
+﻿#
+# Author  : PvKoppen
+# Date    : 10/05/2021
+# Modified: 06/09/2021
+# Version : 1.0b
+#
+
 $KeepDays        = 21
 $DaysAgo         = (Get-Date).AddDays(-$KeepDays)
 $ScriptPath      = Split-Path -Path $script:MyInvocation.InvocationName -Parent
@@ -6,11 +12,17 @@ $ScriptShortName = [System.IO.Path]::GetFileNameWithoutExtension($script:MyInvoc
 $FileFilter      = "$ScriptShortName#*.log"
 Start-Transcript -Path "$(Join-Path -Path $ScriptPath -ChildPath $ScriptShortName)#$(Get-Date -Format "yyyyMMdd").log" -Append
 
+#Variables
+
+#CalculatedValues
+
 #Functions
 
 #Actions
 
+#Report
 
+#Cleanup
 Write-Host "[INFO ] Remove Transcript Logs: [$FileFilter] older then: '$DaysAgo' from folder: '$ScriptPath'."
 Get-ChildItem -Path $ScriptPath -Force -File -Filter $FileFilter | 
     Where-Object { !$_.PSIsContainer -and $_.LastWriteTime -lt $DaysAgo } | Remove-Item -Force -Verbose
