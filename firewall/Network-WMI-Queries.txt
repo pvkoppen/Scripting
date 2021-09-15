@@ -1,0 +1,3878 @@
+PS C:\Windows\system32>                 Get-WmiObject -Class CIM_NetworkAdapter -Property * | fl *
+
+
+PSComputerName              : MXNZMOTSV029
+Availability                : 3
+Name                        : Microsoft Kernel Debug Network Adapter
+Status                      :
+StatusInfo                  :
+DeviceID                    : 0
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkAdapter
+__SUPERCLASS                : CIM_NetworkAdapter
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkAdapter.DeviceID="0"
+__PROPERTY_COUNT            : 40
+__DERIVATION                : {CIM_NetworkAdapter, CIM_LogicalDevice, CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="0"
+AdapterType                 :
+AdapterTypeId               :
+AutoSense                   :
+Caption                     : [00000000] Microsoft Kernel Debug Network Adapter
+ConfigManagerErrorCode      : 0
+ConfigManagerUserConfig     : False
+CreationClassName           : Win32_NetworkAdapter
+Description                 : Microsoft Kernel Debug Network Adapter
+ErrorCleared                :
+ErrorDescription            :
+GUID                        :
+Index                       : 0
+InstallDate                 :
+Installed                   : True
+InterfaceIndex              : 2
+LastErrorCode               :
+MACAddress                  :
+Manufacturer                : Microsoft
+MaxNumberControlled         : 0
+MaxSpeed                    :
+NetConnectionID             :
+NetConnectionStatus         :
+NetEnabled                  :
+NetworkAddresses            :
+PermanentAddress            :
+PhysicalAdapter             : False
+PNPDeviceID                 : ROOT\KDNIC\0000
+PowerManagementCapabilities :
+PowerManagementSupported    : False
+ProductName                 : Microsoft Kernel Debug Network Adapter
+ServiceName                 : kdnic
+Speed                       :
+SystemCreationClassName     : Win32_ComputerSystem
+SystemName                  : MXNZMOTSV029
+TimeOfLastReset             : 20210821024724.491430+720
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="0"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter
+Properties                  : {AdapterType, AdapterTypeId, AutoSense, Availability...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+Availability                : 3
+Name                        : Intel(R) 82574L Gigabit Network Connection
+Status                      :
+StatusInfo                  :
+DeviceID                    : 1
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkAdapter
+__SUPERCLASS                : CIM_NetworkAdapter
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkAdapter.DeviceID="1"
+__PROPERTY_COUNT            : 40
+__DERIVATION                : {CIM_NetworkAdapter, CIM_LogicalDevice, CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="1"
+AdapterType                 : Ethernet 802.3
+AdapterTypeId               : 0
+AutoSense                   :
+Caption                     : [00000001] Intel(R) 82574L Gigabit Network Connection
+ConfigManagerErrorCode      : 0
+ConfigManagerUserConfig     : False
+CreationClassName           : Win32_NetworkAdapter
+Description                 : Intel(R) 82574L Gigabit Network Connection
+ErrorCleared                :
+ErrorDescription            :
+GUID                        : {3D7A6F6F-1D5C-4213-A17C-7167A28E6C55}
+Index                       : 1
+InstallDate                 :
+Installed                   : True
+InterfaceIndex              : 3
+LastErrorCode               :
+MACAddress                  : 00:50:56:A6:6F:9A
+Manufacturer                : Intel Corporation
+MaxNumberControlled         : 0
+MaxSpeed                    :
+NetConnectionID             : Ethernet0
+NetConnectionStatus         : 2
+NetEnabled                  : True
+NetworkAddresses            :
+PermanentAddress            :
+PhysicalAdapter             : True
+PNPDeviceID                 : PCI\VEN_8086&DEV_10D3&SUBSYS_07D015AD&REV_00\005056FFFFA67BC100
+PowerManagementCapabilities :
+PowerManagementSupported    : False
+ProductName                 : Intel(R) 82574L Gigabit Network Connection
+ServiceName                 : e1iexpress
+Speed                       : 1000000000
+SystemCreationClassName     : Win32_ComputerSystem
+SystemName                  : MXNZMOTSV029
+TimeOfLastReset             : 20210821024724.491430+720
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="1"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter
+Properties                  : {AdapterType, AdapterTypeId, AutoSense, Availability...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+Availability                : 3
+Name                        : Microsoft Teredo Tunneling Adapter
+Status                      :
+StatusInfo                  :
+DeviceID                    : 12
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkAdapter
+__SUPERCLASS                : CIM_NetworkAdapter
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkAdapter.DeviceID="12"
+__PROPERTY_COUNT            : 40
+__DERIVATION                : {CIM_NetworkAdapter, CIM_LogicalDevice, CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="12"
+AdapterType                 :
+AdapterTypeId               :
+AutoSense                   :
+Caption                     : [00000012] Microsoft Teredo Tunneling Adapter
+ConfigManagerErrorCode      :
+ConfigManagerUserConfig     :
+CreationClassName           : Win32_NetworkAdapter
+Description                 : Microsoft Teredo Tunneling Adapter
+ErrorCleared                :
+ErrorDescription            :
+GUID                        :
+Index                       : 12
+InstallDate                 :
+Installed                   : True
+InterfaceIndex              : 4
+LastErrorCode               :
+MACAddress                  :
+Manufacturer                :
+MaxNumberControlled         : 0
+MaxSpeed                    :
+NetConnectionID             :
+NetConnectionStatus         :
+NetEnabled                  :
+NetworkAddresses            :
+PermanentAddress            :
+PhysicalAdapter             : False
+PNPDeviceID                 :
+PowerManagementCapabilities :
+PowerManagementSupported    : False
+ProductName                 : Microsoft Teredo Tunneling Adapter
+ServiceName                 :
+Speed                       :
+SystemCreationClassName     : Win32_ComputerSystem
+SystemName                  : MXNZMOTSV029
+TimeOfLastReset             : 20210821024724.491430+720
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="12"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter
+Properties                  : {AdapterType, AdapterTypeId, AutoSense, Availability...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+Availability                : 3
+Name                        : Microsoft ISATAP Adapter #2
+Status                      :
+StatusInfo                  :
+DeviceID                    : 13
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkAdapter
+__SUPERCLASS                : CIM_NetworkAdapter
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkAdapter.DeviceID="13"
+__PROPERTY_COUNT            : 40
+__DERIVATION                : {CIM_NetworkAdapter, CIM_LogicalDevice, CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="13"
+AdapterType                 : Tunnel
+AdapterTypeId               : 15
+AutoSense                   :
+Caption                     : [00000013] Microsoft ISATAP Adapter
+ConfigManagerErrorCode      : 0
+ConfigManagerUserConfig     : False
+CreationClassName           : Win32_NetworkAdapter
+Description                 : Microsoft ISATAP Adapter
+ErrorCleared                :
+ErrorDescription            :
+GUID                        :
+Index                       : 13
+InstallDate                 :
+Installed                   : True
+InterfaceIndex              : 5
+LastErrorCode               :
+MACAddress                  :
+Manufacturer                : Microsoft
+MaxNumberControlled         : 0
+MaxSpeed                    :
+NetConnectionID             :
+NetConnectionStatus         :
+NetEnabled                  :
+NetworkAddresses            :
+PermanentAddress            :
+PhysicalAdapter             : False
+PNPDeviceID                 : SWD\IP_TUNNEL_VBUS\ISATAP_1
+PowerManagementCapabilities :
+PowerManagementSupported    : False
+ProductName                 : Microsoft ISATAP Adapter
+ServiceName                 : tunnel
+Speed                       : 100000
+SystemCreationClassName     : Win32_ComputerSystem
+SystemName                  : MXNZMOTSV029
+TimeOfLastReset             : 20210821024724.491430+720
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="13"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter
+Properties                  : {AdapterType, AdapterTypeId, AutoSense, Availability...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+
+
+PS C:\Windows\system32>                 Get-WmiObject -Class Win32_NetworkAdapter -Property * | fl *
+
+
+PSComputerName              : MXNZMOTSV029
+Availability                : 3
+Name                        : Microsoft Kernel Debug Network Adapter
+Status                      :
+StatusInfo                  :
+DeviceID                    : 0
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkAdapter
+__SUPERCLASS                : CIM_NetworkAdapter
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkAdapter.DeviceID="0"
+__PROPERTY_COUNT            : 40
+__DERIVATION                : {CIM_NetworkAdapter, CIM_LogicalDevice, CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="0"
+AdapterType                 :
+AdapterTypeId               :
+AutoSense                   :
+Caption                     : [00000000] Microsoft Kernel Debug Network Adapter
+ConfigManagerErrorCode      : 0
+ConfigManagerUserConfig     : False
+CreationClassName           : Win32_NetworkAdapter
+Description                 : Microsoft Kernel Debug Network Adapter
+ErrorCleared                :
+ErrorDescription            :
+GUID                        :
+Index                       : 0
+InstallDate                 :
+Installed                   : True
+InterfaceIndex              : 2
+LastErrorCode               :
+MACAddress                  :
+Manufacturer                : Microsoft
+MaxNumberControlled         : 0
+MaxSpeed                    :
+NetConnectionID             :
+NetConnectionStatus         :
+NetEnabled                  :
+NetworkAddresses            :
+PermanentAddress            :
+PhysicalAdapter             : False
+PNPDeviceID                 : ROOT\KDNIC\0000
+PowerManagementCapabilities :
+PowerManagementSupported    : False
+ProductName                 : Microsoft Kernel Debug Network Adapter
+ServiceName                 : kdnic
+Speed                       :
+SystemCreationClassName     : Win32_ComputerSystem
+SystemName                  : MXNZMOTSV029
+TimeOfLastReset             : 20210821024724.491430+720
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="0"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter
+Properties                  : {AdapterType, AdapterTypeId, AutoSense, Availability...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+Availability                : 3
+Name                        : Intel(R) 82574L Gigabit Network Connection
+Status                      :
+StatusInfo                  :
+DeviceID                    : 1
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkAdapter
+__SUPERCLASS                : CIM_NetworkAdapter
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkAdapter.DeviceID="1"
+__PROPERTY_COUNT            : 40
+__DERIVATION                : {CIM_NetworkAdapter, CIM_LogicalDevice, CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="1"
+AdapterType                 : Ethernet 802.3
+AdapterTypeId               : 0
+AutoSense                   :
+Caption                     : [00000001] Intel(R) 82574L Gigabit Network Connection
+ConfigManagerErrorCode      : 0
+ConfigManagerUserConfig     : False
+CreationClassName           : Win32_NetworkAdapter
+Description                 : Intel(R) 82574L Gigabit Network Connection
+ErrorCleared                :
+ErrorDescription            :
+GUID                        : {3D7A6F6F-1D5C-4213-A17C-7167A28E6C55}
+Index                       : 1
+InstallDate                 :
+Installed                   : True
+InterfaceIndex              : 3
+LastErrorCode               :
+MACAddress                  : 00:50:56:A6:6F:9A
+Manufacturer                : Intel Corporation
+MaxNumberControlled         : 0
+MaxSpeed                    :
+NetConnectionID             : Ethernet0
+NetConnectionStatus         : 2
+NetEnabled                  : True
+NetworkAddresses            :
+PermanentAddress            :
+PhysicalAdapter             : True
+PNPDeviceID                 : PCI\VEN_8086&DEV_10D3&SUBSYS_07D015AD&REV_00\005056FFFFA67BC100
+PowerManagementCapabilities :
+PowerManagementSupported    : False
+ProductName                 : Intel(R) 82574L Gigabit Network Connection
+ServiceName                 : e1iexpress
+Speed                       : 1000000000
+SystemCreationClassName     : Win32_ComputerSystem
+SystemName                  : MXNZMOTSV029
+TimeOfLastReset             : 20210821024724.491430+720
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="1"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter
+Properties                  : {AdapterType, AdapterTypeId, AutoSense, Availability...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+Availability                : 3
+Name                        : Microsoft Teredo Tunneling Adapter
+Status                      :
+StatusInfo                  :
+DeviceID                    : 12
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkAdapter
+__SUPERCLASS                : CIM_NetworkAdapter
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkAdapter.DeviceID="12"
+__PROPERTY_COUNT            : 40
+__DERIVATION                : {CIM_NetworkAdapter, CIM_LogicalDevice, CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="12"
+AdapterType                 :
+AdapterTypeId               :
+AutoSense                   :
+Caption                     : [00000012] Microsoft Teredo Tunneling Adapter
+ConfigManagerErrorCode      :
+ConfigManagerUserConfig     :
+CreationClassName           : Win32_NetworkAdapter
+Description                 : Microsoft Teredo Tunneling Adapter
+ErrorCleared                :
+ErrorDescription            :
+GUID                        :
+Index                       : 12
+InstallDate                 :
+Installed                   : True
+InterfaceIndex              : 4
+LastErrorCode               :
+MACAddress                  :
+Manufacturer                :
+MaxNumberControlled         : 0
+MaxSpeed                    :
+NetConnectionID             :
+NetConnectionStatus         :
+NetEnabled                  :
+NetworkAddresses            :
+PermanentAddress            :
+PhysicalAdapter             : False
+PNPDeviceID                 :
+PowerManagementCapabilities :
+PowerManagementSupported    : False
+ProductName                 : Microsoft Teredo Tunneling Adapter
+ServiceName                 :
+Speed                       :
+SystemCreationClassName     : Win32_ComputerSystem
+SystemName                  : MXNZMOTSV029
+TimeOfLastReset             : 20210821024724.491430+720
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="12"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter
+Properties                  : {AdapterType, AdapterTypeId, AutoSense, Availability...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+Availability                : 3
+Name                        : Microsoft ISATAP Adapter #2
+Status                      :
+StatusInfo                  :
+DeviceID                    : 13
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkAdapter
+__SUPERCLASS                : CIM_NetworkAdapter
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkAdapter.DeviceID="13"
+__PROPERTY_COUNT            : 40
+__DERIVATION                : {CIM_NetworkAdapter, CIM_LogicalDevice, CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="13"
+AdapterType                 : Tunnel
+AdapterTypeId               : 15
+AutoSense                   :
+Caption                     : [00000013] Microsoft ISATAP Adapter
+ConfigManagerErrorCode      : 0
+ConfigManagerUserConfig     : False
+CreationClassName           : Win32_NetworkAdapter
+Description                 : Microsoft ISATAP Adapter
+ErrorCleared                :
+ErrorDescription            :
+GUID                        :
+Index                       : 13
+InstallDate                 :
+Installed                   : True
+InterfaceIndex              : 5
+LastErrorCode               :
+MACAddress                  :
+Manufacturer                : Microsoft
+MaxNumberControlled         : 0
+MaxSpeed                    :
+NetConnectionID             :
+NetConnectionStatus         :
+NetEnabled                  :
+NetworkAddresses            :
+PermanentAddress            :
+PhysicalAdapter             : False
+PNPDeviceID                 : SWD\IP_TUNNEL_VBUS\ISATAP_1
+PowerManagementCapabilities :
+PowerManagementSupported    : False
+ProductName                 : Microsoft ISATAP Adapter
+ServiceName                 : tunnel
+Speed                       : 100000
+SystemCreationClassName     : Win32_ComputerSystem
+SystemName                  : MXNZMOTSV029
+TimeOfLastReset             : 20210821024724.491430+720
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter.DeviceID="13"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapter
+Properties                  : {AdapterType, AdapterTypeId, AutoSense, Availability...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+
+
+PS C:\Windows\system32>                 Get-WmiObject -Class Win32_NetworkConnection -Property * | fl *
+PS C:\Windows\system32>                 Get-WmiObject -Class Win32_NetworkProtocol -Property * | fl *
+
+
+PSComputerName              : MXNZMOTSV029
+ConnectionlessService       : False
+Description                 : Hyper-V RAW
+GuaranteesDelivery          : True
+GuaranteesSequencing        : True
+InstallDate                 :
+MaximumAddressSize          : 36
+MaximumMessageSize          : 0
+MessageOriented             : False
+MinimumAddressSize          : 36
+Name                        : Hyper-V RAW
+PseudoStreamOriented        : False
+Status                      :
+SupportsBroadcasting        : False
+SupportsConnectData         : False
+SupportsDisconnectData      : False
+SupportsEncryption          : False
+SupportsExpeditedData       : False
+SupportsFragmentation       :
+SupportsGracefulClosing     : True
+SupportsGuaranteedBandwidth : False
+SupportsMulticasting        : False
+SupportsQualityofService    : False
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkProtocol
+__SUPERCLASS                : CIM_LogicalElement
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkProtocol.Name="Hyper-V RAW"
+__PROPERTY_COUNT            : 23
+__DERIVATION                : {CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="Hyper-V RAW"
+Caption                     : Hyper-V
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="Hyper-V RAW"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol
+Properties                  : {Caption, ConnectionlessService, Description, GuaranteesDelivery...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+ConnectionlessService       : False
+Description                 : @%SystemRoot%\system32\drivers\tcpip.sys,-10001
+GuaranteesDelivery          : True
+GuaranteesSequencing        : True
+InstallDate                 : 20210820044841.415777+720
+MaximumAddressSize          : 16
+MaximumMessageSize          : 0
+MessageOriented             : False
+MinimumAddressSize          : 16
+Name                        : MSAFD Tcpip [TCP/IP]
+PseudoStreamOriented        : False
+Status                      : OK
+SupportsBroadcasting        : False
+SupportsConnectData         : False
+SupportsDisconnectData      : False
+SupportsEncryption          : False
+SupportsExpeditedData       : True
+SupportsFragmentation       :
+SupportsGracefulClosing     : True
+SupportsGuaranteedBandwidth : False
+SupportsMulticasting        : False
+SupportsQualityofService    : False
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkProtocol
+__SUPERCLASS                : CIM_LogicalElement
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkProtocol.Name="MSAFD Tcpip [TCP/IP]"
+__PROPERTY_COUNT            : 23
+__DERIVATION                : {CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="MSAFD Tcpip [TCP/IP]"
+Caption                     : Tcpip
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="MSAFD Tcpip [TCP/IP]"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol
+Properties                  : {Caption, ConnectionlessService, Description, GuaranteesDelivery...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+ConnectionlessService       : True
+Description                 : @%SystemRoot%\system32\drivers\tcpip.sys,-10001
+GuaranteesDelivery          : False
+GuaranteesSequencing        : False
+InstallDate                 : 20210820044841.415777+720
+MaximumAddressSize          : 16
+MaximumMessageSize          : 65527
+MessageOriented             : True
+MinimumAddressSize          : 16
+Name                        : MSAFD Tcpip [UDP/IP]
+PseudoStreamOriented        : False
+Status                      : OK
+SupportsBroadcasting        : True
+SupportsConnectData         : False
+SupportsDisconnectData      : False
+SupportsEncryption          : False
+SupportsExpeditedData       : False
+SupportsFragmentation       :
+SupportsGracefulClosing     : False
+SupportsGuaranteedBandwidth : False
+SupportsMulticasting        : True
+SupportsQualityofService    : False
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkProtocol
+__SUPERCLASS                : CIM_LogicalElement
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkProtocol.Name="MSAFD Tcpip [UDP/IP]"
+__PROPERTY_COUNT            : 23
+__DERIVATION                : {CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="MSAFD Tcpip [UDP/IP]"
+Caption                     : Tcpip
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="MSAFD Tcpip [UDP/IP]"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol
+Properties                  : {Caption, ConnectionlessService, Description, GuaranteesDelivery...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+ConnectionlessService       : False
+Description                 : @%SystemRoot%\system32\drivers\tcpip.sys,-10001
+GuaranteesDelivery          : True
+GuaranteesSequencing        : True
+InstallDate                 : 20210820044841.415777+720
+MaximumAddressSize          : 28
+MaximumMessageSize          : 0
+MessageOriented             : False
+MinimumAddressSize          : 28
+Name                        : MSAFD Tcpip [TCP/IPv6]
+PseudoStreamOriented        : False
+Status                      : OK
+SupportsBroadcasting        : False
+SupportsConnectData         : False
+SupportsDisconnectData      : False
+SupportsEncryption          : False
+SupportsExpeditedData       : True
+SupportsFragmentation       :
+SupportsGracefulClosing     : True
+SupportsGuaranteedBandwidth : False
+SupportsMulticasting        : False
+SupportsQualityofService    : False
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkProtocol
+__SUPERCLASS                : CIM_LogicalElement
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkProtocol.Name="MSAFD Tcpip [TCP/IPv6]"
+__PROPERTY_COUNT            : 23
+__DERIVATION                : {CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="MSAFD Tcpip [TCP/IPv6]"
+Caption                     : Tcpip
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="MSAFD Tcpip [TCP/IPv6]"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol
+Properties                  : {Caption, ConnectionlessService, Description, GuaranteesDelivery...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+ConnectionlessService       : True
+Description                 : @%SystemRoot%\system32\drivers\tcpip.sys,-10001
+GuaranteesDelivery          : False
+GuaranteesSequencing        : False
+InstallDate                 : 20210820044841.415777+720
+MaximumAddressSize          : 28
+MaximumMessageSize          : 65527
+MessageOriented             : True
+MinimumAddressSize          : 28
+Name                        : MSAFD Tcpip [UDP/IPv6]
+PseudoStreamOriented        : False
+Status                      : OK
+SupportsBroadcasting        : True
+SupportsConnectData         : False
+SupportsDisconnectData      : False
+SupportsEncryption          : False
+SupportsExpeditedData       : False
+SupportsFragmentation       :
+SupportsGracefulClosing     : False
+SupportsGuaranteedBandwidth : False
+SupportsMulticasting        : True
+SupportsQualityofService    : False
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkProtocol
+__SUPERCLASS                : CIM_LogicalElement
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkProtocol.Name="MSAFD Tcpip [UDP/IPv6]"
+__PROPERTY_COUNT            : 23
+__DERIVATION                : {CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="MSAFD Tcpip [UDP/IPv6]"
+Caption                     : Tcpip
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="MSAFD Tcpip [UDP/IPv6]"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol
+Properties                  : {Caption, ConnectionlessService, Description, GuaranteesDelivery...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+ConnectionlessService       : False
+Description                 : RSVP TCPv6 Service Provider
+GuaranteesDelivery          : True
+GuaranteesSequencing        : True
+InstallDate                 :
+MaximumAddressSize          : 28
+MaximumMessageSize          : 0
+MessageOriented             : False
+MinimumAddressSize          : 28
+Name                        : RSVP TCPv6 Service Provider
+PseudoStreamOriented        : False
+Status                      :
+SupportsBroadcasting        : False
+SupportsConnectData         : False
+SupportsDisconnectData      : False
+SupportsEncryption          : True
+SupportsExpeditedData       : True
+SupportsFragmentation       :
+SupportsGracefulClosing     : True
+SupportsGuaranteedBandwidth : False
+SupportsMulticasting        : False
+SupportsQualityofService    : True
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkProtocol
+__SUPERCLASS                : CIM_LogicalElement
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkProtocol.Name="RSVP TCPv6 Service Provider"
+__PROPERTY_COUNT            : 23
+__DERIVATION                : {CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="RSVP TCPv6 Service Provider"
+Caption                     : RSVP
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="RSVP TCPv6 Service Provider"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol
+Properties                  : {Caption, ConnectionlessService, Description, GuaranteesDelivery...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+ConnectionlessService       : False
+Description                 : RSVP TCP Service Provider
+GuaranteesDelivery          : True
+GuaranteesSequencing        : True
+InstallDate                 :
+MaximumAddressSize          : 16
+MaximumMessageSize          : 0
+MessageOriented             : False
+MinimumAddressSize          : 16
+Name                        : RSVP TCP Service Provider
+PseudoStreamOriented        : False
+Status                      :
+SupportsBroadcasting        : False
+SupportsConnectData         : False
+SupportsDisconnectData      : False
+SupportsEncryption          : True
+SupportsExpeditedData       : True
+SupportsFragmentation       :
+SupportsGracefulClosing     : True
+SupportsGuaranteedBandwidth : False
+SupportsMulticasting        : False
+SupportsQualityofService    : True
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkProtocol
+__SUPERCLASS                : CIM_LogicalElement
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkProtocol.Name="RSVP TCP Service Provider"
+__PROPERTY_COUNT            : 23
+__DERIVATION                : {CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="RSVP TCP Service Provider"
+Caption                     : RSVP
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="RSVP TCP Service Provider"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol
+Properties                  : {Caption, ConnectionlessService, Description, GuaranteesDelivery...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+ConnectionlessService       : True
+Description                 : RSVP UDPv6 Service Provider
+GuaranteesDelivery          : False
+GuaranteesSequencing        : False
+InstallDate                 :
+MaximumAddressSize          : 28
+MaximumMessageSize          : 65527
+MessageOriented             : True
+MinimumAddressSize          : 28
+Name                        : RSVP UDPv6 Service Provider
+PseudoStreamOriented        : False
+Status                      :
+SupportsBroadcasting        : True
+SupportsConnectData         : False
+SupportsDisconnectData      : False
+SupportsEncryption          : True
+SupportsExpeditedData       : False
+SupportsFragmentation       :
+SupportsGracefulClosing     : False
+SupportsGuaranteedBandwidth : False
+SupportsMulticasting        : True
+SupportsQualityofService    : True
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkProtocol
+__SUPERCLASS                : CIM_LogicalElement
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkProtocol.Name="RSVP UDPv6 Service Provider"
+__PROPERTY_COUNT            : 23
+__DERIVATION                : {CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="RSVP UDPv6 Service Provider"
+Caption                     : RSVP
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="RSVP UDPv6 Service Provider"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol
+Properties                  : {Caption, ConnectionlessService, Description, GuaranteesDelivery...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+ConnectionlessService       : True
+Description                 : RSVP UDP Service Provider
+GuaranteesDelivery          : False
+GuaranteesSequencing        : False
+InstallDate                 :
+MaximumAddressSize          : 16
+MaximumMessageSize          : 65527
+MessageOriented             : True
+MinimumAddressSize          : 16
+Name                        : RSVP UDP Service Provider
+PseudoStreamOriented        : False
+Status                      :
+SupportsBroadcasting        : True
+SupportsConnectData         : False
+SupportsDisconnectData      : False
+SupportsEncryption          : True
+SupportsExpeditedData       : False
+SupportsFragmentation       :
+SupportsGracefulClosing     : False
+SupportsGuaranteedBandwidth : False
+SupportsMulticasting        : True
+SupportsQualityofService    : True
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkProtocol
+__SUPERCLASS                : CIM_LogicalElement
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkProtocol.Name="RSVP UDP Service Provider"
+__PROPERTY_COUNT            : 23
+__DERIVATION                : {CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="RSVP UDP Service Provider"
+Caption                     : RSVP
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="RSVP UDP Service Provider"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol
+Properties                  : {Caption, ConnectionlessService, Description, GuaranteesDelivery...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+ConnectionlessService       : True
+Description                 : vSockets DGRAM
+GuaranteesDelivery          : False
+GuaranteesSequencing        : False
+InstallDate                 :
+MaximumAddressSize          : 16
+MaximumMessageSize          : 0
+MessageOriented             : True
+MinimumAddressSize          : 16
+Name                        : vSockets DGRAM
+PseudoStreamOriented        : False
+Status                      :
+SupportsBroadcasting        : False
+SupportsConnectData         : False
+SupportsDisconnectData      : False
+SupportsEncryption          : False
+SupportsExpeditedData       : False
+SupportsFragmentation       :
+SupportsGracefulClosing     : False
+SupportsGuaranteedBandwidth : False
+SupportsMulticasting        : False
+SupportsQualityofService    : False
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkProtocol
+__SUPERCLASS                : CIM_LogicalElement
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkProtocol.Name="vSockets DGRAM"
+__PROPERTY_COUNT            : 23
+__DERIVATION                : {CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="vSockets DGRAM"
+Caption                     : vSockets
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="vSockets DGRAM"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol
+Properties                  : {Caption, ConnectionlessService, Description, GuaranteesDelivery...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+PSComputerName              : MXNZMOTSV029
+ConnectionlessService       : False
+Description                 : vSockets STREAM
+GuaranteesDelivery          : True
+GuaranteesSequencing        : True
+InstallDate                 :
+MaximumAddressSize          : 16
+MaximumMessageSize          : 0
+MessageOriented             : False
+MinimumAddressSize          : 16
+Name                        : vSockets STREAM
+PseudoStreamOriented        : False
+Status                      :
+SupportsBroadcasting        : False
+SupportsConnectData         : False
+SupportsDisconnectData      : False
+SupportsEncryption          : False
+SupportsExpeditedData       : False
+SupportsFragmentation       :
+SupportsGracefulClosing     : True
+SupportsGuaranteedBandwidth : False
+SupportsMulticasting        : False
+SupportsQualityofService    : False
+__GENUS                     : 2
+__CLASS                     : Win32_NetworkProtocol
+__SUPERCLASS                : CIM_LogicalElement
+__DYNASTY                   : CIM_ManagedSystemElement
+__RELPATH                   : Win32_NetworkProtocol.Name="vSockets STREAM"
+__PROPERTY_COUNT            : 23
+__DERIVATION                : {CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER                    : MXNZMOTSV029
+__NAMESPACE                 : root\cimv2
+__PATH                      : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="vSockets STREAM"
+Caption                     : vSockets
+Scope                       : System.Management.ManagementScope
+Path                        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol.Name="vSockets STREAM"
+Options                     : System.Management.ObjectGetOptions
+ClassPath                   : \\MXNZMOTSV029\root\cimv2:Win32_NetworkProtocol
+Properties                  : {Caption, ConnectionlessService, Description, GuaranteesDelivery...}
+SystemProperties            : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                  : {dynamic, Locale, provider, UUID}
+Site                        :
+Container                   :
+
+
+
+PS C:\Windows\system32>                 Get-WmiObject -Class Win32_NetworkClient -Property * | fl *
+
+
+PSComputerName   : MXNZMOTSV029
+Name             : Microsoft Windows Network
+Status           : OK
+__GENUS          : 2
+__CLASS          : Win32_NetworkClient
+__SUPERCLASS     : CIM_LogicalElement
+__DYNASTY        : CIM_ManagedSystemElement
+__RELPATH        : Win32_NetworkClient.Name="Microsoft Windows Network"
+__PROPERTY_COUNT : 6
+__DERIVATION     : {CIM_LogicalElement, CIM_ManagedSystemElement}
+__SERVER         : MXNZMOTSV029
+__NAMESPACE      : root\cimv2
+__PATH           : \\MXNZMOTSV029\root\cimv2:Win32_NetworkClient.Name="Microsoft Windows Network"
+Caption          : Workstation
+Description      : LanmanWorkstation
+InstallDate      :
+Manufacturer     : Microsoft Corporation
+Scope            : System.Management.ManagementScope
+Path             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkClient.Name="Microsoft Windows Network"
+Options          : System.Management.ObjectGetOptions
+ClassPath        : \\MXNZMOTSV029\root\cimv2:Win32_NetworkClient
+Properties       : {Caption, Description, InstallDate, Manufacturer...}
+SystemProperties : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers       : {dynamic, Locale, provider, UUID}
+Site             :
+Container        :
+
+
+
+PS C:\Windows\system32>                 Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Property * | fl *
+
+
+PSComputerName               : MXNZMOTSV029
+DHCPLeaseExpires             :
+Index                        : 0
+Description                  : Microsoft Kernel Debug Network Adapter
+DHCPEnabled                  : True
+DHCPLeaseObtained            :
+DHCPServer                   :
+DNSDomain                    :
+DNSDomainSuffixSearchOrder   :
+DNSEnabledForWINSResolution  :
+DNSHostName                  :
+DNSServerSearchOrder         :
+DomainDNSRegistrationEnabled :
+FullDNSRegistrationEnabled   :
+IPAddress                    :
+IPConnectionMetric           :
+IPEnabled                    : False
+IPFilterSecurityEnabled      :
+WINSEnableLMHostsLookup      :
+WINSHostLookupFile           :
+WINSPrimaryServer            :
+WINSScopeID                  :
+WINSSecondaryServer          :
+__GENUS                      : 2
+__CLASS                      : Win32_NetworkAdapterConfiguration
+__SUPERCLASS                 : CIM_Setting
+__DYNASTY                    : CIM_Setting
+__RELPATH                    : Win32_NetworkAdapterConfiguration.Index=0
+__PROPERTY_COUNT             : 61
+__DERIVATION                 : {CIM_Setting}
+__SERVER                     : MXNZMOTSV029
+__NAMESPACE                  : root\cimv2
+__PATH                       : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapterConfiguration.Index=0
+ArpAlwaysSourceRoute         :
+ArpUseEtherSNAP              :
+Caption                      : [00000000] Microsoft Kernel Debug Network Adapter
+DatabasePath                 :
+DeadGWDetectEnabled          :
+DefaultIPGateway             :
+DefaultTOS                   :
+DefaultTTL                   :
+ForwardBufferMemory          :
+GatewayCostMetric            :
+IGMPLevel                    :
+InterfaceIndex               : 2
+IPPortSecurityEnabled        :
+IPSecPermitIPProtocols       :
+IPSecPermitTCPPorts          :
+IPSecPermitUDPPorts          :
+IPSubnet                     :
+IPUseZeroBroadcast           :
+IPXAddress                   :
+IPXEnabled                   :
+IPXFrameType                 :
+IPXMediaType                 :
+IPXNetworkNumber             :
+IPXVirtualNetNumber          :
+KeepAliveInterval            :
+KeepAliveTime                :
+MACAddress                   :
+MTU                          :
+NumForwardPackets            :
+PMTUBHDetectEnabled          :
+PMTUDiscoveryEnabled         :
+ServiceName                  : kdnic
+SettingID                    : {3480CBD3-1161-47C8-A364-9B4EA8441B25}
+TcpipNetbiosOptions          :
+TcpMaxConnectRetransmissions :
+TcpMaxDataRetransmissions    :
+TcpNumConnections            :
+TcpUseRFC1122UrgentPointer   :
+TcpWindowSize                :
+Scope                        : System.Management.ManagementScope
+Path                         : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapterConfiguration.Index=0
+Options                      : System.Management.ObjectGetOptions
+ClassPath                    : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapterConfiguration
+Properties                   : {ArpAlwaysSourceRoute, ArpUseEtherSNAP, Caption, DatabasePath...}
+SystemProperties             : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                   : {dynamic, Locale, provider, UUID}
+Site                         :
+Container                    :
+
+PSComputerName               : MXNZMOTSV029
+DHCPLeaseExpires             :
+Index                        : 1
+Description                  : Intel(R) 82574L Gigabit Network Connection
+DHCPEnabled                  : False
+DHCPLeaseObtained            :
+DHCPServer                   :
+DNSDomain                    : methanex.com
+DNSDomainSuffixSearchOrder   : {methanex.com}
+DNSEnabledForWINSResolution  : False
+DNSHostName                  : mxnzmotsv029
+DNSServerSearchOrder         : {172.23.98.161, 172.23.97.77, 172.23.25.71}
+DomainDNSRegistrationEnabled : False
+FullDNSRegistrationEnabled   : True
+IPAddress                    : {172.23.98.229}
+IPConnectionMetric           : 25
+IPEnabled                    : True
+IPFilterSecurityEnabled      : False
+WINSEnableLMHostsLookup      : True
+WINSHostLookupFile           :
+WINSPrimaryServer            :
+WINSScopeID                  :
+WINSSecondaryServer          :
+__GENUS                      : 2
+__CLASS                      : Win32_NetworkAdapterConfiguration
+__SUPERCLASS                 : CIM_Setting
+__DYNASTY                    : CIM_Setting
+__RELPATH                    : Win32_NetworkAdapterConfiguration.Index=1
+__PROPERTY_COUNT             : 61
+__DERIVATION                 : {CIM_Setting}
+__SERVER                     : MXNZMOTSV029
+__NAMESPACE                  : root\cimv2
+__PATH                       : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapterConfiguration.Index=1
+ArpAlwaysSourceRoute         :
+ArpUseEtherSNAP              :
+Caption                      : [00000001] Intel(R) 82574L Gigabit Network Connection
+DatabasePath                 : %SystemRoot%\System32\drivers\etc
+DeadGWDetectEnabled          :
+DefaultIPGateway             : {172.23.98.1}
+DefaultTOS                   :
+DefaultTTL                   :
+ForwardBufferMemory          :
+GatewayCostMetric            : {256}
+IGMPLevel                    :
+InterfaceIndex               : 3
+IPPortSecurityEnabled        :
+IPSecPermitIPProtocols       : {}
+IPSecPermitTCPPorts          : {}
+IPSecPermitUDPPorts          : {}
+IPSubnet                     : {255.255.255.0}
+IPUseZeroBroadcast           :
+IPXAddress                   :
+IPXEnabled                   :
+IPXFrameType                 :
+IPXMediaType                 :
+IPXNetworkNumber             :
+IPXVirtualNetNumber          :
+KeepAliveInterval            :
+KeepAliveTime                :
+MACAddress                   : 00:50:56:A6:6F:9A
+MTU                          :
+NumForwardPackets            :
+PMTUBHDetectEnabled          :
+PMTUDiscoveryEnabled         :
+ServiceName                  : e1iexpress
+SettingID                    : {3D7A6F6F-1D5C-4213-A17C-7167A28E6C55}
+TcpipNetbiosOptions          : 2
+TcpMaxConnectRetransmissions :
+TcpMaxDataRetransmissions    :
+TcpNumConnections            :
+TcpUseRFC1122UrgentPointer   :
+TcpWindowSize                :
+Scope                        : System.Management.ManagementScope
+Path                         : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapterConfiguration.Index=1
+Options                      : System.Management.ObjectGetOptions
+ClassPath                    : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapterConfiguration
+Properties                   : {ArpAlwaysSourceRoute, ArpUseEtherSNAP, Caption, DatabasePath...}
+SystemProperties             : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                   : {dynamic, Locale, provider, UUID}
+Site                         :
+Container                    :
+
+PSComputerName               : MXNZMOTSV029
+DHCPLeaseExpires             :
+Index                        : 12
+Description                  : Microsoft Teredo Tunneling Adapter
+DHCPEnabled                  : False
+DHCPLeaseObtained            :
+DHCPServer                   :
+DNSDomain                    :
+DNSDomainSuffixSearchOrder   :
+DNSEnabledForWINSResolution  :
+DNSHostName                  :
+DNSServerSearchOrder         :
+DomainDNSRegistrationEnabled :
+FullDNSRegistrationEnabled   :
+IPAddress                    :
+IPConnectionMetric           :
+IPEnabled                    : False
+IPFilterSecurityEnabled      :
+WINSEnableLMHostsLookup      :
+WINSHostLookupFile           :
+WINSPrimaryServer            :
+WINSScopeID                  :
+WINSSecondaryServer          :
+__GENUS                      : 2
+__CLASS                      : Win32_NetworkAdapterConfiguration
+__SUPERCLASS                 : CIM_Setting
+__DYNASTY                    : CIM_Setting
+__RELPATH                    : Win32_NetworkAdapterConfiguration.Index=12
+__PROPERTY_COUNT             : 61
+__DERIVATION                 : {CIM_Setting}
+__SERVER                     : MXNZMOTSV029
+__NAMESPACE                  : root\cimv2
+__PATH                       : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapterConfiguration.Index=12
+ArpAlwaysSourceRoute         :
+ArpUseEtherSNAP              :
+Caption                      : [00000012] Microsoft Teredo Tunneling Adapter
+DatabasePath                 :
+DeadGWDetectEnabled          :
+DefaultIPGateway             :
+DefaultTOS                   :
+DefaultTTL                   :
+ForwardBufferMemory          :
+GatewayCostMetric            :
+IGMPLevel                    :
+InterfaceIndex               : 4
+IPPortSecurityEnabled        :
+IPSecPermitIPProtocols       :
+IPSecPermitTCPPorts          :
+IPSecPermitUDPPorts          :
+IPSubnet                     :
+IPUseZeroBroadcast           :
+IPXAddress                   :
+IPXEnabled                   :
+IPXFrameType                 :
+IPXMediaType                 :
+IPXNetworkNumber             :
+IPXVirtualNetNumber          :
+KeepAliveInterval            :
+KeepAliveTime                :
+MACAddress                   :
+MTU                          :
+NumForwardPackets            :
+PMTUBHDetectEnabled          :
+PMTUDiscoveryEnabled         :
+ServiceName                  : tunnel
+SettingID                    : {4D8E20EF-358C-4BFA-9751-30C21D3FB00B}
+TcpipNetbiosOptions          :
+TcpMaxConnectRetransmissions :
+TcpMaxDataRetransmissions    :
+TcpNumConnections            :
+TcpUseRFC1122UrgentPointer   :
+TcpWindowSize                :
+Scope                        : System.Management.ManagementScope
+Path                         : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapterConfiguration.Index=12
+Options                      : System.Management.ObjectGetOptions
+ClassPath                    : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapterConfiguration
+Properties                   : {ArpAlwaysSourceRoute, ArpUseEtherSNAP, Caption, DatabasePath...}
+SystemProperties             : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                   : {dynamic, Locale, provider, UUID}
+Site                         :
+Container                    :
+
+PSComputerName               : MXNZMOTSV029
+DHCPLeaseExpires             :
+Index                        : 13
+Description                  : Microsoft ISATAP Adapter
+DHCPEnabled                  : False
+DHCPLeaseObtained            :
+DHCPServer                   :
+DNSDomain                    :
+DNSDomainSuffixSearchOrder   :
+DNSEnabledForWINSResolution  :
+DNSHostName                  :
+DNSServerSearchOrder         :
+DomainDNSRegistrationEnabled :
+FullDNSRegistrationEnabled   :
+IPAddress                    :
+IPConnectionMetric           :
+IPEnabled                    : False
+IPFilterSecurityEnabled      :
+WINSEnableLMHostsLookup      :
+WINSHostLookupFile           :
+WINSPrimaryServer            :
+WINSScopeID                  :
+WINSSecondaryServer          :
+__GENUS                      : 2
+__CLASS                      : Win32_NetworkAdapterConfiguration
+__SUPERCLASS                 : CIM_Setting
+__DYNASTY                    : CIM_Setting
+__RELPATH                    : Win32_NetworkAdapterConfiguration.Index=13
+__PROPERTY_COUNT             : 61
+__DERIVATION                 : {CIM_Setting}
+__SERVER                     : MXNZMOTSV029
+__NAMESPACE                  : root\cimv2
+__PATH                       : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapterConfiguration.Index=13
+ArpAlwaysSourceRoute         :
+ArpUseEtherSNAP              :
+Caption                      : [00000013] Microsoft ISATAP Adapter
+DatabasePath                 :
+DeadGWDetectEnabled          :
+DefaultIPGateway             :
+DefaultTOS                   :
+DefaultTTL                   :
+ForwardBufferMemory          :
+GatewayCostMetric            :
+IGMPLevel                    :
+InterfaceIndex               : 5
+IPPortSecurityEnabled        :
+IPSecPermitIPProtocols       :
+IPSecPermitTCPPorts          :
+IPSecPermitUDPPorts          :
+IPSubnet                     :
+IPUseZeroBroadcast           :
+IPXAddress                   :
+IPXEnabled                   :
+IPXFrameType                 :
+IPXMediaType                 :
+IPXNetworkNumber             :
+IPXVirtualNetNumber          :
+KeepAliveInterval            :
+KeepAliveTime                :
+MACAddress                   :
+MTU                          :
+NumForwardPackets            :
+PMTUBHDetectEnabled          :
+PMTUDiscoveryEnabled         :
+ServiceName                  : tunnel
+SettingID                    : {95100110-25B3-4518-88F5-1C3DFDD946DA}
+TcpipNetbiosOptions          :
+TcpMaxConnectRetransmissions :
+TcpMaxDataRetransmissions    :
+TcpNumConnections            :
+TcpUseRFC1122UrgentPointer   :
+TcpWindowSize                :
+Scope                        : System.Management.ManagementScope
+Path                         : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapterConfiguration.Index=13
+Options                      : System.Management.ObjectGetOptions
+ClassPath                    : \\MXNZMOTSV029\root\cimv2:Win32_NetworkAdapterConfiguration
+Properties                   : {ArpAlwaysSourceRoute, ArpUseEtherSNAP, Caption, DatabasePath...}
+SystemProperties             : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers                   : {dynamic, Locale, provider, UUID}
+Site                         :
+Container                    :
+
+
+
+PS C:\Windows\system32>                 Get-WmiObject -Class Win32_NetworkLoginProfile -Property * | fl *
+
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="NT AUTHORITY\\SYSTEM"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="NT AUTHORITY\\SYSTEM"
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            : NT AUTHORITY\SYSTEM
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for SYSTEM on NT AUTHORITY
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               : NT AUTHORITY\SYSTEM
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="NT AUTHORITY\\SYSTEM"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="NT AUTHORITY\\LOCAL SERVICE"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="NT AUTHORITY\\LOCAL SERVICE"
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            : NT AUTHORITY\LOCAL SERVICE
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for LOCAL SERVICE on NT AUTHORITY
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               : NT AUTHORITY\LOCAL SERVICE
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="NT AUTHORITY\\LOCAL SERVICE"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="NT AUTHORITY\\NETWORK SERVICE"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="NT AUTHORITY\\NETWORK SERVICE"
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            : NT AUTHORITY\NETWORK SERVICE
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for NETWORK SERVICE on NT AUTHORITY
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               : NT AUTHORITY\NETWORK SERVICE
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="NT AUTHORITY\\NETWORK SERVICE"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\smartin"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\smartin"
+AccountExpires     :
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : smartin
+CodePage           : 0
+Comment            : Senior Systems Analyst
+CountryCode        : 554
+Description        : Network login profile settings for Simon Martin on METHANEX
+Flags              : 513
+FullName           : Simon Martin
+HomeDirectory      : \\mxnznpy31\smartin$
+HomeDirectoryDrive : H:
+LastLogoff         : **************.******+***
+LastLogon          : 20210909100446.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\smartin
+NumberOfLogons     : 683
+Parameters         :
+PasswordAge        : 00000030001935.000000:000
+PasswordExpires    : 20211211141222.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 33421
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\smartin"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-smartin"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-smartin"
+AccountExpires     :
+AuthorizationFlags : 13
+BadPasswordCount   : 0
+Caption            : adm-smartin
+CodePage           : 0
+Comment            :
+CountryCode        : 554
+Description        : Network login profile settings for adm-smartin on METHANEX
+Flags              : 513
+FullName           : adm-smartin
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210911162133.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-smartin
+NumberOfLogons     : 1110
+Parameters         :
+PasswordAge        : 00000029235840.000000:000
+PasswordExpires    : 20211211143323.000000+780
+PrimaryGroupId     : 513
+Privileges         : 2
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 33422
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-smartin"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name=""
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            :
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for  on
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               :
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\pvankoppen"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\pvankoppen"
+AccountExpires     : 20211202000000.000000+780
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : pvankoppen
+CodePage           : 0
+Comment            : Technical Consultant
+CountryCode        : 554
+Description        : Network login profile settings for Peter vanKoppen on METHANEX
+Flags              : 513
+FullName           : Peter vanKoppen
+HomeDirectory      : \\mxnznpy31\pvankoppen$
+HomeDirectoryDrive : H:
+LastLogoff         : **************.******+***
+LastLogon          : 20210910191533.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\pvankoppen
+NumberOfLogons     : 412
+Parameters         :
+PasswordAge        : 00000015201641.000000:000
+PasswordExpires    : 20211225181532.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 39554
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\pvankoppen"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\svc_pi_nz"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\svc_pi_nz"
+AccountExpires     :
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : svc_pi_nz
+CodePage           : 0
+Comment            :
+CountryCode        : 0
+Description        : Network login profile settings for svc_pi_nz on METHANEX
+Flags              : 16843265
+FullName           : svc_pi_nz
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : **************.******+***
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\svc_pi_nz
+NumberOfLogons     : 0
+Parameters         :
+PasswordAge        : 00001676234643.000000:000
+PasswordExpires    :
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 39570
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\svc_pi_nz"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-dlee"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-dlee"
+AccountExpires     :
+AuthorizationFlags : 13
+BadPasswordCount   : 0
+Caption            : adm-dlee
+CodePage           : 0
+Comment            : Admin Account for David Lee
+CountryCode        : 840
+Description        : Network login profile settings for adm-dlee on METHANEX
+Flags              : 513
+FullName           : adm-dlee
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210911091030.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-dlee
+NumberOfLogons     : 886
+Parameters         :
+PasswordAge        : 00000030073140.000000:000
+PasswordExpires    : 20211211070045.000000+780
+PrimaryGroupId     : 513
+Privileges         : 2
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 42107
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-dlee"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\ctxtest1"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\ctxtest1"
+AccountExpires     :
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : ctxtest1
+CodePage           : 0
+Comment            :
+CountryCode        : 554
+Description        : Network login profile settings for ctxtest1 on METHANEX
+Flags              : 66049
+FullName           : ctxtest1
+HomeDirectory      : \\mxnznpy31\ctxtest1$
+HomeDirectoryDrive : H:
+LastLogoff         : **************.******+***
+LastLogon          : 20210908103247.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\ctxtest1
+NumberOfLogons     : 25
+Parameters         :
+                     PCtxCfgPresent㔵攱戰ぢCtxCfgFlags1〰て〲〹CtxShadow㄰〰〰〰*CtxMinEncryptionLevel㄰
+                     FCtxWFProfilePath挵挵搶㠷收愷收〷㤷㌳ㄳ挵㐵㌵㈳戴〵㈵昴㘴㤴挴㔴㌵挵㌶㐷㠷㐷㔶㌷㐷ㄳ挵〰
+PasswordAge        : 00002326011838.000000:000
+PasswordExpires    :
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 4312
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\ctxtest1"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\rhclr"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\rhclr"
+AccountExpires     :
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : rhclr
+CodePage           : 0
+Comment            : DCS Supervisor
+CountryCode        : 554
+Description        : Network login profile settings for Roger Clarkson on METHANEX
+Flags              : 513
+FullName           : Roger Clarkson
+HomeDirectory      : \\mxnznpy31\rhclr$
+HomeDirectoryDrive : H:
+LastLogoff         : **************.******+***
+LastLogon          : 20210908100825.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\rhclr
+NumberOfLogons     : 315
+Parameters         :
+                     PCtxCfgPresent㔵攱戰ぢCtxCfgFlags1〰て〲〹CtxShadow㄰〰〰〰*CtxMinEncryptionLevel㄰
+                     @CtxWFProfilePath挵挵搶㠷收愷收〷㤷㌳ㄳ挵㐷㌷㈳戶〷㈷昶㘶㤶挶㔶㌷挵㈵㠶㌶挶㈷挵〰
+PasswordAge        : 00000005061014.000000:000
+PasswordExpires    : 20220105082223.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 4428
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\rhclr"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\mwells"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\mwells"
+AccountExpires     :
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : mwells
+CodePage           : 0
+Comment            : Senior Systems Engineer
+CountryCode        : 554
+Description        : Network login profile settings for Mike Wells on METHANEX
+Flags              : 513
+FullName           : Mike Wells
+HomeDirectory      : \\mxnznpy31\mwells$
+HomeDirectoryDrive : H:
+LastLogoff         : **************.******+***
+LastLogon          : 20210912113137.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\mwells
+NumberOfLogons     : 260
+Parameters         :
+                     PCtxCfgPresent㔵攱戰ぢCtxCfgFlags1〰て〲〹CtxShadow㄰〰〰〰*CtxMinEncryptionLevel㄰
+                     BCtxWFProfilePath挵挵搶㠷收愷收〷㤷㌳ㄳ挵㐷㌷㈳戶〷㈷昶㘶㤶挶㔶㌷挵搶㜷㔶挶挶㌷挵〰
+PasswordAge        : 00000103025053.000000:000
+PasswordExpires    : 20210929114150.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 4466
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\mwells"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-cmcinnes"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-cmcinnes"
+AccountExpires     : 20211030000000.000000+780
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : adm-cmcinnes
+CodePage           : 0
+Comment            : Admin Account for Craig McInnes (Dimension Software)
+CountryCode        : 554
+Description        : Network login profile settings for adm-cmcinnes on METHANEX
+Flags              : 513
+FullName           : adm-cmcinnes
+HomeDirectory      : \\mxnznpy31\cmcinnes$
+HomeDirectoryDrive : H:
+LastLogoff         : **************.******+***
+LastLogon          : **************.******+***
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-cmcinnes
+NumberOfLogons     : 0
+Parameters         :
+PasswordAge        : 00000095012346.000000:000
+PasswordExpires    : 20211007130903.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 48241
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-cmcinnes"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-pvankoppen"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-pvankoppen"
+AccountExpires     : 20211202000000.000000+780
+AuthorizationFlags : 13
+BadPasswordCount   : 0
+Caption            : adm-pvankoppen
+CodePage           : 0
+Comment            :
+CountryCode        : 554
+Description        : Network login profile settings for adm-pvankoppen on METHANEX
+Flags              : 513
+FullName           : adm-pvankoppen
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210904173338.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-pvankoppen
+NumberOfLogons     : 286
+Parameters         :
+PasswordAge        : 00000077215956.000000:000
+PasswordExpires    : 20211024163259.000000+780
+PrimaryGroupId     : 513
+Privileges         : 2
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 48366
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-pvankoppen"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-cpeel"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-cpeel"
+AccountExpires     : 20211202000000.000000+780
+AuthorizationFlags : 13
+BadPasswordCount   : 0
+Caption            : adm-cpeel
+CodePage           : 0
+Comment            :
+CountryCode        : 554
+Description        : Network login profile settings for adm-cpeel on METHANEX
+Flags              : 513
+FullName           : adm-cpeel
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210908095112.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-cpeel
+NumberOfLogons     : 99
+Parameters         :
+PasswordAge        : 00000052211702.000000:000
+PasswordExpires    : 20211118171559.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 48429
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-cpeel"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-vbradley"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-vbradley"
+AccountExpires     :
+AuthorizationFlags : 13
+BadPasswordCount   : 0
+Caption            : adm-vbradley
+CodePage           : 0
+Comment            :
+CountryCode        : 554
+Description        : Network login profile settings for adm-vbradley on METHANEX
+Flags              : 513
+FullName           : adm-vbradley
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210909133408.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-vbradley
+NumberOfLogons     : 81
+Parameters         :
+PasswordAge        : 00000076012913.000000:000
+PasswordExpires    : 20211026130354.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 48650
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-vbradley"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name=""
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            :
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for  on
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               :
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name=""
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            :
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for  on
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               :
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-nnguyen"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-nnguyen"
+AccountExpires     : 20220402000000.000000+780
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : adm-nnguyen
+CodePage           : 0
+Comment            : Admin account for Nhan Nguyen (Baker Hughs)
+CountryCode        : 554
+Description        : Network login profile settings for adm-nnguyen on METHANEX
+Flags              : 8389123
+FullName           : adm-nnguyen
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : **************.******+***
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-nnguyen
+NumberOfLogons     : 0
+Parameters         :
+PasswordAge        : 00000208000335.000000:000
+PasswordExpires    : 20210616132946.000000+720
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 48978
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-nnguyen"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\tbuzink"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\tbuzink"
+AccountExpires     : 20220531190000.000000+720
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : tbuzink
+CodePage           : 0
+Comment            : IT Consultant - Dimension Software
+CountryCode        : 554
+Description        : Network login profile settings for Tom Buzink on METHANEX
+Flags              : 513
+FullName           : Tom Buzink
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210817165939.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\tbuzink
+NumberOfLogons     : 20
+Parameters         :
+PasswordAge        : 00000025203348.000000:000
+PasswordExpires    : 20211215175939.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 48993
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\tbuzink"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-tbuzink"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-tbuzink"
+AccountExpires     : 20220531190000.000000+720
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : adm-tbuzink
+CodePage           : 0
+Comment            : Admin Account for Tom Buzink (Dimension Software)
+CountryCode        : 554
+Description        : Network login profile settings for adm-tbuzink on METHANEX
+Flags              : 513
+FullName           : adm-tbuzink
+HomeDirectory      : \\mxnznpy31\tbuzink$
+HomeDirectoryDrive : H:
+LastLogoff         : **************.******+***
+LastLogon          : **************.******+***
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-tbuzink
+NumberOfLogons     : 0
+Parameters         :
+PasswordAge        : 00000025061920.000000:000
+PasswordExpires    : 20211216081413.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 48996
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-tbuzink"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\svc-healthcheck"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\svc-healthcheck"
+AccountExpires     :
+AuthorizationFlags : 13
+BadPasswordCount   : 0
+Caption            : svc-healthcheck
+CodePage           : 0
+Comment            : service account for healthcheck script
+CountryCode        : 0
+Description        : Network login profile settings for Health Check on METHANEX
+Flags              : 66049
+FullName           : Health Check
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : **************.******+***
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\svc-healthcheck
+NumberOfLogons     : 0
+Parameters         :
+PasswordAge        : 00000726210309.000000:000
+PasswordExpires    :
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 49048
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\svc-healthcheck"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-nmibrahim"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-nmibrahim"
+AccountExpires     : 20211202000000.000000+780
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : adm-nmibrahim
+CodePage           : 0
+Comment            :
+CountryCode        : 554
+Description        : Network login profile settings for adm-nmibrahim on METHANEX
+Flags              : 8389121
+FullName           : adm-nmibrahim
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210222111010.000000+780
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-nmibrahim
+NumberOfLogons     : 24
+Parameters         :
+PasswordAge        : 00000202032334.000000:000
+PasswordExpires    : 20210622101011.000000+720
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 55703
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-nmibrahim"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name=""
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            :
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for  on
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               :
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\HZulkifli"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\HZulkifli"
+AccountExpires     : 20210904000000.000000+720
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : HZulkifli
+CodePage           : 0
+Comment            : NZ - Delete after 6 Nov 2021
+CountryCode        : 554
+Description        : Network login profile settings for Heiry Zulkifli on METHANEX
+Flags              : 515
+FullName           : Heiry Zulkifli
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210831222022.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\HZulkifli
+NumberOfLogons     : 380
+Parameters         :
+PasswordAge        : 00000006015616.000000:000
+PasswordExpires    : 20220104123739.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 57012
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\HZulkifli"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\mquin"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\mquin"
+AccountExpires     : 20211126000000.000000+780
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : mquin
+CodePage           : 0
+Comment            : CONTROL SYSTEMS ENGINEER
+CountryCode        : 554
+Description        : Network login profile settings for Mat Quin on METHANEX
+Flags              : 513
+FullName           : Mat Quin
+HomeDirectory      : \\mxnznpy31\mquin$
+HomeDirectoryDrive : H:
+LastLogoff         : **************.******+***
+LastLogon          : 20210807133755.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\mquin
+NumberOfLogons     : 247
+Parameters         :
+PasswordAge        : 00000011032150.000000:000
+PasswordExpires    : 20211230111210.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 61120
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\mquin"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name=""
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            :
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for  on
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               :
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name=""
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            :
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for  on
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               :
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-akarczewska"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-akarczewska"
+AccountExpires     : 20220501190000.000000+720
+AuthorizationFlags : 13
+BadPasswordCount   : 0
+Caption            : adm-akarczewska
+CodePage           : 0
+Comment            : DBA
+CountryCode        : 124
+Description        : Network login profile settings for adm-akarczewska on METHANEX
+Flags              : 513
+FullName           : adm-akarczewska
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210911111145.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-akarczewska
+NumberOfLogons     : 3451
+Parameters         :
+PasswordAge        : 00000001022228.000000:000
+PasswordExpires    : 20220109121146.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 61646
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-akarczewska"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name=""
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            :
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for  on
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               :
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-fvallejos"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-fvallejos"
+AccountExpires     :
+AuthorizationFlags : 13
+BadPasswordCount   : 0
+Caption            : adm-fvallejos
+CodePage           : 0
+Comment            :
+CountryCode        : 152
+Description        : Network login profile settings for adm-FVallejos on METHANEX
+Flags              : 513
+FullName           : adm-FVallejos
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210820035620.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-fvallejos
+NumberOfLogons     : 198
+Parameters         :
+PasswordAge        : 00000074051951.000000:000
+PasswordExpires    : 20211028091433.000000+780
+PrimaryGroupId     : 513
+Privileges         : 2
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 63952
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-fvallejos"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-jlebreton"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-jlebreton"
+AccountExpires     :
+AuthorizationFlags : 13
+BadPasswordCount   : 0
+Caption            : adm-jlebreton
+CodePage           : 0
+Comment            :
+CountryCode        : 554
+Description        : Network login profile settings for adm-jlebreton on METHANEX
+Flags              : 513
+FullName           : adm-jlebreton
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210812153136.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-jlebreton
+NumberOfLogons     : 12
+Parameters         :
+PasswordAge        : 00000039053107.000000:000
+PasswordExpires    : 20211202090323.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 65126
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-jlebreton"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name=""
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            :
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for  on
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               :
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-hzulkifli"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-hzulkifli"
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            : METHANEX\adm-hzulkifli
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for adm-hzulkifli on METHANEX
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               : METHANEX\adm-hzulkifli
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-hzulkifli"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-ajeon"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-ajeon"
+AccountExpires     : 20211202000000.000000+780
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : adm-ajeon
+CodePage           : 0
+Comment            : Admin Account for Alex Jeon (TUSSOCK)
+CountryCode        : 554
+Description        : Network login profile settings for adm-ajeon on METHANEX
+Flags              : 8389121
+FullName           : adm-ajeon
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210114080726.000000+780
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-ajeon
+NumberOfLogons     : 2
+Parameters         :
+PasswordAge        : 00000150032145.000000:000
+PasswordExpires    : 20210813101259.000000+720
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 71626
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-ajeon"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-tlee"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-tlee"
+AccountExpires     : 20211202000000.000000+780
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : adm-tlee
+CodePage           : 0
+Comment            : Admin Account for Thomas Lee (TUSSOCK)
+CountryCode        : 554
+Description        : Network login profile settings for adm-tlee on METHANEX
+Flags              : 8389123
+FullName           : adm-tlee
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210315131053.000000+780
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-tlee
+NumberOfLogons     : 0
+Parameters         :
+PasswordAge        : 00000228181131.000000:000
+PasswordExpires    : 20210526192319.000000+720
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 71627
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-tlee"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\svc-prtg"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\svc-prtg"
+AccountExpires     :
+AuthorizationFlags : 13
+BadPasswordCount   : 0
+Caption            : svc-prtg
+CodePage           : 0
+Comment            : Service Account for MX GBL PRTG to monitor MX Equipment.
+CountryCode        : 0
+Description        : Network login profile settings for PRTG ServiceAccount on METHANEX
+Flags              : 66049
+FullName           : PRTG ServiceAccount
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210912133321.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\svc-prtg
+NumberOfLogons     : 65535
+Parameters         :
+PasswordAge        : 00000541014509.000000:000
+PasswordExpires    :
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 71639
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\svc-prtg"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name=""
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            :
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for  on
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               :
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name=""
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            :
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for  on
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               :
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name=""
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-clew"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-clew"
+AccountExpires     :
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : adm-clew
+CodePage           : 0
+Comment            :
+CountryCode        : 0
+Description        : Network login profile settings for Curtis Lew (Admin) on METHANEX
+Flags              : 513
+FullName           : Curtis Lew (Admin)
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : **************.******+***
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-clew
+NumberOfLogons     : 0
+Parameters         :
+PasswordAge        : 00000117064056.000000:000
+PasswordExpires    : 20210915065414.000000+720
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 71746
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-clew"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-lvo"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-lvo"
+AccountExpires     : 20220101210000.000000+780
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : adm-lvo
+CodePage           : 0
+Comment            : Technical Consultant
+CountryCode        : 0
+Description        : Network login profile settings for adm-lvo on METHANEX
+Flags              : 513
+FullName           : adm-lvo
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210911102207.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-lvo
+NumberOfLogons     : 1697
+Parameters         :
+PasswordAge        : 00000057024019.000000:000
+PasswordExpires    : 20211114115457.000000+780
+PrimaryGroupId     : 513
+Privileges         : 2
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 72106
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-lvo"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-bkozminski"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-bkozminski"
+AccountExpires     : 20220901190000.000000+720
+AuthorizationFlags : 13
+BadPasswordCount   : 0
+Caption            : adm-bkozminski
+CodePage           : 0
+Comment            :
+CountryCode        : 124
+Description        : Network login profile settings for adm-bkozminski on METHANEX
+Flags              : 513
+FullName           : adm-bkozminski
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210911110625.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-bkozminski
+NumberOfLogons     : 65535
+Parameters         : CtxCfgPresent                                   PCtxCfgPresent㔵攱戰ぢ CtxWFProfilePath〰"CtxWF
+                     ProfilePathW〰〰CtxWFHomeDir〰CtxWFHomeDirW〰〰"CtxWFHomeDirDrive〰$CtxWFHomeDirDriveW〰〰Ctx
+                     Shadow㄰〰〰〰CtxMaxDisconnectionTime〰〰〰〰CtxMaxConnectionTime〰〰〰〰CtxMaxIdleTime〰〰〰〰 CtxWork
+                     Directory〰"CtxWorkDirectoryW〰〰CtxCfgFlags1〰〱〲〹"CtxInitialProgram〰$CtxInitialProgramW〰〰
+PasswordAge        : 00000025101126.000000:000
+PasswordExpires    : 20211216042357.000000+780
+PrimaryGroupId     : 513
+Privileges         : 2
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 72210
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-bkozminski"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\adm-mcoombe"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-mcoombe"
+AccountExpires     : 20211202000000.000000+780
+AuthorizationFlags : 13
+BadPasswordCount   : 0
+Caption            : adm-mcoombe
+CodePage           : 0
+Comment            : Admin account for Meg Coombe (TussockLine)
+CountryCode        : 554
+Description        : Network login profile settings for adm-mcoombe on METHANEX
+Flags              : 513
+FullName           : adm-mcoombe
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210908142505.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\adm-mcoombe
+NumberOfLogons     : 13
+Parameters         :
+PasswordAge        : 00000047042249.000000:000
+PasswordExpires    : 20211124101240.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 72352
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\adm-mcoombe"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="METHANEX\\mcoombe"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\mcoombe"
+AccountExpires     : 20211202000000.000000+780
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : mcoombe
+CodePage           : 0
+Comment            : Technical Consultant
+CountryCode        : 554
+Description        : Network login profile settings for Meg Coombe on METHANEX
+Flags              : 513
+FullName           : Meg Coombe
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20210909085433.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : METHANEX\mcoombe
+NumberOfLogons     : 77
+Parameters         :
+PasswordAge        : 00000027052449.000000:000
+PasswordExpires    : 20211214091045.000000+780
+PrimaryGroupId     : 513
+Privileges         : 1
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 82151
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="METHANEX\\mcoombe"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="MXNZMOTSV029\\DefaultAdmin"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="MXNZMOTSV029\\DefaultAdmin"
+AccountExpires     :
+AuthorizationFlags : 0
+BadPasswordCount   : 0
+Caption            : DefaultAdmin
+CodePage           : 0
+Comment            : Built-in account for administering the computer/domain
+CountryCode        : 0
+Description        : Network login profile settings for  on MXNZMOTSV029
+Flags              : 8389121
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         : **************.******+***
+LastLogon          : 20190411171625.000000+720
+LogonHours         : Sunday: No Limit -- Monday: No Limit -- Tuesday: No Limit -- Wednesday: No Limit -- Thursday: No
+                     Limit -- Friday: No Limit -- Saturday: No Limit
+LogonServer        : \\*
+MaximumStorage     : 4294967295
+Name               : MXNZMOTSV029\DefaultAdmin
+NumberOfLogons     : 12
+Parameters         :
+PasswordAge        : 00001117093002.000000:000
+PasswordExpires    : 20181220050533.000000+780
+PrimaryGroupId     : 513
+Privileges         : 2
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       : 168
+UserComment        :
+UserId             : 500
+UserType           : Normal Account
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="MXNZMOTSV029\\DefaultAdmin"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+PSComputerName     : MXNZMOTSV029
+__GENUS            : 2
+__CLASS            : Win32_NetworkLoginProfile
+__SUPERCLASS       : CIM_Setting
+__DYNASTY          : CIM_Setting
+__RELPATH          : Win32_NetworkLoginProfile.Name="NT SERVICE\\MSSQL$MICROSOFT##WID"
+__PROPERTY_COUNT   : 32
+__DERIVATION       : {CIM_Setting}
+__SERVER           : MXNZMOTSV029
+__NAMESPACE        : root\cimv2
+__PATH             : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="NT SERVICE\\MSSQL$MICROSOFT##WID"
+AccountExpires     :
+AuthorizationFlags :
+BadPasswordCount   :
+Caption            : NT SERVICE\MSSQL$MICROSOFT##WID
+CodePage           :
+Comment            :
+CountryCode        :
+Description        : Network login profile settings for MSSQL$MICROSOFT##WID on NT SERVICE
+Flags              :
+FullName           :
+HomeDirectory      :
+HomeDirectoryDrive :
+LastLogoff         :
+LastLogon          :
+LogonHours         :
+LogonServer        :
+MaximumStorage     :
+Name               : NT SERVICE\MSSQL$MICROSOFT##WID
+NumberOfLogons     :
+Parameters         :
+PasswordAge        :
+PasswordExpires    :
+PrimaryGroupId     :
+Privileges         :
+Profile            :
+ScriptPath         :
+SettingID          :
+UnitsPerWeek       :
+UserComment        :
+UserId             :
+UserType           :
+Workstations       :
+Scope              : System.Management.ManagementScope
+Path               : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile.Name="NT SERVICE\\MSSQL$MICROSOFT##WID"
+Options            : System.Management.ObjectGetOptions
+ClassPath          : \\MXNZMOTSV029\root\cimv2:Win32_NetworkLoginProfile
+Properties         : {AccountExpires, AuthorizationFlags, BadPasswordCount, Caption...}
+SystemProperties   : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers         : {dynamic, Locale, provider, UUID}
+Site               :
+Container          :
+
+
+
+PS C:\Windows\system32>                 Get-WmiObject -Class Win32_SystemNetworkConnections -Property * | fl *
+##---------------------------------------
+PS C:\Windows\system32>                 Get-WmiObject MSFT_NetConnectionProfile -Namespace root/StandardCimv2 -Property
+* | fl *
+
+
+PSComputerName   : MXNZMOTSV029
+__GENUS          : 2
+__CLASS          : MSFT_NetConnectionProfile
+__SUPERCLASS     : MSFT_NetSettingData
+__DYNASTY        : CIM_ManagedElement
+__RELPATH        : MSFT_NetConnectionProfile.InstanceID="{3D7A6F6F-1D5C-4213-A17C-7167A28E6C55}"
+__PROPERTY_COUNT : 10
+__DERIVATION     : {MSFT_NetSettingData, CIM_SettingData, CIM_ManagedElement}
+__SERVER         : MXNZMOTSV029
+__NAMESPACE      : root\StandardCimv2
+__PATH           : \\MXNZMOTSV029\root\StandardCimv2:MSFT_NetConnectionProfile.InstanceID="{3D7A6F6F-1D5C-4213-A17C-716
+                   7A28E6C55}"
+Caption          :
+Description      :
+ElementName      :
+InstanceID       : {3D7A6F6F-1D5C-4213-A17C-7167A28E6C55}
+InterfaceAlias   : Ethernet0
+InterfaceIndex   : 3
+IPv4Connectivity : 4
+IPv6Connectivity : 1
+Name             : methanex.com
+NetworkCategory  : 2
+Scope            : System.Management.ManagementScope
+Path             : \\MXNZMOTSV029\root\StandardCimv2:MSFT_NetConnectionProfile.InstanceID="{3D7A6F6F-1D5C-4213-A17C-716
+                   7A28E6C55}"
+Options          : System.Management.ObjectGetOptions
+ClassPath        : \\MXNZMOTSV029\root\StandardCimv2:MSFT_NetConnectionProfile
+Properties       : {Caption, Description, ElementName, InstanceID...}
+SystemProperties : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+Qualifiers       : {dynamic, provider}
+Site             :
+Container        :
+
+
+
+PS C:\Windows\system32>
