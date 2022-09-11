@@ -1,0 +1,31 @@
+The syntax of this command is:
+
+
+NET LOCALGROUP 
+[groupname [/COMMENT:"text"]] [/DOMAIN]
+              groupname {/ADD [/COMMENT:"text"] | /DELETE}  [/DOMAIN]
+              groupname name [...] {/ADD | /DELETE} [/DOMAIN]
+
+NET LOCALGROUP modifies local groups on computers. When used without 
+options, it displays the local groups on the computer.
+
+groupname        Is the name of the local group to add, expand, or
+                 delete. Supply only a groupname to view a list of
+                 users or global groups in a local group.
+/COMMENT:"text"  Adds a comment for a new or existing group. 
+                 Enclose the text in quotation marks. 
+/DOMAIN          Performs the operation on the domain controller 
+                 of the current domain. Otherwise, the operation is 
+                 performed on the local workstation. 
+name [ ...]      Lists one or more usernames or groupnames to add or to 
+                 remove from a local group. Separate multiple entries with 
+                 a space. Names may be users or global groups, but not 
+                 other local groups. If a user is from another domain, 
+                 preface the username with the domain name (for 
+                 example, SALES\RALPHR).
+/ADD             Adds a groupname or username to a local group. An account 
+                 must be established for users or global groups added to a
+                 local group with this command.
+/DELETE          Removes a groupname or username from a local group.
+
+NET HELP command | MORE displays Help one screen at a time.

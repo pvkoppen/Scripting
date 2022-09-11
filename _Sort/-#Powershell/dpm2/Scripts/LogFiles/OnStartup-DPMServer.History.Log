@@ -1,0 +1,2291 @@
+-- Parameters: /Action
+
+---------------- Start: c:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm0111 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 300 Seconds (5 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: NTMSSVC
+        TYPE               : 20  WIN32_SHARE_PROCESS 
+        START_TYPE         : 2   AUTO_START
+        ERROR_CONTROL      : 1   NORMAL
+        BINARY_PATH_NAME   : C:\WINDOWS\system32\svchost.exe -k netsvcs
+        LOAD_ORDER_GROUP   : 
+        TAG                : 0
+        DISPLAY_NAME       : Removable Storage
+        DEPENDENCIES       : RpcSs
+        SERVICE_START_NAME : LocalSystem
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 1  STOPPED 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+-- Stop and disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: NTMSSVC
+        TYPE               : 20  WIN32_SHARE_PROCESS 
+        START_TYPE         : 4   DISABLED
+        ERROR_CONTROL      : 1   NORMAL
+        BINARY_PATH_NAME   : C:\WINDOWS\system32\svchost.exe -k netsvcs
+        LOAD_ORDER_GROUP   : 
+        TAG                : 0
+        DISPLAY_NAME       : Removable Storage
+        DEPENDENCIES       : RpcSs
+        SERVICE_START_NAME : LocalSystem
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 1  STOPPED 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+---------------- End  : c:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm0111 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm0138 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 300 Seconds (5 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: NTMSSVC
+        TYPE               : 20  WIN32_SHARE_PROCESS 
+        START_TYPE         : 2   AUTO_START
+        ERROR_CONTROL      : 1   NORMAL
+        BINARY_PATH_NAME   : C:\WINDOWS\system32\svchost.exe -k netsvcs
+        LOAD_ORDER_GROUP   : 
+        TAG                : 0
+        DISPLAY_NAME       : Removable Storage
+        DEPENDENCIES       : RpcSs
+        SERVICE_START_NAME : LocalSystem
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+-- Stop and disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: NTMSSVC
+        TYPE               : 20  WIN32_SHARE_PROCESS 
+        START_TYPE         : 4   DISABLED
+        ERROR_CONTROL      : 1   NORMAL
+        BINARY_PATH_NAME   : C:\WINDOWS\system32\svchost.exe -k netsvcs
+        LOAD_ORDER_GROUP   : 
+        TAG                : 0
+        DISPLAY_NAME       : Removable Storage
+        DEPENDENCIES       : RpcSs
+        SERVICE_START_NAME : LocalSystem
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0xb
+        WAIT_HINT          : 0x1d4c0
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm0143 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm0320 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 300 Seconds (5 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: NTMSSVC
+        TYPE               : 20  WIN32_SHARE_PROCESS 
+        START_TYPE         : 2   AUTO_START
+        ERROR_CONTROL      : 1   NORMAL
+        BINARY_PATH_NAME   : C:\WINDOWS\system32\svchost.exe -k netsvcs
+        LOAD_ORDER_GROUP   : 
+        TAG                : 0
+        DISPLAY_NAME       : Removable Storage
+        DEPENDENCIES       : RpcSs
+        SERVICE_START_NAME : LocalSystem
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+-- Stop and disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: NTMSSVC
+        TYPE               : 20  WIN32_SHARE_PROCESS 
+        START_TYPE         : 4   DISABLED
+        ERROR_CONTROL      : 1   NORMAL
+        BINARY_PATH_NAME   : C:\WINDOWS\system32\svchost.exe -k netsvcs
+        LOAD_ORDER_GROUP   : 
+        TAG                : 0
+        DISPLAY_NAME       : Removable Storage
+        DEPENDENCIES       : RpcSs
+        SERVICE_START_NAME : LocalSystem
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0xb
+        WAIT_HINT          : 0x1d4c0
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm0325 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100321[Sun]-am0313 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 480 Seconds (8 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: NTMSSVC
+        TYPE               : 20  WIN32_SHARE_PROCESS 
+        START_TYPE         : 2   AUTO_START
+        ERROR_CONTROL      : 1   NORMAL
+        BINARY_PATH_NAME   : C:\WINDOWS\system32\svchost.exe -k netsvcs
+        LOAD_ORDER_GROUP   : 
+        TAG                : 0
+        DISPLAY_NAME       : Removable Storage
+        DEPENDENCIES       : RpcSs
+        SERVICE_START_NAME : LocalSystem
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+-- Stop and disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: NTMSSVC
+        TYPE               : 20  WIN32_SHARE_PROCESS 
+        START_TYPE         : 4   DISABLED
+        ERROR_CONTROL      : 1   NORMAL
+        BINARY_PATH_NAME   : C:\WINDOWS\system32\svchost.exe -k netsvcs
+        LOAD_ORDER_GROUP   : 
+        TAG                : 0
+        DISPLAY_NAME       : Removable Storage
+        DEPENDENCIES       : RpcSs
+        SERVICE_START_NAME : LocalSystem
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0xb
+        WAIT_HINT          : 0x1d4c0
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100321[Sun]-am0321 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100322[Mon]-pm0136 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 480 Seconds (8 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 1  STOPPED 
+
+-- Stop and disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: NTMSSVC
+        TYPE               : 20  WIN32_SHARE_PROCESS 
+        START_TYPE         : 4   DISABLED
+        ERROR_CONTROL      : 1   NORMAL
+        BINARY_PATH_NAME   : C:\WINDOWS\system32\svchost.exe -k netsvcs
+        LOAD_ORDER_GROUP   : 
+        TAG                : 0
+        DISPLAY_NAME       : Removable Storage
+        DEPENDENCIES       : RpcSs
+        SERVICE_START_NAME : LocalSystem
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 1  STOPPED 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100322[Mon]-pm0139 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am0916 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 600 Seconds (10 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: NTMSSVC
+        TYPE               : 20  WIN32_SHARE_PROCESS 
+        START_TYPE         : 4   DISABLED
+        ERROR_CONTROL      : 1   NORMAL
+        BINARY_PATH_NAME   : C:\WINDOWS\system32\svchost.exe -k netsvcs
+        LOAD_ORDER_GROUP   : 
+        TAG                : 0
+        DISPLAY_NAME       : Removable Storage
+        DEPENDENCIES       : RpcSs
+        SERVICE_START_NAME : LocalSystem
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x7
+        WAIT_HINT          : 0x1d4c0
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am0916 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am1009 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 600 Seconds (10 min)
+Waiting 600 seconds for action to complete.     Waiting 599 seconds for action to complete.     Waiting 598 seconds for action to complete.     
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Stop and disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: NTMSSVC
+        TYPE               : 20  WIN32_SHARE_PROCESS 
+        START_TYPE         : 4   DISABLED
+        ERROR_CONTROL      : 1   NORMAL
+        BINARY_PATH_NAME   : C:\WINDOWS\system32\svchost.exe -k netsvcs
+        LOAD_ORDER_GROUP   : 
+        TAG                : 0
+        DISPLAY_NAME       : Removable Storage
+        DEPENDENCIES       : RpcSs
+        SERVICE_START_NAME : LocalSystem
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 1  STOPPED 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am1009 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am1035 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 540 Seconds (9 min)
+Waiting 540 seconds for action to complete.     Waiting 539 seconds for action to complete.     
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 3  STOP_PENDING 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am1035 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100725[Sun]-am1100 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 540 Seconds (9 min)
+Waiting 540 seconds for action to complete.     Waiting 539 seconds for action to complete.     Waiting 538 seconds for action to complete.     Waiting 537 seconds for action to complete.     Waiting 536 seconds for action to complete.     Waiting 535 seconds for action to complete.     Waiting 534 seconds for action to complete.     Waiting 533 seconds for action to complete.     Waiting 532 seconds for action to complete.     Waiting 531 seconds for action to complete.     Waiting 530 seconds for action to complete.     Waiting 529 seconds for action to complete.     Waiting 528 seconds for action to complete.     Waiting 527 seconds for action to complete.     
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 1  STOPPED 
+
+-- Stop and disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100725[Sun]-am1100 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100725[Sun]-am1111 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 540 Seconds (9 min)
+Waiting 540 seconds for action to complete.     Waiting 539 seconds for action to complete.     Waiting 538 seconds for action to complete.     Waiting 537 seconds for action to complete.     Waiting 536 seconds for action to complete.     Waiting 535 seconds for action to complete.     Waiting 534 seconds for action to complete.     Waiting 533 seconds for action to complete.     Waiting 532 seconds for action to complete.     Waiting 531 seconds for action to complete.     Waiting 530 seconds for action to complete.     Waiting 529 seconds for action to complete.     Waiting 528 seconds for action to complete.     Waiting 527 seconds for action to complete.     Waiting 526 seconds for action to complete.     Waiting 525 seconds for action to complete.     Waiting 524 seconds for action to complete.     Waiting 523 seconds for action to complete.     Waiting 522 seconds for action to complete.     Waiting 521 seconds for action to complete.     Waiting 520 seconds for action to complete.     Waiting 519 seconds for action to complete.     Waiting 518 seconds for action to complete.     Waiting 517 seconds for action to complete.     Waiting 516 seconds for action to complete.     Waiting 515 seconds for action to complete.     Waiting 514 seconds for action to complete.     Waiting 513 seconds for action to complete.     Waiting 512 seconds for action to complete.     Waiting 511 seconds for action to complete.     Waiting 510 seconds for action to complete.     Waiting 509 seconds for action to complete.     Waiting 508 seconds for action to complete.     Waiting 507 seconds for action to complete.     Waiting 506 seconds for action to complete.     Waiting 505 seconds for action to complete.     Waiting 504 seconds for action to complete.     Waiting 503 seconds for action to complete.     Waiting 502 seconds for action to complete.     Waiting 501 seconds for action to complete.     Waiting 500 seconds for action to complete.     Waiting 499 seconds for action to complete.     Waiting 498 seconds for action to complete.     Waiting 497 seconds for action to complete.     Waiting 496 seconds for action to complete.     Waiting 495 seconds for action to complete.     Waiting 494 seconds for action to complete.     Waiting 493 seconds for action to complete.     Waiting 492 seconds for action to complete.     Waiting 491 seconds for action to complete.     Waiting 490 seconds for action to complete.     Waiting 489 seconds for action to complete.     Waiting 488 seconds for action to complete.     Waiting 487 seconds for action to complete.     Waiting 486 seconds for action to complete.     Waiting 485 seconds for action to complete.     Waiting 484 seconds for action to complete.     Waiting 483 seconds for action to complete.     Waiting 482 seconds for action to complete.     Waiting 481 seconds for action to complete.     Waiting 480 seconds for action to complete.     Waiting 479 seconds for action to complete.     Waiting 478 seconds for action to complete.     Waiting 477 seconds for action to complete.     Waiting 476 seconds for action to complete.     Waiting 475 seconds for action to complete.     Waiting 474 seconds for action to complete.     Waiting 473 seconds for action to complete.     Waiting 472 seconds for action to complete.     Waiting 471 seconds for action to complete.     Waiting 470 seconds for action to complete.     Waiting 469 seconds for action to complete.     Waiting 468 seconds for action to complete.     Waiting 467 seconds for action to complete.     Waiting 466 seconds for action to complete.     Waiting 465 seconds for action to complete.     Waiting 464 seconds for action to complete.     Waiting 463 seconds for action to complete.     Waiting 462 seconds for action to complete.     Waiting 461 seconds for action to complete.     Waiting 460 seconds for action to complete.     Waiting 459 seconds for action to complete.     Waiting 458 seconds for action to complete.     Waiting 457 seconds for action to complete.     Waiting 456 seconds for action to complete.     Waiting 455 seconds for action to complete.     Waiting 454 seconds for action to complete.     Waiting 453 seconds for action to complete.     Waiting 452 seconds for action to complete.     Waiting 451 seconds for action to complete.     Waiting 450 seconds for action to complete.     Waiting 449 seconds for action to complete.     Waiting 448 seconds for action to complete.     Waiting 447 seconds for action to complete.     Waiting 446 seconds for action to complete.     Waiting 445 seconds for action to complete.     Waiting 444 seconds for action to complete.     Waiting 443 seconds for action to complete.     Waiting 442 seconds for action to complete.     Waiting 441 seconds for action to complete.     Waiting 440 seconds for action to complete.     Waiting 439 seconds for action to complete.     Waiting 438 seconds for action to complete.     Waiting 437 seconds for action to complete.     Waiting 436 seconds for action to complete.     Waiting 435 seconds for action to complete.     Waiting 434 seconds for action to complete.     Waiting 433 seconds for action to complete.     Waiting 432 seconds for action to complete.     Waiting 431 seconds for action to complete.     Waiting 430 seconds for action to complete.     Waiting 429 seconds for action to complete.     Waiting 428 seconds for action to complete.     Waiting 427 seconds for action to complete.     Waiting 426 seconds for action to complete.     Waiting 425 seconds for action to complete.     Waiting 424 seconds for action to complete.     Waiting 423 seconds for action to complete.     Waiting 422 seconds for action to complete.     Waiting 421 seconds for action to complete.     Waiting 420 seconds for action to complete.     Waiting 419 seconds for action to complete.     Waiting 418 seconds for action to complete.     Waiting 417 seconds for action to complete.     Waiting 416 seconds for action to complete.     Waiting 415 seconds for action to complete.     Waiting 414 seconds for action to complete.     Waiting 413 seconds for action to complete.     Waiting 412 seconds for action to complete.     Waiting 411 seconds for action to complete.     Waiting 410 seconds for action to complete.     Waiting 409 seconds for action to complete.     Waiting 408 seconds for action to complete.     Waiting 407 seconds for action to complete.     Waiting 406 seconds for action to complete.     Waiting 405 seconds for action to complete.     Waiting 404 seconds for action to complete.     Waiting 403 seconds for action to complete.     Waiting 402 seconds for action to complete.     Waiting 401 seconds for action to complete.     Waiting 400 seconds for action to complete.     Waiting 399 seconds for action to complete.     Waiting 398 seconds for action to complete.     Waiting 397 seconds for action to complete.     Waiting 396 seconds for action to complete.     Waiting 395 seconds for action to complete.     Waiting 394 seconds for action to complete.     Waiting 393 seconds for action to complete.     Waiting 392 seconds for action to complete.     Waiting 391 seconds for action to complete.     Waiting 390 seconds for action to complete.     Waiting 389 seconds for action to complete.     Waiting 388 seconds for action to complete.     Waiting 387 seconds for action to complete.     Waiting 386 seconds for action to complete.     Waiting 385 seconds for action to complete.     Waiting 384 seconds for action to complete.     Waiting 383 seconds for action to complete.     Waiting 382 seconds for action to complete.     Waiting 381 seconds for action to complete.     Waiting 380 seconds for action to complete.     Waiting 379 seconds for action to complete.     Waiting 378 seconds for action to complete.     Waiting 377 seconds for action to complete.     Waiting 376 seconds for action to complete.     Waiting 375 seconds for action to complete.     Waiting 374 seconds for action to complete.     Waiting 373 seconds for action to complete.     Waiting 372 seconds for action to complete.     Waiting 371 seconds for action to complete.     Waiting 370 seconds for action to complete.     Waiting 369 seconds for action to complete.     Waiting 368 seconds for action to complete.     Waiting 367 seconds for action to complete.     Waiting 366 seconds for action to complete.     Waiting 365 seconds for action to complete.     Waiting 364 seconds for action to complete.     Waiting 363 seconds for action to complete.     Waiting 362 seconds for action to complete.     Waiting 361 seconds for action to complete.     Waiting 360 seconds for action to complete.     Waiting 359 seconds for action to complete.     Waiting 358 seconds for action to complete.     Waiting 357 seconds for action to complete.     Waiting 356 seconds for action to complete.     Waiting 355 seconds for action to complete.     Waiting 354 seconds for action to complete.     Waiting 353 seconds for action to complete.     Waiting 352 seconds for action to complete.     Waiting 351 seconds for action to complete.     Waiting 350 seconds for action to complete.     Waiting 349 seconds for action to complete.     Waiting 348 seconds for action to complete.     Waiting 347 seconds for action to complete.     Waiting 346 seconds for action to complete.     Waiting 345 seconds for action to complete.     Waiting 344 seconds for action to complete.     Waiting 343 seconds for action to complete.     Waiting 342 seconds for action to complete.     Waiting 341 seconds for action to complete.     Waiting 340 seconds for action to complete.     Waiting 339 seconds for action to complete.     Waiting 338 seconds for action to complete.     Waiting 337 seconds for action to complete.     Waiting 336 seconds for action to complete.     Waiting 335 seconds for action to complete.     Waiting 334 seconds for action to complete.     Waiting 333 seconds for action to complete.     Waiting 332 seconds for action to complete.     Waiting 331 seconds for action to complete.     Waiting 330 seconds for action to complete.     Waiting 329 seconds for action to complete.     Waiting 328 seconds for action to complete.     Waiting 327 seconds for action to complete.     Waiting 326 seconds for action to complete.     Waiting 325 seconds for action to complete.     Waiting 324 seconds for action to complete.     Waiting 323 seconds for action to complete.     Waiting 322 seconds for action to complete.     Waiting 321 seconds for action to complete.     Waiting 320 seconds for action to complete.     Waiting 319 seconds for action to complete.     Waiting 318 seconds for action to complete.     Waiting 317 seconds for action to complete.     Waiting 316 seconds for action to complete.     Waiting 315 seconds for action to complete.     Waiting 314 seconds for action to complete.     Waiting 313 seconds for action to complete.     Waiting 312 seconds for action to complete.     Waiting 311 seconds for action to complete.     Waiting 310 seconds for action to complete.     Waiting 309 seconds for action to complete.     Waiting 308 seconds for action to complete.     Waiting 307 seconds for action to complete.     Waiting 306 seconds for action to complete.     Waiting 305 seconds for action to complete.     Waiting 304 seconds for action to complete.     Waiting 303 seconds for action to complete.     Waiting 302 seconds for action to complete.     Waiting 301 seconds for action to complete.     Waiting 300 seconds for action to complete.     Waiting 299 seconds for action to complete.     Waiting 298 seconds for action to complete.     Waiting 297 seconds for action to complete.     Waiting 296 seconds for action to complete.     Waiting 295 seconds for action to complete.     Waiting 294 seconds for action to complete.     Waiting 293 seconds for action to complete.     Waiting 292 seconds for action to complete.     Waiting 291 seconds for action to complete.     Waiting 290 seconds for action to complete.     Waiting 289 seconds for action to complete.     Waiting 288 seconds for action to complete.     Waiting 287 seconds for action to complete.     Waiting 286 seconds for action to complete.     Waiting 285 seconds for action to complete.     Waiting 284 seconds for action to complete.     Waiting 283 seconds for action to complete.     Waiting 282 seconds for action to complete.     Waiting 281 seconds for action to complete.     Waiting 280 seconds for action to complete.     Waiting 279 seconds for action to complete.     Waiting 278 seconds for action to complete.     Waiting 277 seconds for action to complete.     Waiting 276 seconds for action to complete.     Waiting 275 seconds for action to complete.     Waiting 274 seconds for action to complete.     Waiting 273 seconds for action to complete.     Waiting 272 seconds for action to complete.     Waiting 271 seconds for action to complete.     Waiting 270 seconds for action to complete.     Waiting 269 seconds for action to complete.     Waiting 268 seconds for action to complete.     Waiting 267 seconds for action to complete.     Waiting 266 seconds for action to complete.     Waiting 265 seconds for action to complete.     Waiting 264 seconds for action to complete.     Waiting 263 seconds for action to complete.     Waiting 262 seconds for action to complete.     Waiting 261 seconds for action to complete.     Waiting 260 seconds for action to complete.     Waiting 259 seconds for action to complete.     Waiting 258 seconds for action to complete.     Waiting 257 seconds for action to complete.     Waiting 256 seconds for action to complete.     Waiting 255 seconds for action to complete.     Waiting 254 seconds for action to complete.     Waiting 253 seconds for action to complete.     Waiting 252 seconds for action to complete.     Waiting 251 seconds for action to complete.     Waiting 250 seconds for action to complete.     Waiting 249 seconds for action to complete.     Waiting 248 seconds for action to complete.     Waiting 247 seconds for action to complete.     Waiting 246 seconds for action to complete.     Waiting 245 seconds for action to complete.     Waiting 244 seconds for action to complete.     Waiting 243 seconds for action to complete.     Waiting 242 seconds for action to complete.     Waiting 241 seconds for action to complete.     Waiting 240 seconds for action to complete.     Waiting 239 seconds for action to complete.     Waiting 238 seconds for action to complete.     Waiting 237 seconds for action to complete.     Waiting 236 seconds for action to complete.     Waiting 235 seconds for action to complete.     Waiting 234 seconds for action to complete.     Waiting 233 seconds for action to complete.     Waiting 232 seconds for action to complete.     Waiting 231 seconds for action to complete.     Waiting 230 seconds for action to complete.     Waiting 229 seconds for action to complete.     Waiting 228 seconds for action to complete.     Waiting 227 seconds for action to complete.     Waiting 226 seconds for action to complete.     Waiting 225 seconds for action to complete.     Waiting 224 seconds for action to complete.     Waiting 223 seconds for action to complete.     Waiting 222 seconds for action to complete.     Waiting 221 seconds for action to complete.     Waiting 220 seconds for action to complete.     Waiting 219 seconds for action to complete.     Waiting 218 seconds for action to complete.     Waiting 217 seconds for action to complete.     Waiting 216 seconds for action to complete.     Waiting 215 seconds for action to complete.     Waiting 214 seconds for action to complete.     Waiting 213 seconds for action to complete.     Waiting 212 seconds for action to complete.     Waiting 211 seconds for action to complete.     Waiting 210 seconds for action to complete.     Waiting 209 seconds for action to complete.     Waiting 208 seconds for action to complete.     Waiting 207 seconds for action to complete.     Waiting 206 seconds for action to complete.     Waiting 205 seconds for action to complete.     Waiting 204 seconds for action to complete.     Waiting 203 seconds for action to complete.     Waiting 202 seconds for action to complete.     Waiting 201 seconds for action to complete.     Waiting 200 seconds for action to complete.     Waiting 199 seconds for action to complete.     Waiting 198 seconds for action to complete.     Waiting 197 seconds for action to complete.     Waiting 196 seconds for action to complete.     Waiting 195 seconds for action to complete.     Waiting 194 seconds for action to complete.     Waiting 193 seconds for action to complete.     Waiting 192 seconds for action to complete.     Waiting 191 seconds for action to complete.     Waiting 190 seconds for action to complete.     Waiting 189 seconds for action to complete.     Waiting 188 seconds for action to complete.     Waiting 187 seconds for action to complete.     Waiting 186 seconds for action to complete.     Waiting 185 seconds for action to complete.     Waiting 184 seconds for action to complete.     Waiting 183 seconds for action to complete.     Waiting 182 seconds for action to complete.     Waiting 181 seconds for action to complete.     Waiting 180 seconds for action to complete.     Waiting 179 seconds for action to complete.     Waiting 178 seconds for action to complete.     Waiting 177 seconds for action to complete.     Waiting 176 seconds for action to complete.     Waiting 175 seconds for action to complete.     Waiting 174 seconds for action to complete.     Waiting 173 seconds for action to complete.     Waiting 172 seconds for action to complete.     Waiting 171 seconds for action to complete.     Waiting 170 seconds for action to complete.     Waiting 169 seconds for action to complete.     Waiting 168 seconds for action to complete.     Waiting 167 seconds for action to complete.     Waiting 166 seconds for action to complete.     Waiting 165 seconds for action to complete.     Waiting 164 seconds for action to complete.     Waiting 163 seconds for action to complete.     Waiting 162 seconds for action to complete.     Waiting 161 seconds for action to complete.     Waiting 160 seconds for action to complete.     Waiting 159 seconds for action to complete.     Waiting 158 seconds for action to complete.     Waiting 157 seconds for action to complete.     Waiting 156 seconds for action to complete.     Waiting 155 seconds for action to complete.     Waiting 154 seconds for action to complete.     Waiting 153 seconds for action to complete.     Waiting 152 seconds for action to complete.     Waiting 151 seconds for action to complete.     Waiting 150 seconds for action to complete.     Waiting 149 seconds for action to complete.     Waiting 148 seconds for action to complete.     Waiting 147 seconds for action to complete.     Waiting 146 seconds for action to complete.     Waiting 145 seconds for action to complete.     Waiting 144 seconds for action to complete.     Waiting 143 seconds for action to complete.     Waiting 142 seconds for action to complete.     Waiting 141 seconds for action to complete.     Waiting 140 seconds for action to complete.     Waiting 139 seconds for action to complete.     Waiting 138 seconds for action to complete.     Waiting 137 seconds for action to complete.     Waiting 136 seconds for action to complete.     Waiting 135 seconds for action to complete.     Waiting 134 seconds for action to complete.     Waiting 133 seconds for action to complete.     Waiting 132 seconds for action to complete.     Waiting 131 seconds for action to complete.     Waiting 130 seconds for action to complete.     Waiting 129 seconds for action to complete.     Waiting 128 seconds for action to complete.     Waiting 127 seconds for action to complete.     Waiting 126 seconds for action to complete.     Waiting 125 seconds for action to complete.     Waiting 124 seconds for action to complete.     Waiting 123 seconds for action to complete.     Waiting 122 seconds for action to complete.     Waiting 121 seconds for action to complete.     Waiting 120 seconds for action to complete.     Waiting 119 seconds for action to complete.     Waiting 118 seconds for action to complete.     Waiting 117 seconds for action to complete.     Waiting 116 seconds for action to complete.     Waiting 115 seconds for action to complete.     Waiting 114 seconds for action to complete.     Waiting 113 seconds for action to complete.     Waiting 112 seconds for action to complete.     Waiting 111 seconds for action to complete.     Waiting 110 seconds for action to complete.     Waiting 109 seconds for action to complete.     Waiting 108 seconds for action to complete.     Waiting 107 seconds for action to complete.     Waiting 106 seconds for action to complete.     Waiting 105 seconds for action to complete.     Waiting 104 seconds for action to complete.     Waiting 103 seconds for action to complete.     Waiting 102 seconds for action to complete.     Waiting 101 seconds for action to complete.     Waiting 100 seconds for action to complete.     Waiting 99 seconds for action to complete.     Waiting 98 seconds for action to complete.     Waiting 97 seconds for action to complete.     Waiting 96 seconds for action to complete.     Waiting 95 seconds for action to complete.     Waiting 94 seconds for action to complete.     Waiting 93 seconds for action to complete.     Waiting 92 seconds for action to complete.     Waiting 91 seconds for action to complete.     Waiting 90 seconds for action to complete.     Waiting 89 seconds for action to complete.     Waiting 88 seconds for action to complete.     Waiting 87 seconds for action to complete.     Waiting 86 seconds for action to complete.     Waiting 85 seconds for action to complete.     Waiting 84 seconds for action to complete.     Waiting 83 seconds for action to complete.     Waiting 82 seconds for action to complete.     Waiting 81 seconds for action to complete.     Waiting 80 seconds for action to complete.     Waiting 79 seconds for action to complete.     Waiting 78 seconds for action to complete.     Waiting 77 seconds for action to complete.     Waiting 76 seconds for action to complete.     Waiting 75 seconds for action to complete.     Waiting 74 seconds for action to complete.     Waiting 73 seconds for action to complete.     Waiting 72 seconds for action to complete.     Waiting 71 seconds for action to complete.     Waiting 70 seconds for action to complete.     Waiting 69 seconds for action to complete.     Waiting 68 seconds for action to complete.     Waiting 67 seconds for action to complete.     Waiting 66 seconds for action to complete.     Waiting 65 seconds for action to complete.     Waiting 64 seconds for action to complete.     Waiting 63 seconds for action to complete.     Waiting 62 seconds for action to complete.     Waiting 61 seconds for action to complete.     Waiting 60 seconds for action to complete.     Waiting 59 seconds for action to complete.     Waiting 58 seconds for action to complete.     Waiting 57 seconds for action to complete.     Waiting 56 seconds for action to complete.     Waiting 55 seconds for action to complete.     Waiting 54 seconds for action to complete.     Waiting 53 seconds for action to complete.     Waiting 52 seconds for action to complete.     Waiting 51 seconds for action to complete.     Waiting 50 seconds for action to complete.     Waiting 49 seconds for action to complete.     Waiting 48 seconds for action to complete.     Waiting 47 seconds for action to complete.     Waiting 46 seconds for action to complete.     Waiting 45 seconds for action to complete.     Waiting 44 seconds for action to complete.     Waiting 43 seconds for action to complete.     Waiting 42 seconds for action to complete.     Waiting 41 seconds for action to complete.     Waiting 40 seconds for action to complete.     Waiting 39 seconds for action to complete.     Waiting 38 seconds for action to complete.     Waiting 37 seconds for action to complete.     Waiting 36 seconds for action to complete.     Waiting 35 seconds for action to complete.     Waiting 34 seconds for action to complete.     Waiting 33 seconds for action to complete.     Waiting 32 seconds for action to complete.     Waiting 31 seconds for action to complete.     Waiting 30 seconds for action to complete.     Waiting 29 seconds for action to complete.     Waiting 28 seconds for action to complete.     Waiting 27 seconds for action to complete.     Waiting 26 seconds for action to complete.     Waiting 25 seconds for action to complete.     Waiting 24 seconds for action to complete.     Waiting 23 seconds for action to complete.     Waiting 22 seconds for action to complete.     Waiting 21 seconds for action to complete.     Waiting 20 seconds for action to complete.     Waiting 19 seconds for action to complete.     Waiting 18 seconds for action to complete.     Waiting 17 seconds for action to complete.     Waiting 16 seconds for action to complete.     Waiting 15 seconds for action to complete.     Waiting 14 seconds for action to complete.     Waiting 13 seconds for action to complete.     Waiting 12 seconds for action to complete.     Waiting 11 seconds for action to complete.     Waiting 10 seconds for action to complete.     Waiting 9 seconds for action to complete.     Waiting 8 seconds for action to complete.     Waiting 7 seconds for action to complete.     Waiting 6 seconds for action to complete.     Waiting 5 seconds for action to complete.     Waiting 4 seconds for action to complete.     Waiting 3 seconds for action to complete.     Waiting 2 seconds for action to complete.     Waiting 1 seconds for action to complete.     Waiting 0 seconds for action to complete.     
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 3  STOP_PENDING 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100725[Sun]-am1120 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-am0850 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 540 Seconds (9 min)
+Waiting 540 seconds for action to complete.     Waiting 539 seconds for action to complete.     Waiting 538 seconds for action to complete.     Waiting 537 seconds for action to complete.     Waiting 536 seconds for action to complete.     Waiting 535 seconds for action to complete.     Waiting 534 seconds for action to complete.     Waiting 533 seconds for action to complete.     Waiting 532 seconds for action to complete.     Waiting 531 seconds for action to complete.     Waiting 530 seconds for action to complete.     Waiting 529 seconds for action to complete.     Waiting 528 seconds for action to complete.     Waiting 527 seconds for action to complete.     Waiting 526 seconds for action to complete.     Waiting 525 seconds for action to complete.     Waiting 524 seconds for action to complete.     Waiting 523 seconds for action to complete.     Waiting 522 seconds for action to complete.     Waiting 521 seconds for action to complete.     Waiting 520 seconds for action to complete.     Waiting 519 seconds for action to complete.     Waiting 518 seconds for action to complete.     Waiting 517 seconds for action to complete.     Waiting 516 seconds for action to complete.     Waiting 515 seconds for action to complete.     Waiting 514 seconds for action to complete.     Waiting 513 seconds for action to complete.     Waiting 512 seconds for action to complete.     Waiting 511 seconds for action to complete.     Waiting 510 seconds for action to complete.     Waiting 509 seconds for action to complete.     Waiting 508 seconds for action to complete.     Waiting 507 seconds for action to complete.     Waiting 506 seconds for action to complete.     Waiting 505 seconds for action to complete.     Waiting 504 seconds for action to complete.     Waiting 503 seconds for action to complete.     Waiting 502 seconds for action to complete.     Waiting 501 seconds for action to complete.     Waiting 500 seconds for action to complete.     Waiting 499 seconds for action to complete.     Waiting 498 seconds for action to complete.     Waiting 497 seconds for action to complete.     Waiting 496 seconds for action to complete.     Waiting 495 seconds for action to complete.     Waiting 494 seconds for action to complete.     Waiting 493 seconds for action to complete.     Waiting 492 seconds for action to complete.     Waiting 491 seconds for action to complete.     Waiting 490 seconds for action to complete.     Waiting 489 seconds for action to complete.     Waiting 488 seconds for action to complete.     Waiting 487 seconds for action to complete.     Waiting 486 seconds for action to complete.     Waiting 485 seconds for action to complete.     Waiting 484 seconds for action to complete.     Waiting 483 seconds for action to complete.     Waiting 482 seconds for action to complete.     Waiting 481 seconds for action to complete.     Waiting 480 seconds for action to complete.     Waiting 479 seconds for action to complete.     Waiting 478 seconds for action to complete.     Waiting 477 seconds for action to complete.     Waiting 476 seconds for action to complete.     Waiting 475 seconds for action to complete.     Waiting 474 seconds for action to complete.     Waiting 473 seconds for action to complete.     Waiting 472 seconds for action to complete.     Waiting 471 seconds for action to complete.     Waiting 470 seconds for action to complete.     Waiting 469 seconds for action to complete.     Waiting 468 seconds for action to complete.     Waiting 467 seconds for action to complete.     Waiting 466 seconds for action to complete.     Waiting 465 seconds for action to complete.     Waiting 464 seconds for action to complete.     Waiting 463 seconds for action to complete.     Waiting 462 seconds for action to complete.     Waiting 461 seconds for action to complete.     Waiting 460 seconds for action to complete.     Waiting 459 seconds for action to complete.     Waiting 458 seconds for action to complete.     Waiting 457 seconds for action to complete.     Waiting 456 seconds for action to complete.     Waiting 455 seconds for action to complete.     Waiting 454 seconds for action to complete.     Waiting 453 seconds for action to complete.     Waiting 452 seconds for action to complete.     Waiting 451 seconds for action to complete.     Waiting 450 seconds for action to complete.     Waiting 449 seconds for action to complete.     Waiting 448 seconds for action to complete.     Waiting 447 seconds for action to complete.     Waiting 446 seconds for action to complete.     Waiting 445 seconds for action to complete.     Waiting 444 seconds for action to complete.     Waiting 443 seconds for action to complete.     Waiting 442 seconds for action to complete.     Waiting 441 seconds for action to complete.     Waiting 440 seconds for action to complete.     Waiting 439 seconds for action to complete.     Waiting 438 seconds for action to complete.     Waiting 437 seconds for action to complete.     Waiting 436 seconds for action to complete.     Waiting 435 seconds for action to complete.     Waiting 434 seconds for action to complete.     Waiting 433 seconds for action to complete.     Waiting 432 seconds for action to complete.     Waiting 431 seconds for action to complete.     Waiting 430 seconds for action to complete.     Waiting 429 seconds for action to complete.     Waiting 428 seconds for action to complete.     Waiting 427 seconds for action to complete.     Waiting 426 seconds for action to complete.     Waiting 425 seconds for action to complete.     Waiting 424 seconds for action to complete.     Waiting 423 seconds for action to complete.     Waiting 422 seconds for action to complete.     Waiting 421 seconds for action to complete.     Waiting 420 seconds for action to complete.     Waiting 419 seconds for action to complete.     Waiting 418 seconds for action to complete.     Waiting 417 seconds for action to complete.     Waiting 416 seconds for action to complete.     Waiting 415 seconds for action to complete.     Waiting 414 seconds for action to complete.     Waiting 413 seconds for action to complete.     Waiting 412 seconds for action to complete.     Waiting 411 seconds for action to complete.     Waiting 410 seconds for action to complete.     Waiting 409 seconds for action to complete.     Waiting 408 seconds for action to complete.     Waiting 407 seconds for action to complete.     Waiting 406 seconds for action to complete.     Waiting 405 seconds for action to complete.     Waiting 404 seconds for action to complete.     Waiting 403 seconds for action to complete.     Waiting 402 seconds for action to complete.     Waiting 401 seconds for action to complete.     Waiting 400 seconds for action to complete.     Waiting 399 seconds for action to complete.     Waiting 398 seconds for action to complete.     Waiting 397 seconds for action to complete.     Waiting 396 seconds for action to complete.     Waiting 395 seconds for action to complete.     Waiting 394 seconds for action to complete.     Waiting 393 seconds for action to complete.     Waiting 392 seconds for action to complete.     Waiting 391 seconds for action to complete.     Waiting 390 seconds for action to complete.     Waiting 389 seconds for action to complete.     Waiting 388 seconds for action to complete.     Waiting 387 seconds for action to complete.     Waiting 386 seconds for action to complete.     Waiting 385 seconds for action to complete.     Waiting 384 seconds for action to complete.     Waiting 383 seconds for action to complete.     Waiting 382 seconds for action to complete.     Waiting 381 seconds for action to complete.     Waiting 380 seconds for action to complete.     Waiting 379 seconds for action to complete.     Waiting 378 seconds for action to complete.     Waiting 377 seconds for action to complete.     Waiting 376 seconds for action to complete.     Waiting 375 seconds for action to complete.     Waiting 374 seconds for action to complete.     Waiting 373 seconds for action to complete.     Waiting 372 seconds for action to complete.     Waiting 371 seconds for action to complete.     Waiting 370 seconds for action to complete.     Waiting 369 seconds for action to complete.     Waiting 368 seconds for action to complete.     Waiting 367 seconds for action to complete.     Waiting 366 seconds for action to complete.     Waiting 365 seconds for action to complete.     Waiting 364 seconds for action to complete.     Waiting 363 seconds for action to complete.     Waiting 362 seconds for action to complete.     Waiting 361 seconds for action to complete.     Waiting 360 seconds for action to complete.     Waiting 359 seconds for action to complete.     Waiting 358 seconds for action to complete.     Waiting 357 seconds for action to complete.     Waiting 356 seconds for action to complete.     Waiting 355 seconds for action to complete.     Waiting 354 seconds for action to complete.     Waiting 353 seconds for action to complete.     Waiting 352 seconds for action to complete.     Waiting 351 seconds for action to complete.     Waiting 350 seconds for action to complete.     Waiting 349 seconds for action to complete.     Waiting 348 seconds for action to complete.     Waiting 347 seconds for action to complete.     Waiting 346 seconds for action to complete.     Waiting 345 seconds for action to complete.     Waiting 344 seconds for action to complete.     Waiting 343 seconds for action to complete.     Waiting 342 seconds for action to complete.     Waiting 341 seconds for action to complete.     Waiting 340 seconds for action to complete.     Waiting 339 seconds for action to complete.     Waiting 338 seconds for action to complete.     Waiting 337 seconds for action to complete.     Waiting 336 seconds for action to complete.     Waiting 335 seconds for action to complete.     Waiting 334 seconds for action to complete.     Waiting 333 seconds for action to complete.     Waiting 332 seconds for action to complete.     Waiting 331 seconds for action to complete.     Waiting 330 seconds for action to complete.     Waiting 329 seconds for action to complete.     Waiting 328 seconds for action to complete.     Waiting 327 seconds for action to complete.     Waiting 326 seconds for action to complete.     Waiting 325 seconds for action to complete.     Waiting 324 seconds for action to complete.     Waiting 323 seconds for action to complete.     Waiting 322 seconds for action to complete.     Waiting 321 seconds for action to complete.     Waiting 320 seconds for action to complete.     Waiting 319 seconds for action to complete.     Waiting 318 seconds for action to complete.     Waiting 317 seconds for action to complete.     Waiting 316 seconds for action to complete.     Waiting 315 seconds for action to complete.     Waiting 314 seconds for action to complete.     Waiting 313 seconds for action to complete.     Waiting 312 seconds for action to complete.     Waiting 311 seconds for action to complete.     Waiting 310 seconds for action to complete.     Waiting 309 seconds for action to complete.     Waiting 308 seconds for action to complete.     Waiting 307 seconds for action to complete.     Waiting 306 seconds for action to complete.     Waiting 305 seconds for action to complete.     Waiting 304 seconds for action to complete.     Waiting 303 seconds for action to complete.     Waiting 302 seconds for action to complete.     Waiting 301 seconds for action to complete.     Waiting 300 seconds for action to complete.     Waiting 299 seconds for action to complete.     Waiting 298 seconds for action to complete.     Waiting 297 seconds for action to complete.     Waiting 296 seconds for action to complete.     Waiting 295 seconds for action to complete.     Waiting 294 seconds for action to complete.     Waiting 293 seconds for action to complete.     Waiting 292 seconds for action to complete.     Waiting 291 seconds for action to complete.     Waiting 290 seconds for action to complete.     Waiting 289 seconds for action to complete.     Waiting 288 seconds for action to complete.     Waiting 287 seconds for action to complete.     Waiting 286 seconds for action to complete.     Waiting 285 seconds for action to complete.     Waiting 284 seconds for action to complete.     Waiting 283 seconds for action to complete.     Waiting 282 seconds for action to complete.     Waiting 281 seconds for action to complete.     Waiting 280 seconds for action to complete.     Waiting 279 seconds for action to complete.     Waiting 278 seconds for action to complete.     Waiting 277 seconds for action to complete.     Waiting 276 seconds for action to complete.     Waiting 275 seconds for action to complete.     Waiting 274 seconds for action to complete.     Waiting 273 seconds for action to complete.     Waiting 272 seconds for action to complete.     Waiting 271 seconds for action to complete.     Waiting 270 seconds for action to complete.     Waiting 269 seconds for action to complete.     Waiting 268 seconds for action to complete.     Waiting 267 seconds for action to complete.     Waiting 266 seconds for action to complete.     Waiting 265 seconds for action to complete.     Waiting 264 seconds for action to complete.     Waiting 263 seconds for action to complete.     Waiting 262 seconds for action to complete.     Waiting 261 seconds for action to complete.     Waiting 260 seconds for action to complete.     Waiting 259 seconds for action to complete.     Waiting 258 seconds for action to complete.     Waiting 257 seconds for action to complete.     Waiting 256 seconds for action to complete.     Waiting 255 seconds for action to complete.     Waiting 254 seconds for action to complete.     Waiting 253 seconds for action to complete.     Waiting 252 seconds for action to complete.     Waiting 251 seconds for action to complete.     Waiting 250 seconds for action to complete.     Waiting 249 seconds for action to complete.     Waiting 248 seconds for action to complete.     Waiting 247 seconds for action to complete.     Waiting 246 seconds for action to complete.     Waiting 245 seconds for action to complete.     Waiting 244 seconds for action to complete.     Waiting 243 seconds for action to complete.     Waiting 242 seconds for action to complete.     Waiting 241 seconds for action to complete.     Waiting 240 seconds for action to complete.     Waiting 239 seconds for action to complete.     Waiting 238 seconds for action to complete.     Waiting 237 seconds for action to complete.     Waiting 236 seconds for action to complete.     Waiting 235 seconds for action to complete.     Waiting 234 seconds for action to complete.     Waiting 233 seconds for action to complete.     Waiting 232 seconds for action to complete.     Waiting 231 seconds for action to complete.     Waiting 230 seconds for action to complete.     Waiting 229 seconds for action to complete.     Waiting 228 seconds for action to complete.     Waiting 227 seconds for action to complete.     Waiting 226 seconds for action to complete.     Waiting 225 seconds for action to complete.     Waiting 224 seconds for action to complete.     Waiting 223 seconds for action to complete.     Waiting 222 seconds for action to complete.     Waiting 221 seconds for action to complete.     Waiting 220 seconds for action to complete.     Waiting 219 seconds for action to complete.     Waiting 218 seconds for action to complete.     Waiting 217 seconds for action to complete.     Waiting 216 seconds for action to complete.     Waiting 215 seconds for action to complete.     Waiting 214 seconds for action to complete.     Waiting 213 seconds for action to complete.     Waiting 212 seconds for action to complete.     Waiting 211 seconds for action to complete.     Waiting 210 seconds for action to complete.     Waiting 209 seconds for action to complete.     Waiting 208 seconds for action to complete.     Waiting 207 seconds for action to complete.     Waiting 206 seconds for action to complete.     Waiting 205 seconds for action to complete.     Waiting 204 seconds for action to complete.     Waiting 203 seconds for action to complete.     Waiting 202 seconds for action to complete.     Waiting 201 seconds for action to complete.     Waiting 200 seconds for action to complete.     Waiting 199 seconds for action to complete.     Waiting 198 seconds for action to complete.     Waiting 197 seconds for action to complete.     Waiting 196 seconds for action to complete.     Waiting 195 seconds for action to complete.     Waiting 194 seconds for action to complete.     Waiting 193 seconds for action to complete.     Waiting 192 seconds for action to complete.     Waiting 191 seconds for action to complete.     Waiting 190 seconds for action to complete.     Waiting 189 seconds for action to complete.     Waiting 188 seconds for action to complete.     Waiting 187 seconds for action to complete.     Waiting 186 seconds for action to complete.     Waiting 185 seconds for action to complete.     Waiting 184 seconds for action to complete.     Waiting 183 seconds for action to complete.     Waiting 182 seconds for action to complete.     Waiting 181 seconds for action to complete.     Waiting 180 seconds for action to complete.     Waiting 179 seconds for action to complete.     Waiting 178 seconds for action to complete.     Waiting 177 seconds for action to complete.     Waiting 176 seconds for action to complete.     Waiting 175 seconds for action to complete.     Waiting 174 seconds for action to complete.     Waiting 173 seconds for action to complete.     Waiting 172 seconds for action to complete.     Waiting 171 seconds for action to complete.     Waiting 170 seconds for action to complete.     Waiting 169 seconds for action to complete.     Waiting 168 seconds for action to complete.     Waiting 167 seconds for action to complete.     Waiting 166 seconds for action to complete.     Waiting 165 seconds for action to complete.     Waiting 164 seconds for action to complete.     Waiting 163 seconds for action to complete.     Waiting 162 seconds for action to complete.     Waiting 161 seconds for action to complete.     Waiting 160 seconds for action to complete.     Waiting 159 seconds for action to complete.     Waiting 158 seconds for action to complete.     Waiting 157 seconds for action to complete.     Waiting 156 seconds for action to complete.     Waiting 155 seconds for action to complete.     Waiting 154 seconds for action to complete.     Waiting 153 seconds for action to complete.     Waiting 152 seconds for action to complete.     Waiting 151 seconds for action to complete.     Waiting 150 seconds for action to complete.     Waiting 149 seconds for action to complete.     Waiting 148 seconds for action to complete.     Waiting 147 seconds for action to complete.     Waiting 146 seconds for action to complete.     Waiting 145 seconds for action to complete.     Waiting 144 seconds for action to complete.     Waiting 143 seconds for action to complete.     Waiting 142 seconds for action to complete.     Waiting 141 seconds for action to complete.     Waiting 140 seconds for action to complete.     Waiting 139 seconds for action to complete.     Waiting 138 seconds for action to complete.     Waiting 137 seconds for action to complete.     Waiting 136 seconds for action to complete.     Waiting 135 seconds for action to complete.     Waiting 134 seconds for action to complete.     Waiting 133 seconds for action to complete.     Waiting 132 seconds for action to complete.     Waiting 131 seconds for action to complete.     Waiting 130 seconds for action to complete.     Waiting 129 seconds for action to complete.     Waiting 128 seconds for action to complete.     Waiting 127 seconds for action to complete.     Waiting 126 seconds for action to complete.     Waiting 125 seconds for action to complete.     Waiting 124 seconds for action to complete.     Waiting 123 seconds for action to complete.     Waiting 122 seconds for action to complete.     Waiting 121 seconds for action to complete.     Waiting 120 seconds for action to complete.     Waiting 119 seconds for action to complete.     Waiting 118 seconds for action to complete.     Waiting 117 seconds for action to complete.     Waiting 116 seconds for action to complete.     Waiting 115 seconds for action to complete.     Waiting 114 seconds for action to complete.     Waiting 113 seconds for action to complete.     Waiting 112 seconds for action to complete.     Waiting 111 seconds for action to complete.     Waiting 110 seconds for action to complete.     Waiting 109 seconds for action to complete.     Waiting 108 seconds for action to complete.     Waiting 107 seconds for action to complete.     Waiting 106 seconds for action to complete.     Waiting 105 seconds for action to complete.     Waiting 104 seconds for action to complete.     Waiting 103 seconds for action to complete.     Waiting 102 seconds for action to complete.     Waiting 101 seconds for action to complete.     Waiting 100 seconds for action to complete.     Waiting 99 seconds for action to complete.     Waiting 98 seconds for action to complete.     Waiting 97 seconds for action to complete.     Waiting 96 seconds for action to complete.     Waiting 95 seconds for action to complete.     Waiting 94 seconds for action to complete.     Waiting 93 seconds for action to complete.     Waiting 92 seconds for action to complete.     Waiting 91 seconds for action to complete.     Waiting 90 seconds for action to complete.     Waiting 89 seconds for action to complete.     Waiting 88 seconds for action to complete.     Waiting 87 seconds for action to complete.     Waiting 86 seconds for action to complete.     Waiting 85 seconds for action to complete.     Waiting 84 seconds for action to complete.     Waiting 83 seconds for action to complete.     Waiting 82 seconds for action to complete.     Waiting 81 seconds for action to complete.     Waiting 80 seconds for action to complete.     Waiting 79 seconds for action to complete.     Waiting 78 seconds for action to complete.     Waiting 77 seconds for action to complete.     Waiting 76 seconds for action to complete.     Waiting 75 seconds for action to complete.     Waiting 74 seconds for action to complete.     Waiting 73 seconds for action to complete.     Waiting 72 seconds for action to complete.     Waiting 71 seconds for action to complete.     Waiting 70 seconds for action to complete.     Waiting 69 seconds for action to complete.     Waiting 68 seconds for action to complete.     Waiting 67 seconds for action to complete.     Waiting 66 seconds for action to complete.     Waiting 65 seconds for action to complete.     Waiting 64 seconds for action to complete.     Waiting 63 seconds for action to complete.     Waiting 62 seconds for action to complete.     Waiting 61 seconds for action to complete.     Waiting 60 seconds for action to complete.     Waiting 59 seconds for action to complete.     Waiting 58 seconds for action to complete.     Waiting 57 seconds for action to complete.     Waiting 56 seconds for action to complete.     Waiting 55 seconds for action to complete.     Waiting 54 seconds for action to complete.     Waiting 53 seconds for action to complete.     Waiting 52 seconds for action to complete.     Waiting 51 seconds for action to complete.     Waiting 50 seconds for action to complete.     Waiting 49 seconds for action to complete.     Waiting 48 seconds for action to complete.     Waiting 47 seconds for action to complete.     Waiting 46 seconds for action to complete.     Waiting 45 seconds for action to complete.     Waiting 44 seconds for action to complete.     Waiting 43 seconds for action to complete.     Waiting 42 seconds for action to complete.     Waiting 41 seconds for action to complete.     Waiting 40 seconds for action to complete.     Waiting 39 seconds for action to complete.     Waiting 38 seconds for action to complete.     Waiting 37 seconds for action to complete.     Waiting 36 seconds for action to complete.     Waiting 35 seconds for action to complete.     Waiting 34 seconds for action to complete.     Waiting 33 seconds for action to complete.     Waiting 32 seconds for action to complete.     Waiting 31 seconds for action to complete.     Waiting 30 seconds for action to complete.     Waiting 29 seconds for action to complete.     Waiting 28 seconds for action to complete.     Waiting 27 seconds for action to complete.     Waiting 26 seconds for action to complete.     Waiting 25 seconds for action to complete.     Waiting 24 seconds for action to complete.     Waiting 23 seconds for action to complete.     Waiting 22 seconds for action to complete.     Waiting 21 seconds for action to complete.     Waiting 20 seconds for action to complete.     Waiting 19 seconds for action to complete.     Waiting 18 seconds for action to complete.     Waiting 17 seconds for action to complete.     Waiting 16 seconds for action to complete.     Waiting 15 seconds for action to complete.     Waiting 14 seconds for action to complete.     Waiting 13 seconds for action to complete.     Waiting 12 seconds for action to complete.     Waiting 11 seconds for action to complete.     Waiting 10 seconds for action to complete.     Waiting 9 seconds for action to complete.     Waiting 8 seconds for action to complete.     Waiting 7 seconds for action to complete.     Waiting 6 seconds for action to complete.     Waiting 5 seconds for action to complete.     Waiting 4 seconds for action to complete.     Waiting 3 seconds for action to complete.     Waiting 2 seconds for action to complete.     Waiting 1 seconds for action to complete.     Waiting 0 seconds for action to complete.     
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 3  STOP_PENDING 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-am0859 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0311 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 450 Seconds (7.5 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 3  STOP_PENDING 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0311 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0317 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 450 Seconds (7.5 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Stop and disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0317 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0505 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 450 Seconds (7.5 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Stop and disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService DPM
+[SC] OpenService FAILED 1060:
+
+The specified service does not exist as an installed service.
+
+-- Parameters: /EnableService DPMLA
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMWriter
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService DPMWriter
+
+SERVICE_NAME: DPMWriter 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+        PID                : 3952
+        FLAGS              : 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0506 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0506 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 450 Seconds (7.5 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Stop and disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSDPM
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMWriter
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService DPMWriter
+[SC] StartService FAILED 1056:
+
+An instance of the service is already running.
+
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0506 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-am0857 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 450 Seconds (7.5 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 3  STOP_PENDING 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSDPM
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMWriter
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService DPMWriter
+
+SERVICE_NAME: DPMWriter 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+        PID                : 5404
+        FLAGS              : 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-am0905 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-pm0333 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 450 Seconds (7.5 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Stop and disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSDPM
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMWriter
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService DPMWriter
+
+SERVICE_NAME: DPMWriter 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+        PID                : 1444
+        FLAGS              : 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-pm0333 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-pm0834 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 450 Seconds (7.5 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 3  STOP_PENDING 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSDPM
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMWriter
+[SC] ChangeServiceConfig SUCCESS
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-pm0843 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100728[Wed]-am0934 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 450 Seconds (7.5 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 3  STOP_PENDING 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSDPM
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMWriter
+[SC] ChangeServiceConfig SUCCESS
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100728[Wed]-am0942 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0329 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 3  STOP_PENDING 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSDPM
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMWriter
+[SC] ChangeServiceConfig SUCCESS
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0331 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20110524[Tue]-am0936 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 3   DEMAND_START
+        STATE              : 1  STOPPED 
+
+-- Stop and Disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSSQL$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService MSSQL$MS$DPM2007$
+
+SERVICE_NAME: MSSQL$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x7d0
+        PID                : 4396
+        FLAGS              : 
+-- Parameters: /EnableService SQLAgent$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService SQLAgent$MS$DPM2007$
+
+SERVICE_NAME: SQLAgent$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x1
+        WAIT_HINT          : 0x7530
+        PID                : 4344
+        FLAGS              : 
+-- Parameters: /EnableService DPMWriter auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService DPMWriter
+
+SERVICE_NAME: DPMWriter 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+        PID                : 4356
+        FLAGS              : 
+-- Parameters: /EnableService MSDPM demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMAC demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMRA demand
+[SC] ChangeServiceConfig SUCCESS
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20110524[Tue]-am0939 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20110525[Wed]-am0751 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and Disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 3  STOP_PENDING 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSSQL$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService MSSQL$MS$DPM2007$
+
+SERVICE_NAME: MSSQL$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x7d0
+        PID                : 4268
+        FLAGS              : 
+-- Parameters: /EnableService SQLAgent$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService SQLAgent$MS$DPM2007$
+
+SERVICE_NAME: SQLAgent$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x1
+        WAIT_HINT          : 0x7530
+        PID                : 4756
+        FLAGS              : 
+-- Parameters: /EnableService DPMWriter auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService DPMWriter
+
+SERVICE_NAME: DPMWriter 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+        PID                : 4744
+        FLAGS              : 
+-- Parameters: /EnableService MSDPM demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMAC demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMRA demand
+[SC] ChangeServiceConfig SUCCESS
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20110525[Wed]-am0754 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20110620[Mon]-am0917 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 3   DEMAND_START
+        STATE              : 1  STOPPED 
+
+-- Stop and Disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSSQL$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService MSSQL$MS$DPM2007$
+
+SERVICE_NAME: MSSQL$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x7d0
+        PID                : 1068
+        FLAGS              : 
+-- Parameters: /EnableService SQLAgent$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService SQLAgent$MS$DPM2007$
+
+SERVICE_NAME: SQLAgent$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x1
+        WAIT_HINT          : 0x7530
+        PID                : 4400
+        FLAGS              : 
+-- Parameters: /EnableService DPMWriter auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService DPMWriter
+
+SERVICE_NAME: DPMWriter 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+        PID                : 2364
+        FLAGS              : 
+-- Parameters: /EnableService MSDPM demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMAC demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMRA demand
+[SC] ChangeServiceConfig SUCCESS
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-- Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20110620[Mon]-am0920 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0809 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+Error, Parameters: NTMSSVC
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+[SC] OpenService FAILED 1060:
+
+The specified service does not exist as an installed service.
+
+Error, Parameters: MSSQL$MS$DPM2007$
+[SC] OpenService FAILED 1060:
+
+The specified service does not exist as an installed service.
+
+Error, Parameters: SQLAgent$MS$DPM2007$
+[SC] OpenService FAILED 1060:
+
+The specified service does not exist as an installed service.
+
+Error, Parameters: DPMWriter
+[SC] OpenService FAILED 1060:
+
+The specified service does not exist as an installed service.
+
+[SC] OpenService FAILED 1060:
+
+The specified service does not exist as an installed service.
+
+[SC] OpenService FAILED 1060:
+
+The specified service does not exist as an installed service.
+
+[SC] OpenService FAILED 1060:
+
+The specified service does not exist as an installed service.
+
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0812 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0907 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Stop and Disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSSQL$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService MSSQL$MS$DPM2007$
+
+SERVICE_NAME: MSSQL$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x7d0
+        PID                : 3708
+        FLAGS              : 
+-- Parameters: /EnableService SQLAgent$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService SQLAgent$MS$DPM2007$
+
+SERVICE_NAME: SQLAgent$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x7d0
+        PID                : 3872
+        FLAGS              : 
+-- Parameters: /EnableService DPMWriter auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService DPMWriter
+
+SERVICE_NAME: DPMWriter 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x7d0
+        PID                : 4520
+        FLAGS              : 
+-- Parameters: /EnableService MSDPM demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMAC demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMRA demand
+[SC] ChangeServiceConfig SUCCESS
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0908 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0916 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 3   DEMAND_START
+        STATE              : 1  STOPPED 
+
+-- Stop and Disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSSQL$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService MSSQL$MS$DPM2007$
+
+SERVICE_NAME: MSSQL$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x7d0
+        PID                : 5396
+        FLAGS              : 
+-- Parameters: /EnableService SQLAgent$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService SQLAgent$MS$DPM2007$
+
+SERVICE_NAME: SQLAgent$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x1
+        WAIT_HINT          : 0x7530
+        PID                : 5636
+        FLAGS              : 
+-- Parameters: /EnableService DPMWriter auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService DPMWriter
+
+SERVICE_NAME: DPMWriter 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+        PID                : 5608
+        FLAGS              : 
+-- Parameters: /EnableService MSDPM demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMAC demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMRA demand
+[SC] ChangeServiceConfig SUCCESS
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0920 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-pm0257 
+-----------------------------------------------------------------------
+
+-- Cancel any post boot activities.
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-pm0257 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-pm0312 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and Disable service: NTMSSVC
+[SC] ControlService FAILED 1061:
+
+The service cannot accept control messages at this time.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 4  RUNNING 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSSQL$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService MSSQL$MS$DPM2007$
+
+SERVICE_NAME: MSSQL$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x7d0
+        PID                : 5220
+        FLAGS              : 
+-- Parameters: /EnableService SQLAgent$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService SQLAgent$MS$DPM2007$
+
+SERVICE_NAME: SQLAgent$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x1
+        WAIT_HINT          : 0x7530
+        PID                : 5392
+        FLAGS              : 
+-- Parameters: /EnableService DPMWriter auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService DPMWriter
+
+SERVICE_NAME: DPMWriter 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x7d0
+        PID                : 5416
+        FLAGS              : 
+-- Parameters: /EnableService MSDPM demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMAC demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMRA demand
+[SC] ChangeServiceConfig SUCCESS
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-pm0316 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110622[Wed]-am0914 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 3   DEMAND_START
+        STATE              : 1  STOPPED 
+
+-- Stop and Disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSSQL$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService MSSQL$MS$DPM2007$
+
+SERVICE_NAME: MSSQL$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x7d0
+        PID                : 1548
+        FLAGS              : 
+-- Parameters: /EnableService SQLAgent$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService SQLAgent$MS$DPM2007$
+
+SERVICE_NAME: SQLAgent$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x1
+        WAIT_HINT          : 0x7530
+        PID                : 2996
+        FLAGS              : 
+-- Parameters: /EnableService DPMWriter auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService DPMWriter
+
+SERVICE_NAME: DPMWriter 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+        PID                : 4396
+        FLAGS              : 
+-- Parameters: /EnableService MSDPM demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMAC demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMRA demand
+[SC] ChangeServiceConfig SUCCESS
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110622[Wed]-am0918 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110623[Thu]-pm0420 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 3   DEMAND_START
+        STATE              : 1  STOPPED 
+
+-- Stop and Disable service: NTMSSVC
+[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+
+-- Delay the startup activities by: 30 Seconds (.5 min)
+-- Parameters: /EnableService MSSQL$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService MSSQL$MS$DPM2007$
+
+SERVICE_NAME: MSSQL$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x7d0
+        PID                : 984
+        FLAGS              : 
+-- Parameters: /EnableService SQLAgent$MS$DPM2007$ auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService SQLAgent$MS$DPM2007$
+
+SERVICE_NAME: SQLAgent$MS$DPM2007$ 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x1
+        WAIT_HINT          : 0x7530
+        PID                : 4396
+        FLAGS              : 
+-- Parameters: /EnableService DPMWriter auto
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /StartService DPMWriter
+
+SERVICE_NAME: DPMWriter 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+        PID                : 4480
+        FLAGS              : 
+-- Parameters: /EnableService MSDPM demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMAC demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMLA demand
+[SC] ChangeServiceConfig SUCCESS
+-- Parameters: /EnableService DPMRA demand
+[SC] ChangeServiceConfig SUCCESS
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110623[Thu]-pm0424 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110701[Fri]-pm0501 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and Disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 3  STOP_PENDING 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110701[Fri]-pm0504 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110701[Fri]-pm0912 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 240 Seconds (4 min)
+-- Parameters: /DisableService NTMSSVC
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and Disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110701[Fri]-pm0917 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110702[Sat]-am1233 
+-----------------------------------------------------------------------
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 2  START_PENDING 
+
+-- Delay the startup activities by: 90 Seconds (1.5 min)
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 2   AUTO_START
+        STATE              : 4  RUNNING 
+
+-- Stop and Disable service: NTMSSVC
+
+SERVICE_NAME: NTMSSVC 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 3  STOP_PENDING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x6
+        WAIT_HINT          : 0x1d4c0
+[SC] ChangeServiceConfig SUCCESS
+
+-- Get config and status of service: NTMSSVC
+        START_TYPE         : 4   DISABLED
+        STATE              : 1  STOPPED 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110702[Sat]-am1236 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110702[Sat]-am0854 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+
+SERVICE_NAME: Server Administrator 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x1
+        WAIT_HINT          : 0xbb8
+        PID                : 2024
+        FLAGS              : 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110702[Sat]-am0854 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110702[Sat]-am0901 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+
+SERVICE_NAME: Server Administrator 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x1
+        WAIT_HINT          : 0xbb8
+        PID                : 4876
+        FLAGS              : 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110702[Sat]-am0903 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110708[Fri]-pm0511 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 120 Seconds (2 min)
+[SC] ChangeServiceConfig SUCCESS
+[SC] ChangeServiceConfig SUCCESS
+
+SERVICE_NAME: Server Administrator 
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 2  START_PENDING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x1
+        WAIT_HINT          : 0xbb8
+        PID                : 3480
+        FLAGS              : 
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110708[Fri]-pm0513 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110709[Sat]-am0842 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110709[Sat]-am0844 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110724[Sun]-pm0719 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110724[Sun]-pm0720 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111009[Sun]-am1005 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111009[Sun]-am1006 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111205[Mon]-pm1247 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111205[Mon]-pm1248 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111213[Tue]-pm0319 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111213[Tue]-pm0320 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20120214[Tue]-am1044 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20120214[Tue]-am1046 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20120703[Tue]-am1055 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20120703[Tue]-am1056 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121104[Sun]-pm0214 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121104[Sun]-pm0215 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121104[Sun]-pm0424 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121104[Sun]-pm0425 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121105[Mon]-pm0843 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121105[Mon]-pm0844 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121106[Tue]-pm0719 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121106[Tue]-pm0720 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121113[Tue]-pm0259 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121113[Tue]-pm0300 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121115[Thu]-pm0337 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121115[Thu]-pm0338 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121115[Thu]-pm0353 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121115[Thu]-pm0354 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121126[Mon]-pm1250 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121126[Mon]-pm1251 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121126[Mon]-pm0239 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121126[Mon]-pm0240 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121127[Tue]-am0939 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121127[Tue]-am0940 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121127[Tue]-pm0259 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121127[Tue]-pm0301 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121128[Wed]-am0752 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121128[Wed]-am0753 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121128[Wed]-pm0340 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121128[Wed]-pm0341 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121129[Thu]-pm0331 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121129[Thu]-pm0332 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121212[Wed]-am0945 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121212[Wed]-am0946 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121214[Fri]-am0751 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121214[Fri]-am0753 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121214[Fri]-am0908 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121214[Fri]-am0909 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20130129[Tue]-pm0936 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20130129[Tue]-pm0937 
+-----------------------------------------------------------------------
+-- Parameters: /Action
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20130221[Thu]-am1144 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20130221[Thu]-am1145 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20130627[Thu]-am0851 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+[INFO ] No Action required.
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20130627[Thu]-am0852 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20131221[Sat]-am0351 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+[INFO ] No Action required.
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20131221[Sat]-am0352 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140315[Sat]-am1007 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+[INFO ] No Action required.
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140315[Sat]-am1008 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140317[Mon]-pm0646 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+[INFO ] No Action required.
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140317[Mon]-pm0647 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140317[Mon]-pm0935 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+[INFO ] No Action required.
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140317[Mon]-pm0937 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140625[Wed]-pm0446 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+[INFO ] No Action required.
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140625[Wed]-pm0447 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140701[Tue]-pm0424 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+[INFO ] No Action required.
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140701[Tue]-pm0425 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140711[Fri]-pm0154 
+-----------------------------------------------------------------------
+
+-- Delay the startup activities by: 60 Seconds (1 min)
+[INFO ] No Action required.
+---------------- End  : C:\Scripts\OnStartup-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140711[Fri]-pm0155 
+-----------------------------------------------------------------------

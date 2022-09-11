@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<TITLE>Modomedia - IA1 Liscence Agreement</TITLE>
+
+<script>
+<!--
+//this script runs when page is loaded and sets browserVersion's value
+
+// start assuming generic browser
+var gotoframe = "pleaseInstallIE4.html";
+var basedir = "ia1/website/";
+var browserVersion = "generic";
+
+// check for netscape
+if (navigator.appName == "Netscape") {
+      browserVersion = "netscape";
+} 
+
+//check for microsoft
+if (navigator.appVersion.indexOf("MSIE") != -1) {
+      browserVersion = "ie";
+}
+
+//add single digit version number to name of browser
+browserVersion = browserVersion + navigator.appVersion.charAt(0);
+function doie3(){
+  if (browserVersion == "ie3"){
+    //do something Internet Explorer 3 related
+	gotoframe = "getIE4.html";
+	gotoframe = basedir + gotoframe;
+    self.location.href=gotoframe;
+  }
+}
+
+
+// now to use this information:
+function clickedSomething(){
+  if (browserVersion == "netscape2"){
+    //do something Netscape 2 related
+	gotoframe = "getIE4.html";
+  }
+  else if (browserVersion == "netscape3"){
+    //do something Netscape 3 related
+	gotoframe = "netscape3.html";
+  }
+  else if (browserVersion == "netscape4"){
+    //do something Netscape 4 related
+	gotoframe = "frameset2.html";
+  }
+  else if (browserVersion == "ie3"){
+    //do something Internet Explorer 3 related
+	gotoframe = "getIE4.html";
+  }
+  else if (browserVersion == "ie4"){
+    //do something Internet Explorer 4 related
+	gotoframe = "frameset.html";
+  }
+  gotoframe = basedir + gotoframe;
+  self.location.href=gotoframe;
+
+}
+
+
+//-->
+</script>
+
+
+
+</HEAD>
+<BODY bgcolor="000000" text="ffffff" link="#094FA0" vlink="#094FA0" background="ia1/website/images/indexbg.gif" onLoad=doie3() >
+
+
+<center>
+<table border=0 cellpadding=0 cellspacing=0 height="100%" width="430">
+<tr valign="middle"><td align=center>
+
+<A HREF="#usage" ONMOUSEOVER="window.status=' -- Please read the Usage Rights --';return true;" ONMOUSEOUT="window.status='';return true"><img border=0 src="ia1/website/images/animations/logon_an.gif" width=348 height=270></a><p>
+
+<font face="Arial" size="3">
+<a href="#usage" ONMOUSEOVER="window.status=' -- Please read the Usage Rights --';return true;" ONMOUSEOUT="window.status='';return true"><img border=0 src="ia1/website/images/ia1_mast1.jpg"></a>
+<p>
+
+
+</td></tr>
+
+<tr><td>
+<a name="usage"><img src="ia1/website/images/rights_restrictions.gif" width=390 height=22></a>
+<p>
+<font face="Arial" size="1" color="#FEED0E">
+
+<b>Thank you for purchasing Interactive Adrenaline</b> &reg; by Modomedia&copy; . Please take a moment to read and understand the rights and limitations of this CD. <p>
+These images are royalty free. The purchaser of the IA1 CD has the right to use this library to create multimedia content, such as websites or other multimedia for sale or  personal use.  The user has the right to duplicate images as is necessary to download from the CD to apply text and upload to the Internet.  
+<p>
+<b> The purchaser of the IA1 CD does NOT have the right</b> to duplicate this CD for sale, distribution, or any other purpose, unless with strict written permission by the Modomedia corporation.  The purchaser of the IA1 CD does NOT have the right to upload files from the CD to the internet in order to give them away, or to share them with anyone who has not purchased the IA1 CD.   The purchaser of this CD does NOT have the right to use any image or group of images in another product for sale that  in any way competes with the this product.  No images from this CD shall be found on another product for sale without written consent of the Modomedia Corporation. <BR><BR><P>
+
+<CENTER><font face="Arial" size="2" ><b><A HREF="#rights2" ONMOUSEOVER="window.status=' -- Please read on --';return true;" ONMOUSEOUT="window.status='';return true"><img src="ia1/website/images/continue.gif" width=104 height=31 border=0></A></B></font></CENTER>
+<P><P><BR><BR><BR><BR><BR><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<p>
+<A NAME="rights2"><b>All interface images</A> ,sounds, and music files</b>, such as the animation above, and the images that comprise the Image Viewer screens, will remain the strict property of Modomedia, Inc., and are &copy;1998 Modomedia.   No person shall duplicate, download, upload to the Internet, or in any way tamper with these images.  This is strictly forbidden.  Violators will be prosecuted to the full extent of the law.
+<p>
+If you have read and understand these Usage Rights and Restrictions, <p>
+<center><!--<a href="ia1/website/frameset.html">--><a href="javascript:clickedSomething()"
+ONMOUSEOVER="window.status=' -- Use the Image Browser --';return true;" ONMOUSEOUT="window.status='';return true"><img border=0 src="ia1/website/images/enter.gif" width=367 height=39></a></center>
+
+<center>
+<p><br>
+<table border=0 cellspacing=4 cellpadding=2 width=100%><tr><td>
+<font face="Arial" size="2" COLOR="white"><B>Best when viewed with Microsoft® Internet Explorer 4 and a monitor resolution of 800x600.</B></td><td><font face="Arial" size="2" COLOR="white">IA1 image browser is not compatible with version 3 or below Internet Browsers.
+</font></td></tr></table>
+<p><br>
+
+<a href="http://www.modomedia.com/" ONMOUSEOVER="window.status=' Visit Modomedia Online';return true;" ONMOUSEOUT="window.status='';return true"><img src="ia1/website/images/modomedia.gif" width=145 height=72 border="0"></a><br>
+<font face="Arial" size="1" color="#8F8F8F">
+&copy;1998 Modomedia, Inc. All Rights Reserved
+</font></center>
+
+</td></tr>
+
+
+</table>
+
+
+<P><BR>
+
+
+
+
+
+<applet code="LoopSound" width=7 height=1>
+  <param name=sound value="ia1/website/audio/intro7.AU">
+  </applet>
+
+</BODY>
+<script>
+<!--
+if (browserVersion == "ie3"){
+	doie3();
+}
+//-->
+</script>
+</HTML>

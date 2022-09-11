@@ -1,0 +1,484 @@
+<html><head><title>Setup.exe and Update.exe Command-Line Parameters</title>
+
+
+
+ <link rel="stylesheet" href="IHelpSetup_EXECmdLine_data/ISHelp_ns.css">
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='ISHelp.css'>");}
+//-->
+</script>
+ <meta name="copyright" content="Copyright  2000-2003 InstallShield Software Corporation. All Rights Reserved.">
+<script language="jscript" src="IHelpSetup_EXECmdLine_data/helpinfo.js" type="text/jscript"></script>
+
+<script language="vbscript" src="IHelpSetup_EXECmdLine_data/ErrorHandler.vbs"></script>
+<script language="vbscript" src="IHelpSetup_EXECmdLine_data/IHelpUtil.vbs"></script>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="IHelpSetup_EXECmdLine_data/whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="IHelpSetup_EXECmdLine_data/whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="IHelpSetup_EXECmdLine_data/whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="IHelpSetup_EXECmdLine_data/whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="IHelpSetup_EXECmdLine_data/whtopic.js"></script></head><body>
+
+
+
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("InstallShield DevStudio Help Library\nView List\nMedia\nReleases\nRelease Concepts\nSetup.exe Command-Line Parameters");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(0);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("HelpLib.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<h1>Setup.exe and Update.exe Command-Line Parameters</h1>
+<p class="subtitle">InstallShield DevStudio</p>
+
+<p>Like your compiled .msi file, <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/IHelpSetup_EXE.htm">Setup.exe</a>
+can accept a number of command line parameters. Update.exe (available
+only for MSI projects) accepts nearly all of the same command line
+parameters. Using these parameters, end users can specify such data as
+the language the setup should run in and whether to launch Setup.exe
+silently. End users can also pass parameters through Setup.exe to the
+included .msi file.</p>
+
+<img src="IHelpSetup_EXECmdLine_data/note.gif" alt="Note"><br><p class="notetext">Command-line
+options that require a parameter must be specified with no space
+between the option and its paramater. For example, <tt>Setup.exe /v"ALLUSERS=2"</tt> is valid, while <tt>Setup.exe /v&nbsp;"ALLUSERS=2"</tt> is not. Quotation marks around an option's parameter are required only if the parameter contains spaces.</p>
+
+<p>Several of the command-line arguments apply only to <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/StandardVsLimited.htm">InstallScript MSI projects</a> or InstallScript projects.</p>
+
+<p>Setup.exe accepts the following command line parameters:</p>
+
+<h2>Special Installation Modes (Windows Installer based projects only)</h2>
+<p></p><ul>
+    <li><a href="#aParam">/a : Administrative installation</a></li>
+    <li><a href="#jParam">/j : Advertise mode</a></li>
+    <li><a href="#xParam">/x : Uninstall mode</a></li>
+    <li><a href="#uninstParam">/uninst : Uninstall product</a> (InstallScript and InstallScript MSI projects only)</li>
+</ul><p></p>
+
+<h2>Silent Installations</h2>
+<p></p><ul>
+    <li><a href="#pParam">/p : Specify password</a></li>
+    <li><a href="#rParam">/r : Record mode</a> (InstallScript and InstallScript MSI projects only)</li>
+    <li><a href="#sParam">/s : Silent mode</a></li>
+    <li><a href="#f1Param">/f1 : Specify alternative response file name</a> (InstallScript and InstallScript MSI projects only)</li>
+    <li><a href="#f2Param">/f2 : Specify alternative log file name</a> (InstallScript and InstallScript MSI projects only)</li>
+</ul><p></p>
+
+<h2>SMS Data</h2>
+<p></p><ul>
+    <li><a href="#mParam">/m : Generate MIF file</a> (InstallScript and InstallScript MSI projects only)</li>
+    <li><a href="#m1Param">/m1 : Specify serial number in MIF file</a> (InstallScript and InstallScript MSI projects only)</li>
+    <li><a href="#m2Param">/m2 : Specify locale string in MIF file</a> (InstallScript and InstallScript MSI projects only)</li>
+</ul><p></p>
+
+<h2>Download and Cache Locations (Windows Installer based projects only)</h2>
+<p></p><ul>
+    <li><a href="#uaParam">/ua : Specify URL for InstMsiA.exe</a></li>
+    <li><a href="#uwParam">/uw : Specify URL for InstMsiW.exe</a></li>
+    <li><a href="#usParam">/us : Specify URL to ISScript.msi</a></li>
+    <li><a href="#umParam">/um : Specify URL to .msi package</a></li>
+    <li><a href="#bParam">/b : Cache installation locally</a></li>
+</ul><p></p>
+
+	<img src="IHelpSetup_EXECmdLine_data/note.gif" alt="Note"><br><p class="notetext">You must specify the full URL with these parameters in order for them to apply correctly.</p>
+
+<h2>Passing Data to the Installation</h2>
+<p></p><ul>
+    <li><a href="#vParam">/v : Pass arguments to Msiexec</a></li>
+    <li><a href="#zParam">/z : Pass arguments to <span class="clsFnName">CMDLINE</span> variable</a> (InstallScript MSI projects only)</li>
+</ul><p></p>
+
+<h2>Debugging</h2>
+<p></p><ul>
+    <li><a href="#dParam">/d : Debug InstallScript</a> (InstallScript and InstallScript MSI projects only)</li>
+    <li><a href="#verboseParam">/verbose : Generate verbose InstallScript engine log file</a> (InstallScript and InstallScript MSI projects only)</li>
+</ul><p></p>
+
+<h2>Miscellaneous</h2>
+<p></p><ul>
+    <li><a href="#delayedstartParam">/delayedstart : Delay initialization of the setup </a> (InstallScript and InstallScript MSI projects only)</li>
+    <li><a href="#deleterParam">/deleter : Do not clone a second Setup.exe process when debugging</a> (InstallScript and InstallScript MSI projects only)</li>
+    <li><a href="#extract_allParam">/extract_all : Package's files should not be run but simply extracted</a> (InstallScript and InstallScript MSI projects only)</li>
+    <li><a href="#fParam">/f : Specify alternative compiled script</a> (InstallScript and InstallScript MSI projects only)</li>
+	<li><a href="#hParam">/h : Clone release to a temporary location and run from that location</a> (Windows Installer based projects only)</li>
+	<li><a href="#hide_usdParam">/hide_usd : Suppress update dialog box for multiple installations</a> (InstallScript and InstallScript MSI projects only)</li>
+	<li><a href="#igParam">/ig : Specify the value of the system variable INSTANCE_GUID</a> (InstallScript and InstallScript MSI projects only)</li>
+    <li><a href="#lParam">/L : Setup language</a></li>
+    <li><a href="#wParam">/w : Wait</a> (Windows Installer based projects only)</li>
+    <li><a href="#smsParam">/SMS : Wait</a> (InstallScript MSI projects only)</li>
+</ul><p></p>
+
+<h2>Special Installation Modes (Windows Installer based projects only)</h2>
+
+<h3><a name="aParam">/a : Administrative installation</a></h3>
+
+<img src="IHelpSetup_EXECmdLine_data/note.gif" alt="Note"><br><p class="notetext">The
+/a parameter does not work with Update.exe. Update.exe launches a patch
+which accesses and modifies an existing cached MSI on the system, and
+an administrative installation does not cache the MSI.</p>
+
+<p>The <strong>/a</strong> switch causes Setup.exe to perform an
+administrative installation. An administrative installation copies (and
+uncompresses) your data files to a directory specified by the user, but
+does not create shortcuts, register COM servers, or create an
+uninstallation log.</p>
+
+<h3><a name="jParam">/j : Advertise mode</a></h3>
+
+<p>The <strong>/j</strong> switch causes Setup.exe to perform an
+advertised installation. An advertised installation creates shortcuts,
+registers COM servers, and registers file types, but does not install
+your product's files until the user invokes one of these &#8220;entry points&#8221;.</p>
+
+<h3><a name="xParam">/x : Uninstall mode</a><p>
+
+</p><p>The <strong>/x</strong> switch causes Setup.exe to uninstall a previously installed product.</p></h3>
+
+<h3><a name="uninstParam">/uninst : Uninstall product</a> (InstallScript and InstallScript MSI projects only)</h3>
+
+<p>The <strong>/uninst</strong> switch causes Setup.exe to uninstall a previously installed product, without reading the script.</p>
+
+
+<h2>Silent Installations</h2>
+
+<h3><a name="pParam">/p : Specify password</a></h3>
+<p>If you selected the &#8220;<a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/IWPReleasePswdCopyright.htm">Password Protect Setup.exe</a>&#8221; option in the Release Wizard for your release, the user must specify the password with the <strong>/p</strong> argument at run time. A typical command is <tt>Setup.exe /s /p"password"</tt>.</p>
+
+<h3><a name="rParam">/r : Record mode</a> (InstallScript and InstallScript MSI projects only)</h3>
+<p>In order to run an InstallScript MSI or InstallScript project
+installation program in silent mode, you must first run Setup.exe with
+the <strong>/r</strong> switch to generate a response file, which
+stores information about the data entered and options selected by the
+user at run time.</p>
+
+<p>Running an InstallScript MSI or InstallScript installation program with the command <tt>Setup.exe /r</tt> displays all the run-time dialog boxes, and stores the data in a file called <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/SetupIss.htm">Setup.iss</a>, created inside the system's Windows folder. To specify an alternative response file name and location, use the <strong>/f1</strong> argument, described below.</p>
+
+<p>Basic MSI projects do not create or use a response file for silent installations.</p>
+
+<h3><a name="sParam">/s : Silent mode</a></h3>
+<p>For an InstallScript MSI or InstallScript project, the command <tt>Setup.exe /s</tt>
+runs the installation in silent mode, by default based on the responses
+contained in a response file called Setup.iss in the same directory
+(response files are created by running Setup.exe with the /r option).
+To specify an alternative file name or location of the response file,
+use the /f1 option, described below.</p>
+
+<p>The command <tt>Setup.exe /s</tt> also suppresses the Setup.exe
+initialization window for a Basic MSI installation program, but does
+not read a response file. To run a Basic MSI product silently, run the
+command line <tt>Setup.exe /s /v/qn</tt>. (To specify the values of public properties for a silent Basic MSI installation, you can use a command such as <tt>Setup.exe /s /v"/qn INSTALLDIR=D:\Destination"</tt>.)</p>
+
+<h3><a name="f1Param">/f1 : Specify alternative response file name</a> (InstallScript and InstallScript MSI projects only)</h3>
+<p>Using the <strong>/f1</strong> argument allows you to specify where the <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/SetupIss.htm">response file</a> is (or where it should be created) and what its name is, as in <tt>Setup.exe /s /f1"C:\Temp\Setup.iss"</tt>.
+The /f1 switch is available both when creating a response file (with
+the /r option) and when using a response file (with the /s option).</p>
+
+<h3><a name="f2Param">/f2 : Specify alternative log file name</a> (InstallScript and InstallScript MSI projects only)</h3>
+<p>When running an InstallScript MSI or InstallScript installation in silent mode (using the /s argument), the log file <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/SetupLog.htm">Setup.log</a>
+is by default created in the same directory and with the same name
+(except for the extension) as the response file. The /f2 argument
+allows you to specify an alternative log file location and file name,
+as in <tt>Setup.exe /s /f2"C:\Setup.log"</tt>.</p>
+
+<h2>SMS Data</h2>
+
+<h3><a name="mParam">/m : Generate MIF file</a> (InstallScript projects only)</h3>
+<p>The <strong>/m</strong> switch causes Setup.exe to generate an SMS Management Information Format (MIF) file. A typical command is <tt>Setup.exe /m"SampleApp"</tt>. (Including the &#8220;.mif&#8221; file extension is not necessary.)</p>
+
+<h3><a name="m1Param">/m1 : Specify serial number in MIF file</a> (InstallScript projects only)</h3>
+<p>Using the <strong>/m1</strong> parameter (along with /m) enables you to specify a serial number to be written to the MIF file. A typical command is <tt>Setup.exe /m"SampleApp" <strong>/m1"1234-5678"</strong></tt>.</p>
+<h3><a name="m2Param">/m2 : Specify locale string in MIF file</a> (InstallScript projects only)</h3>
+<p>Using the <strong>/m2</strong> parameter (along with /m) enables you to specify a locale string to be written to the MIF file. A typical command is <tt>Setup.exe /m"SampleApp" <strong>/m2"ENU"</strong></tt>.</p>
+
+<h2>Download and Cache Locations (Windows Installer based projects only)</h2>
+
+<h3><a name="uaParam">/ua : Specify URL for InstMsiA.exe</a><br>
+<span class="helpTitleSub2"><a name="uwParam">/uw : Specify URL for InstMsiW.exe</a></span></h3>
+
+<p>In the Release Wizard, you can specify <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/IWPReleaseMsiLocation.htm">download locations</a>
+for the Windows Installer installers InstMsiA.exe and InstMsiW.exe. A
+user can specify an alternative URL at run time using the <strong>/ua</strong> and <strong>/uw</strong> switches, as in <tt>Setup.exe /uw"http://www.otherlocation.com/engines"</tt>. The file name is not necessary.</p>
+
+<h3><a name="usParam">/us : Specify URL to ISScript.msi</a></h3>
+
+<p>In the Release Wizard, you can specify a <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/IWPReleaseISEngine.htm">download location</a> for the InstallScript engine installer ISScript.msi. A user can specify an alternative URL using the <strong>/us</strong> switch, as in <tt>Setup.exe /us"http://www.otherlocation.com/isengine"</tt>. The file name is not necessary.</p>
+
+<h3><a name="umParam">/um : Specify URL to .msi package</a></h3>
+
+<p>In the Release Wizard, for a Downloader build, you can specify a <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/IWPReleaseDownloaderOptions.htm">download location</a> for your MSI database. A user can specify an alternative URL using the <strong>/um</strong> switch, as in <tt>Setup.exe /um"http://www.otherlocation.com/packages/product.msi"</tt>.</p>
+
+<h3><a name="bParam">/b : Cache installation locally</a></h3>
+
+<p>In the Release Wizard, for a Downloader build, you can specify whether to <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/IWPReleaseLocalMachine.htm">cache the contents of a compressed package</a> on the local system. With the <strong>/b</strong> argument, the user can specify the directory in which to cache the installation files, as in <tt>Setup.exe /b"C:\CacheDirectory"</tt>.</p>
+
+<h2>Passing Data to the Installation</h2>
+
+<h3><a name="vParam">/v : pass arguments to Msiexec</a> (Windows Installer-based projects only)</h3>
+
+<p>The <strong>/v</strong> argument is used to pass <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/IHelpCmdLineMSI.htm">command line switches</a> and values of <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/IHelpPropReference.htm">public properties</a> through to Msiexec.exe.</p>
+
+<h3><a name="zParam">/z : Pass arguments to <span class="clsFnName">CMDLINE</span> variable</a> (InstallScript MSI projects only)</h3>
+
+<p>The <strong>/z</strong> argument is used to pass data to the InstallScript system variable <a href="http://helpnet.installshield.com/robo/projects/devstudio9helplangref/LangrefCMDLINE.htm" class="clsFnName">CMDLINE</a>, as in <tt>Setup.exe /z"My Custom Data"</tt>, after which the variable CMDLINE would contain the string "My Custom Data".</p>
+
+
+<h2>Debugging</h2>
+
+<h3><a name="dParam">/d : Debug InstallScript</a> (InstallScript projects only)</h3>
+
+<p>For an InstallScript project, running the command <tt>Setup.exe /d</tt> runs the installation program with the <a href="http://helpnet.installshield.com/robo/projects/devstudio9helpisdbg/DebugThe_Visual_Debugger.html">InstallScript debugger</a>.</p>
+
+<img src="IHelpSetup_EXECmdLine_data/note.gif" alt="Note"><br><p class="notetext">Debugging
+InstallScript code requires the debug-information file Setup.dbg to be
+available. To debug an InstallScript project on a system other than the
+development system:
+</p><ol>
+<li>Copy the InstallScript debugger executable ISDbg.exe (located in
+the System folder of your InstallShield DevStudio distribution) to the
+test system, and register it by launching the executable with the <tt>/REGSERVER</tt> command line argument.</li>
+<li>Copy Setup.dbg to the test system.</li>
+<li>Run Setup.exe with the command <tt>Setup.exe /d"&lt;path&gt;"</tt>, where <em>path</em> is the directory containing Setup.dbg.</li>
+</ol>
+<p></p>
+
+<p>For a Basic MSI project, the command <tt>Setup.exe /v"ISSCRIPTDEBUG=1 ISSCRIPTDEBUGPATH=\"path-to-Setup.dbg\""</tt> runs your InstallScript custom actions in the InstallScript debugger.</p>
+
+<h3><a name="verboseParam">/verbose : Generate verbose InstallScript engine log file</a> (InstallScript projects only)</h3>
+
+<p>For an InstallScript project, you can create a verbose InstallScript-engine-installation log file using the <strong>/verbose</strong> argument followed by the path to the log file you want to create. A typical command is <tt>Setup.exe /verbose"C:\IS.log"</tt>.
+The log file generated can help you troubleshoot errors in installing
+the InstallScript engine on a target system. The /verbose option
+requires a full path to the log file, and not a relative path.</p>
+
+<img src="IHelpSetup_EXECmdLine_data/tip.gif" alt="Tip"><br><p class="notetext">To
+create a verbose InstallScript log file every time you run an
+InstallScript installation program, you can create the registry key&#8212;<br><br>
+HKEY_CURRENT_USER\Software\InstallShield\DevStudio\9.0\SetupExeLog<br><br>
+&#8212;and inside the key create a string value called <strong>VerboseLogFileName</strong>, with data set to the path to the log file (as in <strong>C:\IS.log</strong>).
+</p>
+
+<h2>Miscellaneous</h2>
+
+<h3><a name="delayedstartParam">/delayedstart:&lt;number of seconds&gt; : Delay initialization of the setup </a> (InstallScript and InstallScript MSI projects only)</h3>
+<p>Specifies the amount of time (in seconds) by which initialization of the setup is delayed after Setup.exe is launched.</p>
+
+<img src="IHelpSetup_EXECmdLine_data/tip.gif" alt="Tip" height="85" width="348"><br>	
+<p class="notetext">Using the -delayedstart option is recommended when
+manually launching an additional setup after reboot (for example, by
+using the RunOnce key). The delay allows the operation system to
+initialize completely; this prevents the problems&#8212;such as Remote
+Procedure Call (RPC) errors&#8212;that can occur if a setup initializes
+before the operating system has initialized completely. The recommended
+delay length is 30 seconds.<br>
+<br>
+Note that this option is not needed when the setup starts automatically
+after reboot (for example, due to a call to SdFinishReboot before
+reboot).</p>
+ 
+<h3><a name="deleterParam">/deleter : Do not clone a second Setup.exe process when debugging</a> (InstallScript and InstallScript MSI projects only)</h3>
+<p>Use this option when <a href="http://helpnet.installshield.com/robo/projects/devstudio9helpisdbg/DebugDebugADLLFunctionCalledFromMySetupScript.htm">debugging a DLL function that is called from your setup script</a>.
+This option specifies that Setup.exe does not clone a second Setup.exe
+process to perform the actual work of the setup. (By default, Setup.exe
+clones a second process, so that it properly uninstalls applications
+from machines on which no InstallScript setup had previously been run.)</p>
+
+<h3><a name="extract_allParam">/extract_all:&lt;path&gt; : Package's files should not be run but simply extracted</a> (InstallScript and InstallScript MSI projects only)</h3>
+<p>Specifies that a <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/IWPReleaseGeneral.htm">self-extracting package's</a> files should not be run but simply extracted to the location that is specified by &lt;path&gt;.</p>
+
+<h3><a name="fParam">/f : Specify alternative compiled script</a> (InstallScript and InstallScript MSI projects only)</h3>
+<p>By default, Setup.exe looks for a compiled script file named
+Setup.inx. To specify a different name for the compiled script file,
+use the /f option, as in <tt>Setup.exe /f"script.inx"</tt>.</p>
+
+<img src="IHelpSetup_EXECmdLine_data/note.gif" alt="Note"><br><p class="notetext">The Setup.exe created by earlier versions of InstallShield&#8212;Windows Installer Edition used the <strong>/f</strong> option to repair an installation.</p>
+
+<h3><a name="hParam">/h : Clone release to a temporary location and run from that location</a> (Windows Installer based projects only)</h3>
+
+<p>The build engine automatically creates a setup that supports
+Setup.exe cloning in cases where cloning is required (for example,
+multi-disk setups). If you need to do this manually, pass /h to
+Setup.exe and it will clone itself to a temporary location and run from
+that location. </p>
+
+<h3><a name="hide_usdParam">/hide_usd : Suppress update dialog box for multiple installations</a> (InstallScript and InstallScript MSI projects only)</h3>
+
+<p>Suppresses display of the dialog box that is displayed by an <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/CreateASetupToUpdateMyProduct.htm">update-enabled setup</a> to let the end user select which of <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/RunningASetupMultipleTimes.htm">multiple installations</a>
+of your product will be updated. This dialog box is displayed by
+default when an update-enabled setup detects multiple previous
+installations. When this command line option is used and an
+update-enabled setup detects multiple previous installations, the setup
+updates the first previous installation that it finds.</p>
+
+<h3><a name="igParam">/ig : Specify the value of the system variable INSTANCE_GUID</a> (InstallScript and InstallScript MSI projects only)</h3>
+
+<p>Specifies the value of the system variable <a href="http://helpnet.installshield.com/robo/projects/devstudio9helplangref/INSTALL_GUID.htm">INSTANCE_GUID</a>;
+for example, -ig{722C7440-B317-4B3B-AECA-0199EA4E7CDB}. If this option
+is not used, the setup automatically assigns a value to INSTANCE_GUID
+(for multi-instance setups, this value is a newly generated GUID; for
+standard setups, this value is the same as the value of PRODUCT_GUID).
+This option is useful if you have created a setup launcher&#8212;that is, a
+custom application that runs before your setup does to perform
+pre-setup tasks, such as determining the instance GUID that you want to
+use for the setup. Do not specify anything other than a valid GUID with
+this option.</p>
+
+<h3><a name="lParam">/L : Setup language</a></h3>
+
+<p>Users can use the <strong>/L</strong> switch with the decimal <a href="http://helpnet.installshield.com/robo/projects/helplibdevstudio9/IHelpGlobLangIdentifiers.htm">language ID</a> to specify the language used by a multi-language installation program.  For example, the command to specify German is <tt>Setup.exe /L1031</tt> for Windows Installer based installations (including InstallScript MSI installations) or <tt>Setup.exe /L0007</tt> for InstallScript installations.</p>
+
+<h3><a name="wParam">/w : Wait</a> (Windows Installer based projects only)</h3>
+
+<p>For a Basic MSI project, the <strong>/w</strong> argument forces Setup.exe to wait until the installation is complete before exiting.</p>
+
+<img src="IHelpSetup_EXECmdLine_data/tip.gif" alt="Tip"><br>
+<p class="notetext">If you are using the /w option in a batch file, you may want to precede the entire Setup.exe command line argument with <em>start /WAIT</em>.  A properly formatted example of this usage is as follows:</p>
+<p class="notetext"><tt>start /WAIT setup.exe /w</tt></p>
+
+
+<h3><a name="smsParam">/SMS : Wait</a> (InstallScript MSI projects only)</h3>
+
+<p>For an InstallScript MSI project, Setup.exe automatically waits for
+the installation to finish before exiting, so this switch (used by
+earlier versions of InstallShield Professional) is no longer necessary.</p>
+
+<br>
+
+
+<!--
+
+<h2><a name="vParam">Passing Parameters to the .msi File Within Setup.exe</a></h2>
+
+<p>If you include Setup.exe as part of your setup, you may need to pass command line parameters to the .msi package stored within Setup.exe.  To pass arguments to the .msi file, use the /v option.  Once you specify this option, you can list any of the supported parameters that can be passed to <a href="IHelpCmdLineMSI.htm">Msiexec.exe</a>.  For example, this is how you would apply a transform:</p>
+
+<p><tt>Setup.exe /v"TRANSFORMS=\"C:\Transforms\My Transform.mst\""</tt></p>
+
+<p>There are a few special formatting rules that you need to follow when passing a parameter in this way.  First, you need to place a backslash (\) in front of any quotation mark that resides within existing quotes.  For example, the command line above contains the following: <tt>/v"TRANSFORMS=\"C:\Transforms\My Transform.mst\""</tt>.  Because the path to the transform is a long path, you need to use quotes.  However, since you need to have quotes around the complete argument, if you do not use the backslash in front of all internal quotes, the command line statement fails.</p>
+
+<p>Another formatting rule dictates that there cannot be a space between the command line option (/v) and the arguments that you are passing, as illustrated in the example above.</p>
+
+<p>Finally, if you are passing multiple parameters using the /v option, you need to separate them with a space&mdash;for example, <tt>Setup.exe /v"TRANSFORMS=\"C:\Transforms\MyTransforms.mst\" /qn"</tt>. This command applies a transform and runs the setup silently.</p>
+
+<h2><a name="sParam">Running Setup.exe Silently</a></h2>
+
+<p>If you do not want the Setup.exe to display a progress bar when it launches, you can use the /s command line parameter. For example, if you enter <tt>Setup.exe /s</tt>, Setup.exe launches, but the user interface is not displayed.  If you want the .msi setup to run silently as well, you will need to pass the /qn command line parameter through Setup.exe using the /v parameter&mdash;for example, <tt>Setup.exe /s /v/qn</tt>.</p>
+
+<p>If you included the <a href="IWPReleaseLangs.htm">Setup Languages dialog</a> to offer your end users the ability to select which language the setup will run in, this dialog will not be displayed. Instead, the setup will run in the target machine's default language, if available.  If the target machine's language is not one of the included languages, the setup will run in its default language, which is by default English.  Users can specify a particular language from the command line by using the /L parameter.</p>
+
+<p><img src="Note.gif" alt="Note" align="left">If your setup is password protected, users must also pass the <a href="#pParam">/p parameter</a>.<br clear="left"></p>
+
+<span class="clsISWIAll"><h2><a name="lParam">Specifying the Setup Language from the Command Line</a></h2>
+
+<p>When you include multiple languages in your setup, InstallShield creates the setup in your default language and then creates <a href="IHelpTransforms.htm">transforms</a> for every other language that you include.  If you choose to have the target machine's locale <a href="IHelpGlobLangDlg.htm">determine which language the setup runs in</a>, a transform may or may not be applied, depending on the system locale.  Because these languages are applied in the form of transforms, it is possible to set the language from Setup.exe's command line using the /v option.
+
+<h3>Drawbacks of Using the /v Parameter</h3>
+<p>There are two major drawbacks to specifying your language in using the /v parameter. To avoid these drawbacks, you should use the /L parameter.</p>
+
+<p>The first drawback is the fact that the language transform you specify is appended to the language transform that is applied by detecting the system's locale. For example, you could build a setup with two languages&mdash;English and German&mdash;and set it up so the setup will run in German if the target machine's locale is set to German. If you then decide that you want to have the setup always run in German and use the /v command line parameter to apply the German transform, the .msi file will receive the following command:</p>
+
+<p><tt>TRANSFORMS=1031.mst;1031.mst</tt></p>
+
+<p>However, if you use the /L parameter, the original transform will not be applied, and the .msi file will receive the following command:</p>
+
+<p><tt>TRANSFORMS=1031.mst</tt></p>
+
+<p>Functionally, it makes no difference which parameter you use. However, by using a parameter that applies the transform twice, you are doubling the amount of time it takes for the setup to start.</p>
+
+<p>The second drawback to using the /v parameter is the fact that Setup.exe will not run in the correct language. The only way to ensure that Setup.exe runs in the language that you are specifying from the command line is to use the /l parameter.</p>
+
+<h3>Using the /L Parameter</h3>
+
+<p>Instead of specifying a transform, you need to specify the decimal <a href="IHelpGlobLangIdentifiers.htm">language ID</a>.  For example, the command to specify German would be <tt>Setup.exe /L1031</tt>.</p>
+  </span>
+
+<h2><a name="pParam">Specifying a Password from the Command Line</a></h2>
+
+<p>Users can specify the password for a <a href="IWPReleasePswdCopyright.htm">password-protected setup</a> by using the /p option. If a user runs a password-protected setup in silent mode, the password must be specified on the command line or the installation will fail.</p>
+
+<p>To run a password-protected setup silently, enter the following statement at the command line: </p>
+
+<p><tt>Setup.exe /s /v/qn /p&quot;<em>password</em>&quot;</tt></p>
+
+<h2>Specifying the Installation Mode from the Command Line</h2>
+
+<p>You can define what mode you would like your setup to run in by using the /a (Administration), /j (Advertise), or /x (Uninstall) parameters.  Each of these options is explained in detail below.</p>
+
+<h3><a name="aParam">Administration</a></h3>
+
+<p>When you run a setup in administration mode you can install a setup to the network, which will allow any one with access to that directory the ability to install that setup on their local machine.  No additional parameters are necessary for this option.</p>
+
+<h3><a name="jParam">Advertise</a></h3>
+
+<p>Advertisement is a type of &ldquo;just-in-time&rdquo; installation in which features are installed when they are requested from the installer and not installed immediately during setup. When you launch <a href="IHelpCmdLineMSI.htm">MsiExec.exe</a> with the <tt>/j &lt;package&gt;</tt> option, the components are advertised on the end user's system, but not immediately installed. In most cases the user has the option to advertise features in the <a href="IHelpCustomSetupDlg.htm">Custom Setup</a> dialog.  See <a href="IHelpCmdLineMSI.htm">MsiExec.exe Command Line Parameters</a> for information on the proper syntax for this parameter.</p>
+
+<h3><a name = "xParam">Uninstall</a></h3>
+
+<p>If you would like to uninstall your setup from the command line, you will need to use the /x option&mdash;for example, <tt>Setup.exe /v /x</tt>.  No additional parameters are required.</p>
+
+<h3><a name="fParam">Repair</a></h3>
+
+<p><span class="clsISWIAll">When you launch a setup in repair mode, it  makes sure that the <a href="IHelpSetKeyFile.htm">key file</a> of every component is installed and uncorrupted.</span>  If the setup detects that one of these files is missing or corrupted, it attempts to repair the problem.  To launch a setup in repair mode from the command line, use the <tt>/f</tt> option.  See <a href="IHelpCmdLineMSI.htm">MsiExec.exe Command Line Parameters</a> for information on the proper syntax for this parameter.</p>
+
+<h3><a name="wParam">Wait</a></h3>
+
+<p>Use this command line option to have Setup.exe wait until MsiExec.exe is finished before Setup.exe exits.  In addition, the /w command also returns any return codes generated by MsiExec.exe.</p>
+
+<p>The /w switch has no effect on Setup.exe for a Standard project: Setup.exe automatically waits until the installation is complete.</p>
+
+
+
+-->
+
+<!-- begin footer -->
+<hr>
+<p class="freshness"><script language="JScript" type="text/jscript">document.write(modstamp);</script></p>
+<!-- end footer -->
+
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</body></html>

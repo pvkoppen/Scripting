@@ -1,0 +1,1096 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN"
+"http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<html>
+ <head>
+  <link href="../book.css" rel="stylesheet" media="all">
+
+  <title>Chapter 2 CSS</title>
+ </head>
+
+ <body>
+  <div class="Section1"> 
+   <h1 id="chapter">Chapter 2<br>
+    CSS</h1>
+
+   <div class="Note"> 
+    <p class="Body1">This is chapter 2 of the book <a
+     href="http://cseng.aw.com/bookpage.taf?ISBN=0-201-59625-3&amp;ptype=2847"><cite>Cascading
+     Style Sheets, designing for the Web,</cite></a> by Håkon Wium Lie
+     and Bert Bos (2nd edition, 1999, Addison Wesley, ISBN
+     0-201-59625-3) 
+   </div>
+
+   <p class="Body1">As we explained in the previous chapter, HTML
+    elements enable Web page designers to mark up a document as to its
+    structure. The HTML specification lists guidelines on how browsers
+    should display these elements. For example, you can be reasonably
+    sure that the contents of a <span class="Element">strong</span>
+    element will be displayed bold-faced. Also, you can pretty much
+    trust that most browsers will display the content of an <span
+    class="Element">h1</span> element using a big font size... at least
+     bigger than the <span class="Element">p</span> element and bigger
+    than the <span class="Element">h2</span> element. But beyond trust
+    and hope, you don't have any control over how your text appears. 
+
+   <p>CSS changes that. CSS puts the designer in the driver's seat. We
+    devote much of the rest of this book to explaining what you can do
+    with CSS. In this chapter, we begin by introducing you to the
+    basics of how to write style sheets and how CSS and HTML work
+    together to describe both the structure and appearance of your
+    document. 
+
+   <div class="Section2"> 
+    <h2 id="rules">Rules and Style Sheets</h2>
+
+    <p class="Sidenote1">To start using CSS, you don't even have to
+     write style sheets. Chapter 16 will tell you how to point to
+     existing style sheets on the Web. 
+
+    <p class="Body0">There are two ways to create CSSs. You can either
+     use a normal text editor and write the style sheets "by hand," or
+     you can use a dedicated tool - for example a Web page design
+     application - which supports CSS. The dedicated tools allow you to
+      create style sheets without learning the syntax of the CSS
+     language. However, in many cases the designer will want to tweak
+     the style sheet by hand afterwards, so we recommend that you learn
+      to write and edit CSSs by hand. Let's get started! 
+
+    <pre class="CSS">H1 { color: green }</pre>
+
+    <p class="Body1">What you see above is a simple CSS rule that
+     contains one rule. A <dfn class="Defining-instance">rule</dfn> is
+     a statement about one stylistic aspect of one or more elements. A
+     <dfn class="Defining-instance">style sheet</dfn> is a set of one
+     or more rules that apply to an HTML document. The rule above sets
+     the color of all first-level headings (<span
+     class="Element">h1</span>). Let's take a quick look at what the
+     visual result of the rule could be: 
+
+    <div class="Figure" id="figure"> 
+     <p class="Caption"><span class="Figure-No">Figure 2.1 </span> 
+
+     <p class="Art"><img alt="[image]" src="0.png"> 
+    </div>
+
+    <p class="Body1">We will now start dissecting the rule. 
+
+    <div class="Section3"> 
+     <h3>Anatomy of a rule</h3>
+
+     <p class="Body1">A rule consists of two parts: 
+
+     <ul>
+      <li class="Bulleted1">Selector - the part before the left curly
+       brace 
+
+      <li class="Bulleted">Declaration - the part within the curly
+       braces 
+       <div class="Figure"> 
+        <p class="Art"><img alt="[image]" src="anatomy-rule.png"> 
+       </div>
+     </ul>
+
+     <p class="Body1">The <dfn class="Defining-instance">selector</dfn>
+       is the link between the HTML document and the style. It
+      specifies what elements are affected by the declaration. The <dfn
+      class="Defining-instance">declaration</dfn> is that part of the
+      rule that sets forth what the effect will be. In the example
+      above, the selector is <span class="Element">h1</span> and the
+      declaration is "color: green." Hence, all <span
+      class="Element">h1</span> elements will be affected by the
+      declaration, that is, they will be turned green. (The <strong
+      class="Property">color</strong> property just affects the
+      foreground text color, there are other properties for background,
+       border, etc.) 
+
+     <p>The above selector is based on the <dfn
+      class="Defining-instance">type</dfn> of the element: it selects
+      all elements of type "<span class="Attribute">h1</span>." This
+      kind of selector is called <dfn class="Defining-instance">type
+      selector</dfn>. Any HTML element type can be used as a type
+      selector. Type selectors are the simplest kind of selectors. We
+      discuss other kinds of selectors in
+      <!--a class="XRef" href="selectors.html#10654"--> See CSS
+      selectors.<!--/a--> , "CSS selectors." 
+    </div>
+
+    <div class="Section3"> 
+     <h3>Anatomy of a declaration</h3>
+
+     <p class="Body1">A declaration has two parts separated by a colon:
+       
+
+     <ul>
+      <li class="Bulleted1">Property - that part before the colon 
+
+      <li class="Bulleted">Value - that part after the colon 
+       <div class="Figure"> 
+        <p class="Art"><img alt="[image]" src="anatomy-decl.png"> 
+       </div>
+     </ul>
+
+     <p class="Body1">The <dfn class="Defining-instance">property</dfn>
+       is a quality or characteristic that something possesses. In the
+      previous example, it is <strong class="Property">color</strong>.
+      CSS2 (see separate box) defines around 120 properties and we can
+      assign values to all of them. 
+
+     <div class="Sidebar"> 
+      <h2 id="css-specifications">CSS specifications</h2>
+
+      <p class="Body1">Cascading Style Sheets is formally described in
+       two specifications from W3C: CSS1 and CSS2. CSS1 was issued in
+       December 1996 and describes a simple formatting model mostly for
+        screen-based presentations. CSS1 has around 50 properties (for
+       example <strong class="Property">color</strong> and <strong
+       class="Property">font-size</strong>). CSS2 was finalized in May
+       1998 and builds on CSS1. CSS2 includes all CSS1 properties and
+       adds around 70 of its own, such as properties to describe aural
+       presentations and page breaks. In this book we do not try to
+       distinguish between CSS1 and CSS2 and use the term "CSS" unless
+       the distinction is important. Most features described in the
+       first four chapters are part of CSS1. If you would like to read
+       the CSS specifications themselves, you can find them from: 
+
+      <pre
+       class="HTML"><a href="http://www.w3.org/TR/REC-CSS1">http://www.w3.org/TR/REC-CSS1</a>
+      
+<a href="http://www.w3.org/TR/REC-CSS2">http://www.w3.org/TR/REC-CSS2</a>
+      </pre>
+     </div>
+
+     <p class="Body0">The <dfn class="Defining-instance">value</dfn> is
+       a precise specification of the property. In the example, it is
+      "green," but it could just as easily be blue, red, yellow, or
+      some other color. 
+
+     <p>The diagram below shows all ingredients of a rule. The curly
+      braces ({ }) and colon (:) make it possible for the browser to
+      distinguish between the selector, property, and value. 
+
+     <div class="Figure" id="figure0"> 
+      <p class="Caption"><span class="Figure-No">Figure 2.2
+       </span>Diagram of a rule. 
+
+      <p class="Art"><img alt="[image]" src="anatomy-diag.png"> 
+     </div>
+    </div>
+
+    <div class="Section3"> 
+     <h3>Grouping selectors and rules</h3>
+
+     <p class="Body1">In designing CSS, brevity was a goal. We figured
+      that if we could reduce the size of style sheets, we could enable
+       designers to write and edit style sheets "by hand." Also, short
+      style sheets load faster than longer ones. CSS therefore includes
+       several mechanisms to shorten style sheets by way of grouping
+      selectors and declarations. 
+
+     <p>For example, consider these three rules: 
+
+     <pre class="CSS">H1 { font-weight: bold }
+H2 { font-weight: bold }
+H3 { font-weight: bold }
+     </pre>
+
+     <p class="Body1">All three rules have exactly the same declaration
+       - they set the font to be bold. (This is done using the <strong
+      class="Property">font-weight</strong> property, which we discuss
+      in <!--a class="XRef" href="fonts.html#25004"--> See
+      Fonts.<!--/a--> .) Since all three declarations are identical, we
+       can group the selectors into a <dfn
+      class="Defining-instance">comma-separated list</dfn> and only
+      list the declaration once, like this: 
+
+     <pre class="CSS">H1, H2, H3 { font-style: bold }</pre>
+
+     <p class="Body1">This rule will produce the same result as the
+      first three. 
+
+     <p>A selector may have more than one declaration. For example, we
+      could write a style sheet with these two rules: 
+
+     <pre class="CSS">H1 { color: green }
+H1 { text-align: center }</pre>
+    
+
+     <p class="Body1">In this case, we set all <span
+      class="Element">h1</span>s to be green and to be centered on the
+      canvas. (This is done using the <strong
+      class="Property">text-align</strong> property, discussed in
+      Chapter <!--a class="XRef" href="fonts.html#25004"--> 5<!--/a-->
+      .) 
+
+     <p>But we can achieve the same effect faster by grouping the
+      declarations that relate to the same selector into a <dfn
+      class="Defining-instance">semicolon-separated list</dfn>, like
+      this: 
+
+     <pre class="CSS">H1 {
+  color: green;
+  text-align: center;
+}</pre>
+    
+
+     <p class="Body1">All declarations must be contained within the
+      pair of curly braces. A semicolon separates the declarations and
+      may - but doesn't have to - also appear at the end of the last
+      declaration. Also, to make your code easier to read, we suggest
+      you place each declaration on its own line, as we did here.
+      (Browsers won't care, they'll just ignore all the extra
+      whitespace and line breaks.) 
+
+     <p>Now you have the basics of how to create CSS rules and style
+      sheets. However, you're not done yet. In order for the style
+      sheet to have any effect you have to "glue" your style sheet to
+      your HTML document. 
+    </div>
+   </div>
+
+   <div class="Section2"> 
+    <h2 id="quotgluingquot">"Gluing" Style Sheets to the Document</h2>
+
+    <p class="Body1">For any style sheet to affect the HTML document,
+     it must be "glued" to the document. That is, the style sheet and
+     the HTML document must be combined so that they can work together
+     to present the document. This can be done in any of four ways: 
+
+    <ol>
+     <li class="Numbered1">Apply the basic, document-wide style sheet
+      for the document by using the <span class="Element">style</span>
+      element. 
+
+     <li class="Numbered">Apply a style sheet to an individual element
+      using the <span class="Attribute">style</span> attribute. 
+
+     <li class="Numbered">Link an external style sheet to the document
+      using the <span class="Element">link</span> element. 
+
+     <li class="Numbered">Import a style sheet using the CSS @import
+      notation. 
+    </ol>
+
+    <p class="Body1">In the next section, we discuss the first method:
+     using the <span class="Element">style</span> element. We discuss
+     using the <span class="Attribute">style</span> attribute in
+     Chapter <!--a class="XRef" href="selectors.html#10654"-->
+     4<!--/a--> , "CSS selectors," and using the <span
+     class="Element">link</span> element and the @import notation in
+     Chapter <!--a class="XRef" href="external.html#16505"-->
+     16<!--/a--> , "External style sheets." 
+
+    <div class="Section3"> 
+     <h3>Gluing by using the STYLE element</h3>
+
+     <p class="Body1">You can glue the style sheet and the HTML
+      document together by putting the style sheet inside a <span
+      class="Element">style</span> element at the top of your document.
+       The <span class="Element">style</span> element was introduced in
+       HTML specifically to allow style sheets to be inserted inside
+      HTML documents. Here's a style sheet (shown in bold) glued to a
+      sample document by using the <span class="Element">style</span>
+      element. The result is shown in Figure <!--a class="XRef"
+href="enter.html#27863"-->
+      2.3<!--/a--> . 
+
+     <pre class="HTML">&lt;HTML&gt;
+  &lt;TITLE&gt;Bach's home page&lt;/TITLE&gt;
+<b class="Code-emphasis">  &lt;STYLE&gt;
+    H1, H2 { color: green }
+  &lt;/STYLE&gt;</b>
+  &lt;BODY&gt;
+    &lt;H1&gt;Bach's home page&lt;/H1&gt;
+    &lt;P&gt;Johann Sebastian Bach was a prolific
+        composer. Among his works are:
+    &lt;UL&gt;
+      &lt;LI&gt;the Goldberg Variations
+      &lt;LI&gt;the Brandenburg Concertos
+      &lt;LI&gt;the Christmas Oratorio
+    &lt;/UL&gt;
+    &lt;H2&gt;Historical perspective&lt;/H2&gt;
+    &lt;P&gt;Bach composed in what has been referred to as
+      the Baroque period.
+  &lt;/BODY&gt;
+&lt;/HTML&gt;</pre>
+
+     <div class="Figure" id="figure1"> 
+      <p class="Caption"><span class="Figure-No">Figure 2.3 </span>The
+       result of adding to a style sheet a rule to turn <span
+       class="Element">h1</span>s green and then gluing the style sheet
+        to the document using the <span class="Element">style</span>
+       elements. <a class="try" href="ex1.html">(try it)</a> 
+
+      <p class="Art"><img alt="[image]" src="1.png"> 
+     </div>
+
+     <p class="Body1">Notice that the <span
+      class="Element">style</span> element is placed after the <span
+      class="Element">title</span> element and before the <span
+      class="Element">body</span> element. The title of a document does
+       not show up on the canvas, so it is not affected by CSS styles. 
+
+     <p>The content of a <span class="Element">style</span> element is
+      a style sheet. However, whereas the content of such elements as
+      <span class="Element">h1</span>, <span class="Element">p</span>,
+      and <span class="Element">ul</span> appears on the canvas, the
+      content of a <span class="Element">style</span> element does not
+      show on the canvas. Rather, it is the <em>effect</em> of the
+      content of the <span class="Element">style</span> element - the
+      style sheet - that appears on the canvas. So you don't see "{
+      color: green }" displayed on your screen; you see instead two
+      <span class="Element">h1</span> elements colored green. No rules
+      have been added that affect any of the other elements, so those
+      elements appear in the browser's default color. 
+    </div>
+   </div>
+
+   <div class="Section2"> 
+    <h2 id="browsers">Browsers and CSS</h2>
+
+    <p class="Sidenote1">For an updated overview of available browsers,
+      see the <a href="http://www.w3.org/Style/CSS/#browsers">W3C
+     overview page</a> 
+
+    <p class="Body1">For CSS to work as described in this book, you
+     must use a CSS-enhanced browser, that is, a browser that supports
+     CSS. A CSS-enhanced browser will recognize the <span
+     class="Element">style</span> element as a container for a style
+     sheet and present the document accordingly. Most browsers that are
+      distributed today support CSS, for example Microsoft Internet
+     Explorer 4 (IE4), Netscape Navigator 4 (NS4) and Opera 3.5 (O3.5).
+      Conservative estimates indicate that more than half the people on
+      the Web use a CSS-enhanced browser, and the figures are steadily
+     rising. Chances are that the people you communicate with have
+     CSS-enhanced browsers. If not, give them a reason to upgrade! 
+
+    <p class="Sidenote1">The best source for information on how
+     different browsers support CSS is <a
+     href="http://webreview.com/wr/pub/guides/style/mastergrid.html">WebReview's
+     charts</a> 
+
+    <p>Alas, not all CSS implementations are perfect. When you start
+     experi­menting with style sheets, you will soon notice that each
+     browser comes with a set of bugs and limitations. In general,
+     newer browsers behave better than older ones. IE4 and O3.5 are
+     among the best, and Netscape's next offering - code-named Gecko -
+     also promises much improved support for CSS. 
+
+    <p>Those who don't use CSS-enhanced browsers can still read pages
+     that use style sheets. CSS was carefully designed so that all
+     content should remain visible even if the browser knows nothing
+     about CSS. Some browsers, such as Netscape's Navigator version 2
+     and 3 don't support style sheets but they know enough about the
+     <span class="Element">style</span> element to fully ignore it.
+     Next to supporting style sheets, this is the correct behavior. 
+
+    <p>However, other browsers that do not know the <span
+     class="Element">style</span> element, such as Netscape's
+     Navigator 1 and Microsoft Internet Explorer 2, will ignore the
+     <span class="Element">style</span> <em>tags</em> but display the
+     <em>content</em> of the <span class="Element">style</span>
+     element. Thus, the user will end up with the style sheet printed
+     on the top of the canvas. At the time of writing, only a few
+     percent of Web users will experience this problem. To avoid this,
+     you can put your style sheet inside an <dfn
+     class="Defining-instance">HTML comment</dfn>, which we discussed
+     in Chapter <!--a class="XRef"
+href="html.html#22671"--> 1<!--/a-->
+      . Because comments don't display on the screen, by placing your
+     style sheet inside an HTML comment, you prevent the oldest
+     browsers from displaying the <span class="Element">style</span>
+     element's content. CSS-enhanced browsers are aware of this trick,
+     and will treat the content of the <span
+     class="Element">style</span> element as a style sheet. 
+
+    <p>Recall that HTML comments start with <code
+     class="HTML">&lt;!--</code> and end with <code
+     class="HTML">--&gt;</code>. Here's an excerpt from the previous
+     code example that shows how you write a style sheet in an HTML
+     comment. The comment encloses the <span
+     class="Element">style</span> element content only: 
+
+    <pre class="HTML">&lt;HTML&gt;
+  &lt;TITLE&gt;Bach's home page&lt;/TITLE&gt;
+  &lt;STYLE&gt;
+<b class="Code-emphasis">    &lt;!--</b>
+      H1 { color: green }
+<b class="Code-emphasis">    --&gt;</b>
+  &lt;/STYLE&gt;
+  &lt;BODY&gt;
+    ..
+  &lt;/BODY&gt; 
+&lt;/HTML&gt;</pre>
+
+    <p class="Sidenote1">CSS also has its own set of comments that you
+     can use within the style sheet. A CSS comment begins with "/*" and
+      ends with "*/." (Those familiar with the C programming language
+     will recognize these.) CSS rules inside a CSS comment will not
+     have any effect on the presentation of the document. 
+
+    <p class="Body1">The browser also needs to be told that you are
+     working with CSS style sheets. CSS is currently the only style
+     sheet language in use with HTML docu­ments and we don't expect
+     this to change. For XML the situation might be different. But just
+      as there is more than one image format (GIF, JPEG and PNG come to
+      mind), there could be more than one style sheet language. So it's
+      a good habit to tell browsers that they are dealing with CSS. (In
+      fact, HTML requires you to.) This is done with the <span
+     class="Attribute">type</span> attribute of the <span
+     class="Element">style</span> ­element. The value of <span
+     class="Attribute">type</span> indicates what type of style sheet
+     is being used. For CSS, that value is "text/css." The following is
+      an excerpt from our previous sample document that shows you how
+     you would write this (in combination with the use of the HTML
+     comment): 
+
+    <pre class="HTML">&lt;HTML&gt;
+  &lt;TITLE&gt;Bach's home page&lt;/TITLE&gt;
+  &lt;STYLE <b class="Code-emphasis">TYPE="text/css"&gt;</b>
+    &lt;!--
+      H1 { color: green }
+    --&gt;
+  &lt;/STYLE&gt;
+  &lt;BODY&gt;
+    ..
+  &lt;/BODY&gt;
+&lt;/HTML&gt; </pre>
+
+    <p class="Body1">When the browser loads a document, it checks to
+     see if it understands the style sheet language. If it does, it
+     will try to read the sheet, otherwise it will ignore it. The <span
+     class="Attribute">type</span> attribute (see
+     Chapter <!--a class="XRef"
+href="html.html#22671"--> 1<!--/a-->
+     for a discussion on HTML attributes) on the <span
+     class="Element">style</span> element is a way to let the browser
+     know which style sheet language is being used. The <span
+     class="Attribute">type</span> attribute must be included. 
+
+    <p>To make examples easier to read, we have chosen not to wrap
+     style sheets in HTML comments, but we do use the <span
+     class="Attribute">type</span> attribute throughout this book. 
+   </div>
+
+   <div class="Section2"> 
+    <h2 id="tree-structures">Tree structures and inheritance</h2>
+
+    <p class="Body1">Recall from Chapter <!--a class="XRef"
+href="html.html#22671"-->
+     1<!--/a--> the discussion about HTML representing a document with
+     a tree-like structure and how elements in HTML have children and
+     parents. There are many reasons for having tree-structured
+     documents. For style sheets, there is one very good reason:
+     inheritance. Just as children inherit from their parents, so do
+     HTML elements. Instead of inheriting genes and money, HTML
+     elements inherit stylistic properties. 
+
+    <p>Let's start by taking a look at the sample document: 
+
+    <pre class="HTML">&lt;HTML&gt;
+  &lt;TITLE&gt;Bach's home page&lt;/TITLE&gt;
+  &lt;BODY&gt;
+    &lt;H1&gt;Bach's home page&lt;/H1&gt;
+    &lt;P&gt;Johann Sebastian Bach was a 
+      &lt;STRONG&gt;prolific&lt;/STRONG&gt; composer. Among his
+        works are:
+    &lt;UL&gt;
+      &lt;LI&gt;the Goldberg Variations
+      &lt;LI&gt;the Brandenburg Concertos
+      &lt;LI&gt;the Christmas Oratorio
+    &lt;/UL&gt;
+  &lt;/BODY&gt;
+&lt;/HTML&gt;</pre>
+
+    <p class="Body1">The tree structure of this document is: 
+
+    <div class="Figure"> 
+     <p class="Art"><img alt="[image]" src="anatomy-tree.png"> 
+    </div>
+
+    <p class="Body1">Through inheritance, CSS property values set on
+     one element will be transferred down the tree to its descendants.
+     For example, our examples have up to now set the color to be green
+      for <span class="Element">h1</span> and <span
+     class="Element">h2</span> elements. Now, say, you would like to
+     set the same color on all elements in your document. You could do
+     this by listing all element types in the selector: 
+
+    <pre class="HTML">&lt;STYLE TYPE="text/css"&gt;
+  H1, H2, P, LI { color: green }
+&lt;/STYLE&gt;</pre>
+
+    <p class="Body1">However, most HTML documents are more complex than
+      our sample docu­ment, and your style sheet would soon get long.
+     There is a better - and shorter - way. Instead of setting the
+     style on each element type, we set it on their common ancestor,
+     the <span class="Element">body</span> element: 
+
+    <pre class="HTML">&lt;STYLE TYPE="text/css"&gt;
+  BODY { color: green } 
+&lt;/STYLE&gt;</pre>
+
+    <p class="Body1">Since other elements inherit properties from the
+     <span class="Element">body</span> element, they will all inherit
+     the color green (Figure <!--a class="XRef"
+href="enter.html#33435"-->
+     2.4<!--/a--> ). 
+
+    <div class="Figure" id="figure2"> 
+     <p class="Caption"><span class="Figure-No">Figure 2.4 </span>The
+      result of inheritance. <a class="try" href="ex2.html">(try
+      it)</a> 
+
+     <p class="Art"><img alt="[image]" src="2.png"> 
+    </div>
+
+    <p class="Body1">As you have seen above, inheritance is a transport
+      vehicle that will distribute stylistic properties to descendants
+     of an element. Since the <span class="Element">body</span> element
+      is a common ancestor for all visible elements, <span
+     class="Element">body</span> is a convenient selector when you want
+      to set stylistic rules for the entire document. 
+   </div>
+
+   <div class="Section2"> 
+    <h2 id="overriding">Overriding Inheritance</h2>
+
+    <p class="Body1">In the previous example, all elements were given
+     the same color through inheritance. Sometimes, however, children
+     don't look like their parents. Not surprisingly, CSS also accounts
+      for this. Say you would like for <span class="Element">h1</span>
+     elements to be blue while the rest should be green. This is easily
+      expressed in CSS: 
+
+    <pre class="HTML">&lt;STYLE TYPE="text/css"&gt;
+  BODY { color: green }
+  H1 { color: navy }
+&lt;/STYLE&gt;</pre>
+
+    <p class="Body1">Since <span class="Element">h1</span> is a child
+     element of <span class="Element">body</span> (and thereby inherits
+      from <span class="Element">body</span>), the two rules in the
+     above style sheet are conflicting. The first one sets the color of
+      the <span class="Element">body</span> element - and thereby also
+     the color of <span class="Element">h1</span> through inheritance -
+      while the second one sets the color specifically on the <span
+     class="Element">h1</span> element. Which rule will win? Let's find
+      out: 
+
+    <div class="Figure"> 
+     <p class="Caption"><a class="try" href="ex3.html">(try it)</a> 
+
+     <p class="Art"><img alt="[image]" src="3.png"> 
+    </div>
+
+    <p class="Body1">The reason why the second rule wins is that it is
+     more <dfn class="Defining-instance">specific</dfn> than the first.
+      The first rule is very general - it affects all elements on the
+     canvas. The ­second rule only affects <span
+     class="Element">h1</span> elements in the document and is
+     therefore more specific. 
+
+    <p>If CSS had been a programming language, the order in which the
+     rules were specified would determine which of them would win. CSS
+     is not a programming language, and in the above example, the order
+      is irrelevant. The result is exactly the same if we use this
+     style sheet: 
+
+    <pre class="HTML">&lt;STYLE TYPE="text/css"&gt;
+  H1 { color: navy }
+  BODY { color: green }
+&lt;/STYLE&gt;</pre>
+
+    <p class="Body1">CSS has been designed to resolve conflicts between
+      style sheet rules like the one above. Specificity is one aspect
+     of that. You can find the details in Chapter <!--a
+class="XRef" href="cascade.html#34594"-->
+     15<!--/a--> , "Cascading and inheritance." 
+   </div>
+
+   <div class="Section2"> 
+    <h2 id="properties">Properties that don't inherit</h2>
+
+    <p class="Body1">As a general rule, properties in CSS inherit from
+     parent to child elements as described in the previous examples.
+     Some properties, however, don't inherit and there is always a good
+      reason why. We will use the <strong
+     class="Property">background</strong> property (described in
+     Chapter 11) as an example of a property that doesn't inherit. 
+
+    <p>Let's say you want to set a background image for a page. This is
+      a common effect on the Web. In CSS, you can write: 
+
+    <pre class="HTML">&lt;HTML&gt;
+  &lt;TITLE&gt;Bach's home page&lt;/TITLE&gt;
+  &lt;STYLE TYPE="text/css"&gt;
+    BODY { 
+      background: url(texture.gif) white;
+      color: black;
+    }
+  &lt;/STYLE&gt;
+  &lt;BODY&gt;
+    &lt;H1&gt;Bach's &lt;EM&gt;home&lt;/EM&gt; page&lt;/H1&gt;
+    &lt;P&gt;Johann Sebastian Bach was a prolific
+      composer.
+  &lt;/BODY&gt;
+&lt;/HTML&gt;</pre>
+
+    <p class="Body1">The <strong class="Property">background</strong>
+     property has a URL ("texture.gif") that points to a background
+     image as value. When the image is loaded, the canvas looks like: 
+
+    <div class="Figure"> 
+     <p class="Caption"><a class="try" href="ex4.html">(try it)</a> 
+
+     <p class="Art"><img alt="[image]" src="4.png"> 
+    </div>
+
+    <p class="Body1">There are a few noteworthy things in the above
+     example: 
+
+    <ul>
+     <li class="Bulleted1">The background image covers the surface like
+       a wallpaper - also the backgrounds of the <span
+      class="Element">h1</span> and <span class="Element">p</span>
+      element have been covered. This is not due to inheritance, but to
+       the fact that unless otherwise set, all backgrounds are
+      transparent. So, since we haven't set the backgrounds of the
+      <span class="Element">h1</span> or <span class="Element">p</span>
+       element to something else, the parent element, <span
+      class="Element">body</span>, will shine through. 
+
+     <li class="Bulleted">In addition to the URL of the image, a color
+      (white) has also been speci­fied as the background. In case the
+      image can't be found, you will see the color instead. 
+
+     <li class="Bulleted">The color of the <span
+      class="Element">body</span> element has been set to black. To
+      ensure contrast between the text and the background, it is a good
+       habit to always set a <strong class="Property">color</strong>
+      when the <strong class="Property">background</strong> property is
+       set. 
+    </ul>
+
+    <p class="Body1">So, exactly why doesn't the <strong
+     class="Property">background</strong> property inherit? Visually,
+     the effect of transparency is similar to inheritance: it looks
+     like all elements have the same backgrounds. There are two
+     reasons: first, transparent backgrounds are faster to display
+     (there is nothing to display!) than other ­backgrounds. Second,
+     since background images are aligned relative to the element they
+     belong to, you would otherwise not always end up with a smooth
+     background surface. 
+   </div>
+
+   <div class="Section2"> 
+    <h2 id="common">Common tasks with CSS</h2>
+
+    <p class="Body1">Setting colors and backgrounds - as described
+     above - are among the most common tasks performed by CSS. Other
+     common tasks include setting fonts and white space around
+     elements. This section gives you a guided tour of the most
+     commonly used properties in CSS. 
+
+    <div class="Section3"> 
+     <h3>Common tasks: fonts</h3>
+
+     <p class="Body1">Let's start with fonts. If you have used desktop
+      publishing applications in the past, you should be able to read
+      this little style sheet: 
+
+     <pre class="CSS">H1 { font: 36pt serif }</pre>
+
+     <p class="Body1">The rule above sets the font for <span
+      class="Element">h1</span> elements. The first part of the value -
+       <span class="Value">36pt</span> - sets the font size to be 36
+      points. A "point" is an old typographic unit of measurement which
+       has survived into the digital age. In the next chapter we will
+      tell you why you should use the "em" unit instead of "pt" but for
+       now we'll stick to points. The second part of the value - <span
+      class="Value">serif</span> - tells the browser to use a font with
+       serifs (the little hooks at the ends of the strokes,
+      Chapter <!--a class="XRef"
+href="fonts.html#25004"--> 5<!--/a-->
+      will tell you all about them). The more decorated serif fonts
+      suit Bach's home page well since the modern sans-serif fonts
+      (fonts without serifs) weren't used in his time. Here is the
+      result: 
+
+     <div class="Figure"> 
+      <p class="Caption"><a class="try" href="ex5.html">(try it)</a> 
+
+      <p class="Art"><img alt="[image]" src="5.png"> 
+     </div>
+
+     <p class="Body1">The <strong class="Property">font</strong>
+      property is a shorthand property for setting several other
+      properties at once. By using it, you can shorten your style
+      sheets and set values on all properties it replaces. If you
+      choose to use the expanded version, you would have to set all of
+      these to replace the example above: 
+
+     <pre class="CSS">H1 {
+  font-size: 36pt;
+  font-family: serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: normal;
+}</pre>
+
+     <p class="Body1">Sometimes you only want to set one of these. For
+      example, you may want to slant the text in some elements. Here is
+       an example: 
+
+     <pre class="CSS">UL { font-style: italic }</pre>
+
+     <p class="Body1">The <strong class="Property">font-style</strong>
+      property will not change the font size or the font family, it
+      will only slant the existing font. When set on the <span
+      class="Element">ul</span> element, the <span
+      class="Element">li</span> elements inside will become slanted,
+      since <strong class="Property">font-style</strong> is inherited.
+      Here is the result when applied to the test page you know by now:
+       
+
+     <div class="Figure"> 
+      <p class="Caption"><a class="try" href="ex6.html">(try it)</a> 
+
+      <p class="Art"><img alt="[image]" src="6.png"> 
+     </div>
+
+     <p class="Body1">Similarly, the <strong
+      class="Property">font-weight</strong> property is used to change
+      the weight - thickness - of the letters. You can further
+      emphasize the list items by setting their ancestor to be <span
+      class="Value">bold</span>: 
+
+     <pre class="CSS">UL { 
+  font-style: italic;
+  font-weight: bold;
+}
+     </pre>
+
+     <p class="Body1">Which yields: 
+
+     <div class="Figure"> 
+      <p class="Caption"><a class="try" href="ex7.html">(try it)</a> 
+
+      <p class="Art"><img alt="[image]" src="7.png"> 
+     </div>
+
+     <p class="Body1">The last properties, <strong
+      class="Property">font-variant</strong> and <strong
+      class="Property">line-height</strong>, haven't been widely
+      supported in browsers up to now and are therefore not as commonly
+       used yet. 
+    </div>
+
+    <div class="Section3"> 
+     <h3>Common tasks: margins</h3>
+
+     <p class="Body1">Setting space around elements is a basic tool in
+      typography. The headline above this paragraph has space above it
+      and (slightly less) space below it. This paragraph, as printed in
+       the book, has space on the left and (slightly less) on the
+      right. CSS can be used to express how much space there should be
+      around different kinds of elements. 
+
+     <p>By default, your browser knows quite a bit about how to display
+       the different kinds of elements in HTML. For example, it knows
+      that lists and <span class="Element">blockquote</span> elements
+      should be indented to set them apart from the rest of the text.
+      As a designer, you can build on these settings while at the same
+      time provide your own refinements. Let's use the <span
+      class="Element">blockquote</span> element as an example. Here's a
+       test document: 
+
+     <pre class="HTML">&lt;HTML&gt;
+  &lt;TITLE&gt;Fredrick the Great meets Bach&lt;/TITLE&gt;
+  &lt;BODY&gt;
+    &lt;P&gt;One evening, just as Fredrick the Great was 
+      getting his flute ready, and his musicians 
+      were assembled, an officer brought him a 
+      list of the strangers who had arrived. With
+      his flute in his hand he ran over the list,
+      but immediately turned to the assembled 
+      musicians, and said, with a kind of 
+      agitation:
+    &lt;BLOCKQUOTE&gt;"Gentlemen, old Bach is come."
+    &lt;/BLOCKQUOTE&gt;
+    &lt;P&gt;The flute was now laid aside, and old Bach, who
+      had alighted at his son's lodgings, was immediately
+      summoned to the Palace.
+  &lt;/BODY&gt;
+&lt;/HTML&gt;</pre>
+
+     <p class="Body1">The screen-shot below is how a typical HTML
+      browser would display the document: 
+
+     <div class="Figure"> 
+      <p class="Caption"><a class="try" href="ex8.html">(try it)</a> 
+
+      <p class="Art"><img alt="[image]" src="8.png"> 
+     </div>
+
+     <p class="Body1">As you can see, the browser has added space on
+      all sides of the quoted text. In CSS, this space is called
+      "margins" and all elements have margins on all four sides. The
+      properties are called: <strong
+      class="Property">margin-top</strong>, <strong
+      class="Property">margin-right</strong>, <strong
+      class="Property">margin-bottom</strong>, and <strong
+      class="Property">margin-left</strong>. You can change how the
+      <span class="Element">blockquote</span> element is displayed by
+      writing a little style sheet: 
+
+     <pre class="CSS">BLOCKQUOTE {
+  margin-top: 1em;
+  margin-right: 0em;
+  margin-bottom: 1em;
+  margin-left: 0em;
+  font-style: italic;
+}</pre>
+    
+
+     <p class="Body1">The "em" unit will be treated in detail in the
+      next chapter, but we can already now reveal its secret: it scales
+       relative to the font size. So, the above example will result in
+      the vertical margins being as high as the font size (<span
+      class="Value">1em</span>) of the <span
+      class="Element">blockquote, </span>and horizontal margins having
+      zero width. To make sure the quoted text can still be
+      distinguished, it has been given an italic slant. The result is: 
+
+     <div class="Figure"> 
+      <p class="Caption"><a class="try" href="ex9.html">(try it)</a> 
+
+      <p class="Art"><img alt="[image]" src="9.png"> 
+     </div>
+
+     <p class="Body1">Just like <strong class="Property">font</strong>
+      is a shorthand property to set several font-related properties at
+       once, <strong class="Property">margin</strong> is a shorthand
+      property which sets all margin properties. The above example can
+      therefore be written: 
+
+     <pre class="CSS">BLOCKQUOTE { 
+  margin: 1em 0em 1em 0em;
+  font-style: italic;
+}</pre>
+
+     <p class="Body1">The first part of the value - <span
+      class="Value">1em</span> - is assigned to margin-top. From there
+      it's clockwise: <span class="Value">0em</span> is assigned to
+      <strong class="Property">margin-right</strong>, 1em is assigned
+      to <strong class="Property">margin-bottom</strong>, and <span
+      class="Value">0em</span> is assigned to <strong
+      class="Property">margin-left</strong>. 
+
+     <p>With the left margin set to zero, the quoted text needs more
+      styling to set it apart from the rest of the text. Setting
+      <strong class="Property">font-style</strong> to <span
+      class="Value">italic</span> helps, and adding a background color
+      further amplifies the quote: 
+
+     <pre class="CSS">BLOCKQUOTE { 
+  margin: 1em 0em 1em 0em;
+  font-style: italic;
+  background: #EDB;
+}</pre>
+
+     <p class="Body1">The result is: 
+
+     <div class="Figure"> 
+      <p class="Caption"><a class="try" href="ex10.html">(try it)</a> 
+
+      <p class="Art"><img alt="[image]" src="10.png"> 
+     </div>
+
+     <p class="Body1">As expected, the background color behind the
+      quote has changed. Unlike previous examples, the color was
+      specified in red/green/blue (RGB) components. RGB colors are
+      described in detail in Chapter <!--a class="XRef"
+href="colors.html#22606"-->
+      11<!--/a--> . 
+
+     <p>One stylistic problem in the example above is that the
+      background color barely covers the quoted text. The space around
+      the quote - the margin area - does not use the element's
+      background color. CSS has another kind of space, called padding,
+      which uses the background color of the element. In other respects
+       the padding properties are like the margin properties: they add
+      space around an element. Let's add some padding to the quote: 
+
+     <pre class="CSS">BLOCKQUOTE { 
+  margin: 1em 0em 1em 0em;
+  font-style: italic;
+  background: #EDB;
+  padding: 0.5em;
+}</pre>
+
+     <p class="Body1">The result of setting the padding is added space
+      between the text and the rectangle that surrounds it: 
+
+     <div class="Figure"> 
+      <p class="Caption"><a class="try" href="ex11.html">(try it)</a> 
+
+      <p class="Art"><img alt="[image]" src="11.png"> 
+     </div>
+
+     <p class="Body1">Notice that the <strong
+      class="Property">padding</strong> property was only given one
+      value (<span class="Value">0.5em</span>). Just like the <strong
+      class="Property">margin</strong> property, <strong
+      class="Property">padding</strong> could have taken 4 values which
+       would have been assigned to the top, right, bottom and left
+      padding respectively. However, when the same value is to be set
+      on all sides, listing it once will suffice. This is true both for
+       <strong class="Property">padding</strong> and <strong
+      class="Property">margin</strong> (as well as some other border
+      properties, which are described in <!--a class="XRef"
+href="outside-box.html#24798"-->
+      See Space around boxes.<!--/a--> ). 
+    </div>
+
+    <div class="Section3"> 
+     <h3>Common tasks: links</h3>
+
+     <p class="Body1">To make it easier for users to browse in
+      hypertext documents, the links should have a style that
+      distinguishes them from normal text. HTML browsers have often
+      underlined hyperlink text. Also, various color schemes have been
+      used to indicate if the user has previously visited the link or
+      not. Since hyperlinks are such a fundamental part of the Web, CSS
+       has special support for styling them. Here's a simple example: 
+
+     <pre class="CSS">A:link { text-decoration: underline }</pre>
+
+     <p class="Body1">The above example specifies that unvisited links
+      should be underlined: 
+
+     <div class="Figure"> 
+      <p class="Caption"><a class="try" href="ex12.html">(try it)</a> 
+
+      <p class="Art"><img alt="[image]" src="12.png"> 
+     </div>
+
+     <p class="Body1">The links are underlined, as we have specified,
+      but they are also blue, which we have not. When authors do not
+      specify all possible styles, browsers use default styles to fill
+      in the gaps. The interaction between author styles, browser
+      default styles and user styles (the user's own preferences) is
+      ­another example of CSS's conflict resolution rules. It is called
+       the cascade (the "C" of CSS). We will discuss the cascade below.
+       
+
+     <p>The selector (<code class="Rule">A:link</code>) deserves
+      special mentioning. You probably ­recognize "A" as being an HTML
+      element, but the last part is new. <em>":link"</em> is one of
+      several so-called pseudo-classes in CSS. Pseudo-classes are used
+      to give style to elements based on information outside of the
+      document itself. For example, the author of the document can't
+      know if a certain link will be visited or not. Pseudo-classes are
+       described in detail in Chapter <!--a class="XRef"
+href="selectors.html#10654"-->
+      4<!--/a-->, and we'll only give a few more examples here: 
+
+     <pre class="CSS">A:visited { text-decoration: none }</pre>
+
+     <p class="Body1">This rule gives style to visited links, just like
+       <code class="Rule">A:link</code> gave style to unvisited links.
+      Here is a slightly more complex example: 
+
+     <pre class="CSS">A:link, A:visited { text-decoration: none }
+A:hover { background: cyan }</pre>
+
+     <p class="Body1">The last rule introduces a new pseudo-class
+      :<em>hover</em>. Assuming the user is moving a pointing device
+      (like a mouse), the specified style will be applied to the
+      element when the user moves the pointer over ("hovers" over) the
+      link. A common effect is to change the background color. Here is
+      what it looks like: 
+
+     <div class="Figure"> 
+      <p class="Caption"><a class="try" href="ex13.html">(try it)</a> 
+
+      <p class="Art"><img alt="[image]" src="13.png"> 
+     </div>
+
+     <p class="Body0">The <em>:hover</em> pseudo-class has an
+      interesting history. It was introduced in CSS2 after the hover
+      effect became popular among JavaScript programmers. The
+      JavaScript solution requires complicated code compared to the CSS
+       pseudo-class and this is an example of CSS picking up effects
+      that have become popular among Web designers. 
+    </div>
+   </div>
+
+   <div class="Section2"> 
+    <h2 id="a-word">A word about Cascading</h2>
+
+    <p class="Body1">A fundamental feature of CSS is that more than one
+      style sheet can influence the presentation of a document. This
+     feature is known as <dfn class="Defining-instance">cascading</dfn>
+      because the different style sheets are thought of as coming in a
+     series. Cascading is a fundamental feature of CSS, because we
+     realized that any single document could very likely end up with
+     style sheets from multiple sources: the browser, the designer, and
+      possibly the user. 
+
+    <p>In the last set of examples you saw that the text color of the
+     links turned blue without that being specified in the style sheet.
+      Also, the browser knew how to format <span
+     class="Element">blockquote</span> and <span
+     class="Element">h1</span> elements without being told so
+     explicitly. Everything that the browser knows about formatting is
+     stored in the browser's <dfn class="Defining-instance">default
+     style sheet</dfn> and is merged with author and user style sheets
+     when the document is displayed. 
+
+    <p>We have known for years that designers want to develop their own
+      style sheets. However, we discovered that users, too, want the
+     option of influencing the presentation of their documents. With
+     CSS, they can do this by supplying a personal style sheet that
+     will be merged with the browser's and the designer's style sheets.
+      Any conflicts between the various style sheets are resolved by
+     the browser. Usually, the designer's style sheet will have the
+     strongest claim on the document, followed by the user's, and then
+     the browser's default. However, the user can say that a rule is
+     very import­ant and it will then override any author or browser
+     styles. 
+
+    <p>We go into details about cascading in Chapter <!--a
+class="XRef" href="cascade.html#34594"-->
+     15<!--/a-->, "Cascading and inheritance." Before that, there is
+     much to learn about fonts, space and ­colors. 
+   </div>
+  </div>
+ </body>
+</html>
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+
+
+sgml-declaration:"~/SGML/HTML4.decl"
+sgml-default-doctype-name:"html"
+sgml-minimize-attributes:nil
+
+
+sgml-nofill-elements:("pre" "style" "br")
+sgml-omittag:nil
+sgml-shorttag:nil
+
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:t
+sgml-parent-document:nil
+
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+
+-->

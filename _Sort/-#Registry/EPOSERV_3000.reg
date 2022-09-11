@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00 
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Network Associates\ePolicy Orchestrator\Application Plugins\EPOSERV_3000]
+"Plugin Path"="C:\\Program Files\\McAfee\\ProtectionPilot\\1.5.0\\EPOSRVSP.DLL"
+"Software ID"="EPOSERV_3000"
+"Plugin Flag"=dword:00000003

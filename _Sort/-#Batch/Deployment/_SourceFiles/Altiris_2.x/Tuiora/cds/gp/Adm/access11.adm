@@ -1,0 +1,772 @@
+CLASS USER
+
+CATEGORY "Microsoft Office Access 2003"
+KEYNAME Software\Policies\Microsoft\Office\11.0
+CATEGORY "Tools | Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0
+CATEGORY "View"
+KEYNAME Software\Policies\Microsoft\Office\11.0
+CATEGORY "Show"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\Settings
+POLICY "Startup Task Pane"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME "Show Startup Dialog Box"
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "International"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\Settings
+POLICY "Default direction"
+	PART "Default direction" DROPDOWNLIST
+	VALUENAME "New Tables/Queries/Forms/Reports"
+	ITEMLIST
+		NAME "Left-to-right"	VALUE NUMERIC 0
+		NAME "Right-to-left"	VALUE NUMERIC 1	DEFAULT
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "General Alignment"
+	PART "General Alignment" DROPDOWNLIST
+	VALUENAME "General Alignment"
+	ITEMLIST
+		NAME "Interface mode"	VALUE NUMERIC 0
+		NAME "Text mode"	VALUE NUMERIC 1	DEFAULT
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Cursor movement"
+	PART "Cursor movement" DROPDOWNLIST
+	VALUENAME "Cursor"
+	ITEMLIST
+		NAME "Logical"	VALUE NUMERIC 0
+		NAME "Visual"	VALUE NUMERIC 1	DEFAULT
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Web Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\Internet
+CATEGORY "General"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\Internet
+POLICY "Hyperlink color"
+	PART "Hyperlink color" DROPDOWNLIST
+	VALUENAME HyperlinkColor
+	ITEMLIST
+		NAME "Black"	VALUE NUMERIC	0
+		NAME "Maroon"	VALUE NUMERIC	1
+		NAME "Green"	VALUE NUMERIC	2
+		NAME "Olive"	VALUE NUMERIC	3
+		NAME "Dark Blue"	VALUE NUMERIC	4
+		NAME "Violet"	VALUE NUMERIC	5
+		NAME "Teal"		VALUE NUMERIC	6
+		NAME "Gray"		VALUE NUMERIC	7
+		NAME "Silver"	VALUE NUMERIC	8
+		NAME "Red"		VALUE NUMERIC	9
+		NAME "Bright Green"	VALUE NUMERIC	10
+		NAME "Yellow"	VALUE NUMERIC	11
+		NAME "Blue"		VALUE NUMERIC	12	DEFAULT
+		NAME "Fuchsia"	VALUE NUMERIC	13
+		NAME "Aqua"		VALUE NUMERIC	14
+		NAME "White"	VALUE NUMERIC	15
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Followed hyperlink color"
+	PART "Followed hyperlink color" DROPDOWNLIST
+	VALUENAME FollowedHyperlinkColor
+	ITEMLIST
+		NAME "Black"	VALUE NUMERIC	0
+		NAME "Maroon"	VALUE NUMERIC	1
+		NAME "Green"	VALUE NUMERIC	2
+		NAME "Olive"	VALUE NUMERIC	3
+		NAME "Dark Blue"	VALUE NUMERIC	4
+		NAME "Violet"	VALUE NUMERIC	5	DEFAULT
+		NAME "Teal"		VALUE NUMERIC	6
+		NAME "Gray"		VALUE NUMERIC	7
+		NAME "Silver"	VALUE NUMERIC	8
+		NAME "Red"		VALUE NUMERIC	9
+		NAME "Bright Green"	VALUE NUMERIC	10
+		NAME "Yellow"	VALUE NUMERIC	11
+		NAME "Blue"		VALUE NUMERIC	12
+		NAME "Fuchsia"	VALUE NUMERIC	13
+		NAME "Aqua"		VALUE NUMERIC	14
+		NAME "White"	VALUE NUMERIC	15
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Underline hyperlinks"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DoNotUnderlineHyperlinks
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "General"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\Settings
+POLICY "Recently used file list"
+	PART "Number of entries: " NUMERIC
+	VALUENAME "Size of MRU File List"
+	SPIN 1
+	MIN 0
+	MAX 9
+	DEFAULT 4
+	END PART
+	END POLICY
+POLICY "Default database folder"
+	PART "Default database folder" EDITTEXT
+	VALUENAME "Default Database Directory"
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Tools | Macro"
+KEYNAME Software\Policies\Microsoft\Office\11.0
+CATEGORY "Security..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\Security
+POLICY "Security Level"
+	PART "Security Level" DROPDOWNLIST
+	VALUENAME Level
+	ITEMLIST
+		NAME "High"		VALUE NUMERIC 3
+		NAME "Medium"	VALUE NUMERIC 2	DEFAULT
+		NAME "Low"		VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Trust all installed add-ins and templates"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DontTrustInstalledFiles
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	PART " " TEXT
+	END PART
+	PART "In Access this setting is used for COM add-ins only." TEXT
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Tools | Security"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\Jet\4.0\Engines
+CATEGORY "Workgroup Administrator..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\Jet\4.0\Engines
+POLICY "Path to shared Workgroup information file for secured MDB files"
+	PART "Path to shared Workgroup information file for secured MDB files" EDITTEXT
+	VALUENAME SystemDB
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Customizable error messages"
+KEYNAME Software\Policies\Microsoft\Office\11.0
+POLICY "List of error messages to customize"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\CustomizableAlerts
+	PART "List of error messages to customize" LISTBOX
+	EXPLICITVALUE
+	END PART
+	PART "Enter error ID for Value Name and custom button text for Value" TEXT
+	END PART
+	ACTIONLISTON
+	VALUENAME PolicyOn VALUE NUMERIC 1
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME PolicyOn VALUE DELETE
+	END ACTIONLISTOFF
+	END POLICY
+END CATEGORY
+CATEGORY "New File Links"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Access\New File"
+POLICY "Custom Link #1"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Access\New File\CustomPolicy1"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a file"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing file"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #2"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Access\New File\CustomPolicy2"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a file"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing file"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #3"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Access\New File\CustomPolicy3"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a file"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing file"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #4"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Access\New File\CustomPolicy4"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a file"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing file"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #5"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Access\New File\CustomPolicy5"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a file"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing file"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #6"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Access\New File\CustomPolicy6"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a file"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing file"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #7"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Access\New File\CustomPolicy7"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a file"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing file"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #8"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Access\New File\CustomPolicy8"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a file"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing file"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #9"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Access\New File\CustomPolicy9"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a file"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing file"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #10"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Access\New File\CustomPolicy10"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a file"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing file"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Disable items in user interface"
+KEYNAME Software\Policies\Microsoft\Office\11.0
+CATEGORY "Predefined"
+KEYNAME Software\Policies\Microsoft\Office\11.0
+POLICY "Disable command bar buttons and menu items"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\DisabledCmdBarItemsCheckBoxes
+	PART "File | Open... | Tools | Search..." CHECKBOX
+	VALUENAME FileOpenToolsFind
+	VALUEON 5905
+	VALUEOFF 0
+	END PART
+	PART "File | Send To | Mail Recipient" CHECKBOX
+	VALUENAME FileSendToMailRecipient
+	VALUEON 3738
+	VALUEOFF 0
+	END PART
+	PART "Insert | Hyperlink..." CHECKBOX
+	VALUENAME InsertHyperlink
+	VALUEON 1576
+	VALUEOFF 0
+	END PART
+	PART "Tools | Speech" CHECKBOX
+	VALUENAME ToolsSpeech
+	VALUEON 5764
+	VALUEOFF 0
+	END PART
+	PART "Tools | Online Collaboration" CHECKBOX
+	VALUENAME ToolsCollaboration
+	VALUEON 30468
+	VALUEOFF 0
+	END PART
+	PART "Tools | Security..." CHECKBOX
+	VALUENAME ToolsSecurity
+	VALUEON 30015
+	VALUEOFF 0
+	END PART
+	PART "Tools | Security | Set Database Password..." CHECKBOX
+	VALUENAME ToolsSecuritySetPwd
+	VALUEON 1814
+	VALUEOFF 0
+	END PART
+	PART "Tools | Security | Database Security..." CHECKBOX
+	VALUENAME ToolsSecurityDBSec
+	VALUEON 4142
+	VALUEOFF 0
+	END PART
+	PART "Tools | Security | User and Group Permissions..." CHECKBOX
+	VALUENAME ToolsSecurityPerms
+	VALUEON 572
+	VALUEOFF 0
+	END PART
+	PART "Tools | Security | User and Group Accounts..." CHECKBOX
+	VALUENAME ToolsSecurityAccts
+	VALUEON 1816
+	VALUEOFF 0
+	END PART
+	PART "Tools | Security | User-Level Security Wizard..." CHECKBOX
+	VALUENAME ToolsSecuritySecWiz
+	VALUEON 1815
+	VALUEOFF 0
+	END PART
+	PART "Tools | Security | Encrypt/Decrypt Database..." CHECKBOX
+	VALUENAME ToolsSecurityEncrypt
+	VALUEON 2074
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro" CHECKBOX
+	VALUENAME ToolsMacro
+	VALUEON 30379
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Visual Basic Editor" CHECKBOX
+	VALUENAME ToolsMacroVBE
+	VALUEON 1695
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Run Macro..." CHECKBOX
+	VALUENAME ToolsMacroRunMacro
+	VALUEON 930
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Convert Macros to Visual Basic" CHECKBOX
+	VALUENAME ToolsMacroConvertMacros
+	VALUEON 2948
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Create Menu from Macro" CHECKBOX
+	VALUENAME ToolsMacroCreateMenu
+	VALUEON 1568
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Create Toolbar from Macro" CHECKBOX
+	VALUENAME ToolsMacroCreateToolbar
+	VALUEON 1569
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Create Shortcut Menu from Macro" CHECKBOX
+	VALUENAME ToolsMacroCreateShortcutMenu
+	VALUEON 1570
+	VALUEOFF 0
+	END PART
+	PART "Tools | Tools on the Web..." CHECKBOX
+	VALUENAME ToolsontheWeb
+	VALUEON 7032
+	VALUEOFF 0
+	END PART
+	PART "Tools | Add-Ins..." CHECKBOX
+	VALUENAME ToolsAddins
+	VALUEON 30038
+	VALUEOFF 0
+	END PART
+	PART "Tools | Customize..." CHECKBOX
+	VALUENAME ToolsCustomize
+	VALUEON 797
+	VALUEOFF 0
+	END PART
+	PART "Tools | Options..." CHECKBOX
+	VALUENAME ToolsOptions
+	VALUEON 522
+	VALUEOFF 0
+	END PART
+	PART "Help | Microsoft Office Online" CHECKBOX
+	VALUENAME HelpOfficeWeb
+	VALUEON 3775
+	VALUEOFF 0
+	END PART
+	PART "Help | Activate Product..." CHECKBOX
+	VALUENAME HelpRegistration
+	VALUEON 5933
+	VALUEOFF 0
+	END PART
+	PART "Help | Detect and Repair..." CHECKBOX
+	VALUENAME HelpRepair
+	VALUEON 3774
+	VALUEOFF 0
+	END PART
+	PART "Web | Refresh Current Page" CHECKBOX
+	VALUENAME WebRefreshCurrentPage
+	VALUEON 1020
+	VALUEOFF 0
+	END PART
+	PART "Web | Start Page" CHECKBOX
+	VALUENAME WebStartPage
+	VALUEON 1016
+	VALUEOFF 0
+	END PART
+	PART "Web | Search the Web" CHECKBOX
+	VALUENAME WebSearchTheWeb
+	VALUEON 1922
+	VALUEOFF 0
+	ACTIONLISTON
+	VALUENAME FileOpenSearchTheWeb VALUE 4087
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME FileOpenSearchTheWeb VALUE DELETE
+	END ACTIONLISTOFF
+	END PART
+	PART "Web | Favorites" CHECKBOX
+	VALUENAME WebFavorites
+	VALUEON 30176
+	VALUEOFF 0
+	END PART
+	PART "Web | Go" CHECKBOX
+	VALUENAME WebGo
+	VALUEON 30328
+	VALUEOFF 0
+	END PART
+	PART "Web | Address" CHECKBOX
+	VALUENAME WebAddress
+	VALUEON 1740
+	VALUEOFF 0
+	END PART
+	ACTIONLISTOFF
+	VALUENAME FileOpenSearchTheWeb VALUE DELETE
+	END ACTIONLISTOFF
+	END POLICY
+POLICY "Disable shortcut keys"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\DisabledShortcutKeysCheckBoxes
+	PART "Ctrl+F (Find...)" CHECKBOX
+	VALUENAME Find 
+	VALUEON 70,8
+	VALUEOFF 0
+	END PART
+	PART "Ctrl+K (Insert | Hyperlink...)" CHECKBOX
+	VALUENAME InsertHyperlink
+	VALUEON 75,8
+	VALUEOFF 0
+	END PART
+	PART "Alt+F11 (Tools | Macro | Visual Basic Editor)" CHECKBOX
+	VALUENAME ToolsMacroVBE
+	VALUEON 122,16
+	VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Custom"
+KEYNAME Software\Policies\Microsoft\Office\11.0
+POLICY "Disable command bar buttons and menu items"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\DisabledCmdBarItemsList
+	PART "Enter a command bar ID to disable" LISTBOX
+	VALUEPREFIX TCID
+	END PART
+	END POLICY
+POLICY "Disable shortcut keys"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\DisabledShortcutKeysList
+	PART "Enter a key and modifier to disable" LISTBOX
+	VALUEPREFIX KeyMod
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Miscellaneous"
+KEYNAME Software\Policies\Microsoft\Office\11.0
+POLICY "Do not prompt to convert older databases"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\Settings
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME NoConvertDialog
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Custom Answer Wizard database path"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Access\Answer Wizard"
+	PART "Custom Answer Wizard database path" EDITTEXT
+	VALUENAME AdminDatabase
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+
+

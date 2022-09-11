@@ -1,0 +1,1 @@
+"C:\Program Files\Microsoft SQL Server\110\Tools\Binn\sqlcmd.exe" -S np:\\.\pipe\MSSQL$MICROSOFT##SSEE\sql\query -i "C:\Admin\SQL\WsusDBMaintenance.sql"

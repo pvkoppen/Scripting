@@ -1,0 +1,8 @@
+Date   : Mon Nov 27 17:59:18 2006
+Error Number: (19010)
+Message: Arguments must be preceeded with a '-' or a '/'
+Version:  (Oct  3 2003, Build=984)
+OS Version: Professional  (Build 3790)
+Command line arguments: -clone,mode=dump,src=1,dst=f:\lib\images\ProLiant BL480c G1-windows.gho -span -batch -sure
+Active Switches :
+       AutoName

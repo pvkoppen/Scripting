@@ -1,0 +1,5 @@
+  dn                                               desc    samid    fn         mi    ln       display          empid    office    tel    email                         hometel    mobile    fax    webpg    title    dept    company      mgr    hmdir    hmdrv    profile                                     loscr              disabled  
+  CN=Jan Manu,OU=KAIAWHINA,DC=tol,DC=local                 jnm      Jan              Manu     Jan Manu                                   Jan.Manu@tuiora.co.nz                                                               Kaiawhina                             \\tolss01.tol.local\ProfKAI$\jnm\FATProf    LoginScript.vbs    no        
+
+-Disabled
+  CN=Saphron Ngaia,OU=KAIAWHINA,DC=tol,DC=local            sng      Saphron          Ngaia    Saphron Ngaia                              Saphron.Ngaia@tuiora.co.nz                                                          Kaiawhina                             \\tolss01.tol.local\ProfKAI$\sng\FATProf    LoginScript.vbs    yes       

@@ -6,8 +6,12 @@ $ScriptShortName = [System.IO.Path]::GetFileNameWithoutExtension($script:MyInvoc
 $FileFilter = "$ScriptShortName#*.log"
 Start-Transcript -Path "$(Join-Path -Path $ScriptPath -ChildPath $ScriptShortName)#$(Get-Date -Format "yyyyMMdd").log" -Append
 
-# nVision
+#Variables
 $DaysToKeep = 8
+
+#Functions
+
+#Actions
 $TempFolder = "D:\GROUP\Finance\nVision temp data\"
 Get-ChildItem –Path $TempFolder –Recurse | Where-Object {$_.CreationTime –lt (Get-Date).AddDays(-$DaysToKeep)} | Remove-Item -Force -Recurse -Verbose -WhatIf
 

@@ -1,0 +1,23 @@
+Hello Administrator(s),
+----------------------------------------------------------------
+
+Altiris has just finished the (re)build of a server with:
+- OS           = Windows Server 2003 Standard/Enterprise x86/x64 R2.
+- Hardware     = HP Proliant / VMWare Virtual.
+- Specific Task= Unknown
+- ...
+
+Please check or Configure the following services:
+- McAfee AntiVirus
+- Symanted Backup Exec
+- ...
+
+Any required Post Build activities can now be performed.
+- APC PowerChute Network Shutdown (Requires Java!)
+- ...
+
+----------------------------------------------------------------
+Altiris Automated Build Process.
+
+This is a generated email message, do not reply to this message.
+

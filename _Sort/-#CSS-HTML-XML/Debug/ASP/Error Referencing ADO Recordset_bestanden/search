@@ -1,0 +1,673 @@
+<HTML><HEAD>
+<TITLE>Microsoft Help and Support</TITLE>
+<!-- (c) 2001, Microsoft Corporation. All Rights Reserved -->
+<!-- ASM: GSS, Version=3.1.5.2, Culture=neutral, PublicKeyToken=null FW: 1.0.3705.0 -->
+<!-- REGC: ISO-8859-1 DEFRC: iso-8859-1 RESG: 6/20/2002 2:27:59 AM RESX: 6/20/2002 2:57:59 AM -->
+<META NAME="Keywords" content="Microsoft, product, support, software, hardware, FAQ, FAQs, KB, Knowledge, Base, search, downloads, chat, help, training, phone, troubleshooters, newsgroups">
+<META NAME="Description" content="Microsoft Global Product Support Site, featuring access to a searchable Knowledgebase, Software and Hardware FAQs (Frequently Asked Questions), Online Training, Webcasts, Downloads, HTML Newsgroup views, Telephone Support Information, Online Support Requests and Personalization, Online Assistance, Remote Administration, Hot Issues, Support Center">
+<script language="Javascript">var g_gssCookieDomain = "support.microsoft.com";
+</script>
+<SCRIPT language="Javascript" src="/common/script/gssmethods.js"></SCRIPT>
+<LINK REL="stylesheet" TYPE="text/css" HREF="/common/styles/style-msie4.css"></LINK>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1"></HEAD>
+
+<BODY bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">
+
+<table border="0" cellpadding="0" cellspacing="0" height="100%"  width="100%">
+	<tr><td colspan='3' height='60'><div id='tbspacer' style='display: none;'><img src='/library/images/support/1ptrans.gif' height=60 width=1></div><div id='tbdownlevel'><TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR=#003399 ROWSPAN=2><A HREF="/default.aspx" TARGET="_top"><IMG SRC="/library/images/support/EN-US/banner.gif" WIDTH=300 HSPACE=0 VSPACE=0 HEIGHT=60 ALT="Microsoft Home" BORDER=0 /></A></TD><TD BGCOLOR=#003399 VALIGN=TOP HEIGHT=20 ALIGN=RIGHT WIDTH=100%><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0><TR><TD><IMG SRC="/library/images/support/curve_003399.gif" WIDTH=18 HEIGHT=20 ALT="" BORDER=0 /></TD><TD BGCOLOR=#000000 HEIGHT=20 VALIGN=MIDDLE><FONT COLOR=#FFFFFF FACE="Verdana, Arial" SIZE=1>&nbsp;&nbsp;<a href="/isapi/gomscom.asp?target=/catalog/default.asp?subid=22" class="bartext" TARGET="_top"><FONT COLOR="#FFFFFF"> All Products</FONT></a>&nbsp;&nbsp;
+|&nbsp;&nbsp;<a href="http://www.microsoft.com/support" class="bartext" TARGET="_top"><FONT COLOR="#FFFFFF"> Support</FONT></a>&nbsp;&nbsp;
+|&nbsp;&nbsp;<a href="/isapi/gosearch.asp?target=/us/default.asp" class="bartext" TARGET="_top"><FONT COLOR="#FFFFFF"> Search</FONT></a>&nbsp;&nbsp;
+|&nbsp;&nbsp;<a href="/isapi/gomscom.asp?target=/" class="bartext" TARGET="_top"><FONT COLOR="#FFFFFF"> Microsoft.com Guide</FONT></a>&nbsp;&nbsp;
+</FONT></TD></TR></TABLE></TD></TR><TR><TD BGCOLOR=#3366CC HEIGHT=40 align=right><a href="http://www.microsoft.com/"><IMG SRC="/library/images/support/mslogo_3366CC.gif" ALT="Microsoft.com Home Page" BORDER=0 HSPACE=0 VSPACE=0 /></A></TD></TR></TABLE></div><td></tr>
+	<tr>
+		<td colspan='3' height='18' width="100%">
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td class="bannerborder-top"><img src="/library/images/support/1ptrans.gif" width="1" height="2"></td>
+				<td class="bannerborder-top"><img src="/library/images/support/1ptrans.gif" width="1" height="2"></td>
+			</tr>
+			<tr>
+				<td class="barblack">
+				<table class="funcmenutbl" border="0" cellpadding="0" cellspacing="0" height="18"><tr>
+<td nowrap class='buttonleft' onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";' onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' onClick="top.location.href='/default.aspx'"><a href='/default.aspx' class='bartext'  title='Return to support home page'>&nbsp;&nbsp;Home&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class='buttonleft' onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";' onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' onClick="top.location.href='/default.aspx?scid=fh;EN-US;kbinfo'"><a href='/default.aspx?scid=fh;EN-US;kbinfo' class='bartext'  title='Search the Knowledge Base'>&nbsp;&nbsp;Search&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class='buttonleft' onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";' onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' onClick="top.location.href='/default.aspx?scid=/faqs/default.aspx'"><a href='/default.aspx?scid=/faqs/default.aspx' class='bartext'  title='View frequently asked questions'>&nbsp;&nbsp;FAQs&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class='buttonleft' onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";' onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' onClick="top.location.href='/default.aspx?scid=fh;EN-US;downloadover'"><a href='/default.aspx?scid=fh;EN-US;downloadover' class='bartext'  title='Software updates and service packs'>&nbsp;&nbsp;Downloads&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class='buttonleft' onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";' onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' onClick="top.location.href='/newsgroups/default.aspx'"><a href='/newsgroups/default.aspx' class='bartext'  title='Community support forums'>&nbsp;&nbsp;Newsgroups&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class='buttonleft' onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";' onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' onClick="top.location.href='/default.aspx?scid=http://customerservice.support.microsoft.com'"><a href='/default.aspx?scid=http://customerservice.support.microsoft.com' class='bartext'  title='Customer Service Center'>&nbsp;&nbsp;Customer Service&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+<td nowrap class='buttonleft' onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";' onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' onClick="top.location.href='/default.aspx?scid=fh;en-us;cntactms'"><a href='/default.aspx?scid=fh;en-us;cntactms' class='bartext'  title='Provide feedback to Microsoft'>&nbsp;&nbsp;Contact Us&nbsp;&nbsp;</a></td><td class='bannerborder' width=1><img src='/library/images/support/1ptrans.gif' height=1 width=1></td>
+</tr></table>
+				</td>
+				<td align="right" class="barblack">
+				<table class="funcmenutbl" border="0" cellpadding="0" cellspacing="0"><tr>
+<td class="bannerborder" width="1"><img src='/library/images/support/1ptrans.gif' height=1 width=1></td><td class='buttonright' onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";' onmouseout='this.style.backgroundColor = "";this.style.cursor="default";'><table border=0 cellpadding=0 cellspacing=0><tr><td onclick="if(document.getElementById) PrintContents(); else window.print(); event.cancelBubble=true; return false;">&nbsp;&nbsp;</td><td><a href=' ' onclick="if(document.getElementById) PrintContents(); else window.print(); event.cancelBubble=true; return false;" class='buttontext' title='Print the contents of this page'>Print&nbsp;<img src='/library/images/support/print_icon.gif' border=0 hspace=0 align=absmiddle vspace=0></a>&nbsp;&nbsp;</td></tr></table></td>
+<td class="bannerborder" width="1"><img src='/library/images/support/1ptrans.gif' height=1 width=1></td><td class='buttonright' onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";' onmouseout='this.style.backgroundColor = "";this.style.cursor="default";'><table border=0 cellpadding=0 cellspacing=0><tr><td onclick="">&nbsp;&nbsp;</td><td><a href='/default.aspx?scid=fh;EN-US;gsshelp' onclick="" class='buttontext' title='View information on how to use this site effectively'>Help&nbsp;<img src='/library/images/support/help_icon.gif' border=0 hspace=0 align=absmiddle vspace=0></a>&nbsp;&nbsp;</td></tr></table></td>
+</tr></table><IFRAME ID='printframe' STYLE="display: none; visibility: hidden; position: absolute; top: 0; left: 0;" SRC='/common/Blank.htm' NAME='printframe' HEIGHT='10' WIDTH='10'></IFRAME>
+				</td>
+			</tr>
+			<tr>
+				<td class="bannerborder-bottom"><img src="/library/images/support/1ptrans.gif" height="2" width="1"></td>
+				<td class="bannerborder-bottom"><img src="/library/images/support/1ptrans.gif" height="2" width="1"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td align="center" bgcolor="#3366CC" height="100%"  class="lightblue" height="100%" valign="top" width="218">
+			<img src="/library/images/support/1ptrans.gif" height=2 width=218><br>
+			<table border=0 cellpadding=0 cellspacing=0 class="lightblue" width="207">
+<tr><td>
+<table border=0 cellpadding=0 cellspacing=0 class='srchtb' width='207'><form name='GssSrchform' method=get action='http://search.support.microsoft.com/search/default.aspx' onsubmit='if(!gss_GssSrchverify()){return false;}else{gss_writeGssSrchcookie();}' target='_top'><tr><td class="navbg"><table class="mgheader" border=0 cellpadding='0' cellspacing='0' class='mgbg' height='20' width='207'><tr><td background="/library/images/support/heather_left_bg.gif" valign=top width=5><img src="/library/images/support/heather_left.gif" width=5 height=5></td><td  background="/library/images/support/heather_bg.gif" width='100%'><font class='mghead'>&nbsp;Search the Knowledge Base</font></td><td background="/library/images/support/heather_right_bg.gif" valign=top width=5><img src="/library/images/support/heather_right.gif" width=5 height=5></td></tr></table>
+<table border=0 cellpadding=2 cellspacing=0 class='srchbg' width='207'>
+<input type=hidden name='Catalog' value='LCID=1033&amp;CDID=EN-US-KB&amp;PRODLISTSRC=ON' class='wipt'>
+
+<script language='JavaScript'>
+<!--
+
+var failure = 0;
+Product0 = new Array();
+Product0[0] = "- All Microsoft Search Topics -\",\"msall";
+Product0[1] = ".NET Framework SDK\",\"NETFrame";
+Product0[2] = "Access\",\"acc";
+Product0[3] = "Access 2000\",\"acc2000";
+Product0[4] = "Access 2002\",\"acc2002";
+Product0[5] = "Access 97\",\"acc97";
+Product0[6] = "Accessibility\",\"enable";
+Product0[7] = "ActiMates\",\"amps";
+Product0[8] = "Active Server Pages\",\"asp";
+Product0[9] = "ActiveX SDK\",\"adk";
+Product0[10] = "ADO\",\"ado";
+Product0[11] = "ADO.NET\",\"adonet";
+Product0[12] = "Age of Empires\",\"aoe";
+Product0[13] = "Allegiance\",\"alleg";
+Product0[14] = "Application Center 2000\",\"AppCtr";
+Product0[15] = "Arcade\",\"arc";
+Product0[16] = "Asheron's Call\",\"ashcall";
+Product0[17] = "ASP.NET\",\"aspnet";
+Product0[18] = "BackOffice Server\",\"bac";
+Product0[19] = "Baseball\",\"bb3d";
+Product0[20] = "BASIC & QuickBASIC\",\"bsc";
+Product0[21] = "BizTalk Server 2000\",\"bizt2k";
+Product0[22] = "BizTalk Server 2002\",\"bizt2002";
+Product0[23] = "Bookshelf\",\"bks";
+Product0[24] = "CART Precision Racing\",\"cart";
+Product0[25] = "Close Combat\",\"clc";
+Product0[26] = "Collaboration Data Objects\",\"cdo";
+Product0[27] = "COM Transaction Integrator\",\"tran";
+Product0[28] = "COM+\",\"complus";
+Product0[29] = "Combat Flight Simulator\",\"cflt";
+Product0[30] = "Commerce Server 2000/2002\",\"comm2k";
+Product0[31] = "Commercial Internet System\",\"cis";
+Product0[32] = "Content Management Server\",\"cms2001";
+Product0[33] = "Cordless Phone System\",\"cphon";
+Product0[34] = "Creative Writer 2\",\"crw";
+Product0[35] = "Crimson Skies\",\"cs";
+Product0[36] = "Data Access Components\",\"dac";
+Product0[37] = "Device Drivers\",\"oem";
+Product0[38] = "Digital Sound System 80\",\"dss";
+Product0[39] = "DirectX (Home User)\",\"drx";
+Product0[40] = "DirectX SDK\",\"dsdk";
+Product0[41] = "Dungeon Siege\",\"dungeon";
+Product0[42] = "Encarta\",\"enc";
+Product0[43] = "Entertainment Pack\",\"etppc";
+Product0[44] = "Entourage for Mac\",\"ent2001";
+Product0[45] = "Entourage X for Mac\",\"entXmac";
+Product0[46] = "Excel 2000\",\"xlw2K";
+Product0[47] = "Excel 2001 for Mac\",\"XL2001";
+Product0[48] = "Excel 2002\",\"xl2002";
+Product0[49] = "Excel 97 for Windows\",\"xlw97";
+Product0[50] = "Excel 98 for Macintosh\",\"xlm98";
+Product0[51] = "Excel for Macintosh\",\"xlm";
+Product0[52] = "Excel for Windows\",\"xlw";
+Product0[53] = "Excel X for Mac\",\"macxlx";
+Product0[54] = "Exchange 2000 Server\",\"exch2k";
+Product0[55] = "Exchange Development Kit\",\"edk";
+Product0[56] = "Exchange Server 5.5\",\"ech";
+Product0[57] = "Fighter Ace\",\"face";
+Product0[58] = "Flight Simulators\",\"flt";
+Product0[59] = "Fortran PowerStation\",\"for";
+Product0[60] = "FrontPage 2000\",\"fp2000";
+Product0[61] = "FrontPage 2000 Server Ext\",\"fp2kse";
+Product0[62] = "FrontPage 2002\",\"fp2002";
+Product0[63] = "FrontPage 98 for Windows\",\"fp98";
+Product0[64] = "FrontPage 98 Server Ext\",\"fpse98";
+Product0[65] = "FrontPage for Macintosh\",\"fpm";
+Product0[66] = "FrontPage for Windows\",\"fpw";
+Product0[67] = "FrontPage Server Extensions 2002\",\"fp10se";
+Product0[68] = "Games\",\"gms";
+Product0[69] = "Golf\",\"glf";
+Product0[70] = "Great Plains\",\"gpsol";
+Product0[71] = "Greetings\",\"gsg";
+Product0[72] = "Hardware Products\",\"hdw";
+Product0[73] = "Home Publishing\",\"gshp";
+Product0[74] = "Host Integration Server\",\"HostInt";
+Product0[75] = "Image Composer\",\"imc";
+Product0[76] = "Index Server\",\"is";
+Product0[77] = "IntelliMouse\",\"im";
+Product0[78] = "IntelliPoint for Macintosh\",\"macpoint";
+Product0[79] = "Internet Control Pack\",\"icp";
+Product0[80] = "Internet Explorer\",\"ie";
+Product0[81] = "Internet Explorer (Programming)\",\"iep";
+Product0[82] = "Internet Explorer 5\",\"msie5";
+Product0[83] = "Internet Explorer 5.5\",\"ie550";
+Product0[84] = "Internet Explorer 6\",\"ie600";
+Product0[85] = "Internet Explorer Admin Kit\",\"ieak";
+Product0[86] = "Internet Info Services 5.0\",\"iis50";
+Product0[87] = "Internet Information Server 4.0\",\"iis";
+Product0[88] = "Internet Mail and News\",\"imn";
+Product0[89] = "Internet Server API\",\"isa";
+Product0[90] = "ISA Server\",\"ISAS";
+Product0[91] = "Java Technologies\",\"jav";
+Product0[92] = "Keyboards\",\"nkey";
+Product0[93] = "Kids Products\",\"kid";
+Product0[94] = "LAN Manager\",\"lan";
+Product0[95] = "Links & Access Games\",\"lnks";
+Product0[96] = "Mail Server\",\"msv";
+Product0[97] = "Management Console\",\"MMC";
+Product0[98] = "MapPoint\",\"mp";
+Product0[99] = "Mastering Series\",\"mast";
+Product0[100] = "MDAC (ADO, OLEDB, ODBC)\",\"mdac";
+Product0[101] = "MechCommander\",\"mech";
+Product0[102] = "MechWarrior 4: Vengeance\",\"mw4";
+Product0[103] = "Merchant Server\",\"mrs";
+Product0[104] = "Message Queue\",\"msq";
+Product0[105] = "Messaging SDK\",\"msdk";
+Product0[106] = "Metadirectory Services\",\"MMS";
+Product0[107] = "Metal Gear Solid\",\"mgs";
+Product0[108] = "MFC\",\"MFC";
+Product0[109] = "Microsoft Business Planner\",\"BizPlan";
+Product0[110] = "Microsoft Press Books\",\"mspr";
+Product0[111] = "Microsoft Project 2000\",\"PRJ2K";
+Product0[112] = "Microsoft Project 2002\",\"prj2002";
+Product0[113] = "Microsoft Project 98\",\"PRJ98";
+Product0[114] = "Microsoft Project Central\",\"PRJC";
+Product0[115] = "Microsoft Project for Macintosh 4.0\",\"PRJ4M";
+Product0[116] = "Microsoft Project for Windows\",\"PRJ";
+Product0[117] = "Microsoft Project Server\",\"prjServ";
+Product0[118] = "Microsoft Reader\",\"MSREAD";
+Product0[119] = "Microsoft XML\",\"msxml";
+Product0[120] = "Midtown Madness\",\"mid";
+Product0[121] = "Mobile Information Server\",\"MISVR";
+Product0[122] = "Mobile Internet Toolkit\",\"MITK";
+Product0[123] = "MOM (Operations Manager)\",\"opman2k";
+Product0[124] = "Money\",\"mny";
+Product0[125] = "MoneyCentral\",\"mnyc";
+Product0[126] = "Monster Truck Madness\",\"mtm";
+Product0[127] = "Motocross Madness\",\"mot";
+Product0[128] = "Mouse Products\",\"mos";
+Product0[129] = "MS-DOS\",\"msdos";
+Product0[130] = "MSN - The Microsoft Network\",\"msn";
+Product0[131] = "MSN Companion\",\"msncomp";
+Product0[132] = "MSN Explorer\",\"MSNEXP";
+Product0[133] = "My Personal Tutor\",\"pfg";
+Product0[134] = "NBA Inside Drive 2000\",\"nba2k";
+Product0[135] = "NetMeeting\",\"nmt";
+Product0[136] = "NetShow Theater Server\",\"the";
+Product0[137] = "NFL Fever 2000\",\"nfl2k";
+Product0[138] = "ODBC\",\"odbc";
+Product0[139] = "Office 2000 Setup\",\"Off2kset";
+Product0[140] = "Office 2000 Suite\",\"ofw2k";
+Product0[141] = "Office 2001 for Mac\",\"off2001";
+Product0[142] = "Office 97 for Windows Suite\",\"ofw97";
+Product0[143] = "Office 98 for Macintosh Edition\",\"ofm98";
+Product0[144] = "Office Development\",\"ofd";
+Product0[145] = "Office for Windows\",\"ofw";
+Product0[146] = "Office v. X for Mac\",\"macoffx";
+Product0[147] = "Office XP Setup\",\"offxpset";
+Product0[148] = "Office XP Suite\",\"offxp";
+Product0[149] = "OLE DB\",\"odb";
+Product0[150] = "OLE Programming\",\"ole";
+Product0[151] = "Outlook\",\"out";
+Product0[152] = "Outlook 2000\",\"out2K";
+Product0[153] = "Outlook 2001 for Mac\",\"outmac";
+Product0[154] = "Outlook 2002\",\"ol2002";
+Product0[155] = "Outlook 97\",\"out97";
+Product0[156] = "Outlook 98\",\"out98";
+Product0[157] = "Outlook Express\",\"oex";
+Product0[158] = "Outlook Mobile Manager\",\"OLMM";
+Product0[159] = "Outwars\",\"owr";
+Product0[160] = "Pandora's Box\",\"pbox";
+Product0[161] = "Passport\",\"psspt";
+Product0[162] = "PhotoDraw 2000\",\"PD2K";
+Product0[163] = "Picture It!\",\"pic";
+Product0[164] = "Picture It! Publishing\",\"PIP";
+Product0[165] = "Platform SDK\",\"psdk";
+Product0[166] = "Plus! 98\",\"pl98";
+Product0[167] = "Plus! For Kids\",\"plsk";
+Product0[168] = "Plus! for Windows XP\",\"plusXP";
+Product0[169] = "Pocket PC\",\"pockpc";
+Product0[170] = "PowerPoint 2000\",\"ppt2000";
+Product0[171] = "PowerPoint 2001 for Mac\",\"PPT2001";
+Product0[172] = "PowerPoint 2002\",\"ppt2002";
+Product0[173] = "PowerPoint 97 for Windows\",\"ppt97";
+Product0[174] = "PowerPoint 98 for Mac\",\"ppm";
+Product0[175] = "PowerPoint for Windows\",\"ppt";
+Product0[176] = "PowerPoint X for Mac\",\"macpptx";
+Product0[177] = "Producer for PowerPoint 2002\",\"Prdcr";
+Product0[178] = "Proxy Server\",\"prs";
+Product0[179] = "Publisher\",\"pub";
+Product0[180] = "Publisher 2000\",\"pub2000";
+Product0[181] = "Publisher 2002\",\"pub2002";
+Product0[182] = "Reference Products\",\"ref";
+Product0[183] = "Schedule+\",\"sch";
+Product0[184] = "Scholastic Magic School Bus\",\"sbss";
+Product0[185] = "Setup and Installation\",\"setinst";
+Product0[186] = "SharePoint Portal Server\",\"SPPSVR";
+Product0[187] = "SharePoint Team Services\",\"spts";
+Product0[188] = "SideWinder Game Controllers\",\"swp";
+Product0[189] = "Site Server\",\"site";
+Product0[190] = "Site Server 3.0 Commerce\",\"com";
+Product0[191] = "Small Business Server\",\"sbs";
+Product0[192] = "SNA Server\",\"sna";
+Product0[193] = "Sound\",\"sound";
+Product0[194] = "SQL Server\",\"sql";
+Product0[195] = "SQL Server 2000\",\"sql2k";
+Product0[196] = "SQL Server CE\",\"sqlce";
+Product0[197] = "StarLancer\",\"str";
+Product0[198] = "Streets and Trips\",\"sandt";
+Product0[199] = "Systems Mgmt Server 1.2\",\"sms";
+Product0[200] = "Systems Mgmt Server 2.0\",\"SMS200";
+Product0[201] = "Team Manager\",\"tmg";
+Product0[202] = "Terminal Server\",\"termsvr";
+Product0[203] = "Train Simulator\",\"TRSIM";
+Product0[204] = "Transaction Server\",\"trs";
+Product0[205] = "Troubleshooting Wizards\",\"trbl";
+Product0[206] = "Urban Assault\",\"urb";
+Product0[207] = "Visio 2000\",\"visio2k";
+Product0[208] = "Visio 2002\",\"vso2002";
+Product0[209] = "Visio Enterprise 5.0x\",\"visio5ent";
+Product0[210] = "Visual Basic\",\"vbb";
+Product0[211] = "Visual Basic .NET (2002)\",\"vbNET";
+Product0[212] = "Visual Basic 16-bit Editions\",\"vbasic16kb";
+Product0[213] = "Visual Basic 6.0\",\"vb6";
+Product0[214] = "Visual Basic Embedded\",\"wincevb";
+Product0[215] = "Visual Basic for Applications\",\"vba";
+Product0[216] = "Visual C# .NET (2002)\",\"vcSnet";
+Product0[217] = "Visual C++\",\"vcc";
+Product0[218] = "Visual C++ .NET (2002)\",\"vcNET";
+Product0[219] = "Visual C++ 6.0\",\"vc6";
+Product0[220] = "Visual FoxPro\",\"fox";
+Product0[221] = "Visual FoxPro 6.0\",\"vfp6";
+Product0[222] = "Visual FoxPro 7.0\",\"vfp7";
+Product0[223] = "Visual InterDev\",\"vid";
+Product0[224] = "Visual InterDev 6.0\",\"vid6";
+Product0[225] = "Visual J# .NET (2002)\",\"vjnet";
+Product0[226] = "Visual J++\",\"vjj";
+Product0[227] = "Visual SourceSafe\",\"vss";
+Product0[228] = "Visual Studio .NET (2002)\",\"vsnet";
+Product0[229] = "Visual Studio 6\",\"vst";
+Product0[230] = "Visual Studio 97\",\"vst97";
+Product0[231] = "Visual Test\",\"vtt";
+Product0[232] = "Vizact 2000\",\"Vizact";
+Product0[233] = "Wheel Mouse\",\"wmos";
+Product0[234] = "Windows 16-bit SDK\",\"sdk6";
+Product0[235] = "Windows 2000\",\"win2000";
+Product0[236] = "Windows 2000 - Developer\",\"Win2000Dev";
+Product0[237] = "Windows 3.x\",\"win";
+Product0[238] = "Windows 32-bit SDK\",\"sdk3";
+Product0[239] = "Windows 95\",\"w95";
+Product0[240] = "Windows 98\",\"w98";
+Product0[241] = "Windows CE\",\"wce";
+Product0[242] = "Windows CE Toolkit for VC++\",\"wincevc";
+Product0[243] = "Windows DDKs\",\"ddk";
+Product0[244] = "Windows DNA\",\"WinDNA";
+Product0[245] = "Windows Embedded Developer\",\"winceddk";
+Product0[246] = "Windows Media Player\",\"wmp";
+Product0[247] = "Windows Media Services\",\"wms";
+Product0[248] = "Windows Messenger\",\"WinMsgr";
+Product0[249] = "Windows Millennium Edition\",\"winme";
+Product0[250] = "Windows NT Server 3.51\",\"nts351";
+Product0[251] = "Windows NT Server 4.0\",\"nts40";
+Product0[252] = "Windows NT Workstation 3.51\",\"ntw351";
+Product0[253] = "Windows NT Workstation 4.0\",\"ntw40";
+Product0[254] = "Windows Update\",\"wupd";
+Product0[255] = "Windows XP\",\"winxp";
+Product0[256] = "Windows XP Media Player\",\"WinMediaXP";
+Product0[257] = "Word 2000\",\"wrd20";
+Product0[258] = "Word 2001 for Mac\",\"WD2001";
+Product0[259] = "Word 2002\",\"wd2002";
+Product0[260] = "Word 97 for Windows\",\"wrd97";
+Product0[261] = "Word 98 Macintosh Edition\",\"wrm98";
+Product0[262] = "Word for Windows\",\"wrd";
+Product0[263] = "Word X for Mac\",\"macwordx";
+Product0[264] = "Works for Windows\",\"wrk";
+Product0[265] = "Zone.com\",\"gmz";
+Product0default = -1;
+
+
+// -->
+</script>
+<tr><td colspan=2><select name='Product'  class='wipt'>
+<option value='msall'>- All Microsoft Search Topics -
+</select></td></tr>
+<script language='JavaScript'>
+<!--
+gss_drawselectlist(document.GssSrchform.Catalog,document.GssSrchform.Product)
+
+// -->
+</script>
+<tr><td align=left colspan=2><font class='srchlb'>For solutions containing... (optional)</font><br>
+<input type='hidden' name='Query'>
+<input type='text' maxlength='255' name='Queryc' value='Type your search words here' onfocus='if(this.value == "Type your search words here") this.value=""' class='wipt'></td></tr>
+<input type=hidden name='withinResults' value='false' >
+<input type=hidden name='srchstep' value='0' >
+</table>
+<div id='SearchAdvanced' name='SearchAdvanced' style='display: none;'><table border=0 cellpadding=2 cellspacing=0 class='srchbg' width='207'>
+
+<script language='JavaScript'>
+<!--
+
+var failure = 0;
+KeywordType0 = new Array();
+KeywordType0[0] = "All of the words entered\",\"ALL";
+KeywordType0[1] = "Any of the words entered\",\"ANY";
+KeywordType0[2] = "The exact phrase entered\",\"PHRASE";
+KeywordType0[3] = "Boolean (text contains AND/OR)\",\"BOOLEAN";
+KeywordType0default = 0;
+
+
+// -->
+</script>
+<tr><td colspan=2><font class='srchlb'>Using...</font><br>
+<select name='KeywordType'  class='wipt'>
+<option value='ALL'>All of the words entered
+</select></td></tr>
+<script language='JavaScript'>
+<!--
+gss_drawselectlist('',document.GssSrchform.KeywordType)
+
+// -->
+</script>
+<tr><td><font class='srchlb'>Search     </font></td>
+<td>
+<input type='radio' checked name='Titles' value='false' ><font class='srchop'>Full Text</font><br>
+<input type='radio' name='Titles' value='true' ><font class='srchop'>Title Only</font><br>
+<input type='radio' name='Titles' value='articleid' ><font class='srchop'>Article ID</font><br>
+</td></tr>
+
+<script language='JavaScript'>
+<!--
+
+var failure = 0;
+numDays0 = new Array();
+numDays0[0] = "Anytime\",\"";
+numDays0[1] = "3 days\",\"3";
+numDays0[2] = "7 days\",\"7";
+numDays0[3] = "14 days\",\"14";
+numDays0[4] = "30 days\",\"30";
+numDays0[5] = "90 days\",\"90";
+numDays0[6] = "6 months\",\"186";
+numDays0[7] = "1 year\",\"365";
+numDays0default = 0;
+
+
+// -->
+</script>
+<tr><td><font class='srchlb'>Maximum Age</font></td><td align=right>
+<select name='numDays'  class='tipt'>
+<option value=''  >Anytime</option>
+</select></td></tr>
+<script language='JavaScript'>
+<!--
+gss_drawselectlist('',document.GssSrchform.numDays)
+
+// -->
+</script>
+
+<script language='JavaScript'>
+<!--
+
+var failure = 0;
+maxResults0 = new Array();
+maxResults0[0] = "25 articles\",\"25";
+maxResults0[1] = "50 articles\",\"50";
+maxResults0[2] = "100 articles\",\"100";
+maxResults0[3] = "150 articles\",\"150";
+maxResults0default = 0;
+
+
+// -->
+</script>
+<tr><td><font class='srchlb'>Results Limit</font></td><td align=right>
+<select name='maxResults'  class='tipt'>
+<option value='25'  >25 articles</option>
+</select></td></tr>
+<script language='JavaScript'>
+<!--
+gss_drawselectlist('',document.GssSrchform.maxResults)
+
+// -->
+</script>
+</table></div>
+<table border=0 cellpadding=2 cellspacing=0 width='100%'><tr><td align=left class="srchbg" nowrap valign=center><div id='simpleswitch' name='simpleswitch' style='display: none;'><a href=# onclick='mgswitch("SearchAdvanced","",""); if(document.all){if(SearchAdvanced.style.display == ""){simpleswitch.style.display = "none"; advancedswitch.style.display = "";}else{simpleswitch.style.display = ""; advancedswitch.style.display = "none";}}else if(document.getElementById){if(document.getElementById("SearchAdvanced").style.display == ""){document.getElementById("simpleswitch").style.display = "none"; document.getElementById("advancedswitch").style.display = "";}else{document.getElementById("simpleswitch").style.display = ""; document.getElementById("advancedswitch").style.display = "none";}} return false;' class='showhide' title="Show options">Show options<img src="/library/images/support/down_enabled.gif" onmouseover="this.src='/library/images/support/down_disabled.gif'"  onmouseout="this.src='/library/images/support/down_enabled.gif'" border=0 alt="Show options" hspace=2></a></div><div id='advancedswitch' name='advancedswitch'><a href=# onclick='mgswitch("SearchAdvanced","",""); if(document.all){if(SearchAdvanced.style.display == ""){simpleswitch.style.display = "none"; advancedswitch.style.display = "";}else{simpleswitch.style.display = ""; advancedswitch.style.display = "none";}}else if(document.getElementById){if(document.getElementById("SearchAdvanced").style.display == ""){document.getElementById("simpleswitch").style.display = "none"; document.getElementById("advancedswitch").style.display = "";}else{document.getElementById("simpleswitch").style.display = ""; document.getElementById("advancedswitch").style.display = "none";}} return false;' class='showhide' title="Hide options">Hide options<img src="/library/images/support/up_enabled.gif" height=9 onmouseover="this.src='/library/images/support/up_disabled.gif'"  onmouseout="this.src='/library/images/support/up_enabled.gif'" border=0 alt="Hide options" hspace=2 width=7></a></div></td><td align=right class="srchbg" valign=center width='100%'><a href='JavaScript: if(gss_GssSrchverify()){gss_writeGssSrchcookie(); document.GssSrchform.submit();}' class='srchsubmit' title="Run the search">Search now</td><td valign=center class="srchbg" nowrap><a href='JavaScript: if(gss_GssSrchverify()){gss_writeGssSrchcookie(); document.GssSrchform.submit();}'><img alt='Run the search' border=0 src='/library/images/support/goright.gif' onmouseover='this.src="/library/images/support/goright_hot.gif";' onmouseout='this.src="/library/images/support/goright.gif";' height=24 width=24></a></td></tr></table>
+</td></tr></form></table>
+
+<script language='JavaScript'>
+<!--
+function gss_GssSrchverify(){
+	var errstr='';
+	if(document.layers) document.GssSrchform.Query.value = escape(document.GssSrchform.Queryc.value);
+	if(errstr != ''){return false;}
+	else return true;
+}
+
+function gss_readGssSrchcookie(){
+	if(document.domain.indexOf('.com') != -1) {
+		document.domain = 'support.microsoft.com';
+	}
+	var srcform = document.GssSrchform;
+	if(document.cookie != ''){
+		var cs = document.cookie;
+		var cookiename = 'GssSrch=';
+		if(cs.indexOf(cookiename) > -1){
+			startpoint = cs.indexOf(cookiename)+cookiename.length;
+			endpoint = cs.indexOf(';', startpoint);
+			if(endpoint < 0) endpoint = cs.length;
+			cs = cs.substr(startpoint, endpoint-startpoint);
+			var entryarray = new Array();
+			var entryvalarray = new Array();
+			entryarray = cs.split('&');
+			for(i=0;i<entryarray.length;i++){
+				entryvalarray = entryarray[i].split('=');
+				if(entryvalarray[0] == 'Product' && srcform.Product.type != 'hidden'){
+					for(j=0;j<srcform.Product.options.length;j++){
+						if(srcform.Product.options[j].value == unescape(entryvalarray[1])){srcform.Product.selectedIndex = j; break;}
+					}
+				}
+				if(entryvalarray[0] == 'Query' && '' == '' && entryvalarray[1] != '') srcform.Queryc.value = unescape(entryvalarray[1]);
+				if(entryvalarray[0] == 'KeywordType' && srcform.KeywordType.type != 'hidden'){
+					for(j=0;j<srcform.KeywordType.options.length;j++){
+						if(srcform.KeywordType.options[j].value == unescape(entryvalarray[1])){srcform.KeywordType.selectedIndex = j; break;}
+					}
+				}else if(srcform.KeywordType.type == 'hidden'){srcform.KeywordType.value = unescape(entryvalarray[1]);}
+				if(entryvalarray[0] == 'Titles' && srcform.Titles.type != 'hidden'){
+					for(j=0;j<srcform.Titles.length;j++){
+						if(srcform.Titles[j].value == unescape(entryvalarray[1])){srcform.Titles[j].checked = true; break;}
+					}
+				}else if(srcform.Titles.type == 'hidden') srcform.Titles.value = unescape(entryvalarray[1]);
+				if(entryvalarray[0] == 'numDays' && srcform.numDays.type != 'hidden'){
+					for(j=0;j<srcform.numDays.options.length;j++){
+						if(srcform.numDays.options[j].value == unescape(entryvalarray[1])){srcform.numDays.selectedIndex = j; break;}
+					}
+				}else if(srcform.numDays.type == 'hidden'){srcform.numDays.value = unescape(entryvalarray[1]);}
+				if(entryvalarray[0] == 'maxResults' && srcform.maxResults.type != 'hidden'){
+					for(j=0;j<srcform.maxResults.options.length;j++){
+						if(srcform.maxResults.options[j].value == unescape(entryvalarray[1])){srcform.maxResults.selectedIndex = j; break;}
+					}
+				}else if(srcform.maxResults.type == 'hidden'){srcform.maxResults.value = unescape(entryvalarray[1]);}
+			}
+		}
+	}
+}
+
+function gss_insertval(srcstr, findstr, insertstr){
+	if(srcstr.indexOf(findstr) > -1){
+		sp = srcstr.indexOf(findstr)+findstr.length;
+		ep = srcstr.indexOf('&', sp);
+		if((srcstr.indexOf(';', sp) > 0 && srcstr.indexOf(';', sp) < ep) || ep < 0) ep = srcstr.indexOf(';', sp);
+		if(ep < 0) ep = srcstr.length;
+		return srcstr.substring(0, sp) + insertstr + srcstr.substring(ep, srcstr.length);
+	}else return srcstr+'&'+findstr+insertstr;
+}
+
+function gss_writeGssSrchcookie(){
+	if(!document.layers){
+	setcookieval('srchDivPersist', '');
+	if(document.domain.indexOf('.com') != -1) {
+		document.domain = 'support.microsoft.com';
+	}
+	var uc = false;
+	var cstr = 'GssSrch=';
+	if(document.cookie.indexOf('GssSrch=') > -1) uc = true;
+	if(uc){
+		sp = document.cookie.indexOf('GssSrch=');
+		ep = document.cookie.indexOf(';',sp);
+		if(ep < 0) ep = document.cookie.length;
+		cstr = document.cookie.substr(sp, ep-sp);
+	}
+	srcform = document.GssSrchform;
+
+	if(srcform.Product.type != 'hidden'){
+		if(uc) cstr = gss_insertval(cstr,'Product=',escape(srcform.Product.options[srcform.Product.selectedIndex].value));
+		else cstr += 'Product='+escape(srcform.Product.options[srcform.Product.selectedIndex].value)+'&';
+	}	if(document.GssSrchform.Queryc.value == 'Type your search words here'){document.GssSrchform.Queryc.value = '';}
+		if(uc) cstr = gss_insertval(cstr,'Query=',escape(srcform.Queryc.value));
+		else cstr += 'Query='+escape(srcform.Queryc.value)+'&';
+		setcookieval('refinequery', document.GssSrchform.Queryc.value);
+		srcform.Query.value = UnicodeFixup(escape(srcform.Queryc.value));
+		//srcform.Queryc.value = '';
+	if(srcform.KeywordType.type != 'hidden'){
+		if(uc) cstr = gss_insertval(cstr,'KeywordType=',escape(srcform.KeywordType.options[srcform.KeywordType.selectedIndex].value));
+		else cstr += 'KeywordType='+escape(srcform.KeywordType.options[srcform.KeywordType.selectedIndex].value)+'&';
+	}else{
+		if(uc){cstr = gss_insertval(cstr,'KeywordType=',escape(srcform.KeywordType.value));}
+		else{cstr += 'KeywordType='+escape(srcform.KeywordType.value)+'&';}
+	}
+	if(srcform.Titles.type != 'hidden'){
+		for(i=0;i<srcform.Titles.length;i++){
+			if(srcform.Titles[i].checked){
+				if(uc) cstr = gss_insertval(cstr,'Titles=',escape(srcform.Titles[i].value));
+				else cstr += 'Titles='+escape(srcform.Titles[i].value)+'&';
+			}
+		}
+	}else{
+		if(uc) cstr = gss_insertval(cstr,'Titles=',escape(srcform.Titles.value));
+		else cstr += 'Titles='+escape(srcform.Titles.value)+'&';
+	}
+	if(srcform.numDays.type != 'hidden'){
+		if(uc) cstr = gss_insertval(cstr,'numDays=',escape(srcform.numDays.options[srcform.numDays.selectedIndex].value));
+		else cstr += 'numDays='+escape(srcform.numDays.options[srcform.numDays.selectedIndex].value)+'&';
+	}else{
+		if(uc){cstr = gss_insertval(cstr,'numDays=',escape(srcform.numDays.value));}
+		else{cstr += 'numDays='+escape(srcform.numDays.value)+'&';}
+	}
+	if(srcform.maxResults.type != 'hidden'){
+		if(uc) cstr = gss_insertval(cstr,'maxResults=',escape(srcform.maxResults.options[srcform.maxResults.selectedIndex].value));
+		else cstr += 'maxResults='+escape(srcform.maxResults.options[srcform.maxResults.selectedIndex].value)+'&';
+	}else{
+		if(uc){cstr = gss_insertval(cstr,'maxResults=',escape(srcform.maxResults.value));}
+		else{cstr += 'maxResults='+escape(srcform.maxResults.value)+'&';}
+	}
+
+	if(cstr.charAt(cstr.length-1) == '&'){cstr = cstr.substring(0, cstr.length-1);}
+	document.cookie = cstr+'; expires=Fri, 31 Dec 2002 23:59:59 GMT; domain=support.microsoft.com; path=/';
+}
+}
+
+// -->
+</script>
+<script language=javascript>
+if(loadstate('GssSrchcont') && loadstate('SearchAdvanced')){gss_readGssSrchcookie();gss_drawselectlist(document.GssSrchform.Catalog,document.GssSrchform.Product);gss_readGssSrchcookie();}
+if(document.all){if(SearchAdvanced.style.display == ""){simpleswitch.style.display = "none"; advancedswitch.style.display = "";}else{simpleswitch.style.display = ""; advancedswitch.style.display = "none";}}else if(document.getElementById){if(document.getElementById('SearchAdvanced').style.display == ""){document.getElementById('simpleswitch').style.display = "none"; document.getElementById('advancedswitch').style.display = "";}else{document.getElementById('simpleswitch').style.display = ""; document.getElementById('advancedswitch').style.display = "none";}}
+</script>
+</td></tr>
+<tr><td><img src="/library/images/support/1ptrans.gif" height=3 width=1></td></tr>
+<tr><td>
+<table class="mgheader" border=0 cellpadding='0' cellspacing='0' class='mgbg' height='20' width='207'><tr><td background="/library/images/support/heather_left_bg.gif" valign=top width=5><img src="/library/images/support/heather_left.gif" width=5 height=5></td><td  background="/library/images/support/heather_bg.gif" width='100%'><font class='mghead'>&nbsp;Support Menu</font></td><td background="/library/images/support/heather_right_bg.gif" valign=top width=5><img src="/library/images/support/heather_right.gif" width=5 height=5></td></tr></table>
+<table class="flyoutMenu" width="206" cellpadding="2" cellspacing="0" border="0" menudata="/common/menu.aspx?id=fh;EN-US;SUPPORTMENU" ><tr><td>
+<table width="202" cellpadding="0" cellspacing="0" border="0"><tr><td class="flyoutLink" handle="702"><a href="/default.aspx?scid=fh;en-us;selfoverview">Self Service Support Options <!-- SUPPORT MENU --></a></td></tr></table><table width="202" cellpadding="0" cellspacing="0" border="0"><tr><td class="flyoutLink" handle="703"><a href="/default.aspx?scid=fh;EN-US;DOWNLOADOVER">Find & Download Software <!-- SUPPORT MENU --></a></td></tr></table><table width="202" cellpadding="0" cellspacing="0" border="0"><tr><td class="flyoutLink" handle="705"><a href="/default.aspx?scid=fh;EN-US;msservices">Microsoft Services <!-- SUPPORT MENU --></a></td></tr></table><table width="202" cellpadding="0" cellspacing="0" border="0"><tr><td class="flyoutLink" handle="704"><a href="/default.aspx?scid=fh;EN-US;CNTACTMS">Contact Microsoft <!--SUPPORT MENU --></a></td></tr></table></td></tr></table>
+</td></tr>
+<tr><td><img src="/library/images/support/1ptrans.gif" height=3 width=1></td></tr>
+<tr><td align='center'>
+<br><a href="/default.aspx?scid=/international.aspx" class="regiontext" title="View the support information for your location."><img src="/library/images/support/international.gif" alt="View the support information for your location." border=0><br>International Support</a><br></td></tr>
+
+			</table>
+		</td>
+		<td valign="top" width="100%" class="lightblue">
+			<table cellspacing="0" cellpadding="0" border="0" height=100% width="100%">
+			<tr><td><img src="/library/images/support/1ptrans.gif" height="6"></td></tr>
+			<tr><td bgcolor="white" id='bluefiller' height=100% valign=top><script>gss_srchredir("http://support.microsoft.com/default.aspx?scid=fh;rid;kbinfo", "http://search.support.microsoft.com/kb/c.asp?FR=0&SD=||SDVAL||&LN=EN-US","gn");</script>
+</td></tr>
+			</table>
+		</td>
+		<td bgcolor='#3366CC' width='10'><img src="/library/images/support/1ptrans.gif" height='1' width='10'></td>
+	</tr>
+	<tr>
+		<td bgcolor='#003399' colspan='3' height="55" valign="top">
+<table border='0' cellpadding='6' cellspacing='0' height="40" width='100%'><tr><td>
+<table class="ftrmenutbl" border="0" cellpadding="0" cellspacing="0">
+<td><a href='' onclick="if(document.getElementById) PrintContents(); else window.print(); event.cancelBubble=true; return false;" class='buttontext' title='Print the contents of this page' target='_top'>Print&nbsp;<img src='/library/images/support/print_icon.gif' border=0 hspace=0 align=absmiddle vspace=0><img src="/library/images/support/1ptrans.gif" height="1" border="0" width="4"></a></td>
+<td valign='top'><font class='buttontext'>|</font>&nbsp;</td><td><a href='/default.aspx?scid=fh;EN-US;gsshelp' onclick="" class='buttontext' title='View information on how to use this site effectively' target='_top'>Help&nbsp;<img src='/library/images/support/help_icon.gif' border=0 hspace=0 align=absmiddle vspace=0><img src="/library/images/support/1ptrans.gif" height="1" border="0" width="4"></a></td>
+<tr></table><font class='cpyrigthtxt'>&nbsp;© 2002 Microsoft Corporation. All rights reserved.&nbsp;&nbsp;<a href='/default.aspx?scid=/support/misc/cpyright.asp' class='cpyrigthtxt' target='_top'>Terms of use</a>&nbsp;&nbsp;<a href='/default.aspx?scid=/w3c/privacy.htm' class='cpyrigthtxt' target='_top'>Privacy statement</a>&nbsp;&nbsp;<a href='/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm' class='cpyrigthtxt' target='_top'>Accessibility</a>&nbsp;</font></td></tr></table>
+		</td>
+	</tr>
+</table>
+
+<script language="javascript">
+
+window.onload = calcsearchdivsizes;
+
+</script>
+
+<SCRIPT LANGUAGE="javascript" SRC="/common/script/toolbar.js"></SCRIPT>
+<SCRIPT LANGUAGE="javascript" SRC="/library/toolbar/EN-US/global.js"></SCRIPT>
+
+<SCRIPT LANGUAGE="javascript">
+<!--
+var ToolBar_Supported = ToolBar_Supported;
+if(ToolBar_Supported != null && ToolBar_Supported == true){
+	Frame_Supported = false;
+	setToolbarBGColor("#3366CC");
+	setICPBanner("/library/images/support/EN-US/banner.gif","/default.aspx","Return to Support home page");
+	setMSBanner("mslogo_3366CC.gif","/isapi/gomscom.asp?target=/","Microsoft.com Home Page")
+}
+//--></SCRIPT>
+
+<div id="TBContainer" style="height:60px;position:absolute;top:0;left:0;width:100%;">
+<script language="JavaScript">
+<!--
+var ToolBar_Supported = ToolBar_Supported;	
+if (ToolBar_Supported != null && ToolBar_Supported == true)
+{
+	HTMLStr = HTMLStr.replace(/\/library\/toolbar\/images\/curve.gif/g, "/library/images/support/curve_003399.gif")
+	drawToolbar();
+	if(document.getElementById) {
+		var el = document.getElementById('tbdownlevel');
+		if(el != null && typeof(el) != "undefined") {
+			el.style.display = 'none';
+			document.getElementById('tbspacer').style.display = '';
+		}
+	}
+	else if(document.all){
+		document.all.tbspacer.style.display = '';
+		document.all.tbdownlevel.style.display = 'none';
+	}
+}
+//-->
+</script>
+</div>
+<IMG style="display:none;" name="metrixgif" SRC="" ><SCRIPT LANGUAGE="Javascript">var sUrl = "http://c.microsoft.com/trans_pixel.asp?TYPE=SSPV&SOURCE=SUPPORT&URI=/gn/EN-US/Search&R=";</SCRIPT>
+<SCRIPT FOR="window" EVENT="onLoad()" >gss_fixMetrixUrl();</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function gss_surveypop(){
+		gss_handlesurvey("/isapi/gosupport.asp?target=/survey/survey.asp?id=sw;en;search&R=",50,90,"directories=0,height=450,location=0,resizable=1,scrollbars=1,status=0,toolbar=0,width=800")
+	}
+	window.onunload = gss_surveypop;
+
+// -->
+</SCRIPT>
+<!-- SurveyTrigger "default" evaluated FeatureName "SRCH" -->
+
+</BODY>
+</HTML>

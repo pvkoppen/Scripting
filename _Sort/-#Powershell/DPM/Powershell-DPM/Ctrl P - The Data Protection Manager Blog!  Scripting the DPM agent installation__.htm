@@ -1,0 +1,672 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0089)http://blogs.technet.com/dpm/archive/2007/07/02/scripting-the-dpm-agent-installation.aspx -->
+<HTML lang=en xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o = 
+"urn:schemas-microsoft-com:office:office"><HEAD><TITLE>Ctrl P - The Data Protection Manager Blog! : Scripting the DPM agent installation...</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META 
+content="Tips 'n Tricks,Powershell Scripts,DPM 2007,Setup &amp; Configuration" 
+name=keywords>
+<META 
+content="Installing the DPM protection agent in your environment can be a challenging task if you have a large number of computers to backup. This may be made harder by security lockdowns, firewalls or other configurations in your environment. Given the challenges," 
+name=description>
+<META content="MSHTML 6.00.6001.18099" name=GENERATOR><LINK 
+href="http://blogs.technet.com/dpm/pingback.aspx" rel=pingback><LINK 
+media=screen 
+href="Ctrl%20P%20-%20The%20Data%20Protection%20Manager%20Blog!%20%20Scripting%20the%20DPM%20agent%20installation___files/style.css" 
+type=text/css rel=stylesheet><LINK media=print 
+href="Ctrl%20P%20-%20The%20Data%20Protection%20Manager%20Blog!%20%20Scripting%20the%20DPM%20agent%20installation___files/print.css" 
+type=text/css rel=stylesheet><LINK media=screen 
+href="Ctrl%20P%20-%20The%20Data%20Protection%20Manager%20Blog!%20%20Scripting%20the%20DPM%20agent%20installation___files/red.css" 
+type=text/css rel=stylesheet><LINK media=screen 
+href="Ctrl%20P%20-%20The%20Data%20Protection%20Manager%20Blog!%20%20Scripting%20the%20DPM%20agent%20installation___files/customcss.css" 
+type=text/css rel=stylesheet><LINK href="/favicon.ico" type=image/ico 
+rel="shortcut icon"><LINK 
+title="Ctrl P - The Data Protection Manager Blog! (RSS 2.0)" 
+href="http://blogs.technet.com/dpm/rss.xml" type=application/rss+xml 
+rel=alternate><LINK 
+title="Ctrl P - The Data Protection Manager Blog! (Atom 1.0)" 
+href="http://blogs.technet.com/dpm/atom.xml" type=application/atom+xml 
+rel=alternate><LINK 
+title="Scripting the DPM agent installation... Comment RSS (RSS 2.0)" 
+href="http://blogs.technet.com/dpm/commentrss.aspx?PostID=1422263" 
+type=application/rss+xml rel=alternate>
+<SCRIPT 
+src="Ctrl%20P%20-%20The%20Data%20Protection%20Manager%20Blog!%20%20Scripting%20the%20DPM%20agent%20installation___files/global.js" 
+type=text/javascript></SCRIPT>
+</HEAD>
+<BODY>
+<FORM id=aspnetForm name=aspnetForm 
+action=/dpm/archive/2007/07/02/scripting-the-dpm-agent-installation.aspx 
+method=post>
+<DIV><INPUT id=__EVENTTARGET type=hidden name=__EVENTTARGET> <INPUT 
+id=__EVENTARGUMENT type=hidden name=__EVENTARGUMENT> <INPUT id=__VIEWSTATE 
+type=hidden 
+value=/wEPDwUKLTMyNjg0MDc1MWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFJGN0bDAwJF8kY3RsMDAkXyRiczEkXyR3cyRfJFNlYXJjaEJveK+MuGaxoZvO4xI7byA887OvUqUR 
+name=__VIEWSTATE> </DIV>
+<SCRIPT type=text/javascript>
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</SCRIPT>
+
+<SCRIPT language=javascript 
+src="Ctrl%20P%20-%20The%20Data%20Protection%20Manager%20Blog!%20%20Scripting%20the%20DPM%20agent%20installation___files/Telligent_Modal.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript type=text/javascript>
+// <![CDATA[
+Telligent_Modal.Configure('/utility/loading.htm',['Modal'],['ModalTitle'],['ModalClose'],['ModalContent'],['ModalFooter'],['ModalResize'],['ModalMask'],100);
+// ]]>
+</SCRIPT>
+
+<DIV id=masthead>
+<DIV id=welcome align=right>Welcome to TechNet Blogs <A 
+id=ctl00___ctl00___duw1_ac1___Login 
+href="http://blogs.technet.com/login.aspx?ReturnUrl=%2fdpm%2farchive%2f2007%2f07%2f02%2fscripting-the-dpm-agent-installation.aspx">Sign 
+in</A> | <A id=ctl00___ctl00___duw1_ac1___Register 
+href="http://blogs.technet.com/user/CreateUser.aspx?ReturnUrl=/dpm/archive/2007/07/02/scripting-the-dpm-agent-installation.aspx">Join</A> 
+| <A id=ctl00___ctl00___duw1_Faq1 
+href="http://blogs.technet.com/languages/en-US/docs/faq.aspx">Help</A> 
+</DIV></DIV>
+<DIV id=wrapper>
+<DIV id=container>
+<DIV id=header>
+<DIV id=title>
+<H1><A class=headermaintitle id=ctl00___ctl00___bth___BlogTitle 
+href="http://blogs.technet.com/dpm/default.aspx">Ctrl P - The Data Protection 
+Manager Blog!</A></H1>
+<P id=tagline></P></DIV></DIV>
+<DIV id=contentwrapper>
+<DIV id=sidebar-a>
+<DIV id=BlogLinksSideBar>
+<DIV id=WeblogLinks>
+<H3>This Blog</H3>
+<UL></UL></DIV></DIV>
+<DIV id=TasksSideBar></DIV>
+<DIV id=SubscriptionsSideBar>
+<DIV id=Subscriptions>
+<H3>Syndication</H3>
+<UL>
+  <LI><A id=ctl00___ctl00___bs1___bs___rss 
+  href="http://blogs.technet.com/dpm/rss.xml">RSS 2.0</A> 
+  <LI><A id=ctl00___ctl00___bs1___bs___atom 
+  href="http://blogs.technet.com/dpm/atom.xml">Atom 1.0</A> </LI></UL></DIV></DIV>
+<DIV id=SearchSideBar>
+<DIV id=Search>
+<H3>Search</H3>
+<UL>
+  <LI><INPUT class=searchBox id=ctl00___ctl00___bs1___ws___SearchBox 
+  onkeydown=KeyDownHandlerctl00___ctl00___bs1___ws___SearchButton(event); 
+  name=ctl00$_$ctl00$_$bs1$_$ws$_$SearchBox> <A 
+  id=ctl00___ctl00___bs1___ws___SearchButton 
+  href="javascript:__doPostBack('ctl00$_$ctl00$_$bs1$_$ws$_$SearchButton','')">Go</A> 
+  </LI></UL></DIV></DIV>
+<DIV id=NewsSideBar>
+<H3>News</H3>
+<DIV id=news><FONT size=-4>This posting is provided "AS IS" with no warranties, 
+and confers no rights. Use of included script samples are subject to the terms 
+specified in the <A href="http://www.microsoft.com/info/cpyright.htm">Terms of 
+Use</A>. </FONT>
+<SCRIPT 
+src="Ctrl%20P%20-%20The%20Data%20Protection%20Manager%20Blog!%20%20Scripting%20the%20DPM%20agent%20installation___files/qe6ceshc2v.js" 
+type=text/javascript></SCRIPT>
+<!-- Start of StatCounter Code -->
+<SCRIPT type=text/javascript>
+sc_project=3794876; 
+sc_invisible=1; 
+sc_partition=40; 
+sc_security="e901fd8a"; 
+</SCRIPT>
+
+<SCRIPT 
+src="Ctrl%20P%20-%20The%20Data%20Protection%20Manager%20Blog!%20%20Scripting%20the%20DPM%20agent%20installation___files/counter_xhtml.js" 
+type=text/javascript></SCRIPT>
+<NOSCRIPT>
+<DIV class=statcounter><A href="http://www.statcounter.com/" target=_blank><IMG 
+class=statcounter alt="web page hit counter" 
+src="Ctrl%20P%20-%20The%20Data%20Protection%20Manager%20Blog!%20%20Scripting%20the%20DPM%20agent%20installation___files/counter.gif"></A></DIV></NOSCRIPT><!-- End of StatCounter Code --></DIV></DIV>
+<DIV id=LinkSideBar>
+<H3>DPM Blogs</H3>
+<UL>
+  <LI><A id=ctl00___ctl00___bs1___lcl___Categories_ctl00_Links_ctl03_Link 
+  title="Jason Buffington / DPM Product Manager's blog" 
+  href="http://blogs.technet.com/jbuff">All Backed Up</A> 
+  <LI><A id=ctl00___ctl00___bs1___lcl___Categories_ctl00_Links_ctl04_Link 
+  title="System Center - our management family's blog" 
+  href="http://blogs.technet.com/systemcenter">System Center blog</A> </LI></UL>
+<H3>Important DPM Links</H3>
+<UL>
+  <LI><A id=ctl00___ctl00___bs1___lcl___Categories_ctl01_Links_ctl01_Link 
+  title="Your best source of information on DPM 2007" 
+  href="http://www.microsoft.com/windowsserversystem/dpm/default.mspx">Official 
+  DPM Site</A> 
+  <LI><A id=ctl00___ctl00___bs1___lcl___Categories_ctl01_Links_ctl02_Link 
+  href="http://technet.microsoft.com/en-us/dpm/default.aspx">DPM on TechNet</A> 
+  <LI><A id=ctl00___ctl00___bs1___lcl___Categories_ctl01_Links_ctl03_Link 
+  title="find DPM blog posts, MVPs and other useful resources" 
+  href="http://www.microsoft.com/windowsserversystem/dpm/community/default.mspx">DPM 
+  Community</A> 
+  <LI><A id=ctl00___ctl00___bs1___lcl___Categories_ctl01_Links_ctl04_Link 
+  title="post your questions and get answers from other DPM users -- and other experts" 
+  href="http://www.microsoft.com/technet/community/newsgroups/dgbrowser/en-us/default.mspx?dg=microsoft.public.dataprotectionmanager&amp;lang=en&amp;cr=US">DPM 
+  Newsgroup</A> 
+  <LI><A id=ctl00___ctl00___bs1___lcl___Categories_ctl01_Links_ctl05_Link 
+  title="120-day eval of DPM2007 ... plus other goodies" 
+  href="http://technet.microsoft.com/en-us/dpm/bb847848.aspx">DPM Downloads and 
+  Trial software</A> 
+  <LI><A id=ctl00___ctl00___bs1___lcl___Categories_ctl01_Links_ctl06_Link 
+  href="http://www.microsoft.com/technet/prodtechnol/dpm/proddocs/faq.mspx">DPM 
+  FAQ</A> </LI></UL></DIV></DIV>
+<DIV id=sidebar-b>
+<DIV id=TagSideBar>
+<H3>Tags</H3>
+<UL>
+  <UL class=SidebarTagCloud>
+    <LI class=Tag2><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Application+Protection/default.aspx" 
+    rel=tag>Application Protection</A> 
+    <LI class=Tag5><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Behind+the+Scenes/default.aspx" 
+    rel=tag>Behind the Scenes</A> 
+    <LI class=Tag6><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Community/default.aspx" 
+    rel=tag>Community</A> 
+    <LI class=Tag6><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Customer+success+stories/default.aspx" 
+    rel=tag>Customer success stories</A> 
+    <LI class=Tag6><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Disaster+Recovery/default.aspx" 
+    rel=tag>Disaster Recovery</A> 
+    <LI class=Tag4><A 
+    href="http://blogs.technet.com/dpm/archive/tags/DPM+2006+_2800_v1_2900_/default.aspx" 
+    rel=tag>DPM 2006 (v1)</A> 
+    <LI class=Tag1><A 
+    href="http://blogs.technet.com/dpm/archive/tags/DPM+2007/default.aspx" 
+    rel=tag>DPM 2007</A> 
+    <LI class=Tag3><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Exchange+Server/default.aspx" 
+    rel=tag>Exchange Server</A> 
+    <LI class=Tag5><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Feedback+Zone/default.aspx" 
+    rel=tag>Feedback Zone</A> 
+    <LI class=Tag5><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Hotfix/default.aspx" 
+    rel=tag>Hotfix</A> 
+    <LI class=Tag4><A 
+    href="http://blogs.technet.com/dpm/archive/tags/How+does+it+work/default.aspx" 
+    rel=tag>How does it work</A> 
+    <LI class=Tag3><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Maintenance+_2600_amp_3B00_+Troubleshooting/default.aspx" 
+    rel=tag>Maintenance &amp; Troubleshooting</A> 
+    <LI class=Tag6><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Microsoft+Partners/default.aspx" 
+    rel=tag>Microsoft Partners</A> 
+    <LI class=Tag1><A 
+    href="http://blogs.technet.com/dpm/archive/tags/news/default.aspx" 
+    rel=tag>news</A> 
+    <LI class=Tag5><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Others/default.aspx" 
+    rel=tag>Others</A> 
+    <LI class=Tag1><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Powershell+Scripts/default.aspx" 
+    rel=tag>Powershell Scripts</A> 
+    <LI class=Tag3><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Setup+_2600_amp_3B00_+Configuration/default.aspx" 
+    rel=tag>Setup &amp; Configuration</A> 
+    <LI class=Tag6><A 
+    href="http://blogs.technet.com/dpm/archive/tags/SharePoint/default.aspx" 
+    rel=tag>SharePoint</A> 
+    <LI class=Tag2><A 
+    href="http://blogs.technet.com/dpm/archive/tags/SQL+Server/default.aspx" 
+    rel=tag>SQL Server</A> 
+    <LI class=Tag5><A 
+    href="http://blogs.technet.com/dpm/archive/tags/System+Center/default.aspx" 
+    rel=tag>System Center</A> 
+    <LI class=Tag1><A 
+    href="http://blogs.technet.com/dpm/archive/tags/System+Center+Data+Protection+Manager/default.aspx" 
+    rel=tag>System Center Data Protection Manager</A> 
+    <LI class=Tag4><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Tape+Media/default.aspx" 
+    rel=tag>Tape Media</A> 
+    <LI class=Tag2><A 
+    href="http://blogs.technet.com/dpm/archive/tags/The+Team/default.aspx" 
+    rel=tag>The Team</A> 
+    <LI class=Tag1><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Tips+_2700_n+Tricks/default.aspx" 
+    rel=tag>Tips 'n Tricks</A> 
+    <LI class=Tag2><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Video/default.aspx" 
+    rel=tag>Video</A> 
+    <LI class=Tag5><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Virtualization/default.aspx" 
+    rel=tag>Virtualization</A> 
+    <LI class=Tag6><A 
+    href="http://blogs.technet.com/dpm/archive/tags/Windows+Server+2008/default.aspx" 
+    rel=tag>Windows Server 2008</A> </LI></UL></UL></DIV>
+<DIV id=RecentPostsSideBar>
+<H3>Recent Posts</H3>
+<UL>
+  <LI><A id=ctl00___ctl00___rp___PostList_ctl01_Link 
+  href="http://blogs.technet.com/dpm/archive/2008/12/19/service-pack-1-for-dpm-2007-is-now-available.aspx">Service 
+  Pack 1 for DPM 2007 is now available</A> 
+  <LI><A id=ctl00___ctl00___rp___PostList_ctl02_Link 
+  href="http://blogs.technet.com/dpm/archive/2008/12/11/new-sales-promotion-get-dpm-server-licenses-when-you-purchase-system-center-smse-s.aspx">New 
+  Sales Promotion -- get DPM Server licenses when you purchase System Center 
+  SMSE's</A> 
+  <LI><A id=ctl00___ctl00___rp___PostList_ctl03_Link 
+  href="http://blogs.technet.com/dpm/archive/2008/12/10/now-available-for-download-infrastructure-planning-design-ipd-guide-for-dpm-2007-sp1.aspx">Now 
+  available for download - Infrastructure Planning &amp; Design (IPD) guide for 
+  DPM 2007 SP1</A> 
+  <LI><A id=ctl00___ctl00___rp___PostList_ctl04_Link 
+  href="http://blogs.technet.com/dpm/archive/2008/11/13/if-you-are-a-microsoft-partner-you-can-be-a-dpm-hero.aspx">If 
+  you are a Microsoft Partner ... you can be a DPM HERO</A> 
+  <LI><A id=ctl00___ctl00___rp___PostList_ctl05_Link 
+  href="http://blogs.technet.com/dpm/archive/2008/11/10/what-is-new-in-dpm-2007-service-pack-1-check-out-this-edge-video.aspx">What 
+  is new in DPM 2007 Service Pack 1 -- check out this EDGE video</A> 
+</LI></UL></DIV>
+<DIV id=ArchiveSideBar>
+<H3>Archives</H3>
+<UL>
+  <LI><A href="http://blogs.technet.com/dpm/archive/2008/12.aspx">December 2008 
+  (3)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2008/11.aspx">November 2008 
+  (2)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2008/10.aspx">October 2008 
+  (1)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2008/09.aspx">September 2008 
+  (1)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2008/08.aspx">August 2008 
+  (1)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2008/07.aspx">July 2008 
+  (3)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2008/06.aspx">June 2008 
+  (12)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2008/05.aspx">May 2008 
+  (3)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2008/04.aspx">April 2008 
+  (3)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2008/03.aspx">March 2008 
+  (8)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2008/01.aspx">January 2008 
+  (7)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2007/12.aspx">December 2007 
+  (2)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2007/11.aspx">November 2007 
+  (2)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2007/10.aspx">October 2007 
+  (3)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2007/09.aspx">September 2007 
+  (6)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2007/08.aspx">August 2007 
+  (3)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2007/07.aspx">July 2007 
+  (6)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2007/06.aspx">June 2007 
+  (4)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2007/01.aspx">January 2007 
+  (3)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2006/10.aspx">October 2006 
+  (2)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2006/09.aspx">September 2006 
+  (2)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2006/06.aspx">June 2006 
+  (2)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2006/05.aspx">May 2006 
+  (4)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2006/03.aspx">March 2006 
+  (5)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2006/02.aspx">February 2006 
+  (1)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2006/01.aspx">January 2006 
+  (2)</A> 
+  <LI><A href="http://blogs.technet.com/dpm/archive/2005/12.aspx">December 2005 
+  (1)</A> </LI></UL></DIV></DIV>
+<DIV id=content>
+<DIV id=content2><BR>
+<DIV class=post>
+<DIV class=postsub>
+<H2>Scripting the DPM agent installation...</H2>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT size=3><FONT 
+face=Calibri>Installing the DPM protection agent in your environment can be a 
+challenging task if you have a large number of computers to backup. This may be 
+made harder by security lockdowns, firewalls or other configurations in your 
+environment. Given the challenges, the out-of-box experience team for DPM 2007 
+implemented an alternative, scriptable way to install the agent. This allows you 
+to do the following:<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo1"><SPAN 
+style="FONT-FAMILY: Symbol; mso-bidi-font-family: Symbol; mso-fareast-font-family: Symbol"><SPAN 
+style="mso-list: Ignore"><FONT size=3>·</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>Use software deployment 
+tools like SMS to manage large no. of agent 
+installations.<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo1"><SPAN 
+style="FONT-FAMILY: Symbol; mso-bidi-font-family: Symbol; mso-fareast-font-family: Symbol"><SPAN 
+style="mso-list: Ignore"><FONT size=3>·</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>Create a standard server 
+image with the DPM protection agent already rolled into it! Just assign the DPM 
+server name using a tool when bringing up a new box and you are ready to 
+go.<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo1"><SPAN 
+style="FONT-FAMILY: Symbol; mso-bidi-font-family: Symbol; mso-fareast-font-family: Symbol"><SPAN 
+style="mso-list: Ignore"><FONT size=3>·</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>Install agent on firewalled 
+computers without having to manually configure the firewall (for Windows 
+Firewall).<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo1"><SPAN 
+style="FONT-FAMILY: Symbol; mso-bidi-font-family: Symbol; mso-fareast-font-family: Symbol"><SPAN 
+style="mso-list: Ignore"><FONT size=3>·</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>Workaround other security 
+lockdowns or configurations in your environment that cause the agent 
+installation to fail via DPM. No more “DPM Protection Agent install failed with 
+Access is denied”!!!</FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo1"><FONT 
+face=Calibri size=3></FONT>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT size=3><FONT 
+face=Calibri><STRONG>Installing the agent manually on the target 
+computer:<o:p></o:p></STRONG></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo1"><SPAN 
+style="mso-bidi-font-family: Calibri; mso-fareast-font-family: Calibri"><SPAN 
+style="mso-list: Ignore"><FONT face=Calibri size=3>1.</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>From the download, find the 
+DPMAgentInstaller.exe in DPM2008\Agents folder. Use DPMAgentInstaller_AMD64.exe 
+for 64-bit computers. Place these files on a share.<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo1"><SPAN 
+style="mso-bidi-font-family: Calibri; mso-fareast-font-family: Calibri"><SPAN 
+style="mso-list: Ignore"><FONT face=Calibri size=3>2.</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>On each target computer, 
+run DPMAgentInstaller.exe &lt;DPM computer name&gt;. Ensure that an entry for 
+the DPM Protection Agent appears in the Add/Remove Programs applet. At end of 
+the install on Windows Server 2003 or 2008, you will require to restart the 
+computer. You may use SMS to automate this step.<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo1"><SPAN 
+style="mso-bidi-font-family: Calibri; mso-fareast-font-family: Calibri"><SPAN 
+style="mso-list: Ignore"><FONT face=Calibri size=3>3.</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>Now for some Powershell 
+scripting to make life easy. Put the list of all machines to be attached to the 
+DPM server into a computer_list.txt and run the following script from the bin 
+folder in the DPM installation. This script works assuming the same 
+account/password can be used for administrator access to all the servers in the 
+list.</FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo1"><FONT 
+face=Calibri size=3></FONT>&nbsp;</P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo1"><FONT 
+size=3><FONT face=Calibri>-&nbsp;- - - - save the script below as a powershell 
+script (.ps1) and run it - - - - - </FONT></FONT></P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'">
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">param([string] 
+$DPMServerName, [string] $PSFileList)<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">if(!$args[0])<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">{<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp; 
+if(!$DPMServerName)<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp; 
+{<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+$DPMServerName = read-host "DPMServer:"<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp; 
+}<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">}<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp; 
+if(!$PSFileList)<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp; 
+{<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+$PSFileList = read-host "PSFileList:"<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp; 
+}<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp;&nbsp; $UserName 
+=&nbsp; read-host "UserName:"<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp;&nbsp; $Pwd = 
+read-host "Password:"<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp;&nbsp; $Domain = 
+read-host "Domain:" <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">type $PSFileList | foreach 
+-process {<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp;&nbsp; if 
+(!$_.Equals(""))<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp;&nbsp; 
+{<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+.\Attach-ProductionServer.ps1 -DPMServerName $DPMServerName -PSName $_ -Username 
+$UserName -Password $Pwd -domain $Domain<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp;&nbsp; 
+}<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt 1in"><SPAN 
+style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: Calibri; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-latin">}</SPAN></SPAN></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo1"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: Calibri; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-latin"><FONT 
+face=Calibri size=3>- - - - - - - - - - - - - - - End of script - - - - - - - - 
+- - - - - - - - - - - - </FONT></SPAN></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo1"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: Calibri; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-latin"><FONT 
+face=Calibri size=3></FONT></SPAN>&nbsp;</P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: Calibri; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-fareast-theme-font: minor-latin">
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l1 level1 lfo1"><SPAN 
+style="mso-bidi-font-family: Calibri; mso-fareast-font-family: Calibri"><SPAN 
+style="mso-list: Ignore"><FONT face=Calibri size=3>4.</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>Open the DPM administration 
+console and refresh the status of the agents in the Agents tab. 
+<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l1 level1 lfo1"><SPAN 
+style="mso-bidi-font-family: Calibri; mso-fareast-font-family: Calibri"><SPAN 
+style="mso-list: Ignore"><FONT face=Calibri size=3>5.</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>You are ready to setup 
+protection!<o:p></o:p></FONT></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT face=Calibri 
+size=3>&nbsp;</FONT></o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT size=3><FONT 
+face=Calibri><STRONG>Creating a ready to protect 
+image:<o:p></o:p></STRONG></FONT></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT size=3><FONT 
+face=Calibri>Many IT departments and administrators use images of the OS with 
+the required software rolled in. Like anti-viruses, you can update your OS image 
+with the DPM protection agent installation so that it is ready to protect when a 
+computer is brought up with this image. Here’s what to 
+do:<o:p></o:p></FONT></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT size=3><FONT 
+face=Calibri>Preparing the image:<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo2"><SPAN 
+style="mso-bidi-font-family: Calibri; mso-fareast-font-family: Calibri"><SPAN 
+style="mso-list: Ignore"><FONT face=Calibri size=3>1.</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>Create the OS 
+installation.<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo2"><SPAN 
+style="mso-bidi-font-family: Calibri; mso-fareast-font-family: Calibri"><SPAN 
+style="mso-list: Ignore"><FONT face=Calibri size=3>2.</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>Run DpmAgentInstaller.exe 
+(without any parameters) to install the agent.<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo2"><SPAN 
+style="mso-bidi-font-family: Calibri; mso-fareast-font-family: Calibri"><SPAN 
+style="mso-list: Ignore"><FONT face=Calibri size=3>3.</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>Capture the image with your 
+favorite software… done!<o:p></o:p></FONT></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><o:p><FONT face=Calibri 
+size=3>&nbsp;</FONT></o:p></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt"><FONT size=3><FONT 
+face=Calibri><STRONG>When applying an 
+image:<o:p></o:p></STRONG></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l2 level1 lfo3"><SPAN 
+style="mso-bidi-font-family: Calibri; mso-fareast-font-family: Calibri"><SPAN 
+style="mso-list: Ignore"><FONT face=Calibri size=3>1.</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>Boot up the machine and 
+join machine to a domain.<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l2 level1 lfo3"><SPAN 
+style="mso-bidi-font-family: Calibri; mso-fareast-font-family: Calibri"><SPAN 
+style="mso-list: Ignore"><FONT face=Calibri size=3>2.</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>Log on as a domain user 
+with administrator permissions on the machine.<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l2 level1 lfo3"><SPAN 
+style="mso-bidi-font-family: Calibri; mso-fareast-font-family: Calibri"><SPAN 
+style="mso-list: Ignore"><FONT face=Calibri size=3>3.</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>From %Program 
+Files%\Microsoft Data Protection Manager\bin folder, run SetDpmServer.exe 
+&lt;DPM Server Name&gt;.<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l2 level1 lfo3"><SPAN 
+style="mso-bidi-font-family: Calibri; mso-fareast-font-family: Calibri"><SPAN 
+style="mso-list: Ignore"><FONT face=Calibri size=3>4.</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>On the DPM server, open the 
+DPM management shell. Run Attach-ProductionServer.ps1 with the required 
+parameters.<o:p></o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l2 level1 lfo3"><SPAN 
+style="mso-bidi-font-family: Calibri; mso-fareast-font-family: Calibri"><SPAN 
+style="mso-list: Ignore"><FONT face=Calibri size=3>5.</FONT><SPAN 
+style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN></SPAN><FONT size=3><FONT face=Calibri>Refresh the status of the 
+agents tab in the UI to complete the attach.</FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l2 level1 lfo3"><FONT 
+size=3><FONT face=Calibri></FONT></FONT>&nbsp;</P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l2 level1 lfo3"><FONT 
+size=3><FONT face=Calibri>- <A class="" 
+href="http://blogs.technet.com/dpm/pages/prashant-kumar-s-bio.aspx" 
+target=_blank 
+mce_href="http://blogs.technet.com/dpm/pages/prashant-kumar-s-bio.aspx">Prashant 
+Kumar</A><o:p>&nbsp;</o:p></FONT></FONT></P>
+<P class=MsoListParagraph 
+style="MARGIN: 0in 0in 0pt 0.5in; TEXT-INDENT: -0.25in; mso-list: l0 level1 lfo1" 
+mce_keep="true">&nbsp;</P></SPAN>
+<DIV class=postfoot>Published Monday, July 02, 2007 1:16 PM by <A 
+id=ctl00___ctl00___ctl01___Entry___AuthorLink 
+href="http://blogs.technet.com/user/Profile.aspx?UserID=5724">dpm</A> 
+<DIV><SPAN id=ctl00___ctl00___ctl01___Entry___InlineTagEditorPanel>Filed under: 
+<A 
+href="http://blogs.technet.com/dpm/archive/tags/Tips+_2700_n+Tricks/default.aspx" 
+rel=tag>Tips 'n Tricks</A>, <A 
+href="http://blogs.technet.com/dpm/archive/tags/Powershell+Scripts/default.aspx" 
+rel=tag>Powershell Scripts</A>, <A 
+href="http://blogs.technet.com/dpm/archive/tags/DPM+2007/default.aspx" 
+rel=tag>DPM 2007</A>, <A 
+href="http://blogs.technet.com/dpm/archive/tags/Setup+_2600_amp_3B00_+Configuration/default.aspx" 
+rel=tag>Setup &amp; Configuration</A></SPAN><INPUT 
+id=ctl00___ctl00___ctl01___Entry___InlineTagEditorPanel_State type=hidden 
+value=nochange 
+name=ctl00$_$ctl00$_$ctl01$_$Entry$_$InlineTagEditorPanel></DIV></DIV></DIV></DIV>
+<H3>Comments </H3>
+<DIV id=comments>
+<DIV class=comment>No Comments </DIV></DIV><EM>Anonymous comments are 
+disabled</EM> </DIV></DIV>
+<DIV id=contentfooter>&nbsp;</DIV></DIV>
+<DIV id=footer>
+<DIV>© 2008 Microsoft Corporation. All rights reserved. <A 
+href="http://www.microsoft.com/info/cpyright.mspx">Terms of Use</A> 
+&nbsp;|&nbsp; <A 
+href="http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.mspx">Trademarks</A> 
+&nbsp;|&nbsp; <A href="http://privacy.microsoft.com/en-us/default.aspx">Privacy 
+Statement</A> </DIV></DIV></DIV></DIV>
+<SCRIPT language=javascript type=text/javascript>
+<!--
+function KeyDownHandlerctl00___ctl00___bs1___ws___SearchButton(event)
+{
+	if (event.keyCode == 13)
+	{
+		event.returnValue = false;
+		event.cancel = true;
+     __doPostBack('ctl00$_$ctl00$_$bs1$_$ws$_$SearchButton','')	}
+}
+
+//-->
+</SCRIPT>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+rdf:about="http://blogs.technet.com/dpm/archive/2007/07/02/scripting-the-dpm-agent-installation.aspx"
+dc:identifier="http://blogs.technet.com/dpm/archive/2007/07/02/scripting-the-dpm-agent-installation.aspx"
+dc:title="Scripting the DPM agent installation..."
+trackback:ping="http://blogs.technet.com/dpm/trackback.aspx?PostID=1422263" />
+</rdf:RDF>
+--></FORM><!-- WT MT Inline v.2.0 -->
+<SCRIPT type=text/javascript>
+var gTrackEvents=0;
+var gDomain="m.webtrends.com";
+var gDcsId="dcs8zd2bz00000w0adote0s3l_1d8j";
+var gFpc="WT_FPC";
+if(document.cookie.indexOf(gFpc+"=")==-1){document.write("<SCR"+"IPT TYPE='text/javascript' SRC='"+"http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/SCR"+"IPT>");}
+</SCRIPT>
+
+<SCRIPT 
+src="Ctrl%20P%20-%20The%20Data%20Protection%20Manager%20Blog!%20%20Scripting%20the%20DPM%20agent%20installation___files/wt.js" 
+type=text/javascript></SCRIPT>
+<NOSCRIPT><IMG id=DCSIMG height=1 alt="" 
+src="Ctrl%20P%20-%20The%20Data%20Protection%20Manager%20Blog!%20%20Scripting%20the%20DPM%20agent%20installation___files/njs.gif" 
+width=1 border=0> </NOSCRIPT><IMG height=0 alt="Page view tracker" 
+src="Ctrl%20P%20-%20The%20Data%20Protection%20Manager%20Blog!%20%20Scripting%20the%20DPM%20agent%20installation___files/trans_pixel.gif" 
+width=0> </BODY></HTML>

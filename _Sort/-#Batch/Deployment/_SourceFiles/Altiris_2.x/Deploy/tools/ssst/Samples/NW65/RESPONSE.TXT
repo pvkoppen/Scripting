@@ -1,0 +1,397 @@
+[Product Versions]
+EDIR=87.1.0
+NICI=2.6.0
+
+[NWI:Product Information]
+Major Version=NetWare 6
+Minor Version=50
+
+[NWI:Language]
+Server Language=4
+Prompt=FALSE
+Additional Languages=4
+
+[NWI:NDS]
+Admin Password=admin
+Schema Extensions=sys:/system/schema/NLS.SCH,sys:/system/schema/AUDITING.SCH,sys:/system/schema/NWADMIN.SCH,sys:/system/schema/NRD.SCH,sys:system/schema/SAS.SCH,sys:/system/schema/NDSPKI.SCH,sys:/system/schema/MASV.SCH,sys:/system/schema/SLP.SCH,sys:system/schema/CATALOG.SCH,sys:system/schema/WANMAN.SCH,sys:system/schema/SMS.SCH,sys:system/schema/NDPS100.SCH,sys:system/schema/NDPS200.SCH,sys:system/schema/SVC.SCH,sys:system/schema/NDSCOMM.SCH,sys:system/schema/NOV_INET.SCH,sys:system/schema/NSSFS.SCH
+Schema Extensions TAO=sys:/system/schema/NDS500.SCH,sys:/system/schema/NDSPKIS.SCH
+Schema Extensions Pre DS=sys:/system/schema/NDS500.SCH,sys:/system/schema/NLS.SCH
+Schema Extensions LDAP=sys:system/schema/LDAP.SCH,sys:system/schema/LDAPUPDT.SCH
+Schema Extensions LDAP NDS8=sys:system/schema/nds8/LDAP.SCH
+Schema Extensions LDAP NDSJUL99=sys:system/schema/ndsjul99/LDAP.SCH,sys:system/schema/ndsjul99/LDAPUPDT.SCH,sys:sys:system/schema/ndsjul99/NDSPKI.SCH
+Schema Extensions LDAP NDSAPR99=sys:system/schema/ndsapr99/LDAP.SCH,sys:system/schema/ndsapr99/LDAPUPDT.SCH
+Admin Language=4
+Tree Name=NETWARE65_TREE
+Server Context=O=compaq
+New Tree=true
+Admin Login Name=admin
+Admin Context=O=compaq
+Display Summary=false
+Prompt=false
+
+[NWI:Old Products]
+Product 1=NWSB411
+Product 2=IWSB411
+Product 3=NWSB420
+Product 4=NWGB420
+Product 5=NSBS
+Product 6=NFAM
+Product 7=NFAW
+Product 8=NFAU
+
+[NOVELL:NOVELL_ROOT:1.0.0]
+showWelcomeScreen=false
+LogLevel=DEBUG_DETAIL
+rebootAfterFileCopy=false
+allowLicenseAgreement=false
+welcomeScreen=com.novell.application.install.Welcome
+choiceScreen=com.novell.application.install.ChoicePanel
+summaryScreen=com.novell.application.install.Summary
+licenseAgreementScreen=com.novell.application.install.ProductLicenseAgreement
+languageScreen=com.novell.application.install.SelectLanguage
+customChoiceScreen=com.novell.application.install.CustomChoicePanel
+wizardScreen=com.novell.application.install.WizardFrame
+licenseEnvelopeScreen=com.novell.application.install.LicenseEnvelope
+;closeScreen=NWICloseScreen
+closeScreen=SilentCloseScreen
+silent=true
+installSilentModeOverwrite=true
+installSilentModeOverwriteConfigFile=true
+allowCustomization=true
+allowSummary=false
+allowReadme=true
+allowCloseScreen=true
+allowStatusBar=true
+welcomeScreenText=Welcome to the Novell installation. This program will upgrade your system to NetWare 6.1.  This upgrade is comprised of two steps.  First is an interview and the file copy.  This is followed by a system reboot and the system configuration.  So sit back and enjoy the ride.  Upgrades just don't get any easier than this :)
+welcomeScreenTitle=Novell Product Installation
+customizeScreenTitle=Product Customization
+defaultImage=banner5.gif
+licenseAgreeFile=
+readmeFile=readme.html
+licensePath=none
+welcomeScreenHelp=welcome.html
+summaryScreenHelp=summary.html
+licAgreeScreenHelp=licAgree.html
+choiceScreenHelp=choice.html
+filterScreenHelp=filter.html
+licEnvScreenHelp=license.html
+customizeScreenHelp=custom.html
+locationScreenHelp=location.html
+licEnvScreenTitle=Licenses
+summaryScreenTitle=Summary
+licAgreeScreenTitle=License Agreement
+locationScreenTitle=Location
+choiceScreenTitle=Components
+installMode=2
+overWriteNewerFile=false
+overWriteNewerFilePrompt=true
+copyToRemoteDestination=true
+pdbDirectory=server;products
+copyAll=false
+automaticReboot=true
+reboot=true
+
+
+[Initialization]
+SPLocation=SYS:\NI\nis30\bin\../data/local.db
+NISubdirectory=nis30
+Install Zip Path=sys:ni/data
+Skip Script Copy=true
+DisplayLanguage=en_US
+Version=DestinationNode
+Install State=Finished
+InstallationMode=Silent
+SummaryPrompt=false
+
+[NWI:Install Script]
+Support Pack Script=c:\spack\spack.ips e=c:\spackerr.log s=c:\spack
+DOS Install=DOS_INST.ILS
+SYS Install=SYS_INST.ILS
+Image Install=GUI_INST.ILS
+Close Script=C:\compaq\extra.ics e=c:\cpqerr.log
+
+[Locations]
+Novell:DST%Startup:1.0.0=
+
+[Selected Nodes]
+prompt=true
+DestinationNode=HealthChecks
+HealthChecks=NetWare Services
+NetWare Services=NetWare OS,Patterns,Products,NWUpdateGroup
+NetWare OS=NetWare65OS,NICI,Protocols,Time Zone,DS_Install,LicensePrompt,W0 install,NFA Install Module,DOS_INST,SYS_INST
+Patterns=CustomNetWare
+Products=Novell Certificate Server,6pkLdap,Imonitor,Apache2 Admin Server,Tomcat4,Portal,SMS,ConsoleOneProducts,NWNMAS,Native File Services,NWEMBOX,NFA Module,Beans,NSN,Perl,PHP,OpenSSH
+Novell Certificate Server=CertServ System Files,CertServ Public Files
+Imonitor=imonitor_DFG
+Apache2 Admin Server=AApache2,AAp2Conf,adminsrv,welcome
+Tomcat4=Tomcat zip file,examples zip file,Tomcat admin configuration,Novell Tomcat Startup Scripts
+Portal=portalzip,httpstkzip
+SMS=SMSSystemFiles
+ConsoleOneProducts=ConsoleOne,Reporting Snapin
+ConsoleOne=c1_core,c1_win32,c1_nw.zip
+Reporting Snapin=c1_rpt
+NWNMAS=NMAS Server System Files,NMAS Methods
+Native File Services=NFSNIS
+NFSNIS=NFSNIS-NLMs
+NWEMBOX=embox_DFG
+Beans=BEANS_ZIP
+NSN=NSN install module,UCS install module
+NSN install module=NSN Product zip file
+UCS install module=UCS Product zip file
+Perl=Perl install module
+Perl install module=Perl Product zip file
+PHP=PHP install module
+PHP install module=PHP Product zip file
+OpenSSH=SSH-Config,SSH-Core,SSH-Docs
+NWUpdateGroup=NWUpdate
+
+[Product List]
+Essential Products=NetWare OS,HealthChecks,NetWare Services
+
+[Health Check]
+Clear Default Check List=true
+Display Summary Screen=false
+Display Selection Screen=false
+prompt=false
+
+[Advertisement]
+Ad ID#0=ad1.gif,60
+Ad ID#1=ad2.gif,60
+Ad ID#2=ad3.gif,60
+Ad ID#3=ad4.gif,60
+Ad ID#4=ad5.gif,60
+Ad ID#5=ad6.gif,60
+Ad ID#6=ad7.gif,60
+Ad ID#7=ad8.gif,60
+Ad ID#8=ad9.gif,60
+Ad ID#9=ad10.gif,60
+Ad ID#10=ad11.gif,60
+Ad ID#11=ad12.gif,60
+
+[FileGroup finalSize]
+CertServ System Files=1658797
+CertServ Public Files=3678457
+imonitor_DFG=6431720
+AApache2=10050928
+AAp2Conf=9136
+adminsrv=5923996
+welcome=637890
+Tomcat zip file=24630940
+examples zip file=375454
+Tomcat admin configuration=301538
+Novell Tomcat Startup Scripts=57452
+Ap2webcf=75969
+portalzip=1172709
+httpstkzip=488
+SMSSystemFiles=1648705
+c1_es=187205
+c1help_es=448106
+c1_core=5119817
+c1_win32=46835789
+c1_nw.zip=170
+c1_rpt=12290385
+IPP Login Files=4098693
+IPrint Files=6137859
+Gateway Files=37921515
+NDPS Banner=874491
+NDPS Font=3332
+NDPS Prndef=10321258
+HPDrivers=75929678
+XeroxDrivers=88456164
+KyoceraDrivers=19494559
+LexmarkDrivers=12046952
+IBMDrivers=16445029
+OkiDrivers=176
+QMSDrivers=10946325
+ftpfilezip=327458
+NSearch1=6974132
+Templates=598840
+Sample Templates=598840
+NSrchES=2918872
+NMAS Server System Files=2805022
+NMAS Methods=21136089
+NFSNIS-NLMs=2624178
+iFolder zip file=7284736
+ifolder_en=5486498
+ifolder_es=5510820
+embox_DFG=5723823
+Product zip file=16423459
+Configuration zip file=161
+JDBC Driver zip file=212314
+Manage zip file=7802229
+exteNd Application Server zip file=203527112
+exteNd Application Server NetWare Overlay=101856
+exteNd Application Server IP address Management zip file=9464
+Nsure auditing zip file=1819638
+Nsure auditing lsc files=25990
+RSyncSrvZip=379034
+BEANS_ZIP=954018
+components=4625563
+NSN Product zip file=2505532
+UCS Product zip file=403216
+Perl Product zip file=10123351
+PHP Product zip file=1460960
+SSH-Config=3054
+SSH-Core=3965796
+WanConnectZip=3371721
+EXTEND_ZIP_FILE=3012904
+DOS_INST=1
+SYS_INST=1
+
+[NWI:Boot Partition]
+Prompt=FALSE
+
+[NWI:Locale]
+Prompt=FALSE
+Country Code=001
+Keyboard=United States
+Code Page=437
+Uses Vgadisp=false
+
+[NWI:Mouse and Video]
+Mouse=Auto
+Video Type=PlugNPlay
+Prompt=FALSE
+
+[NWI:License]
+Prompt=False
+Display License Agreement=FALSE
+NICI Foundation Key File=file:/A:\LICENSE\90367531.NFK
+License File=file:/A:\LICENSE\90367531.NLF
+
+[NWI:Install Options]
+Upgrade=FALSE
+Migration=FALSE
+Express=FALSE
+Prompt=FALSE
+Startup Directory=C:\NWSERVER
+Allow User Response File=TRUE
+
+[NWI:Server Settings]
+Prompt=FALSE
+Load Server at Reboot=FALSE
+CD-ROM Driver=NetWare
+
+[Novell:SRC:1.0.0]
+path=F:
+
+[NWI:File Server]
+Prompt=false
+Servername=NETWARE65
+Server Id Number=422116F
+
+[NWI:Hardware]
+Access Floppy=FALSE
+CD-ROM Driver=NetWare
+Prompt=FALSE
+PSM Detection=True
+Storage Detection=True
+Network Detection=True
+
+[NWI:Add To Startup]
+
+[Novell:DST%Startup:1.0.0_Location]
+path=file:///C:\NWSERVER
+
+[NWI:Fileset Totals]
+DOS copy=45403193
+FAT Compatibility Update Copy=1256
+FAT update copy=2415231
+DOS finish copy=916950
+FAT TMP copy=6319309
+FAT TMP Update copy=628
+SYS Volume Backup=0
+Copy System Files Script=265437549
+SYS Compatibility Update Copy=628
+System Files Update Copy=0
+UnZip System Files Script=979357
+
+[NWI:Pool Sys]
+Remove Old Partitions=TRUE
+Remove Only SYS partitions=TRUE
+Remove Shared Partitions=FALSE
+Device ID=[V321-A3-D0:0] Compaq 64-Bit Slot 0 Port 2 ID 0 COMPAQ BD01862A
+SYS POOL SIZE=4000
+
+[DST_Location]
+Path=file:/sys:
+User=
+
+[Languages]
+LangID1=false
+LangID4=true
+LangID6=false
+LangID7=false
+LangID8=false
+LangID9=false
+LangID10=false
+LangID12=false
+LangID13=false
+LangID14=false
+LangID16=false
+LangID99=false
+LangID100=false
+
+[Licenses]
+FCLLic= 
+
+[NWI:PROTOCOLS]
+Prompt=false
+
+[NWI:TCPIP]
+Logical Name 1=N100_1_EII
+IP Address 1=10.1.30.23
+Subnet Mask 1=255.255.255.0
+
+[NWI:IPCMD]
+IPX Compatibility=False
+
+[NWI:DNS]
+Prompt=false
+Domain=com
+Nameservers=10.1.30.27
+
+[NWI:Host Name]
+Prompt=false
+Verify=False
+Host Name 1=karen.com
+IP Address 1=10.1.30.23
+
+[NWI:Time Zone]
+Time Zone=CST
+Prompt=false
+Use Daylight Saving Time=true
+
+[NWI:Time Synchronization]
+Time Server Type=SINGLE
+
+[NWI:LdapConfig]
+Prompt=false
+ClearText=false
+
+[SMS]
+treeName=NETWARE65_TREE
+queueVolume=CN=NETWARE65.O=compaq
+queueContext=CN=NETWARE65 Backup Queue.O=compaq
+smdrContext=O=compaq
+
+[NWNMAS]
+Prompt=false
+Method 0=NDS
+
+[Beans]
+prompt=false
+
+[NSN]
+prompt=false
+
+[Perl]
+prompt=false
+
+[PHP]
+prompt=false
+
+[NWI:MISC]
+Relogin Password=password
+
+

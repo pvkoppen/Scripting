@@ -1,0 +1,10 @@
+list disk
+select disk 0
+list partition
+create partition primary
+list partition
+list volume
+rem select volume 2
+assign
+list volume
+exit

@@ -1,0 +1,25 @@
+The syntax of this command is:
+
+
+NET GROUP 
+[groupname [/COMMENT:"text"]] [/DOMAIN]
+          groupname {/ADD [/COMMENT:"text"] | /DELETE}  [/DOMAIN]
+          groupname username [...] {/ADD | /DELETE} [/DOMAIN]
+
+NET GROUP adds, displays, or modifies global groups on servers. Used 
+without parameters, it displays the groupnames on the server.
+
+groupname        Is the name of the group to add, expand, or delete. 
+                 Supply only a groupname to view a list of users 
+                 in a group. 
+/COMMENT:"text"  Adds a comment for a new or existing group. 
+                 Enclose the text in quotation marks. 
+/DOMAIN          Performs the operation on a domain controller
+                 of the current domain. Otherwise, the operation is 
+                 performed on the local computer. 
+username[ ...]   Lists one or more usernames to add to or remove from 
+                 a group. Separate multiple username entries with a space. 
+/ADD             Adds a group, or adds a username to a group. 
+/DELETE          Removes a group, or removes a username from a group. 
+
+NET HELP command | MORE displays Help one screen at a time.

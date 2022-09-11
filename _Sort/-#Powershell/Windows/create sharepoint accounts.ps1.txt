@@ -1,0 +1,30 @@
+#Get Server Commands ready
+Import-Module ServerManager
+
+#Add AD PowerShell features
+Add-WindowsFeature -Name "RSAT-AD-Powershell" -IncludeAllSubFeature
+
+#Import AD Module
+Import-Module ActiveDirectory
+
+
+New-ADUser -SamAccountName "svc_sharepointdb" -UserPrincipalName "svc_sharepointdb@tol.local" -Name "SharePoint Database" -Surname "Service Account" -GivenName "SharePoint Database" -path "OU=Global Security Entities,DC=tol,DC=local" -Description "SharePoint DB Service Account" -DisplayName "SharePoint DB Service Account" -PasswordNeverExpires $true -CannotChangePassword $true -Enabled $true -AccountPassword (ConvertTo-SecureString -AsPlainText "Nak1Ora54" -Force)
+
+New-ADUser -SamAccountName "SP_Farm" -UserPrincipalName "SP_Farm@tol.local" -Name "SharePoint Farm Account" -Surname "Service Account " -GivenName "SharePoint Farm" -path "OU=Global Security Entities,DC=tol,DC=local" -Description "SharePoint Farm Account" -DisplayName "SharePoint Farm Service Account" -PasswordNeverExpires $true -CannotChangePassword $true -Enabled $true -AccountPassword (ConvertTo-SecureString -AsPlainText "Nak1Ora54" -Force)
+
+New-ADUser -SamAccountName "SP_UserProfile" -UserPrincipalName "SP_UserProfile@tol.local" -Name "SharePoint User Profile Account" -Surname "Service Account " -GivenName "SharePoint User Profile" -path "OU=Global Security Entities,DC=tol,DC=local" -Description "SharePoint User Profile Account" -DisplayName "SharePoint User Profile Service Account" -PasswordNeverExpires $true -CannotChangePassword $true -Enabled $true -AccountPassword (ConvertTo-SecureString -AsPlainText "Nak1Ora54" -Force)
+
+New-ADUser -SamAccountName "SP_Services" -UserPrincipalName "SP_Services@tol.local" -Name "SharePoint Services Account" -Surname "Account " -GivenName "SharePoint Services" -path "OU=Global Security Entities,DC=tol,DC=local" -Description "SharePoint Services Account" -DisplayName "SharePoint Services Account" -PasswordNeverExpires $true -CannotChangePassword $true -Enabled $true -AccountPassword (ConvertTo-SecureString -AsPlainText "Nak1Ora54" -Force)
+
+New-ADUser -SamAccountName "SP_MMS" -UserPrincipalName "SP_MMS@tol.local" -Name "SharePoint MMS AppPool Account" -Surname "Service Account " -GivenName "SharePoint MMS App Pool" -path "OU=Global Security Entities,DC=tol,DC=local" -Description "SharePoint MMS App Pool Account" -DisplayName "SharePoint MMS App Pool Service Account" -PasswordNeverExpires $true -CannotChangePassword $true -Enabled $true -AccountPassword (ConvertTo-SecureString -AsPlainText "Nak1Ora54" -Force)
+
+New-ADUser -SamAccountName "SP_OfficeServices" -UserPrincipalName "SP_OfficeServices@tol.local" -Name "SharePoint Office Services AppPool Account" -Surname "Service Account " -GivenName "SharePoint Office Services App Pool" -path "OU=Global Security Entities,DC=tol,DC=local" -Description "SharePoint Office Services App Pool Account" -DisplayName "SharePoint Office Services App Pool Service Account" -PasswordNeverExpires $true -CannotChangePassword $true -Enabled $true -AccountPassword (ConvertTo-SecureString -AsPlainText "Nak1Ora54" -Force)
+
+
+New-ADUser -SamAccountName "SP_Search" -UserPrincipalName "SP_Search@tol.local" -Name "SharePoint Search" -Surname "Service Account" -GivenName "SharePoint Search" -path "OU=Global Security Entities,DC=tol,DC=local" -Description "SharePoint Search Account" -DisplayName "SharePoint Search Account" -PasswordNeverExpires $true -CannotChangePassword $true -Enabled $true -AccountPassword (ConvertTo-SecureString -AsPlainText "Nak1Ora54" -Force)
+
+New-ADUser -SamAccountName "SP_SearchQuery" -UserPrincipalName "SP_SearchQuery@tol.local" -Name "SharePoint Search Query" -Surname "Service Account" -GivenName "SharePoint Search Query" -path "OU=Global Security Entities,DC=tol,DC=local" -Description "SharePoint Search Query Account" -DisplayName "SharePoint Search Query Account" -PasswordNeverExpires $true -CannotChangePassword $true -Enabled $true -AccountPassword (ConvertTo-SecureString -AsPlainText "Nak1Ora54" -Force)
+
+New-ADUser -SamAccountName "SP_SearchAdmin" -UserPrincipalName "SP_SearchAdmin@tol.local" -Name "SharePoint Search Admin" -Surname "Service Account" -GivenName "SharePoint Search Admin" -path "OU=Global Security Entities,DC=tol,DC=local" -Description "SharePoint Search Admin Account" -DisplayName "SharePoint Search Admin Account" -PasswordNeverExpires $true -CannotChangePassword $true -Enabled $true -AccountPassword (ConvertTo-SecureString -AsPlainText "Nak1Ora54" -Force)
+
+New-ADUser -SamAccountName "SP_ContentAccess" -UserPrincipalName "SP_ContentAccess@tol.local" -Name "SharePoint Search Content Access" -Surname "Service Account " -GivenName "SharePoint Search" -path "OU=Global Security Entities,DC=tol,DC=local" -Description "SharePoint Search Content Access Account" -DisplayName "SharePoint Search Content Access Account" -PasswordNeverExpires $true -CannotChangePassword $true -Enabled $true -AccountPassword (ConvertTo-SecureString -AsPlainText "Nak1Ora54" -Force)

@@ -1,0 +1,10 @@
+helo dmc.local
+mail from: dmcvs01@dmc.local
+rcpt to: itservices@dmc.local
+data
+from: dmcvs01
+to: itservices
+subject: test 2
+test 2
+.
+quit

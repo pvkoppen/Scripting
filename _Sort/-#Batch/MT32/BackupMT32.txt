@@ -1,0 +1,6 @@
+for /f "tokens=1-9 delims=:. " %%a in ('time /t') do set filetime=%%a00%%c%%d
+if exist D:\MT32bak\%filetime%.log del D:\MT32bak\%filetime%.log
+if exist D:\MT32bak\%filetime%-mt32.bak del D:\MT32bak\%filetime%-mt32.bak
+C:
+CD "C:\Program Files\Borland\InterBase\bin"
+gbak.exe -B -V -USER sysdba -PAS masterkey -Y D:\MT32bak\%filetime%.log localhost:D:\mt32\data\mt32.ib D:\mt32bak\%filetime%-mt32.bak

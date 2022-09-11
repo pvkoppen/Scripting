@@ -1,0 +1,249 @@
+BODY { font-family: Verdana, Arial, Helvetica; cursor: default;}
+
+.left{
+background: url(graphics/tile_left.gif) repeat-y;
+}
+.right{
+background: url(graphics/tile_right.gif) repeat-y;
+}
+.center{
+background: url(graphics/tile_center.gif) repeat-y;
+}
+.blend {
+font-family: Verdana, Arial, Helvetica;
+font-size: 75%;
+background: url(graphics/tile_blend.gif) repeat-x;
+padding: 5px 10px 0px 10px;
+vertical-align: top;
+}
+.blend2 {
+font-family: Verdana, Arial, Helvetica;
+font-size: 75%;
+background: url(graphics/tile_blend2.gif) repeat-x;
+padding: 5px 10px 0px 10px;
+vertical-align: top;
+}
+.red{
+color: #A30A0E;
+}
+
+
+
+/*a {text-decoration:none}
+a:link {color: #000000;}
+a:visited {color: #000000;}
+a:active {color: #000000;}*/
+
+.menu {
+        background-color: #FFCC00;
+}
+.menuHeading {
+        font-size: 80%;
+        font-weight: bold;
+        color: #B60F15;
+        margin: 0px;
+        padding: 15px 0px 3px 10px;
+}
+.menuItem {
+        color: #000000;
+        border-color: #FFCC00;
+        border-width: 0px;
+        margin: 0px;
+        padding: 5px 5px 5px 15px;
+        cursor: pointer;
+        width: 100%;
+}
+a.menuLink { color: #000000; text-decoration: none; }
+.menuLink {
+        font-size: 70%;
+        color: #000000;
+        border-color: #FFCC00;
+        border-width: 0px;
+        cursor: pointer;
+        width: 100%;
+}
+.menuItemHi {
+        background-color: #B70E14;
+        border-width: 0px;
+        margin: 0px;
+        padding: 5px 5px 5px 15px;
+        cursor: pointer;
+        width: 100%;
+
+}
+a.menuLinkHi { color: #FFFFFF; text-decoration: none; }
+.menuLinkHi  {
+        font-size: 70%;
+        font-weight: bold;
+        color: #FFFFFF;
+        background-color: #B70E14;
+        border-width: 0px;
+        cursor: pointer;
+        width: 100%;
+}
+
+.newText {
+        color: #016194;
+}
+.prodtext {
+        font-size: 75%;
+}
+.prodtextindent {
+        font-size: 75%;
+        margin-left: 5%;
+}
+.errText {
+        font-size: 75%;
+        color: #FF0000;
+}
+.jsErrText {
+        font-weight: bold;
+        border: 1px solid #FFFFFF;
+        color: #FF0000;
+        background-color: #FFFFFF;
+}
+.prodtextsmaller {
+        font-size: 60%;
+}
+.prodtext90 {
+        font-size: 90%;
+}
+.licensetext {
+        font-size: 75%;
+}
+.newText {
+        color: #016194;
+        font-weight: bold;
+}
+
+a.prodtextLink:link {color: #016194;}
+a.prodtextLink:visited {color: #016194;}
+a.prodtextLink:hover {color: #B70E14;}
+.prodtextLink {
+        font-size: 112%;
+        color: #016194;
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+a.prodtextLink2:link {color: #016194;}
+a.prodtextLink2:visited {color: #B70E14;}
+a.prodtextLink2:hover {color: #B70E14;}
+.prodtextLink2 {
+        font-size: 75%;
+        font-weight: bold;
+        text-decoration: underline;
+        color: #016194;
+        cursor: pointer;
+}
+
+.prodtextLink3 {
+        font-size: 75%;
+        font-weight: bold;
+        text-decoration: underline;
+        color: #016194;
+        cursor: pointer;
+}
+
+.H1 {
+        font-size: 110%;
+        font-weight: bold;
+        color: #000000;
+        padding-top: 2px;
+        padding-bottom: 4px;
+        padding-left: 0px;
+}
+.H2 {
+        font-size: 90%;
+        color: #606060;
+        font-weight: bold;
+        padding-top: 2px;
+        padding-bottom: 4px;
+        padding-left: 0px;
+}
+.H3 {
+        font-size: 80%;
+        color: #606060;
+        font-weight: bold;
+        font-style: italic;
+        padding-top: 2px;
+        padding-bottom: 4px;
+        padding-left: 0px;
+}
+
+a.Link:link {color: #016194;text-decoration:underline;}
+a.Link:visited {color: #B70E14;text-decoration:underline;}
+a.Link:hover {color: #B70E14;text-decoration:underline;}
+.Link {
+        color: #016194;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.sectionHeading {
+        font-size: 95%;
+        color: #016194;
+        font-weight: bold;
+        padding-top: 2px;
+        padding-bottom: 4px;
+        padding-left: 0px;
+
+}
+
+a.subHeading:link {color: #CC0101;}
+a.subHeading:visited {color: #CC0101;}
+a.subHeading:hover {color: #FB952E;}
+.subHeading {
+        font-size: 90%;
+        color: #016194;
+        font-weight: bold;
+        padding-top: 2px;
+        padding-bottom: 4px;
+        padding-left: 2px;
+}
+
+.listItem
+{
+        padding-bottom: 5px;
+}
+
+.slogan {
+        font-size: 75%;
+        font-style: italic;
+}
+.slogangray {
+        font-size: 75%;
+        color: #7f7f7f;
+}
+.search
+{
+        font-size: 10pt;
+        width: 120px;
+        padding-left: 10px;
+}
+.padL10px
+{
+        padding-left: 10px;
+}
+.padL8px
+{
+        padding-left: 8px;
+}
+.footertext
+{
+        text-align: left;
+        font-size: 7pt;
+        color: #787878;
+        line-height: 8pt;
+}
+.langtext
+{
+        text-align: right;
+        text-decoration: none;
+        font-size: 9pt;
+        color: #FFFFFF;
+        line-height: 8pt;
+        padding-right: 8px;
+        padding-top: 8px;
+}

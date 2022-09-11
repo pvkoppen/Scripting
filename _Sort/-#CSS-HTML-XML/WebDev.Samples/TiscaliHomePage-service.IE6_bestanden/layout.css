@@ -1,0 +1,1842 @@
+BODY {
+	MARGIN: 10px auto; WIDTH: 776px; BACKGROUND-COLOR: #fff; TEXT-ALIGN: center
+}
+BODY#banner {
+	WIDTH: 916px
+}
+BODY#nobanner {
+	WIDTH: 776px
+}
+#bannersize {
+	FLOAT: none; WIDTH: 916px
+}
+#nobannersize {
+	WIDTH: 776px
+}
+BODY {
+	FONT-SIZE: 11px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+A {
+	FONT-SIZE: 11px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+B {
+	FONT-SIZE: 11px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+DIV {
+	FONT-SIZE: 11px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+INPUT {
+	FONT-SIZE: 11px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+SELECT {
+	FONT-SIZE: 11px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+TD {
+	FONT-SIZE: 11px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+TEXTAREA {
+	FONT-SIZE: 11px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+SELECT {
+	HEIGHT: 18px
+}
+B {
+	FONT-WEIGHT: bold
+}
+A {
+	FONT-WEIGHT: bold; COLOR: #0750d9; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.textfield {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #404040 1px solid; PADDING-LEFT: 4px; FLOAT: left; BORDER-LEFT: #404040 1px solid; BORDER-BOTTOM: #fff 1px solid
+}
+.textfieldwhiteback {
+	BORDER-RIGHT: #e4e1dc 1px solid; BORDER-TOP: #404040 1px solid; PADDING-LEFT: 4px; FLOAT: left; BORDER-LEFT: #404040 1px solid; BORDER-BOTTOM: #e4e1dc 1px solid
+}
+.Title13B {
+	DISPLAY: block; FONT-SIZE: 13px
+}
+.title15B {
+	DISPLAY: block; FONT-SIZE: 15px
+}
+.title17B {
+	DISPLAY: block; FONT-SIZE: 17px
+}
+.title19B {
+	DISPLAY: block; FONT-SIZE: 19px
+}
+.Title21B {
+	DISPLAY: block; FONT-SIZE: 21px
+}
+.Title13B {
+	FONT-WEIGHT: bold; FLOAT: left; MARGIN-BOTTOM: 5px
+}
+.Title15B {
+	FONT-WEIGHT: bold; FLOAT: left; MARGIN-BOTTOM: 5px
+}
+.Title17B {
+	FONT-WEIGHT: bold; FLOAT: left; MARGIN-BOTTOM: 5px
+}
+.Title19B {
+	FONT-WEIGHT: bold; FLOAT: left; MARGIN-BOTTOM: 5px
+}
+.Title21B {
+	FONT-WEIGHT: bold; FLOAT: left; MARGIN-BOTTOM: 5px
+}
+.boxBack144 .Title13B {
+	WIDTH: 116px
+}
+.boxBack144 .Title15B {
+	WIDTH: 116px
+}
+.boxBack150 .Title13B {
+	WIDTH: 122px
+}
+.boxBack150 .Title15B {
+	WIDTH: 122px
+}
+.boxBack229 .Title13B {
+	WIDTH: 199px
+}
+.boxBack229 .Title15B {
+	WIDTH: 199px
+}
+.boxBack309 .Title13B {
+	WIDTH: 281px
+}
+.boxBack309 .Title15B {
+	WIDTH: 281px
+}
+.boxBack468 .Title13B {
+	WIDTH: 440px
+}
+.boxBack468 .Title13B {
+	WIDTH: 440px
+}
+.arrowLink {
+	PADDING-LEFT: 12px; BACKGROUND: url(/gfx/4/gizmos/arrow_double_link.gif) no-repeat left top; FLOAT: left; WIDTH: 100%
+}
+.centerpart {
+	FLOAT: left; MARGIN-BOTTOM: 10px; WIDTH: 468px
+}
+.centerpart-noright {
+	FLOAT: left; MARGIN-BOTTOM: 10px; WIDTH: 622px
+}
+.spacer10H {
+	DISPLAY: block; FLOAT: left; WIDTH: 10px; HEIGHT: 1px; BACKGROUND-COLOR: #ffffff
+}
+.spacer10V {
+	FONT-SIZE: 1px; WIDTH: 144px; HEIGHT: 10px; BACKGROUND-COLOR: #ffffff
+}
+.Dot8x8 {
+	FONT-SIZE: 1px; BACKGROUND: url(/gfx/4/gizmos/dot_home8x8.gif); FLOAT: left; MARGIN: 3px 7px 0px 0px; WIDTH: 8px; HEIGHT: 8px
+}
+.ul {
+	FLOAT: left; LINE-HEIGHT: 14px
+}
+.disc {
+	PADDING-LEFT: 11px; BACKGROUND: url(/Gfx/4/icons/article/bullet.gif) no-repeat 0px 5px; MARGIN-BOTTOM: 6px
+}
+.dash {
+	PADDING-LEFT: 10px; BACKGROUND: url(/Gfx/4/icons/article/dash.gif) no-repeat 0px 7px; MARGIN-BOTTOM: 4px
+}
+.noth {
+	MARGIN-BOTTOM: 6px
+}
+.container {
+	WIDTH: 776px; HEIGHT: 100%; TEXT-ALIGN: left
+}
+.container-LEFT {
+	FLOAT: left; WIDTH: 144px; HEIGHT: 100%
+}
+.container-CENTER {
+	FLOAT: left; MARGIN: 0px 10px; WIDTH: 468px; HEIGHT: 100%
+}
+.container-RIGHT {
+	FLOAT: left; WIDTH: 144px; HEIGHT: 100%
+}
+.noRight .container-CENTER {
+	FLOAT: left; MARGIN: 0px 0px 0px 10px; WIDTH: 622px; HEIGHT: 100%
+}
+.noLeft .container-CENTER {
+	FLOAT: left; WIDTH: 776px; HEIGHT: 100%
+}
+.nav {
+	WIDTH: 144px
+}
+.nav .title {
+	WIDTH: 144px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 18px
+}
+.nav .item {
+	WIDTH: 144px; BORDER-BOTTOM: #fff 1px solid; HEIGHT: 18px
+}
+.nav .title .link {
+	DISPLAY: block; MARGIN-BOTTOM: 4px; MARGIN-LEFT: 7px; LINE-HEIGHT: 12px; PADDING-TOP: 3px
+}
+.nav .title .linkless {
+	DISPLAY: block; MARGIN-BOTTOM: 4px; MARGIN-LEFT: 7px; LINE-HEIGHT: 12px; PADDING-TOP: 3px
+}
+.nav .item .link {
+	DISPLAY: block; MARGIN-BOTTOM: 4px; MARGIN-LEFT: 7px; LINE-HEIGHT: 12px; PADDING-TOP: 3px
+}
+.nav .title .white {
+	FONT-WEIGHT: bold; COLOR: #fff
+}
+.enteHPMainTsr {
+	MARGIN-TOP: -3px; WIDTH: 309px; HEIGHT: 166px
+}
+.HPMainTsr {
+	MARGIN-TOP: -3px; WIDTH: 309px; HEIGHT: 166px
+}
+.enteHPMainTsr .container {
+	FLOAT: left; MARGIN: -3px 0px 0px 9px; WIDTH: 150px; HEIGHT: 116px
+}
+.HPMainTsr .container {
+	FLOAT: left; MARGIN: -3px 0px 0px 9px; WIDTH: 150px; HEIGHT: 116px
+}
+.enteHPMainTsr .container .text {
+	OVERFLOW: hidden; HEIGHT: 98px
+}
+.HPMainTsr .container .text {
+	OVERFLOW: hidden; HEIGHT: 98px
+}
+.enteHPTsrOnly {
+	FLOAT: left; WIDTH: 309px
+}
+.HPTsrOnly {
+	FLOAT: left; WIDTH: 309px
+}
+.enteHPTsrOnly .ball {
+	FONT-SIZE: 13px; FLOAT: left; WIDTH: 12px; FONT-FAMILY: Verdana, Arial; HEIGHT: 18px
+}
+.HPTsrOnly .ball {
+	FONT-SIZE: 13px; FLOAT: left; WIDTH: 12px; FONT-FAMILY: Verdana, Arial; HEIGHT: 18px
+}
+.enteHPTsrOnly A {
+	FONT-SIZE: 13px; FLOAT: left; OVERFLOW: hidden; WIDTH: 297px; HEIGHT: 18px
+}
+.HPTsrOnly A {
+	FONT-SIZE: 13px; FLOAT: left; OVERFLOW: hidden; WIDTH: 297px; HEIGHT: 18px
+}
+.HPTsr {
+	FLOAT: left; MARGIN: 9px 0px; WIDTH: 309px; HEIGHT: 73px
+}
+.HPTsr .image {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 97px; MARGIN-RIGHT: 7px; HEIGHT: 73px
+}
+.HPTsr .title {
+	MARGIN-TOP: -2px; FLOAT: left; OVERFLOW: hidden; WIDTH: 205px; HEIGHT: 20px
+}
+.HPTsr .text {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 205px; HEIGHT: 55px
+}
+.HPADSLcheck {
+	FLOAT: left; WIDTH: 309px; HEIGHT: 91px; BACKGROUND-COLOR: #f4f4f4
+}
+.HPADSLcheck DIV {
+	FLOAT: left
+}
+.HPADSLcheck .title1 {
+	MARGIN-TOP: 0px; WIDTH: 159px
+}
+.HPADSLcheck .title2 {
+	MARGIN-TOP: 0px; FONT-SIZE: 10px; WIDTH: 120px; COLOR: #2b2b2b
+}
+.HPADSLcheck .container {
+	MARGIN-TOP: 6px; WIDTH: 283px; HEIGHT: 18px
+}
+.HPADSLcheck .radio {
+	MARGIN-TOP: 2px; WIDTH: 283px; HEIGHT: 20px
+}
+.HPADSLcheck .bottomOption {
+	BORDER-TOP: #fff 1px solid; WIDTH: 309px; PADDING-TOP: 1px; HEIGHT: 23px; BACKGROUND-COLOR: #eaeaea
+}
+.HPADSLcheck .bottomOption .text {
+	MARGIN-TOP: 3px; MARGIN-LEFT: 5px; HEIGHT: 18px
+}
+.HPtitle {
+	FONT-WEIGHT: bold; FLOAT: left; TEXT-TRANSFORM: uppercase; WIDTH: 101px; HEIGHT: 14px; BACKGROUND-COLOR: #ffffff
+}
+.HPlink {
+	MARGIN-TOP: 5px; FLOAT: left; OVERFLOW: hidden; WIDTH: 113px; HEIGHT: 13px
+}
+.HPWeerVerkeer {
+	FLOAT: left; MARGIN: -3px 0px -2px; WIDTH: 137px; COLOR: #d00; TEXT-ALIGN: center
+}
+.HPprodSpace {
+	FLOAT: left; WIDTH: 304px; HEIGHT: 100px
+}
+.HPprod {
+	FLOAT: left; WIDTH: 144px; HEIGHT: 43px
+}
+.HPprod .links {
+	DISPLAY: block; MARGIN-LEFT: 25px; HEIGHT: 18px
+}
+.HPprodDom {
+	PADDING-LEFT: 13px; FLOAT: left; WIDTH: 289px; HEIGHT: 46px
+}
+.HPdiensten {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 130px; HEIGHT: 43px
+}
+.HR309 {
+	FONT-SIZE: 1px; FLOAT: left; MARGIN-BOTTOM: 5px; WIDTH: 309px; BORDER-BOTTOM: #f4f4f4 1px solid; HEIGHT: 5px
+}
+.overtiscali P {
+	MARGIN-BOTTOM: 18px
+}
+.vacatures {
+	BORDER-RIGHT: #d6d6d6 1px solid; BORDER-TOP: #d6d6d6 1px solid; FLOAT: left; BORDER-LEFT: #d6d6d6 1px solid; WIDTH: 468px; BORDER-BOTTOM: #d6d6d6 1px solid; BACKGROUND-COLOR: #f4f4f4
+}
+.vacatures .spacer {
+	FLOAT: left; WIDTH: 438px; HEIGHT: 18px
+}
+.vacatures .subtitle {
+	FONT-WEIGHT: bold; FLOAT: left; WIDTH: 440px; FONT-STYLE: italic; HEIGHT: 24px
+}
+.contact .spacer {
+	FLOAT: left; WIDTH: 440px
+}
+.contact I {
+	FLOAT: left; WIDTH: 440px
+}
+.contact .info {
+	FLOAT: left; WIDTH: 440px
+}
+.contact .info .column {
+	FLOAT: left; WIDTH: 215px
+}
+.contact .spacer {
+	HEIGHT: 25px
+}
+.contact .title {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 13px; FLOAT: left; MARGIN-BOTTOM: 3px; WIDTH: 440px; PADDING-TOP: 2px; HEIGHT: 22px; BACKGROUND-COLOR: #edecec
+}
+.Mainteaser .image {
+	FLOAT: left; WIDTH: 159px; HEIGHT: 114px
+}
+.Mainteaser .container {
+	MARGIN-TOP: -2px; FLOAT: right; WIDTH: 309px; HEIGHT: 100px
+}
+.Mainteaser .container .title {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px
+}
+.Mainteaser .container .text {
+	MARGIN: 4px 0px; LINE-HEIGHT: 13px
+}
+.Mainteaser .fotovideo {
+	FLOAT: right; WIDTH: 309px; HEIGHT: 40px
+}
+.Mainteaser .link {
+	MARGIN-TOP: 2px; FONT-WEIGHT: bold
+}
+.boxNormal144 {
+	WIDTH: 144px
+}
+.boxNormal150 {
+	WIDTH: 150px
+}
+.boxNormal229 {
+	WIDTH: 229px
+}
+.boxNormal309 {
+	WIDTH: 309px
+}
+.boxNormal468 {
+	WIDTH: 468px
+}
+.boxNormalBack144 {
+	WIDTH: 114px
+}
+.boxNormalBack150 {
+	WIDTH: 128px
+}
+.boxNormalBack229 {
+	WIDTH: 201px
+}
+.boxNormalBack309 {
+	WIDTH: 281px
+}
+.boxNormalBack468 {
+	WIDTH: 440px
+}
+.boxNormalBack144 {
+	MARGIN: 13px
+}
+.boxNormalBack150 {
+	MARGIN: 13px
+}
+.boxNormalBack229 {
+	MARGIN: 13px
+}
+.boxNormalBack309 {
+	MARGIN: 13px
+}
+.boxNormalBack144 {
+	MARGIN: 13px
+}
+.boxNormalBack468 {
+	MARGIN: 13px
+}
+.teaserListPics {
+	PADDING-RIGHT: 13px; PADDING-LEFT: 13px; PADDING-BOTTOM: 15px; PADDING-TOP: 10px
+}
+.teaserOranje {
+	PADDING-RIGHT: 13px; PADDING-LEFT: 13px; PADDING-BOTTOM: 15px; PADDING-TOP: 10px
+}
+.teaserSport {
+	PADDING-RIGHT: 13px; PADDING-LEFT: 13px; PADDING-BOTTOM: 15px; PADDING-TOP: 10px
+}
+.teaserListPics .title {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; MARGIN-BOTTOM: -3px; WIDTH: 203px
+}
+.teaserListPics .teaser {
+	MARGIN-TOP: 13px; OVERFLOW: hidden; WIDTH: 203px; HEIGHT: 36px; TEXT-ALIGN: left
+}
+.teaserListPics .teaser .image {
+	FLOAT: left; WIDTH: 54px; HEIGHT: 36px
+}
+.teaserListPics .teaser .text {
+	MARGIN-TOP: -1px; FLOAT: left; WIDTH: 142px; LINE-HEIGHT: 12px; HEIGHT: 36px
+}
+.teaserOranje {
+	OVERFLOW: hidden; PADDING-TOP: 15px; HEIGHT: 128px
+}
+.teaserSport {
+	OVERFLOW: hidden; PADDING-TOP: 15px; HEIGHT: 128px
+}
+.teaserOranje .teaser {
+	MARGIN-BOTTOM: 18px; OVERFLOW: hidden; HEIGHT: 95px
+}
+.teaserSport .teaser {
+	MARGIN-BOTTOM: 18px; OVERFLOW: hidden; HEIGHT: 95px
+}
+.teaserOranje .text {
+	FLOAT: left; LINE-HEIGHT: 14px
+}
+.teaserSport .text {
+	FLOAT: left; LINE-HEIGHT: 14px
+}
+.boxRound144 {
+	WIDTH: 144px
+}
+.boxRound150 {
+	WIDTH: 150px
+}
+.boxRound229 {
+	WIDTH: 229px
+}
+.boxRound304 {
+	WIDTH: 304px
+}
+.boxRound309 {
+	WIDTH: 309px
+}
+.boxRound468 {
+	WIDTH: 468px
+}
+.boxRound622 {
+	WIDTH: 622px
+}
+.boxRound144 {
+	DISPLAY: block; FONT-SIZE: 1px; HEIGHT: 10px
+}
+.boxRound150 {
+	DISPLAY: block; FONT-SIZE: 1px; HEIGHT: 10px
+}
+.boxRound229 {
+	DISPLAY: block; FONT-SIZE: 1px; HEIGHT: 10px
+}
+.boxRound304 {
+	DISPLAY: block; FONT-SIZE: 1px; HEIGHT: 10px
+}
+.boxRound309 {
+	DISPLAY: block; FONT-SIZE: 1px; HEIGHT: 10px
+}
+.boxRound468 {
+	DISPLAY: block; FONT-SIZE: 1px; HEIGHT: 10px
+}
+.boxRound622 {
+	DISPLAY: block; FONT-SIZE: 1px; HEIGHT: 10px
+}
+.boxBack144 {
+	WIDTH: 142px
+}
+.boxBack150 {
+	WIDTH: 148px
+}
+.boxBack229 {
+	WIDTH: 227px
+}
+.boxBack304 {
+	WIDTH: 302px
+}
+.boxBack309 {
+	WIDTH: 307px
+}
+.boxBack468 {
+	WIDTH: 466px
+}
+.boxBack622 {
+	WIDTH: 620px
+}
+.boxBack144 {
+	MARGIN-LEFT: 1px
+}
+.boxBack150 {
+	MARGIN-LEFT: 1px
+}
+.boxBack229 {
+	MARGIN-LEFT: 1px
+}
+.boxBack304 {
+	MARGIN-LEFT: 1px
+}
+.boxBack309 {
+	MARGIN-LEFT: 1px
+}
+.boxBack144 {
+	MARGIN-LEFT: 1px
+}
+.boxBack468 {
+	MARGIN-LEFT: 1px
+}
+.boxBack622 {
+	MARGIN-LEFT: 1px
+}
+.subchan .teaseronly {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.chan .teaseronly {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.subchan .teaserWeer {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserVideo {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserVerkeer {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserPoll {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserSubchan {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserVirus {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserReviews {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserSitevandedag {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserDownloads {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserColumns {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserGames {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserDownloadSmall {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserWeekendmilj {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserSpelReview {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserGsmGame {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.walliecontent {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserMovies {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserMobiel-1 {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserGSMweb {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserKleurenlogos {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserGSMgames {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserOverig {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserSportSectie {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserSportart {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserMusicClub {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserAlgRight {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserRightWeer {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.HPleft {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.teaserOpsporing {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.RightLinkList {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.finanindeces {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.datingbox {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.horoscoop {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.marktplaats {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.contact {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.route {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.padding {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px
+}
+.subchan .teaserOnly {
+	FONT-WEIGHT: bold; OVERFLOW: hidden; WIDTH: 277px; LINE-HEIGHT: 18px; HEIGHT: 112px
+}
+.chan .teaserOnly {
+	FONT-WEIGHT: bold; OVERFLOW: hidden; WIDTH: 277px; LINE-HEIGHT: 18px; HEIGHT: 112px
+}
+.teaserOnly .teaser {
+	TEXT-ALIGN: left
+}
+.teaser150Los {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px; HEIGHT: 86px
+}
+.teaser150Los .content {
+	FLOAT: left; MARGIN-BOTTOM: 1px; OVERFLOW: hidden; WIDTH: 122px; LINE-HEIGHT: 12px; HEIGHT: 50px
+}
+.RightLinklist .text {
+	MARGIN-BOTTOM: 7px; OVERFLOW: hidden; WIDTH: 115px; LINE-HEIGHT: 12px
+}
+.box {
+	FLOAT: left; HEIGHT: 40px; BACKGROUND-COLOR: #eceaf4; TEXT-ALIGN: center
+}
+.w150 {
+	WIDTH: 150px
+}
+.w144 {
+	WIDTH: 144px
+}
+.spacertop {
+	FONT-SIZE: 1px; FLOAT: left; HEIGHT: 8px
+}
+.spacerleft {
+	FLOAT: left; WIDTH: 13px; HEIGHT: 24px
+}
+.linkbox {
+	FLOAT: left; OVERFLOW: hidden; HEIGHT: 24px; TEXT-ALIGN: center
+}
+.w122 {
+	WIDTH: 122px
+}
+.w116 {
+	WIDTH: 116px
+}
+.teaserOpsporing {
+	WIDTH: 116px; HEIGHT: 260px
+}
+.teaserOpsporing .image {
+	FLOAT: left; MARGIN: 5px 0px; OVERFLOW: hidden; WIDTH: 116px; HEIGHT: 88px
+}
+.teaserOpsporing .text {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 116px; HEIGHT: 70px
+}
+.archOpsporing {
+	FLOAT: left; WIDTH: 468px; LINE-HEIGHT: 17px
+}
+.archOpsporing .item {
+	OVERFLOW: hidden; WIDTH: 468px; HEIGHT: 17px
+}
+.artOpsporing {
+	DISPLAY: block; FLOAT: left; MARGIN-BOTTOM: 18px; WIDTH: 468px
+}
+.artOpsporing IMG {
+	FLOAT: left; MARGIN: 0px 7px 7px 0px
+}
+.artOpsporing .subtitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; MARGIN-BOTTOM: 5px
+}
+.teaserWeer {
+	HEIGHT: 86px
+}
+.teaserWeer .item {
+	WIDTH: 58px; HEIGHT: 47px
+}
+.teaserWeer .subtitle {
+	WIDTH: 52px; HEIGHT: 13px
+}
+.teaserWeer .degrees {
+	FLOAT: left; MARGIN: 8px 0px 0px 4px; WIDTH: 16px; HEIGHT: 25px
+}
+.teaserRightWeer {
+	WIDTH: 116px; HEIGHT: 265px
+}
+.teaserRightWeer .item {
+	MARGIN-BOTTOM: 5px; WIDTH: 50px
+}
+.teaserRightWeer .itemtitle {
+	MARGIN-BOTTOM: -1px
+}
+.teaserRightWeer .itemimg {
+	VERTICAL-ALIGN: middle; MARGIN-RIGHT: 2px
+}
+.teaserVideo {
+	WIDTH: 120px; HEIGHT: 112px
+}
+.teaserVideo .image {
+	MARGIN-TOP: 1px; FLOAT: left; OVERFLOW: hidden; WIDTH: 53px; HEIGHT: 48px
+}
+.teaserVideo .text {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 120px; LINE-HEIGHT: 14px; HEIGHT: 75px; TEXT-ALIGN: left
+}
+.teaserVideo .view {
+	MARGIN-TOP: 2px; FONT-WEIGHT: bold; FLOAT: left; WIDTH: 120px
+}
+.teaserSubchan {
+	WIDTH: 199px
+}
+.teaserSubchan P {
+	HEIGHT: 14px
+}
+.teaserSubchan .teaser {
+	OVERFLOW: hidden; HEIGHT: 93px
+}
+.teaserSubchan .text {
+	FLOAT: left; LINE-HEIGHT: 14px
+}
+.teaserVerkeer {
+	HEIGHT: 81px
+}
+.teaserVerkeer .text .static {
+	FLOAT: left; WIDTH: 68px; COLOR: #000000; HEIGHT: 27px
+}
+.teaserVerkeer .text .dynamic {
+	FLOAT: right; WIDTH: 45px; COLOR: #cc0000; HEIGHT: 27px
+}
+.teaserVerkeer .view {
+	MARGIN-TOP: 11px; FLOAT: left; LINE-HEIGHT: 13px; HEIGHT: 24px
+}
+.teaserPoll {
+	WIDTH: 117px; HEIGHT: 300px
+}
+.teaserPoll .title {
+	FONT-WEIGHT: bold; MARGIN-BOTTOM: 10px
+}
+.teaserPoll .answer {
+	FLOAT: left; MARGIN-BOTTOM: 6px
+}
+.teaserPoll .answer .radio {
+	FLOAT: left; MARGIN: -1px 3px 0px -5px; WIDTH: 19px; HEIGHT: 20px
+}
+.teaserPoll .answer .text {
+	FLOAT: right; WIDTH: 96px; HEIGHT: auto
+}
+.teaserVirus {
+	WIDTH: 120px; HEIGHT: 86px
+}
+.teaserVirus IMG {
+	FLOAT: left; WIDTH: 40px; MARGIN-RIGHT: 5px; HEIGHT: 33px
+}
+.teaserVirus .title {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; FLOAT: left; WIDTH: 75px; LINE-HEIGHT: 13px; HEIGHT: 33px
+}
+.teaserVirus .text {
+	MARGIN-TOP: 6px; FLOAT: left; MARGIN-BOTTOM: 4px; WIDTH: 120px; HEIGHT: 14px
+}
+.teaserReviews {
+	HEIGHT: 214px
+}
+.teaserReviews .review {
+	FLOAT: left; WIDTH: 280px; HEIGHT: 22px
+}
+.teaserReviews .review .partOne {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; FLOAT: left; MARGIN-RIGHT: 3px; HEIGHT: 15px
+}
+.teaserReviews .review .partTwo {
+	MARGIN-TOP: 1px; FONT-SIZE: 13px; FLOAT: left; FONT-STYLE: italic; HEIGHT: 15px
+}
+.teaserReviews .title {
+	FLOAT: left; HEIGHT: 19px
+}
+.teaserReviews .text {
+	MARGIN-TOP: -2px; FLOAT: left; OVERFLOW: hidden; WIDTH: 280px; LINE-HEIGHT: 14px; HEIGHT: 40px
+}
+.teaserReviews .links {
+	MARGIN-TOP: 4px; FLOAT: left; HEIGHT: 14px
+}
+.teaserReviews .spacer {
+	FLOAT: left; WIDTH: 280px; HEIGHT: 15px
+}
+.teaserSitevandedag {
+	WIDTH: 123px; HEIGHT: 214px
+}
+.teaserSitevandedag .site .partOne {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; FLOAT: left; MARGIN-RIGHT: 3px; HEIGHT: 15px
+}
+.teaserSitevandedag .site .partTwo {
+	MARGIN-TOP: 1px; FONT-SIZE: 13px; FLOAT: left; FONT-STYLE: italic; HEIGHT: 15px
+}
+.teaserSitevandedag IMG {
+	FLOAT: left; MARGIN: 8px 0px; WIDTH: 122px; HEIGHT: 93px
+}
+.teaserSitevandedag .container {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 123px; HEIGHT: 61px
+}
+.teaserSitevandedag .container .text {
+	FLOAT: left; WIDTH: 123px; HEIGHT: 39px
+}
+.teaserSitevandedag .links {
+	MARGIN-TOP: 10px; FLOAT: left; WIDTH: 123px; HEIGHT: 14px
+}
+.teaserDownloads {
+	WIDTH: 116px; HEIGHT: 395px
+}
+.teaserDownloads .item {
+	MARGIN-TOP: 12px; FLOAT: left; WIDTH: 116px
+}
+.teaserDownloads .item A {
+	MARGIN-BOTTOM: 5px
+}
+.teaserDownloads .tucows {
+	MARGIN-TOP: 12px; BACKGROUND: url(/gfx/4/actueel/cmult/tucows.gif) #ffffff; FLOAT: left; WIDTH: 116px; HEIGHT: 54px
+}
+.teaserDownloads .tucows .content {
+	MARGIN-LEFT: 64px; WIDTH: 50px; PADDING-TOP: 21px; HEIGHT: 54px
+}
+.teaserColumns {
+	WIDTH: 116px; HEIGHT: 269px
+}
+.teaserColumns .item {
+	MARGIN-TOP: 10px; FLOAT: left; WIDTH: 116px
+}
+.teaserColumns .item A {
+	MARGIN-BOTTOM: 5px
+}
+.teaserAntivirus {
+	MARGIN-LEFT: 3px; MARGIN-RIGHT: 13px; HEIGHT: 114px
+}
+.teaserAntivirus IMG {
+	FLOAT: left; WIDTH: 72px; HEIGHT: 114px
+}
+.teaserAntivirus .content {
+	FLOAT: right
+}
+.teaserAntivirus .content .text {
+	WIDTH: 123px
+}
+.teaserAntivirus .content .text A {
+	FLOAT: left; WIDTH: 123px; POSITION: relative; TOP: 5px; HEIGHT: 25px
+}
+.teaserMobiel-1 {
+	HEIGHT: 122px
+}
+.teaserGSMweb {
+	HEIGHT: 122px
+}
+.teasermaakkleurenlogo {
+	HEIGHT: 122px
+}
+.teaserMobiel-1 .text B {
+	DISPLAY: block; MARGIN-BOTTOM: 5px
+}
+.teaserMobiel-1 .text A {
+	DISPLAY: block
+}
+.teasermaakkleurenlogo {
+	BACKGROUND: url(/gfx/4/diensten/cmobi/create_logo.jpg) #fff no-repeat 11px 2px; WIDTH: 148px
+}
+.teasermaakkleurenlogo A {
+	DISPLAY: block; MARGIN: -2px 13px 0px
+}
+.teaserGSMweb B {
+	DISPLAY: block; FLOAT: left
+}
+.teaserGSMweb .text {
+	DISPLAY: block; FLOAT: left
+}
+teaserGSMweb .logo {
+	DISPLAY: block; FLOAT: left
+}
+.teaserGSMweb .links {
+	DISPLAY: block; FLOAT: left
+}
+.teaserGSMweb B {
+	MARGIN-BOTTOM: 3px; WIDTH: 70px
+}
+.teaserGSMweb IMG {
+	FLOAT: left; MARGIN: 4px 9px 0px 0px; WIDTH: 29px; HEIGHT: 70px
+}
+.teaserGSMweb .links {
+	MARGIN-BOTTOM: 12px
+}
+.teaserGSMweb .text {
+	MARGIN-TOP: 7px; WIDTH: 83px; HEIGHT: 50px
+}
+.teaserGSMweb .logo {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px
+}
+.topten {
+	FLOAT: left; WIDTH: 150px; TEXT-ALIGN: left
+}
+.topten .small-header {
+	FLOAT: right; MARGIN-BOTTOM: 7px; HEIGHT: 14px
+}
+.topten .small-header B {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; TEXT-ALIGN: left
+}
+.topten .small-header IMG {
+	VERTICAL-ALIGN: bottom
+}
+.topten .textbox {
+	FLOAT: left
+}
+.topten .row {
+	FLOAT: left; MARGIN-BOTTOM: 2px; OVERFLOW: hidden; WIDTH: 150px; HEIGHT: 15px
+}
+.topten .row .rank {
+	PADDING-LEFT: 1px; BACKGROUND: url(/gfx/4/diensten/cmobi/number_bck.gif) #e9e9e9 no-repeat left 50%; FLOAT: left; WIDTH: 15px; COLOR: #000; MARGIN-RIGHT: 5px; HEIGHT: 15px; TEXT-ALIGN: center
+}
+.topten .row .rank:active {
+	PADDING-LEFT: 1px; BACKGROUND: url(/gfx/4/diensten/cmobi/number_bck.gif) #e9e9e9 no-repeat left 50%; FLOAT: left; WIDTH: 15px; COLOR: #000; MARGIN-RIGHT: 5px; HEIGHT: 15px; TEXT-ALIGN: center
+}
+.topten .row .rank:link {
+	PADDING-LEFT: 1px; BACKGROUND: url(/gfx/4/diensten/cmobi/number_bck.gif) #e9e9e9 no-repeat left 50%; FLOAT: left; WIDTH: 15px; COLOR: #000; MARGIN-RIGHT: 5px; HEIGHT: 15px; TEXT-ALIGN: center
+}
+.topten .row .rank:visited {
+	PADDING-LEFT: 1px; BACKGROUND: url(/gfx/4/diensten/cmobi/number_bck.gif) #e9e9e9 no-repeat left 50%; FLOAT: left; WIDTH: 15px; COLOR: #000; MARGIN-RIGHT: 5px; HEIGHT: 15px; TEXT-ALIGN: center
+}
+.topten .row .rank:hover {
+	BACKGROUND: url(/gfx/4/diensten/cmobi/number_bck.gif) #0750d9 no-repeat left 50%; COLOR: #fff; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.search-box {
+	MARGIN-TOP: 12px; FLOAT: left; WIDTH: 309px; HEIGHT: 45px; BACKGROUND-COLOR: #f4f4f4
+}
+.search-box .textfield {
+	MARGIN: 13px 6px 0px 13px; WIDTH: 155px
+}
+.search-box .image {
+	MARGIN-TOP: 12px; FLOAT: right; MARGIN-RIGHT: 12px
+}
+.sms-left {
+	FLOAT: left; WIDTH: 215px; TEXT-ALIGN: left
+}
+.sms-left .sms-arrows {
+	MARGIN-TOP: 10px; FLOAT: left; WIDTH: 107px; HEIGHT: 51px
+}
+.sms-left .sms-arrows .arrow {
+	PADDING-LEFT: 20px; FONT-WEIGHT: normal; BACKGROUND: url(/gfx/4/diensten/cmobi/arrow.gif) no-repeat left 50%; FLOAT: left; MARGIN-BOTTOM: 2px; WIDTH: 107px; HEIGHT: 15px
+}
+.sms-right {
+	FLOAT: right; WIDTH: 137px; TEXT-ALIGN: left
+}
+.teaserKleurenlogos {
+	WIDTH: 116px; HEIGHT: 293px
+}
+.teaserKleurenlogos .left {
+	MARGIN-TOP: 10px; FLOAT: left
+}
+.teaserKleurenlogos .right {
+	MARGIN-TOP: 10px; FLOAT: right
+}
+.teaserKleurenlogos .small {
+	WIDTH: 116px; HEIGHT: 118px
+}
+.logos {
+	PADDING-LEFT: 8px; FLOAT: left; WIDTH: 129px; HEIGHT: 160px; TEXT-ALIGN: left
+}
+.logos .subheader {
+	FLOAT: left; MARGIN-BOTTOM: 8px; HEIGHT: 20px
+}
+.logos .row {
+	FLOAT: left; MARGIN-BOTTOM: 4px; WIDTH: 129px; HEIGHT: 16px
+}
+.logos .row .rank2 {
+	BACKGROUND: url(/gfx/4/diensten/cmobi/number_grnbck.gif) #eaf7e2 no-repeat left 50%; FLOAT: left; WIDTH: 15px; MARGIN-RIGHT: 5px; HEIGHT: 15px; TEXT-ALIGN: center
+}
+.teaserGSMgames {
+	HEIGHT: 122px
+}
+.teaserGsmGame {
+	WIDTH: 116px; HEIGHT: 130px
+}
+.teaserGsmGame IMG {
+	MARGIN-TOP: 5px; FLOAT: left; MARGIN-BOTTOM: 5px
+}
+.teaserSpelReview {
+	WIDTH: 116px; HEIGHT: 250px
+}
+.teaserSpelReview .item {
+	MARGIN-TOP: 8px; FLOAT: left; WIDTH: 116px
+}
+.teaserSpelReview .item A {
+	FLOAT: left; MARGIN-BOTTOM: 4px
+}
+.teaserWeekendmilj {
+	HEIGHT: 265px
+}
+.teaserWeekendmilj IMG {
+	MARGIN-TOP: 10px; FLOAT: left; MARGIN-BOTTOM: 17px
+}
+.teaserDownloadSmall {
+	WIDTH: 120px; HEIGHT: 86px
+}
+.teaserDownloadSmall .title {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; FLOAT: left; HEIGHT: 19px
+}
+.teaserDownloadSmall .item A {
+	FLOAT: left; WIDTH: 120px; LINE-HEIGHT: 17px
+}
+.teaserGames {
+	HEIGHT: 182px
+}
+.teaserGames .title {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; MARGIN-BOTTOM: -3px; WIDTH: 120px
+}
+.teaserGames .teaser {
+	MARGIN-TOP: 13px; OVERFLOW: hidden; WIDTH: 120px; HEIGHT: 36px; TEXT-ALIGN: left
+}
+.teaserGames .teaser .image {
+	FLOAT: left; WIDTH: 39px; HEIGHT: 36px
+}
+.teaserGames .teaser .text {
+	FONT-SIZE: 13px; FLOAT: right; WIDTH: 72px; LINE-HEIGHT: 12px; HEIGHT: 36px
+}
+.finanindeces {
+	HEIGHT: 565px
+}
+.finanindeces .indece {
+	FLOAT: left; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 2px
+}
+.photocontainer {
+	FLOAT: left; WIDTH: 309px; HEIGHT: 640px; BACKGROUND-COLOR: #fcebf2
+}
+.photocontainer .spacing {
+	MARGIN: 15px 0px 13px 13px
+}
+.photocontainer .spacing .vote {
+	MARGIN-LEFT: -10px; WIDTH: 305px; HEIGHT: 41px
+}
+.photocontainer .spacing .photo {
+	MARGIN-BOTTOM: 12px; OVERFLOW: hidden; WIDTH: 283px
+}
+.photocontainer .spacing .attend {
+	PADDING-LEFT: 12px; BACKGROUND: url(/gfx/4/gizmos/arrow_double_link.gif) no-repeat left top; FLOAT: left; WIDTH: 283px
+}
+.tabselect {
+	FLOAT: right; WIDTH: 159px; BORDER-BOTTOM: #ffffff 1px solid; HEIGHT: 47px; BACKGROUND-COLOR: #fcebf2
+}
+.tabunselect {
+	DISPLAY: block; FLOAT: right; WIDTH: 150px; MARGIN-RIGHT: 4px; BORDER-BOTTOM: #ffffff 1px solid; HEIGHT: 47px; BACKGROUND-COLOR: #f0f0f0
+}
+.tabtitle {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 13px; MARGIN: 8px 0px 0px 18px; OVERFLOW: hidden; WIDTH: 120px; HEIGHT: 15px
+}
+.tabsubtitle {
+	MARGIN-LEFT: 18px; OVERFLOW: hidden; WIDTH: 120px; HEIGHT: 13px
+}
+.rightspace {
+	FLOAT: left; MARGIN-LEFT: 8px; WIDTH: 150px; HEIGHT: 10px
+}
+.loginlink {
+	PADDING-LEFT: 12px; BACKGROUND: url(/gfx/4/gizmos/arrow_double_link.gif) no-repeat left top; FLOAT: left
+}
+.teaserMovies {
+	HEIGHT: 100px
+}
+.teaserMovies .teaser {
+	OVERFLOW: hidden; WIDTH: 200px; PADDING-TOP: 4px; HEIGHT: 95px; TEXT-ALIGN: left
+}
+.teaserMovies .teaser .title {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; MARGIN-BOTTOM: 3px; WIDTH: 109px
+}
+.teaserMovies .teaser .image {
+	FLOAT: left; WIDTH: 81px; HEIGHT: 75px
+}
+.teaserMovies .teaser .text {
+	FLOAT: right; MARGIN-LEFT: 10px; OVERFLOW: hidden; WIDTH: 109px; HEIGHT: 75px
+}
+.teaserAlg {
+	FLOAT: left; WIDTH: 460px; HEIGHT: 80px
+}
+.teaserAlg .image {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 50px
+}
+.teaserAlg .text {
+	FLOAT: right; MARGIN-BOTTOM: 10px; WIDTH: 400px
+}
+.teaserMusicClub {
+	HEIGHT: 285px
+}
+.teaserMusicClub IMG {
+	MARGIN-TOP: 10px; FLOAT: left
+}
+.teaserMusicClub INPUT {
+	MARGIN: 0px 0px 5px; WIDTH: 116px
+}
+.teaserAlgRight {
+	HEIGHT: 92px
+}
+.teaserAlgRight .image {
+	MARGIN-TOP: 1px; FLOAT: left; WIDTH: 48px; HEIGHT: 45px
+}
+.teaserAlgRight .text {
+	FLOAT: right; MARGIN-LEFT: 6px; OVERFLOW: hidden; WIDTH: 62px; LINE-HEIGHT: 12px; HEIGHT: 50px; TEXT-ALIGN: left
+}
+.film {
+	WIDTH: 122px; HEIGHT: 234px
+}
+.film DIV {
+	FLOAT: left
+}
+.film .spacer {
+	FONT-SIZE: 1px; WIDTH: 122px; HEIGHT: 4px
+}
+.film .image {
+	MARGIN-BOTTOM: 13px; WIDTH: 47px; MARGIN-RIGHT: 7px; HEIGHT: 36px
+}
+.film .title {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; MARGIN-BOTTOM: 13px; WIDTH: 68px; HEIGHT: 36px
+}
+.film .content {
+	BORDER-TOP: #000 1px solid; MARGIN-BOTTOM: 10px; WIDTH: 122px; BORDER-BOTTOM: #000 1px solid; HEIGHT: 155px
+}
+.filmTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; OVERFLOW: hidden; WIDTH: 122px; LINE-HEIGHT: 14px; HEIGHT: 30px
+}
+.filmChannel {
+	OVERFLOW: hidden; WIDTH: 122px; COLOR: #6e6e6e; HEIGHT: 12px
+}
+.film .Line {
+	FONT-SIZE: 1px; MARGIN-BOTTOM: 3px; WIDTH: 122px; BORDER-BOTTOM: #c5c5c5 1px solid; HEIGHT: 5px
+}
+.topmovies {
+	WIDTH: 116px; HEIGHT: 234px
+}
+.topmovies DIV {
+	FLOAT: left
+}
+.topmovies .item {
+	OVERFLOW: hidden; WIDTH: 116px; HEIGHT: 36px
+}
+.topmovies .spacer {
+	FONT-SIZE: 1px; WIDTH: 116px; HEIGHT: 4px
+}
+.topmovies .number {
+	FONT-WEIGHT: bold; WIDTH: 15px; MARGIN-RIGHT: 3px; HEIGHT: 28px; TEXT-ALIGN: right
+}
+.topmovies .text {
+	OVERFLOW: hidden; WIDTH: 93px; HEIGHT: 26px
+}
+.datingbox {
+	HEIGHT: 290px
+}
+.datingbox .text {
+	FLOAT: left; MARGIN-BOTTOM: 8px; HEIGHT: 17px
+}
+.datingbox .pulldown {
+	FLOAT: left; MARGIN-BOTTOM: 8px; HEIGHT: 17px
+}
+.datingbox .text {
+	WIDTH: 60px
+}
+.datingbox .pulldown {
+	WIDTH: 56px; TEXT-ALIGN: right
+}
+.datingbox .image {
+	FLOAT: left; WIDTH: 122px; HEIGHT: 93px
+}
+.datingbox .link {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 122px; HEIGHT: 27px
+}
+.horoscoop {
+	HEIGHT: 290px
+}
+.horoscoop .title {
+	DISPLAY: block; FLOAT: left; MARGIN-BOTTOM: 7px; WIDTH: 253px; HEIGHT: 18px
+}
+.horoscoop .teaser {
+	FLOAT: left; WIDTH: 280px; HEIGHT: 106px
+}
+.horoscoop .teasertitle {
+	DISPLAY: block; FONT-SIZE: 13px; FLOAT: left; WIDTH: 145px; HEIGHT: 22px
+}
+.horoscoop .teaserimage {
+	FLOAT: right; WIDTH: 122px; HEIGHT: 93px
+}
+.horoscoop .teasertext {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 145px; HEIGHT: 71px
+}
+.horoscoop .links {
+	FONT-SIZE: 13px; WIDTH: 122px; LINE-HEIGHT: 16px; HEIGHT: 110px
+}
+.reizensearch {
+	HEIGHT: 234px
+}
+.reizensearch DIV {
+	FLOAT: left
+}
+.reizensearch .row {
+	WIDTH: 281px; HEIGHT: 27px
+}
+.reizensearch .row .first {
+	WIDTH: 78px
+}
+.reizensearch .row .second {
+	WIDTH: 153px
+}
+.reizensearch .row .third {
+	WIDTH: 50px; TEXT-ALIGN: right
+}
+.reizen .standard DIV {
+	FLOAT: left; OVERFLOW: hidden
+}
+.reizen .standard {
+	HEIGHT: 234px
+}
+.reizen .standard .image {
+	MARGIN-BOTTOM: 7px; HEIGHT: 93px
+}
+.reizen .standard .w144 {
+	WIDTH: 116px
+}
+.reizen .standard .w150 {
+	WIDTH: 122px
+}
+.reizen .standard .title {
+	MARGIN-BOTTOM: 6px; HEIGHT: 32px
+}
+.reizen .standard .textH71 {
+	MARGIN-BOTTOM: 6px; HEIGHT: 71px
+}
+.reizen .standard .textH84 {
+	HEIGHT: 84px
+}
+.reizen .standard .more {
+	HEIGHT: 15px
+}
+.lastminute {
+	HEIGHT: 35px
+}
+.lastminute .city {
+	MARGIN-TOP: 2px; MARGIN-LEFT: 4px; HEIGHT: 17px
+}
+.lastminute .price {
+	MARGIN-LEFT: 4px; HEIGHT: 13px
+}
+.vacanceselect {
+	WIDTH: 133px; HEIGHT: 202px
+}
+.vacanceselect .pulldowntitle {
+	WIDTH: 133px; HEIGHT: 14px
+}
+.vacanceselect SELECT {
+	MARGIN-BOTTOM: 8px; WIDTH: 133px; HEIGHT: 18px
+}
+.vacanceselect SELECT:unknown {
+	BACKGROUND-COLOR: #ffe0b4
+}
+.reizenDatum {
+	FLOAT: left; WIDTH: 19px; HEIGHT: 19px; TEXT-ALIGN: center
+}
+.reizenDatum .Dag {
+	MARGIN-TOP: 2px; FLOAT: left; WIDTH: 19px; COLOR: #fff; HEIGHT: 19px; TEXT-ALIGN: center
+}
+.reizenDatum .item {
+	MARGIN-TOP: 2px; FLOAT: left; WIDTH: 19px; HEIGHT: 19px
+}
+.reizenDatum .item:hover {
+	FLOAT: left; BACKGROUND-COLOR: #ffe0b4; TEXT-DECORATION: none
+}
+.reizen .eindbestemming {
+	WIDTH: 360px; HEIGHT: 400px; BACKGROUND-COLOR: #e6eff7
+}
+.reizen .eindbestemming DIV {
+	FLOAT: left
+}
+.vakantiepartners {
+	HEIGHT: 119px
+}
+.vakantiepartners DIV {
+	FLOAT: left
+}
+.teaserADSL {
+	WIDTH: 144px; HEIGHT: 231px
+}
+.teaserOverig {
+	HEIGHT: 351px
+}
+.teaserOverig .item {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 200px; HEIGHT: 73px
+}
+.teaserOverig A {
+	DISPLAY: block; MARGIN-BOTTOM: 3px; LINE-HEIGHT: 13px
+}
+.teaserOverig .spacer {
+	FONT-SIZE: 1px; FLOAT: left; WIDTH: 200px; HEIGHT: 10px
+}
+.galerycenter {
+	WIDTH: 120px; HEIGHT: 86px
+}
+.galerycenter .image {
+	MARGIN-TOP: 3px; FLOAT: left; WIDTH: 48px; HEIGHT: 36px
+}
+.galerycenter .text {
+	MARGIN-TOP: 3px; FLOAT: right; MARGIN-LEFT: 3px; OVERFLOW: hidden; WIDTH: 65px; LINE-HEIGHT: 12px; HEIGHT: 45px; TEXT-ALIGN: left
+}
+.backgrteaser {
+	BACKGROUND: url(/gfx/4/actueel/euro2004/radiojback.gif); WIDTH: 122px; HEIGHT: 86px
+}
+.backgrteaser .text {
+	FLOAT: right; OVERFLOW: hidden; WIDTH: 70px; LINE-HEIGHT: 12px; HEIGHT: 51px
+}
+.euroblok {
+	BACKGROUND: url(/gfx/4/actueel/euro2004/229x90_mindgame.gif); FLOAT: left; WIDTH: 229px; HEIGHT: 90px
+}
+.euroblok .topper {
+	FLOAT: left; WIDTH: 190px; HEIGHT: 65px
+}
+.euroblok .speellink {
+	MARGIN-LEFT: 13px; WIDTH: 190px
+}
+.teaserschema {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px; HEIGHT: 69px
+}
+.teaserschema .text {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 199px
+}
+.europoule {
+	HEIGHT: 385px
+}
+.europoule .group {
+	FLOAT: left; WIDTH: 115px; HEIGHT: 90px
+}
+.europoule .group .title {
+	FLOAT: left; MARGIN-BOTTOM: 1px; WIDTH: 115px; HEIGHT: 15px
+}
+.europoule .group .country {
+	FLOAT: left; MARGIN-BOTTOM: 3px; OVERFLOW: hidden; WIDTH: 80px; HEIGHT: 15px
+}
+.europoule .group .flag {
+	FLOAT: left; MARGIN-BOTTOM: 3px; OVERFLOW: hidden; WIDTH: 21px; HEIGHT: 15px
+}
+.teaserTennis {
+	WIDTH: 144px; HEIGHT: 80px
+}
+.teaserShop {
+	HEIGHT: 62px; TEXT-ALIGN: center
+}
+.teaserShop .text {
+	PADDING-TOP: 25px
+}
+.teaserSportSectie {
+	HEIGHT: 68px
+}
+.teaserSportSectie .image {
+	FLOAT: left; WIDTH: 45px; HEIGHT: 41px
+}
+.teaserSportSectie .text {
+	FLOAT: left; MARGIN-LEFT: 8px; OVERFLOW: hidden; WIDTH: 61px; LINE-HEIGHT: 12px; HEIGHT: 41px
+}
+.teaserSportart {
+	HEIGHT: 65px
+}
+.walliecontent .titleimg {
+	FLOAT: left; WIDTH: 110px; HEIGHT: 19px
+}
+.walliecontent .text {
+	FONT-SIZE: 11px; TEXT-ALIGN: left
+}
+.printart {
+	WIDTH: 600px
+}
+.printart .header {
+	WIDTH: 600px; HEIGHT: 39px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.printart .image {
+	FLOAT: right; MARGIN: 0px 0px 10px 20px
+}
+.printart P {
+	MARGIN-BOTTOM: 20px
+}
+.photogal {
+	WIDTH: 468px; HEIGHT: 540px
+}
+.photogal .image {
+	OVERFLOW: hidden; WIDTH: 440px
+}
+.photogal .header {
+	HEIGHT: 39px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.articleleft {
+	MARGIN-TOP: -3px; FLOAT: left; WIDTH: 229px
+}
+.articleleft P {
+	FONT-WEIGHT: normal; MARGIN: 0px 0px 20px
+}
+.articleFULL {
+	MARGIN-TOP: -3px; FLOAT: left; WIDTH: 468px
+}
+.articleFULL P {
+	FONT-WEIGHT: normal; MARGIN: 0px 0px 20px
+}
+.articletop .title {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; MARGIN: 24px 0px
+}
+.articletop .date {
+	FONT-SIZE: 12px; MARGIN-BOTTOM: 24px; WIDTH: 468px; HEIGHT: 20px
+}
+.articleright {
+	FLOAT: right; WIDTH: 229px
+}
+.articleright .image {
+	FLOAT: right; OVERFLOW: hidden; WIDTH: 229px; HEIGHT: 175px
+}
+.articleright .imagetext {
+	FONT-SIZE: 10px; FLOAT: right; MARGIN-BOTTOM: 5px; WIDTH: 229px; LINE-HEIGHT: 11px; HEIGHT: 27px
+}
+.articleright .printandmail {
+	FLOAT: right; WIDTH: 229px; HEIGHT: 28px; BACKGROUND-COLOR: #edecec
+}
+.articleright .printandmail .item {
+	MARGIN-TOP: -4px; FONT-WEIGHT: bold; FLOAT: left
+}
+.articleright .printandmail .item .link {
+	FLOAT: left; MARGIN-LEFT: 5px
+}
+.articleright .printandmail .item .icon {
+	FLOAT: left
+}
+.articleright .additional {
+	MARGIN-TOP: 15px; FONT-WEIGHT: bold; FONT-SIZE: 17px; FLOAT: right; WIDTH: 229px; HEIGHT: 18px
+}
+.articleright .videophoto {
+	FLOAT: right; WIDTH: 229px; HEIGHT: 70px; BACKGROUND-COLOR: #ffffff
+}
+.articleright .videophoto .spacer {
+	FLOAT: left; WIDTH: 9px; HEIGHT: 10px
+}
+.articleright .videophoto .item {
+	MARGIN-TOP: 11px; FLOAT: left; WIDTH: 110px; HEIGHT: 56px; TEXT-ALIGN: left
+}
+.articleright .videophoto .item .title {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; FLOAT: left; WIDTH: 110px; HEIGHT: 20px
+}
+.articleright .videophoto .item .image {
+	FLOAT: left; WIDTH: 54px; HEIGHT: 36px
+}
+.articleright .videophoto .item .link {
+	FLOAT: right; OVERFLOW: hidden; WIDTH: 56px; LINE-HEIGHT: 12px; HEIGHT: 36px
+}
+.articleright .related {
+	MARGIN-TOP: 10px; FLOAT: right; MARGIN-BOTTOM: 2px; WIDTH: 229px
+}
+.articleright .related .title {
+	MARGIN-TOP: 5px; FONT-WEIGHT: bold; FONT-SIZE: 15px; FLOAT: right; WIDTH: 229px; HEIGHT: 20px; BACKGROUND-COLOR: #ffffff
+}
+.articleright .related .greyborder {
+	BORDER-BOTTOM: #edebec 1px solid
+}
+.articleright .related .teaser {
+	MARGIN-TOP: 7px; FLOAT: right; WIDTH: 229px; HEIGHT: 45px
+}
+.articleright .related .teaser .image {
+	FLOAT: left; WIDTH: 54px; HEIGHT: 36px
+}
+.articleright .related .teaser .link {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 175px; LINE-HEIGHT: 12px; HEIGHT: 36px
+}
+.articleright .more {
+	FLOAT: left; WIDTH: 229px; HEIGHT: 100%; BACKGROUND-COLOR: #edecec
+}
+.articleright .more .links {
+	MARGIN: 10px 13px 0px
+}
+.articleright .more .links .title {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; MARGIN-BOTTOM: 9px
+}
+.articleright .more .links .link {
+	PADDING-LEFT: 13px; BACKGROUND: url(/gfx/4/gizmos/arrow_double_link10.gif) no-repeat left top; MARGIN: 0px 11px 13px 0px; LINE-HEIGHT: 12px; TEXT-ALIGN: left
+}
+.articleright .more .links .link A {
+	MARGIN-BOTTOM: 30px
+}
+.SMSContainer {
+	FLOAT: left; MARGIN-LEFT: 0px; WIDTH: 370px
+}
+.SMSDefaultWhite {
+	FONT-SIZE: 13px; FLOAT: left; MARGIN-BOTTOM: 3px; WIDTH: 370px; BACKGROUND-COLOR: #ffffff
+}
+.SMSDefaultLightGreen {
+	FONT-SIZE: 13px; FLOAT: left; MARGIN-BOTTOM: 3px; WIDTH: 370px; BACKGROUND-COLOR: #eaf7e2
+}
+.SMSDefaultLightGrey {
+	FONT-SIZE: 13px; FLOAT: left; MARGIN-BOTTOM: 3px; WIDTH: 370px; BACKGROUND-COLOR: #edecec
+}
+.SMSDefaultGreen {
+	FONT-SIZE: 13px; FLOAT: left; MARGIN-BOTTOM: 3px; WIDTH: 370px; BACKGROUND-COLOR: #d4eec5
+}
+.SMSForm {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px
+}
+.SMSSpacingSmall {
+	FONT-SIZE: 10px; FLOAT: left; WIDTH: 360px; HEIGHT: 14px
+}
+.SMSSpacingBig {
+	FONT-SIZE: 10px; FLOAT: left; WIDTH: 360px; HEIGHT: 20px
+}
+.SMSPageHeader {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; FLOAT: left; WIDTH: 370px; BORDER-BOTTOM: #000 1px solid; HEIGHT: 23px
+}
+.SMSBlockTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; FLOAT: left; WIDTH: 370px; HEIGHT: 20px
+}
+.SMSContentRow {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 8px; FONT-SIZE: 13px; FLOAT: left; PADDING-BOTTOM: 4px; WIDTH: 370px; PADDING-TOP: 4px; HEIGHT: 18px
+}
+.SMSContentCounterColumn {
+	FONT-WEIGHT: bold; FLOAT: left; WIDTH: 10px; MARGIN-RIGHT: 5px
+}
+.SMSContentNameColumn {
+	FONT-SIZE: 13px; FLOAT: left; WIDTH: 150px
+}
+.SMSContentNameColumn A {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #0750d9; TEXT-DECORATION: none
+}
+.SMSContentNumberColumn {
+	FONT-SIZE: 13px; FLOAT: left; WIDTH: 100px
+}
+.SMSButtonRight {
+	FLOAT: right; WIDTH: 85px; HEIGHT: 18px
+}
+.SMSContentRow DIV {
+	FONT-SIZE: 13px
+}
+.SMSContentRow INPUT {
+	FONT-SIZE: 13px
+}
+.SMSDefaultWhite P {
+	FONT-SIZE: 13px
+}
+.SMSContentBlock {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 13px; FONT-SIZE: 13px; FLOAT: left; PADDING-BOTTOM: 4px; WIDTH: 370px; PADDING-TOP: 4px
+}
+.mededelingen {
+	FLOAT: left; WIDTH: 229px
+}
+.mededelingen .mtitle {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 15px; FLOAT: left
+}
+.mededelingen .mtitle:first-line {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 11px; FLOAT: left; TEXT-DECORATION: none
+}
+.mededelingen .mededeling {
+	FLOAT: left; MARGIN-BOTTOM: 20px; OVERFLOW: hidden; WIDTH: 229px
+}
+.faqbox {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px; HEIGHT: 90px
+}
+.handleidingbox {
+	MARGIN-LEFT: 13px; WIDTH: 200px; MARGIN-RIGHT: 13px; HEIGHT: 135px
+}
+.handleidingbox .ball {
+	FONT-SIZE: 13px; FLOAT: left; WIDTH: 12px; FONT-FAMILY: Verdana, Arial; HEIGHT: 15px
+}
+.handleidingbox .item {
+	FLOAT: left; WIDTH: 200px
+}
+.mijnabo {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px; HEIGHT: 160px
+}
+.mijnabo .ball {
+	FONT-SIZE: 13px; FLOAT: left; WIDTH: 12px; FONT-FAMILY: Verdana, Arial; HEIGHT: 15px
+}
+.mijnabo .item {
+	FLOAT: left; WIDTH: 200px
+}
+.faqfoldbox {
+	FLOAT: left; MARGIN-BOTTOM: 10px; WIDTH: 468px
+}
+.faqfoldbox .questionbar {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; BACKGROUND-COLOR: #d4eec5
+}
+.faqfoldbox .questionbar .qspacing {
+	WIDTH: 452px
+}
+.faqfoldbox .answerbar {
+	FLOAT: left; WIDTH: 468px; BACKGROUND-COLOR: #eaf7e2
+}
+.faqfoldbox .answerbar .aspacing {
+	MARGIN: 5px 18px; OVERFLOW: hidden; WIDTH: 432px
+}
+.morefaq {
+	MARGIN-TOP: 10px; FLOAT: left; MARGIN-BOTTOM: 13px; WIDTH: 468px
+}
+.specify {
+	MARGIN-TOP: 10px; MARGIN-BOTTOM: 13px; WIDTH: 468px
+}
+.specify .text {
+	FLOAT: left; WIDTH: 468px; HEIGHT: 18px
+}
+.specify .dropdown {
+	FLOAT: left; WIDTH: 150px
+}
+.specify .spacer {
+	DISPLAY: block; FLOAT: left; WIDTH: 10px; HEIGHT: 1px
+}
+.space5x229 {
+	FONT-SIZE: 1px; FLOAT: left; WIDTH: 229px; HEIGHT: 5px; BACKGROUND-COLOR: #ffffff
+}
+.space10x229 {
+	FONT-SIZE: 1px; FLOAT: left; WIDTH: 229px; HEIGHT: 10px; BACKGROUND-COLOR: #ffffff
+}
+.space1x468 {
+	FONT-SIZE: 1px; FLOAT: left; WIDTH: 468px; HEIGHT: 1px; BACKGROUND-COLOR: #ffffff
+}
+.space3x468 {
+	FONT-SIZE: 1px; FLOAT: left; WIDTH: 468px; HEIGHT: 3px; BACKGROUND-COLOR: #ffffff
+}
+.space10x468 {
+	FONT-SIZE: 1px; FLOAT: left; WIDTH: 468px; HEIGHT: 10px; BACKGROUND-COLOR: #ffffff
+}
+.space1x622 {
+	FONT-SIZE: 1px; FLOAT: left; WIDTH: 622px; HEIGHT: 1px; BACKGROUND-COLOR: #ffffff
+}
+.space3x622 {
+	FONT-SIZE: 1px; FLOAT: left; WIDTH: 622px; HEIGHT: 3px; BACKGROUND-COLOR: #ffffff
+}
+.remainsubj {
+	FLOAT: left; MARGIN-BOTTOM: 10px; WIDTH: 468px
+}
+.remainsubj .subjcontain {
+	FLOAT: left; WIDTH: 150px
+}
+.remainsubj .subjcontain .subjitem {
+	FLOAT: left; WIDTH: 150px; HEIGHT: 16px
+}
+.remainsubj .subjcontain .subjitem .ball {
+	FONT-SIZE: 13px; FLOAT: left; WIDTH: 12px; FONT-FAMILY: Verdana, Arial
+}
+.468tekst {
+	FLOAT: left; WIDTH: 468px
+}
+.468tekst .text {
+	FLOAT: left; MARGIN-BOTTOM: 5px; WIDTH: 468px
+}
+.468tekst .item {
+	FLOAT: left; WIDTH: 468px; HEIGHT: 16px
+}
+.468tekst .item .ball {
+	FONT-SIZE: 13px; FLOAT: left; WIDTH: 12px; FONT-FAMILY: Verdana, Arial
+}
+.468tekst {
+	FLOAT: left; WIDTH: 468px
+}
+.468tekst .text {
+	FLOAT: left; MARGIN-BOTTOM: 5px; WIDTH: 468px
+}
+.aboinstel {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px; HEIGHT: 140px
+}
+.aboinstel .item {
+	FLOAT: left; WIDTH: 200px; HEIGHT: 18px
+}
+.aboinstel .ball {
+	FONT-SIZE: 13px; FLOAT: left; WIDTH: 10px; FONT-FAMILY: Verdana, Arial
+}
+.aboinstel .fillin {
+	FLOAT: left; WIDTH: 200px; HEIGHT: 18px
+}
+.overigeond {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px; HEIGHT: 140px
+}
+.sresultmanual {
+	FLOAT: left; MARGIN-BOTTOM: 10px; WIDTH: 468px
+}
+.sresultmanual .mainlink {
+	FLOAT: left; WIDTH: 468px; HEIGHT: 16px
+}
+.sresultmanual .mainlink .ball {
+	FONT-SIZE: 13px; FLOAT: left; WIDTH: 12px; FONT-FAMILY: Verdana, Arial
+}
+.sresultmanual .subtxt {
+	MARGIN-LEFT: 12px; WIDTH: 456px
+}
+.searchr {
+	FLOAT: left; WIDTH: 234px; HEIGHT: 16px
+}
+.searchr .item {
+	FLOAT: left; HEIGHT: 16px
+}
+.searchr .ball {
+	FONT-SIZE: 13px; FLOAT: left; WIDTH: 12px; FONT-FAMILY: Verdana, Arial
+}
+.manual {
+	FLOAT: left; MARGIN-BOTTOM: 21px; WIDTH: 622px
+}
+.manual .number {
+	FONT-WEIGHT: bold; FONT-SIZE: 25px; FLOAT: left; MARGIN-BOTTOM: 8px; OVERFLOW: hidden; WIDTH: 35px
+}
+.manual .text {
+	FLOAT: right; OVERFLOW: hidden; WIDTH: 585px
+}
+.manual .image {
+	MARGIN-TOP: 10px; FLOAT: right; OVERFLOW: hidden; WIDTH: 585px
+}
+.endquestion {
+	FLOAT: left; MARGIN-BOTTOM: 21px; WIDTH: 622px
+}
+.endquestion .mainquest {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; BACKGROUND-COLOR: #d4eec5
+}
+.endquestion .mainquest .fakelinkout {
+	FONT-WEIGHT: bold; CURSOR: hand; COLOR: #0750d9; TEXT-DECORATION: none
+}
+.endquestion .mainquest .fakelinkover {
+	FONT-WEIGHT: bold; CURSOR: hand; COLOR: #0750d9; TEXT-DECORATION: underline
+}
+.endquestion .subquestbar {
+	FLOAT: left; WIDTH: 622px; BACKGROUND-COLOR: #d4eec5
+}
+.endquestion .subquestbar .subquest {
+	FONT-WEIGHT: bold; MARGIN: 5px 18px; WIDTH: 586px
+}
+.endquestion .subanswerbar {
+	FLOAT: left; WIDTH: 622px; BACKGROUND-COLOR: #eaf7e2
+}
+.endquestion .subanswerbar .subanswer {
+	FONT-WEIGHT: bold; MARGIN: 5px 18px 5px 30px; WIDTH: 574px
+}
+.optionbox {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px; HEIGHT: 36px
+}
+.optionbox .title {
+	FONT-WEIGHT: bold; FLOAT: left; MARGIN-BOTTOM: 3px; WIDTH: 200px
+}
+.optionbox .icon {
+	FLOAT: left; MARGIN-RIGHT: 5px
+}
+.optionbox .text {
+	FLOAT: left; MARGIN-RIGHT: 50px
+}
+.problemsolve {
+	FLOAT: left; WIDTH: 468px
+}
+.problemsolve .item {
+	MARGIN-BOTTOM: 5px; WIDTH: 468px
+}
+.problemsolve .item .suggest {
+	WIDTH: 468px
+}
+.problemsolve .item .suggest {
+	WIDTH: 468px
+}
+.problemsolve .item .explain {
+	PADDING-LEFT: 12px; WIDTH: 468px
+}
+.mijnabotext {
+	FLOAT: left; MARGIN-BOTTOM: 3px; WIDTH: 468px
+}
+.mijnaboitem {
+	FLOAT: left; WIDTH: 468px
+}
+.mijnaboitem .ball {
+	FONT-SIZE: 13px; FLOAT: left; WIDTH: 12px; FONT-FAMILY: Verdana, Arial
+}
+.firstinfo {
+	FLOAT: left; MARGIN-BOTTOM: 8px; WIDTH: 468px
+}
+.firstinfo .title {
+	FLOAT: left; WIDTH: 468px
+}
+.firstinfo .text {
+	FLOAT: left; WIDTH: 468px
+}
+.contactfold {
+	FLOAT: left; MARGIN-BOTTOM: 10px; WIDTH: 468px
+}
+.contactfold .question {
+	FLOAT: left; WIDTH: 468px; HEIGHT: 29px; BACKGROUND-COLOR: #d4eec5
+}
+.contactfold .question .spacing1 {
+	MARGIN-TOP: 8px; FLOAT: left; MARGIN-LEFT: 5px; WIDTH: 230px
+}
+.contactfold .question .spacing2 {
+	MARGIN-TOP: 5px; FLOAT: left; WIDTH: 160px
+}
+.contactfold .naw {
+	FLOAT: left; WIDTH: 468px; HEIGHT: 29px; BACKGROUND-COLOR: #eaf7e2
+}
+.contactfold .naw .spacing1 {
+	MARGIN-TOP: 8px; FLOAT: left; MARGIN-LEFT: 5px; WIDTH: 230px
+}
+.contactfold .naw .spacing2 {
+	MARGIN-TOP: 5px; FLOAT: left; WIDTH: 160px
+}
+.contactfold .descript {
+	FLOAT: left; WIDTH: 468px; HEIGHT: 76px; BACKGROUND-COLOR: #eaf7e2
+}
+.contactfold .descript .spacing1 {
+	MARGIN-TOP: 8px; FLOAT: left; MARGIN-LEFT: 5px; WIDTH: 230px
+}
+.contactfold .descript .spacing2 {
+	MARGIN-TOP: 5px; FLOAT: left; WIDTH: 160px
+}
+.quickhelp {
+	MARGIN-LEFT: 13px; WIDTH: 116px; MARGIN-RIGHT: 13px
+}
+.quickhelp .item {
+	FONT-WEIGHT: bold; FLOAT: left; MARGIN-BOTTOM: 8px; OVERFLOW: hidden; WIDTH: 116px
+}
+.quickhelp .subtext {
+	MARGIN-TOP: -8px; FLOAT: left; MARGIN-BOTTOM: 5px; OVERFLOW: hidden; WIDTH: 116px
+}
+.searchbox {
+	MARGIN-LEFT: 13px; MARGIN-RIGHT: 13px; HEIGHT: 20px
+}
+.searchbox .text {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; FLOAT: left; MARGIN-RIGHT: 10px
+}

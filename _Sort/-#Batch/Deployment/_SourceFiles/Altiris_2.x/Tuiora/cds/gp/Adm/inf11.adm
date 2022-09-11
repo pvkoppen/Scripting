@@ -1,0 +1,457 @@
+CLASS USER
+
+CATEGORY "Microsoft Office InfoPath 2003"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath
+CATEGORY "Tools | Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath
+CATEGORY "General"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath
+POLICY "Recently used file list"
+	PART "Number of entries:" NUMERIC
+				VALUENAME MRUSize
+				SPIN 1
+				MIN 0
+				MAX 9
+				DEFAULT 4
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Design"
+POLICY "Enter text direction for new forms"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Designer
+	PART "Direction:" DROPDOWNLIST
+			VALUENAME BidiRTLFORM
+	ITEMLIST
+				NAME "Left-to-Right"		VALUE NUMERIC "0" DEFAULT
+				NAME "Right-to-Left"		VALUE NUMERIC "1"
+	END ITEMLIST
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Spelling & Grammar"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Proofing
+POLICY "Check spelling as you type"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Proofing
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+			VALUENAME CheckSpelling
+			VALUEON  NUMERIC 1
+			VALUEOFF  NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Hide spelling errors"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Proofing
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+			VALUENAME HideSpellingErrors
+			VALUEON  NUMERIC 1
+			VALUEOFF  NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Always suggest corrections"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Proofing
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+			VALUENAME SuggestCorrections
+			VALUEON  NUMERIC 1
+			VALUEOFF  NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Suggest from main dictionary only"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Proofing
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+			VALUENAME UseMainDict
+			VALUEON  NUMERIC 1
+			VALUEOFF  NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Ignore words in UPPERCASE"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Proofing
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+			VALUENAME IgnoreUppercase
+			VALUEON  NUMERIC 1
+			VALUEOFF  NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Ignore words with numbers"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Proofing
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+			VALUENAME IgnoreNumbers
+			VALUEON  NUMERIC 1
+			VALUEOFF  NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "EA Find"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\FE
+POLICY "Match full/half width forms"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+			VALUENAME EqByte
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match minus, dash, cho"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+			VALUENAME EqMinus
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match cho-on used for vowels"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+			VALUENAME EqLongVowel
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Set EA line breaking"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Designer\FE
+	PART "Select EA line breaking behavior" DROPDOWNLIST
+			VALUENAME linebreaking
+	ITEMLIST
+				NAME "Normal"			VALUE "normal" DEFAULT
+				NAME "Strict"			VALUE "strict"
+	END ITEMLIST
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Ink"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\EditorCommon
+POLICY "Ink Entry"
+	PART "Open application in Ink Entry Mode" CHECKBOX
+			VALUENAME InkEntry
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Display warning dialog that user is entering text in Ink entry mode"
+	PART "Check to show warning" CHECKBOX
+			VALUENAME InkEntryPrompt
+			VALUEON NUMERIC "1"
+			VALUEOFF NUMERIC "0"
+	END PART
+	END POLICY
+POLICY "Enter milliseconds before recognizing handwriting"
+	PART "Wait: (milliseconds 0-10,000)" NUMERIC
+				VALUENAME InkEntryDelayTime
+				SPIN 1
+				MIN 0
+				MAX 10000
+				DEFAULT 3000
+	END PART
+	END POLICY
+POLICY "Display a shaded ink guide for handwriting"
+	PART "Check to display a shaded ink guide for handwriting" CHECKBOX
+			VALUENAME InkEntryGuide
+			VALUEON NUMERIC "1"
+			VALUEOFF NUMERIC "0"
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Advanced"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath
+POLICY "Disable InfoPath Service Pack features"
+	PART "Check to disable new features in InfoPath Service Packs" CHECKBOX
+			VALUENAME VersionMode
+			VALUEON "1.0"
+			VALUEOFF "1.1"
+	END PART
+	END POLICY
+POLICY "Enable AutoRecover"
+	PART "Check to enable AutoRecover" CHECKBOX
+			VALUENAME EnableAutoRecover
+			VALUEON NUMERIC "1"
+			VALUEOFF NUMERIC "0"
+	END PART
+	END POLICY
+POLICY "AutoRecover Interval"
+	PART "Save AutoRecover info every:" NUMERIC
+				VALUENAME AutoRecoverInterval
+				SPIN 1
+				MIN 0
+				MAX 10
+				DEFAULT 10
+	END PART
+	END POLICY
+POLICY "Disable Common Language Runtime errors when filling out forms"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\InfoPath\Form Debugging"
+	PART "Check to disable Common Language Runtime errors" CHECKBOX
+			VALUENAME ShowExceptionsDialog
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Disable items in user interface"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\DisabledCmdBarItemsCheckBoxes
+CATEGORY "Predefined"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\DisabledCmdBarItemsCheckBoxes
+POLICY "Disable command bar buttons and menu items"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\DisabledCmdBarItemsCheckBoxes
+	PART "File | Print" CHECKBOX
+		VALUENAME FilePrint
+		VALUEON 4
+		VALUEOFF 0
+	END PART
+	PART "File | Send to Mail Recipient" CHECKBOX
+		VALUENAME SendToMailRecipient
+		VALUEON 3738
+		VALUEOFF 0
+	END PART
+	PART "File | Open from SharePoint Site" CHECKBOX
+		VALUENAME OpenfromSharePoint
+		VALUEON 7274
+		VALUEOFF 0
+	END PART
+	PART "File | Print Preview" CHECKBOX
+		VALUENAME FilePrintPreview
+		VALUEON 109
+		VALUEOFF 0
+	END PART
+	PART "File | Page Setup" CHECKBOX
+		VALUENAME FilePageSetup
+		VALUEON 247
+		VALUEOFF 0
+	END PART
+	PART "Insert | Hyperlink" CHECKBOX
+		VALUENAME FileInsertHyperlink
+		VALUEON 1576
+		VALUEOFF 0
+	END PART
+	PART "Tools | Set Language" CHECKBOX
+		VALUENAME ToolsSetLanguage
+		VALUEON 790
+		VALUEOFF 0
+	END PART
+	PART "Tools | Customize" CHECKBOX
+		VALUENAME ToolsCustomize
+		VALUEON 797
+		VALUEOFF 0
+	END PART
+	PART "Tools | Options" CHECKBOX
+		VALUENAME ToolsOptions
+		VALUEON 522
+		VALUEOFF 0
+	END PART
+	PART "Help | Microsoft Office Online" CHECKBOX
+		VALUENAME OfficeOnTheWeb
+		VALUEON 3775
+		VALUEOFF 0
+	END PART
+	PART "Help | Detect and Repair" CHECKBOX
+		VALUENAME HelpDetectAndRepair
+		VALUEON 3774
+		VALUEOFF 0
+	END PART
+	PART "Help | Activate Product" CHECKBOX
+		VALUENAME HelpRegistration
+		VALUEON 5933
+		VALUEOFF 0
+	END PART
+	PART "Print Default" CHECKBOX
+		VALUENAME PrintDefault
+		VALUEON 2521
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Disable shortcut keys"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\DisabledShortcutKeysCheckBoxes
+	PART "Print Shortcut (Ctrl+P)" CHECKBOX
+	VALUENAME Print
+	VALUEON 80,8
+	VALUEOFF 0
+	END PART
+	PART "Print Preview Shortcut(Ctrl+f2)" CHECKBOX
+	VALUENAME PrintPreview
+	VALUEON 113,8
+	VALUEOFF 0
+	END PART
+	PART "Insert Hyperlink Shortcut (Ctrl+K)" CHECKBOX
+	VALUENAME InsertHyperlink
+	VALUEON 75,8
+	VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Custom"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\DisabledCmdBarItemsList
+POLICY "Disable command bar buttons and menu items"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\DisabledCmdBarItemsList
+	PART "Enter a command bar ID to disable" LISTBOX
+	VALUEPREFIX TCID
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Security"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Security
+POLICY "Disable opening of solutions from the Internet security zone"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Security
+	PART "Check to disable opening solutions from the Internet security zone" CHECKBOX
+		VALUENAME AllowInternetSolutions
+		VALUEON NUMERIC 0
+		VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Disable fully trusted solutions full access to machine"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Security
+	PART "Check to disable fully trusted solutions full access to machine" CHECKBOX
+		VALUENAME RunFullTrustSolutions
+		VALUEON NUMERIC 0
+		VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Allow the use of ActiveX Custom Controls in InfoPath forms"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath
+	PART "Check to enable the use of ActiveX Custom Controls in InfoPath forms" CHECKBOX
+		VALUENAME EnableActiveXControls
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Run forms without publish locations in restricted mode if they do not use Service Pack features."
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Security
+	PART "Check to enable this policy." CHECKBOX
+		VALUENAME RestrictNoPublishURL
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Allow file types as attachments to forms"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Security
+	PART "Allow these files which would normally be blocked to be added to forms" TEXT
+	END PART
+	PART "Example: '.ext', or '.ext, .ex1, .ex2, <...>'" TEXT
+	END PART
+	PART "File Types:" EDITTEXT
+		VALUENAME UnsafeFileTypesRemove
+	END PART
+	END POLICY
+POLICY "Block specific file types as attachments to forms"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Security
+	PART "Prevent these file types from being added to forms" TEXT
+	END PART
+	PART "Example: '.ext', or '.ext, .ex1, .ex2, <...>'" TEXT
+	END PART
+	PART "File Types:" EDITTEXT
+		VALUENAME UnsafeFileTypesAdd
+	END PART
+	END POLICY
+POLICY "Prevent users from allowing unsafe file types to be attached to forms"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Security
+	PART "Check to prevent users from modifying which file types are blocked from forms" CHECKBOX
+		VALUENAME DisallowAttachmentCustomization
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Display a warning that a form is digitally signed"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Security
+	PART "Check to display a warning that a form is digitally signed" CHECKBOX
+		VALUENAME SignatureWarning
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Control behavior when opening forms in the Internet security zone"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\InfoPath\Open Behaviors"
+	PART "When opening forms from the Internet security zone that" TEXT
+	END PART
+	PART "have a mismatched template name (URN) and form location (PI Location)" DROPDOWNLIST
+		VALUENAME Internet
+	ITEMLIST
+				NAME "Block"			VALUE NUMERIC 0 DEFAULT
+				NAME "Prompt"			VALUE NUMERIC 1
+				NAME "Allow"			VALUE NUMERIC 2
+	END ITEMLIST
+	END PART
+	END POLICY
+POLICY "Control behavior when opening forms in the Intranet security zone"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\InfoPath\Open Behaviors"
+	PART "When opening forms from the Intranet security zone that" TEXT
+	END PART
+	PART "have a mismatched template name (URN) and form location (PI Location)" DROPDOWNLIST
+		VALUENAME Intranet
+	ITEMLIST
+				NAME "Block"			VALUE NUMERIC 0 DEFAULT
+				NAME "Prompt"			VALUE NUMERIC 1
+				NAME "Allow"			VALUE NUMERIC 2
+	END ITEMLIST
+	END PART
+	END POLICY
+POLICY "Control behavior when opening forms in the Local Machine security zone"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\InfoPath\Open Behaviors"
+	PART "When opening forms from the Local Machine security zone that" TEXT
+	END PART
+	PART "have a mismatched template name (URN) and form location (PI Location)" DROPDOWNLIST
+		VALUENAME "Local Machine"
+	ITEMLIST
+				NAME "Block"			VALUE NUMERIC 0 DEFAULT
+				NAME "Prompt"			VALUE NUMERIC 1
+				NAME "Allow"			VALUE NUMERIC 2
+	END ITEMLIST
+	END PART
+	END POLICY
+POLICY "Control behavior when opening forms in the Trusted Site security zone"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\InfoPath\Open Behaviors"
+	PART "When opening forms from the Trusted Site security zone that" TEXT
+	END PART
+	PART "have a mismatched template name (URN) and form location (PI Location)" DROPDOWNLIST
+		VALUENAME "Trusted Site"
+	ITEMLIST
+				NAME "Block"			VALUE NUMERIC 0 DEFAULT
+				NAME "Prompt"			VALUE NUMERIC 1
+				NAME "Allow"			VALUE NUMERIC 2
+	END ITEMLIST
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Miscellaneous..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath
+POLICY "Disable InfoPath Designer mode"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Designer
+	PART "Check to disable InfoPath Designer mode" CHECKBOX
+		VALUENAME DisableDesigner
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Specify path to InfoPath updater"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Update
+	PART "Specify path to InfoPath updater" EDITTEXT
+			VALUENAME Location
+	END PART
+	PART "Used when a solution that is not compatible with v1 " TEXT
+	END PART
+	PART "is opened in v1." TEXT
+	END PART
+	END POLICY
+POLICY "Specify custom message for incompatible solutions"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\Update
+	PART "Specify message for incompatible solutions" EDITTEXT
+			VALUENAME Message
+	END PART
+	PART "Used when a solution that is not compatible with v1 " TEXT
+	END PART
+	PART "is opened in v1." TEXT
+	END PART
+	END POLICY
+POLICY "Allow users to turn on and off printing of background colors."
+KEYNAME "Software\Policies\Microsoft\Office\11.0\InfoPath\Internet Explorer\Main"
+	PART "Allow users to turn on and off printing of background colors." DROPDOWNLIST
+		VALUENAME Print_Background
+	ITEMLIST
+				NAME "Yes"			VALUE "Yes" DEFAULT
+				NAME "No"			VALUE "No"
+	END ITEMLIST
+	END PART
+	END POLICY
+POLICY "Enter URL of location where users can download Form importers"
+KEYNAME Software\Policies\Microsoft\Office\11.0\InfoPath\NewImporter
+	PART "Enter URL:" EDITTEXT
+		VALUENAME Location
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+
+

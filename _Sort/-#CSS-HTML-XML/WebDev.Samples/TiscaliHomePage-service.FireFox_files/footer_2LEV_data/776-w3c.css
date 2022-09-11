@@ -1,0 +1,26 @@
+body{text-align:center;margin-left:auto;margin-right:auto;display:table;margin-top:5px;}
+body,a,b,div{font:11px Arial, Helvetica, sans-serif;}
+b{font-weight:bold;}
+a{color:#0750D9;text-decoration:none;font-weight:bold;}
+a:hover{text-decoration:underline;}
+img{float:left;padding:0px;margin:0px;border:0px;}
+div{padding-left:0px;}
+form{margin:0px;}
+
+.container{width:776px;}
+
+.footer{width:776px;}
+.footer .top{background-color:#7E71B4;color:#FFF;height:21px;border:0px;text-align:right;}
+.footer .top img {float:left;}
+.footer .top .passion{float:left;color:#FFF;padding:3px 0px 0px 10px;width:190px;text-align:left;}
+.footer .copy {width:560px;float:left;margin-left:0px;padding:2px 0px 0px 0px;font-weight:bold;}
+.footer .copy a{border-right:1px solid #FFF;padding:0px 6px 0px 4px;margin:3px 0px 0px 0px;font-weight:bold;color:#FFF;}
+
+.footer .bottom{margin-bottom:3px;height:21px;border:0px;text-align:right;}
+.footer .bottom .tiscali{float:right;width:100px;text-align:right;margin-right:15px;}
+.footer .bottom .copy{float:left;text-align:left;margin-left:7px;}
+.footer .bottom .copy a{color:#0750D9;border-right:1px solid #000;}
+
+.hidden-menu{display:none;}
+
+#no-border{border:0px;}

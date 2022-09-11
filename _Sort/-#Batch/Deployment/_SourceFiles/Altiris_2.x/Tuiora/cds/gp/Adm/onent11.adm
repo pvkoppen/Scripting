@@ -1,0 +1,653 @@
+CLASS USER
+
+CATEGORY "Microsoft Office OneNote 2003"
+CATEGORY "Tools | Options"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options
+CATEGORY "Display"
+POLICY "Page tabs appear on the left"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\other
+	PART "Specify location of the page tab control:" DROPDOWNLIST
+				VALUENAME PageTabsOnLeft
+	ITEMLIST
+						NAME "Right" VALUE NUMERIC 0
+						NAME "Left"	VALUE NUMERIC 1
+	END ITEMLIST
+				NOSORT
+	END PART
+	END POLICY
+POLICY "Vertical scroll bar appears on left"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\Other
+	PART "Check to have vertical scroll bar appear on left" CHECKBOX
+				VALUENAME VertScrollBarOnLeft
+				VALUEON NUMERIC 1
+				VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Create all new pages with rule lines"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\Other
+	PART "Check to create all new pages with rule lines" CHECKBOX
+				VALUENAME UseRuleLines
+				VALUEON NUMERIC 1
+				VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Show Note Containers"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\Other
+	PART "Check to show note containers" CHECKBOX
+				VALUENAME ShowNoteContainers
+				VALUEON NUMERIC 1 DEFCHECKED
+				VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Adjust the darkness of writing guides:"
+	PART "When in landscape:" DROPDOWNLIST
+		VALUENAME GuideDarknessLandscape
+	ITEMLIST
+				NAME "Darkest" VALUE NUMERIC 0
+				NAME "Dark"	VALUE NUMERIC 1
+				NAME "Medium"	VALUE NUMERIC 2 DEFAULT
+				NAME "Light"	VALUE NUMERIC 3
+				NAME "Lightest"	VALUE NUMERIC 4
+	END ITEMLIST
+	END PART
+	PART "When in portrait:" DROPDOWNLIST
+		VALUENAME GuideDarknessPortrait
+	ITEMLIST
+				NAME "Darkest" VALUE NUMERIC 0
+				NAME "Dark"	VALUE NUMERIC 1
+				NAME "Medium"	VALUE NUMERIC 2 DEFAULT
+				NAME "Light"	VALUE NUMERIC 3
+				NAME "Lightest"	VALUE NUMERIC 4
+	END ITEMLIST
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Editing"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Editing
+POLICY "Permanently deleting aged pages"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\Editing
+	PART "Check if OneNote should permanently delete pages based on age" CHECKBOX
+			VALUENAME PermanentlyDelete
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Days before auto deleting a page"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Editing
+	PART "Days:" NUMERIC
+			VALUENAME DeleteTime
+			SPIN 1
+			MIN 1
+			MAX 999
+			DEFAULT 365
+	END PART
+	END POLICY
+POLICY "Empty deleted folder on exit"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Editing
+	PART "Check to empty deleted pages folder on exit" CHECKBOX
+			VALUENAME EmptyDeletedPagesOnExit
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Show Paste Options buttons"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Other
+	PART "Check to show Paste Options buttons" CHECKBOX
+			VALUENAME PasteOoui
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Auto Numbering Recognition"
+	PART "Check to enable Auto Numbering Recognition" CHECKBOX
+			VALUENAME "Numbering Auto Reco"
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Auto Bullet Recognition"
+	PART "Check to enable Auto Bullet Recognition" CHECKBOX
+			VALUENAME "Bullet Auto Reco"
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Default Font Name"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Editing
+	PART "Font:" EDITTEXT
+			VALUENAME DefaultFontFace
+	END PART
+	END POLICY
+POLICY "Default Font Size"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Editing
+	PART "Font Size:" EDITTEXT
+			VALUENAME DefaultFontSize
+	END PART
+	END POLICY
+POLICY "Auto Keyboard Switching"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Language
+	PART "Check to enable Auto KeyBoard Switching" CHECKBOX
+			VALUENAME AutoKeyboard
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Include link to source when pasting from the Internet"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\editing
+	PART "Check to include link to source" CHECKBOX
+			VALUENAME PasteIncludeURL
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Size document images at this percent of the original"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Editing
+	PART "Scale %:" NUMERIC
+			VALUENAME DocumentImagesPercentScale
+			MIN 1
+			MAX 999
+			DEFAULT 75
+	END PART
+	END POLICY
+POLICY "Max number of document pictures to insert on a OneNote page"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Editing
+	PART "Number of images:" NUMERIC
+			VALUENAME DocumentImagesPerPage
+			MIN 1
+			MAX 1000
+			DEFAULT 10
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Spelling"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options
+POLICY "Mark spelling errors in notes"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\Spelling
+	PART "Check to disable spell checking in notes" CHECKBOX
+		VALUENAME HideErrors
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Ignore words containing numbers when spell checking"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\Spelling
+	PART "Check to ignore spell checking on words with numbers" CHECKBOX
+		VALUENAME IgnoreNumbers
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1 
+	END PART
+	END POLICY
+POLICY "Ignore words containing uppercase when spell checking"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\Spelling
+	PART "Check to ignore spell checking on words with uppercase letters" CHECKBOX
+		VALUENAME IgnoreUppercase
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1 
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Handwriting"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\Handwriting
+POLICY "Use pen pressure sensitivity"
+	PART "Check to use pen pressure sensitivity" CHECKBOX
+			VALUENAME InkPressure
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Automatically switch between Pen and Selection Tool"
+	PART "Check to automatically switch" CHECKBOX
+			VALUENAME AutoModeSwitch
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Width for handwritten paragraphs"
+	PART "Width for handwritten paragraphs" DROPDOWNLIST
+		VALUENAME InkWrapping
+	ITEMLIST
+				NAME "Wide" 	VALUE NUMERIC 0 DEFAULT
+				NAME "Narrow"	VALUE NUMERIC 1
+	END ITEMLIST
+	END PART
+	END POLICY
+POLICY "Show Tablet PC Input Panel on OneNote pages"
+	PART "Check to display Input Panel" CHECKBOX
+			VALUENAME ShowTabletPCInputPanel
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "E-mail"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options
+POLICY "Allow OneNote e-mail attachments"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options
+	PART "Check to allow OneNote e-mail attachments" CHECKBOX
+			VALUENAME "Email Attachment"
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Attach audio recording files to e-mail messages"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Other
+	PART "Check to attach audio recording files to e-mail messages" CHECKBOX
+			VALUENAME AttachAudioNote
+			VALUEON NUMERIC 1 
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Add signature to OneNote email messages"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Other
+	PART "Check to add signature to e-mail messages" CHECKBOX
+			VALUENAME EMailSignature
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Use this signature for OneNote email"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Other
+	PART "Enter signature to use for OneNote e-mail" EDITTEXT
+			VALUENAME Signature
+			DEFAULT "Created with Microsoft OneNote 2003.  One place for all your notes."
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Note Flags"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Other
+POLICY "Copy items when moving them"
+	PART "Check to copy items when moving them" CHECKBOX
+			VALUENAME DuplicateNoteFlag
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Show moved items in the task pane"
+	PART "Check to show moved items in the task pane" CHECKBOX
+			VALUENAME ShowInactiveNoteFlag
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Audio and Video"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\Audio
+POLICY "Disable Linked Audio feature"
+	PART "Check to disable linked audio feature" CHECKBOX
+			VALUENAME DisableRecording
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Specify number of bits to sample when recording"
+	PART "Bits:" NUMERIC
+		VALUENAME DefaultBitDepth
+			SPIN 1
+			MIN 8
+			MAX 48
+			DEFAULT 16
+	END PART
+	END POLICY
+POLICY "Specify rate to sample audio (bits/second)"
+	PART "Bits/Second:" NUMERIC
+		VALUENAME DefaultSampleRate
+			SPIN 1
+			MIN 8
+			MAX 192
+			DEFAULT 16
+	END PART
+	END POLICY
+POLICY "Specify number of channels to record"
+	PART "Channels (1-2):" NUMERIC
+		VALUENAME AudioDefaultChannels
+			SPIN 1
+			MIN 1
+			MAX 2
+			DEFAULT 1
+	END PART
+	END POLICY
+POLICY "Rewind from start of paragraph by the following number of seconds"
+	PART "Rewind from start of paragraph by: (sec)" NUMERIC
+		VALUENAME Rewind
+			SPIN 1
+			MIN 0
+			MAX 999
+			DEFAULT 5
+	END PART
+	END POLICY
+POLICY "Choose default codec to be used for Video notebook"
+	PART "Choose the Windows Media Video 8 codec:" DROPDOWNLIST
+			VALUENAME VideoCaptureProfile 
+	ITEMLIST
+				NAME "Color Pocket PCs (150 Kbps)" 	VALUE "Windows Media Video 8 for Color Pocket PCs (150 Kbps)"
+				NAME "Dial-up Modems or Single-channel ISDN (28.8 to 56 Kbps)" 	VALUE "Windows Media Video 8 for Dial-up Modems or Single-channel ISDN (28.8 to 56 Kbps)"
+				NAME "LAN, Cable Modem, or xDSL (100 to 768 Kbps)" 	VALUE "Windows Media Video 8 for LAN, Cable Modem, or xDSL (100 to 768 Kbps)"
+				NAME "Dial-up Modems or LAN (28.8 to 100 Kbps)" 	VALUE "Windows Media Video 8 for Dial-up Modems or LAN (28.8 to 100 Kbps)"
+				NAME "Dial-up Modems (28.8 Kbps)" 	VALUE "Windows Media Video 8 for Dial-up Modems (28.8 Kbps)"
+				NAME "Dial-up Modems (56 Kbps)" 	VALUE "Windows Media Video 8 for Dial-up Modems (56 Kbps)"
+				NAME "Local Area Network (100 Kbps)" 	VALUE "Windows Media Video 8 for Local Area Network (100 Kbps)"
+				NAME "Local Area Network (256 Kbps)" 	VALUE "Windows Media Video 8 for Local Area Network (256 Kbps)"
+				NAME "Local Area Network (384 Kbps)" 	VALUE "Windows Media Video 8 for Local Area Network (384 Kbps)"
+				NAME "Local Area Network (384 Kbps)" 	VALUE "Windows Media Video 8 for Local Area Network (384 Kbps)"
+				NAME "Broadband (NTSC, 700 Kbps)" 	VALUE "Windows Media Video 8 for Broadband (NTSC, 700 Kbps)"
+				NAME "Broadband (NTSC, 1400 Kbps)" 	VALUE "Windows Media Video 8 for Broadband (NTSC, 1400 Kbps)"
+				NAME "Broadband (PAL, 384 Kbps)" 	VALUE "Windows Media Video 8 for Broadband (PAL, 384 Kbps)"
+				NAME "Broadband (PAL, 700 Kbps)" 	VALUE "Windows Media Video 8 for Broadband (PAL, 700 Kbps)"
+	END ITEMLIST
+			NOSORT	
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Shared Session"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\SharedSession
+POLICY "Automatically set the shared session port"
+	PART "Check to use Manual Port" CHECKBOX
+		VALUENAME UseManualPort
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	PART "Shared Session Port:" NUMERIC
+		VALUENAME ManualPortNumber
+			SPIN 1
+			MIN 0
+			MAX 65535
+			DEFAULT 2302
+	END PART
+	END POLICY
+POLICY "Automatically configure routers that support Universal Plug and Play"
+	PART "Check to set UPnP" CHECKBOX
+		VALUENAME UseUPnP
+		VALUEON NUMERIC 1 DEFCHECKED
+		VALUEOFF NUMERIC 0 
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Open and Save"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options
+POLICY "Location of the My Notebook folder"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Save
+	PART "Specify location of the My Notebook folder" EDITTEXT
+		VALUENAME "My Notebook Path"		
+	END PART
+	END POLICY
+POLICY "Location of Notes E-mailed to Me"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Save
+	PART "Specify location of Notes E-mailed to Me" EDITTEXT
+		VALUENAME NotesEmailedToMeFolder		
+	END PART
+	END POLICY
+POLICY "Location of side notes section"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Save
+	PART "Open Side Notes in this section:" EDITTEXT
+			VALUENAME SideNotesSection
+			DEFAULT "Side Notes.one"
+	END PART
+	END POLICY
+POLICY "Location of Backup Folder"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Save
+	PART "Backup Folder:" EDITTEXT
+			VALUENAME BackupFolderPath
+	END PART
+	END POLICY
+POLICY "Specify length of File | Open... MRU list"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Save
+	PART "Items (0-9):" NUMERIC
+			VALUENAME FileMRULength
+			SPIN 1
+			MIN 0
+			MAX 9
+			DEFAULT 4
+	END PART
+	END POLICY
+POLICY "Automatically release file locks after OneNote has been inactive..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Save
+	PART "Check to release file locks after certain amount of time" CHECKBOX
+			VALUENAME EnableFileLockTimeout
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	PART "Release file locks after how many minutes?" NUMERIC
+			VALUENAME FileLockTimeoutMinutes
+			SPIN 1
+			MIN 0
+			MAX 32767
+			DEFAULT 5
+	END PART
+	END POLICY
+POLICY "Percentage of unused diskspace to allow in sections"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Save
+	PART "Enter Percentage:" NUMERIC
+			VALUENAME PercentFreeSpaceBeforeOptimize
+			SPIN 1
+			MIN 0
+			MAX 100
+			DEFAULT 15
+	END PART
+	END POLICY
+POLICY "Enable ability to optimize OneNote files..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Save
+	PART "Check to enable ability to optimize OneNote files" CHECKBOX
+			VALUENAME EnableOptimizeSections
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	PART "Optimize OneNote files at this interval (min):" NUMERIC
+			VALUENAME OptimizeSectionIntervalMinutes
+			SPIN 1
+			MIN 0
+			MAX 32767
+			DEFAULT 60
+	END PART
+	END POLICY
+POLICY "Optimize OneNote files on exit..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Save
+	PART "Check to optimize OneNote files on exit..." CHECKBOX
+			VALUENAME OptimizeSectionsOnExit
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	PART "Optimize on exit no more than once per this interval (min):" DROPDOWNLIST
+			VALUENAME OptimizeSectionsOnExitIntervalMinutes 
+	ITEMLIST
+				NAME "5" 	VALUE NUMERIC 5
+				NAME "30"	VALUE NUMERIC 30
+				NAME "60"	VALUE NUMERIC 60 DEFAULT
+				NAME "480"	VALUE NUMERIC 480
+				NAME "1440"	VALUE NUMERIC 1440
+				NAME "10080"	VALUE NUMERIC 10080
+				NAME "40320"	VALUE NUMERIC 40320
+	END ITEMLIST
+			NOSORT	
+	END PART
+	END POLICY
+POLICY "Display Sync Dialog on initial PPC Device Detection"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote
+	PART "Check to display Sync Dialog" CHECKBOX
+			VALUENAME FirstPocketPCSync
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Which .one file would you like Pocket PC notes to be copied to?"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Save
+	PART "Specify .one file name (incl .one extension)" EDITTEXT
+		DEFAULT "Copied from Device.one"
+		VALUENAME PocketPCNotesSection		
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Password"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\Security
+POLICY "Lock password-protected sections as soon as I navigate away from them"
+	PART "Check to lock sections immediately" CHECKBOX
+			VALUENAME LockSectionsImmediately
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Lock password-protected sections after user hasn't worked on them for a time"
+	PART "Check to lock sections" CHECKBOX
+			VALUENAME LockIdleSections
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	PART "Time interval (minutes) to lock password-protected sections:" DROPDOWNLIST
+			VALUENAME PasswordTimeOut 
+	ITEMLIST
+				NAME "1" 	VALUE NUMERIC 1
+				NAME "5"	VALUE NUMERIC 5
+				NAME "10"	VALUE NUMERIC 10 DEFAULT
+				NAME "15"	VALUE NUMERIC 15
+				NAME "30"	VALUE NUMERIC 30
+				NAME "60"	VALUE NUMERIC 60
+				NAME "120"	VALUE NUMERIC 120
+				NAME "240"	VALUE NUMERIC 240
+				NAME "480"	VALUE NUMERIC 480
+				NAME "720"	VALUE NUMERIC 720
+				NAME "1440"	VALUE NUMERIC 1440
+	END ITEMLIST
+			NOSORT	
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Backup"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options
+POLICY "Automatically back up my notebook..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Save
+	PART "Check to enable automatic backup" CHECKBOX
+			VALUENAME BackupEnableAutoBackup
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	PART "Automatically back up at this interval (min):" DROPDOWNLIST
+			VALUENAME BackupRunEveryXMinutes
+	ITEMLIST
+				NAME "1" 	VALUE NUMERIC 1
+				NAME "2"	VALUE NUMERIC 2
+				NAME "3"	VALUE NUMERIC 3
+				NAME "4"	VALUE NUMERIC 4
+				NAME "5"	VALUE NUMERIC 5
+				NAME "10"	VALUE NUMERIC 10
+				NAME "15" 	VALUE NUMERIC 15
+				NAME "30" 	VALUE NUMERIC 30
+				NAME "60" 	VALUE NUMERIC 60
+				NAME "120" 	VALUE NUMERIC 120
+				NAME "180" 	VALUE NUMERIC 180
+				NAME "240" 	VALUE NUMERIC 240
+				NAME "300" 	VALUE NUMERIC 300
+				NAME "360" 	VALUE NUMERIC 360
+				NAME "480" 	VALUE NUMERIC 480
+				NAME "720" 	VALUE NUMERIC 720
+				NAME "960" 	VALUE NUMERIC 960
+				NAME "1440" 	VALUE NUMERIC 1440 DEFAULT
+				NAME "2880" 	VALUE NUMERIC 2880
+				NAME "4320" 	VALUE NUMERIC 4320
+				NAME "5760" 	VALUE NUMERIC 5760
+				NAME "7200" 	VALUE NUMERIC 7200
+				NAME "8640" 	VALUE NUMERIC 8640
+				NAME "10080" 	VALUE NUMERIC 10080
+				NAME "20160" 	VALUE NUMERIC 20160
+				NAME "30240" 	VALUE NUMERIC 30240
+				NAME "40320" 	VALUE NUMERIC 40320
+				NAME "50400" 	VALUE NUMERIC 50400
+				NAME "60480" 	VALUE NUMERIC 60480
+	END ITEMLIST
+			NOSORT		
+	END PART
+	END POLICY
+POLICY "Number of backup copies to keep"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Save
+	PART "Number of backup copies to keep" NUMERIC
+		VALUENAME BackupNumberOfBackupsToKeep
+			SPIN 1
+			MIN 0
+			MAX 1000
+			DEFAULT 3
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Other"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\other
+POLICY "Default unit of measurement used in OneNote"
+	PART "Specify default unit of measurement:" DROPDOWNLIST
+			VALUENAME MeasurementUnit
+	ITEMLIST
+					NAME "Inch" VALUE NUMERIC 0
+					NAME "Centimeter"	VALUE NUMERIC 1
+					NAME "Millimeter" VALUE NUMERIC 2
+					NAME "Point" VALUE NUMERIC 3
+					NAME "Pica" VALUE NUMERIC 4
+	END ITEMLIST
+			NOSORT
+	END PART
+	END POLICY
+POLICY "Add OneNote icon to notification area"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\other
+	PART "Check to add OneNote icon to notification area" CHECKBOX
+			VALUENAME RunSystemTrayApp
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Enhance search performance by skipping shortcuts to sections and folders that are stored remotely "
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\other
+	PART "Check to disable remote search" CHECKBOX
+			VALUENAME DoNotSearchSlowFiles
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Enable automatic copy of notes from PPC device when docked"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Other
+	PART "Check to enable auto copy" CHECKBOX
+			VALUENAME EnableAutoPocketPCCopy
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Miscellaneous"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote
+POLICY "Autosave Interval"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\Options\Save
+	PART "Autosave interval (seconds):" NUMERIC
+			VALUENAME AutosaveInterval
+			SPIN 1
+			MIN 10
+			MAX 3600
+			DEFAULT 30
+	END PART
+	END POLICY
+POLICY "Interval to scan folders"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\Save
+	PART "Specify interval to scan folders (in seconds):" NUMERIC
+			VALUENAME FolderPollInterval
+			SPIN 1
+			MIN 10
+			MAX 999
+			DEFAULT 30
+	END PART
+	END POLICY
+POLICY "Interval to sync working copies of files with originals"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\options\Save
+	PART "Specify interval to sync files(in seconds):" NUMERIC
+			VALUENAME WorkingCopySyncInterval
+			SPIN 1
+			MIN 10
+			MAX 999
+			DEFAULT 300
+	END PART
+	END POLICY
+POLICY "OneNote first boot tour"
+KEYNAME Software\Policies\Microsoft\Office\11.0\OneNote\General
+	PART "Check to disable first boot tour:" CHECKBOX
+			VALUENAME LaunchTourOnBoot
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+
+

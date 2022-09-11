@@ -1,0 +1,288 @@
+.home .nav .title {
+	BACKGROUND-COLOR: #7e71b4
+}
+.home .chan .container-LEFT {
+	BACKGROUND-COLOR: #d8d4e8
+}
+.home .chan .container-RIGHT {
+	BACKGROUND-COLOR: #eceaf4
+}
+.home .subchan .container-LEFT {
+	BACKGROUND-COLOR: #d8d4e8
+}
+.home .subchan .container-RIGHT {
+	BACKGROUND-COLOR: #eceaf4
+}
+.home .article .container-LEFT {
+	BACKGROUND-COLOR: #d8d4e8
+}
+.home .article .container-RIGHT {
+	BACKGROUND-COLOR: #eceaf4
+}
+.producten .nav .title {
+	BACKGROUND-COLOR: #ff9706
+}
+.prodHP {
+	BACKGROUND-COLOR: #ff9706
+}
+.producten .chan .container-LEFT {
+	BACKGROUND-COLOR: #ffe0b4
+}
+.producten .chan .container-RIGHT {
+	BACKGROUND-COLOR: #ffefda
+}
+.producten .subchan .container-LEFT {
+	BACKGROUND-COLOR: #ffe0b4
+}
+.producten .subchan .container-RIGHT {
+	BACKGROUND-COLOR: #ffefda
+}
+.producten .article .container-LEFT {
+	BACKGROUND-COLOR: #ffe0b4
+}
+.producten .article .container-RIGHT {
+	BACKGROUND-COLOR: #ffefda
+}
+.helpdesk .nav .title {
+	BACKGROUND-COLOR: #162273
+}
+.helpHP {
+	BACKGROUND-COLOR: #162273
+}
+.helpdesk .chan .container-LEFT {
+	BACKGROUND-COLOR: #c3c6db
+}
+.helpdesk .chan .container-RIGHT {
+	BACKGROUND-COLOR: #edeef4
+}
+.helpdesk .subchan .container-LEFT {
+	BACKGROUND-COLOR: #c3c6db
+}
+.helpdesk .subchan .container-RIGHT {
+	BACKGROUND-COLOR: #edeef4
+}
+.helpdesk .article .container-LEFT {
+	BACKGROUND-COLOR: #c3c6db
+}
+.helpdesk .article .container-RIGHT {
+	BACKGROUND-COLOR: #edeef4
+}
+.diensten .nav .title {
+	BACKGROUND-COLOR: #61af32
+}
+.dienHP {
+	BACKGROUND-COLOR: #61af32
+}
+.diensten .chan .container-LEFT {
+	BACKGROUND-COLOR: #d4eec5
+}
+.diensten .chan .container-RIGHT {
+	BACKGROUND-COLOR: #eaf7e2
+}
+.diensten .subchan .container-LEFT {
+	BACKGROUND-COLOR: #d4eec5
+}
+.diensten .subchan .container-RIGHT {
+	BACKGROUND-COLOR: #eaf7e2
+}
+.diensten .article .container-LEFT {
+	BACKGROUND-COLOR: #d4eec5
+}
+.diensten .article .container-RIGHT {
+	BACKGROUND-COLOR: #eaf7e2
+}
+.actueel .nav .title {
+	BACKGROUND-COLOR: #0061b4
+}
+.actuHP {
+	BACKGROUND-COLOR: #0061b4
+}
+.actueel .chan .container-LEFT {
+	BACKGROUND-COLOR: #ccdff0
+}
+.actueel .chan .container-RIGHT {
+	BACKGROUND-COLOR: #e6eff7
+}
+.actueel .subchan .container-LEFT {
+	BACKGROUND-COLOR: #ccdff0
+}
+.actueel .subchan .container-RIGHT {
+	BACKGROUND-COLOR: #e6eff7
+}
+.actueel .article .container-LEFT {
+	BACKGROUND-COLOR: #ccdff0
+}
+.actueel .article .container-RIGHT {
+	BACKGROUND-COLOR: #e6eff7
+}
+.entertainment .nav .title {
+	BACKGROUND-COLOR: #d8005f
+}
+.enteHP {
+	BACKGROUND-COLOR: #d8005f
+}
+.entertainment .chan .container-LEFT {
+	BACKGROUND-COLOR: #f3b2cf
+}
+.entertainment .chan .container-RIGHT {
+	BACKGROUND-COLOR: #fcebf2
+}
+.entertainment .subchan .container-LEFT {
+	BACKGROUND-COLOR: #f3b2cf
+}
+.entertainment .subchan .container-RIGHT {
+	BACKGROUND-COLOR: #fcebf2
+}
+.entertainment .article .container-LEFT {
+	BACKGROUND-COLOR: #f3b2cf
+}
+.entertainment .article .container-RIGHT {
+	BACKGROUND-COLOR: #fcebf2
+}
+.wallie .nav .title {
+	BACKGROUND-COLOR: #c45800
+}
+.wallie .chan .container-LEFT {
+	BACKGROUND-COLOR: #edcdb2
+}
+.wallie .chan .container-RIGHT {
+	BACKGROUND-COLOR: #faf2eb
+}
+.wallie .subchan .container-LEFT {
+	BACKGROUND-COLOR: #edcdb2
+}
+.wallie .subchan .container-RIGHT {
+	BACKGROUND-COLOR: #faf2eb
+}
+.wallie .article .container-LEFT {
+	BACKGROUND-COLOR: #edcdb2
+}
+.wallie .article .container-RIGHT {
+	BACKGROUND-COLOR: #faf2eb
+}
+.home .printarticle {
+	WIDTH: 600px; HEIGHT: 20px
+}
+.producten .printarticle {
+	WIDTH: 600px; HEIGHT: 20px
+}
+.helpdesk .printarticle {
+	WIDTH: 600px; HEIGHT: 20px
+}
+.actueel .printarticle {
+	WIDTH: 600px; HEIGHT: 20px
+}
+.diensten .printarticle {
+	WIDTH: 600px; HEIGHT: 20px
+}
+.entertainment .printarticle {
+	WIDTH: 600px; HEIGHT: 20px
+}
+.wallie .printarticle {
+	WIDTH: 600px; HEIGHT: 20px
+}
+.home .printarticle {
+	BACKGROUND-COLOR: #7e71b4
+}
+.producten .printarticle {
+	BACKGROUND-COLOR: #ff9706
+}
+.helpdesk .printarticle {
+	BACKGROUND-COLOR: #162273
+}
+.actueel .printarticle {
+	BACKGROUND-COLOR: #0061b4
+}
+.diensten .printarticle {
+	BACKGROUND-COLOR: #61af32
+}
+.entertainment .printarticle {
+	BACKGROUND-COLOR: #d8005f
+}
+.wallie .printarticle {
+	BACKGROUND-COLOR: #c45800
+}
+.home .photocontain {
+	HEIGHT: 410px
+}
+.producten .photocontain {
+	HEIGHT: 410px
+}
+.helpdesk .photocontain {
+	HEIGHT: 410px
+}
+.actueel .photocontain {
+	HEIGHT: 410px
+}
+.diensten .photocontain {
+	HEIGHT: 410px
+}
+.entertainment .photocontain {
+	HEIGHT: 410px
+}
+.wallie .photocontain {
+	HEIGHT: 410px
+}
+.home .photobottomnav {
+	HEIGHT: 31px
+}
+.producten .photobottomnav {
+	HEIGHT: 31px
+}
+.helpdesk .photobottomnav {
+	HEIGHT: 31px
+}
+.actueel .photobottomnav {
+	HEIGHT: 31px
+}
+.diensten .photobottomnav {
+	HEIGHT: 31px
+}
+.entertainment .photobottomnav {
+	HEIGHT: 31px
+}
+.wallie .photobottomnav {
+	HEIGHT: 31px
+}
+.home .photocontain {
+	BACKGROUND-COLOR: #eceaf4
+}
+.producten .photocontain {
+	BACKGROUND-COLOR: #ffefda
+}
+.helpdesk .photocontain {
+	BACKGROUND-COLOR: #edeef4
+}
+.actueel .photocontain {
+	BACKGROUND-COLOR: #e6eff7
+}
+.diensten .photocontain {
+	BACKGROUND-COLOR: #eaf7e2
+}
+.entertainment .photocontain {
+	BACKGROUND-COLOR: #fcebf2
+}
+.wallie .photocontain {
+	BACKGROUND-COLOR: #faf2eb
+}
+.home .photobottomnav {
+	BACKGROUND-COLOR: #d8d4e8
+}
+.producten .photobottomnav {
+	BACKGROUND-COLOR: #ffe0b4
+}
+.helpdesk .photobottomnav {
+	BACKGROUND-COLOR: #c3c6db
+}
+.actueel .photobottomnav {
+	BACKGROUND-COLOR: #ccdff0
+}
+.diensten .photobottomnav {
+	BACKGROUND-COLOR: #d4eec5
+}
+.entertainment .photobottomnav {
+	BACKGROUND-COLOR: #f3b2cf
+}
+.wallie .photobottomnav {
+	BACKGROUND-COLOR: #edcdb2
+}

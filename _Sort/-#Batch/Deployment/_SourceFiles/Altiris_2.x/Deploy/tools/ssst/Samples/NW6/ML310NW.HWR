@@ -1,0 +1,81 @@
+Version 1.90
+System_Id 728
+OS_Major 0
+OS_Minor 5
+System_ComPort_A COM1; IRQ4
+System_ComPort_B COM2; IRQ3
+System_Lpt_Port LPT1; IRQ7
+System_Mouse Enabled; IRQ12
+System_CPU_Serial_Number Disabled
+System_APIC Auto Set Table
+System_Diskette_Write Read and Write
+System_Processor_Hyper_Threading Enabled
+System_NMI_Debug_Button Enabled
+System_WOL Enabled
+
+Controller_Order1_ID 10 95 06 49
+Controller_Order1_SlotNumber 0
+Controller_Order1_Bus_Device_Function 00 02 00
+Controller_Order2_ID 0E 11 FF FF
+Controller_Order2_SlotNumber 0
+Controller_Order2_Bus_Device_Function 00 0F 00
+Controller_Order3_ID 0E 11 40 82
+Controller_Order3_SlotNumber 1
+Controller_Order3_Bus_Device_Function 00 06 00
+
+PCI_Device1_Id 0E11B178
+PCI_Device1_Bus 0
+PCI_Device1_Device 6
+PCI_Device1_Function 0
+PCI_Device1_Index 0
+PCI_Device1_IRQ 5
+PCI_Device2_Id 10950649
+PCI_Device2_Bus 0
+PCI_Device2_Device 2
+PCI_Device2_Function 0
+PCI_Device2_Index 5
+PCI_Device2_IRQ 5
+PCI_Device3_Id 14E416A6
+PCI_Device3_Bus 0
+PCI_Device3_Device 3
+PCI_Device3_Function 0
+PCI_Device3_Index 6
+PCI_Device3_IRQ 10
+PCI_Device4_Id 0E11A0F0
+PCI_Device4_Bus 0
+PCI_Device4_Device 5
+PCI_Device4_Function 0
+PCI_Device4_Index 7
+PCI_Device4_IRQ 11
+PCI_Device5_Id 11660221
+PCI_Device5_Bus 0
+PCI_Device5_Device 15
+PCI_Device5_Function 2
+PCI_Device5_Index 8
+PCI_Device5_IRQ 11
+
+ASR_Status Enabled
+ASR_Timeout 10 minutes
+ASR_Pager_Status Disabled
+Thermal_Shutdown Enabled
+
+RBSU_Language English
+IPL_Device0 CD-ROM
+IPL_Device0Index 0
+IPL_Device1 Floppy Drive (A:)
+IPL_Device1Index 1
+IPL_Device2 Hard Drive (C:)
+IPL_Device2Index 2
+Embedded_NIC1PXE Disabled
+Embedded_NIC2PXE Disabled
+BIOS_Console_Port Disabled
+BIOS_Console_Baud_Rate 115200
+BIOS_Console_Mode ANSI
+EMS_Console Disabled
+Diskette_Boot Enabled
+NumLock Off
+Post_F1_Prompt Enabled
+Post_Speedup Enabled
+PCI_Bus_Reset Enabled
+Hot_Plug_Resources Disabled
+Memory_Protection Standard ECC

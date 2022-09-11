@@ -1,0 +1,4089 @@
+From: "Saved by Windows Internet Explorer 7"
+Subject: Setup.exe and Update.exe Command-Line Parameters
+Date: Mon, 19 May 2008 08:03:03 +1200
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01C8B986.C322C090"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6000.16545
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C8B986.C322C090
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpSetup_EXECmdLine.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Setup.exe and Update.exe Command-Line =
+Parameters</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252"><LINK=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/ISHelp=
+_ns.css"=20
+rel=3Dstylesheet>
+<SCRIPT language=3DJavaScript title=3DWebHelpSplitCss =
+type=3Dtext/javascript>
+<!--
+if (navigator.appName !=3D"Netscape")
+{   document.write("<link rel=3D'stylesheet' href=3D'ISHelp.css'>");}
+//-->
+</SCRIPT>
+
+<META=20
+content=3D"Copyright  2000-2003 InstallShield Software Corporation. All =
+Rights Reserved."=20
+name=3Dcopyright>
+<SCRIPT language=3Djscript=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/helpinf=
+o.js"=20
+type=3Dtext/jscript></SCRIPT>
+
+<SCRIPT language=3Dvbscript=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/ErrorHa=
+ndler.vbs"></SCRIPT>
+
+<SCRIPT language=3Dvbscript=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpUt=
+il.vbs"></SCRIPT>
+
+<SCRIPT language=3DJavaScript title=3DWebHelpInlineScript =
+type=3Dtext/javascript>
+<!--
+function reDo() {
+  if (innerWidth !=3D origWidth || innerHeight !=3D origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) =3D=3D 4) && (navigator.appName =
+=3D=3D "Netscape")) {
+	origWidth =3D innerWidth;
+	origHeight =3D innerHeight;
+	onresize =3D reDo;
+}
+onerror =3D null;=20
+//-->
+</SCRIPT>
+
+<STYLE type=3Dtext/css>DIV.WebHelpPopupMenu {
+	Z-INDEX: 4; LEFT: 0px; VISIBILITY: hidden; POSITION: absolute; TOP: 0px
+}
+</STYLE>
+
+<SCRIPT language=3Djavascript1.2=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/whmsg.j=
+s"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT language=3Djavascript=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/whver.j=
+s"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT language=3Djavascript1.2=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/whproxy=
+.js"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT language=3Djavascript1.2=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/whutils=
+.js"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT language=3Djavascript1.2=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/whtopic=
+.js"=20
+type=3Dtext/javascript></SCRIPT>
+
+<META content=3D"MSHTML 6.00.6000.16643" name=3DGENERATOR></HEAD>
+<BODY>
+<SCRIPT language=3Djavascript1.2 type=3Dtext/javascript>
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("InstallShield DevStudio Help Library\nView =
+List\nMedia\nReleases\nRelease Concepts\nSetup.exe Command-Line =
+Parameters");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(0);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("HelpLib.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</SCRIPT>
+
+<H1>Setup.exe and Update.exe Command-Line Parameters</H1>
+<P class=3Dsubtitle>InstallShield DevStudio</P>
+<P>Like your compiled .msi file, <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXE.htm">Setup.exe</A>=20
+can accept a number of command line parameters. Update.exe (available =
+only for=20
+MSI projects) accepts nearly all of the same command line parameters. =
+Using=20
+these parameters, end users can specify such data as the language the =
+setup=20
+should run in and whether to launch Setup.exe silently. End users can =
+also pass=20
+parameters through Setup.exe to the included .msi file.</P><IMG =
+alt=3DNote=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/note.gi=
+f"><BR>
+<P class=3Dnotetext>Command-line options that require a parameter must =
+be=20
+specified with no space between the option and its paramater. For =
+example,=20
+<TT>Setup.exe /v"ALLUSERS=3D2"</TT> is valid, while <TT>Setup.exe=20
+/v&nbsp;"ALLUSERS=3D2"</TT> is not. Quotation marks around an option's =
+parameter=20
+are required only if the parameter contains spaces.</P>
+<P>Several of the command-line arguments apply only to <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/Standa=
+rdVsLimited.htm">InstallScript=20
+MSI projects</A> or InstallScript projects.</P>
+<P>Setup.exe accepts the following command line parameters:</P>
+<H2>Special Installation Modes (Windows Installer based projects =
+only)</H2>
+<P>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#aParam">/a=20
+  : Administrative installation</A>=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#jParam">/j=20
+  : Advertise mode</A>=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#xParam">/x=20
+  : Uninstall mode</A>=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#uninstParam">/uninst=20
+  : Uninstall product</A> (InstallScript and InstallScript MSI projects =
+only)=20
+  </LI></UL>
+<P></P>
+<H2>Silent Installations</H2>
+<P>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#pParam">/p=20
+  : Specify password</A>=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#rParam">/r=20
+  : Record mode</A> (InstallScript and InstallScript MSI projects only)=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#sParam">/s=20
+  : Silent mode</A>=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#f1Param">/f1=20
+  : Specify alternative response file name</A> (InstallScript and =
+InstallScript=20
+  MSI projects only)=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#f2Param">/f2=20
+  : Specify alternative log file name</A> (InstallScript and =
+InstallScript MSI=20
+  projects only) </LI></UL>
+<P></P>
+<H2>SMS Data</H2>
+<P>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#mParam">/m=20
+  : Generate MIF file</A> (InstallScript and InstallScript MSI projects =
+only)=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#m1Param">/m1=20
+  : Specify serial number in MIF file</A> (InstallScript and =
+InstallScript MSI=20
+  projects only)=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#m2Param">/m2=20
+  : Specify locale string in MIF file</A> (InstallScript and =
+InstallScript MSI=20
+  projects only) </LI></UL>
+<P></P>
+<H2>Download and Cache Locations (Windows Installer based projects =
+only)</H2>
+<P>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#uaParam">/ua=20
+  : Specify URL for InstMsiA.exe</A>=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#uwParam">/uw=20
+  : Specify URL for InstMsiW.exe</A>=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#usParam">/us=20
+  : Specify URL to ISScript.msi</A>=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#umParam">/um=20
+  : Specify URL to .msi package</A>=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#bParam">/b=20
+  : Cache installation locally</A> </LI></UL>
+<P></P><IMG alt=3DNote=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/note.gi=
+f"><BR>
+<P class=3Dnotetext>You must specify the full URL with these parameters =
+in order=20
+for them to apply correctly.</P>
+<H2>Passing Data to the Installation</H2>
+<P>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#vParam">/v=20
+  : Pass arguments to Msiexec</A>=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#zParam">/z=20
+  : Pass arguments to <SPAN class=3DclsFnName>CMDLINE</SPAN> =
+variable</A>=20
+  (InstallScript MSI projects only) </LI></UL>
+<P></P>
+<H2>Debugging</H2>
+<P>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#dParam">/d=20
+  : Debug InstallScript</A> (InstallScript and InstallScript MSI =
+projects only)=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#verboseParam">/verbose=20
+  : Generate verbose InstallScript engine log file</A> (InstallScript =
+and=20
+  InstallScript MSI projects only) </LI></UL>
+<P></P>
+<H2>Miscellaneous</H2>
+<P>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#delayedstartParam">/delayedstart=20
+  : Delay initialization of the setup </A>(InstallScript and =
+InstallScript MSI=20
+  projects only)=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#deleterParam">/deleter=20
+  : Do not clone a second Setup.exe process when debugging</A> =
+(InstallScript=20
+  and InstallScript MSI projects only)=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#extract_allParam">/extract_all=20
+  : Package's files should not be run but simply extracted</A> =
+(InstallScript=20
+  and InstallScript MSI projects only)=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#fParam">/f=20
+  : Specify alternative compiled script</A> (InstallScript and =
+InstallScript MSI=20
+  projects only)=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#hParam">/h=20
+  : Clone release to a temporary location and run from that location</A> =
+
+  (Windows Installer based projects only)=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#hide_usdParam">/hide_usd=20
+  : Suppress update dialog box for multiple installations</A> =
+(InstallScript and=20
+  InstallScript MSI projects only)=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#igParam">/ig=20
+  : Specify the value of the system variable INSTANCE_GUID</A> =
+(InstallScript=20
+  and InstallScript MSI projects only)=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#lParam">/L=20
+  : Setup language</A>=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#wParam">/w=20
+  : Wait</A> (Windows Installer based projects only)=20
+  <LI><A=20
+  =
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpS=
+etup_EXECmdLine.htm#smsParam">/SMS=20
+  : Wait</A> (InstallScript MSI projects only) </LI></UL>
+<P></P>
+<H2>Special Installation Modes (Windows Installer based projects =
+only)</H2>
+<H3><A name=3DaParam>/a : Administrative installation</A></H3><IMG =
+alt=3DNote=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/note.gi=
+f"><BR>
+<P class=3Dnotetext>The /a parameter does not work with Update.exe. =
+Update.exe=20
+launches a patch which accesses and modifies an existing cached MSI on =
+the=20
+system, and an administrative installation does not cache the MSI.</P>
+<P>The <STRONG>/a</STRONG> switch causes Setup.exe to perform an =
+administrative=20
+installation. An administrative installation copies (and uncompresses) =
+your data=20
+files to a directory specified by the user, but does not create =
+shortcuts,=20
+register COM servers, or create an uninstallation log.</P>
+<H3><A name=3DjParam>/j : Advertise mode</A></H3>
+<P>The <STRONG>/j</STRONG> switch causes Setup.exe to perform an =
+advertised=20
+installation. An advertised installation creates shortcuts, registers =
+COM=20
+servers, and registers file types, but does not install your product's =
+files=20
+until the user invokes one of these =93entry points=94.</P>
+<H3><A name=3DxParam>/x : Uninstall mode</A>
+<P>
+<P>The <STRONG>/x</STRONG> switch causes Setup.exe to uninstall a =
+previously=20
+installed product.</H3>
+<H3><A name=3DuninstParam>/uninst : Uninstall product</A> (InstallScript =
+and=20
+InstallScript MSI projects only)</H3>
+<P>The <STRONG>/uninst</STRONG> switch causes Setup.exe to uninstall a=20
+previously installed product, without reading the script.</P>
+<H2>Silent Installations</H2>
+<H3><A name=3DpParam>/p : Specify password</A></H3>
+<P>If you selected the =93<A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IWPRel=
+easePswdCopyright.htm">Password=20
+Protect Setup.exe</A>=94 option in the Release Wizard for your release, =
+the user=20
+must specify the password with the <STRONG>/p</STRONG> argument at run =
+time. A=20
+typical command is <TT>Setup.exe /s /p"password"</TT>.</P>
+<H3><A name=3DrParam>/r : Record mode</A> (InstallScript and =
+InstallScript MSI=20
+projects only)</H3>
+<P>In order to run an InstallScript MSI or InstallScript project =
+installation=20
+program in silent mode, you must first run Setup.exe with the=20
+<STRONG>/r</STRONG> switch to generate a response file, which stores =
+information=20
+about the data entered and options selected by the user at run time.</P>
+<P>Running an InstallScript MSI or InstallScript installation program =
+with the=20
+command <TT>Setup.exe /r</TT> displays all the run-time dialog boxes, =
+and stores=20
+the data in a file called <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/SetupI=
+ss.htm">Setup.iss</A>,=20
+created inside the system's Windows folder. To specify an alternative =
+response=20
+file name and location, use the <STRONG>/f1</STRONG> argument, described =
+
+below.</P>
+<P>Basic MSI projects do not create or use a response file for silent=20
+installations.</P>
+<H3><A name=3DsParam>/s : Silent mode</A></H3>
+<P>For an InstallScript MSI or InstallScript project, the command =
+<TT>Setup.exe=20
+/s</TT> runs the installation in silent mode, by default based on the =
+responses=20
+contained in a response file called Setup.iss in the same directory =
+(response=20
+files are created by running Setup.exe with the /r option). To specify =
+an=20
+alternative file name or location of the response file, use the /f1 =
+option,=20
+described below.</P>
+<P>The command <TT>Setup.exe /s</TT> also suppresses the Setup.exe=20
+initialization window for a Basic MSI installation program, but does not =
+read a=20
+response file. To run a Basic MSI product silently, run the command line =
+
+<TT>Setup.exe /s /v/qn</TT>. (To specify the values of public properties =
+for a=20
+silent Basic MSI installation, you can use a command such as =
+<TT>Setup.exe /s=20
+/v"/qn INSTALLDIR=3DD:\Destination"</TT>.)</P>
+<H3><A name=3Df1Param>/f1 : Specify alternative response file name</A>=20
+(InstallScript and InstallScript MSI projects only)</H3>
+<P>Using the <STRONG>/f1</STRONG> argument allows you to specify where =
+the <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/SetupI=
+ss.htm">response=20
+file</A> is (or where it should be created) and what its name is, as in=20
+<TT>Setup.exe /s /f1"C:\Temp\Setup.iss"</TT>. The /f1 switch is =
+available both=20
+when creating a response file (with the /r option) and when using a =
+response=20
+file (with the /s option).</P>
+<H3><A name=3Df2Param>/f2 : Specify alternative log file name</A> =
+(InstallScript=20
+and InstallScript MSI projects only)</H3>
+<P>When running an InstallScript MSI or InstallScript installation in =
+silent=20
+mode (using the /s argument), the log file <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/SetupL=
+og.htm">Setup.log</A>=20
+is by default created in the same directory and with the same name =
+(except for=20
+the extension) as the response file. The /f2 argument allows you to =
+specify an=20
+alternative log file location and file name, as in <TT>Setup.exe /s=20
+/f2"C:\Setup.log"</TT>.</P>
+<H2>SMS Data</H2>
+<H3><A name=3DmParam>/m : Generate MIF file</A> (InstallScript projects =
+only)</H3>
+<P>The <STRONG>/m</STRONG> switch causes Setup.exe to generate an SMS =
+Management=20
+Information Format (MIF) file. A typical command is <TT>Setup.exe=20
+/m"SampleApp"</TT>. (Including the =93.mif=94 file extension is not =
+necessary.)</P>
+<H3><A name=3Dm1Param>/m1 : Specify serial number in MIF file</A> =
+(InstallScript=20
+projects only)</H3>
+<P>Using the <STRONG>/m1</STRONG> parameter (along with /m) enables you =
+to=20
+specify a serial number to be written to the MIF file. A typical command =
+is=20
+<TT>Setup.exe /m"SampleApp" <STRONG>/m1"1234-5678"</STRONG></TT>.</P>
+<H3><A name=3Dm2Param>/m2 : Specify locale string in MIF file</A> =
+(InstallScript=20
+projects only)</H3>
+<P>Using the <STRONG>/m2</STRONG> parameter (along with /m) enables you =
+to=20
+specify a locale string to be written to the MIF file. A typical command =
+is=20
+<TT>Setup.exe /m"SampleApp" <STRONG>/m2"ENU"</STRONG></TT>.</P>
+<H2>Download and Cache Locations (Windows Installer based projects =
+only)</H2>
+<H3><A name=3DuaParam>/ua : Specify URL for InstMsiA.exe</A><BR><SPAN=20
+class=3DhelpTitleSub2><A name=3DuwParam>/uw : Specify URL for=20
+InstMsiW.exe</A></SPAN></H3>
+<P>In the Release Wizard, you can specify <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IWPRel=
+easeMsiLocation.htm">download=20
+locations</A> for the Windows Installer installers InstMsiA.exe and=20
+InstMsiW.exe. A user can specify an alternative URL at run time using =
+the=20
+<STRONG>/ua</STRONG> and <STRONG>/uw</STRONG> switches, as in =
+<TT>Setup.exe=20
+/uw"http://www.otherlocation.com/engines"</TT>. The file name is not=20
+necessary.</P>
+<H3><A name=3DusParam>/us : Specify URL to ISScript.msi</A></H3>
+<P>In the Release Wizard, you can specify a <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IWPRel=
+easeISEngine.htm">download=20
+location</A> for the InstallScript engine installer ISScript.msi. A user =
+can=20
+specify an alternative URL using the <STRONG>/us</STRONG> switch, as in=20
+<TT>Setup.exe /us"http://www.otherlocation.com/isengine"</TT>. The file =
+name is=20
+not necessary.</P>
+<H3><A name=3DumParam>/um : Specify URL to .msi package</A></H3>
+<P>In the Release Wizard, for a Downloader build, you can specify a <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IWPRel=
+easeDownloaderOptions.htm">download=20
+location</A> for your MSI database. A user can specify an alternative =
+URL using=20
+the <STRONG>/um</STRONG> switch, as in <TT>Setup.exe=20
+/um"http://www.otherlocation.com/packages/product.msi"</TT>.</P>
+<H3><A name=3DbParam>/b : Cache installation locally</A></H3>
+<P>In the Release Wizard, for a Downloader build, you can specify =
+whether to <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IWPRel=
+easeLocalMachine.htm">cache=20
+the contents of a compressed package</A> on the local system. With the=20
+<STRONG>/b</STRONG> argument, the user can specify the directory in =
+which to=20
+cache the installation files, as in <TT>Setup.exe=20
+/b"C:\CacheDirectory"</TT>.</P>
+<H2>Passing Data to the Installation</H2>
+<H3><A name=3DvParam>/v : pass arguments to Msiexec</A> (Windows =
+Installer-based=20
+projects only)</H3>
+<P>The <STRONG>/v</STRONG> argument is used to pass <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpC=
+mdLineMSI.htm">command=20
+line switches</A> and values of <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpP=
+ropReference.htm">public=20
+properties</A> through to Msiexec.exe.</P>
+<H3><A name=3DzParam>/z : Pass arguments to <SPAN =
+class=3DclsFnName>CMDLINE</SPAN>=20
+variable</A> (InstallScript MSI projects only)</H3>
+<P>The <STRONG>/z</STRONG> argument is used to pass data to the =
+InstallScript=20
+system variable <A class=3DclsFnName=20
+href=3D"http://helpnet.installshield.com/robo/projects/devstudio9helplang=
+ref/LangrefCMDLINE.htm">CMDLINE</A>,=20
+as in <TT>Setup.exe /z"My Custom Data"</TT>, after which the variable =
+CMDLINE=20
+would contain the string "My Custom Data".</P>
+<H2>Debugging</H2>
+<H3><A name=3DdParam>/d : Debug InstallScript</A> (InstallScript =
+projects=20
+only)</H3>
+<P>For an InstallScript project, running the command <TT>Setup.exe =
+/d</TT> runs=20
+the installation program with the <A=20
+href=3D"http://helpnet.installshield.com/robo/projects/devstudio9helpisdb=
+g/DebugThe_Visual_Debugger.html">InstallScript=20
+debugger</A>.</P><IMG alt=3DNote=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/note.gi=
+f"><BR>
+<P class=3Dnotetext>Debugging InstallScript code requires the =
+debug-information=20
+file Setup.dbg to be available. To debug an InstallScript project on a =
+system=20
+other than the development system:=20
+<OL>
+  <LI>Copy the InstallScript debugger executable ISDbg.exe (located in =
+the=20
+  System folder of your InstallShield DevStudio distribution) to the =
+test=20
+  system, and register it by launching the executable with the=20
+  <TT>/REGSERVER</TT> command line argument.=20
+  <LI>Copy Setup.dbg to the test system.=20
+  <LI>Run Setup.exe with the command <TT>Setup.exe =
+/d"&lt;path&gt;"</TT>, where=20
+  <EM>path</EM> is the directory containing Setup.dbg. </LI></OL>
+<P></P>
+<P>For a Basic MSI project, the command <TT>Setup.exe =
+/v"ISSCRIPTDEBUG=3D1=20
+ISSCRIPTDEBUGPATH=3D\"path-to-Setup.dbg\""</TT> runs your InstallScript =
+custom=20
+actions in the InstallScript debugger.</P>
+<H3><A name=3DverboseParam>/verbose : Generate verbose InstallScript =
+engine log=20
+file</A> (InstallScript projects only)</H3>
+<P>For an InstallScript project, you can create a verbose=20
+InstallScript-engine-installation log file using the =
+<STRONG>/verbose</STRONG>=20
+argument followed by the path to the log file you want to create. A =
+typical=20
+command is <TT>Setup.exe /verbose"C:\IS.log"</TT>. The log file =
+generated can=20
+help you troubleshoot errors in installing the InstallScript engine on a =
+target=20
+system. The /verbose option requires a full path to the log file, and =
+not a=20
+relative path.</P><IMG alt=3DTip=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/tip.gif=
+"><BR>
+<P class=3Dnotetext>To create a verbose InstallScript log file every =
+time you run=20
+an InstallScript installation program, you can create the registry=20
+key=97<BR><BR>HKEY_CURRENT_USER\Software\InstallShield\DevStudio\9.0\Setu=
+pExeLog<BR><BR>=97and=20
+inside the key create a string value called =
+<STRONG>VerboseLogFileName</STRONG>,=20
+with data set to the path to the log file (as in =
+<STRONG>C:\IS.log</STRONG>).=20
+</P>
+<H2>Miscellaneous</H2>
+<H3><A name=3DdelayedstartParam>/delayedstart:&lt;number of seconds&gt; =
+: Delay=20
+initialization of the setup </A>(InstallScript and InstallScript MSI =
+projects=20
+only)</H3>
+<P>Specifies the amount of time (in seconds) by which initialization of =
+the=20
+setup is delayed after Setup.exe is launched.</P><IMG height=3D85 =
+alt=3DTip=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/tip.gif=
+"=20
+width=3D348><BR>
+<P class=3Dnotetext>Using the -delayedstart option is recommended when =
+manually=20
+launching an additional setup after reboot (for example, by using the =
+RunOnce=20
+key). The delay allows the operation system to initialize completely; =
+this=20
+prevents the problems=97such as Remote Procedure Call (RPC) =
+errors=97that can occur=20
+if a setup initializes before the operating system has initialized =
+completely.=20
+The recommended delay length is 30 seconds.<BR><BR>Note that this option =
+is not=20
+needed when the setup starts automatically after reboot (for example, =
+due to a=20
+call to SdFinishReboot before reboot).</P>
+<H3><A name=3DdeleterParam>/deleter : Do not clone a second Setup.exe =
+process when=20
+debugging</A> (InstallScript and InstallScript MSI projects only)</H3>
+<P>Use this option when <A=20
+href=3D"http://helpnet.installshield.com/robo/projects/devstudio9helpisdb=
+g/DebugDebugADLLFunctionCalledFromMySetupScript.htm">debugging=20
+a DLL function that is called from your setup script</A>. This option =
+specifies=20
+that Setup.exe does not clone a second Setup.exe process to perform the =
+actual=20
+work of the setup. (By default, Setup.exe clones a second process, so =
+that it=20
+properly uninstalls applications from machines on which no InstallScript =
+setup=20
+had previously been run.)</P>
+<H3><A name=3Dextract_allParam>/extract_all:&lt;path&gt; : Package's =
+files should=20
+not be run but simply extracted</A> (InstallScript and InstallScript MSI =
+
+projects only)</H3>
+<P>Specifies that a <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IWPRel=
+easeGeneral.htm">self-extracting=20
+package's</A> files should not be run but simply extracted to the =
+location that=20
+is specified by &lt;path&gt;.</P>
+<H3><A name=3DfParam>/f : Specify alternative compiled script</A> =
+(InstallScript=20
+and InstallScript MSI projects only)</H3>
+<P>By default, Setup.exe looks for a compiled script file named =
+Setup.inx. To=20
+specify a different name for the compiled script file, use the /f =
+option, as in=20
+<TT>Setup.exe /f"script.inx"</TT>.</P><IMG alt=3DNote=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/note.gi=
+f"><BR>
+<P class=3Dnotetext>The Setup.exe created by earlier versions of=20
+InstallShield=97Windows Installer Edition used the <STRONG>/f</STRONG> =
+option to=20
+repair an installation.</P>
+<H3><A name=3DhParam>/h : Clone release to a temporary location and run =
+from that=20
+location</A> (Windows Installer based projects only)</H3>
+<P>The build engine automatically creates a setup that supports =
+Setup.exe=20
+cloning in cases where cloning is required (for example, multi-disk =
+setups). If=20
+you need to do this manually, pass /h to Setup.exe and it will clone =
+itself to a=20
+temporary location and run from that location. </P>
+<H3><A name=3Dhide_usdParam>/hide_usd : Suppress update dialog box for =
+multiple=20
+installations</A> (InstallScript and InstallScript MSI projects =
+only)</H3>
+<P>Suppresses display of the dialog box that is displayed by an <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/Create=
+ASetupToUpdateMyProduct.htm">update-enabled=20
+setup</A> to let the end user select which of <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/Runnin=
+gASetupMultipleTimes.htm">multiple=20
+installations</A> of your product will be updated. This dialog box is =
+displayed=20
+by default when an update-enabled setup detects multiple previous =
+installations.=20
+When this command line option is used and an update-enabled setup =
+detects=20
+multiple previous installations, the setup updates the first previous=20
+installation that it finds.</P>
+<H3><A name=3DigParam>/ig : Specify the value of the system variable=20
+INSTANCE_GUID</A> (InstallScript and InstallScript MSI projects =
+only)</H3>
+<P>Specifies the value of the system variable <A=20
+href=3D"http://helpnet.installshield.com/robo/projects/devstudio9helplang=
+ref/INSTALL_GUID.htm">INSTANCE_GUID</A>;=20
+for example, -ig{722C7440-B317-4B3B-AECA-0199EA4E7CDB}. If this option =
+is not=20
+used, the setup automatically assigns a value to INSTANCE_GUID (for=20
+multi-instance setups, this value is a newly generated GUID; for =
+standard=20
+setups, this value is the same as the value of PRODUCT_GUID). This =
+option is=20
+useful if you have created a setup launcher=97that is, a custom =
+application that=20
+runs before your setup does to perform pre-setup tasks, such as =
+determining the=20
+instance GUID that you want to use for the setup. Do not specify =
+anything other=20
+than a valid GUID with this option.</P>
+<H3><A name=3DlParam>/L : Setup language</A></H3>
+<P>Users can use the <STRONG>/L</STRONG> switch with the decimal <A=20
+href=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpG=
+lobLangIdentifiers.htm">language=20
+ID</A> to specify the language used by a multi-language installation =
+program.=20
+For example, the command to specify German is <TT>Setup.exe /L1031</TT> =
+for=20
+Windows Installer based installations (including InstallScript MSI=20
+installations) or <TT>Setup.exe /L0007</TT> for InstallScript =
+installations.</P>
+<H3><A name=3DwParam>/w : Wait</A> (Windows Installer based projects =
+only)</H3>
+<P>For a Basic MSI project, the <STRONG>/w</STRONG> argument forces =
+Setup.exe to=20
+wait until the installation is complete before exiting.</P><IMG =
+alt=3DTip=20
+src=3D"http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/tip.gif=
+"><BR>
+<P class=3Dnotetext>If you are using the /w option in a batch file, you =
+may want=20
+to precede the entire Setup.exe command line argument with <EM>start =
+/WAIT</EM>.=20
+A properly formatted example of this usage is as follows:</P>
+<P class=3Dnotetext><TT>start /WAIT setup.exe /w</TT></P>
+<H3><A name=3DsmsParam>/SMS : Wait</A> (InstallScript MSI projects =
+only)</H3>
+<P>For an InstallScript MSI project, Setup.exe automatically waits for =
+the=20
+installation to finish before exiting, so this switch (used by earlier =
+versions=20
+of InstallShield Professional) is no longer necessary.</P><BR><!--
+
+<h2><a name=3D"vParam">Passing Parameters to the .msi File Within =
+Setup.exe</a></h2>
+
+<p>If you include Setup.exe as part of your setup, you may need to pass =
+command line parameters to the .msi package stored within Setup.exe.  To =
+pass arguments to the .msi file, use the /v option.  Once you specify =
+this option, you can list any of the supported parameters that can be =
+passed to <a href=3D"IHelpCmdLineMSI.htm">Msiexec.exe</a>.  For example, =
+this is how you would apply a transform:</p>
+
+<p><tt>Setup.exe /v"TRANSFORMS=3D\"C:\Transforms\My =
+Transform.mst\""</tt></p>
+
+<p>There are a few special formatting rules that you need to follow when =
+passing a parameter in this way.  First, you need to place a backslash =
+(\) in front of any quotation mark that resides within existing quotes.  =
+For example, the command line above contains the following: =
+<tt>/v"TRANSFORMS=3D\"C:\Transforms\My Transform.mst\""</tt>.  Because =
+the path to the transform is a long path, you need to use quotes.  =
+However, since you need to have quotes around the complete argument, if =
+you do not use the backslash in front of all internal quotes, the =
+command line statement fails.</p>
+
+<p>Another formatting rule dictates that there cannot be a space between =
+the command line option (/v) and the arguments that you are passing, as =
+illustrated in the example above.</p>
+
+<p>Finally, if you are passing multiple parameters using the /v option, =
+you need to separate them with a space&mdash;for example, <tt>Setup.exe =
+/v"TRANSFORMS=3D\"C:\Transforms\MyTransforms.mst\" /qn"</tt>. This =
+command applies a transform and runs the setup silently.</p>
+
+<h2><a name=3D"sParam">Running Setup.exe Silently</a></h2>
+
+<p>If you do not want the Setup.exe to display a progress bar when it =
+launches, you can use the /s command line parameter. For example, if you =
+enter <tt>Setup.exe /s</tt>, Setup.exe launches, but the user interface =
+is not displayed.  If you want the .msi setup to run silently as well, =
+you will need to pass the /qn command line parameter through Setup.exe =
+using the /v parameter&mdash;for example, <tt>Setup.exe /s =
+/v/qn</tt>.</p>
+
+<p>If you included the <a href=3D"IWPReleaseLangs.htm">Setup Languages =
+dialog</a> to offer your end users the ability to select which language =
+the setup will run in, this dialog will not be displayed. Instead, the =
+setup will run in the target machine's default language, if available.  =
+If the target machine's language is not one of the included languages, =
+the setup will run in its default language, which is by default English. =
+ Users can specify a particular language from the command line by using =
+the /L parameter.</p>
+
+<p><img src=3D"Note.gif" alt=3D"Note" align=3D"left">If your setup is =
+password protected, users must also pass the <a href=3D"#pParam">/p =
+parameter</a>.<br clear=3D"left"></p>
+
+<span class=3D"clsISWIAll"><h2><a name=3D"lParam">Specifying the Setup =
+Language from the Command Line</a></h2>
+
+<p>When you include multiple languages in your setup, InstallShield =
+creates the setup in your default language and then creates <a =
+href=3D"IHelpTransforms.htm">transforms</a> for every other language =
+that you include.  If you choose to have the target machine's locale <a =
+href=3D"IHelpGlobLangDlg.htm">determine which language the setup runs =
+in</a>, a transform may or may not be applied, depending on the system =
+locale.  Because these languages are applied in the form of transforms, =
+it is possible to set the language from Setup.exe's command line using =
+the /v option.
+
+<h3>Drawbacks of Using the /v Parameter</h3>
+<p>There are two major drawbacks to specifying your language in using =
+the /v parameter. To avoid these drawbacks, you should use the /L =
+parameter.</p>
+
+<p>The first drawback is the fact that the language transform you =
+specify is appended to the language transform that is applied by =
+detecting the system's locale. For example, you could build a setup with =
+two languages&mdash;English and German&mdash;and set it up so the setup =
+will run in German if the target machine's locale is set to German. If =
+you then decide that you want to have the setup always run in German and =
+use the /v command line parameter to apply the German transform, the =
+.msi file will receive the following command:</p>
+
+<p><tt>TRANSFORMS=3D1031.mst;1031.mst</tt></p>
+
+<p>However, if you use the /L parameter, the original transform will not =
+be applied, and the .msi file will receive the following command:</p>
+
+<p><tt>TRANSFORMS=3D1031.mst</tt></p>
+
+<p>Functionally, it makes no difference which parameter you use. =
+However, by using a parameter that applies the transform twice, you are =
+doubling the amount of time it takes for the setup to start.</p>
+
+<p>The second drawback to using the /v parameter is the fact that =
+Setup.exe will not run in the correct language. The only way to ensure =
+that Setup.exe runs in the language that you are specifying from the =
+command line is to use the /l parameter.</p>
+
+<h3>Using the /L Parameter</h3>
+
+<p>Instead of specifying a transform, you need to specify the decimal <a =
+href=3D"IHelpGlobLangIdentifiers.htm">language ID</a>.  For example, the =
+command to specify German would be <tt>Setup.exe /L1031</tt>.</p>
+  </span>
+
+<h2><a name=3D"pParam">Specifying a Password from the Command =
+Line</a></h2>
+
+<p>Users can specify the password for a <a =
+href=3D"IWPReleasePswdCopyright.htm">password-protected setup</a> by =
+using the /p option. If a user runs a password-protected setup in silent =
+mode, the password must be specified on the command line or the =
+installation will fail.</p>
+
+<p>To run a password-protected setup silently, enter the following =
+statement at the command line: </p>
+
+<p><tt>Setup.exe /s /v/qn /p&quot;<em>password</em>&quot;</tt></p>
+
+<h2>Specifying the Installation Mode from the Command Line</h2>
+
+<p>You can define what mode you would like your setup to run in by using =
+the /a (Administration), /j (Advertise), or /x (Uninstall) parameters.  =
+Each of these options is explained in detail below.</p>
+
+<h3><a name=3D"aParam">Administration</a></h3>
+
+<p>When you run a setup in administration mode you can install a setup =
+to the network, which will allow any one with access to that directory =
+the ability to install that setup on their local machine.  No additional =
+parameters are necessary for this option.</p>
+
+<h3><a name=3D"jParam">Advertise</a></h3>
+
+<p>Advertisement is a type of &ldquo;just-in-time&rdquo; installation in =
+which features are installed when they are requested from the installer =
+and not installed immediately during setup. When you launch <a =
+href=3D"IHelpCmdLineMSI.htm">MsiExec.exe</a> with the <tt>/j =
+&lt;package&gt;</tt> option, the components are advertised on the end =
+user's system, but not immediately installed. In most cases the user has =
+the option to advertise features in the <a =
+href=3D"IHelpCustomSetupDlg.htm">Custom Setup</a> dialog.  See <a =
+href=3D"IHelpCmdLineMSI.htm">MsiExec.exe Command Line Parameters</a> for =
+information on the proper syntax for this parameter.</p>
+
+<h3><a name =3D "xParam">Uninstall</a></h3>
+
+<p>If you would like to uninstall your setup from the command line, you =
+will need to use the /x option&mdash;for example, <tt>Setup.exe /v =
+/x</tt>.  No additional parameters are required.</p>
+
+<h3><a name=3D"fParam">Repair</a></h3>
+
+<p><span class=3D"clsISWIAll">When you launch a setup in repair mode, it =
+ makes sure that the <a href=3D"IHelpSetKeyFile.htm">key file</a> of =
+every component is installed and uncorrupted.</span>  If the setup =
+detects that one of these files is missing or corrupted, it attempts to =
+repair the problem.  To launch a setup in repair mode from the command =
+line, use the <tt>/f</tt> option.  See <a =
+href=3D"IHelpCmdLineMSI.htm">MsiExec.exe Command Line Parameters</a> for =
+information on the proper syntax for this parameter.</p>
+
+<h3><a name=3D"wParam">Wait</a></h3>
+
+<p>Use this command line option to have Setup.exe wait until MsiExec.exe =
+is finished before Setup.exe exits.  In addition, the /w command also =
+returns any return codes generated by MsiExec.exe.</p>
+
+<p>The /w switch has no effect on Setup.exe for a Standard project: =
+Setup.exe automatically waits until the installation is complete.</p>
+
+
+
+--><!-- begin footer -->
+<HR>
+
+<P class=3Dfreshness>
+<SCRIPT language=3DJScript =
+type=3Dtext/jscript>document.write(modstamp);</SCRIPT>
+</P><!-- end footer -->
+<SCRIPT language=3Djavascript1.2 type=3Dtext/javascript>
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</SCRIPT>
+</BODY></HTML>
+
+------=_NextPart_000_0000_01C8B986.C322C090
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/note.gif
+
+R0lGODlhXAFVAPcAACk5UjFCUjlCUjlCWjlKWkJCc0JKY0pKY1JKhFJaa1Jac1pShFpSjFpahFpa
+jFpjc2NShGNahGNajGNalGNzhGtjjGtzc2t7e2t7hHNrlHNzc3Nze3NzhHN7c3N7e3N7hHOEjHta
+tXtjnHtrlHtzjHtznHt7e3t7hHuEe3uEhHuEjHuMlIRavYRjrYRjvYRrtYRrvYR7e4SEhISEjISM
+hISMjISMlISUnIxjvYxjxoxrtYxrvYxrxoxznIyEjIyMhIyMjIyMlIyUjIyUlIyUnJRrvZRrxpRr
+zpRr1pRzrZRztZR7tZSUlJSUnJScnJScpZxzxpyUhJyclJycnJycpZylpZylrZyttaVrzqVz1qV7
+zqV73qWlnKWlpaWlraWtpaWtraWttaW1va173q2E562M3q2Uva2tra2tta21ra21ta21va21xrV7
+77WlxrWtxrW1tbW1vbW1xrW9vbW9xrW9zrXGzr2txr21tb21xr29vb29xr291r3Gxr3Gzr3G1r3O
+xr3Ozr3O1sa9xsbGrcbGvcbGxsbGzsbOxsbOzsbO1sbO3sbWzsbW1s7Orc7Oxs7Ozs7O1s7O3s7W
+1s7W3s7W587e3s7e59bW1tbW3tbW59be1tbe3tbe597W3t7e3t7e597e797n3t7n597n797v597v
+9+fn5+fn7+fv5+fv7+fv9+f35+f37+/v7+/v9+/35+/37+/39+/3/+//5+//7+//9/fvzvfv9/f3
+7/f39/f3//f/7/f/9/f////3////9///////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////ywAAAAAXAFVAAAI/gCDCRxI
+sKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzIsaPHjyBDihxJsqTJkyhTqlzJsqXLlzBjypxJs6bN
+mzhz6tzJs6fPn0CDCh1KtKjRo0iTKl3KtKnTpy11QZ1KtarVq1izat3KtatFqV7Dip2py9UnTJAg
+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
+ShEQAAA7
+
+------=_NextPart_000_0000_01C8B986.C322C090
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/tip.gif
+
+R0lGODlhXAFVAPcAAAAAAAAICAgICBAQEBgYGBgYIRghKSEhGCEhISkpKSkpMTExMTk5OTk5QkJC
+QkJCSkpCQkpKQkpKSlJKQlJKSlJSSlJSUlJSWlpSSlpaUlpaWmNaWmNjY2Nja2tra2trc3Nzc3Nz
+e3t7e4SEhISEjIyMhIyMjJRjAJRrAJRrCJSUlJSUnJxrAJxzAJxzCJx7CJx7EJx7GJx7IZyEKZyU
+nJyclJycnJylnKVzAKVzCKV7AKV7CKV7GKWEIaWEKaWEMaWlpa17AK17CK2ECK2EEK2EGK2MEK2M
+GK2MKa2MMa2USq2tpa2tra2ttbWECLWEELWMELWMGLWMIbWMKbWUIbWUSrWcUrWcWrW1tbW1vb2M
+GL2UIb2UKb2cIb2cUr2cWr2cY72lWr2lY72la72ta729vb29xr3Gvb3GxsaUKcacKcacMcalSsat
+a8a1e8a9hMbGxsbGzsbOxs6cMc6lKc6lMc6lOc6lQs69jM69lM7Gxs7Oxs7Ozs7O1s7WztalOdat
+OdatQta1QtbGlNbGnNbGpdbOpdbOrdbW1tbW3t6tQt61Od61Qt61St69St7Ord7Wtd7Wvd7e3t7e
+5+e1Sue9Que9Sue9UufGUufGWufGc+fWtefWvefexufezufnzufn5++9Su+9Uu/GSu/GUu/GWu/O
+Wu/OY+/Oc+/WhO/WjO/exu/nzu/n1u/v3u/v7+/v9/fGUvfGWvfOWvfOY/fOa/fOc/fWc/fWe/fW
+hPfWjPfehPfejPfelPfenPfepffnpffnrffntffvtffvvffv3vfv5/f37/f39//WY//We//nlP/n
+nP/npf/nrf/ntf/nvf/vtf/vvf/vxv/vzv/v1v/3zv/31v/33v/35//37//39///1v//5///7///
+9///////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////ywAAAAAXAFVAAAI/gDBCRxI
+sKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzIsaPHjyBDihxJsqTJkyhTqlzJsqXLlzBjypxJs6bN
+mzhz6tzJs6fPn0CDCh1KtKjRo0iTKl3KtKnTpy2RQZ1KtarVq1izat3KtatFqV7Dip2J7JUkRHz4
+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
+5TCPucxnTvOa2/zmMQkIAAA7
+
+------=_NextPart_000_0000_01C8B986.C322C090
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/ISHelp_ns.css
+
+P.freshness {
+	MARGIN-TOP: 1px; FONT-SIZE: 7pt; TEXT-ALIGN: center
+}
+A.feedback {
+	MARGIN-TOP: 1px; FONT-SIZE: 7pt; TEXT-ALIGN: right
+}
+P.subtitle {
+	MARGIN-TOP: 1px; FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #0f3063
+}
+OL {
+	MARGIN-TOP: 2pt; MARGIN-BOTTOM: 8pt; MARGIN-LEFT: 48pt
+}
+UL {
+	MARGIN-TOP: 2pt; MARGIN-BOTTOM: 8pt; MARGIN-LEFT: 48pt
+}
+LI {
+	MARGIN-BOTTOM: 4pt
+}
+OL OL {
+	LIST-STYLE-TYPE: lower-alpha
+}
+OL OL OL {
+	LIST-STYLE-TYPE: lower-roman
+}
+OL OL UL LI {
+	LIST-STYLE-IMAGE: url(bullethelp.gif)
+}
+OL UL UL LI {
+	LIST-STYLE-IMAGE: url(bullethelp.gif); MARGIN-LEFT: 1px
+}
+UL OL UL LI {
+	LIST-STYLE-IMAGE: url(bullethelp.gif); MARGIN-LEFT: 1px
+}
+LI OL LI {
+	MARGIN-LEFT: 1px
+}
+UL LI {
+	LIST-STYLE-IMAGE: url(bullethelp.gif); MARGIN-LEFT: 1px
+}
+UL LI UL {
+	MARGIN-LEFT: 18pt
+}
+OL UL LI {
+	MARGIN-LEFT: 1px
+}
+UL.step LI OL.stepindent {
+	LIST-STYLE-TYPE: decimal
+}
+UL.step {
+=09
+}
+UL.step LI {
+	MARGIN-TOP: 4pt; MARGIN-BOTTOM: 8pt; MARGIN-LEFT: 16pt; LINE-HEIGHT: =
+1.5
+}
+OL.step {
+	MARGIN-BOTTOM: 12pt
+}
+OL.step LI {
+	MARGIN-TOP: 6pt; MARGIN-BOTTOM: 4pt; MARGIN-LEFT: 16pt; LINE-HEIGHT: =
+1.5
+}
+OL.stepindent {
+	LIST-STYLE-TYPE: lower-alpha
+}
+OL.stepindent LI {
+	MARGIN-TOP: 4pt; MARGIN-BOTTOM: 6pt; MARGIN-LEFT: 1px
+}
+UL.stepindent {
+=09
+}
+UL.stepindent LI {
+	MARGIN-TOP: 2pt; LIST-STYLE-IMAGE: url(bullethelp.gif); MARGIN-BOTTOM: =
+2pt; MARGIN-LEFT: 1px
+}
+UL.noteunderstepindent {
+=09
+}
+UL.noteunderstepindent LI {
+	MARGIN-TOP: 2pt; LIST-STYLE-IMAGE: url(bullethelp.gif); MARGIN-BOTTOM: =
+2pt; MARGIN-LEFT: 30pt
+}
+.glossary {
+	FONT-SIZE: 8pt; CURSOR: default; COLOR: #006600; FONT-FAMILY: 'Verdana' =
+ , 'Arial'  , sans-serif; TEXT-DECORATION: underline
+}
+TABLE.errormessage {
+	BORDER-RIGHT: #0f3063 1px solid; BORDER-TOP: #0f3063 1px solid; =
+BACKGROUND: #eeeeee; MARGIN-BOTTOM: 8pt; MARGIN-LEFT: 8pt; BORDER-LEFT: =
+#0f3063 1px solid; WIDTH: 95%; MARGIN-RIGHT: 8pt; BORDER-BOTTOM: #0f3063 =
+1px solid
+}
+TABLE.errormessage TD {
+	FONT-WEIGHT: normal; FONT-FAMILY: "Lucida Console"  , "Courier"  , =
+monospace
+}
+#egglink {
+	FONT-SIZE: 8pt; COLOR: black; LINE-HEIGHT: 1.5; FONT-FAMILY: 'Verdana'  =
+, 'Arial'  , sans-serif; TEXT-DECORATION: none
+}
+.hfrightcell {
+	WIDTH: 225px; TEXT-ALIGN: right
+}
+.lefttopcell {
+	VERTICAL-ALIGN: top; TEXT-ALIGN: left
+}
+TABLE.obsolete {
+	PADDING-RIGHT: 0em; MARGIN-TOP: 12pt; PADDING-LEFT: 0em; FONT-SIZE: =
+8pt; MARGIN-BOTTOM: 12pt; MARGIN-LEFT: 8pt; WIDTH: 95%; COLOR: =
+windowtext; LINE-HEIGHT: 1.5; FONT-FAMILY: 'Verdana'  , 'Arial'  , =
+sans-serif; BORDER-COLLAPSE: collapse; border-spacing: 10px
+}
+TABLE.obsolete TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; PADDING-BOTTOM: 4pt; =
+VERTICAL-ALIGN: top; PADDING-TOP: 4pt
+}
+TABLE.obsolete TD.firstcolumn {
+	WIDTH: 5%
+}
+TABLE.proptablenote {
+	BORDER-RIGHT: #0f3063 1px solid; PADDING-RIGHT: 0em; BORDER-TOP: =
+#0f3063 1px solid; MARGIN-TOP: 12pt; PADDING-LEFT: 0em; FONT-SIZE: 8pt; =
+MARGIN-BOTTOM: 12pt; MARGIN-LEFT: 30pt; BORDER-LEFT: #0f3063 1px solid; =
+WIDTH: 91%; COLOR: windowtext; LINE-HEIGHT: 1.5; BORDER-BOTTOM: #0f3063 =
+1px solid; FONT-FAMILY: 'Verdana'  , 'Arial'  , sans-serif; =
+BORDER-COLLAPSE: collapse; border-spacing: 10px
+}
+TABLE.proptablenote TH {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; FONT-WEIGHT: bold; FONT-SIZE: =
+9pt; PADDING-BOTTOM: 4pt; COLOR: #08296b; PADDING-TOP: 4pt; =
+BORDER-BOTTOM: #0f3063 1px solid; BACKGROUND-COLOR: #e0e0e0; TEXT-ALIGN: =
+left; TEXT-DECORATION: none; text-valign: top
+}
+TABLE.proptablenote TD.firstcolumn {
+	FONT-WEIGHT: bold; WIDTH: 25%
+}
+TABLE.proptablenote TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; PADDING-BOTTOM: 4pt; =
+VERTICAL-ALIGN: top; PADDING-TOP: 4pt; BORDER-BOTTOM: #0f3063 1px solid
+}
+TABLE.proptablenote TD TABLE.syntax TD {
+	BORDER-BOTTOM: medium none
+}
+TABLE.propertytable {
+	BORDER-RIGHT: #0f3063 1px solid; PADDING-RIGHT: 0em; BORDER-TOP: =
+#0f3063 1px solid; MARGIN-TOP: 12pt; PADDING-LEFT: 0em; FONT-SIZE: 8pt; =
+MARGIN-BOTTOM: 12pt; MARGIN-LEFT: 8pt; BORDER-LEFT: #0f3063 1px solid; =
+WIDTH: 95%; COLOR: windowtext; LINE-HEIGHT: 1.5; BORDER-BOTTOM: #0f3063 =
+1px solid; FONT-FAMILY: 'Verdana'  , 'Arial'  , sans-serif; =
+BORDER-COLLAPSE: collapse; border-spacing: 10px
+}
+TABLE.propertytable TH {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; FONT-WEIGHT: bold; FONT-SIZE: =
+9pt; PADDING-BOTTOM: 4pt; COLOR: #08296b; PADDING-TOP: 4pt; =
+BORDER-BOTTOM: #0f3063 1px solid; BACKGROUND-COLOR: #e0e0e0; TEXT-ALIGN: =
+left; TEXT-DECORATION: none; text-valign: top
+}
+TABLE.propertytable TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; PADDING-BOTTOM: 4pt; =
+VERTICAL-ALIGN: top; PADDING-TOP: 4pt; BORDER-BOTTOM: #0f3063 1px solid
+}
+TABLE.propertytable TD TABLE.syntax TD {
+	BORDER-BOTTOM: medium none
+}
+TABLE.propertytable TD.firstcolumn {
+	FONT-WEIGHT: bold; WIDTH: 25%
+}
+TABLE.propertytable TD.firstimagecolumn {
+	WIDTH: 10%
+}
+.NavTableSection {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #08296b; TEXT-DECORATION: =
+none
+}
+TABLE.miniicon {
+	PADDING-RIGHT: 0em; MARGIN-TOP: 12pt; PADDING-LEFT: 0em; FONT-SIZE: =
+8pt; MARGIN-BOTTOM: 12pt; MARGIN-LEFT: 8pt; WIDTH: 95%; COLOR: =
+windowtext; LINE-HEIGHT: 1.5; FONT-FAMILY: 'Verdana'  , 'Arial'  , =
+sans-serif
+}
+TABLE.miniicon TD.firstcolumn {
+	WIDTH: 5%
+}
+TABLE.propertytableli {
+	BORDER-RIGHT: #0f3063 1px solid; PADDING-RIGHT: 0em; BORDER-TOP: =
+#0f3063 1px solid; MARGIN-TOP: 8pt; PADDING-LEFT: 0em; FONT-SIZE: 8pt; =
+MARGIN-BOTTOM: 8pt; BORDER-LEFT: #0f3063 1px solid; WIDTH: 89%; COLOR: =
+windowtext; LINE-HEIGHT: 1.5; BORDER-BOTTOM: #0f3063 1px solid; =
+FONT-FAMILY: 'Verdana'  , 'Arial'  , sans-serif; BORDER-COLLAPSE: =
+collapse; border-spacing: 10px
+}
+TABLE.propertytableli TH {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; FONT-WEIGHT: bold; FONT-SIZE: =
+9pt; PADDING-BOTTOM: 4pt; COLOR: #08296b; PADDING-TOP: 4pt; =
+BORDER-BOTTOM: #0f3063 1px solid; BACKGROUND-COLOR: #e0e0e0; TEXT-ALIGN: =
+left; TEXT-DECORATION: none; text-valign: top
+}
+TABLE.propertytableli TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; PADDING-BOTTOM: 4pt; =
+VERTICAL-ALIGN: top; PADDING-TOP: 4pt; BORDER-BOTTOM: #0f3063 1px solid
+}
+TABLE.propertytableli TD.firstcolumn {
+	FONT-WEIGHT: bold; WIDTH: 25%
+}
+TABLE.propertytablestep {
+	BORDER-RIGHT: #0f3063 1px solid; PADDING-RIGHT: 0em; BORDER-TOP: =
+#0f3063 1px solid; MARGIN-TOP: 8pt; PADDING-LEFT: 0em; FONT-SIZE: 8pt; =
+MARGIN-BOTTOM: 8pt; BORDER-LEFT: #0f3063 1px solid; WIDTH: 86%; COLOR: =
+windowtext; LINE-HEIGHT: 1.5; BORDER-BOTTOM: #0f3063 1px solid; =
+FONT-FAMILY: 'Verdana'  , 'Arial'  , sans-serif; BORDER-COLLAPSE: =
+collapse; border-spacing: 10px
+}
+TABLE.propertytablestep TH {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; FONT-WEIGHT: bold; FONT-SIZE: =
+9pt; PADDING-BOTTOM: 4pt; COLOR: #08296b; PADDING-TOP: 4pt; =
+BORDER-BOTTOM: #0f3063 1px solid; BACKGROUND-COLOR: #e0e0e0; TEXT-ALIGN: =
+left; TEXT-DECORATION: none; text-valign: top
+}
+TABLE.propertytablestep TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; PADDING-BOTTOM: 4pt; =
+VERTICAL-ALIGN: top; PADDING-TOP: 4pt; BORDER-BOTTOM: #0f3063 1px solid
+}
+TABLE.propertytablestep TD.firstcolumn {
+	FONT-WEIGHT: bold; WIDTH: 25%
+}
+TABLE.proptableinside {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; FONT-SIZE: 8pt; MARGIN-LEFT: =
+1px; WIDTH: 95%; COLOR: windowtext; LINE-HEIGHT: 1.5; FONT-FAMILY: =
+'Verdana'  , 'Arial'  , sans-serif; BORDER-COLLAPSE: collapse; =
+border-spacing: 10px
+}
+TABLE.proptableinside TH {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; FONT-WEIGHT: bold; FONT-SIZE: =
+9pt; PADDING-BOTTOM: 4pt; COLOR: #08296b; PADDING-TOP: 4pt; =
+BORDER-BOTTOM: #0f3063 1px solid; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: =
+left; TEXT-DECORATION: none; text-valign: top
+}
+TABLE.proptableinside TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; PADDING-BOTTOM: 4pt; =
+VERTICAL-ALIGN: top; PADDING-TOP: 4pt; BORDER-BOTTOM: medium none
+}
+TABLE.proptableinside TD.firstcolumn {
+	FONT-WEIGHT: bold; WIDTH: 30%
+}
+TABLE.proptabledoubleli {
+	BORDER-RIGHT: #0f3063 1px solid; PADDING-RIGHT: 0em; BORDER-TOP: =
+#0f3063 1px solid; PADDING-LEFT: 0em; FONT-SIZE: 8pt; MARGIN-BOTTOM: =
+8pt; MARGIN-LEFT: 1px; BORDER-LEFT: #0f3063 1px solid; WIDTH: 88%; =
+COLOR: windowtext; LINE-HEIGHT: 1.5; BORDER-BOTTOM: #0f3063 1px solid; =
+FONT-FAMILY: 'Verdana'  , 'Arial'  , sans-serif; BORDER-COLLAPSE: =
+collapse; border-spacing: 10px
+}
+TABLE.proptabledoubleli TH {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; FONT-WEIGHT: bold; FONT-SIZE: =
+9pt; PADDING-BOTTOM: 4pt; COLOR: #08296b; PADDING-TOP: 4pt; =
+BORDER-BOTTOM: #0f3063 1px solid; BACKGROUND-COLOR: #e0e0e0; TEXT-ALIGN: =
+left; TEXT-DECORATION: none; text-valign: top
+}
+TABLE.proptabledoubleli TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; PADDING-BOTTOM: 4pt; =
+VERTICAL-ALIGN: top; PADDING-TOP: 4pt; BORDER-BOTTOM: #0f3063 1px solid
+}
+TABLE.proptabledoubleli TD.firstcolumn {
+	FONT-WEIGHT: bold; WIDTH: 20%
+}
+TD TABLE.syntax {
+	MARGIN-TOP: 2pt
+}
+TABLE.syntax {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 8px; BORDER-TOP: =
+#999999 1px solid; MARGIN-TOP: 12pt; PADDING-LEFT: 8px; BACKGROUND: =
+#cccccc; PADDING-BOTTOM: 4px; MARGIN-LEFT: 8pt; BORDER-LEFT: #999999 1px =
+solid; WIDTH: 95%; MARGIN-RIGHT: 8pt; PADDING-TOP: 4px; BORDER-BOTTOM: =
+#999999 1px solid
+}
+TABLE.syntax TD {
+	COLOR: #000000; FONT-FAMILY: "Lucida Console"  , "Courier"  , monospace
+}
+OL.step LI UL.stepindent LI OL.stepindent LI {
+	LIST-STYLE-TYPE: lower-alpha
+}
+.JavaDoc {
+	FONT-WEIGHT: bold; COLOR: #003399
+}
+HR.hrShort {
+	MARGIN-BOTTOM: 2pt; MARGIN-LEFT: 8pt; WIDTH: 50%; HEIGHT: 1px; =
+TEXT-ALIGN: left
+}
+
+------=_NextPart_000_0000_01C8B986.C322C090
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/helpinfo.js
+
+/////////////////////////////////////////////////////////////////////
+//
+// helpinfo.js - definition of Help information used=20
+//               throughout the InstallShield Help Library
+//
+// Copyright =A9 2002-2003 InstallShield Software Corporation
+//
+/////////////////////////////////////////////////////////////////////
+//
+// Use the appropriate value for HELPNETPRODUCTCAT
+//
+// 2     AdminStudio
+// 4     DemoShield
+// 6     InstallShield Developer
+// 38  Expo Walkthrough
+// 7     InstallShield Express
+// 8     InstallShield MultiPlatform
+// 9     InstallShield Professional
+// 13    PackageForTheWeb
+// 27    InstallShield Update Service
+// 33    RedBend vBuild
+// 50    InstallShield DevStudio
+=20
+var HELPNETPRODUCTCAT =3D "50";
+=20
+// Enter the current version of the product
+=20
+var HELPNETPRODUCTVER =3D "9.0";
+=20
+// These variables control the timestamp on the bottom of each topic
+=20
+dateObj =3D new Date(document.lastModified)
+var datetimestamp=3DdateObj.toLocaleString(document.lastModified);
+var leading=3D"Topic Last Updated: "
+var modstamp =3D leading + datetimestamp;
+
+
+function AfxGetApp() {
+    var oObjMgr =3D new ActiveXObject("ISProxy.Proxy");
+	oObjMgr.ISCreateObject(document, "Isobjmgr.dll", =
+"{DE5FBA5D-8AB0-4a53-B620-F2065702D228}");
+    return oObjMgr.pApp;
+}
+
+function AfxGetNav() {
+    var oApp =3D AfxGetApp();
+    return oApp.GetNav();
+}
+
+function GotoView(sView) {
+    var oNav =3D AfxGetNav();
+    oNav.GoToNode(sView);
+   =20
+    var oApp =3D AfxGetApp();
+    oApp.FocusToIDE();
+   =20
+    return false;
+}
+------=_NextPart_000_0000_01C8B986.C322C090
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/ErrorHandler.vbs
+
+Option Explicit
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+Sub Window_OnError(message, url, line)
+
+    On Error Resume Next
+    ' Don't use ProgIDName.h, to minimize file dependencies
+    Dim pFileSys
+    Set pFileSys =3D CreateObject("ISProxy.Proxy")
+	pFileSys.ISCreateObject document, "Isutil.dll", =
+"{A5CF09AF-F2FC-4E5D-9F7D-419D28130E62}"
+    pFileSys.LogError message, url, line
+
+    window.event.returnValue =3D True
+
+End Sub
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+Function AfxGetApp()
+    Dim pObjMgr
+    Set pObjMgr =3D CreateObject("ISProxy.Proxy")
+	pObjMgr.ISCreateObject document, "Isobjmgr.dll", =
+"{DE5FBA5D-8AB0-4a53-B620-F2065702D228}"
+    Set AfxGetApp =3D pObjMgr.pApp
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+Function AfxGetMain()
+    Set AfxGetMain =3D AfxGetApp.GetMain
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+Function AfxGetStore()
+    Set AfxGetStore =3D AfxGetMain.m_pStore
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+Function AfxGetDB()
+    Set AfxGetDB =3D AfxGetStore.hDb
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+Function AfxGetProject()
+    Set AfxGetProject =3D AfxGetStore.Project
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+Sub PopAndShow()
+End Sub
+
+------=_NextPart_000_0000_01C8B986.C322C090
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/IHelpUtil.vbs
+
+'////////////////////////////////////////////////////////////////////////=
+
+'
+' This file is used by all help files and all files in the IDE that=20
+' use its methods:
+'
+' IsAuthorRunning               ' If Developer is running in AdminStudio
+' GetRefToApp()					' Page must also include ErrorHandler.vbs
+' GetRefToMain()				' Page must also include ErrorHandler.vbs
+' MsgHelpOK()					' Page must also include Resource_h.vbs
+' MsgHelpYN()					' Page must also include Resource_h.vbs
+' ISHelpLoadString()			' Use constants in Resource_h.vbs.
+' GetProductName()				' Page must also include Resource_h.vbs
+' GetProductNameShort()			' Page must also include Resource_h.vbs
+' AddTradeMarks()				' Page must also include Resource_h.vbs
+' IsProjectLoaded()				' Page must also include ErrorHandler.vbs
+' GetMainPath()				=09
+' GetDefProjLocation()		=09
+' GetHelpFile()					' Finds out which compiled help file your in
+' HideAndShow()					' Hides or shows depending on outcome of =
+GetHelpFile()
+' IsMergeModule()				' Finds out if Merge Module Authoring view is open		=
+
+' OpenHelpToTopic()				' Page must also include ErrorHandler.vbs
+' DisplayDemo()					' Page must also include ErrorHandler.vbs,=20
+'								  ProgIDName.h, and IHelpUtil.h
+' LaunchSetupMap()				' Launches the setup map - requires IHelpUtil.h
+' GoIntoIDE()					' Navigates to specified view in the IDE.
+' CheckProject()				' use this to navigate to a view in the IDE that =
+requires a project to be open, such as the Power Editor.
+' ShowToolTip()					' Shows tooltip using wizard structure.
+' BrowserVersion()				' Retrieves the major version number of MSIE.
+' LaunchMSIHelp()				' Launch MSi Help
+' LaunchDemo()					' Launch one of the demos
+' IsBasicMSIProject()				' Determine if project is Basic MSI.
+' IsStandardProject()			' Finds out if Project is Script based or not
+' IsProProject()				' Finds out if Project is Pro type or not
+' IsProObjectProject()				' Finds out if Project is Pro object type or =
+not
+' HideBasicMSIMergeModuleShowGen()		' Hides topics that pertain to Basic =
+MSI and Merge Module projects.
+' HideStandardMergeModuleShowGen()	' Hides stuff with StandardHelp Id
+' HideStandardShowGen()				' Hides information with Standard span id and =
+shows=20
+'						' information with Gen span id
+' HideGenShowStandard()				' Hides information with Gen span id and =
+shows=20
+'						' information with Standard span id
+' HideNotProShowPro()				' Hides information with NotProHelp span id and =
+shows=20
+'						' information with ProHelp span id
+' HideProShowNotPro()				' Hides information with ProHelp span id and =
+shows=20
+'						' information with NotProHelp span id
+' HideNotProObjShowProObj()				' Hides information with NotProObjHelp =
+span id and shows=20
+'						' information with ProObjHelp span id
+' HideProObjShowNotProObj()				' Hides information with ProObjHelp span =
+id and shows=20
+'						' information with NotProObjHelp span id
+'////////////////////////////////////////////////////////////////////////=
+
+
+Option Explicit
+
+	Dim m_objApp	' initialized in GetRefToApp()
+	Dim m_objMain   ' initialized in GetRefToMain()
+
+'///////////////////////////////////////////////////////////////////////
+' See if we are in a page that gets a reference to pApp,
+' meaning we're in the same process.
+' Page must also include ErrorHandler.vbs
+Function GetRefToApp ()
+	on error resume next
+	GetRefToApp =3D False
+	Set m_objApp =3D AfxGetApp()
+	If IsObject( m_objApp ) Then GetRefToApp =3D True=20
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+' See if we are in a page that gets a reference to pApp,
+' meaning it's in the same process.
+' Page must also include ErrorHandler.vbs
+Function GetRefToMain ()
+	on error resume next
+	GetRefToMain =3D False
+	Set m_objMain =3D AfxGetMain()
+	If IsObject( m_objMain ) Then GetRefToMain =3D True=20
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+' Display information-only message box with ISWi as title
+' Page must also include Resource_h.vbs
+Sub MsgHelpOK( strMessage )
+	Dim strTitle
+	strTitle =3D GetProductName()
+	msgBox strMessage, vbOKOnly + vbInformation, strTitle
+End Sub
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+' Display message box with Yes and No options with ISWi as title
+' Page must also include Resource_h.vbs
+Function MsgHelpYN( strMessage )
+	Dim strTitle
+	strTitle =3D GetProductName()
+	MsgHelpYN =3D msgBox (strMessage, vbYesNo + vbQuestion, strTitle)
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+' Retrieve string value from ISStringTables.dll
+Function ISHelpLoadString(strID)
+    Dim objStrMgr
+    Set objStrMgr =3D CreateObject(ISSTRINGTABLES_CSTRINGLOADER())
+    ISHelpLoadString =3D objStrMgr.LoadString(strID)
+	Set objStrMgr =3D Nothing
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+' Get the full name of the product, e.g., InstallShield for Windows =
+Installer
+' Page must also include Resource_h.vbs
+Function GetProductName()
+	Dim strName
+	If AfxGetApp.Edition =3D 1 Then
+		strName =3D ISHelpLoadString( DISPLAYNAME_Express )=20
+	ElseIf AfxGetApp.Edition =3D 2 Then
+		strName =3D AfxGetMain.ProductName()
+	End if
+	GetProductName =3D strName
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+' Get the short name of the product, e.g., InstallShield
+' Page must also include Resource_h.vbs
+Function GetProductNameShort()
+	Dim strName
+	strName =3D ISHelpLoadString( DISPLAYNAME_ISPRODUCT )=20
+	GetProductNameShort =3D strName
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+' Add (r) to InstallShield and Windows for first occurrence on a page.
+' Page must also include Resource_h.vbs and IHelpUtil.h
+'Function AddTradeMarks( strOrig )
+'=09
+'	Dim strNew
+'	Dim strIS
+'=09
+'	strIS =3D GetProductNameShort()
+'=09
+'	strNew =3D Replace ( strOrig, strIS, strIS & IHELP_HTMLCHAR_REG, 1, =
+-1, vbTextCompare )
+'	strNew =3D Replace ( strNew, IHELP_WINDOWS, IHELP_WINDOWS & =
+IHELP_HTMLCHAR_REG, 1, -1, vbTextCompare )
+'=09
+'	If strNew =3D Null Or strNew =3D ""	Then
+'		strNew =3D strOrig
+'	End If
+'=09
+'	AddTradeMarks =3D strNew
+'
+'End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+' See if there's a project open in the IDE.
+' Make sure you test the return value of GetRefToMain() or =
+GetRefToMain()=20
+' first to make sure you can get a reference to the app so this will =
+work.
+' Page must also include ErrorHandler.vbs
+Function IsProjectLoaded()
+	Dim objStore
+	Set objStore =3D AfxGetStore()
+	IsProjectLoaded =3D objStore.IsOpen()
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////
+' Get the user's path to <drive>\program files\installshield\<product =
+name>
+' by reading the App Paths key
+Function GetMainPath()
+
+	On Error Resume Next
+=09
+	Dim objRegistry
+	Dim nReturn, nLength
+	Dim strDir
+
+	Set objRegistry =3D CreateObject ("InstallShield.Registry.1")
+   =20
+    ' Hack to get it to work with ISX, too
+    If objRegistry Is Nothing Then
+        Set objRegistry =3D CreateObject =
+("ISExpInstallShield.Registry.1")
+  	    nReturn =3D objRegistry.RegReadValue (2, =
+"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\ISIDE.EXE", "Path", =
+1, strDir)
+	else
+    	nReturn =3D objRegistry.RegReadValue (2, =
+"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\ISDEV.EXE", "Path", =
+1, strDir)
+    End If=09
+
+	If nReturn < 0 Then
+		GetMainPath =3D "C:\Program Files\InstallShield\Developer"
+	Else
+        nLength =3D len(strDir)     =20
+        ' find second path (paths separated with semicolon)
+        nReturn =3D InStr (strDir, ";")
+        ' get path
+        strDir =3D right (strDir, nLength - nReturn)
+        nReturn =3D Instrrev (strdir, "\")
+        strDir =3D left (strDir, nReturn - 1)
+		GetMainPath =3D strDir
+	End If
+
+	Set objRegistry =3D Nothing
+
+End Function
+'////////////////////////////////////////////////////////////////////////=
+//
+Function GetHelpFile()
+
+Dim nReturn
+    Dim strLocation
+   =20
+    GetHelpFile =3D False
+    strLocation =3D document.location
+   =20
+    nReturn =3D InStr (1, strLocation, "MMAuthor.chm", vbTextCompare)
+   =20
+    If nReturn > 0 Then=20
+        GetHelpFile =3D True
+    End If
+
+End Function=20
+'////////////////////////////////////////////////////////////////////////=
+
+'Hides Gen, BasicMSI & Standard Help and displays MergeModules Help
+Sub HideAndShow()
+    on error resume next
+    Dim i, nLength
+
+    MMAHelp.style.display =3D "inline"
+    GenHelp.style.display =3D "none"
+    StandardHelp.style.display =3D "none"
+    BasicMSIHelp.style.display =3D "none"=09
+
+    nLength =3D document.all("MMAHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("MMAHelp", i).style.display=3D"inline"
+    next
+
+    nLength =3D document.all("GenHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("GenHelp", i).style.display=3D"none"
+    next
+
+    nLength =3D document.all("StandardHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("StandardHelp", i).style.display=3D"none"
+    next
+
+    nLength =3D document.all("BasicMSIHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("BasicMSIHelp", i).style.display=3D"none"
+    next
+
+End Sub
+
+'////////////////////////////////////////////////////////////////////////=
+
+Sub HideStandardMergeModuleShowGen()
+    on error resume next
+    Dim i, nLength
+
+    MMAHelp.style.display =3D "none"
+    GenHelp.style.display =3D "inline"
+    StandardHelp.style.display =3D "none"
+
+    nLength =3D document.all("MMAHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("MMAHelp", i).style.display=3D"none"
+    next
+
+    nLength =3D document.all("GenHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("GenHelp", i).style.display=3D"inline"
+    next
+
+    nLength =3D document.all("StandardHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("StandardHelp", i).style.display=3D"none"
+    next
+
+End Sub
+
+'////////////////////////////////////////////////////////////////////////=
+
+Sub HideBasicMSIMergeModuleShowGen()
+    on error resume next
+    Dim i, nLength
+
+    MMAHelp.style.display =3D "none"
+    GenHelp.style.display =3D "inline"
+	BasicMSIHelp.style.display =3D "none"
+
+    nLength =3D document.all("MMAHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("MMAHelp", i).style.display=3D"none"
+    next
+
+    nLength =3D document.all("GenHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("GenHelp", i).style.display=3D"inline"
+    next
+
+    nLength =3D document.all("BasicMSIHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("BasicMSIHelp", i).style.display=3D"none"
+    next
+
+End Sub
+
+
+'////////////////////////////////////////////////////////////////////////=
+
+Sub HideStandardShowGen()
+    on error resume next
+    Dim i, nLength
+
+    MMAHelp.style.display =3D "none"
+    StandardHelp.style.display =3D "none"=09
+    GenHelp.style.display =3D "inline"
+
+    nLength =3D document.all("GenHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("GenHelp", i).style.display=3D"inline"
+    next
+
+    nLength =3D document.all("StandardHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("StandardHelp", i).style.display=3D"none"
+    next
+
+End Sub
+
+
+'////////////////////////////////////////////////////////////////////////=
+
+Sub HideGenShowStandard()
+    on error resume next
+    Dim i, nLength
+
+    MMAHelp.style.display =3D "none"
+    GenHelp.style.display =3D "none"
+    StandardHelp.style.display =3D "inline"
+
+    nLength =3D document.all("MMAHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("MMAHelp", i).style.display=3D"none"
+    next
+
+    nLength =3D document.all("GenHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("GenHelp", i).style.display=3D"none"
+    next
+
+    nLength =3D document.all("StandardHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("StandardHelp", i).style.display=3D"inline"
+    next
+
+End Sub
+
+'////////////////////////////////////////////////////////////////////////=
+
+Sub HideNotProShowPro()
+    on error resume next
+    Dim i, nLength
+
+    NotProHelp.style.display =3D "none"
+    ProHelp.style.display =3D "inline"
+
+    nLength =3D document.all("NotProHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("NotProHelp", i).style.display=3D"none"
+    next
+
+    nLength =3D document.all("ProHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("ProHelp", i).style.display=3D"inline"
+    next
+
+End Sub
+
+'////////////////////////////////////////////////////////////////////////=
+
+Sub HideProObjShowNotProObj()
+    on error resume next
+    Dim i, nLength
+
+    ProObjHelp.style.display =3D "none"
+    NotProObjHelp.style.display =3D "inline"
+
+    nLength =3D document.all("ProObjHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("ProObjHelp", i).style.display=3D"none"
+    next
+
+    nLength =3D document.all("NotProObjHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("NotProObjHelp", i).style.display=3D"inline"
+    next
+
+End Sub
+
+'////////////////////////////////////////////////////////////////////////=
+
+Sub HideNotProObjShowProObj()
+    on error resume next
+    Dim i, nLength
+
+    NotProObjHelp.style.display =3D "none"
+    ProObjHelp.style.display =3D "inline"
+
+    nLength =3D document.all("NotProObjHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("NotProObjHelp", i).style.display=3D"none"
+    next
+
+    nLength =3D document.all("ProObjHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("ProObjHelp", i).style.display=3D"inline"
+    next
+
+End Sub
+
+'////////////////////////////////////////////////////////////////////////=
+
+Sub HideProShowNotPro()
+    on error resume next
+    Dim i, nLength
+
+    ProHelp.style.display =3D "none"
+    NotProHelp.style.display =3D "inline"
+
+    nLength =3D document.all("ProHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("ProHelp", i).style.display=3D"none"
+    next
+
+    nLength =3D document.all("NotProHelp").length
+    for i =3D 0 to nLength - 1
+        document.all("NotProHelp", i).style.display=3D"inline"
+    next
+
+End Sub
+
+'////////////////////////////////////////////////////////////////////////=
+
+
+Function GetDefProjLocation()
+    on error resume next
+    Dim objRegistry
+    Dim strDir, strLocation
+    Dim nReturn
+   =20
+    strDir =3D ""
+   =20
+    Set objRegistry =3D CreateObject ("InstallShield.Registry.1")
+    strLocation =3D "SOFTWARE\InstallShield\ISWI\2.0\Project Settings"
+
+    ' Hack to get it to work with ISX, too
+    If objRegistry Is Nothing Then
+        Set objRegistry =3D CreateObject =
+("ISExpInstallShield.Registry.1")
+        strLocation =3D "Software\InstallShield\Express\3.0\Project =
+Settings"
+    End If
+
+    objRegistry.RegReadValue 1, strLocation, "Project Location", 1, =
+strDir
+
+    If strDir =3D "" Then
+        GetDefProjLocation =3D =
+"C:\&lt;WindowsFolder&gt;\Profiles\&lt;UserName&gt;\Personal\MySetups"
+    Else
+        GetDefProjLocation =3D strDir
+    End If
+   =20
+    Set objRegistry =3D Nothing   =20
+End Function=20
+'////////////////////////////////////////////////////////////////////////=
+
+Function IsMergeModule()
+    On Error Resume Next
+    IsMergeModule =3D False
+    Dim nProjectType
+    nProjectType =3D AfxGetMain().m_pVars.PackageType
+    If nProjectType =3D 2 Then=20
+        IsMergeModule =3D True
+    End If
+end Function
+
+'////////////////////////////////////////////////////////////////////////=
+
+Function IsStandardProject()
+    On Error Resume Next
+    IsStandardProject =3D False
+    Dim nProjectType
+    nProjectType =3D AfxGetMain().m_pVars.PackageType
+    If nProjectType =3D 3 Then=20
+        IsStandardProject =3D True
+    End If
+end Function
+
+'////////////////////////////////////////////////////////////////////////=
+
+Function IsBasicMSIProject()
+    On Error Resume Next
+    IsBasicMSIProject =3D False
+    Dim nProjectType
+    nProjectType =3D AfxGetMain().m_pVars.PackageType
+    If nProjectType =3D 1 Then=20
+        IsBasicMSIProject =3D True
+    End If
+end Function
+
+'////////////////////////////////////////////////////////////////////////=
+
+Function IsProProject()
+    On Error Resume Next
+    IsProProject =3D False
+    Dim nProjectType
+    nProjectType =3D AfxGetMain().m_pVars.PackageType
+    If nProjectType =3D 11 Then=20
+        IsProProject =3D True
+    End If
+end Function
+
+'////////////////////////////////////////////////////////////////////////=
+
+Function IsProObjectProject()
+    On Error Resume Next
+    IsProObjectProject =3D False
+    Dim nProjectType
+    nProjectType =3D AfxGetMain().m_pVars.PackageType
+    If nProjectType =3D 12 Then=20
+        IsProObjectProject =3D True
+    End If
+end Function
+
+'////////////////////////////////////////////////////////////////////////=
+/
+' Launch the current help file to the named help topic.
+' This function will only work if you can get a reference to CApp inside =
+the IDE
+' or elsewhere. =20
+' It calls AfxGetApp inside ErrorHandler.vbs.
+Sub OpenHelpToTopic( strFile )
+    ' Cancel the normal behavior of clicking on an A tag (usu. # when =
+code is involved)
+    window.event.returnValue =3D False
+    ' Call ShowHelp method in CApp
+    AfxGetApp.ShowHelp strFile
+End Sub
+
+'////////////////////////////////////////////////////////////////////////=
+/
+Sub DisplayDemo(strDemoName, strFeatureName, bPromptUser)
+   =20
+    Dim objApp, objExecute, objRegistry
+    Dim bInstalled
+    Dim strPath, strDemoFile, HTMLPath
+   =20
+    ' See if we're in the IDE before getting CApp
+    If GetRefToApp =3D True Then
+        Set objApp =3D m_objApp
+    Else
+        Set objApp =3D CreateObject("ISApp.CApp")
+    End If
+   =20
+    ' See if the user needs to be prompted to install demos if necessary
+    bInstalled =3D True
+    If bPromptUser Then
+        bInstalled =3D objApp.InstallIfNeeded (strFeatureName, =
+IHELP_DEMOS_PROMPTTEXT)
+    End If
+
+    ' Show the demo
+    If bInstalled Then
+        Set objExecute =3D CreateObject (PROGID_ISUTIL_FILE())
+        HTMLPath =3D LanguageDir()
+        strPath =3D GetMainPath()
+        strDemoFile =3D HTMLPath & strDemoName & ".dbd"
+        strPath =3D strPath & "\System"
+        objExecute.ShowDemo strPath, " -c " & strDemoFile
+    End If
+   =20
+    Set objExecute =3D Nothing
+    Set objRegistry =3D Nothing
+    Set objApp =3D Nothing
+   =20
+End Sub
+'////////////////////////////////////////////////////////////////////////=
+///////////////
+
+sub LaunchSetupMap=09
+	window.event.returnvalue=3DFalse
+    Dim l
+    dim hWnd
+    Set l =3D CreateObject("ISWI.Launcher")
+    l.NotifyOnClose =3D False
+    l.MinMaxButtons =3D True
+    l.ShowWizard LanguageDir() & "SMap_FrameSet.htm", "Setup Map", 605, =
+435, hWnd
+    l.SetVisible True
+end sub
+
+'////////////////////////////////////////////////////////////////////////=
+////////////////
+Sub GoIntoIDE ( strView )
+    ' page must also link to ErrorHandler.vbs, IHelpUtil.h, and =
+Resource_h.vbs
+    On Error Resume Next
+    window.event.returnvalue=3DFalse
+    Dim objApp, objNav
+   =20
+    			=09
+    If Not GetRefToApp() Then
+        alert IHELP_ERROR_NOTINIDE
+        Exit Sub
+    End If
+   =20
+    Set objApp =3D m_objApp=09
+    Set objNav =3D objApp.GetNav()
+    objNav.GoToNode strView
+    AfxGetApp.FocusToIDE
+
+End Sub
+'////////////////////////////////////////////////////////////////////////=
+///////////////////////
+
+sub NewProject()
+
+    Dim objApp, objOpen
+    			=09
+    If Not GetRefToApp() Then
+       =20
+        alert IHELP_ERROR_NOTINIDE
+        Exit Sub
+    End If
+   =20
+    Set objOpen =3D m_objApp.GetMain()
+    objOpen.OnFileNew ()
+end sub
+
+'////////////////////////////////////////////////////////////////////////=
+////////////////
+sub CheckProject (strView)
+dim MsgReturn
+    window.event.returnvalue=3Dfalse
+    if GetRefToApp() then
+        if IsProjectLoaded() then   =20
+            GoIntoIDE strView
+        else
+           MsgReturn =3D MsgHelpYN( IHELP_ERROR_NOPROJECT )
+                if MsgReturn =3D vbYes then
+                    NewProject()
+                    GoIntoIDE strView
+                else=20
+                    Exit sub
+                end if
+        end if
+     Else
+     alert IHELP_ERROR_NOTINIDE
+     end if
+       =20
+end sub
+
+'////////////////////////////////////////////////////////////////////////=
+////////
+sub ShowToolTip( strLoc, intWidth, intHeight, strTitle )
+'// strLoc =3D filename, intWidth=3Dwindow width, intHeight=3D window =
+height
+'// strTitle =3D name on Title bar
+    window.event.returnvalue=3DFalse
+    Dim l
+    dim hWnd
+     hWnd =3D AfxGetApp.DlgParentHWND
+    Set l =3D CreateObject("ISWI.Launcher")
+    l.NotifyOnClose =3D False
+    l.MinMaxButtons =3D True
+    l.ShowWizard LanguageDir() & strLoc, strTitle, intWidth, intHeight, =
+hWnd
+    l.SetVisible True
+end sub
+
+'////////////////////////////////////////////////////////////////////////=
+///////////////
+' need to have errorhandler.vbs on page
+Function LanguageDir()
+    dim objApp
+    If GetRefToApp =3D True Then
+        Set objApp =3D m_objApp
+    Else
+        Set objApp =3D CreateObject("ISApp.CApp")
+    End If
+    LanguageDir =3D objApp.strHTMLDir
+end Function
+
+'////////////////////////////////////////////////////////////////////////=
+///////////////
+' Retrieves the major version number of the browser
+Function BrowserVersion()
+    Dim strVer
+    Dim aBrowser
+
+    aBrowser =3D Split (window.navigator.appVersion, ";", -1, 1)
+    strVer =3D aBrowser(1)   =20
+    strVer =3D Right (strVer, Len(strVer) - 5)
+    BrowserVersion =3D Int(strVer)
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+///////////
+'launches msi.chm
+'must have link to errorhandler.vbs
+Sub LaunchMSIHelp(strTopic)
+    window.event.returnvalue =3D False
+    AfxGetApp.ShowHelp strTopic, 0, "msi.chm"
+End Sub
+
+'////////////////////////////////////////////////////////////////////////=
+////////////
+'strDemo is the name of the frameset page for the demo you want to =
+launch (IDemoMM.htm)
+'strName is the name on the toolbar
+sub LaunchDemo (strDemo, strName)
+    dim pLauncher
+    dim hWnd
+    window.event.returnvalue =3D False
+    Set pLauncher =3D CreateObject("ISWI.Launcher")
+    Set AfxGetApp.TempHelpObject =3D pLauncher
+    pLauncher.NotifyOnClose =3D False
+    pLauncher.MinMaxButtons =3D False
+    pLauncher.ShowWizard LanguageDir() & strDemo, strName, 506, 540, =
+hWnd
+    pLauncher.SetVisible True
+end sub
+
+'////////////////////////////////////////////////////////////////////////=
+//////////////
+
+' Use this function only when it's necessary to reuse the window. =
+Otherwise,=20
+' GiveFeedback should be used to open a new window.
+' If iLeaveCurTopicBlank =3D=3D 1, current topic will be left blank
+
+Function GetFeedbackURL(iLeaveCurTopicBlank)
+
+    window.event.returnvalue =3D False
+    on error resume next
+    dim objApp
+    Dim objRegistry, strPlatform, strProcessorType, strAppVersion, =
+strSystemLanguage
+    Dim strProduct, strLocation, strVersion, strContextHelp, strView, =
+nRAM
+    dim strTemp, strTempSearch, strTempLength, strHelpTopic
+    strTemp =3D document.url
+    strTempSearch =3D instrrev(strTemp, "\", -1, 1)
+    strTempLength =3D len(strTemp)
+
+	If Not iLeaveCurTopicBlank =3D 1 Then
+	    strHelpTopic =3D right(strTemp, strTempLength - strTempSearch)
+	End If
+
+    strProduct =3D "InstallShield Express"
+    strVersion =3D ""
+    Set objRegistry =3D CreateObject ("ISExpInstallShield.Registry.1")
+    strLocation =3D =
+"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{598274B8-40A3-11D5-=
+8BEC-006097C9A3ED}"
+    objRegistry.RegReadValue 2, strLocation, "DisplayVersion", 1, =
+strVersion=20
+    Set objRegistry =3D Nothing   =20
+    strProcessorType =3D clientinformation.cpuclass
+    strPlatform =3D clientinformation.platform
+    strAppVersion =3D clientinformation.appversion
+    strSystemLanguage =3D clientinformation.systemlanguage
+    GetRefToApp()   =20
+    Set objApp =3D m_objApp
+    strContextHelp =3D m_objApp.GetHelpTopic=20
+    nRam =3D m_objApp.GetSystemMemory
+    select case strContextHelp
+            case "IHelpISXOrganizeYourSetup.htm"
+                strView =3D "Organize Your Setup"
+            case "IHelpISXSpecifyApplicationData.htm"
+                strView =3D "Specify Application Data"
+            case "IHelpISXTargetSystemConfiguration.htm"
+                strView =3D "Configure the Target System"
+            case "IHelpISXSetupAppearance.htm"
+                strView =3D "Design the User Interface"
+            case "IHelpISXSetupActions.htm"
+                strView =3D "Define Sequences & Actions"
+            case "IHelpISXOutput.htm"
+                strView =3D "Prepare for Distribution"
+            case "IHelpMarsAdvancedViews.htm"
+                strView =3D "Advanced Views"
+            case "IHelpISToday.htm"
+                strView =3D "InstallShield Today"
+            case "IhelpContents.htm"
+                strView =3D "Help"
+            case "IIDESetupBestPractices.htm"
+                strView =3D "Best Practices"
+            case "IHelpSetupProjects.htm"
+                strView =3D "General Information"
+            case "IHelpPathVariables.htm"
+                strView =3D "Path Variables"
+            case "IHelpPropertyManager.htm"
+                strView =3D "Property Manager"
+            case "IHelpDesignSetup.htm"
+                strView =3D "Setup Design"
+            case "IHelpFeatures.htm"
+                strView =3D "Features"
+            case "IHelpComponents.htm"
+                strView =3D "Components"
+            case "IHelpMergeModules.htm"
+                strView =3D "Merge Module Details"
+            case "IHelpSetupDestination.htm"
+                strView =3D "Destination"
+            case "IHelpISXFiles.htm"
+                strView =3D "Files"
+            case "IhelpMarsMergeModules.htm"
+                strView =3D "Merge Modules"
+            case "IHelpISXDependencies.htm"
+                strView =3D "Dependencies"
+            case "IHelpMarsShortcuts.htm"
+                strView =3D "Shortcuts/Folders"
+            case "IHelpMarsRegistry.htm"
+                strView =3D "Registry"
+            case "IHelpIsxODBCOverview.htm"
+                strView =3D "ODBC Resources"
+            case "IHelpISXINIFileChanges.htm"
+                strView =3D "INI File Changes"
+            case "IHelpEUDialogs.htm"
+                strView =3D "Dialogs"
+            case "IHelpISXBillboards.htm"
+                strView =3D "Billboards"
+            case "IHelpSequences.htm"
+                strView =3D "Sequences"
+            case "IHelpCustomActions.htm"
+                strView =3D "Actions/Scripts"
+            case "IHelpReleaseOverview.htm"
+                strView =3D "Releases"
+            case "IHelpISXDistributeRelease.htm"
+                strView =3D "Distribute"
+            case "IHelpMsiDbgOverview.htm"
+                strView =3D "MSI Debugger"
+            case "IHelpISXAlternateViews.htm"
+                strView =3D "Alternate Views"
+            case else
+                strView =3D "Miscellaneous"
+    end select=20
+
+	Dim strSerialNumber, strUser, strCompany
+	Dim pAppSettings
+	Set pAppSettings =3D CreateObject("ISExpWI.AppSettings")
+	If Not pAppSettings Is Nothing Then
+		strSerialNumber =3D pAppSettings.ProductID
+		strUser =3D pAppSettings.RegOwner
+		strCompany =3D pAppSettings.RegCompany
+	End If
+
+    GetFeedbackURL =3D =
+"http://www.installshield.com/proddirect/process.asp?action=3Dfeedback&pr=
+od=3DXDPRF80353-B01" _=20
+		& "&usr=3D" & strUser _
+		& "&co=3D" & strCompany _
+        & "&serial=3D" & strSerialNumber _
+		& "&ver=3D" & strVersion _
+		& "&view=3D" & strView _
+		& "&CurTopic=3D" & strHelpTopic _
+		& "&os=3D" & strPlatform _
+		& "&ie=3D" & strAppVersion _
+		& "&OSLang=3D" & strSystemLanguage _
+		& "&Processor=3D" & strProcessorType _
+		& "&ram=3D" & nRAM
+
+	' Redirect asp will mangle url if %20 is not used.
+	GetFeedbackURL =3D Replace(GetFeedbackURL, " ", "%20")
+End Function
+
+'////////////////////////////////////////////////////////////////////////=
+//////////////
+sub GiveFeedback
+    window.event.returnvalue =3D False
+    on error resume next
+    dim objApp
+    Dim objRegistry, strPlatform, strProcessorType, strAppVersion, =
+strSystemLanguage
+    Dim strProduct, strLocation, strVersion, strContextHelp, strView, =
+nRAM
+    dim strTemp, strTempSearch, strTempLength, strHelpTopic, FeedbackURL
+    strTemp =3D document.url
+    strTempSearch =3D instrrev(strTemp, "/", -1, 1)
+    strTempLength =3D len(strTemp)
+    strHelpTopic =3D right(strTemp, strTempLength - strTempSearch)
+    strProduct =3D ""
+    strVersion =3D ""
+    Set objRegistry =3D CreateObject("ISProxy.Proxy")=20
+    objRegistry.ISCreateObject document, "Isutil.dll", =
+"{CE730FB2-8BAE-11D1-B6A4-006097DF5F08}"
+    strLocation =3D =
+"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{A041CC14-868B-4D04-=
+ABA0-3FA29BC7B487}"
+    objRegistry.RegReadValue 2, strLocation, "DisplayName", 1, =
+strProduct
+    objRegistry.RegReadValue 2, strLocation, "DisplayVersion", 1, =
+strVersion =20
+    strLocation =3D "SOFTWARE\InstallShield\Developer\9.0"
+    objRegistry.RegReadValue 2, strLocation, "FeedbackURLLoc", 1, =
+FeedbackURL
+    Set objRegistry =3D Nothing
+    strProcessorType =3D clientinformation.cpuclass
+    strPlatform =3D clientinformation.platform
+    strAppVersion =3D clientinformation.appversion
+    strSystemLanguage =3D clientinformation.systemlanguage
+    GetRefToApp()   =20
+    Set objApp =3D m_objApp
+    strContextHelp =3D m_objApp.GetHelpTopic=20
+    nRAM=3D0
+    nRam =3D m_objApp.GetSystemMemory
+    select case strContextHelp
+            case "IHelpISXOrganizeYourSetup.htm"
+                strView =3D "Organize Your Setup"
+            case "IHelpISXSpecifyApplicationData.htm"
+                strView =3D "Specify Application Data"
+            case "IHelpISXTargetSystemConfiguration.htm"
+                strView =3D "Configure the Target System"
+            case "IHelpISXSetupAppearance.htm"
+                strView =3D "Design the User Interface"
+            case "IHelpISXSetupActions.htm"
+                strView =3D "Define Sequences & Actions"
+            case "IHelpISXOutput.htm"
+                strView =3D "Prepare for Distribution"
+            case "IHelpMarsAdvancedViews.htm"
+                strView =3D "Advanced Views"
+            case "IHelpISToday.htm"
+                strView =3D "InstallShield Today"
+            case "IhelpContents.htm"
+                strView =3D "Help"
+            case "IIDESetupBestPractices.htm"
+                strView =3D "Best Practices"
+            case "IHelpSetupProjects.htm"
+                strView =3D "General Information"
+            case "IHelpPathVariables.htm"
+                strView =3D "Path Variables"
+            case "IHelpPropertyManager.htm"
+                strView =3D "Property Manager"
+            case "IHelpDesignSetup.htm"
+                strView =3D "Setup Design"
+            case "IHelpFeatures.htm"
+                strView =3D "Features"
+            case "IHelpComponents.htm"
+                strView =3D "Components"
+            case "IHelpMergeModules.htm"
+                strView =3D "Merge Module Details"
+            case "IHelpSetupDestination.htm"
+                strView =3D "Destination"
+            case "IHelpISXFiles.htm"
+                strView =3D "Files"
+            case "IhelpMarsMergeModules.htm"
+                strView =3D "Merge Modules"
+            case "IHelpISXDependencies.htm"
+                strView =3D "Dependencies"
+            case "IHelpMarsShortcuts.htm"
+                strView =3D "Shortcuts/Folders"
+            case "IHelpMarsRegistry.htm"
+                strView =3D "Registry"
+            case "IHelpIsxODBCOverview.htm"
+                strView =3D "ODBC Resources"
+            case "IHelpISXINIFileChanges.htm"
+                strView =3D "INI File Changes"
+            case "IHelpEUDialogs.htm"
+                strView =3D "Dialogs"
+            case "IHelpISXBillboards.htm"
+                strView =3D "Billboards"
+            case "IHelpSequences.htm"
+                strView =3D "Sequences"
+            case "IHelpCustomActions.htm"
+                strView =3D "Actions/Scripts"
+            case "IHelpReleaseOverview.htm"
+                strView =3D "Releases"
+            case "IHelpISXDistributeRelease.htm"
+                strView =3D "Distribute"
+            case "IHelpMsiDbgOverview.htm"
+                strView =3D "MSI Debugger"
+            case "IHelpISXAlternateViews.htm"
+                strView =3D "Alternate Views"
+            case else
+                strView =3D "Miscellaneous"
+    end select=20
+   =20
+    FeedbackURL =3D FeedbackURL + strVersion=20
+    FeedbackURL =3D FeedbackURL + "&CurView=3D" + strView + =
+"&CurTopic=3D" + strHelpTopic + "&OSVersion=3D" + strPlatform + =
+"&IEVersion=3D"
+    FeedbackURL =3D FeedbackURL + strAppVersion + "&OSLang=3D" + =
+strSystemLanguage + "&Processor=3D" + strProcessorType + "&RAM=3D" + =
+nRAM
+
+Window.open FeedbackURL
+
+
+end sub
+
+Function IsAuthorRunning()
+    On Error Resume Next
+    IsAuthorRunning =3D False
+
+    GetRefToApp()   =20
+    IsAuthorRunning =3D m_objApp.IsAuthorRunning()
+End Function
+------=_NextPart_000_0000_01C8B986.C322C090
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: 7bit
+Content-Location: http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/whmsg.js
+
+//	WebHelp 5.10.002
+var WH_MSG_RESIZEPANE		=0x0100;
+var WH_MSG_SHOWPANE			=0x0101;
+var WH_MSG_HIDEPANE			=0x0102;
+var WH_MSG_SYNCTOC			=0x0103;
+var WH_MSG_NEXT				=0x0104;
+var WH_MSG_PREV				=0x0105;
+var WH_MSG_NOSEARCHINPUT	=0x0106;
+var WH_MSG_NOSYNC			=0x0107;
+var WH_MSG_ENABLEWEBSEARCH 	=0x0108;
+
+var WH_MSG_ISPANEVISIBLE	=0x0109;
+var WH_MSG_PANESTATUE		=0x010a;
+
+var	WH_MSG_SYNCINFO			=0x010b;
+var WH_MSG_PANEINFO			=0x010c;
+var WH_MSG_WEBSEARCH		=0x010d;
+
+var WH_MSG_SEARCHINDEXKEY 	=0x0201;
+
+var WH_MSG_SEARCHFTSKEY 	=0x020a;
+
+var WH_MSG_PROJECTREADY		=0x0301;
+var WH_MSG_GETPROJINFO 		=0x0302;
+
+var WH_MSG_SHOWTOC 			=0x0401;
+var WH_MSG_SHOWIDX 			=0x0402;
+var WH_MSG_SHOWFTS 			=0x0403;
+var WH_MSG_SHOWGLO 			=0x0404;
+
+var WH_MSG_SHOWGLODEF 		=0x0500;
+
+var WH_MSG_GETTOCPATHS 		=0x0600;
+var WH_MSG_GETAVIAVENUES 	=0x0601;
+var WH_MSG_GETCURRENTAVENUE =0x0602;
+var WH_MSG_GETPANEINFO		=0x0603;
+var WH_MSG_AVENUEINFO		=0x0604;
+
+var WH_MSG_GETSTARTFRAME 	=0x0701;
+var WH_MSG_GETDEFAULTTOPIC	=0x0702;
+
+var WH_MSG_SEARCHTHIS		=0x0801;
+var WH_MSG_GETSEARCHS		=0x0802;
+
+var WH_MSG_ISINFRAMESET		=0x0900;
+
+var WH_MSG_TOOLBARORDER		=0x0a00;
+var WH_MSG_MINIBARORDER		=0x0a01;
+var WH_MSG_ISSYNCSSUPPORT	=0x0a02;
+var WH_MSG_ISSEARCHSUPPORT	=0x0a03;
+var WH_MSG_GETPANETYPE		=0x0a04;
+var WH_MSG_BACKUPSEARCH		=0x0a05;
+var WH_MSG_GETPANES			=0x0a06;
+var WH_MSG_INITSEARCHSTRING =0x0a07;
+var WH_MSG_RELOADNS6		=0x0a08;
+var WH_MSG_ISAVENUESUPPORT	=0x0a09;
+
+var WH_MSG_GETCMD			=0x0b00;
+var	WH_MSG_GETPANE			=0x0b01;
+var WH_MSG_GETDEFPANE		=0x0b02;
+
+function whMessage(nMessageId,wSender,nVersion,oParam)
+{
+	this.nMessageId=nMessageId;
+	this.wSender=wSender;
+	this.nVersion=nVersion;
+	this.oParam=oParam;
+}
+var gbWhMsg=true;
+------=_NextPart_000_0000_01C8B986.C322C090
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: 7bit
+Content-Location: http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/whver.js
+
+//	WebHelp 5.10.002
+var gbNav6=false;
+var gbNav61=false;
+var gbNav4=false;
+var gbIE4=false;
+var gbIE=false;
+var gbIE5=false;
+var gbIE55=false;
+
+var gAgent=navigator.userAgent.toLowerCase();
+var gbMac=(gAgent.indexOf("mac")!=-1);
+var gbSunOS=(gAgent.indexOf("sunos")!=-1);
+var gbOpera=(gAgent.indexOf("opera")!=-1);
+
+var gVersion=navigator.appVersion.toLowerCase();
+
+var gnVerMajor=parseInt(gVersion);
+var gnVerMinor=parseFloat(gVersion);
+
+gbIE=(navigator.appName.indexOf("Microsoft")!=-1);
+if(gnVerMajor>=4)
+{
+	if(navigator.appName=="Netscape")
+	{
+		gbNav4=true;
+		if(gnVerMajor>=5)
+			gbNav6=true;
+	}
+	gbIE4=(navigator.appName.indexOf("Microsoft")!=-1);
+}
+if(gbNav6)
+{
+	document.gnPageWidth=innerWidth;
+	document.gnPageHeight=innerHeight;
+	var nPos=gAgent.indexOf("netscape");
+	if(nPos!=-1)
+	{
+		var nPos2=gAgent.indexOf("/", nPos);
+		if(nPos2!=-1)
+		{
+			var nVersion=parseFloat(gAgent.substring(nPos2+1));
+			if(nVersion>=6.1)
+				gbNav61=true;
+		}
+	}
+}else if(gbIE4)
+{
+	var nPos=gAgent.indexOf("msie");
+	if(nPos!=-1)
+	{
+		var nVersion=parseFloat(gAgent.substring(nPos+5));
+		if(nVersion>=5)
+			gbIE5=true;
+		if(nVersion>=5.5)
+			gbIE55=true;
+	}
+}
+
+var gbWhVer=true;
+------=_NextPart_000_0000_01C8B986.C322C090
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/whproxy.js
+
+//	WebHelp 5.10.001
+var gbInited=3Dfalse;
+var gWndStubPage=3Dnull;
+function getStubPage()
+{
+	if(!gbInited)
+	{
+		gWndStubPage=3DgetStubPage_inter(window);
+		gbInited=3Dtrue;
+	}
+	return gWndStubPage;
+}
+
+function getStubPage_inter(wCurrent)
+{
+	if(null=3D=3DwCurrent.parent||wCurrent.parent=3D=3DwCurrent)
+		return null;
+
+	=
+if(typeof(wCurrent.parent.whname)=3D=3D"string"&&"wh_stub"=3D=3DwCurrent.=
+parent.whname)
+		return wCurrent.parent;
+	else
+		if(wCurrent.parent.frames.length!=3D0&&wCurrent.parent!=3DwCurrent)
+			return getStubPage_inter(wCurrent.parent);
+		else
+			return null;
+}
+
+function RegisterListener(framename,nMessageId)
+{
+	var wSP=3DgetStubPage();
+	if(wSP&&wSP!=3Dthis)
+		return wSP.RegisterListener(framename,nMessageId);
+	else
+		return false;
+}
+
+function RegisterListener2(oframe,nMessageId)
+{
+	var wSP=3DgetStubPage();
+	if(wSP&&wSP!=3Dthis)
+		return wSP.RegisterListener2(oframe,nMessageId);
+	else
+		return false;
+}
+
+function UnRegisterListener2(oframe,nMessageId)
+{
+	var wSP=3DgetStubPage();
+	if(wSP&&wSP!=3Dthis&&wSP.UnRegisterListener2)
+		return wSP.UnRegisterListener2(oframe,nMessageId);
+	else
+		return false;
+}
+
+function SendMessage(oMessage)
+{
+	var wSP=3DgetStubPage();
+	if(wSP&&wSP!=3Dthis&&wSP.SendMessage)
+		return wSP.SendMessage(oMessage);
+	else
+		return false;
+}
+
+var gbWhProxy=3Dtrue;
+
+var gbPreview=3Dfalse;
+gbPreview=3Dfalse;=20
+if (gbPreview)
+	document.oncontextmenu=3DcontextMenu;
+
+function contextMenu()
+{
+	return false;
+}
+
+------=_NextPart_000_0000_01C8B986.C322C090
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/whutils.js
+
+//	WebHelp 5.10.004
+var gsFileName=3D"";
+var gsDivName=3D"";
+var xmlDoc=3Dnull;
+var sdocPath=3Dnull;
+var gsInsertBeforeEndHTML=3D"";
+var sReplaceStringsSrc=3Dnew Array();
+var gsDivName=3D"dataDiv";
+var gnLoadDivNum=3D0;
+sReplaceStringsSrc[0]=3D"&amp;";
+sReplaceStringsSrc[1]=3D"&gt;";
+sReplaceStringsSrc[2]=3D"&lt;";
+sReplaceStringsSrc[3]=3D"&quot;";
+sReplaceStringsSrc[4]=3DString.fromCharCode(8364);
+sReplaceStringsSrc[5]=3D"&nbsp;";
+
+var sReplaceStringsDst=3Dnew Array();
+sReplaceStringsDst[0]=3D"&";
+sReplaceStringsDst[1]=3D">";
+sReplaceStringsDst[2]=3D"<";
+sReplaceStringsDst[3]=3D"\"";
+sReplaceStringsDst[4]=3DString.fromCharCode(128);
+sReplaceStringsDst[5]=3D" ";
+var goHighLighted=3Dnull;
+
+function _getRelativePath(strParentPath,strCurrentPath)
+{
+	if(_isAbsPath(strCurrentPath)) return _getPath(strCurrentPath);
+	strParentPath=3D_replaceSlash(strParentPath);
+	strParentPath=3D_getPath(strParentPath);
+	strCurrentPath=3D_replaceSlash(strCurrentPath);
+	strCurrentPath=3D_getPath(strCurrentPath);
+	for(var i=3D0;i<strParentPath.length&&i<strCurrentPath.length;i++)
+	{
+		if(strParentPath.charAt(i)!=3DstrCurrentPath.charAt(i))
+			break;
+	}
+=09
+	strParentPath=3DstrParentPath.substring(i);
+	strCurrentPath=3DstrCurrentPath.substring(i);=09
+=09
+	var nPathPos=3D0;
+	while(nPathPos!=3D-1)
+	{
+		nPathPos=3DstrParentPath.indexOf("/");
+		if(nPathPos!=3D-1)
+		{
+			strParentPath=3DstrParentPath.substring(nPathPos+1);
+			strCurrentPath=3D"../"+strCurrentPath;
+		}
+	}
+	return strCurrentPath;
+}
+
+function _getRelativeFileName(strParentPath,strCurrentPath)
+{
+	strParentPath=3D_replaceSlash(strParentPath);
+	strParentPath=3D_getPath(strParentPath);
+	strCurrentPath=3D_replaceSlash(strCurrentPath);
+	for(var i=3D0;i<strParentPath.length&&i<strCurrentPath.length;i++)
+	{
+		if(strParentPath.charAt(i)!=3DstrCurrentPath.charAt(i))
+			break;
+	}
+=09
+	strParentPath=3DstrParentPath.substring(i);
+	strCurrentPath=3DstrCurrentPath.substring(i);=09
+=09
+	var nPathPos=3D0;
+	while(nPathPos!=3D-1)
+	{
+		nPathPos=3DstrParentPath.indexOf("/");
+		if(nPathPos!=3D-1)
+		{
+			strParentPath=3DstrParentPath.substring(nPathPos+1);
+			strCurrentPath=3D"../"+strCurrentPath;
+		}
+	}
+	return strCurrentPath;
+}
+
+function _isAbsPathToHost(sPath)
+{
+	return (sPath.indexOf("/")=3D=3D0);
+}
+
+function _getHost(sPath)
+{
+	var nPos=3DsPath.indexOf("//");
+	if(nPos>0)
+	{
+		var nPosx=3DsPath.indexOf("/",nPos+2);
+		if(nPosx>0)
+			return sPath.substring(0,nPosx);
+		else
+			return sPath;
+	}
+	return sPath;
+}
+
+function _getFullPath(sPath,sRelPath)
+{
+	if(_isAbsPath(sRelPath))
+		return sRelPath;
+	else if(_isAbsPathToHost(sRelPath))
+		return _getHost(sPath)+sRelPath;
+	else
+	{
+		var sFullPath=3DsPath;
+		var nPathPos=3D0;
+		while(nPathPos!=3D-1)
+		{
+			var nPathPos=3DsRelPath.indexOf("../");
+			if(nPathPos!=3D-1)
+			{
+				sRelPath=3DsRelPath.substring(nPathPos+3);
+				sFullPath=3DsFullPath.substring(0,sFullPath.length-1);
+				var nPos2=3DsFullPath.lastIndexOf("/");
+				if(nPos2!=3D-1)
+					sFullPath=3DsFullPath.substring(0,nPos2+1);
+				else
+					break;
+			}
+		}
+		sFullPath+=3DsRelPath;
+		return sFullPath;
+	}=09
+}
+
+function _isAbsPath(strPath)
+{
+	var strUpper=3DstrPath.toUpperCase();
+	return (strUpper.indexOf(":")!=3D-1||strUpper.indexOf("\\\\")=3D=3D0);
+}
+
+function _replaceSlash(strURL)
+{=09
+	var re=3Dnew RegExp("\\\\","g");
+	var strReplacedURL=3DstrURL.replace(re,"/");
+	return strReplacedURL;
+}
+
+function _getPath(strURL)
+{
+	pathpos=3DstrURL.lastIndexOf("/");
+	if(pathpos>0)
+		return strURL.substring(0,pathpos+1);
+	else
+		return "";
+}
+
+function removeItemFromArray(oArray,i)
+{
+	if(oArray.length&&i>=3D0&&i<oArray.length)
+	{
+		var len=3DoArray.length;
+		for(var s=3Di;s<len-1;s++)
+			oArray[s]=3DoArray[s+1];
+		oArray.length=3Dlen-1;
+	}
+}
+
+function insertItemIntoArray(oArray,i,obj)
+{
+	if(oArray.length&&i>=3D0&&i<=3DoArray.length)
+	{
+		var len=3DoArray.length;
+		for(var s=3Dlen;s>i;s--)
+			oArray[s]=3DoArray[s-1];
+		oArray[i]=3Dobj;	=09
+	}
+}
+
+function loadData(sFileName)
+{
+	var i=3DgnLoadDivNum;
+	var sName=3DgsDivName+gnLoadDivNum++;
+	loadData_2(sFileName,sName);
+}
+
+function loadData_2(sFileName,sDivName)
+{
+	if(!getElement(sDivName))
+	{
+		if(!insertDataDiv(sDivName))
+		{
+			gsFileName=3DsFileName;
+			gsDivName=3DsDivName;
+			return;
+		}
+	}
+	var sHTML=3D"";
+	if(gbMac)
+		sHTML+=3D"<iframe src=3D"+sFileName+"></iframe>";
+	else
+		sHTML+=3D"<iframe style=3D\"visibility:hidden;width:0;height:0\" =
+src=3D"+sFileName+"></iframe>";
+=09
+	var oDivCon=3DgetElement(sDivName);
+	if(oDivCon)
+	{
+		if(gbNav6)
+		{
+			=
+if(oDivCon.getElementsByTagName&&oDivCon.getElementsByTagName("iFrame").l=
+ength>0)
+			{
+				oDivCon.getElementsByTagName("iFrame")[0].src=3DsFileName;
+			}
+			else
+				oDivCon.innerHTML=3DsHTML;
+		}
+		else
+			oDivCon.innerHTML=3DsHTML;
+	}
+}
+
+function loadDataXML(sFileName)
+{
+	var sCurrentDocPath=3D_getPath(document.location.href);
+	sdocPath=3D_getFullPath(sCurrentDocPath,sFileName);
+	if(gbIE5)
+	{
+		xmlDoc=3Dnew ActiveXObject("Microsoft.XMLDOM");
+		xmlDoc.async=3Dtrue;
+		xmlDoc.onreadystatechange=3DcheckState;
+		if(document.body!=3Dnull)
+			xmlDoc.load(sdocPath);
+	}
+	else if(gbNav6)
+	{
+		xmlDoc=3Ddocument.implementation.createDocument("","",null);
+		xmlDoc.addEventListener("load",initializeData,false);
+		xmlDoc.load(sdocPath,"text/xml");
+	}
+}
+
+function initializeData()
+{
+	if(xmlDoc!=3Dnull)
+		putDataXML(xmlDoc,sdocPath);
+}
+
+function checkState()
+{
+	if(xmlDoc!=3Dnull)
+	{
+		var state=3DxmlDoc.readyState;
+		if(state=3D=3D4)
+		{
+			var err=3DxmlDoc.parseError;
+			if(err.errorCode=3D=3D0)
+				putDataXML(xmlDoc,sdocPath);
+			else
+				onLoadXMLError();
+		}
+	}
+}
+
+function insertDataDiv(sName)
+{
+	var sHTML=3D"";
+	if(gbMac)
+		sHTML+=3D"<div id=3D"+sName+" style=3D\"display:none;\"></div>";
+	else
+		sHTML+=3D"<div id=3D"+sName+" style=3D\"visibility:hidden\"></div>";
+	if((gbIE5||gbNav6)&&document.body)
+		document.body.insertAdjacentHTML("beforeEnd",sHTML);
+	else
+	{
+		gsInsertBeforeEndHTML=3DsHTML;
+		setTimeout("insertWhenBodyReady();",100);
+		return false;
+	}
+	return true;
+}
+
+function insertWhenBodyReady()
+{
+	if(gsInsertBeforeEndHTML=3D=3D"") return;
+	if(document.body)
+	{
+		document.body.insertAdjacentHTML("beforeEnd",gsInsertBeforeEndHTML);
+		gsInsertBeforeEndHTML=3D"";
+		loadData_2(gsFileName,gsDivName);
+	}
+	else
+	{
+		setTimeout("insertWhenBodyReady();",100);
+	}
+}
+
+function window_BUnload()
+{
+	for(var i=3D0;i<gnLoadDivNum;i++)
+	{
+		var oDivCon=3DgetElement(gsDivName+i);
+		if(oDivCon)
+			oDivCon.innerHTML=3D"";
+	}
+}
+
+function removeThis(obj)
+{
+	if(obj.parentNode)
+		obj.parentNode.removeChild(obj);
+	else
+		obj.outerHTML=3D"";
+}
+
+function getParentNode(obj)
+{
+	if(obj.parentNode)
+		return obj.parentNode;
+	else if(obj.parentElement)
+		return obj.parentElement;
+	return null;
+}
+
+function getElement(sID)
+{
+	if(document.getElementById)
+		return document.getElementById(sID);
+	else if(document.all)
+		return document.all(sID);
+	return null;
+}
+
+function getChildrenByTag(obj,sTagName)
+{
+	if(obj.getElementsByTagName)
+	{
+		var aChildren=3Dnew Array();
+		var aElements=3DgetElementsByTag(obj,sTagName);
+		if(aElements!=3Dnull)
+		{
+			for(var i=3D0;i<aElements.length;i++)
+			{
+				if(aElements[i].parentNode=3D=3Dobj)
+					aChildren[aChildren.length]=3DaElements[i];
+			}
+			return aChildren;
+		}
+		else
+			return new Array();
+	}
+	else if(obj.children)
+		return obj.children.tags(sTagName);
+}
+
+function getElementsByTag(obj,sTagName)
+{
+	if(obj.getElementsByTagName)
+		return obj.getElementsByTagName(sTagName);
+	else if(obj.all)
+		return obj.all.tags(sTagName);
+	return null;
+}
+
+function _htmlToText(sHTML)
+{
+	if(sHTML=3D=3Dnull) return null;
+	var sText=3DsHTML;
+	for(var i=3D0;i<sReplaceStringsSrc.length;i++)
+	{
+		var re=3Dnew RegExp(sReplaceStringsSrc[i],"g");
+		sText=3DsText.replace(re,sReplaceStringsDst[i]);
+	}=09
+	return sText;
+}
+
+function _textToHtml_nonbsp(sText)
+{
+	if(sText=3D=3Dnull) return null;
+	var sHTML=3DsText;
+	for(var i=3D0;i<sReplaceStringsSrc.length-1;i++)
+	{
+		var re=3Dnew RegExp(sReplaceStringsDst[i],"g");
+		sHTML=3DsHTML.replace(re,sReplaceStringsSrc[i]);
+	}=09
+	return sHTML;
+}
+
+function _textToHtml(sText)
+{
+	if(sText=3D=3Dnull) return null;
+	var sHTML=3DsText;
+	for(var i=3D0;i<sReplaceStringsSrc.length;i++)
+	{
+		var re=3Dnew RegExp(sReplaceStringsDst[i],"g");
+		sHTML=3DsHTML.replace(re,sReplaceStringsSrc[i]);
+	}=09
+	return sHTML;
+}
+
+
+function getInnerText(obj)
+{
+	var renbsp2sp=3Dnew RegExp("\xa0","g");
+	if(obj.innerText)
+	{
+		var sText=3Dobj.innerText;
+		sText=3DsText.replace(renbsp2sp," ");
+		return sText;
+	}
+	else
+	{
+		if(obj.nodeValue)
+		{
+			var sValue=3Dobj.nodeValue;
+			sValue=3DsValue.replace(renbsp2sp," ");
+			return sValue;
+		}
+		else
+		{
+			var sText=3D"";
+			var oChild=3Dobj.firstChild;
+			while(oChild!=3Dnull)
+			{
+				sText+=3DgetInnerText(oChild);
+				oChild=3DoChild.nextSibling;
+			}
+			return sText;
+		}
+	}
+	=09
+}
+
+function HighLightElement(obj,sHighLightColor,sNormalColor)
+{
+	if(gbIE5||gbNav6)
+	{
+		if(obj!=3Dnull)
+		{
+			resetHighLight(sNormalColor);
+			obj.style.backgroundColor=3DsHighLightColor;
+			goHighLighted=3Dobj;
+		}
+	}
+}
+
+function resetHighLight(sNormalColor)
+{
+	if(gbIE5||gbNav6)
+	{
+		if(goHighLighted!=3Dnull)
+		{
+			goHighLighted.style.backgroundColor=3DsNormalColor;
+			goHighLighted=3Dnull;
+		}
+	}
+}
+
+function whFont(sName,sSize,sColor,sStyle,sWeight,sDecoration)
+{
+	this.sName=3DsName;
+	this.sSize=3DsSize;
+	this.sColor=3DsColor;
+	this.sStyle=3DsStyle;
+	this.sWeight=3DsWeight;
+	this.sDecoration=3DsDecoration;
+}
+
+function getFontStyle(oFont)
+{
+	var sStyle=3D"";
+	if(oFont)
+	{
+		sStyle+=3D"font-family:"+oFont.sName+";";
+		if(gbMac)
+		{
+			var nSize=3DparseInt(oFont.sSize);
+			if(gbIE5)
+				nSize+=3D2;
+			else
+				nSize+=3D4;
+			sStyle+=3D"font-size:"+nSize+"pt;";
+		}
+		else
+			sStyle+=3D"font-size:"+oFont.sSize+";";
+		=09
+		sStyle+=3D"font-style:"+oFont.sStyle+";";
+		sStyle+=3D"font-weight:"+oFont.sWeight+";";
+		sStyle+=3D"text-decoration:"+oFont.sDecoration+";";
+		sStyle+=3D"color:"+oFont.sColor+";";
+	}
+	return sStyle;
+}
+
+function _browserStringToText(sBStr)
+{
+	var sText=3D"";
+	// change %xxx back to the real char.
+	var nPos=3DsBStr.indexOf('%');
+	while(nPos!=3D-1)
+	{
+		sText+=3DsBStr.substring(0,nPos);
+		sBStr=3DsBStr.substring(nPos+1);
+		var sNum=3D"";
+		var i=3D0;
+		while(sBStr.charAt(i)>=3D'0'&&sBStr.charAt(i)<=3D'9')
+		{
+			sNum+=3DsBStr.charAt(i++);=09
+		}
+		if(sNum!=3D""){
+			var nNum=3DparseInt(sNum,16);
+			sText+=3DString.fromCharCode(nNum);
+			sBStr=3DsBStr.substring(i);
+		}
+		nPos=3DsBStr.indexOf('%');
+	}
+	sText+=3DsBStr;
+	return sText;
+}
+
+function excapeSingleQuotandSlash(str)
+{
+	if(str=3D=3Dnull) return null;
+	var nPos=3D0;
+	var sRes=3D"";
+	var nPosNew=3Dstr.indexOf("\\",nPos);
+	while(nPosNew!=3D-1){
+		sRes+=3Dstr.substring(nPos,nPosNew+1)+"\\";
+		nPos=3DnPosNew+1;
+		nPosNew=3Dstr.indexOf("\\",nPos);
+	}
+	if(nPos<str.length)
+		sRes+=3Dstr.substring(nPos);
+	var re=3Dnew RegExp("'","g");
+	sRes=3DsRes.replace(re,"\\'");
+	return sRes;
+}
+
+var gbWhUtil=3Dtrue;
+------=_NextPart_000_0000_01C8B986.C322C090
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://helpnet.acresso.com/robo/projects/HelpLibDevStudio9/whtopic.js
+
+//	WebHelp 5.10.003
+var gsPPath =3D "";
+var gaPaths =3D new Array();
+var gaAvenues =3D new Array();
+
+var goFrame =3D null;
+var gsStartPage =3D "";
+var gsRelCurPagePath =3D "";
+var gsSearchFormHref  =3D "";
+var gnTopicOnly =3D -1;
+var gnOutmostTopic =3D -1;
+
+var BTN_TEXT=3D1;
+var BTN_IMG=3D2;
+
+var goSync =3D null;
+
+var goShow =3D null;
+var goHide =3D null;
+
+var goPrev =3D null;
+var goNext =3D null;
+var gnForm =3D 0;
+var goShowNav =3D null;
+var goHideNav =3D null;
+
+var goWebSearch =3D null;
+
+var gsBtnStyle =3D "";
+var gaButtons =3D new Array();
+var gaTypes =3D new Array();
+var whtopic_foldUnload =3D null;
+var gbWhTopic=3Dfalse;
+var gbCheckSync=3Dfalse;
+var gbSyncEnabled=3Dfalse;
+
+function setButtonFont(sType, =
+sFontName,sFontSize,sFontColor,sFontStyle,sFontWeight,sFontDecoration)
+{
+	var vFont=3Dnew =
+whFont(sFontName,sFontSize,sFontColor,sFontStyle,sFontWeight,sFontDecorat=
+ion);
+	gsBtnStyle +=3D ".whtbtn" + sType + "{"+getFontStyle(vFont) + "}";
+}
+
+function writeBtnStyle()
+{
+	if (gaButtons.length > 0)
+	{
+		if (gsBtnStyle.length > 0)
+		{
+			var sStyle =3D "<style type=3D'text/css'>";
+			sStyle+=3D gsBtnStyle + "</style>";
+			document.write(sStyle);
+		}
+	}
+}
+
+function button(sText, nWidth, nHeight)
+{
+	this.sText =3D sText;
+	this.nWidth =3D nWidth;
+	this.nHeight =3D nHeight;
+=09
+	this.aImgs =3D new Array();
+	var i =3D 0;
+	while (button.arguments.length > i + 3)
+	{
+		this.aImgs[i] =3D button.arguments[3 + i];
+		i ++;
+	}
+}
+
+// project info
+function setRelStartPage(sPath)
+{
+	if (gsPPath.length =3D=3D 0)
+	{
+		gsPPath =3D _getFullPath(_getPath(document.location.href),  =
+_getPath(sPath));
+		gsStartPage =3D _getFullPath(_getPath(document.location.href), sPath);
+		gsRelCurPagePath =3D _getRelativeFileName(gsStartPage, =
+document.location.href);
+	}
+}
+
+function getImage(oImage, sType)
+{
+	var sImg=3D"";
+	if (oImage && oImage.aImgs && (oImage.aImgs.length > 0))
+	{
+		sImg+=3D"<img alt=3D\""+ sType + "\" src=3D\"" + oImage.aImgs[0] + =
+"\"";
+		if (oImage.nWidth > 0)
+			sImg+=3D" width=3D" + oImage.nWidth;
+		if (oImage.nHeight > 0)
+			sImg+=3D" height=3D" + oImage.nHeight;
+		sImg+=3D" border=3D0>";
+	}
+	return sImg;
+}
+
+function addTocInfo(sTocPath)
+{
+	gaPaths[gaPaths.length] =3D sTocPath;
+}
+
+function addAvenueInfo(sName, sPrev, sNext)
+{
+	gaAvenues[gaAvenues.length] =3D new avenueInfo(sName, sPrev, sNext);=09
+}
+
+function addButton(sType, nStyle, sText, sHref, sOnClick, sOnMouseOver, =
+sOnLoad, nWidth, nHeight, sImg1, sImg2, sImg3)
+{
+	var sButton =3D "";
+	var nBtn=3DgaButtons.length;
+	if (sType =3D=3D "prev")
+	{
+		if (canGo(false))
+		{
+			var sTitle =3D "Previous Topic";
+			goPrev =3D new button(sText, nWidth, nHeight, sImg1, sImg2, sImg3);
+			sButton =3D "<a title=3D\"" + sTitle + "\" class=3D\"whtbtnprev\" =
+href=3D\"javascript:void(0);\" onclick=3D\"goAvenue(false);return =
+false;\">";
+			if (nStyle =3D=3D BTN_TEXT)
+				sButton +=3D goPrev.sText;
+			else
+				sButton +=3D getImage(goPrev, sTitle);
+			sButton +=3D "</a>";
+		}
+	}
+	else if (sType =3D=3D "next")
+	{
+		if (canGo(true))
+		{
+			var sTitle =3D "Next Topic";
+			goNext =3D new button(sText, nWidth, nHeight, sImg1, sImg2, sImg3);
+			sButton =3D "<a title=3D\"" + sTitle + "\" class=3D\"whtbtnnext\" =
+href=3D\"javascript:void(0);\" onclick=3D\"goAvenue(true);return =
+false;\">";
+			if (nStyle =3D=3D BTN_TEXT)
+				sButton +=3D goNext.sText;
+			else
+				sButton +=3D getImage(goNext, sTitle);
+			sButton +=3D "</a>";
+		}
+	}
+	else if (sType =3D=3D "show")
+	{
+		if (isTopicOnly())
+		{
+			var sTitle =3D "Show Navigation Component";
+			goShow =3D new button(sText, nWidth, nHeight, sImg1, sImg2, sImg3);
+			sButton =3D "<a title=3D\"" + sTitle + "\" class=3D\"whtbtnshow\" =
+href=3D\"javascript:void(0);\" onclick=3D\"show();return false;\">";
+			if (nStyle =3D=3D BTN_TEXT)
+				sButton +=3D goShow.sText;
+			else
+				sButton +=3D getImage(goShow, sTitle);
+			sButton +=3D "</a>";
+		}
+	}
+	else if (sType =3D=3D "hide")
+	{
+		if (!isTopicOnly())
+		{
+			var sTitle =3D "Hide Navigation Component";
+			goHide =3D new button(sText, nWidth, nHeight, sImg1, sImg2, sImg3);
+			sButton =3D "<a title=3D\"" + sTitle + "\" class=3D\"whtbtnhide\" =
+href=3D\"javascript:void(0);\" onclick=3D\"hide();return false;\">";
+			if (nStyle =3D=3D BTN_TEXT)
+				sButton +=3D goHide.sText;
+			else
+				sButton +=3D getImage(goHide, sTitle);
+			sButton +=3D "</a>";
+		}
+	}
+	else if (sType =3D=3D "shownav")
+	{
+	=09
+		if (isShowHideEnable())
+		{
+			var sTitle =3D "Show Navigation Component";
+			goShowNav =3D new button(sText, nWidth, nHeight, sImg1, sImg2, =
+sImg3);
+			sButton =3D "<a title=3D\"" + sTitle + "\" class=3D\"whtbtnshownav\" =
+href=3D\"javascript:void(0);\" onclick=3D\"showHidePane(true);return =
+false;\">";
+			if (nStyle =3D=3D BTN_TEXT)
+				sButton +=3D goShowNav.sText;
+			else
+				sButton +=3D getImage(goShowNav, sTitle);
+			sButton +=3D "</a>";
+		}
+	}
+	else if (sType =3D=3D "hidenav")
+	{
+		if (isShowHideEnable())
+		{
+			var sTitle =3D "Hide Navigation Component";
+			goHideNav =3D new button(sText, nWidth, nHeight, sImg1, sImg2, =
+sImg3);
+			sButton =3D "<a title=3D\"" + sTitle + "\" class=3D\"whtbtnhidenav\" =
+href=3D\"javascript:void(0);\" onclick=3D\"showHidePane(false);return =
+false;\">";
+			if (nStyle =3D=3D BTN_TEXT)
+				sButton +=3D goHideNav.sText;
+			else
+				sButton +=3D getImage(goHideNav, sTitle);
+			sButton +=3D "</a>";
+		}
+	}
+	else if (sType =3D=3D "synctoc")
+	{
+		if (gaPaths.length > 0)
+		{
+			var sTitle =3D "Sync TOC";
+			goSync =3D new button(sText, nWidth, nHeight, sImg1, sImg2, sImg3);
+			sButton =3D "<a title=3D\""+ sTitle + "\" class=3D\"whtbtnsynctoc\" =
+href=3D\"javascript:void(0);\" onclick=3D\"syncWithShow();return =
+false;\">";
+			if (nStyle =3D=3D BTN_TEXT)
+				sButton +=3D goSync.sText;
+			else
+				sButton +=3D getImage(goSync, sTitle);
+			sButton +=3D "</a>";
+		}
+	}
+	else if (sType =3D=3D "websearch")
+	{
+		if (gsSearchFormHref.length > 0)
+		{
+			var sTitle =3D "WebSearch";
+			goWebSearch =3D new button(sText, nWidth, nHeight, sImg1, sImg2, =
+sImg3);
+			sButton =3D "<a title=3D\""+ sTitle + "\" class=3D\"whtbtnwebsearch\" =
+href=3D\"" + gsSearchFormHref + "\">";
+			if (nStyle =3D=3D BTN_TEXT)
+				sButton +=3D goWebSearch.sText;
+			else
+				sButton +=3D getImage(goWebSearch, sTitle);
+			sButton +=3D "</a>";
+		}
+	}
+	else if (sType =3D=3D "searchform")
+	{
+		gaButtons[nBtn] =3D "NeedSearchForm";
+		gaTypes[nBtn] =3D sType;
+	}
+	if (sButton.length !=3D 0)
+	{
+		if (nStyle =3D=3D BTN_TEXT)
+			sButton +=3D "&nbsp;";
+		gaButtons[nBtn] =3D "<td>" + sButton + "</td>";
+		gaTypes[nBtn] =3D sType;
+	}
+}
+
+function isSyncEnabled()
+{
+	if (!gbCheckSync)
+	{
+		var oMsg=3Dnew whMessage(WH_MSG_ISSYNCSSUPPORT,this,1,null);
+		if(SendMessage(oMsg))
+		{
+			gbSyncEnabled=3DoMsg.oParam;
+		}
+		gbCheckSync=3Dtrue;
+	}
+	return gbSyncEnabled;
+}
+
+function isInPopup()
+{
+	return (window.name.indexOf("BSSCPopup") !=3D -1);
+}
+
+function getIntopicBar(sAlign)
+{
+	var sHTML =3D "";
+	if (gaButtons.length > 0)
+	{
+		sHTML +=3D "<div align=3D"+ sAlign + ">";
+
+		sHTML +=3D "<table cellpadding=3D\"2\" cellspacing=3D\"0\" =
+border=3D\"0\"><tr>";
+		for (var i =3D 0; i < gaButtons.length; i++)
+		{
+			if (gaTypes[i]!=3D"synctoc" || isSyncEnabled())
+			{
+				if (gaButtons[i] =3D=3D "NeedSearchForm")
+					sHTML +=3D getSearchFormHTML();
+				else
+					sHTML +=3D gaButtons[i];
+			}
+		}
+		sHTML +=3D "</tr></table>";
+
+		sHTML +=3D "</div>";
+	}
+	return sHTML;
+}
+
+
+function writeIntopicBar(nAligns)
+{
+	if (isInPopup()) return;
+	if (gaButtons.length > 0)
+	{
+		var sHTML =3D "";
+		if (nAligns !=3D 0)
+		{
+			sHTML +=3D "<table width=3D100%><tr>"
+			if (nAligns & 1)
+				sHTML +=3D "<td width=3D33%>" + getIntopicBar("left") + "</td>";
+			if (nAligns & 2)
+				sHTML +=3D "<td width=3D34%>" + getIntopicBar("center") + "</td>";
+			if (nAligns & 4)
+				sHTML +=3D "<td width=3D33%>" + getIntopicBar("right") + "</td>";
+			sHTML +=3D "</tr></table>";
+			document.write(sHTML);
+		}
+	}
+}
+
+function sendAveInfoOut()
+{
+	if (!isInPopup())
+		setTimeout("sendAveInfo();", 100);
+}
+
+function sendAveInfo()
+{
+	var oMsg =3D new whMessage(WH_MSG_AVENUEINFO, this, 1, gaAvenues);
+	SendMessage(oMsg);
+}
+
+
+function onNext()
+{
+	var oMsg =3D new whMessage(WH_MSG_NEXT, this, 1, null);
+	SendMessage(oMsg);
+}
+
+function onPrev()
+{
+	var oMsg =3D new whMessage(WH_MSG_PREV, this, 1, null);
+	SendMessage(oMsg);
+}
+
+function createSyncInfo()
+{
+	var oParam =3D new Object();
+	if (gsPPath.length =3D=3D 0)
+		gsPPath =3D _getPath(document.location.href);
+	oParam.sPPath =3D gsPPath;
+	oParam.sTPath =3D document.location.href;
+	oParam.aPaths =3D gaPaths;
+	return oParam;
+}
+
+function syncWithShow()
+{
+	if (isTopicOnly())
+		show();
+	else=20
+	{
+		sync();
+		showTocPane();
+	}
+}
+
+function showTocPane()
+{
+	var oMsg =3D new whMessage(WH_MSG_SHOWTOC, this, 1, null);
+	SendMessage(oMsg);
+}
+
+function sendSyncInfo()
+{
+	if (!isInPopup())
+	{
+		var oParam =3D null;
+		if (gaPaths.length > 0)
+		{
+			oParam =3D createSyncInfo();
+		}
+		var oMsg =3D new whMessage(WH_MSG_SYNCINFO, this, 1, oParam);
+		SendMessage(oMsg);
+	}
+}
+
+function sendInvalidSyncInfo()
+{
+	if (!isInPopup())
+	{
+		var oMsg =3D new whMessage(WH_MSG_SYNCINFO, this, 1, null);
+		SendMessage(oMsg);
+	}
+}
+
+function enableWebSearch(bEnable)
+{
+	if (!isInPopup())
+	{
+		var oMsg =3D new whMessage(WH_MSG_ENABLEWEBSEARCH, this, 1, bEnable);
+		SendMessage(oMsg);
+	}
+}
+
+function autoSync(nSync)
+{
+	if (nSync =3D=3D 0) return;
+	if (isInPopup()) return;
+	if (isOutMostTopic())
+		sync();
+}
+
+function isOutMostTopic()
+{
+	if (gnOutmostTopic =3D=3D -1)
+	{
+		var oMessage =3D new whMessage(WH_MSG_ISINFRAMESET, this, 1 , null);
+		if (SendMessage(oMessage))
+			gnOutmostTopic =3D 0;
+		else
+			gnOutmostTopic =3D 1;
+	}
+	return (gnOutmostTopic =3D=3D 1);
+}
+
+function sync()
+{
+	if (gaPaths.length > 0)
+	{
+		var oParam =3D createSyncInfo();
+		var oMessage =3D new whMessage(WH_MSG_SYNCTOC, this, 1, oParam);
+		SendMessage(oMessage);
+	}
+}
+
+
+function avenueInfo(sName, sPrev, sNext)
+{
+	this.sName =3D sName;
+	this.sPrev =3D sPrev;
+	this.sNext =3D sNext;
+}
+
+function getCurrentAvenue()
+{
+	var oParam =3D new Object();
+	oParam.sAvenue =3D null;
+	var oMessage =3D new whMessage(WH_MSG_GETCURRENTAVENUE, this, 1, =
+oParam);
+	SendMessage(oMessage);
+	return oParam.sAvenue;
+}
+
+function unRegisterListener()
+{
+	sendInvalidSyncInfo();
+	enableWebSearch(false);
+	if (whtopic_foldUnload)
+		whtopic_foldUnload();
+}
+
+function onSendMessage(oMsg)
+{
+	var nMsgId =3D oMsg.nMessageId;
+	if (nMsgId =3D=3D WH_MSG_GETAVIAVENUES)
+	{
+		oMsg.oParam.aAvenues =3D gaAvenues;
+		return false;
+	}
+	else if (nMsgId =3D=3D WH_MSG_GETTOCPATHS)
+	{
+		if (isOutMostTopic())
+		{
+			oMsg.oParam.oTocInfo =3D createSyncInfo();
+			return false;	=09
+		}
+		else
+			return true;
+	}
+	else if (nMsgId =3D=3D WH_MSG_NEXT)
+	{
+		goAvenue(true);
+	}
+	else if (nMsgId =3D=3D WH_MSG_PREV)
+	{
+		goAvenue(false);
+	}
+	else if (nMsgId =3D=3D WH_MSG_WEBSEARCH)
+	{
+		websearch();
+	}
+	return true;
+}
+
+function goAvenue(bNext)
+{
+	var sTopic =3D null;
+	var sAvenue =3D getCurrentAvenue();
+	var nAvenue =3D -1;
+	if (sAvenue !=3D null && sAvenue !=3D "")
+	{
+		for (var i =3D 0; i < gaAvenues.length ; i ++)
+		{
+			if (gaAvenues[i].sName =3D=3D sAvenue)
+			{
+				nAvenue =3D i;
+				break;
+			}
+		}
+		if (nAvenue !=3D -1)
+		{
+			if (bNext)
+				sTopic =3D gaAvenues[nAvenue].sNext;
+			else
+				sTopic =3D gaAvenues[nAvenue].sPrev;
+		}
+	}
+	else
+	{=20
+		for (var i =3D 0; i < gaAvenues.length ; i ++)
+		{
+			if (gaAvenues[i].sNext !=3D null && gaAvenues[i].sNext.length > 0 && =
+bNext)
+			{
+				sTopic =3D gaAvenues[i].sNext;
+				break;
+			}
+			else if (gaAvenues[i].sPrev !=3D null && gaAvenues[i].sPrev.length > =
+0 && !bNext)
+			{
+				sTopic =3D gaAvenues[i].sPrev;
+				break;
+			}
+		}
+	}
+=09
+	if (sTopic !=3D null && sTopic !=3D "")
+	{
+		if (gsPPath !=3D null && gsPPath !=3D "")
+		{
+			sFullTopicPath =3D _getFullPath(gsPPath, sTopic);
+			document.location =3D sFullTopicPath;
+		}
+	}
+}
+
+function canGo(bNext)
+{
+	for (var i =3D 0; i < gaAvenues.length ; i ++)
+	{
+		if ((gaAvenues[i].sNext !=3D null && gaAvenues[i].sNext.length > 0 && =
+bNext) ||
+			(gaAvenues[i].sPrev !=3D null && gaAvenues[i].sPrev.length > 0 && =
+!bNext))
+			return true;
+	}
+	return false;
+}
+
+function show()
+{
+	if (gsStartPage !=3D "")
+		window.location =3D  gsStartPage + "#" + gsRelCurPagePath;
+}
+
+function hide()
+{
+	if (goFrame !=3D null)
+	{
+		goFrame.location =3D window.location;
+	}
+}
+
+function isTopicOnly()
+{
+	if (gnTopicOnly =3D=3D -1)
+	{
+		var oParam =3D new Object();
+		oParam.oFrame =3D null;
+		var oMsg =3D new whMessage(WH_MSG_GETSTARTFRAME, this, 1, oParam);
+		if (SendMessage(oMsg))
+		{
+			goFrame =3D oParam.oFrame;
+			gnTopicOnly =3D 0;
+		}
+		else
+			gnTopicOnly =3D 1;
+	}
+	if (gnTopicOnly =3D=3D 1)
+		return true;
+	else
+		return false;
+}
+
+function websearch()
+{
+	if (gbNav4)
+	{
+		if (document.ehelpform)
+			document.ehelpform.submit();
+	}
+	else
+	{
+		if (window.ehelpform)
+			window.ehelpform.submit();
+	}
+}
+
+function addSearchFormHref(sHref)
+{
+	gsSearchFormHref =3D sHref;
+	enableWebSearch(true);
+}
+
+function searchB(nForm)
+{
+	var sValue =3D eval("document.searchForm" + nForm + =
+".searchString.value");
+	var oMsg =3D new whMessage(WH_MSG_SEARCHTHIS, this, 1, sValue);
+	SendMessage(oMsg);
+}
+
+function getSearchFormHTML()
+{
+	var sHTML =3D "";
+	gnForm ++;
+	var sFormName =3D "searchForm" + gnForm;
+	var sButton =3D "<form name=3D\"" + sFormName + "\" method=3D\"POST\" =
+action=3D\"javascript:searchB("+ gnForm + ")\">"
+	sButton +=3D "<input type=3D\"text\" name=3D\"searchString\" =
+value=3D\"- Full Text search -\" size=3D\"20\"/>";
+	if ("" =3D=3D "text")
+	{
+		sButton+=3D"<a class=3D\"searchbtn\" href=3D\"javascript:void(0);\" =
+onclick=3D\"" + sFormName + ".submit(); return false;\"></a>";
+	}
+	else if ("" =3D=3D "image")
+	{
+		sButton+=3D"<a class=3D\"searchbtn\" href=3D\"javascript:void(0);\" =
+onclick=3D\"" + sFormName + ".submit(); return false;\">"
+		sButton+=3D"<img src=3D\"\" border=3D0></a>";
+	}
+	sButton +=3D "</form>";
+	sHTML =3D"<td align=3D\"center\">" + sButton + "</td>";
+	return sHTML;
+}
+
+function showHidePane(bShow)
+{
+	var oMsg=3Dnull;
+	if (bShow)
+		oMsg=3Dnew whMessage(WH_MSG_SHOWPANE, this, 1, null);
+	else
+	 	oMsg=3Dnew whMessage(WH_MSG_HIDEPANE, this, 1, null);
+	SendMessage(oMsg);
+}
+
+function isShowHideEnable()
+{
+	if (gbIE4)
+		return true;
+	else
+		return false;
+}
+
+
+function PickupDialog_Invoke()
+{
+	if (!gbIE4 || gbMac)
+	{
+		if (typeof(_PopupMenu_Invoke)=3D=3D"function")
+			return _PopupMenu_Invoke(PickupDialog_Invoke.arguments);
+	}
+	else
+	{
+		if (PickupDialog_Invoke.arguments.length > 2)
+		{
+			var sPickup =3D "whskin_pickup.htm";
+			var sPickupPath=3DgsPPath+sPickup;=20
+			if (gbIE4)
+			{
+				var sFrame =3D PickupDialog_Invoke.arguments[1];
+				var aTopics =3D new Array();
+				for (var i =3D 2; i< PickupDialog_Invoke.arguments.length; i+=3D2)
+				{
+					var j=3DaTopics.length;
+					aTopics[j] =3D new Object();
+					aTopics[j].m_sName=3DPickupDialog_Invoke.arguments[i];
+					aTopics[j].m_sURL=3DPickupDialog_Invoke.arguments[i+1];
+				}
+
+				if (aTopics.length > 1)
+				{
+					var nWidth =3D 300;
+					var nHeight =3D180;
+					var	nScreenWidth=3Dscreen.width;
+					var	nScreenHeight=3Dscreen.height;
+					var nLeft=3D(nScreenWidth-nWidth)/2;
+					var nTop=3D(nScreenHeight-nHeight)/2;
+					if (gbIE4)
+					{
+						var vRet =3D =
+window.showModalDialog(sPickupPath,aTopics,"dialogHeight:"+nHeight+"px;di=
+alogWidth:"+nWidth+"px;resizable:yes;status:no;scroll:no;help:no;center:y=
+es;");
+						if (vRet)
+						{
+							var sURL =3D vRet.m_url;
+							if (sFrame)
+								window.open(sURL, sFrame);
+							else
+								window.open(sURL, "_self");
+						}
+					}
+				}
+				else if (aTopics.length =3D=3D 1)
+				{
+					var sURL =3D 	aTopics[0].m_sURL
+					if (sFrame)
+						window.open(sURL, sFrame);
+					else
+						window.open(sURL, "_self");
+				}
+			}
+		}
+	}
+}
+
+if(window.gbWhUtil&&window.gbWhMsg&&window.gbWhVer&&window.gbWhProxy)
+{
+	RegisterListener("bsscright", WH_MSG_GETAVIAVENUES);
+	RegisterListener("bsscright", WH_MSG_GETTOCPATHS);
+	RegisterListener("bsscright", WH_MSG_NEXT);
+	RegisterListener("bsscright", WH_MSG_PREV);
+	RegisterListener("bsscright", WH_MSG_WEBSEARCH);
+	if (gbMac && gbIE4)
+	{
+		if (typeof(window.onunload) !=3D "unknown")
+			whtopic_foldUnload =3D window.onunload;
+	}
+	else
+	{
+		if (window.onunload)
+			whtopic_foldUnload =3D window.onunload;
+	}
+	window.onunload =3D unRegisterListener;
+=09
+	gbWhTopic=3Dtrue;
+}
+else
+	document.location.reload();
+------=_NextPart_000_0000_01C8B986.C322C090--

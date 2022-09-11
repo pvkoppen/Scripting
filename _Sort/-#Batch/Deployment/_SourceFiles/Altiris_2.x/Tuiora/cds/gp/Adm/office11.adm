@@ -1,0 +1,2943 @@
+CLASS MACHINE
+
+CATEGORY "Microsoft Office 2003"
+CATEGORY "Custom Maintenance Wizard"
+POLICY "Allow CMW files from any location to be applied"
+KEYNAME Software\Policies\Microsoft\OfficeCustomMaintenanceWizard
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+			VALUENAME CMWSecure
+			VALUEON NUMERIC 0 ;reverse
+			VALUEOFF NUMERIC 1
+	END PART
+	PART " " TEXT
+	END PART
+	PART "By default, for users who are not administrators on their computers," TEXT
+	END PART
+	PART "CMW files must be located in the 'CMW' folder at the root of a valid" TEXT
+	END PART
+	PART "source location as defined by the Windows Installer Sourcelist for" TEXT
+	END PART
+	PART "that application (e.g. \\server\share\Officeimage\CMW). Use this" TEXT
+	END PART
+	PART "policy to change this behavior. For users who are administrators" TEXT
+	END PART
+	PART "on their computers the Custom Maintenance Wizard will allow CMW" TEXT
+	END PART
+	PART "files at any location to be applied." TEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Security Settings"
+POLICY "Disable VBA for Office applications"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common
+	PART "Disable VBA for Office applications" CHECKBOX
+		VALUENAME VbaOff
+	END PART
+	PART " " TEXT
+	END PART
+	PART "This setting will prevent Excel, FrontPage, Outlook, PowerPoint," TEXT
+	END PART
+	PART "Publisher and Word from using Visual Basic for Applications (VBA)," TEXT
+	END PART
+	PART "despite whether or not the VBA feature is installed. Changing this" TEXT
+	END PART
+	PART "setting will not install or remove the VBA files from the machine." TEXT
+	END PART
+	PART " " TEXT
+	END PART
+	PART "See the Office Resource Kit for more important information about" TEXT
+	END PART
+	PART "configuring security settings." TEXT
+	END PART
+	END POLICY
+POLICY "Automation Security"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Security
+	PART "Set the Automation Security level" DROPDOWNLIST
+		VALUENAME AutomationSecurity
+	ITEMLIST
+			NAME "Disable macros by default"			VALUE NUMERIC 3
+			NAME "Use application macro security level" 	VALUE NUMERIC 2
+			NAME "Macros enabled (default)"			VALUE NUMERIC 1 DEFAULT
+	END ITEMLIST
+	END PART
+	END POLICY
+POLICY "Word: Macro Security Level"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Security
+	PART "Security Level" DROPDOWNLIST
+		VALUENAME Level
+	ITEMLIST
+			NAME "Very High"	VALUE NUMERIC 4
+			NAME "High"		VALUE NUMERIC 3	DEFAULT
+			NAME "Medium"	VALUE NUMERIC 2
+			NAME "Low"		VALUE NUMERIC 1
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Word: Trust all installed add-ins and templates"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Security
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DontTrustInstalledFiles
+		VALUEON NUMERIC 0 ;reverse
+		VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Word: Trust access to Visual Basic Project"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Security
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AccessVBOM
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Excel: Macro Security Level"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Security
+	PART "Security Level" DROPDOWNLIST
+		VALUENAME Level
+	ITEMLIST
+			NAME "Very High"	VALUE NUMERIC 4
+			NAME "High"		VALUE NUMERIC 3	DEFAULT
+			NAME "Medium"	VALUE NUMERIC 2
+			NAME "Low"		VALUE NUMERIC 1
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Excel: Trust all installed add-ins and templates"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Security
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DontTrustInstalledFiles
+		VALUEON NUMERIC 0 ;reverse
+		VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Excel: Trust access to Visual Basic Project"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Security
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AccessVBOM
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Access: Macro Security Level"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\Security	
+	PART "Security Level" DROPDOWNLIST
+	VALUENAME Level
+	ITEMLIST
+		NAME "High"		VALUE NUMERIC 3
+		NAME "Medium"	VALUE NUMERIC 2	DEFAULT
+		NAME "Low"		VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Access: Trust all installed add-ins and templates"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Access\Security
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DontTrustInstalledFiles
+		VALUEON NUMERIC 0 ;reverse
+		VALUEOFF NUMERIC 1
+	END PART
+	PART " " TEXT
+	END PART
+	PART "In Access this setting is used for COM add-ins only." TEXT
+	END PART
+	END POLICY
+POLICY "PowerPoint: Macro Security Level"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Security
+	PART "Security Level" DROPDOWNLIST
+		VALUENAME Level
+	ITEMLIST
+			NAME "Very High"	VALUE NUMERIC 4
+			NAME "High"		VALUE NUMERIC 3	DEFAULT
+			NAME "Medium"	VALUE NUMERIC 2
+			NAME "Low"		VALUE NUMERIC 1
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "PowerPoint: Trust all installed add-ins and templates"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Security
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DontTrustInstalledFiles
+		VALUEON NUMERIC 0 ;reverse
+		VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "PowerPoint: Trust access to Visual Basic Project"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Security
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AccessVBOM
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Publisher: Macro Security Level"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Security
+	PART "Security Level" DROPDOWNLIST
+		VALUENAME Level
+	ITEMLIST
+			NAME "Very High"	VALUE NUMERIC 4
+			NAME "High"		VALUE NUMERIC 3	DEFAULT
+			NAME "Medium"	VALUE NUMERIC 2
+			NAME "Low"		VALUE NUMERIC 1
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Publisher: Trust all installed add-ins and templates"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Security
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DontTrustInstalledFiles
+		VALUEON NUMERIC 0 ;reverse
+		VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Outlook: Macro Security Level"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Outlook\Security
+	PART "Security Level" DROPDOWNLIST
+		VALUENAME Level
+	ITEMLIST
+			NAME "Very High"	VALUE NUMERIC 4
+			NAME "High"		VALUE NUMERIC 3	DEFAULT
+			NAME "Medium"	VALUE NUMERIC 2
+			NAME "Low"		VALUE NUMERIC 1
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CLASS USER
+
+CATEGORY "Microsoft Office 2003"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\General
+CATEGORY "Tools | Customize | Options"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Toolbars
+POLICY "Always show full menus"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AdaptiveMenus
+		VALUEON NUMERIC 0 ;reverse
+		VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Show full menus after a short delay"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AutoExpandMenus
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Large icons"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME BtnSize
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "List font names in their font"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME FontView
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Show ScreenTips on toolbars"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME Tooltips
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Show shortcut keys in ScreenTips"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME ShowKbdShortcuts
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Menu animations"
+	PART "Menu animations" DROPDOWNLIST
+		VALUENAME Animation
+	ITEMLIST
+			NAME "(System Default)"		VALUE NUMERIC 0	DEFAULT
+			NAME "Random"	VALUE NUMERIC 1
+			NAME "Unfold"	VALUE NUMERIC 2
+			NAME "Slide"		VALUE NUMERIC 3
+			NAME "Fade"		VALUE NUMERIC 4
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Tools | AutoCorrect Options... (Excel, PowerPoint and Access)"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\AutoCorrect
+CATEGORY "Smart Tags"
+KEYNAME "Software\Policies\Microsoft\Office\Common\Smart Tag"
+POLICY "More Smart Tags URL"
+	PART "More Smart Tags URL:" EDITTEXT
+		VALUENAME CheckForNewSmartTags
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Leave field blank to disable the 'More Smart Tags...' button" TEXT
+	END PART
+	END POLICY
+POLICY "Check for new actions URL"
+	PART "Check for new actions URL" EDITTEXT
+		VALUENAME CheckForNewActions
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Leave field blank to not show 'Check for new actions' for smart tags" TEXT
+	END PART
+	END POLICY
+POLICY "No Smart Tag Actions in Word"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME NoSmartTagActions
+		VALUEON NUMERIC 2
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Recognize smart tags in Excel"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME RecognizeSmartTags
+		VALUEON NUMERIC 2
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+POLICY "Show AutoCorrect Options buttons"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME FACOptions
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Correct TWo INitial CApitals"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME CorrectTwoInitialCapitals
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Capitalize first letter of sentence"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME CapitalizeSentence
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Capitalize names of days"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME CapitalizeNamesOfDays
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Correct accidental use of cAPS LOCK key"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME ToggleCapsLock
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Replace text as you type"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME ReplaceText
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Tools | Options | General | Web Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Internet
+CATEGORY "General"
+POLICY "Rely on CSS for font formatting"
+	PART "Check to enforce CSS on; uncheck to enforce CSS off" CHECKBOX
+		VALUENAME DoNotRelyOnCSS
+		VALUEON NUMERIC 0 ;Reverse
+		VALUEOFF NUMERIC 1
+	END PART
+	PART "Use the CSS setting for Word as an E-mail editor" CHECKBOX
+		VALUENAME UseRelyOnCSSForMail
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Files"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Internet
+POLICY "Organize supporting files in a folder"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DoNotOrganizeInFolder
+		VALUEON NUMERIC 0 ;Reverse
+		VALUEOFF NUMERIC 1
+	END PART
+	PART " " TEXT
+	END PART
+	PART "This will be forced on if 'Use long file names' is forced off." TEXT
+	END PART
+	END POLICY
+POLICY "Use long file names whenever possible"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DoNotUseLongFileNames
+		VALUEON NUMERIC 0 ;Reverse
+		VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Update links on save"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DoNotUpdateLinksOnSave
+		VALUEON NUMERIC 0 ;Reverse
+		VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Check if Office is the default editor for Web pages created in Office"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DoNotCheckIfOfficeIsHTMLEditor
+		VALUEON NUMERIC 0 ;Reverse
+		VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Open Office documents as read/write while browsing"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME OpenDocumentsReadWriteWhileBrowsing
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "When checked, Office documents (*.doc, *.xls, *.ppt) on web servers" TEXT
+	END PART
+	PART "are opened as read/write when browsed to using Internet Explorer." TEXT
+	END PART
+	PART "When unchecked, Office documents are opened as read-only." TEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Browsers"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Internet
+POLICY "Rely on VML for displaying graphics in browsers"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME RelyOnVML
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Allow PNG as an output format"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AllowPNG
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Target monitor"
+	PART "Screen size" DROPDOWNLIST
+		VALUENAME ScreenSize
+	ITEMLIST
+			NAME	"544 x 376"		VALUE "544x376"
+			NAME	"640 x 480"		VALUE "640x480"
+			NAME	"720 x 512"		VALUE "720x512"
+			NAME	"800 x 600"		VALUE "800x600"	DEFAULT
+			NAME	"1024 x 768"		VALUE "1024x768"	
+			NAME	"1152 x 882"		VALUE "1152x882"
+			NAME	"1152 x 900"		VALUE "1152x900"	
+			NAME	"1280 x 1024"	VALUE "1280x1024"
+			NAME	"1600 x 1200"	VALUE "1600x1200"
+			NAME	"1800 x 1440"	VALUE "1800x1440"
+			NAME	"1920 x 1200"	VALUE "1920x1200"
+	END ITEMLIST
+		NOSORT
+	END PART
+	PART "Pixels per inch" DROPDOWNLIST
+		VALUENAME PixelsPerInch
+	ITEMLIST
+			NAME	"72"		VALUE NUMERIC 72
+			NAME	"96"		VALUE NUMERIC 96	DEFAULT
+			NAME	"120"	VALUE NUMERIC 120
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Encoding"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Internet
+POLICY "Default or specific encoding"
+	PART "Always save Web pages in the default encoding" CHECKBOX
+		VALUENAME AlwaysSaveInDefaultEncoding
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Save this document as" DROPDOWNLIST
+		VALUENAME Encoding
+	ITEMLIST
+			NAME	"Arabic Alphabet (Windows)"		VALUE	NUMERIC	1256	
+			NAME	"Baltic Alphabet (ISO)"		VALUE	NUMERIC	28594	
+			NAME	"Baltic Alphabet (Windows)"		VALUE	NUMERIC	1257	
+			NAME	"Central European (DOS)"		VALUE	NUMERIC	852	
+			NAME	"Central European Alphabet (ISO)"		VALUE	NUMERIC	28592	
+			NAME	"Central European Alphabet (Windows)"		VALUE	NUMERIC	1250	
+			NAME	"Chinese Simplified (GB2312)"		VALUE	NUMERIC	936	
+			NAME	"Chinese Simplified (HZ)"		VALUE	NUMERIC	52936	
+			NAME	"Chinese Traditional (Big 5)"		VALUE	NUMERIC	950	
+			NAME	"Cyrillic Alphabet (DOS)"		VALUE	NUMERIC	866	
+			NAME	"Cyrillic Alphabet (ISO)"		VALUE	NUMERIC	28595	
+			NAME	"Cyrillic Alphabet (KOI8-R)"		VALUE	NUMERIC	20866	
+			NAME	"Cyrillic Alphabet (Windows)"		VALUE	NUMERIC	1251	
+			NAME	"Greek Alphabet (ISO)"		VALUE	NUMERIC	28597	
+			NAME	"Greek Alphabet (Windows)"		VALUE	NUMERIC	1253	
+			NAME	"Hebrew Alphabet (Windows)"		VALUE	NUMERIC	1255	
+			NAME	"Japanese (EUC)"		VALUE	NUMERIC	51932	
+			NAME	"Japanese (JIS)"		VALUE	NUMERIC	50220	
+			NAME	"Japanese (JIS-Allow 1 byte Kana - SO/SI)"	VALUE	NUMERIC	50222	
+			NAME	"Japanese (JIS-Allow 1 byte Kana)"		VALUE	NUMERIC	50221	
+			NAME	"Japanese (Shift-JIS)"		VALUE	NUMERIC	932	
+			NAME	"Korean"		VALUE	NUMERIC	949	
+			NAME	"Latin 3 Alphabet (ISO)"		VALUE	NUMERIC	28593	
+			NAME	"Thai (Windows)"		VALUE	NUMERIC	874	
+			NAME	"Turkish Alphabet"		VALUE	NUMERIC	1254	
+			NAME	"Ukrainian Alphabet (KOI8-RU)"		VALUE	NUMERIC	21866	
+			NAME	"Universal Alphabet"		VALUE	NUMERIC	1200	
+			NAME	"Universal Alphabet (Big-Endian)"		VALUE	NUMERIC	1201	
+			NAME	"Universal Alphabet (UTF-8)"		VALUE	NUMERIC	65001	
+			NAME	"Vietnamese Alphabet (Windows)"		VALUE	NUMERIC	1258	
+			NAME	"Visual Hebrew (ISO)"		VALUE	NUMERIC	28598	
+			NAME	"Western Alphabet (Windows)"		VALUE	NUMERIC	1252	DEFAULT
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Tools | Options | General | Service Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\General
+POLICY "Do not automatically show Template Taskpane when opening Template"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME NoAutoTTP
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Completely disable Template Taskpane"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME NoTTP
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+CATEGORY "Online Content"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Internet
+POLICY "Online content options"
+	PART "Online content options" DROPDOWNLIST
+		VALUENAME UseOnlineContent
+	ITEMLIST
+			NAME "Never show online content or entry points" VALUE NUMERIC 0
+			NAME "Search only offline content whenever available" VALUE NUMERIC 1
+			NAME "Search online content whenever available" VALUE NUMERIC 2
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Hide Spotlight entry point"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Internet
+	PART "Check to Hide Spotlight entry point" CHECKBOX
+				VALUENAME ShowSpotlight
+				VALUEON NUMERIC 0
+				VALUEOFF NUMERIC 2
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Shared Workspace"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\DWS
+POLICY "Check for workspace updates:"
+	PART "Check for workspace updates every: (min)" NUMERIC
+			VALUENAME PollingInterval
+			SPIN 1
+			MIN 1
+			MAX 999
+			DEFAULT 10
+	END PART
+	END POLICY
+POLICY "Show the Shared Workspace pane at startup when:"
+	PART "There is important status information:" CHECKBOX
+			VALUENAME ShowDWSPaneAlerts
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	PART "The document is part of a workspace or Sharepoint site" CHECKBOX
+			VALUENAME ShowDWSPane
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Automatic Discovery"
+KEYNAME Software\Policies\Microsoft\Office\11.0\SharePointTracking
+	PART "Automatic Discovery:" DROPDOWNLIST
+			VALUENAME AutomaticDiscovery
+	ITEMLIST
+				NAME 	"On" VALUE On
+				NAME  "Off"   VALUE Off
+	END ITEMLIST
+			NOSORT
+	END PART
+	END POLICY
+POLICY "Disable user from setting personal site as default location"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Portal
+	PART "Check to disable user from setting personal site as default location" CHECKBOX
+				VALUENAME DisableSetPersonalSite
+				VALUEON NUMERIC 1
+				VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Disable the Shared Attachments option in Outlook mail messages"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\MailSettings
+	PART "Check to disable Shared Attachments options" CHECKBOX
+				VALUENAME DisableSharingOptions
+				VALUEON NUMERIC 1
+				VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+CATEGORY "Define Shared Workspace URL's"
+KEYNAME Software\Policies\Microsoft\Office\11.0\SharePointTracking
+POLICY "Site 1: "
+KEYNAME Software\Policies\Microsoft\Office\11.0\SharePointTracking\Name0
+	PART "Name: " EDITTEXT
+					VALUENAME Name
+	END PART
+	PART "URL: " EDITTEXT
+					VALUENAME URL
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+END CATEGORY
+CATEGORY "Tools | Options | Spelling"
+KEYNAME "Software\Policies\Microsoft\Shared Tools\Proofing Tools\Spelling"
+POLICY "Use German post-reform rules when running spell check"
+KEYNAME "Software\Policies\Microsoft\Shared Tools\Proofing Tools\Spelling"
+	PART "Check to use German post-reform rules when running spell check" CHECKBOX
+			VALUENAME GermanPostReform
+			VALUEON NUMERIC 1 DEFCHECKED
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Help"
+POLICY "Microsoft Office Online"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Internet
+	PART "Microsoft Office Online URL" EDITTEXT
+		VALUENAME OfficeOnTheWeb
+	END PART
+	END POLICY
+CATEGORY "Help | Customer Feedback Options..."
+KEYNAME Software\Policies\Microsoft\Office\Common
+POLICY "Enable Customer Experience Improvement Program"
+	PART "Check to enable Customer Experience Improvement Program" CHECKBOX
+			VALUENAME QMEnable
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Help | Detect and Repair..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\General
+POLICY "Restore my shortcuts while repairing"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME RestoreShortcuts
+	END PART
+	END POLICY
+POLICY "Discard my customized settings and restore default settings"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME ResetSettings
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Security Settings"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common
+POLICY "Disable VBA for Office applications"
+	PART "Disable VBA for Office applications" CHECKBOX
+		VALUENAME VbaOff
+	END PART
+	PART " " TEXT
+	END PART
+	PART "This setting will prevent Excel, FrontPage, Outlook, PowerPoint," TEXT
+	END PART
+	PART "Publisher and Word from using Visual Basic for Applications (VBA)," TEXT
+	END PART
+	PART "despite whether or not the VBA feature is installed. Changing this" TEXT
+	END PART
+	PART "setting will not install or remove the VBA files from the machine." TEXT
+	END PART
+	PART " " TEXT
+	END PART
+	PART "See the Office Resource Kit for more important information about" TEXT
+	END PART
+	PART "configuring security settings." TEXT
+	END PART
+	END POLICY
+POLICY "ActiveX Control Initialization"
+KEYNAME Software\Policies\Microsoft\Office\Common\Security
+	PART "For full details on this policy, please see:" TEXT
+	END PART
+	PART "http://www.microsoft.com/office/ork/2003/seven/ch26/secd01.htm" TEXT
+	END PART
+	PART "ActiveX Control Initialization:" DROPDOWNLIST
+		VALUENAME UFIControls
+	ITEMLIST
+			NAME  "1" 	VALUE NUMERIC 1
+			NAME  "2"   	VALUE NUMERIC 2
+			NAME  "3"	VALUE NUMERIC 3
+			NAME  "4"	VALUE NUMERIC 4
+			NAME  "5" 	VALUE NUMERIC 5
+			NAME  "6"	VALUE NUMERIC 6
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Load Controls in UserForms"
+KEYNAME Software\Policies\Microsoft\VBA\Security
+	PART "For full details on this policy, please see:" TEXT
+	END PART
+	PART "http://www.microsoft.com/office/ork/2003/seven/ch26/secd01.htm" TEXT
+	END PART
+	PART "Load Controls in UserForms:" DROPDOWNLIST
+		VALUENAME LoadControlsInForms
+	ITEMLIST
+			NAME  "1" 	VALUE NUMERIC 1
+			NAME  "2"   	VALUE NUMERIC 2
+			NAME  "3"	VALUE NUMERIC 3
+			NAME  "4"	VALUE NUMERIC 4
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Automation Security"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Security
+	PART "Set the Automation Security level" DROPDOWNLIST
+		VALUENAME AutomationSecurity
+	ITEMLIST
+			NAME "Disable macros by default"			VALUE NUMERIC 3
+			NAME "Use application macro security level" 	VALUE NUMERIC 2
+			NAME "Macros enabled (default)"			VALUE NUMERIC 1 DEFAULT
+	END ITEMLIST
+	END PART
+	END POLICY
+POLICY "Prevent downloading of all HTTP images in binary Office documents"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+ 		VALUENAME BlockHTTPImages
+ 		VALUEON NUMERIC 1
+ 		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Prevent users from changing Office encryption settings"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Security
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DisableCustomEncryption
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "This setting will disable the Advanced... button on the Tools |" TEXT
+	END PART
+	PART "Options | Security tab.  These encryption settings are used when" TEXT
+	END PART
+	PART "saving Word, Excel, and PowerPoint files." TEXT
+	END PART
+	END POLICY
+POLICY "Specify Trusted Alert Sources"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Common\Security\Trusted Alert Sources"
+	PART "Check to enable all sites as safe subscription sources" CHECKBOX
+		VALUENAME All
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	PART "Check to enable all intranet sites as safe subscription sources" CHECKBOX
+		VALUENAME AllIntranet
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	PART "Check for trusted-zone sites to be safe for subscription sources" CHECKBOX
+		VALUENAME AllTrusted
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Prevent Word and Excel from loading managed code extensions"
+KEYNAME "Software\Policies\Microsoft\Office\Common\Smart Tag"
+	PART "Check to prevent loading of managed code extensions" CHECKBOX
+		VALUENAME DisableDocumentAssemblies
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Disable hyperlink warnings"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Office\Security
+	PART "Check to override hyperlink warning" CHECKBOX
+		VALUENAME DisableHyperLinkWarning
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Disable password to open UI"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Security
+	PART "Check to disable password to open UI" CHECKBOX
+		VALUENAME DisablePasswordUI
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Download Office Controls"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Internet
+	PART "Allow Office to download Controls" CHECKBOX
+		VALUENAME DownloadComponents
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Shared paths"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\General
+POLICY "User templates path"
+	PART "User templates path" EDITTEXT
+		VALUENAME UserTemplates
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Workgroup templates path"
+	PART "Workgroup templates path" EDITTEXT
+		VALUENAME SharedTemplates
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Shared themes path"
+	PART "Shared themes path" EDITTEXT
+		VALUENAME WorkgroupThemes
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "User queries path"
+	PART "User queries path" EDITTEXT
+		VALUENAME UserQueriesFolder
+		EXPANDABLETEXT
+	END PART
+	PART " " TEXT
+	END PART
+	PART "(Enclose path in double quotes)" TEXT
+	END PART
+	END POLICY
+POLICY "Web Query dialog home page"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Web Query dialog home page" EDITTEXT
+		VALUENAME WebQueryHomePage
+		EXPANDABLETEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Save My Settings Wizard"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\General\settings
+POLICY "Default location to store settings file (OPS)"
+	PART "Enter full path including filename (cannot be a URL):" EDITTEXT
+		VALUENAME defaultOPSfile
+		EXPANDABLETEXT
+	END PART
+	PART "Environment variables such as %username% can be used." TEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Assistant"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Assistant
+CATEGORY "General"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Assistant
+POLICY "Choose Assistant file"
+KEYNAME Software\Policies\Microsoft\Office\Common\Assistant
+	PART "Choose Assistant file" COMBOBOX
+		VALUENAME AsstFile
+		DEFAULT "rocky.acs"
+		SUGGESTIONS
+			"clippit.acs"
+			"dot.acs"
+			"F1.acs"
+			"logo.acs"
+			"mnature.acs"
+			"offcat.acs"
+			"rocky.acs"
+			"dolphin.acs"
+			"saeko.acs"
+			"mnkyking.acs"
+		END SUGGESTIONS
+		REQUIRED
+	END PART
+	END POLICY
+POLICY "Tip timeout"
+	PART "Time tip bulb remains on (s)" NUMERIC
+		VALUENAME AsstTipTimeout
+		SPIN 1
+		MIN 0
+		DEFAULT 20
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Options Tab"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Assistant
+POLICY "Use the Office Assistant"
+KEYNAME Software\Policies\Microsoft\Office\Common\Assistant
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AsstState
+		VALUEON NUMERIC 21
+		VALUEOFF NUMERIC 38
+	END PART
+	END POLICY
+POLICY "Help with wizards"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AsstAssistWithWizards
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Display alerts"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AsstAssistWithAlerts
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Search for both product and programming help"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AsstSearchInProgram
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Move when in the way"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AsstMoveWhenInTheWay
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Make sounds"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AsstSounds
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Using features more effectively"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AsstFeatureTips
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Using the mouse more effectively"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AsstMousetips
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Keyboard shortcuts"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AsstKeyboardShortcutTips
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Only show high priority tips"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AsstOnlyHighPriorityTips
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Show the Tip of the Day at startup"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AsstShowTipOfDay
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Language settings"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\LanguageResources
+CATEGORY "User Interface"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\LanguageResources
+POLICY "Display menus and dialog boxes in"
+	PART "Display menus and dialog boxes in" DROPDOWNLIST
+		VALUENAME UILanguage
+	ITEMLIST
+			NAME "(same as the system)" VALUE NUMERIC 0 DEFAULT
+			NAME "Arabic" VALUE NUMERIC 1025
+			NAME "Bulgarian" VALUE NUMERIC 1026
+			NAME "Chinese (Simplified)" VALUE NUMERIC 2052
+			NAME "Chinese (Traditional)" VALUE NUMERIC 1028
+			NAME "Croatian" VALUE NUMERIC 1050
+			NAME "Czech" VALUE NUMERIC 1029
+			NAME "Danish" VALUE NUMERIC 1030
+			NAME "Dutch" VALUE NUMERIC 1043
+			NAME "English (U.S.)" VALUE NUMERIC 1033
+			NAME "Estonian" VALUE NUMERIC 1061
+			NAME "Finnish" VALUE NUMERIC 1035
+			NAME "French" VALUE NUMERIC 1036
+			NAME "German" VALUE NUMERIC 1031
+			NAME "Greek" VALUE NUMERIC 1032
+			NAME "Hebrew" VALUE NUMERIC 1037
+			NAME "Hindi" VALUE NUMERIC 1081
+			NAME "Hungarian" VALUE NUMERIC 1038
+			NAME "Italian" VALUE NUMERIC 1040
+			NAME "Japanese" VALUE NUMERIC 1041
+			NAME "Korean" VALUE NUMERIC 1042
+			NAME "Latvian" VALUE NUMERIC 1062
+			NAME "Lithuanian" VALUE NUMERIC 1063
+			NAME "Norwegian (Bokmål)" VALUE NUMERIC 1044
+			NAME "Polish" VALUE NUMERIC 1045
+			NAME "Portuguese (Portugal)" VALUE NUMERIC 2070
+			NAME "Portuguese (Brazil)" VALUE NUMERIC 1046
+			NAME "Romanian" VALUE NUMERIC 1048
+			NAME "Russian" VALUE NUMERIC 1049
+			NAME "Serbian (Latin)" VALUE NUMERIC 2074
+			NAME "Slovak" VALUE NUMERIC 1051
+			NAME "Slovenian" VALUE NUMERIC 1060
+			NAME "Spanish" VALUE NUMERIC 3082
+			NAME "Swedish" VALUE NUMERIC 1053
+			NAME "Thai" VALUE NUMERIC 1054
+			NAME "Turkish" VALUE NUMERIC 1055
+			NAME "Ukrainian" VALUE NUMERIC 1058
+	END ITEMLIST
+		NOSORT
+	END PART
+	PART " " TEXT
+	END PART
+	PART "In addition to configuring this setting, consider enabling" TEXT
+	END PART
+	PART "the same language in the 'Show controls and enable editing" TEXT
+	END PART
+	PART "for' policy node." TEXT
+	END PART
+	END POLICY
+POLICY "Display help in"
+	PART "Display help in" DROPDOWNLIST
+		VALUENAME HelpLanguage
+	ITEMLIST
+			NAME "(same as the system)" VALUE NUMERIC 0 DEFAULT
+			NAME "Arabic" VALUE NUMERIC 1025
+			NAME "Bulgarian" VALUE NUMERIC 1026
+			NAME "Chinese (Simplified)" VALUE NUMERIC 2052
+			NAME "Chinese (Traditional)" VALUE NUMERIC 1028
+			NAME "Croatian" VALUE NUMERIC 1050
+			NAME "Czech" VALUE NUMERIC 1029
+			NAME "Danish" VALUE NUMERIC 1030
+			NAME "Dutch" VALUE NUMERIC 1043
+			NAME "English (U.S.)" VALUE NUMERIC 1033
+			NAME "Estonian" VALUE NUMERIC 1061
+			NAME "Finnish" VALUE NUMERIC 1035
+			NAME "French" VALUE NUMERIC 1036
+			NAME "German" VALUE NUMERIC 1031
+			NAME "Greek" VALUE NUMERIC 1032
+			NAME "Hebrew" VALUE NUMERIC 1037
+			NAME "Hindi" VALUE NUMERIC 1081
+			NAME "Hungarian" VALUE NUMERIC 1038
+			NAME "Italian" VALUE NUMERIC 1040
+			NAME "Japanese" VALUE NUMERIC 1041
+			NAME "Korean" VALUE NUMERIC 1042
+			NAME "Latvian" VALUE NUMERIC 1062
+			NAME "Lithuanian" VALUE NUMERIC 1063
+			NAME "Norwegian (Bokmål)" VALUE NUMERIC 1044
+			NAME "Polish" VALUE NUMERIC 1045
+			NAME "Portuguese (Portugal)" VALUE NUMERIC 2070
+			NAME "Portuguese (Brazil)" VALUE NUMERIC 1046
+			NAME "Romanian" VALUE NUMERIC 1048
+			NAME "Russian" VALUE NUMERIC 1049
+			NAME "Serbian (Latin)" VALUE NUMERIC 2074 
+			NAME "Slovak" VALUE NUMERIC 1051
+			NAME "Slovenian" VALUE NUMERIC 1060
+			NAME "Spanish" VALUE NUMERIC 3082
+			NAME "Swedish" VALUE NUMERIC 1053
+			NAME "Thai" VALUE NUMERIC 1054
+			NAME "Turkish" VALUE NUMERIC 1055
+			NAME "Ukrainian" VALUE NUMERIC 1058
+	END ITEMLIST
+		NOSORT
+	END PART
+	PART " " TEXT
+	END PART
+	PART "In addition to configuring this setting, consider enabling" TEXT
+	END PART
+	PART "the same language in the 'Show controls and enable editing" TEXT
+	END PART
+	PART "for' policy node." TEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Enabled Languages"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\LanguageResources
+CATEGORY "Show controls and enable editing for"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\LanguageResources
+POLICY "Afrikaans"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1078
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Albanian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1052
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Amharic"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1118
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Arabic"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1025
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Armenian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1067
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Assamese"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1101
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Azeri (Cyrillic)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2092
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Azeri (Latin)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1068
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Basque"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1069
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Belarusian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1059
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Bengali"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1093
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Bengali (Bangladesh)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2117
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Bulgarian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1026
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Catalan"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1027
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Cherokee"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1116
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Chinese (Traditional)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1028
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Chinese (Simplified)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2052
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Croatian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1050
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Czech"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1029
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Danish"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1030
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Divehi"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1125
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Dutch"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1043
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Edo"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1126
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "English (U.S.)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1033
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "English (U.K.)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2057
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "English (Australia)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 3081
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "English (Canada)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 4105
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Estonian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1061
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Faeroese"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1080
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Farsi"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1065
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Filipino"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1124
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Finnish"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1035
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "French (Canada)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 3084
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "French"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1036
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Frisian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1122
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Fulfulde"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1127
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "FYRO Macedonian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1071
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Gaelic (Ireland)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2108
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Galician"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1110
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Georgian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1079
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "German (Switzerland)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2055
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "German (Austria)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 3079
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "German"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1031
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Greek"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1032
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Guarani"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1140
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Gujarati"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1095
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Hausa"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1128
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Hawaiian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1141
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Hebrew"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1037
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Hindi"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1081
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Hungarian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1038
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Ibibio"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1129
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Icelandic"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1039
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Igbo"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1136
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Indonesian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1057
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Inuktitut"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1117
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Italian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1040
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Japanese"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1041
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Kannada"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1099
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Kanuri"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1137
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Kashmiri"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2144
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Kashmiri (Arabic)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1120
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Kazakh"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1087
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Konkani"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1111
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Korean"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1042
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Kyrgyz"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1088
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Latin"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1142
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Latvian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1062
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Lithuanian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1063
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Malay"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1086
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Malayalam"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1100
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Manipuri"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1112
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Marathi"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1102
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Mongolian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1104
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Nepali"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1121
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Norwegian (Bokmål)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1044
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Norwegian (Nynorsk)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2068
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Oriya"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1096
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Oromo"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1138
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Papiamentu"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1145
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Pashto"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1123
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Polish"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1045
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Portuguese (Brazil)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1046
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Portuguese (Portugal)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2070
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Punjabi"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1094
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Punjabi (Pakistan)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2118
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Romanian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1048
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Russian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1049
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Sanskrit"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1103
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Serbian (Latin)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2074
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Serbian (Cyrillic)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 3098
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Sindhi (India)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1113
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Sindhi (Pakistan)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2137
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Sinhalese"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1115
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Slovak"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1051
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Slovenian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1060
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Somali"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1143
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Spanish"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 3082
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Swahili"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1089
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Swedish"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1053
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Syriac"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1114
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Tajik"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1064
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Tamazight (Arabic)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1119
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Tamazight (Latin)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2143
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Tamil"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1097
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Tatar"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1092
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Telugu"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1098
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Thai"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1054
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Tigrigna (Eritrea)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2163
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Tigrigna (Ethiopia)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1139
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Turkish"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1055
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Turkmen"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1090
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Ukrainian"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1058
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Urdu"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1056
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Uzbek (Cyrillic)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 2115
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Uzbek (Latin)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1091
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Vietnamese"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1066
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Welsh"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1106
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Yi"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1144
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Yiddish"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1085
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+POLICY "Yoruba"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME 1130
+		VALUEON "On"
+		VALUEOFF "Off"
+	END PART
+	END POLICY
+END CATEGORY
+POLICY "Installed version of Microsoft Office"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\LanguageResources
+	PART "Installed version of Microsoft Office" DROPDOWNLIST
+	VALUENAME InstallLanguage
+	ITEMLIST
+	NAME	"Arabic"	VALUE NUMERIC	1025
+	NAME	"Basque"	VALUE NUMERIC	1069
+	NAME    "Bulgarian"	VALUE NUMERIC	1026
+	NAME    "Catalan"	VALUE NUMERIC	1027
+	NAME	"Chinese (Simplified)"	VALUE NUMERIC	2052
+	NAME	"Chinese (Traditional)"	VALUE NUMERIC	1028
+	NAME	"Croatian"	VALUE NUMERIC	1050
+	NAME	"Czech"	VALUE NUMERIC	1029
+	NAME	"Danish"	VALUE NUMERIC	1030
+	NAME	"Dutch"	VALUE NUMERIC	1043
+	NAME	"English (Australia)"	VALUE NUMERIC	3081
+	NAME	"English (Canada)"	VALUE NUMERIC	4105
+	NAME	"English (U.K.)"	VALUE NUMERIC	2057
+	NAME	"English (U.S.)"	VALUE NUMERIC	1033
+	NAME	"Estonian"	VALUE NUMERIC	1061
+	NAME	"Finnish"	VALUE NUMERIC	1035
+	NAME	"French"	VALUE NUMERIC	1036
+	NAME	"French (Canada)"	VALUE NUMERIC	3084
+	NAME	"German"	VALUE NUMERIC	1031
+	NAME	"German (Austria)"	VALUE NUMERIC	3079
+	NAME	"German (Switzerland)"	VALUE NUMERIC	2055
+	NAME	"Greek"	VALUE NUMERIC	1032
+	NAME	"Hebrew"	VALUE NUMERIC	1037
+	NAME	"Hungarian"	VALUE NUMERIC	1038
+	NAME	"Indic"	VALUE NUMERIC	1081
+	NAME	"Italian"	VALUE NUMERIC	1040
+	NAME	"Japanese"	VALUE NUMERIC	1041
+	NAME	"Korean"	VALUE NUMERIC	1042
+	NAME	"Latvian"	VALUE NUMERIC	1062
+	NAME	"Lithuanian"	VALUE NUMERIC	1063
+	NAME	"Norwegian (Bokmål)"	VALUE NUMERIC	1044
+	NAME	"Norwegian (Nynorsk)"	VALUE NUMERIC	2068
+	NAME	"Polish"	VALUE NUMERIC	1045
+	NAME	"Portuguese (Portugal)"	VALUE NUMERIC	2070
+	NAME	"Portuguese (Brazil)"	VALUE NUMERIC	1046
+	NAME	"Romanian"	VALUE NUMERIC	1048
+	NAME	"Russian"	VALUE NUMERIC	1049
+	NAME	"Serbian (Cyrillic)"	VALUE NUMERIC	3098
+	NAME	"Serbian (Latin)"	VALUE NUMERIC	2074
+	NAME	"Slovak"	VALUE NUMERIC	1051
+	NAME	"Slovenian"	VALUE NUMERIC	1060
+	NAME	"Spanish"	VALUE NUMERIC	3082
+	NAME	"Swedish"	VALUE NUMERIC	1053
+	NAME	"Thai"	VALUE NUMERIC	1054
+	NAME	"Turkish"	VALUE NUMERIC	1055
+	NAME	"Ukrainian"	VALUE NUMERIC	1058
+	NAME	"Vietnamese"	VALUE NUMERIC	1066
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART " " TEXT
+	END PART
+	PART "In addition to configuring this setting, consider enabling" TEXT
+	END PART
+	PART "the same language in the 'Show controls and enable editing" TEXT
+	END PART
+	PART "for' policy node." TEXT
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Please refer to the Office Resouce Kit documentation for important" TEXT
+	END PART
+	PART "information on setting the installed version of Microsoft Office." TEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Other"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\LanguageResources
+POLICY "Office on the Web language"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\LanguageResources
+	PART "Office on the Web language" DROPDOWNLIST
+	VALUENAME WebLocale
+	ITEMLIST
+		NAME "Afrikaans" VALUE NUMERIC 1078
+		NAME "Albanian" VALUE NUMERIC 1052
+		NAME "Amharic" VALUE NUMERIC 1118
+		NAME "Arabic" VALUE NUMERIC 1025
+		NAME "Armenian" VALUE NUMERIC 1067
+		NAME "Assamese" VALUE NUMERIC 1101
+		NAME "Azeri (Cyrillic)" VALUE NUMERIC 2092
+		NAME "Azeri (Latin)" VALUE NUMERIC 1068
+		NAME "Basque" VALUE NUMERIC 1069
+		NAME "Belarusian" VALUE NUMERIC 1059
+		NAME "Bengali" VALUE NUMERIC 1093
+		NAME "Bengali (Bangladesh)" VALUE NUMERIC 2117 
+		NAME "Bulgarian" VALUE NUMERIC 1026
+		NAME "Catalan" VALUE NUMERIC 1027
+		NAME "Cherokee" VALUE NUMERIC 1116
+		NAME "Chinese (Traditional)" VALUE NUMERIC 1028
+		NAME "Chinese (Simplified)" VALUE NUMERIC 2052
+		NAME "Croatian" VALUE NUMERIC 1050
+		NAME "Czech" VALUE NUMERIC 1029
+		NAME "Danish" VALUE NUMERIC 1030
+		NAME "Divehi" VALUE NUMERIC 1125
+		NAME "Dutch" VALUE NUMERIC 1043
+		NAME "Edo" VALUE NUMERIC 1126
+		NAME "English (U.S.)" VALUE NUMERIC 1033
+		NAME "English (U.K.)" VALUE NUMERIC 2057
+		NAME "English (Australia)" VALUE NUMERIC 3081
+		NAME "English (Canada)" VALUE NUMERIC 4105
+		NAME "Estonian" VALUE NUMERIC 1061
+		NAME "Faeroese" VALUE NUMERIC 1080
+		NAME "Farsi" VALUE NUMERIC 1065
+		NAME "Filipino" VALUE NUMERIC 1124
+		NAME "Finnish" VALUE NUMERIC 1035
+		NAME "French (Canada)" VALUE NUMERIC 3084
+		NAME "French" VALUE NUMERIC 1036
+		NAME "Frisian" VALUE NUMERIC 1122
+		NAME "Fulfulde" VALUE NUMERIC 1127
+		NAME "FYRO Macedonian" VALUE NUMERIC 1071
+		NAME "Gaelic (Ireland)" VALUE NUMERIC 2108
+		NAME "Galician" VALUE NUMERIC 1110
+		NAME "Georgian" VALUE NUMERIC 1079
+		NAME "German (Switzerland)" VALUE NUMERIC 2055
+		NAME "German (Austria)" VALUE NUMERIC 3079
+		NAME "German" VALUE NUMERIC 1031
+		NAME "Greek" VALUE NUMERIC 1032
+		NAME "Guarani" VALUE NUMERIC 1140
+		NAME "Gujarati" VALUE NUMERIC 1095
+		NAME "Hausa" VALUE NUMERIC 1128
+		NAME "Hawaiian" VALUE NUMERIC 1141
+		NAME "Hebrew" VALUE NUMERIC 1037
+		NAME "Hindi" VALUE NUMERIC 1081
+		NAME "Hungarian" VALUE NUMERIC 1038
+		NAME "Ibibio" VALUE NUMERIC 1129
+		NAME "Icelandic" VALUE NUMERIC 1039
+		NAME "Igbo" VALUE NUMERIC 1136
+		NAME "Indonesian" VALUE NUMERIC 1057
+		NAME "Inuktitut" VALUE NUMERIC 1117
+		NAME "Italian" VALUE NUMERIC 1040
+		NAME "Japanese" VALUE NUMERIC 1041
+		NAME "Kannada" VALUE NUMERIC 1099
+		NAME "Kanuri" VALUE NUMERIC 1137
+		NAME "Kashmiri" VALUE NUMERIC 2144
+		NAME "Kashmiri (Arabic)" VALUE NUMERIC 1120
+		NAME "Kazakh" VALUE NUMERIC 1087
+		NAME "Konkani" VALUE NUMERIC 1111
+		NAME "Korean" VALUE NUMERIC 1042
+		NAME "Kyrgyz" VALUE NUMERIC 1088
+		NAME "Latin" VALUE NUMERIC 1142
+		NAME "Latvian" VALUE NUMERIC 1062
+		NAME "Lithuanian" VALUE NUMERIC 1063
+		NAME "Malay" VALUE NUMERIC 1086
+		NAME "Malayalam" VALUE NUMERIC 1100
+		NAME "Manipuri" VALUE NUMERIC 1112
+		NAME "Marathi" VALUE NUMERIC 1102
+		NAME "Mongolian" VALUE NUMERIC 1104
+		NAME "Nepali" VALUE NUMERIC 1121
+		NAME "Norwegian (Bokmål)" VALUE NUMERIC 1044
+		NAME "Norwegian (Nynorsk)" VALUE NUMERIC 2068
+		NAME "Oriya" VALUE NUMERIC 1096
+		NAME "Oromo" VALUE NUMERIC 1138
+		NAME "Papiamentu" VALUE NUMERIC 1145
+		NAME "Pashto" VALUE NUMERIC 1123
+		NAME "Polish" VALUE NUMERIC 1045
+		NAME "Portuguese (Brazil)" VALUE NUMERIC 1046
+		NAME "Portuguese (Portugal)" VALUE NUMERIC 2070
+		NAME "Punjabi" VALUE NUMERIC 1094
+		NAME "Punjabi (Pakistan)" VALUE NUMERIC 2118
+		NAME "Romanian" VALUE NUMERIC 1048
+		NAME "Russian" VALUE NUMERIC 1049
+		NAME "Sanskrit" VALUE NUMERIC 1103
+		NAME "Serbian (Latin)" VALUE NUMERIC 2074
+		NAME "Serbian (Cyrillic)" VALUE NUMERIC 3098
+		NAME "Sindhi (India)" VALUE NUMERIC 1113
+		NAME "Sindhi (Pakistan)" VALUE NUMERIC 2137
+		NAME "Sinhalese" VALUE NUMERIC 1115
+		NAME "Slovak" VALUE NUMERIC 1051
+		NAME "Slovenian" VALUE NUMERIC 1060
+		NAME "Somali" VALUE NUMERIC 1143
+		NAME "Spanish" VALUE NUMERIC 3082
+		NAME "Swahili" VALUE NUMERIC 1089
+		NAME "Swedish" VALUE NUMERIC 1053
+		NAME "Syriac" VALUE NUMERIC 1114
+		NAME "Tajik" VALUE NUMERIC 1064
+		NAME "Tamazight (Arabic)" VALUE NUMERIC 1119
+		NAME "Tamazight (Latin)" VALUE NUMERIC 2143
+		NAME "Tamil" VALUE NUMERIC 1097
+		NAME "Tatar" VALUE NUMERIC 1092
+		NAME "Telugu" VALUE NUMERIC 1098
+		NAME "Thai" VALUE NUMERIC 1054
+		NAME "Tigrigna (Eritrea)" VALUE NUMERIC 2163
+		NAME "Tigrigna (Ethiopia)" VALUE NUMERIC 1139
+		NAME "Turkish" VALUE NUMERIC 1055
+		NAME "Turkmen" VALUE NUMERIC 1090
+		NAME "Ukrainian" VALUE NUMERIC 1058
+		NAME "Urdu" VALUE NUMERIC 1056
+		NAME "Uzbek (Cyrillic)" VALUE NUMERIC 2115
+		NAME "Uzbek (Latin)" VALUE NUMERIC 1091
+		NAME "Vietnamese" VALUE NUMERIC 1066
+		NAME "Welsh" VALUE NUMERIC 1106
+		NAME "Yi" VALUE NUMERIC 1144
+		NAME "Yiddish" VALUE NUMERIC 1085
+		NAME "Yoruba" VALUE NUMERIC 1130
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Prevent language tune-up from running"
+	PART "Prevent language tune-up from running" DROPDOWNLIST
+		VALUENAME LangTuneUp
+	ITEMLIST
+			NAME "Never run language tune-up"		VALUE "Prohibited"
+			NAME "Only run language tune-up for new scripts"	VALUE "OfficeCompleted"
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Disallow Taiwan calendar"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME ShowDates
+		VALUEON "Off" ;reverse
+		VALUEOFF "On"
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Customizable error messages"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\General
+POLICY "Base URL"
+	PART "Base URL" EDITTEXT
+		VALUENAME CustomizableAlertBaseURL
+	END PART
+	PART "Enter the URL followed by a question mark (?)." TEXT
+	END PART
+	PART "Or, to include custom parameters, enter the URL," TEXT
+	END PART
+	PART "a question mark, your query string, and then an ampersand (&&)." TEXT
+	END PART
+	END POLICY
+POLICY "Default button text"
+	PART "Default button text" EDITTEXT
+		VALUENAME CustomizableAlertDefaultButtonText
+	END PART
+	END POLICY
+POLICY "List of error messages to customize"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\CustomizableAlerts
+	PART "List of error messages to customize" LISTBOX
+		EXPLICITVALUE
+	END PART
+	PART "Enter error ID for Value Name and custom button text for Value" TEXT
+	END PART
+	END POLICY
+POLICY "Default save prompt text"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\General
+	PART "Default save prompt text" EDITTEXT
+		VALUENAME  SavePromptText
+		MAXLEN 255
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Disable items in user interface"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Toolbars
+POLICY "Tooltip for disabled toolbar buttons and menu items"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Toolbars
+	PART "Tooltip for disabled toolbar buttons and menu items" EDITTEXT
+		VALUENAME AttemptDisabledActionMessage
+		MAXLEN 80
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Graph settings"
+KEYNAME Software\Policies\Microsoft\Office\11.0
+POLICY "Graph gallery path"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Graph\Options
+	PART "Graph gallery path" EDITTEXT
+		VALUENAME GalleryPath
+		EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Custom Answer Wizard database path"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Graph\Answer Wizard"
+	PART "Custom Answer Wizard database path" EDITTEXT
+		VALUENAME AdminDatabase
+		EXPANDABLETEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Collaboration Settings"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\ReviewCycle
+CATEGORY "Default message text for a review request..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\ReviewCycle
+POLICY "Only containing an attachment"
+	PART "Only containing an attachment" EDITTEXT
+		VALUENAME AttachmentBody
+	END PART
+	END POLICY
+POLICY "Only containing a link"
+	PART "Only containing a link" EDITTEXT
+		VALUENAME LinkBody
+	END PART
+	PART " " TEXT
+	END PART
+	PART "To insert the link, use '|0'." TEXT
+	END PART
+	END POLICY
+POLICY "With a link and an attachment"
+	PART "With a link and an attachment" EDITTEXT
+		VALUENAME LinkPlusAttachmentBody
+	END PART
+	PART " " TEXT
+	END PART
+	PART "To insert the link, use '|0'." TEXT
+	END PART
+	END POLICY
+POLICY "With a simple Web discussions link"
+	PART "With a simple Web discussions link" EDITTEXT
+		VALUENAME LinkPlusSimpleDiscussionsBody
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Use '|1' to insert the discussion server and '|2' to insert the URL." TEXT
+	END PART
+	END POLICY
+POLICY "With a simple Web discussions link and an attachment"
+	PART "With a simple Web discussions link and an attachment" EDITTEXT
+		VALUENAME LinkPlusSimpleDiscussionsPlusAttachmentBody
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Use '|1' to insert the discussion server and '|2' to insert the URL" TEXT
+	END PART
+	END POLICY
+POLICY "With a Web discussions link"
+	PART "With a Web discussions link" EDITTEXT
+		VALUENAME LinkPlusDiscussionsBody
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Use '|1' to insert the discussion server and '|2' to insert the URL." TEXT
+	END PART
+	END POLICY
+POLICY "With a Web discussions link and an attachment"
+	PART "With a Web discussions link and an attachment" EDITTEXT
+		VALUENAME LinkPlusDiscussionsPlusAttachmentBody
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Use '|1' to insert the discussion server and '|2' to insert the URL." TEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Default message text for a reply..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\ReviewCycle
+POLICY "With a simple Web discussions link"
+	PART "With a simple Web discussions link" EDITTEXT
+		VALUENAME LinkPlusSimpleDiscussionsReply
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Use '|1' to insert the discussion server and '|2' to insert the URL." TEXT
+	END PART
+	END POLICY
+POLICY "With just a simple Web discussions link"
+	PART "With just a simple Web discussions link" EDITTEXT
+		VALUENAME LinkReply
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Use '|0' to insert the link." TEXT
+	END PART
+	END POLICY
+POLICY "With just an attachment"
+	PART "With just an attachment" EDITTEXT
+		VALUENAME AttachmentReply
+	END PART
+	END POLICY
+POLICY "With a Web discussions link"
+	PART "With a Web discussions link" EDITTEXT
+		VALUENAME LinkPlusDiscussionsReply
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Use '|1' to insert the discussion server and '|2' to insert the URL." TEXT
+	END PART
+	END POLICY
+END CATEGORY
+POLICY "Max number of documents being reviewed using 'send for review'"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\ReviewCycle\DocSlots
+	PART "Max number of documents being reviewed using 'send for review'" TEXT
+	END PART
+	PART " " NUMERIC
+		VALUENAME MaxDoc
+		SPIN 1
+		MIN 0
+		MAX 9999
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Registry keys used to track document reviews will be reused" TEXT
+	END PART
+	PART "when this limit is exceeded." TEXT
+	END PART
+	END POLICY
+POLICY "Max number of documents being reviewed using ad hoc review"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\ReviewCycle\AdHoc\DocSlots
+	PART "Max number of documents being reviewed using ad hoc review" TEXT
+	END PART
+	PART " " NUMERIC
+		VALUENAME MaxDoc
+		SPIN 1
+		MIN 0
+		MAX 9999
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Registry keys used to track document reviews will be reused" TEXT
+	END PART
+	PART "when this limit is exceeded." TEXT
+	END PART
+	END POLICY
+POLICY "When choosing 'Send for Review...'"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\General
+	PART " " DROPDOWNLIST
+		VALUENAME ReviewingLinks
+	ITEMLIST
+			NAME "Send link and attachment"	VALUE NUMERIC 2
+			NAME "Only send link"		VALUE NUMERIC 1
+			NAME "Prompt user"		VALUE NUMERIC 0
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Default subject for a review request"
+	PART "Default subject for a review request" EDITTEXT
+		VALUENAME DefaultSubject
+	END PART
+	PART " " TEXT
+	END PART
+	PART "To insert the name of the document, use '|0'." TEXT
+	END PART
+	END POLICY
+POLICY "Prompt for sending reviewed document to author"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\General
+	PART " " DROPDOWNLIST
+		VALUENAME PromptToReturnReviewBehavior
+	ITEMLIST
+			NAME "Never ask user"			VALUE NUMERIC 2
+			NAME "Prompt for 'send for review'"	VALUE NUMERIC 1
+			NAME "Always prompt"		VALUE NUMERIC 0
+	END ITEMLIST
+		NOSORT
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Never ask user:  The user is never asked if they want to send back" TEXT
+	END PART
+	PART "changes to the author." TEXT
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Prompt for 'send for review':  The user is only asked when the document" TEXT
+	END PART
+	PART "was sent with 'send for review' and not with ad hoc review." TEXT
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Always prompt:  Users are always prompted to send changes to" TEXT
+	END PART
+	PART "the author." TEXT
+	END PART
+	END POLICY
+POLICY "Do not prompt users to share Excel workbooks when sending for review"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DoNotPromptToShare
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Outlook: 'send for review'"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Outlook\Options\Mail
+	PART " " DROPDOWNLIST
+		VALUENAME ExplicitReviewBehavior
+	ITEMLIST
+			NAME "Enable 'send for review'"	VALUE NUMERIC 0
+			NAME "Exclude author's e-mail in documents"		VALUE NUMERIC 2
+			NAME "Disable 'send for review'"	VALUE NUMERIC 1
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Outlook: Ad hoc reviewing"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Outlook\Options\Mail
+	PART " " DROPDOWNLIST
+		VALUENAME AdHocReviewBehavior
+	ITEMLIST
+			NAME "Enable ad hoc reviewing"	VALUE NUMERIC 0
+			NAME "Exclude author's e-mail in documents"		VALUE NUMERIC 2
+			NAME "Disable ad hoc reviewing"		VALUE NUMERIC 1
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Web Archives"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Internet
+POLICY "Allow Web Archives to be saved in any HTML encoding"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DoNotForceUSASCIIForMHTML
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "This results in smaller files, but is not supported in Internet Explorer" TEXT
+	END PART
+	PART "5.0 or earlier." TEXT
+	END PART
+	END POLICY
+POLICY "Web Archive encoding"
+	PART "Web Archive encoding" DROPDOWNLIST
+		VALUENAME Allow8bitMIME
+	ITEMLIST
+			NAME "Use 8 bit content-transfer-encoding"	VALUE NUMERIC 2
+			NAME "Use 8 bit only for encoding text parts"	VALUE NUMERIC 1
+			NAME "Use RFC-approved encoding"		VALUE NUMERIC 0
+	END ITEMLIST
+		NOSORT
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Use 8 bit content-transfer-encoding: Results in smallest possible files," TEXT
+	END PART
+	PART "but not safe for attaching to e-mail applications." TEXT
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Use 8 bit only for encoding text parts: Results in a smaller file that can be" TEXT
+	END PART
+	PART "sent in all known e-mail applications, but does not conform to RFC 2557." TEXT
+	END PART
+	END POLICY
+POLICY "Save new Web pages as Web archives"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME SaveNewWebPagesAsWebArchives
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Default format for 'Publish'"
+	PART "Default format for 'Publish'" DROPDOWNLIST
+		VALUENAME PublishFormat
+	ITEMLIST
+			NAME "Web Archive (*.mht)"		VALUE NUMERIC 2
+			NAME "Web Page (*.htm)"		VALUE NUMERIC 1
+			NAME "Default"		VALUE NUMERIC 0
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "PowerPoint: Save an additional version of the presentation for older browsers"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Internet
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AllowNonV4MHTML
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "PowerPoint:  web page format compatibility"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Internet
+	PART "PowerPoint:  web page format compatibility" DROPDOWNLIST
+		VALUENAME HTMLVersion
+	ITEMLIST
+			NAME "All browsers"		VALUE NUMERIC 2
+			NAME "Internet Explorer 4.0 or later"			VALUE NUMERIC 1
+			NAME "Based on installed browsers"	VALUE NUMERIC 0
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Smart Documents (Word, Excel)"
+KEYNAME "Software\Policies\Microsoft\Office\Common\Smart Tag"
+POLICY "Disable Smart Document's use of manifests"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+              VALUENAME NeverLoadManifests
+              VALUEON NUMERIC 1
+              VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Completely disable the Smart Documents feature in Word and Excel"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+              VALUENAME DisableSmartDocuments
+              VALUEON NUMERIC 1
+              VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Services"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Services
+CATEGORY "Fax"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Services\Fax
+POLICY "Disable Fax Over Internet feature"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME NoFax
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Disallow custom cover sheet"
+	PART "Check to disallow custom coversheet" CHECKBOX
+		VALUENAME DisallowCustomCoverSheet
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Instant Messaging Integration"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\PersonaMenu
+POLICY "Set refresh time for Calendar information in the person name Smart Tag"
+	PART "Set time in minutes (Default 15min)" NUMERIC
+			VALUENAME "Calendar Interval" 
+			SPIN 1
+			MIN 0
+			MAX 500
+			DEFAULT 15
+	END PART
+	END POLICY
+POLICY "Display all person name Smart Tag menu items"
+	PART "Check to disable all items" CHECKBOX
+			VALUENAME Enabled
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Display the Online Status item in the person name Smart Tag menu"
+	PART "Check to disable Online Status" CHECKBOX
+			VALUENAME ShowStatus
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Display the Free/Busy item in the person name Smart Tag menu"
+	PART "Check to disable Free/Busy" CHECKBOX
+			VALUENAME Calendar
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Display the Office Location item in the the person name Smart Tag menu"
+	PART "Check to disable Office Location item" CHECKBOX
+			VALUENAME OfficeLocation
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Display the Manager item in the person name Smart Tag menu"
+	PART "Check to disable Manager item" CHECKBOX
+			VALUENAME Manager
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Display the Phone Number item in the person name Smart Tag menu"
+	PART "Check to disable Phone item" CHECKBOX
+			VALUENAME Phone
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Display the Send Mail item in the person name Smart Tag menu"
+	PART "Check to disable Send Mail item" CHECKBOX
+			VALUENAME SendMail
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Display the Messenger item in the person name Smart Tag menu"
+	PART "Check to disable Messenger item" CHECKBOX
+			VALUENAME Messenger
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Display the Registered Person smart tag item in the person name Smart Tag menu" 
+	PART "Check to disable Registered Person item" CHECKBOX
+			VALUENAME SmartTags
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Display the Add/Open Outlook Contacts item in the person name Smart Tag menu"
+	PART "Check to disable Add/Open Outlook Contacts item" CHECKBOX
+			VALUENAME OutlookContact
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Display the Outlook Properties item in the person name Smart Tag menu"
+	PART "Check to disable Outlook Properties item" CHECKBOX
+			VALUENAME OutlookProperties
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Disable Create Rule item in person name Smart Tag menu"
+	PART "Check to disable Create Rule item" CHECKBOX
+			VALUENAME CreateRule
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Disable person name Smart Tag promotion for my Messenger contacts in Word and Excel"
+	PART "Check to disable:" CHECKBOX
+			VALUENAME PromoteSmartTags
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Allow IM status queries for people not on the Messenger Contacts list"
+	PART "Select: " DROPDOWNLIST
+                             VALUENAME QueryServiceForStatus
+	ITEMLIST
+                             NAME   "Query Messenger Contacts list only"           VALUE NUMERIC 0
+                             NAME   "Query Exchange IM Server"   VALUE NUMERIC 1
+                             NAME   "Query Live Communication Server"  VALUE NUMERIC 2
+	END ITEMLIST
+	END PART
+	END POLICY
+CATEGORY "Active Directory/person name Smart Tag integration"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\PersonaMenu
+POLICY "Disable Active Directory lookups for the person name Smart Tag"
+	PART "Check to Disable Active Directory lookups for the person name Smart Tag" CHECKBOX
+				VALUENAME ActiveDirectory
+				VALUEON NUMERIC 0
+				VALUEOFF NUMERIC 1 			
+	END PART
+	END POLICY
+POLICY "Customize Active Directory search field for e-mail address lookup"
+	PART "Enter Email field:" EDITTEXT
+				VALUENAME ADReplaceSMTPLookup
+	END PART
+	END POLICY
+POLICY "Customize Active Directory search field for office location lookup"
+	PART "Enter Office field:" EDITTEXT
+				VALUENAME ADReplacePhysicalDeliveryOfficeName
+	END PART
+	END POLICY
+POLICY "Customize Active Directory search field for primary telephone lookup"
+	PART "Enter Telephone field:" EDITTEXT
+				VALUENAME ADReplaceTelephoneNumber
+	END PART
+	END POLICY
+POLICY "Customize Active Directory search field for mobile phone lookup"
+	PART "Enter Mobile field:" EDITTEXT
+				VALUENAME ADReplaceReplaceMobile
+	END PART
+	END POLICY
+POLICY "Customize Active Directory search field for home phone lookup"
+	PART "Enter Home Phone field:" EDITTEXT
+				VALUENAME ADReplaceHomePhone
+	END PART
+	END POLICY
+POLICY "Customize Active Directory search field for manager lookup"
+	PART "Enter Manager field:" EDITTEXT
+				VALUENAME ADReplaceManager
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Improved Error Reporting"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\
+POLICY "Disable reporting of non-critical errors"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\ShipAsserts
+	PART "Check to disable reporting of non-critical errors" CHECKBOX
+		VALUENAME DisableShipAsserts
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Disable reporting of error messages"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Alerts
+	PART "Check to disable reporting of error messages" CHECKBOX
+		VALUENAME NoAlertReporting
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Manage Restricted Permissions"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\DRM
+POLICY "Disable Information Rights Management User Interface"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\DRM
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+			VALUENAME Disable
+			VALUEON NUMERIC 1 
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Additional permissions request URL"
+	PART "Check to specify a custom URL or e-mail address" CHECKBOX
+			VALUENAME RequestPermission
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	PART "Specify URL/Email address:" EDITTEXT
+			VALUENAME RequestPermissionURL
+	END PART
+	END POLICY
+POLICY "Allow users with earlier versions of Office to read with browsers..."
+	PART "Check to allow users with earlier versions of Office to read with browsers" TEXT
+	END PART
+	PART "supporting Information Rights Management." TEXT
+	END PART
+	PART " " CHECKBOX
+			VALUENAME IncludeHTML
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	PART "NOTE: Enabling this policy will make all documents with restricted " TEXT
+	END PART
+	PART "permissions larger." TEXT
+	END PART
+	END POLICY
+POLICY "Always require users to connect to verify permission"
+	PART "Check to require users to connect in order to verify permission" CHECKBOX
+			VALUENAME requireConnection
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	PART "NOTE: This policy is useful if you want to log the usage of " TEXT
+	END PART
+	PART "files with restricted permissions on the server." TEXT
+	END PART
+	END POLICY
+POLICY "Always expand groups in Office when restricting permission for documents"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\DRM\AutoExpandDls
+	PART "Check to always expand groups" CHECKBOX
+			VALUENAME AutoExpandDLsEnable
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Never allow users to specify groups when restricting permission for documents"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\DRM
+	PART "Check to prevent users from specifying groups" CHECKBOX
+			VALUENAME NeverAllowDLs
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Active Directory timeout for querying one entry for group expansion"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\DRM\AutoExpandDLs
+	PART "Enter timeout in seconds:" NUMERIC
+		VALUENAME AdsSearchPrefTimeOutSecs
+			SPIN 1
+			MIN 0
+			DEFAULT 15
+			MAX 640
+	END PART
+	END POLICY
+POLICY "Disable Microsoft Passport service for content with restricted permission"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\DRM
+	PART "Check to disable using Passport service" CHECKBOX
+			VALUENAME DisablePassportCertification
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Specify Permission Policy Path"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\DRM
+	PART "Enter path to policy templates for content permission" TEXT
+	END PART
+	PART " " EDITTEXT
+		VALUENAME admintemplatepath
+	END PART
+	END POLICY
+POLICY "Do not allow users to upgrade Information Rights Management configuration"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\DRM
+	PART "Check to disallow users to upgrade configuration" CHECKBOX
+			VALUENAME DisableRepair
+			VALUEON NUMERIC 1
+			VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Miscellaneous"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\General
+POLICY "Provide feedback with sound"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME Sound
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Use system font instead of Tahoma"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME UseOfficeUIFont
+		VALUEON NUMERIC 0 ;reverse
+		VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Do not track document editing time"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME NoTrack
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Disable Clipboard Toolbar triggers"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AcbControl
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Do not emulate tabs with spaces when exporting HTML"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Internet
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME ExportRealTabs
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Do not upload media files"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Internet
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DoNotUploadMedia
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Disable hyperlinks to web templates in File | New and task panes"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Internet
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DisableTemplatesOnTheWeb
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Do not display paths in alerts"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\General
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME HidePathInAlerts
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Prevent access to Web-based file storage"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\WebServices
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME "Allow WebDrives"
+		VALUEON NUMERIC 0 ;reverse
+		VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Show Paste Options buttons"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	KEYNAME Software\Policies\Microsoft\Office\11.0\Common\General
+		VALUENAME PasteOptions
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Web Folders: Managing pairs of Web pages and folders"
+KEYNAME Software\Policies\Microsoft\Windows\CurrentVersion\Explorer
+	PART "Web Folders: Managing pairs of Web pages and folders" DROPDOWNLIST
+		VALUENAME NoFileFolderConnection
+	ITEMLIST
+			NAME "Show and manage the pair as a single file"		VALUE NUMERIC 0
+			NAME "Show both parts and manage them individually"		VALUE NUMERIC 2
+			NAME "Show both parts but manage as a single file"		VALUE NUMERIC 1
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Do not automatically dismiss the New File task pane"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	KEYNAME Software\Policies\Microsoft\Office\11.0\Common\General
+		VALUENAME DoNotDismissFileNewTaskPane
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "This setting prevents the New File task pane from being dismissed" TEXT
+	END PART
+	PART "automatically after creating a new file or opening an existing file." TEXT
+	END PART
+	END POLICY
+POLICY "Disable web view in the Office file dialogs"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	KEYNAME Software\Policies\Microsoft\Office\11.0\Common\FileDialogWebViewSettings
+		VALUENAME ShowAllFilesAndFolders
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Block updates from the Office Update Site from applying"
+	PART "Check to disable updates from the Office Update site" CHECKBOX
+	KEYNAME Software\Policies\Microsoft\Office\Common\OfficeUpdate
+		VALUENAME BlockUpdates
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	PART "Setting this policy also disables the Check for Updates menu and " TEXT
+	END PART
+	PART "task pane items." TEXT
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+
+

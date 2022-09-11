@@ -1,0 +1,151 @@
+CLASS USER
+
+CATEGORY "Microsoft Clip Organizer"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Clip Organizer"
+POLICY "Disable Clips Online access from Clip Organizer"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisableClipsOnline
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Clip Organizer Online URL"
+	PART "Clip Organizer Online URL" EDITTEXT
+	VALUENAME ClipsOnlineURL
+	END PART
+	END POLICY
+POLICY "Disable menu item: File | Add Clips To Organizer | From Scanner or Camera"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisableScanCameraPic
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Disable menu item: File | Send to Mail Recipient (as Attachment)..."
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisableMailAttach
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Hide 'My Collections'"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisableMyCol
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Hide 'Office Collections'"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisableOfficeCol
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Hide 'Shared Collections'"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisableSharedCol
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Hide 'Web Collections'"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisableWebCol
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Prevent automatically importing clips"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisableAutoImport
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Enabling this setting disables the following:" TEXT
+	END PART
+	PART " - Autoimport dialog when Clip Organizer is launched" TEXT
+	END PART
+	PART " - File | Add Clips To Organizer | Automatically" TEXT
+	END PART
+	PART " - File | Collection Properties" TEXT
+	END PART
+	END POLICY
+POLICY "Prevent users from importing new clips"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisableUserImport
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Enabling this setting disables the following:" TEXT
+	END PART
+	PART " - Pasting from outside Clip Organizer" TEXT
+	END PART
+	PART " - Dragging and dropping from outside Clip Organizer" TEXT
+	END PART
+	PART " - File | Add Clips To Organizer | Automatically" TEXT
+	END PART
+	PART " - File | Collection Properties" TEXT
+	END PART
+	PART " - File | Add Clips To Organizer | On My Own" TEXT
+	END PART
+	PART " - File | Add Clips To Organizer | From Scanner or Camera..." TEXT
+	END PART
+	END POLICY
+POLICY "Prevent changes to primary collection"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisablePrimaryChange
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Enabling this setting disables the following:" TEXT
+	END PART
+	PART " - File | New Collection..." TEXT
+	END PART
+	PART " - File | Add Clips To Organizer | On My Own" TEXT
+	END PART
+	PART " - File | Collection Properties..." TEXT
+	END PART
+	PART " - Edit | Move to Collection..." TEXT
+	END PART
+	PART " - Edit | Copy to Collection..." TEXT
+	END PART
+	PART " - Edit | Rename Collection" TEXT
+	END PART
+	PART " - Edit | Keywords..." TEXT
+	END PART
+	PART " - Tools | Compact" TEXT
+	END PART
+	PART " - 'Edit Keywords...' button on Preview dialog" TEXT
+	END PART
+	PART " - 'Refresh' button on Preview dialog" TEXT
+	END PART
+	PART " - Paste command on all menus" TEXT
+	END PART
+	PART " - Pasting using Ctrl+V or Shift+Ins" TEXT
+	END PART
+	PART " - Dragging and dropping files into Clip Organizer" TEXT
+	END PART
+	END POLICY
+POLICY "Enable preview of sound and motion on Terminal Server"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME EnableSoundMotion
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Search for clip art based on this language"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Clip Organizer"
+	PART "Input locale (LCID) of the desired clip art search:" NUMERIC
+			VALUENAME "CatalogLcid"
+	END PART
+	END POLICY
+END CATEGORY
+
+

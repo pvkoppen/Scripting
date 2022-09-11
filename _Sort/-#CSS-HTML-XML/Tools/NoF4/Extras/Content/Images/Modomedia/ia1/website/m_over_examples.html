@@ -1,0 +1,205 @@
+<HTML>
+<HEAD>
+<TITLE>IA1 - By Modomedia</TITLE>
+
+<SCRIPT LANGUAGE = "JavaScript">
+<!-- Hides script from non-compatible browsers
+
+
+       browserName = navigator.appName;
+       browserVer = parseInt(navigator.appVersion);
+            /*   if (top.frames.length > 1) {
+                        top.location="menu.html";
+                        } */
+
+               if (browserName == "Netscape" && browserVer >= 3) version ="n3";
+               else {version = "n2"};
+               if (navigator.appVersion.substring(0,3) == '4.0') {version="n3"};
+               if (version == "n3") {
+             
+
+              
+               bor1on = new Image;
+               bor1on.src = "mouseovers/cap_lit.gif";
+             
+               bor1off = new Image;
+               bor1off.src = "mouseovers/cap.gif";
+
+               bor2on = new Image;
+               bor2on.src = "mouseovers/cap_lit.gif";
+             
+               bor2off = new Image;
+               bor2off.src = "mouseovers/cap.gif";
+
+               bor3on = new Image;
+               bor3on.src = "mouseovers/cap_lit.gif";
+             
+               bor3off = new Image;
+               bor3off.src = "mouseovers/cap.gif";
+
+
+
+               col1on = new Image;
+               col1on.src = "mouseovers/shard_lit.gif";
+             
+               col1off = new Image;
+               col1off.src = "mouseovers/shard.gif";
+
+               col2on = new Image;
+               col2on.src = "mouseovers/shard_lit.gif";
+             
+               col2off = new Image;
+               col2off.src = "mouseovers/shard.gif";
+
+               col3on = new Image;
+               col3on.src = "mouseovers/shard_lit.gif";
+             
+               col3off = new Image;
+               col3off.src = "mouseovers/shard.gif";
+
+
+               tex1on = new Image;
+               tex1on.src = "mouseovers/rect_lit.gif";
+             
+               tex1off = new Image;
+               tex1off.src = "mouseovers/rect.gif";
+
+               tex2on = new Image;
+               tex2on.src = "mouseovers/rect_lit.gif";
+             
+               tex2off = new Image;
+               tex2off.src = "mouseovers/rect.gif";
+
+               tex3on = new Image;
+               tex3on.src = "mouseovers/rect_lit.gif";
+             
+               tex3off = new Image;
+               tex3off.src = "mouseovers/rect.gif";
+
+
+
+
+               rai1on = new Image;
+               rai1on.src = "mouseovers/fcap_lit.gif";
+             
+               rai1off = new Image;
+               rai1off.src = "mouseovers/fcap.gif";
+
+               rai2on = new Image;
+               rai2on.src = "mouseovers/fcap_lit.gif";
+             
+               rai2off = new Image;
+               rai2off.src = "mouseovers/fcap.gif";
+
+               rai3on = new Image;
+               rai3on.src = "mouseovers/fcap_lit.gif";
+             
+               rai3off = new Image;
+               rai3off.src = "mouseovers/fcap.gif";
+
+
+
+               glo1on = new Image;
+               glo1on.src = "mouseovers/square_lit.gif";
+             
+               glo1off = new Image;
+               glo1off.src = "mouseovers/square.gif";
+
+               glo2on = new Image;
+               glo2on.src = "mouseovers/square_lit.gif";
+             
+               glo2off = new Image;
+               glo2off.src = "mouseovers/square.gif";
+
+               glo3on = new Image;
+               glo3on.src = "mouseovers/square_lit.gif";
+             
+               glo3off = new Image;
+               glo3off.src = "mouseovers/square.gif";
+
+            
+            
+             }
+
+       function img_act(imgName) {
+               if (version == "n3") {
+               imgOn = eval(imgName + "on.src");
+               document [imgName].src = imgOn;
+               }
+       }
+
+       function img_inact(imgName) {
+               if (version == "n3") {
+               imgOff = eval(imgName + "off.src");
+               document [imgName].src = imgOff;
+               }
+       }
+
+// End hide script -->
+
+
+</script>
+
+
+</HEAD>
+<body background="images/bg.gif" bgcolor="000000" text="#00FFFF" link="ffffff" vlink="008888">
+<basefont size=2>
+<font face="Arial">
+<blockquote>
+
+
+<center><font size="3"><B>MouseOver Examples</B></font></center>
+
+<p><br><b>Border Replace</b><br>
+<nobr><a href="m_over_examples.html" onMouseover = "img_act('bor1')" onMouseout = "img_inact('bor1')"><img border=0 src="mouseovers/cap.gif" name="bor1"></a>
+<a href="m_over_examples.html" onMouseover = "img_act('bor2')" onMouseout = "img_inact('bor2')"><img border=0 src="mouseovers/cap.gif" name="bor2"></a>
+<a href="m_over_examples.html" onMouseover = "img_act('bor3')" onMouseout = "img_inact('bor3')"><img border=0 src="mouseovers/cap.gif" name="bor3"></a></nobr>
+
+
+<br><p>
+
+
+
+<p><br><b>Color Replace</b><br>
+<nobr><a href="m_over_examples.html" onMouseover = "img_act('col1')" onMouseout = "img_inact('col1')"><img border=0 src="mouseovers/shard.gif" name="col1"></a>
+<a href="m_over_examples.html" onMouseover = "img_act('col2')" onMouseout = "img_inact('col2')"><img border=0 src="mouseovers/shard.gif" name="col2"></a>
+<a href="m_over_examples.html" onMouseover = "img_act('col3')" onMouseout = "img_inact('col3')"><img border=0 src="mouseovers/shard.gif" name="col3"></a></nobr>
+
+
+<br><p>
+
+
+
+
+<p><br><b>Texture Replace</b><br>
+<nobr><a href="m_over_examples.html" onMouseover = "img_act('tex1')" onMouseout = "img_inact('tex1')"><img border=0 src="mouseovers/rect.gif" name="tex1"></a>
+<a href="m_over_examples.html" onMouseover = "img_act('tex2')" onMouseout = "img_inact('tex2')"><img border=0 src="mouseovers/rect.gif" name="tex2"></a>
+<a href="m_over_examples.html" onMouseover = "img_act('tex3')" onMouseout = "img_inact('tex3')"><img border=0 src="mouseovers/rect.gif" name="tex3"></a></nobr>
+
+
+<br><p>
+
+
+
+<p><br><b>Raise / Embed</b><br>
+<nobr><a href="m_over_examples.html" onMouseover = "img_act('rai1')" onMouseout = "img_inact('rai1')"><img border=0 src="mouseovers/fcap.gif" name="rai1"></a>
+<a href="m_over_examples.html" onMouseover = "img_act('rai2')" onMouseout = "img_inact('rai2')"><img border=0 src="mouseovers/fcap.gif" name="rai2"></a>
+<a href="m_over_examples.html" onMouseover = "img_act('rai3')" onMouseout = "img_inact('rai3')"><img border=0 src="mouseovers/fcap.gif" name="rai3"></a></nobr>
+
+
+<br><p>
+
+
+<p><br><b>Glow (on black)</b><br>
+<nobr><a href="m_over_examples.html" onMouseover = "img_act('glo1')" onMouseout = "img_inact('glo1')"><img border=0 src="mouseovers/square.gif" name="glo1"></a>
+<a href="m_over_examples.html" onMouseover = "img_act('glo2')" onMouseout = "img_inact('glo2')"><img border=0 src="mouseovers/square.gif" name="glo2"></a>
+<a href="m_over_examples.html" onMouseover = "img_act('glo3')" onMouseout = "img_inact('glo3')"><img border=0 src="mouseovers/square.gif" name="glo3"></a></nobr>
+
+
+<br><p>
+
+
+</blockquote>
+</font>
+</BODY>
+</HTML>

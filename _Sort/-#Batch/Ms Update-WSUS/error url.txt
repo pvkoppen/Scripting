@@ -1,0 +1,14 @@
+Original Client IP	Client Agent	Authenticated Client	Service	Server Name	Referring Server	Destination Host Name	Transport	MIME Type	Object Source	Source Proxy	Destination Proxy	Bidirectional	Client Host Name	Filter Information	Network Interface	Raw IP Header	Raw Payload	Source Port	Processing Time	Bytes Sent	Bytes Received	Result Code	HTTP Status Code	Cache Information	Error Information	Log Record Type	Log Time	Destination IP	Destination Port	Protocol	Action	Rule	Client IP	Client Username	Source Network	Destination Network	HTTP Method	URL
+0.0.0.0	Microsoft BITS/6.6	No	Proxy	TOLGW01		10.203.30.80	TCP	application/octet-stream	Internet	-	-		-		-	-	-	0	235	80440	158		64 	0x40800000	0x402	Web Proxy Filter	14/05/2007 9:26:03 a.m.	10.203.30.80	80	http	Failed Connection Attempt	Web: TOL-Controlled to WebServer(s)	10.203.200.55	anonymous	Internal	Perimeter/DMZ	GET	http://10.203.30.80/Content/49/E8E139341E1A6C535DDF2DB57052C71D19FC7249.exe
+
+N:\New Content\Wsus>proxycfg
+Microsoft (R) WinHTTP Default Proxy Configuration Tool
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+Current WinHTTP proxy settings under:
+  HKEY_LOCAL_MACHINE\
+    SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\
+      WinHttpSettings :
+
+    Proxy Server(s) :  tolgw01:8080
+    Bypass List     :  <local>;wsus;*.tol.local;*

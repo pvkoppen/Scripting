@@ -1,0 +1,15 @@
+#title H1 {
+	VISIBILITY: hidden
+}
+#title {
+	BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(http://www.microsoft.com/windowsserversystem/dpm/images/dmp_left.gif); BACKGROUND-REPEAT: no-repeat; HEIGHT: 124px; BACKGROUND-COLOR: #fa8d20
+}
+#sidebar-a H3 {
+	COLOR: #333333
+}
+#body {
+	BACKGROUND-COLOR: #000000
+}
+#main {
+	BORDER-RIGHT: #555 1px solid; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; MARGIN: 0px 200px; BORDER-LEFT: #555 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #555 4px solid; BACKGROUND-COLOR: #eee
+}

@@ -1,0 +1,352 @@
+[NWI:Product Information]
+Major Version=NetWare 6
+Minor Version=00
+
+[NWI:Language]
+Server Language=4
+Prompt=FALSE
+Additional Languages=4
+
+[NWI:NDS]
+Admin Password=admin
+Schema Extensions=sys:/system/schema/NLS.SCH,sys:/system/schema/AUDITING.SCH,sys:/system/schema/NWADMIN.SCH,sys:/system/schema/NRD.SCH,sys:system/schema/SAS.SCH,sys:/system/schema/NDSPKI.SCH,sys:/system/schema/MASV.SCH,sys:/system/schema/SLP.SCH,sys:system/schema/CATALOG.SCH,sys:system/schema/WANMAN.SCH,sys:system/schema/SMS.SCH,sys:system/schema/NDPS100.SCH,sys:system/schema/NDPS200.SCH,sys:system/schema/SVC.SCH,sys:system/schema/NDSCOMM.SCH,sys:system/schema/NOV_INET.SCH,sys:system/schema/NSSFS.SCH
+Schema Extensions TAO=sys:/system/schema/NDS500.SCH,sys:/system/schema/NDSPKIS.SCH
+Schema Extensions Pre DS=sys:/system/schema/NDS500.SCH,sys:/system/schema/NLS.SCH
+Schema Extensions LDAP=sys:system/schema/LDAP.SCH,sys:system/schema/LDAPUPDT.SCH
+Schema Extensions LDAP NDS8=sys:system/schema/nds8/LDAP.SCH
+Schema Extensions LDAP NDSJUL99=sys:system/schema/ndsjul99/LDAP.SCH,sys:system/schema/ndsjul99/LDAPUPDT.SCH,sys:sys:system/schema/ndsjul99/NDSPKI.SCH
+Schema Extensions LDAP NDSAPR99=sys:system/schema/ndsapr99/LDAP.SCH,sys:system/schema/ndsapr99/LDAPUPDT.SCH
+Admin Language=4
+Tree Name=ml3101
+Server Context=O=ml3102
+New Tree=true
+Admin Login Name=admin
+Admin Context=O=ml3102
+Display Summary=false
+Prompt=false
+
+[NWI:Old Products]
+Product 1=NWSB411
+Product 2=IWSB411
+Product 3=NWSB420
+Product 4=NWGB420
+Product 5=NSBS
+
+[Settings]
+Novell:NOVELL_ROOT:1.0.0=NONE
+Novell:NetWare5OS:5.0.0=Novell:DST:1.0.0
+Novell:PROTOCOLS:1.0.0=Novell:DST:1.0.0
+Novell:DS_INSTALL:1.0.0=Novell:DST:1.0.0
+Novell:Disk Carver:1.0.0=Novell:DST:1.0.0
+Novell:AFP:1.0.1=
+Novell:CIFS:1.0.1=
+
+[NOVELL:NOVELL_ROOT:1.0.0]
+showWelcomeScreen=false
+LogLevel=DEBUG_DETAIL
+welcomeScreen=com.novell.application.install.Welcome
+choiceScreen=com.novell.application.install.ChoicePanel
+summaryScreen=com.novell.application.install.server.cobra.CustomSummary
+licenseAgreementScreen=com.novell.application.install.ProductLicenseAgreement
+languageScreen=com.novell.application.install.SelectLanguage
+customChoiceScreen=com.novell.application.install.CustomChoicePanel
+wizardScreen=com.novell.application.install.WizardFrame
+licenseEnvelopeScreen=com.novell.application.install.LicenseEnvelope
+;closeScreen=NWICloseScreen
+closeScreen=SilentCloseScreen
+silent=false
+installSilentModeOverwrite=true
+installSilentModeOverwriteConfigFile=true
+allowCustomization=true
+allowSummary=true
+allowReadme=true
+allowCloseScreen=true
+allowStatusBar=true
+allowLicenseAgreement=true
+welcomeScreenText=Welcome to the Novell installation. This program will install the following selected programs on your computer.
+welcomeScreenTitle=Novell Product Installation
+customizeScreenTitle=Product Customization
+defaultImage=banner5.gif
+licenseAgreeFile=nwlic.txt
+readmeFile=readme.html
+licensePath=none
+welcomeScreenHelp=welcome.html
+summaryScreenHelp=summary.html
+licAgreeScreenHelp=licAgree.html
+choiceScreenHelp=choice.html
+filterScreenHelp=filter.html
+licEnvScreenHelp=license.html
+customizeScreenHelp=custom.html
+locationScreenHelp=location.html
+licEnvScreenTitle=Licenses
+summaryScreenTitle=Summary
+licAgreeScreenTitle=License Agreement
+locationScreenTitle=Location
+choiceScreenTitle=Components
+installMode=2
+overWriteNewerFile=false
+;overWriteNewerFilePrompt=true
+overWriteNewerFilePrompt=false
+copyToRemoteDestination=true
+pdbDirectory=server;products
+reboot=true
+
+[Initialization]
+Version=Novell:NetWare5:1.0.0
+SPLocation=SYS:\ni\update\bin\../data/local.db
+NISubdirectory=update
+Install Zip Path=sys:ni/data
+DisplayLanguage=en_US
+InstallationMode=Silent
+SummaryPrompt=false
+
+[NWI:Install Script]
+Support Pack Script=c:/spack/spack.ips e=c:\spackerr.log s=c:\spack
+Close Script=C:\compaq\extra.ics e=c:\cpqerr.log
+
+[Locations]
+Novell:DST%Startup:1.0.0=
+
+[Selected Nodes]
+prompt=true
+Novell:NetWare5:1.0.0=Novell:NetWare:5.1.0,Novell:Products:1.0.0,Novell:NWUpdateGroup:1.0.0
+Novell:NetWare:5.1.0=Novell:NetWare6OS:6.0.0,Novell:NICI:1.0.0,Novell:Disk Carver:1.0.0,Novell:Protocols:1.0.0,Novell:Time Zone:1.0.0,Novell:DS_Install:1.0.0,Novell:LicensePrompt:1.0.0,Novell:NW:1.0.0
+Novell:NW:1.0.0=Novell:Startup:1.0.0,Novell:SYS:1.0.0,Novell:DriverFiles:1.0.0,Novell:Rconjzip:1.0.0,Novell:Perl5zip:1.0.0,Novell:beanszip:1.0.0,Novell:nscriptzip:1.0.0,Novell:scripteszip:1.0.0,Novell:nwadminzip:5.1.9
+Novell:SYS:1.0.0=Novell:SYSDirectory:1.0.0,Novell:ConfigDirectory:1.0.0,Novell:PervasiveDirectory:1.0.0
+Novell:DriverFiles:1.0.0=Novell:LANFiles:1.0.0,Novell:SBDFiles:1.0.0
+Novell:Products:1.0.0=Novell:Novell Certificate Server:2.0.0,Novell:6pkLdap:3.20.0,Novell:Imonitor:1.5.0,NOVELL:Portal:1.0.1,Novell:SMS:1.0.8,Novell:ConsoleOne Products:1.3.2,Novell:Netscape Administration Server for NetWare:3.6.0,Novell:Novell NMAS Install:2.0.0,Novell:Native File Services:1.0.1,Novell:NAAS:1.0.0,Novell:eMFrame:1.0.0,Novell:PortRes:1.0.0
+Non-Changeable Products=Imonitor,Portal,ConsoleOne Products,NWLdap,SMS,Novell Certificate Server,Novell NMAS Install,RAS,Netscape Administration Server for NetWare,PortRes,emFrame
+Default=Novell Certificate Server,NWLdap,Portal,SMS,ConsoleOne Products,NDPS,Netscape Enterprise Server for NetWare,Collabra Server,Netscape Administration Server for NetWare,NIS SERVICES,FTP Server,NFS Server,NetWare Web Search,RAS,ipWanMan,Novell NMAS Install,PortRes
+Novell:Novell Certificate Server:2.0.0=Novell:CertServ System Files:2.0.0,Novell:CertServ Public Files:2.0.0
+Novell:Imonitor:1.5.0=Novell:imonitor_DFG:1.5.0,Novell:imonitor_en_DFG:1.5.0
+NOVELL:Portal:1.0.1=Novell:portalzip:1.0.0
+Novell:SMS:1.0.8=Novell:SMSSystemFiles:1.0.4,Novell:SMSPublicFiles:1.0.4,Novell:SMSNsnFiles:1.0.4
+Novell:ConsoleOne Products:1.3.2=Novell:ConsoleOne:1.3.2,Novell:Reporting Snapin:1.3.0
+Novell:ConsoleOne:1.3.2=Novell:c1_core:1.0.0,Novell:c1_win32:1.0.0,Novell:c1_nw.zip:1.0.0
+Novell:Reporting Snapin:1.3.0=Novell:c1_rpt:1.0.0
+Novell:Netscape Administration Server for NetWare:3.6.0=Novell:Admin_Always:3.6.0,Novell:ADM_NLS:3.6.0,Novell:AdminNovonyxConfigZip:3.6.0
+Novell:Admin_Always:3.6.0=Novell:AdminNovonyxNonConfigZip:3.6.0,Novell:NOVL_AdminStuffZip:3.6.0,Novell:NVX_AdminStuffZip:3.6.0,Novell:Apache_AdminZip:3.6.0,Novell:WebAdmin_Zip:3.6.0,Novell:NWTomcat_Zip:3.6.0,Novell:NWTC33_Zip:3.3.0
+Novell:ADM_NLS:3.6.0=Novell:WadNLS4Zip:3.6.0
+Novell:Novell NMAS Install:2.0.0=Novell:NMAS Server Components:2.0.0,Novell:NMAS Server System Files:2.0.0
+Novell:Native File Services:1.0.1=Novell:AFP:1.0.1,Novell:CIFS:1.0.1,Novell:NFSNIS:1.1.0
+Novell:AFP:1.0.1=Novell:AFP-NLMs:1.0.1
+Novell:CIFS:1.0.1=Novell:CIFS-NLMs:1.0.1
+Novell:NFSNIS:1.1.0=Novell:NFSNIS-NLMs:1.1.0
+Novell:NAAS:1.0.0=Novell:AGENT_ZIP:1.0.0,Novell:SERVER_ZIP:1.0.0,Novell:UTIL_ZIP:1.0.0
+Novell:eMFrame:1.0.0=Novell:eMFrame install module:1.0.0
+Novell:eMFrame install module:1.0.0=Novell:eMFrame zip file:1.0.0,Novell:Tomcat config zip file:1.0.0,Novell:NDPS extra zip file:1.0.0,Novell:NDPS snapin zip file:1.0.0,Novell:NLS snapin zip file:1.0.0,Novell:DNSDHCP snapin zip file:1.0.0
+Novell:PortRes:1.0.0=Novell:PortRes install module:1.0.0
+Novell:PortRes install module:1.0.0=Novell:Welcome Page zip file - English:1.0.0
+Novell:NWUpdateGroup:1.0.0=Novell:NWUpdate:1.0.0
+
+[NWI:Locale]
+Prompt=FALSE
+Country Code=001
+Keyboard=United States
+Code Page=437
+Uses Vgadisp=false
+[NWI:Mouse and Video]
+Mouse=Auto
+Video Type=PlugNPlay
+Prompt=FALSE
+
+
+[NWI:Install Options]
+Upgrade=FALSE
+Migration=FALSE
+Express=FALSE
+Prompt=FALSE
+Startup Directory=C:\NWSERVER
+Allow User Response File=TRUE
+
+[NWI:Server Settings]
+Prompt=FALSE
+Load Server at Reboot=FALSE
+NDS Version=8
+CD-ROM Driver=NetWare
+
+[NWI:License]
+Prompt=False
+Display License Agreement=FALSE
+NICI Foundation Key File=c:\License\XXXXXXXX.nfk
+License File=c:\License\XXXXXXXX.nlf
+[Novell:SRC:1.0.0]
+path=F:
+
+[NWI:File Server]
+Prompt=false
+Servername=ml310
+Server Id Number=B65B1D8
+
+[NWI:Hardware]
+PSM Detection=TRUE
+Storage Detection=TRUE
+Network Detection=TRUE
+Prompt=FALSE
+
+[NWI:Add To Startup]
+
+[Novell:DST%Startup:1.0.0_Location]
+path=file:///C:\NWSERVER
+
+
+[NWI:File System]
+Prompt=FALSE
+ALLOW VOLUME PROPERTIES=TRUE
+GUI Prompt=false
+
+[NWI:Partition 0]
+Device Name=[V504-A1-D0:0] Compaq Smart Array 5i Slot 0 ID 0 LUN 0
+PARTITION TYPE=NSS
+PARTITION SIZE=4010
+PARTITION HOTFIX SIZE=4
+START SECTOR=416160
+
+[NWI:Volume 0]
+VOLUME NAME=SYS
+SEGMENT 1 SIZE=4005
+SEGMENT 1 PARTITION=0
+FILE SYSTEM TYPE=NSS
+COMPRESSION=FALSE
+
+[Novell:PortRes:1.0.0]
+Enterprise.NISname=Netscape Enterprise Server for NetWare
+Apache.NISname=Netscape Administration Server for NetWare
+Apache.subNISnames=iStorage, NWWA, NetWare Web Search
+Apache.ipaddress=192.168.102.28
+Apache.hostname=192.168.102.28
+Apache.port=80
+Apache.port.secure=443
+Apache.ipaddress.2=192.168.102.28
+Apache.hostname.2=192.168.102.28
+Apache.port.2=51080
+Apache.port.secure.2=51443
+iFolder.NISname=iFolder
+iPrint.NISname=NDPS
+showAlways=false
+configtype=single
+prompt=false
+
+[Novell:DST:1.0.0_Location]
+Path=file:/sys:
+User=
+
+[Novell:Languages:1.0.0]
+LangID1=false
+LangID4=true
+LangID6=false
+LangID7=false
+LangID8=false
+LangID9=false
+LangID10=false
+LangID12=false
+LangID13=false
+LangID14=false
+LangID16=false
+LangID99=false
+LangID100=false
+
+[Advertisement]
+AD ID#0=SYS:\NI\DATA\ad1.gif,60
+AD ID#1=SYS:\NI\DATA\ad3.gif,60
+AD ID#2=SYS:\NI\DATA\ad4.gif,60
+AD ID#3=SYS:\NI\DATA\ad5.gif,60
+AD ID#4=SYS:\NI\DATA\ad6.gif,60
+AD ID#5=SYS:\NI\DATA\ad2.gif,60
+
+[Licenses]
+Novell:FCLLic:1.0.0= 
+
+[Novell:FCLLic:1.0.0_License]
+fileName0=sys:\ni\update\lic0001.lic
+activationKey0=C612C4858123D66E
+context0=O=ml3102
+licCnt=1
+
+[NWI:PROTOCOLS]
+Prompt=false
+
+[NWI:TCPIP]
+Logical Name 1=Q57_1_EII
+IP Address 1=192.168.102.28
+Subnet Mask 1=255.255.255.0
+
+[NWI:IPCMD]
+IPX Compatibility=False
+
+[NWI:DNS]
+Prompt=false
+
+[NWI:Host Name]
+Prompt=false
+Verify=False
+IP Address 1=192.168.102.28
+
+[NWI:Time Zone]
+Use Daylight Saving Time=true
+Time Zone=CST
+Prompt=false
+
+[NWI:Time Synchronization]
+Time Server Type=SINGLE
+
+[Novell:Novell Certificate Server:2.0.0]
+Prompt=False
+Create Organizational CA=True
+Organizational CA Name=ml3101 Organizational CA
+Create Server Certificates=True
+IP Server Certificate Name=SSL CertificateIP
+DNS Server Certificate Name=SSL CertificateDNS
+Export Trusted Root=True
+Trusted Root Name=sys:/public/RootCert.der
+
+[NWI:LdapConfig]
+Prompt=true
+ClearText=false
+
+[Novell:SMS:1.0.8]
+treeName=ml3101
+queueVolume=CN=ml310.O=ml3102
+queueContext=CN=ml310 Backup Queue.O=ml3102
+smdrContext=O=ml3102
+[NWI:MISC]
+;relogin password=toolkit
+relogin password=""
+
+[Novell:Netscape Administration Server for NetWare:3.6.0]
+Prompt=false
+AdminPort=2200
+AdminIP=
+AdminHost=
+ApacheServicesPort=80
+ApacheServicesSecurePort=443
+
+[NFAM: AFP Contexts]
+context0=ml3102
+
+[NFAW: CIFS Server Properties]
+servername=ml310_W
+servercomment=
+unicode=false
+
+[NFAW: CIFS Authentication]
+domain=local
+wkgpName=workgroup
+pdc=
+pdcaddr=
+wins=
+
+[NFAW: CIFS IP Addresses]
+enableAllAddresses=true
+
+[NFAW: CIFS Share All]
+shareAllVolumes=true
+
+[NFAW: CIFS Contexts]
+context0=ml3102
+
+[Novell:eMFrame:1.0.0]
+rbsTreeName=ml3101
+rbsContext=ml3102
+rbsContainerName=Role Based Service
+prompt=false

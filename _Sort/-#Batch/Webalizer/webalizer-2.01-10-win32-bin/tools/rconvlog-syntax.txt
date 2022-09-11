@@ -1,0 +1,26 @@
+Rebex Internet Log Converter v1.5
+Converts W3C log files to the NCSA Combined LogFile format
+Copyright (C) 2001-2005 Rebex CR s.r.o. (http://www.rebex.net)
+Written by Lukas Pokorny (lukas.pokorny@rebex.cz)
+Initial Linux port by Christophe Paquin (cpaquin@cwd.fr)
+
+Usage: rconvlog [options] LogFile1 [LogFile2] [LogFile3] ...
+Options:
+-o <output directory> default = current directory
+-c <hostname cache file>
+-t <ncsa[:GMTOffset]>
+-d = convert IP addresses to domain names
+-w = overwrite existing files (default is append)
+-b<0|1|2|3> = how to log bytes sent
+    0 - compatible with convlog (default)
+    1 - bytes sent server-client only (download)
+    2 - bytes sent client-server only (upload)
+    3 - bytes sent both upload and download
+-n YYYY-MM-DDTHH:NN:SS = ignore records older than specified datetime
+-h H = ignore records older than H hours
+
+Examples:
+rconvlog file.log -w
+rconvlog *.log -w -d -t ncsa:+0800
+rconvlog w3c*.log -w -d -c c:\temp\cache.txt
+rconvlog abcd*.log efgh.log -n 2002-01-01T00:00:00

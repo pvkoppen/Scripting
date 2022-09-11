@@ -1,0 +1,2 @@
+Get-Datasource -DPMServerName TolSS02 | Sort-Object ProtectionGroupName,ProductionServerName,LogicalPath | where-Object {$_.name -like "*PHO*"} | convertTo-html
+Get-Datasource -DPMServerName TolSS02 | Sort-Object ProtectionGroupName,ProductionServerName,LogicalPath | convertTo-html > c:\dpm-000.html

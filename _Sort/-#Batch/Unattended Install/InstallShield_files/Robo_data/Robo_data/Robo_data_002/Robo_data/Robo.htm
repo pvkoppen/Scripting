@@ -1,0 +1,92 @@
+<html><head>
+
+
+<meta name="Copyrights" content="Copyright(c) 2001-2002 eHelp Corporation. All rights reserved.">
+<meta name="Product" content="RoboEngine"><title>Default Workspace</title>
+
+<link rel="stylesheet" type="text/css" href="Robo_data/mr_wsm_style_ns.css">
+<script language="Javascript">
+function doSetImgSrc( strName, strURL )
+{
+	var eImg = document[strName];
+	if( eImg != null )	eImg.src = strURL;
+};
+function doNormalizeURL( strURL )
+{
+	var strRet = "";
+	var cChar;
+	var nSize = strURL.length;
+	for( var nIdx = 0; nIdx < nSize; nIdx ++ )
+	{
+		var cChar = strURL.charAt( nIdx );
+		if( cChar == "\\" )	cChar = "/";
+		strRet += cChar;
+	}
+	return strRet;
+};
+function doGetURLPath( strURL )
+{
+	var strRet = "/";
+	strURL = doNormalizeURL( strURL );
+	var nPos = strURL.indexOf( "?" );		// first take out the parameters
+	if( nPos >= 0 )	strURL = strURL.substring( 0, nPos );
+	nPos = strURL.lastIndexOf( "/" );
+	if( nPos >= 0 )	strRet = strURL.substring( 0, nPos + 1 );
+	return strRet;
+};
+function doGetBSSCRightFrame()
+{
+	var cRet = null;
+	if( parent != null && parent.parent != null )
+	{
+		cRet = parent.parent["bsscright"];
+	};
+	return cRet;
+};
+function doGetBSSCTocApplet()
+{
+	var cRet = null;
+	if( parent != null && parent.parent != null )
+	{
+		var cFrm = parent["bsscleftbtm"];
+		if( cFrm != null )
+			cRet = cFrm.document.applets[0];
+	};
+	return cRet;
+};
+function doSyncTOC()
+{
+	var cTopicFrm = doGetBSSCRightFrame();
+	if( cTopicFrm != null )
+	{
+		var strTopicURL = doNormalizeURL(cTopicFrm.location.href).toLowerCase();
+		var strDocPath = doGetURLPath( document.location.href ).toLowerCase();
+		if( strTopicURL.indexOf( strDocPath ) == 0 )
+		{
+			strTopicURL = cTopicFrm.location.pathname;
+			var cApplet = doGetBSSCTocApplet();
+			if( cApplet != null )
+				cApplet.Command( "SyncToc", strTopicURL );
+		};
+	};
+};
+function doOnButtonClick( strMoniker )
+{
+	var strCurrAgent = "";
+	strMoniker = strMoniker.toLowerCase();
+	if( strMoniker == "sync" )
+	{
+		doSyncTOC();	
+	};
+	return false;
+};
+</script></head><body topmargin="0" leftmargin="0" class="clsColorNormal" bgcolor="#99ccff" marginheight="0" marginwidth="0">
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+  <tbody><tr>
+    <td>&nbsp;</td>
+    <td nowrap="nowrap" width="100%">Contents</td>
+<!--	<td></td>
+-->
+  </tr>
+</tbody></table>
+</body></html>

@@ -1,0 +1,26 @@
+Action = Configure
+Method = Custom
+
+;Controller specifications
+;Controller Smart Array 642  
+Controller        = Slot 2
+ReadCache         = 100
+WriteCache        = 0
+RebuildPriority   = Low
+ExpandPriority    = Low
+
+;Array specifications
+Array             = A
+Drive             = 1:12,1:13,1:14
+OnlineSpare       = No
+;Unused Space remaining 3
+
+;Drive Specifications
+LogicalDrive      = 1
+RAID              = 5
+Size              = 34719
+; Blocks Per dr =35553120, Offset =0
+; Blocks = 71106240 
+Sectors           = 32
+StripeSize        = 16
+ArrayAccelerator  = Enabled

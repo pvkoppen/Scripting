@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<TITLE>IA1 - By Modomedia</TITLE>
+</HEAD>
+<body background="images/bg.gif" bgcolor="000000" text="#00FFFF" link="ffffff" vlink="008888">
+<base target="screen">
+<basefont size=2>
+<font face="Arial">
+<blockquote>
+
+
+<center><font size="3"><B>MouseOver Code</B></font></center>
+
+<p><br><b>OVERVIEW</b><br>
+By placing the following code into your HTML [web document] you can swap images from one to another for a cool effect.  One part of this code goes into the top of your document in between the &lt;HEAD&gt;&lt;/HEAD&gt; tags.   The other part of this code will go into your HTML where you want the image to appear.<P>
+
+<b>IN THE &lt;HEAD&gt;&lt;/HEAD&gt; TAG</b><br>
+ You need to copy and paste this text in your HTML below the &lt;HEAD&gt; and before the &lt;/HEAD&gt; tags.  You will modify it to reflect your specific images, wherever the image names appear:
+<pre><font size="3">
+&lt;SCRIPT LANGUAGE = "JavaScript"&gt;
+&lt;!-- Hides script from non-compatible browsers
+
+
+       browserName = navigator.appName;
+       browserVer = parseInt(navigator.appVersion);
+            /*   if (top.frames.length &gt; 1) {
+                        top.location="menu.html";
+                        } */
+
+               if (browserName == "Netscape" && browserVer &gt;= 3) version ="n3";
+               else {version = "n2"};
+               if (navigator.appVersion.substring(0,3) == '4.0') {version="n3"};
+               if (version == "n3") {
+             
+
+              
+               nav1on = new Image;
+               nav1on.src = "button1_lit.gif";
+             
+               nav1off = new Image;
+               nav1off.src = "button1.gif";
+
+               nav2on = new Image;
+               nav2on.src = "button2_lit.gif";
+             
+               nav2off = new Image;
+               nav2off.src = "button2.gif";
+
+               nav3on = new Image;
+               nav3on.src = "button3_lit.gif";
+             
+               nav3off = new Image;
+               nav3off.src = "button3.gif";
+
+               nav4on = new Image;
+               nav4on.src = "button4_lit.gif";
+             
+               nav4off = new Image;
+               nav4off.src = "button4.gif";
+                                     
+            
+             }
+
+       function img_act(imgName) {
+               if (version == "n3") {
+               imgOn = eval(imgName + "on.src");
+               document [imgName].src = imgOn;
+               }
+       }
+
+       function img_inact(imgName) {
+               if (version == "n3") {
+               imgOff = eval(imgName + "off.src");
+               document [imgName].src = imgOff;
+               }
+       }
+
+// End hide script --&gt;
+
+
+&lt;/script&gt;
+ </font>
+</pre>
+
+
+
+<br><p>
+<b>THE IMAGE REFERENCE</b><br>
+This part is what you put in the HTML where you want the buttons to appear.  Make sure that the button name here is the one that is the same as the "off" state in the above text.  Also note that the image name attribute refers to the the names in the above script.  Here is the text:
+<pre><font size="3">
+&lt;A HREF="mylink.html" onMouseover = "img_act('nav1')" onMouseout = "img_inact('nav1')"&gt;&lt;img src="button1.gif" border=0 name="nav1"&gt;&lt;/a&gt; 
+
+&lt;A HREF="mylink.html" onMouseover = "img_act('nav2')" onMouseout = "img_inact('nav2')"&gt;&lt;img src="button2.gif" border=0 name="nav2"&gt;&lt;/a&gt;
+
+&lt;A HREF="mylink.html" onMouseover = "img_act('nav3')" onMouseout = "img_inact('nav3')"&gt;&lt;img src="button3.gif" border=0 name="nav3"&gt;&lt;/a&gt;
+</font></pre>
+<br><p>
+
+</blockquote>
+</font>
+</BODY>
+</HTML>

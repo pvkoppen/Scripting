@@ -1,0 +1,41 @@
+rem Office 2003 SP1 script for Tuiora
+rem Created by Aaron Gayton @ Staples Rodway Ltd 27-04-2005
+rem Last change date:
+rem Contact +64 6 7580956
+rem copyright Staples Rodway Ltd
+
+
+net use f: \\tuiora-altiris\express /user:tuiora-altiris\altiris alt1r1s /persistent:No
+
+f:
+cd\
+
+change User /install
+
+echo wait
+echo wait
+echo wait
+echo wait
+echo wait
+
+
+
+
+f:
+cd\
+cd \Tuiora\CDS\Office sP1
+
+msiexec /p mainsp1ff.msp /qn /L*v C:\patch.log
+
+
+echo wait
+echo wait
+echo wait
+
+change User /execute
+
+echo wait
+echo wait
+echo wait
+echo wait
+echo wait

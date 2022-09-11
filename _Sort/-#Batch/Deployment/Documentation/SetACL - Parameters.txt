@@ -1,0 +1,94 @@
+
+SetACL.exe 0.904   by Helge Klein             www.helge.mynetcologne.de/setacl
+
+Usage: SetACL.exe <object name> <object type> <action> <trustee> <permissions>
+                  [/i:<inheritance>] [/p:<inh. from parent>] [/r:<recursion>]
+                  [/sid] [/silent]
+
+==============================================================================
+
+<object name>   = Any valid path to local or remote object
+
+------------------------------------------------------------------------------
+
+<object type>   = {/file | /dir | /printer | /registry | /service | /share |
+                   /ds_obj | /ds_obj_all}
+
+------------------------------------------------------------------------------
+
+<action>        = {/deny | /grant | /set | /revoke}
+
+------------------------------------------------------------------------------
+
+<trustee>       = User/group to grant/deny permissions for, ie. 'machine\user'
+
+------------------------------------------------------------------------------
+
+<permissions>
+
+      /file       = {/read | /write | /read_ex | /change | /full | /traverse |
+                     /list_dir | /read_attributes | /read_ea | /add_file |
+                     /add_subdir | /write_attributes | /write_ea |
+                     /delete_child | /delete | /read_dacl | /write_dacl |
+                     /write_owner}
+
+      ........................................................................
+
+      /dir        = {/read | /write | /list_folder | /read_ex | /change |
+                     /profile | /full | /traverse | /list_dir |
+                     /read_attributes | /read_ea | /add_file | /add_subdir | 
+                     /write_attributes | /write_ea | /delete_child |/delete |
+                     /read_dacl | /write_dacl | /write_owner}
+
+      ........................................................................
+
+      /printer    = {/print | /man_printer | /man_docs | /full}
+
+      ........................................................................
+
+      /registry   = {/read | /full | /query_val | /set_val | /create_subkey |
+                     /enum_subkeys | /notify | /create_link | /delete |
+                     /write_dacl | /write_owner | /read_access}
+
+      ........................................................................
+
+      /service    = {/read | /start_stop | /full}
+
+      ........................................................................
+
+      /share      = {/read | /change | /full}
+
+------------------------------------------------------------------------------
+
+<inheritance>  = {cont_obj_inh | cont_inh | obj_inh | no_prop_inh |
+                  inh_only_obj | inh_only_cont | inh_only_cont_obj}
+
+------------------------------------------------------------------------------
+
+<inh. from parent>
+               = {yes | no_copy | no_dont_copy}
+
+------------------------------------------------------------------------------
+
+<recursion>    = {cont_obj | cont | obj}
+
+(Only for reg keys and directories) Walk down the tree and set permissions on
+every key, directory and every file {cont_obj}, on every key and directory
+{cont}, or on every file {obj}. Only needed on NT4 and in special cases.
+
+------------------------------------------------------------------------------
+
+/sid           : <trustee> parameter is a SID, not an account/group name.
+                 Well-known SIDs can be used.
+
+------------------------------------------------------------------------------
+
+/silent        : No output whatsoever is displayed if the number of
+                 parameters passed is correct.
+
+==============================================================================
+
+If not specified, inheritance is always set to values which suit the cause.
+Using your own settings can result in undesired permissions. Beware!
+
+Also, 'inherit from parent' is set to 'yes' if not specified.

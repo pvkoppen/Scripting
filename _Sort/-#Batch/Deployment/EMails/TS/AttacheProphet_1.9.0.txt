@@ -1,0 +1,18 @@
+Hello Administrator(s),
+----------------------------------------------------------------
+
+This Software Install Can not be automated: Attache Prophet ODBC. 
+Please perform the following activities manually:
+- Logon to the new Terminal Sever using an Administrator account.
+- Run the Install from: \\TOLDS01\eXpress\_usr.lib\Scripts\TS\AttacheProphet_1.9.0_Manual.cmd
+  - Accept all default settings.
+  - For security use these settings:
+    - Prophet Serial Number: 4156
+    - ODBC security code: 9571425
+- Wait for the command-line box to disappear and the build process will continue.
+
+----------------------------------------------------------------
+Altiris Automated Build Process.
+
+This is a generated email message, do not reply to this message.
+

@@ -1,0 +1,61 @@
+---------------------------------------------------------------------------------
+The syntax of this command is:
+
+NETDOM HELP command
+      -or-
+NETDOM command /help
+
+   Commands available are:
+
+   NETDOM ADD              NETDOM RESETPWD         NETDOM RESET
+   NETDOM COMPUTERNAME     NETDOM QUERY            NETDOM TRUST
+   NETDOM HELP             NETDOM REMOVE           NETDOM VERIFY
+   NETDOM JOIN             NETDOM MOVENT4BDC
+   NETDOM MOVE             NETDOM RENAMECOMPUTER
+
+   NETDOM HELP SYNTAX explains how to read NET HELP syntax lines.
+   NETDOM HELP command | MORE displays Help one screen at a time.
+
+   Note that verbose output can be specified by including /VERBOSE with
+   any of the above netdom commands.
+
+The command completed successfully.
+
+
+The syntax of this command is:
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+NETDOM ADD machine /Domain:domain [/UserD:user] [/PasswordD:[password | *]]
+           [/Server:server] [/OU:ou path] [/DC]
+
+NETDOM ADD Adds a workstation or server account to the domain.
+
+machine is the name of the computer to be added
+
+/Domain         Specifies the domain in which to create the machine account
+
+/UserD          User account used to make the connection with the domain
+                specified by the /Domain argument
+
+/PasswordD      Password of the user account specified with /UserD.  A * means
+                to prompt for the password
+
+/Server         Name of a specific domain controller that should be used to
+                perform the Add. This option cannot be used with the /OU
+                option.
+
+/OU             Organizational unit under which to create the machine account.
+                This must be a fully qualified RFC 1779 DN for the OU. When
+                using this argument, you must be running directly on a domain
+                controller for the specified domain.
+                If this argument is not included, the account will be created
+                under the default organization unit for machine objects for
+                that domain.
+
+/DC             Specifies that a domain controller's machine account is to be
+                created. This option cannot be used with the /OU option.
+
+
+NETDOM HELP command | MORE displays Help one screen at a time.
+The command completed successfully.
+---------------------------------------------------------------------------------

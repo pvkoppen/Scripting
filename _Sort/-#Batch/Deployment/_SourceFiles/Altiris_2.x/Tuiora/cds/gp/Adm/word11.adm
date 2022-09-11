@@ -1,0 +1,2308 @@
+CLASS USER
+
+CATEGORY "Microsoft Office Word 2003"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options
+CATEGORY "Tools | Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+CATEGORY "View"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+CATEGORY "Show"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Startup Task Pane"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME StartupDialog
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Highlight"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fShowHighlight_533_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Bookmarks"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_146_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0	
+	END PART
+	END POLICY
+POLICY "Status bar"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fStatusBar_83_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	ACTIONLISTON
+	VALUENAME fStatLine_3_1 VALUE NUMERIC 1
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME fStatLine_3_1 VALUE NUMERIC 0
+	END ACTIONLISTOFF
+	END PART
+	ACTIONLISTOFF
+	VALUENAME fStatLine_3_1 VALUE DELETE
+	END ACTIONLISTOFF
+	END POLICY
+POLICY "ScreenTips"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_159_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Animated text"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fShowTextSfx_71_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Horizontal scroll bar"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fHorzScrollBar_100_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Vertical scroll bar"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fVertScrollBar_101_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Picture placeholders"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_134_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Windows in Taskbar"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSDIOn_1792_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Field codes"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_141_2
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Field shading"
+	PART "Field shading" DROPDOWNLIST
+	VALUENAME grpfvisi_147_2
+	ITEMLIST
+		NAME "Never"		VALUE NUMERIC 0
+		NAME "Always"		VALUE NUMERIC 1
+		NAME "When selected"	VALUE NUMERIC 2	DEFAULT
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Left scroll bar"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fBidiControls_1099_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "This setting also sets Right ruler (Print view only)" TEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Formatting marks"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Tab characters"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_128_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Spaces"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_129_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Paragraph marks"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_130_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Hidden text"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_135_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Optional hyphens"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_132_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Optional breaks"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_151_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "All"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_133_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Print and Web Layout options"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Drawings"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_149_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Object anchors"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_140_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Text boundaries"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_144_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "White space between pages (Print view only)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME FNoMargPgvw_1126_1
+	VALUEON NUMERIC 0
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Vertical ruler (Print view only)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fVertRuler_103_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Outline and Normal options"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Wrap to window"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fWrapToWwd_106_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Draft font"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fDraftFont_104_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Style area width"
+	PART "Style area width" DROPDOWNLIST
+	VALUENAME xwSelBar_112_8
+	ITEMLIST
+		NAME "0''"	VALUE NUMERIC 0	DEFAULT
+		NAME "0.25''"	VALUE NUMERIC 24
+		NAME "0.5''"	VALUE NUMERIC 48
+		NAME "0.75''"	VALUE NUMERIC 72
+		NAME "1''"	VALUE NUMERIC 96
+		NAME "1.25''"	VALUE NUMERIC 120
+		NAME "1.5''"	VALUE NUMERIC 144
+		NAME "1.75''"	VALUE NUMERIC 168
+		NAME "2''"	VALUE NUMERIC 192
+		NAME "2.25''"	VALUE NUMERIC 216
+		NAME "2.5''"	VALUE NUMERIC 240
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "General"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+CATEGORY "Web Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Internet
+CATEGORY "General"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Internet
+POLICY "Disable features not supported by specified browsers"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Internet
+	PART "Disable features not supported by specified browsers" CHECKBOX
+	VALUENAME DoNotOptimizeForBrowser
+	VALUEON NUMERIC 0 ;Reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Files"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Common\Internet
+POLICY "Check if Word is the default editor for all other Web pages"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DoNotCheckIfWordIsDefaultHTMLEditor
+	VALUEON NUMERIC 0 ;Reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "E-mail Options"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Filter HTML before sending"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fWMLowFidelity_1797_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Rely on CSS for font formatting"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fWMRelyOnCSS_1798_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Save smart tags in e-mail"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fWMFactoid_1803_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+POLICY "Blue background, white text"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fBlue_73_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Provide feedback with animation"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAnimateScreenMove_42_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Confirm conversion at Open"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fConfirmCvrtr_17_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Update automatic links at Open"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fNoCalcLinksOnOpen_90_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Mail as attachment"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fMailAsAttachment_72_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Recently used file list"
+	PART "Number of entries: " NUMERIC
+	VALUENAME cFilesMRU_32_4
+	SPIN 1
+	MIN 0
+	MAX 9
+	DEFAULT 4
+	END PART
+	END POLICY
+POLICY "Help for WordPerfect users"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fWPCommandKeys_18_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Navigation keys for WordPerfect users"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fWPNavigationKeys_20_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Allow background open of web pages"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fBackgroundOpen_1534_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Automatically create drawing canvas when inserting AutoShapes"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAutoCreateCanvas_1882_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Asian fonts also apply to Latin text"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSeparateFont_105_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Measurement units"
+	PART "Select units: " DROPDOWNLIST
+	VALUENAME ut_64_4
+	ITEMLIST
+		NAME "Inches"		VALUE NUMERIC 0	DEFAULT
+		NAME "Centimeters"		VALUE NUMERIC 2
+		NAME "Millimeters"		VALUE NUMERIC 4
+		NAME "Points"	VALUE NUMERIC 1
+		NAME "Picas"		VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Show pixels for HTML features"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fUsePixelsInDialogs_95_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Use character units"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fUseCharUnit_1521_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "English Word 6.0/95 documents"
+	PART "English Word 6.0/95 documents" DROPDOWNLIST
+	VALUENAME iAsianText_110_2
+	ITEMLIST
+		NAME "Contain Asian text"		VALUE NUMERIC 0	
+		NAME "Open normally"		VALUE NUMERIC 1	DEFAULT
+		NAME "Automatically detect Asian text"		VALUE NUMERIC 2
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Allow starting in Reading Layout"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+	PART "Check to allow starting in Reading Layout" CHECKBOX
+		VALUENAME fAllowAutoReadingMode_1886_1
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Edit"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+CATEGORY "Smart cut and paste"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Adjust sentence and word spacing automatically"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSmartCutPaste_19_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Adjust paragraph spacing on paste"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSmartParaPaste_1651_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Adjust table formatting and alignment on paste"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSmartTablePaste_1652_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Smart style behavior"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSmartStylePaste_1653_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Merge formatting when pasting from PowerPoint"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fFormatPowerpointPaste_1654_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Adjust formatting when pasting from Microsoft Excel"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fFormatExcelPaste_1655_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Merge pasted lists with surrounding lists"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fPasteMergeLists_1657_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+POLICY "Typing replaces selection"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAutoDelete_6_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Drag-and-drop text editing"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fDragNDrop_0_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Use the INS key for paste"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fInsForPaste_7_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Picture editor"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options
+	PART "Picture editor" DROPDOWNLIST
+	VALUENAME PICEDITCLASS
+	ITEMLIST
+		NAME "Microsoft Word"	VALUE Word.Picture.8	DEFAULT	
+		NAME "Microsoft Photo Editor 3.0"	VALUE MSPhotoEd.3
+		NAME "Microsoft Draw 98 Drawing"	VALUE	MSDraw.Drawing.8.2
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Allow accented uppercase in French"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAccentOnUpper_84_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Use smart paragraph selection"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSmartParaSel_1650_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Use CTRL + Click to follow hyperlink"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fHypCtrlClickFollow_1656_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "When selecting, automatically select entire word"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAutoWordSel_68_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Prompt to update style"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fPromptUpdateStyle_1795_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Keep track of formatting"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fFccBkg_1793_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Mark formatting inconsistencies"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fShowFccError_1807_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Color for marking formatting inconsistencies" DROPDOWNLIST
+		KEYNAME "Software\Policies\Microsoft\Shared Tools\Proofing Tools"
+		VALUENAME FormatConsistencyWavyUnderlineColor
+	ITEMLIST
+			NAME "Black" VALUE NUMERIC 0
+			NAME "Blue" VALUE NUMERIC 255 DEFAULT
+			NAME "Dark Blue" VALUE NUMERIC 128
+			NAME "Light Blue" VALUE NUMERIC 3368703
+			NAME "Sky Blue" VALUE NUMERIC 52479
+			NAME "Pale Blue" VALUE NUMERIC 10079487
+			NAME "Blue Gray" VALUE NUMERIC 6710937
+			NAME "Green" VALUE NUMERIC 65280
+			NAME "Dark Green" VALUE NUMERIC 32768
+			NAME "Darker Green" VALUE NUMERIC 13056
+			NAME "Light Green" VALUE NUMERIC 13434828
+			NAME "Olive Green" VALUE NUMERIC 3355392
+			NAME "Sea Green" VALUE NUMERIC 3381606
+			NAME "Red" VALUE NUMERIC 16711680
+			NAME "Dark Red" VALUE NUMERIC 8388608
+			NAME "Yellow" VALUE NUMERIC 16776960
+			NAME "Dark Yellow" VALUE NUMERIC 8421376
+			NAME "Light Yellow" VALUE NUMERIC 16777113
+			NAME "White" VALUE NUMERIC 16777215
+			NAME "Brown" VALUE NUMERIC 10040064
+			NAME "Orange" VALUE NUMERIC 16737792
+			NAME "Light Orange" VALUE NUMERIC 16750848
+			NAME "Cyan" VALUE NUMERIC 65535
+			NAME "Dark Cyan" VALUE NUMERIC 32896
+			NAME "Light Cyan" VALUE NUMERIC 13434879
+			NAME "Magenta" VALUE NUMERIC 16711935
+			NAME "Dark Magenta" VALUE NUMERIC 8388736
+			NAME "Dark Teal" VALUE NUMERIC 13158
+			NAME "Indigo" VALUE NUMERIC 3355545
+			NAME "Lime" VALUE NUMERIC 10079232
+			NAME "Aqua" VALUE NUMERIC 3394764
+			NAME "Gold" VALUE NUMERIC 16763904
+			NAME "Plum" VALUE NUMERIC 10040166
+			NAME "Rose" VALUE NUMERIC 16751052
+			NAME "Tan" VALUE NUMERIC 16764057
+			NAME "Lavender" VALUE NUMERIC 13408767
+			NAME "Gray" VALUE NUMERIC 8421504
+			NAME "Gray 25%" VALUE NUMERIC 12632256
+			NAME "Gray 50%" VALUE NUMERIC 8421504
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Auto-Keyboard switching" 
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAutoKey_1103_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Enable click and type"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fClickType_108_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "IME Control Active"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fIMEClose_96_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "IME TrueInLine"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fTrueInLine_1008_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Print"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vprsu
+CATEGORY "Printing options"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vprsu
+POLICY "Draft output"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DraftOutput_2_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Update fields"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME UpdateFields_5_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Update links"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME UpdateLinks_13_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Allow A4/Letter paper resizing"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fMapStdSizes_15_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Background printing"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME BackgroundPrint
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Reverse print order"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME ReversePrint_6_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Include with document"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vprsu
+POLICY "Document properties"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DocProps_1_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Field codes"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME FieldCodes_4_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Hidden text"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME HiddenText_0_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Drawing objects"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DrawnObjects_14_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Options for Duplex Printing"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vprsu
+POLICY "Front of sheet"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fPrOrder1_21_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Back of the sheet"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fPrOrder2_22_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Save"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Always create backup copy"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAlwaysBackupDuringSave_8_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Do not force on 'Always create backup copy' if you have" TEXT
+	END PART
+	PART "already forced on 'Allow fast saves'" TEXT
+	END PART
+	END POLICY
+POLICY "Allow fast saves"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAllowFastSaves_9_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Do not force on 'Allow fast saves' if you have" TEXT
+	END PART
+	PART "already forced on 'Always create backup copy'" TEXT
+	END PART
+	END POLICY
+POLICY "Prompt for document properties"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fPromptSI_4_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Prompt to save Normal template"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fPmtSaveGlobalDot_107_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Allow background saves"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME BackgroundSave
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Save AutoRecover info"
+	PART "Save AutoRecover info every (minutes)" NUMERIC
+	VALUENAME AutoRecover_192_8
+	SPIN 1
+	MIN 0
+	MAX 120
+	DEFAULT 10
+	END PART
+	END POLICY
+POLICY "Make local copy of files stored on network or removable drives"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fMakeLocalCopy_546_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Add Bi-Directional Marks when saving Text files"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAddCtrlSave_1100_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Save Word files as"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options
+	PART "Save Word files as" DROPDOWNLIST
+	VALUENAME DefaultFormat
+	ITEMLIST
+		NAME "Word document (*.doc)"	VALUE ""		DEFAULT
+		NAME "XML (*.xml)"	VALUE "XML"
+		NAME "Single Files Web Page (*.mht)"	VALUE "WebArchive"
+		NAME "Web Page (*.htm; *.html)"		VALUE	"HTML"
+		NAME "Web Page, Filtered (*.htm, *.html)"	VALUE "ReducedHTML"
+		NAME "Document Template (*.dot)" 		VALUE "Dot"
+		NAME "Rich Text Format (*.rtf)"		VALUE "Rtf"
+		NAME "Plain Text  (*.txt)"			VALUE "Text"
+		NAME "Word 6.0/95 (*.doc)" 	VALUE	"MSWord6Exp"
+		NAME "Word 6.0/95 - Chinese (Simplified) (*.doc)" 	VALUE	"MSWord6SCExp"
+		NAME "Word 6.0/95 - Chinese (Traditional) (*.doc)" 	VALUE	"MSWord6TCExp"
+		NAME "Word 6.0/95 - Japanese (*.doc)" 	VALUE	"MSWord6JExp"
+		NAME "Word 6.0/95 - Korean (*.doc)" 	VALUE	"MSWord95KExp"
+		NAME "Word 97-2002 & 6.0/95 - RTF" 	VALUE	"MSWord6RTFExp"
+		NAME "Word 5.1 for Macintosh (*.mcw)"	VALUE	"MSWordMac51"
+		NAME "Word 5.0 for Macintosh (*.mcw)"	VALUE	"MSWordMac5"
+		NAME "Word 2.x for Windows (*.doc)" 	VALUE	"MSWordWin2"
+		NAME "Works 4.0 for Windows (*.wps)"	VALUE	"MSWorksWin4"
+		NAME "WordPerfect 5.x for Windows (*.doc)"		VALUE	"WrdPrfctWin"
+		NAME "WordPerfect 5.1 for DOS (*.doc)"	VALUE	"WrdPrfctDos51"
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Disable features not supported by Word 97"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME Word97Compat_120_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Security"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Warn before printing, saving or sending a file that contains tracked changes or comments"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fWarnRevisions_1805_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Store random number to improve merge accuracy"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fDontSaveRSID_1804_1
+	VALUEON NUMERIC 0
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Make hidden markup visible"
+	PART "Check to make hidden markup visible" CHECKBOX
+	VALUENAME fShowMarkupOpenSave_1891_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Spelling & Grammar"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Check spelling as you type"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSplBkg_99_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Color for marking spelling errors" DROPDOWNLIST
+		KEYNAME "Software\Policies\Microsoft\Shared Tools\Proofing Tools"
+		VALUENAME SpellingWavyUnderlineColor
+	ITEMLIST
+			NAME "Black" VALUE NUMERIC 0
+			NAME "Blue" VALUE NUMERIC 255
+			NAME "Dark Blue" VALUE NUMERIC 128
+			NAME "Light Blue" VALUE NUMERIC 3368703
+			NAME "Sky Blue" VALUE NUMERIC 52479
+			NAME "Pale Blue" VALUE NUMERIC 10079487
+			NAME "Blue Gray" VALUE NUMERIC 6710937
+			NAME "Green" VALUE NUMERIC 65280
+			NAME "Dark Green" VALUE NUMERIC 32768
+			NAME "Darker Green" VALUE NUMERIC 13056
+			NAME "Light Green" VALUE NUMERIC 13434828
+			NAME "Olive Green" VALUE NUMERIC 3355392
+			NAME "Sea Green" VALUE NUMERIC 3381606
+			NAME "Red" VALUE NUMERIC 16711680 DEFAULT
+			NAME "Dark Red" VALUE NUMERIC 8388608
+			NAME "Yellow" VALUE NUMERIC 16776960
+			NAME "Dark Yellow" VALUE NUMERIC 8421376
+			NAME "Light Yellow" VALUE NUMERIC 16777113
+			NAME "White" VALUE NUMERIC 16777215
+			NAME "Brown" VALUE NUMERIC 10040064
+			NAME "Orange" VALUE NUMERIC 16737792
+			NAME "Light Orange" VALUE NUMERIC 16750848
+			NAME "Cyan" VALUE NUMERIC 65535
+			NAME "Dark Cyan" VALUE NUMERIC 32896
+			NAME "Light Cyan" VALUE NUMERIC 13434879
+			NAME "Magenta" VALUE NUMERIC 16711935
+			NAME "Dark Magenta" VALUE NUMERIC 8388736
+			NAME "Dark Teal" VALUE NUMERIC 13158
+			NAME "Indigo" VALUE NUMERIC 3355545
+			NAME "Lime" VALUE NUMERIC 10079232
+			NAME "Aqua" VALUE NUMERIC 3394764
+			NAME "Gold" VALUE NUMERIC 16763904
+			NAME "Plum" VALUE NUMERIC 10040166
+			NAME "Rose" VALUE NUMERIC 16751052
+			NAME "Tan" VALUE NUMERIC 16764057
+			NAME "Lavender" VALUE NUMERIC 13408767
+			NAME "Gray" VALUE NUMERIC 8421504
+			NAME "Gray 25%" VALUE NUMERIC 12632256
+			NAME "Gray 50%" VALUE NUMERIC 8421504
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Always suggest corrections"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSplAutoSugg_24_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Suggest from main dictionary only"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSplSuggFrUserDict_28_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Ignore words in UPPERCASE"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSplIgnoreCaps_25_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Ignore words with numbers"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSplIgnoreDigits_27_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Ignore Internet and file addresses"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fFilenamesEmailAliases_536_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Use German post reform rules"
+KEYNAME "Software\Policies\Microsoft\Shared Tools\Proofing Tools\Spelling"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME GermanPostReform
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Combine aux verb/adj."
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSplAuxFind_560_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Use auto-change list"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSplMisSearch_561_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Process compound nouns"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSplCompoundNoun_1524_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Hebrew mode"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options
+	PART "Hebrew mode" DROPDOWNLIST
+	VALUENAME "BiDi Spelling"
+	ITEMLIST
+		NAME "Full"	VALUE NUMERIC 0 DEFAULT
+		NAME "Partial"	VALUE NUMERIC 1
+		NAME "Mixed"	VALUE NUMERIC 2
+		NAME "Mixed authorized"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Arabic modes"
+	PART "Arabic modes" DROPDOWNLIST
+	VALUENAME wSpell_1112_8
+	ITEMLIST
+		NAME "None"		VALUE NUMERIC 0
+		NAME "Strict initial alef hamza"	VALUE NUMERIC 1
+		NAME "Strict final yaa"	VALUE NUMERIC 2
+		NAME "Both strict"	VALUE NUMERIC 3 DEFAULT
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Check grammar as you type"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fGramBkg_535_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Color for marking grammatical errors" DROPDOWNLIST
+		KEYNAME "Software\Policies\Microsoft\Shared Tools\Proofing Tools"
+		VALUENAME GrammarWavyUnderlineColor
+	ITEMLIST
+			NAME "Black" VALUE NUMERIC 0
+			NAME "Blue" VALUE NUMERIC 255
+			NAME "Dark Blue" VALUE NUMERIC 128
+			NAME "Light Blue" VALUE NUMERIC 3368703
+			NAME "Sky Blue" VALUE NUMERIC 52479
+			NAME "Pale Blue" VALUE NUMERIC 10079487
+			NAME "Blue Gray" VALUE NUMERIC 6710937
+			NAME "Green" VALUE NUMERIC 65280 DEFAULT
+			NAME "Dark Green" VALUE NUMERIC 32768
+			NAME "Darker Green" VALUE NUMERIC 13056
+			NAME "Light Green" VALUE NUMERIC 13434828
+			NAME "Olive Green" VALUE NUMERIC 3355392
+			NAME "Sea Green" VALUE NUMERIC 3381606
+			NAME "Red" VALUE NUMERIC 16711680
+			NAME "Dark Red" VALUE NUMERIC 8388608
+			NAME "Yellow" VALUE NUMERIC 16776960
+			NAME "Dark Yellow" VALUE NUMERIC 8421376
+			NAME "Light Yellow" VALUE NUMERIC 16777113
+			NAME "White" VALUE NUMERIC 16777215
+			NAME "Brown" VALUE NUMERIC 10040064
+			NAME "Orange" VALUE NUMERIC 16737792
+			NAME "Light Orange" VALUE NUMERIC 16750848
+			NAME "Cyan" VALUE NUMERIC 65535
+			NAME "Dark Cyan" VALUE NUMERIC 32896
+			NAME "Light Cyan" VALUE NUMERIC 13434879
+			NAME "Magenta" VALUE NUMERIC 16711935
+			NAME "Dark Magenta" VALUE NUMERIC 8388736
+			NAME "Dark Teal" VALUE NUMERIC 13158
+			NAME "Indigo" VALUE NUMERIC 3355545
+			NAME "Lime" VALUE NUMERIC 10079232
+			NAME "Aqua" VALUE NUMERIC 3394764
+			NAME "Gold" VALUE NUMERIC 16763904
+			NAME "Plum" VALUE NUMERIC 10040166
+			NAME "Rose" VALUE NUMERIC 16751052
+			NAME "Tan" VALUE NUMERIC 16764057
+			NAME "Lavender" VALUE NUMERIC 13408767
+			NAME "Gray" VALUE NUMERIC 8421504
+			NAME "Gray 25%" VALUE NUMERIC 12632256
+			NAME "Gray 50%" VALUE NUMERIC 8421504
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Check grammar with spelling"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fRunGrammar_596_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Show readability statistics"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fShowStats_16_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Writing style"
+	PART "Writing style" DROPDOWNLIST
+	VALUENAME fgosWritingStyle_50_4
+	ITEMLIST
+		NAME "Grammar & Style"	VALUE NUMERIC 0
+		NAME "Grammar Only"	VALUE NUMERIC 1 DEFAULT
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Delay before starting background spelling checker"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options
+	PART "Delay before starting background spelling checker" TEXT
+	END PART
+	PART "and lanaguage autodetection" NUMERIC
+	VALUENAME TerminalServerSpellingStart
+	SPIN 1
+	MIN 0
+	MAX 2147483647
+	DEFAULT 0
+	END PART
+	PART "(in milliseconds)" TEXT
+	END PART
+	PART "e.g. 5000 milliseconds = 5 seconds" TEXT
+	END PART
+	END POLICY
+POLICY "Delay before starting other proofing tools"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options
+	PART "Delay before starting background grammar checker, smart tag" TEXT
+	END PART
+	PART "recognizer, and format consistency checker" NUMERIC
+	VALUENAME TerminalServerOtherProofStart
+	SPIN 1
+	MIN 0
+	MAX 2147483647
+	DEFAULT 5000
+	END PART
+	PART "(in milliseconds)" TEXT
+	END PART
+	PART "e.g. 5000 milliseconds = 5 seconds" TEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "File Locations"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options
+POLICY "Documents"
+	PART "Documents" EDITTEXT
+	VALUENAME DOC-PATH
+	EXPANDABLETEXT
+	REQUIRED
+	END PART
+	END POLICY
+POLICY "Clipart pictures"
+	PART "Clipart pictures" EDITTEXT
+	VALUENAME PICTURE-PATH
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "AutoRecover files"
+	PART "AutoRecover files" EDITTEXT
+	VALUENAME AUTOSAVE-PATH
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Tools"
+	PART "Tools" EDITTEXT
+	VALUENAME TOOLS-PATH
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Startup"
+	PART "Startup" EDITTEXT
+	VALUENAME STARTUP-PATH
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Japanese Find"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpreffuz
+POLICY "Match case"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqCase_0_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match full/half width form"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqByte_1_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match hiragana/katakana"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqHira_Kata_3_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match contractions (yo-on, sokuon)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqSmallKana_4_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match minus/dash/cho-on"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqMinus_2_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match 'repeat character' marks"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqRepSymbol_5_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match variant-form kanji (itaiji)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqKanji_16_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match old kana forms"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqOldKana_6_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match cho-on used for vowels"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqLongVowel_7_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match di/zi, du/zu"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqD_Z_8_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match ba/va, ha/fa"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqB_V_9_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match tsi/thi/chi, dhi/zi"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqT_C_10_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match hyu/iyu, byu/vyu"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqF_H_15_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match se/she, ze/je"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqS_SH_13_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match ia/iya (piano/piyano)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqY_A_12_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match ki/ku (tekisuto/tekusuto)"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEqKI_KU_14_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Ignore punctuation characters"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fIgnorePunct_18_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Ignore whitespace characters"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fIgnoreSpace_19_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Complex Scripts"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Use sequence checking"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSeqCheck_547_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Type and replace"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fTypeNRepl_548_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Document view"
+	PART "Document view" DROPDOWNLIST
+	VALUENAME fDocViewDir_1102_1
+	ITEMLIST
+		NAME "Right-to-left"	VALUE NUMERIC 1
+		NAME "Left-to-right"	VALUE NUMERIC 0	DEFAULT
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Add control characters in Cut and Copy"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAddCtrlCopy_1101_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Add double quote for Hebrew alphabet numbering"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fHebDoubleQuote_1127_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Numeral"
+	PART "Numeral" DROPDOWNLIST
+	VALUENAME NumForm_1088_2
+	ITEMLIST
+		NAME "Arabic"	VALUE NUMERIC 0
+		NAME "Hindi"	VALUE NUMERIC 1
+		NAME "Context"	VALUE NUMERIC 2 DEFAULT
+		NAME "System"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Movement"
+	PART "Movement" DROPDOWNLIST
+	VALUENAME MoveOr_1095_1
+	ITEMLIST
+		NAME "Logical"	VALUE NUMERIC 0	DEFAULT
+		NAME "Visual"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Visual selection"
+	PART "Visual selection" DROPDOWNLIST
+	VALUENAME SelectOr_1096_1
+	ITEMLIST
+		NAME "Block"		VALUE NUMERIC 0	DEFAULT
+		NAME "Continuous"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Control characters"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME grpfvisi_152_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Diacritics"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fShowDiac_1097_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Different color for diacritics"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fUseColorDiac_1098_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Month names"
+	PART "Month names" DROPDOWNLIST
+	VALUENAME AraDate_1092_2
+	ITEMLIST
+		NAME "Arabic"		VALUE NUMERIC 0	DEFAULT
+		NAME "English transliterated"	VALUE NUMERIC 1
+		NAME "French transliterated"	VALUE NUMERIC 2
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Tools | AutoCorrect..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\Assist
+CATEGORY "AutoCorrect"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\Assist
+POLICY "Correct TWo INitial CApitals"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fTwoInitialCaps_24_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Capitalize first letter of sentence"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fInitialCap_32_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Capitalize names of days"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fCapDayNames_48_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Correct accidental usage of cAPS LOCK key"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fCapsLock_40_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Replace text as you type"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fCorrectTyping_16_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Correct keyboard setting"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fCorrectkeyboard_64_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "AutoFormat as you type"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\Assist
+CATEGORY "Replace as you type"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\Assist
+POLICY "Straight quotes with smart quotes"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSmartQuote_8_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Ordinals (1st) with superscript"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fNumSupScript_104_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Fractions (1/2) with fraction character"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fFraction_96_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Symbol characters (--) with symbols"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEmDash_112_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "*Bold* and _italic_ with real formatting"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fBoldItalic_120_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Match parentheses"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAutoPair_144_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Auto space"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fSbDbSpace_152_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Dash-like characters"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fDbDashes_136_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Apply as you type"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\Assist
+POLICY "Headings"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fHeading_248_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Borders"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fBotBord_296_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Tables"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fTable_360_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Dates"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fDate_344_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Automatic bulleted lists"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fBulletList_264_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Automatic numbered lists"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fNumberedList_280_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "First line indent"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fFirstIndent_312_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Closings"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fClosing_328_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Automatically as you type"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\Assist
+POLICY "Format beginning of list item like the one before it"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fLeadInEmph_176_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Set left indent on tabs and backspace"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fTabIndent_128_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Define styles based on your formatting"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAutoStyleDef_184_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Insert memo closing"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fInsertOver_392_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Launch Greetings Wizard"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAutoLetterWizard_408_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Insert closing"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fInsertClosing_376_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+END CATEGORY
+CATEGORY "Tools | Macro"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Security
+CATEGORY "Security..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Security
+POLICY "Security Level"
+	PART "Security Level" DROPDOWNLIST
+	VALUENAME Level
+	ITEMLIST
+		NAME "Very High"	VALUE NUMERIC 4
+		NAME "High"		VALUE NUMERIC 3	DEFAULT
+		NAME "Medium"	VALUE NUMERIC 2
+		NAME "Low"		VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Trust all installed add-ins and templates"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DontTrustInstalledFiles
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Trust access to Visual Basic Project"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME AccessVBOM
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Tools | Language"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+CATEGORY "Set Language..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Detect language automatically"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fLangAutoDetect_1520_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Chinese Translation..."
+KEYNAME "Software\Policies\Microsoft\Shared Tools\Proofing Tools\TCSC Translator"
+POLICY "Translation direction"
+	PART "Translation direction" DROPDOWNLIST
+	VALUENAME TranslationTarget
+	ITEMLIST
+		NAME "Traditional Chinese to Simplified Chinese"	VALUE NUMERIC 2052	DEFAULT
+		NAME "Simplified Chinese to Traditional Chinese"	VALUE NUMERIC 1028
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Use Taiwan, Hong Kong SAR and Macao SAR character variants"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME UseVariants
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Translate common terms"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME TranslateCommonTerms
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Customizable error messages"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "List of error messages to customize"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\CustomizableAlerts
+	PART "List of error messages to customize" LISTBOX
+	EXPLICITVALUE
+	END PART
+	PART "Enter error ID for Value Name and custom button text for Value" TEXT
+	END PART
+	ACTIONLISTON
+	VALUENAME PolicyOn VALUE NUMERIC 1
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME PolicyOn VALUE DELETE
+	END ACTIONLISTOFF
+	END POLICY
+END CATEGORY
+CATEGORY "New Document Links"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Word\New Document"
+POLICY "Custom Link #1"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Word\New Document\CustomPolicy1"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a document"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing document"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #2"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Word\New Document\CustomPolicy2"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a document"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing document"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #3"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Word\New Document\CustomPolicy3"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a document"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing document"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #4"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Word\New Document\CustomPolicy4"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a document"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing document"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #5"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Word\New Document\CustomPolicy5"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a document"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing document"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #6"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Word\New Document\CustomPolicy6"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a document"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing document"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #7"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Word\New Document\CustomPolicy7"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a document"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing document"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #8"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Word\New Document\CustomPolicy8"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a document"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing document"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #9"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Word\New Document\CustomPolicy9"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a document"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing document"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #10"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Word\New Document\CustomPolicy10"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a document"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing document"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Disable items in user interface"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+CATEGORY "Predefined"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Disable command bar buttons and menu items"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\DisabledCmdBarItemsCheckBoxes
+	PART "File | Open... | Tools | Search..." CHECKBOX
+	VALUENAME FileOpenToolsFind
+	VALUEON 5905
+	VALUEOFF 0
+	END PART
+	PART "File | Save as Web Page..." CHECKBOX
+	VALUENAME FileSaveAsWebPage
+	VALUEON 3823
+	VALUEOFF 0
+	END PART
+	PART "File | Web Page Preview" CHECKBOX
+	VALUENAME FileWebPagePreview
+	VALUEON 3655
+	VALUEOFF 0
+	END PART
+	PART "File | Send To | Mail Recipient" CHECKBOX
+	VALUENAME FileSendToMailRecipient
+	VALUEON 3738
+	VALUEOFF 0
+	END PART
+	PART "Insert | Hyperlink..." CHECKBOX
+	VALUENAME InsertHyperlink
+	VALUEON 1576
+	VALUEOFF 0
+	END PART
+	PART "Tools | Speech" CHECKBOX
+	VALUENAME ToolsSpeech
+	VALUEON 5764
+	VALUEOFF 0
+	END PART
+	PART "Tools | Protect Document..." CHECKBOX
+	VALUENAME WToolsProtectDoc
+	VALUEON 7116
+	VALUEOFF 0
+	END PART
+	PART "Tools | Online Collaboration" CHECKBOX
+	VALUENAME ToolsCollaboration
+	VALUEON 30468
+	VALUEOFF 0
+	END PART
+	PART "Tools | Tools on the Web..." CHECKBOX
+	VALUENAME ToolsontheWeb
+	VALUEON 7032
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro" CHECKBOX
+	VALUENAME ToolsMacro
+	VALUEON 30017
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Macros..." CHECKBOX
+	VALUENAME ToolsMacroMacros
+	VALUEON 186
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Record New Macro..." CHECKBOX
+	VALUENAME ToolsMacroRecord
+	VALUEON 2780
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Security..." CHECKBOX
+	VALUENAME ToolsMacroSecurity
+	VALUEON 3627
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Visual Basic Editor" CHECKBOX
+	VALUENAME ToolsMacroVBE
+	VALUEON 1695
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Microsoft Script Editor" CHECKBOX
+	VALUENAME ToolsMacroWeb
+	VALUEON 3631
+	VALUEOFF 0
+	END PART
+	PART "Tools | Templates and Add-Ins..." CHECKBOX
+	VALUENAME ToolsTemplateAddins
+	VALUEON 751
+	VALUEOFF 0
+	END PART
+	PART "Tools | Customize..." CHECKBOX
+	VALUENAME ToolsCustomize
+	VALUEON 797
+	VALUEOFF 0
+	END PART
+	PART "Tools | Options..." CHECKBOX
+	VALUENAME ToolsOptions
+	VALUEON 522
+	VALUEOFF 0
+	ACTIONLISTON
+	VALUENAME WebOptions VALUE 4107
+	VALUENAME GeneralOptions VALUE 4108
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME WebOptions VALUE DELETE
+	VALUENAME GeneralOptions VALUE DELETE
+	END ACTIONLISTOFF
+	END PART
+	PART "Help | Microsoft Office Online" CHECKBOX
+	VALUENAME HelpOfficeWeb
+	VALUEON 3775
+	VALUEOFF 0
+	END PART
+	PART "Help | Activate Product..." CHECKBOX
+	VALUENAME HelpRegistration
+	VALUEON 5933
+	VALUEOFF 0
+	END PART
+	PART "Help | Detect and Repair..." CHECKBOX
+	VALUENAME HelpRepair
+	VALUEON 3774
+	VALUEOFF 0
+	END PART
+	PART "Web | Refresh Current Page" CHECKBOX
+	VALUENAME WebRefreshCurrentPage
+	VALUEON 1020
+	VALUEOFF 0
+	END PART
+	PART "Web | Start Page" CHECKBOX
+	VALUENAME WebStartPage
+	VALUEON 1016
+	VALUEOFF 0
+	END PART
+	PART "Web | Search the Web" CHECKBOX
+	VALUENAME WebSearchTheWeb
+	VALUEON 1922
+	VALUEOFF 0
+	ACTIONLISTON
+	VALUENAME FileOpenSearchTheWeb VALUE 4087
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME FileOpenSearchTheWeb VALUE DELETE
+	END ACTIONLISTOFF
+	END PART
+	PART "Web | Favorites" CHECKBOX
+	VALUENAME WebFavorites
+	VALUEON 30176
+	VALUEOFF 0
+	END PART
+	PART "Web | Go" CHECKBOX
+	VALUENAME WebGo
+	VALUEON 30328
+	VALUEOFF 0
+	END PART
+	PART "Web | Address" CHECKBOX
+	VALUENAME WebAddress
+	VALUEON 1740
+	VALUEOFF 0
+	END PART
+	ACTIONLISTOFF
+	VALUENAME WebOptions VALUE DELETE
+	VALUENAME GeneralOptions VALUE DELETE
+	VALUENAME FileOpenSearchTheWeb VALUE DELETE
+	END ACTIONLISTOFF
+	END POLICY
+POLICY "Disable shortcut keys"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\DisabledShortcutKeysCheckBoxes
+	PART "Ctrl+F (Find...)" CHECKBOX
+	VALUENAME Find
+	VALUEON 70,8
+	VALUEOFF 0
+	END PART
+	PART "Ctrl+K (Insert | Hyperlink...)" CHECKBOX
+	VALUENAME InsertHyperlink
+	VALUEON 75,8
+	VALUEOFF 0
+	END PART
+	PART "Alt+F8 (Tools | Macro | Macros...)" CHECKBOX
+	VALUENAME ToolsMacroMacros
+	VALUEON 119,16
+	VALUEOFF 0
+	END PART
+	PART "Alt+F11 (Tools | Macro | Visual Basic Editor)" CHECKBOX
+	VALUENAME ToolsMacroVBE
+	VALUEON 122,16
+	VALUEOFF 0
+	END PART
+	PART "Alt+Shift+F11 (Tools | Macro | Microsoft Script Editor)" CHECKBOX
+	VALUENAME ToolsMacroWeb
+	VALUEON 122,20
+	VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Custom"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Disable command bar buttons and menu items"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\DisabledCmdBarItemsList
+	PART "Enter a command bar ID to disable" LISTBOX
+	VALUEPREFIX TCID
+	END PART
+	END POLICY
+POLICY "Disable shortcut keys"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\DisabledShortcutKeysList
+	PART "Enter a key and modifier to disable" LISTBOX
+	VALUEPREFIX KeyMod
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Miscellaneous"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+POLICY "Volume preference"
+	PART "Volume preference" DROPDOWNLIST
+	VALUENAME VolumePref
+	ITEMLIST
+		NAME "Use Drive letter or UNC as entered"	VALUE NUMERIC 0	DEFAULT
+		NAME "Convert Drive letter to UNC"		VALUE NUMERIC 2
+		NAME "Convert UNC to Drive letter"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Answer Wizard database path"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Word\Answer Wizard"
+	PART "Custom Answer Wizard database path" EDITTEXT
+	VALUENAME AdminDatabase
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Alternate revision bar position in printed document"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME AlternateRevBars
+	VALUEON 1
+	VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Disable MRU list in font dropdown"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME NoFontMRUList
+	VALUEON 1
+	VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Tools | Compare and Merge Documents, Legal blackline"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Word\Options\vpref
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fDefaultToCompare_1880_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "When this option is turned on, a comparison between two documents" TEXT
+	END PART
+	PART "automatically generates a new Legal Blackline document, leaving" TEXT
+	END PART
+	PART "the originals unchanged." TEXT
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+
+

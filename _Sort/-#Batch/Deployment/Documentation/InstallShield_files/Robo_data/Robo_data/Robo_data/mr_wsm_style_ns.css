@@ -1,0 +1,358 @@
+<!--
+Style Class			Description
+-----------			-----------
+BODY				BODY style
+clsFontNormal		The font style when the agent is Normal
+
+// styles are used only in IE
+clsButtonNormal		Button normal style( agents frame, notes frame )
+clsButtonBevelUp	Button when mouse over( agents frame, notes frame )
+clsButtonBevelDown	Button when mouse down( agents frame, notes frame )
+clsButtonSelected	Button when selected( agents frame, notes frame )
+clsAgentsBar		Agent frame background style( agents frame )
+clsNotesBar			Notes frame background style( notes frame )
+clsSearchResultBox	The style for the box in which the search results are displayed( nls fts )
+clsResultDivider	The break line between the result items and search field( nls fts )
+
+// styles are used only in NS
+clsColorLight		The bevel light color
+clsColorDark		The bevel dark color 
+clsColorNormal		The bevel face color
+clsColorSelected	The bevel face color when selected
+clsALinkNormal		The style for agent text when the agent is Normal
+clsALinkSelected	The style for agent text when the agent is Selected
+-->
+
+BODY
+{
+ font-family: verdana,arial,helvetica;
+ font-size: xx-small;
+ background-color: white;
+}
+.clsFontNormal
+{
+    FONT-FAMILY: verdana,arial,helvetica;
+    FONT-SIZE: xx-small;
+}
+.clsBtnNormal
+{
+    BACKGROUND-COLOR: #99ccff;
+    BORDER-BOTTOM: #99ccff 1px solid;
+    BORDER-LEFT: #99ccff 1px solid;
+    BORDER-RIGHT: #99ccff 1px solid;
+    BORDER-TOP: #99ccff 1px solid;
+    CURSOR: hand;
+    FONT-FAMILY: verdana,arial,helvetica;
+    FONT-SIZE: xx-small;
+    COLOR: #003063;
+}
+.clsBtnUp
+{
+    BACKGROUND-COLOR: #99ccff;
+    BORDER-BOTTOM: #003366 1px solid;
+    BORDER-LEFT: #ceffff 1px solid;
+    BORDER-RIGHT: #003366 1px solid;
+    BORDER-TOP: #ceffff 1px solid;
+    CURSOR: hand;
+    FONT-FAMILY: verdana,arial,helvetica;
+    FONT-SIZE: xx-small;
+    COLOR: #003063;
+}
+.clsBtnDown
+{
+    BACKGROUND-COLOR: #99ccff;
+    BORDER-BOTTOM: #ceffff 1px solid;
+    BORDER-LEFT: #003366 1px solid;
+    BORDER-RIGHT: #ceffff 1px solid;
+    BORDER-TOP: #003366 1px solid;
+    COLOR: #003063;
+    CURSOR: hand;
+    FONT-FAMILY: verdana,arial,helvetica;
+    FONT-SIZE: xx-small;
+}
+.clsBtnSelected
+{
+    BACKGROUND-COLOR: #639ace;
+    BORDER-BOTTOM: #ceffff 1px solid;
+    BORDER-LEFT: #003366 1px solid;
+    BORDER-RIGHT: #ceffff 1px solid;
+    BORDER-TOP: #003366 1px solid;
+    CURSOR: hand;
+    FONT-FAMILY: verdana,arial,helvetica;
+    FONT-SIZE: xx-small;
+    COLOR: white;
+}
+.clsPageTab
+{
+    BACKGROUND-COLOR: #99ccff;
+    BORDER-BOTTOM: #003366 1px solid;
+    BORDER-LEFT: #ceffff 1px solid;
+    BORDER-RIGHT: #003366 1px solid;
+    BORDER-TOP: #ceffff 1px solid
+}
+.clsPageNote
+{
+    BACKGROUND-COLOR: #99ccff;
+    BORDER-BOTTOM: #003366 1px solid;
+    BORDER-LEFT: #ceffff 1px solid;
+    FONT-FAMILY: verdana,arial,helvetica;
+    FONT-SIZE: xx-small;
+}
+
+.clsResultDivider
+{
+    BORDER-BOTTOM: #FFFFFF 1px solid;
+    BORDER-TOP: #99ccff 1px solid;
+}
+
+.clsColorLight
+{
+    BACKGROUND-COLOR: #ceffff
+}
+
+.clsColorDark
+{
+    BACKGROUND-COLOR: #003366
+}
+
+.clsColorNormal
+{
+    BACKGROUND-COLOR: #99ccff
+}
+
+.clsColorSelected
+{
+    BACKGROUND-COLOR: #639ace
+}
+
+.clsALinkNormal
+{
+    FONT-FAMILY: verdana,arial,helvetica;
+    FONT-SIZE: xx-small;
+    COLOR: black;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none
+};
+
+.clsALinkSelected
+{
+    FONT-FAMILY: verdana,arial,helvetica;
+    FONT-SIZE: xx-small;
+    COLOR: white;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none
+};
+
+
+
+<!-- New style defintions for default skin -->
+
+<!-- TOC Agent Styles -->
+BODY.clsTOCBody
+{
+ margin: 4px;
+ font-family: verdana,arial,helvetica;
+ font-size: 10px;
+ background-color: white;
+};
+A.clsTOCItem
+{
+ color: black;
+ text-decoration: none; 
+};
+A.clsTOCItem:Active
+{
+ background-color: #ddeeff;
+ font-weight: bold;
+ text-decoration: underline; 
+};
+A.clsTOCItem:Hover
+{
+ color: #003366;
+ text-decoration: underline; 
+};
+UL.clsTOCRoot
+{
+ margin-left:0px; 
+};
+LI.clsTOCItem
+{
+ list-style-type:none;
+};
+UL.clsTOCHidden
+{
+ DISPLAY:none;
+};
+UL.clsTOCShown
+{
+ display:list-item;
+ margin-left:16px; 
+ list-style-type:none;
+};
+IMG.clsTOCItem
+{
+ cursor:hand;
+};
+SPAN.clsTOCItem
+{
+ margin: 2px;
+};
+SPAN.clsTOCItemActive
+{
+ margin: 2px;
+ background-color: #ddeeff;
+};
+SPAN.clsTOCLoading
+{
+ padding-left:4px; 
+ background-color:ivory; 
+ border:1 solid black; 
+}
+
+<!-- Index Agent Styles -->
+BODY.clsNDXBody
+{
+ margin: 4px;
+ font-family: verdana,arial,helvetica;
+ font-size: 10px;
+ background-color: white;
+};
+A.clsNDXItem
+{
+ color: black;
+ Text-decoration: none; 
+};
+A.clsNDXItem:Active
+{
+ background-color: #ddeeff;
+ font-weight: bold;
+ text-decoration: underline; 
+};
+A.clsNDXItem:Hover
+{
+ color: #003366;
+ text-decoration: underline; 
+};
+DIV.clsNDXList
+{
+ border-width: 1px;
+ border-style: solid;
+ overflow: auto
+};
+DIV.clsNDXItem
+{
+ cursor: hand;
+ width: 100%;
+};
+DIV.clsNDXItemActive
+{
+ cursor: hand;
+ width: 100%;
+ background-color: #ddeeff;
+};
+TD.clsNDXTD
+{
+ font-family: verdana,arial,helvetica;
+ font-size: 10px;
+};
+SELECT.clsNDXSelect
+{
+ font-family: verdana,arial,helvetica;
+ font-size: 10px;
+ background-color: transparent;
+};
+BUTTON.clsNDXButton
+{
+ font-family: verdana,arial,helvetica;
+ font-size: 10px;
+ background-color: transparent;
+};
+INPUT.clsNDXEdit
+{
+ font-family: verdana,arial,helvetica;
+ font-size: 10px;
+};
+
+<!-- Search Agent Styles -->
+BODY.clsNLSBody
+{
+ margin: 4px;
+ font-family: verdana,arial,helvetica;
+ font-size: 10px;
+ background-color: white;
+};
+A.clsNLSItem
+{
+ color: black;
+ Text-decoration: none; 
+};
+A.clsNLSItem:Active
+{
+ background-color: #ddeeff;
+ font-weight: bold;
+ text-decoration: underline; 
+};
+A.clsNLSItem:Hover
+{
+ color: #003366;
+ text-decoration: underline; 
+};
+DIV.clsNLSList
+{
+ BORDER-WIDTH: 1px;
+ BORDER-STYLE: solid;
+ OVERFLOW: auto
+};
+TEXTAREA.clsNLSEdit
+{
+ font-family: verdana,arial,helvetica;
+ font-size: 10px;
+ width: 100%;
+};
+TD.clsNLSText
+{
+ font-family: verdana,arial,helvetica;
+ font-size: 10px;
+};
+
+<!-- Glossary Agent Styles -->
+BODY.clsGLOBody
+{
+ margin: 4px;
+ font-family: verdana,arial,helvetica;
+ font-size: 10px;
+ background-color: white;
+};
+A.clsGLOItem
+{
+ color: black;
+ Text-decoration: none; 
+};
+A.clsGLOItem:Active
+{
+ background-color: #ddeeff;
+ font-weight: bold;
+ text-decoration: underline; 
+};
+A.clsGLOItem:Hover
+{
+ color: #003366;
+ text-decoration: underline; 
+};
+DIV.clsGLOList
+{
+ border-width: 1px;
+ border-style: solid;
+ overflow: auto
+};
+DIV.clsGLOItem
+{
+ cursor: hand;
+ width: 100%;
+};
+DIV.clsGLOItemActive
+{
+ cursor: hand;
+ width: 100%;
+ background-color: #ddeeff;
+};

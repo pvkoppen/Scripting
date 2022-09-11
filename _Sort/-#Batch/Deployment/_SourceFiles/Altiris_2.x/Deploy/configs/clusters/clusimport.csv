@@ -1,0 +1,33 @@
+; Sample Altiris Deployment Server Database import file
+;
+; Note: Comment lines are denoted by a semicolon as the first character. 
+;       Quotes around fields are optional. 
+;	
+;	This file can also be edited in a spreadsheet application such as Microsoft Excel.
+;
+;	You can populate your computer database by using the following format.
+;	It can then be imported into Deployment Server from the command line or
+;	File, New Computer, Import or with File, Import/Export, Import Computers.  
+;	This would work well from a spreadsheet exported to a comma delimited file.
+;
+;	Fields indicated with a (B) represent Boolean options, where a "1" means 
+;	true and a blank means false.
+;
+;	For some fields, this input format supports multiple IP Addresses, delimited by
+;	a ";" within the field.  These fields are marked with a "(;)".   For example the
+;	gateway field could read ,30.11.11.2,  or ,30.11.11.2;30.11.11.3;30.11.11.4, .
+;
+;	** For the Deployment Server to read the import text correctly, place a final 
+;	hard return at the end of the file.
+;	
+;	The "1" following the "Computer Name" field and before the "domain name" field 
+;	must remain in the import file in order to specify that the computer join a domain.
+;
+;Sample with all fields indicated
+;------------
+;Name,MAC Address 1,Serial Number,Asset Tag,Computer Name,Domain(B),Domain/Workgroup Name,Domain Controller Name(ignored),DHCP(B),IP Address(;),Netmask(;),Gateway(;),Preferred DNS(;),Alternate DNS,Alternate 2 DNS,Preferred WINS,Alternate WINS,Hostname,Domain Suffix,Use Preferred Tree(B),Preferred Server,Preferred Tree,Netware User,NDS Context,Run Scripts(B),User,Organization,Key,Password Never Expires(B)(ignored),Cannot Change Password(B)(ignored),Must Change Password(B)(ignored),Username(ignored),Full Name(ignored),Groups(ignored),Password(ignored),Contact,Department,Email,Mailstop,Phone,Site,Computer Group,Event,Event Start Time,NIC2 MAC Address,DHCP(B),IP Address(;),Netmask(;),Gateway(;),DNS(;),WINS(;),Domain Suffix
+
+;mycluster - EXAMPLE
+;------------
+clusnode1,,D207KGY1K056,,clusnode1,1,RDP,,1,,,,,,,,,,,,,,,,,HASE,HP,,,,,,,,,,,,,,,mycluster,,,,0,15.15.15.1,255.0.0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+clusnode2,,D207KGY1K057,,clusnode2,1,RDP,,1,,,,,,,,,,,,,,,,,HASE,HP,,,,,,,,,,,,,,,mycluster,,,,0,15.15.15.2,255.0.0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,110 @@
+; Base Server Unattended Install Script for Windows Server 2003
+;
+
+[Unattended]
+	DriverSigningPolicy=Ignore
+	ExtendOemPartition=1
+	FileSystem=ConvertNTFS
+	KeyboardLayout="US"
+	NtUpgrade=No
+	OemFilesPath=C:
+	OemPnPDriversPath=drivers\net;drivers\scsi
+	OemPreinstall=Yes
+	OemSkipEula=Yes
+	DisableVirtualOemDevices=yes
+	OverwriteOemFilesOnUpgrade=No
+	TargetPath=\WINDOWS
+	UnattendMode=FullUnattended
+	Win9xUpgrade=No
+
+[MassStorageDrivers]
+	"Adaptec Ultra160 Family Manager Set"=OEM
+	"Compaq Smart Array Controllers"=OEM
+	"Smart Array 5300 Controller"=OEM
+	"Smart Array 5i, 532, 5312 Controllers"=OEM
+	"Smart Array 6i, 641, 642, 6400 EM, 6400 Controllers"=OEM
+	"Integrated Ultra ATA-100 IDE RAID Controller (Windows 2000)" =OEM
+	"LSI Logic Ultra320 1020/1030 Driver (Windows Server 2003)"=OEM
+	"CSB-6 Ultra ATA-100 IDE RAID Controller (Windows Server 2003)"=OEM
+	"LSI Logic C8100 PCI SCSI Host Adapter"=RETAIL
+	"LSI Logic C896 PCI SCSI Host Adapter"=RETAIL
+	"LSI Logic C8xx PCI SCSI Host Adapter"=RETAIL
+	"IDE CD-ROM (ATAPI 1.2)/PCI IDE Controller"=RETAIL
+
+[OEMBootFiles]
+	ADPU160M.SYS
+	CPQARRY2.SYS
+	CPQCISSM.SYS
+	MegaIDE.sys
+	Symmpi.sys
+	Lsicsb6.sys
+	TXTSETUP.OEM
+
+[GuiUnattended]
+	AdminPassword=password
+	AutoLogon=Yes
+	AutoLogonCount=1
+	OEMSkipRegional=1
+	OemSkipWelcome=1
+	TimeZone=20
+
+[UserData]
+	ComputerName=DL740
+	FullName=HP
+	OrgName=HPQ
+	ProductID=XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+
+[Proxy]
+	Proxy_Enable=0
+	Use_Same_Proxy=0
+
+[LicenseFilePrintData]
+	AutoMode=PerServer
+	AutoUsers=999
+
+[GuiRunOnce]
+	"c:\guicmd.exe"
+
+[RegionalSettings]
+	Language=00000409
+	LanguageGroup=1
+
+[Components]
+	iis_pwmgr=Off
+	iis_inetmgr=Off
+	iis_www=Off
+	iis_ftp=Off
+	TSClients=On
+	TSEnable=On
+
+[Networking]
+	InstallDefaultComponents=Yes
+
+[Identification]
+	JoinWorkgroup=WORKGROUP
+
+[NetOptionalComponents]
+	SNMP=1
+	WBEMSNMP=1
+	SimpTCP=1
+
+[SNMP]
+	Community_Name=Public
+	Traps=Localhost
+	Accept_CommunityName=public
+	Send_Authentication=yes
+
+[TerminalServices]
+	ApplicationServer=0
+	PermissionsSetting=0
+
+[Display]
+	AutoConfirm=1
+	BitsPerPel=16
+	ConfigureAtLogon=0
+	VRefresh=60
+	Xresolution=800
+	Yresolution=600
+
+[OEM_Ads]
+	Logo=Compaq.bmp

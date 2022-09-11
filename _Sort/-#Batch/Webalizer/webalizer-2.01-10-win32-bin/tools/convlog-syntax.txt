@@ -1,0 +1,25 @@
+Microsoft Internet Log Converter
+Converts Microsoft Internet Information Services log files
+to the NCSA Common LogFile format
+Copyright (C) 1997-1999 Microsoft Corporation
+
+Usage: convlog.exe [options] LogFile
+Options:
+-i<i|n|e> = input logfile type
+    i - MS Internet Standard Log File Format
+    n - NCSA Common Log File format
+    e - W3C Extended Log File Format
+-t <ncsa[:GMTOffset] | none> default is ncsa
+-o <output directory> default = current directory
+-x save non-www entries to a .dmp logfile
+-d = convert IP addresses to DNS
+-l<0|1|2> = Date locale format for MS Internet Standard
+    0 - MM/DD/YY (default e.g. US)
+    1 - YY/MM/DD (e.g. Japan)
+    2 - DD.MM.YY (e.g. Germany)
+-c = continue even if incorrectly formatted line found
+
+Examples:
+convlog.exe -ii in*.log -d -t ncsa:+0800
+convlog.exe -in ncsa*.log -d
+convlog.exe -ii jra*.log -t none

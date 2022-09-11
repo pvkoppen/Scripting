@@ -1,0 +1,22 @@
+AmpersandBanner Applet
+The Ampersand Internet banner applet displays images sequentially
+with targeted links and optional audio when a banner is selected.
+The transition between each image is a vertical scroll with
+parameters controlling the scroll speed and the pause for each
+image. Each banner supports a full URL as a link which is also
+displayed in the status area as is the case for normal links
+in the page. A weight parameter controls the number of times
+in each full cycle that each banner is displayed, allowing
+selected banners to appear more regularly.
+
+
+Available Parameters
+banner[number]		File details for banners, relative to
+			codebase or absolute
+weight[number]		Number of times banner will be displayed
+			in full cycle
+url[number]		URL of link from banner (also displays as
+			status message)
+target[number]		Target of link (for frames or new windows)
+audio[number]		Details of file for click
+backcolor		Background colour (in format #rrggbb)

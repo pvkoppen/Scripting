@@ -1,0 +1,107 @@
+*******************************************************************************
+
+Release notes for Microsoft iSCSI Software Initiator 2.03
+
+Build version for files updated since version 2.0 is 5.2.3790.3099.  Binaries that have not been changed since 
+version 2.0 release are 5.2.3790.1653
+
+2.0x Version history:
+version 2.0      5.2.3790.1653
+version 2.01     5.2.3790.1748
+version 2.02     5.2.3790.1895
+version 2.03     5.2.3790.3099
+
+
+*******************************************************************************
+
+*  This is a dual-mode package. If iSCSI 2.0 or higher is installed, it will update just the files that include
+   fixes which are the following:
+
+	msiscsi.sys     version 5.2.3790.3099
+	iscsiwmi.dll	version 5.2.3790.3099
+     	relnotes.txt	version 5.2.3790.3099
+	mpdev.sys	1.17.3790.1759  (version 1.17 is the most current version of the Microsoft MPIO binaries as of 9-13-06)
+	mpdev.inf	1.17.3790.1759  (version 1.17 is the most  version of the Microsoft MPIO binaries as of 9-13-06)
+	mpspfltr.sys	1.17.3790.1759  (version 1.17 is the most version of the Microsoft MPIO binaries as of 9-13-06)
+Please note that the size and date of mpio binaries in the iSCSI initiator package will not appear to be exactly the same 
+as the size of the files released as 1.17.  The build date of the 1.17 binaries maps to the build date of the iSCSI initiator
+package.  However, the 1.17 binaries included are the same as binaries released as MS MPIO 1.17. 
+	
+	
+   If a previous version of the 2.0x Microsoft iSCSI Software Initiator is not installed, this will install the full package.
+   The result in both cases will be the same set of binaries with all binaries listed above having the 
+   updated version stamp for version 2.03.  All other binaries remain at previous version levels or at 5.2.3790.1653 if the
+   file has not been updated since the 2.0 release
+
+* Please see the iSCSI Initiator User's Guide for more information on
+  installation and troubleshooting. 
+
+* The checked and retail versions of the Microsoft iSCSI Software Initiator will only install on retail version builds of Windows. There is no package that
+  installs on checked builds of Windows.
+
+* iSCSI Initiator 2.0x is installed directly to the appropriate locations under 
+  the %windir% directory. Documentation is installed under %windir%\iscsi.
+
+* Dynamic disks on an iSCSI session are not supported. 
+  Please see the iSCSI users guide for more information.
+
+* Both initiator and target CHAP secrets should be greater than or equal to
+  12 bytes, and less than or equal to 16 bytes if IPsec is not being used.
+  It should be greater than 1 byte and less than or equal to 16 bytes if 
+  IPsec is being used. 
+
+* Note that the default iSCSI node name is generated from the Windows computer 
+  name. If the Windows computer name contains a character that would
+  be invalid within an iSCSI node name, such as '_', then the Microsoft iSCSI
+  Initiator service will convert the invalid character to '-'.
+
+* If you have automatic start services that relies upon an iSCSI volume or 
+  device, please see the user's  guide for information on configuring those 
+  devices. 
+
+* If user requests CHAP for logon authentication, initiator will set AuthMethod
+  to CHAP in logon request. If the target returns None for AuthMethod, initiator
+  will fail the login with status "Authentication Failure". An event will be
+  logged in system event log to indicate that the initiator required CHAP but
+  target did not offer CHAP.
+
+  If the target returns an authentication method other than CHAP, when 
+  the initiator requests CHAP, initiator will fail the login with status 
+  "Authentication Failure". An event will be logged in system event log to 
+  indicate that the target offered an auth method that the initiator did
+  not understand.
+
+* If the target returns CHECK CONDITION for a scsi request, but does not
+  provide sense data, initiator will complete the request with status 
+  target error. Initiator does not treat the target behavior as a protocol 
+  error.
+
+* The Microsoft iSCSI control panel applet includes a Session Detils window
+  that can be accessed by clicking the Details button in the Active Sessions
+  tab. Note that the Path information displayed for each device is only 
+  available on Windows 2003 server.
+
+* The iSCSI control panel applet does not create an icon in the system tray.
+  If the applet is in the background, you can switch to it by using the
+  ALT-TAB key combination or by double clicking on the icon that launches it.
+
+*******************************************************************************
+
+Changes since Microsoft iSCSI Software Initiator 2.02 release 
+
+1. Change to not increase the ExpStatSN if ITT is reserved value for Nop-IN.
+2. Fix for system bugcheck in certain conditions after completing error recovery for 5 consecutive lun resets.
+3. Change to include Microsoft MPIO version 1.17 binaries in iSCSI initiator 2.03
+4.  Fix for memory leak which occurs in the Wmiprvse.exe process when a program calls an instance of the 
+    "CWin32_TerminalService::ExecQuery" function in Windows Server 2003 
+5. Fix for stop error 0xDA on some x64 hardware implementations.
+6. Validate Max Connections parameter in LoginTarget.
+7. Allow logout from Boot Session in case booted from Alternate device.
+
+For additional information, please see the Microsoft iSCSI Initiator users guide 
+and the following industry specifications:
+
+* iSCSI spec - RFC3720
+* String Profile for iSCSI Names (http://www.ietf.org/internet-drafts/draft-ietf-ips-iscsi-string-prep-04.txt) 
+* Preparation of Internationalized Strings ("stringprep") (RFC 3454)
+* UTF-8, a transformation format of Unicode and ISO 10646 (RFC 2044)

@@ -1,0 +1,303 @@
+A:hover {
+	COLOR: #ff3300
+}
+.funcmenutbl TD A:hover {
+	COLOR: white
+}
+.ftrmenutbl TD A:hover {
+	COLOR: white
+}
+.ftrmenutbl TD A {
+	COLOR: white; TEXT-DECORATION: none
+}
+.buttonleft TD A {
+	COLOR: white; TEXT-DECORATION: none
+}
+.buttonleft TD A:link {
+	COLOR: white; TEXT-DECORATION: none
+}
+.buttonleft TD A:active {
+	COLOR: white; TEXT-DECORATION: none
+}
+.buttonleft TD A:visited {
+	COLOR: white; TEXT-DECORATION: none
+}
+.ftrmenutbl TD A:visited {
+	COLOR: white
+}
+.bartext {
+	COLOR: #ffffff; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.bartext:link {
+	COLOR: white; TEXT-DECORATION: none
+}
+.bartext:active {
+	COLOR: white; TEXT-DECORATION: none
+}
+.bartext:visited {
+	COLOR: white; TEXT-DECORATION: none
+}
+.buttontext {
+	COLOR: #ffffff; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.buttontext:link {
+	COLOR: white; TEXT-DECORATION: none
+}
+.buttontext:active {
+	COLOR: white; TEXT-DECORATION: none
+}
+.buttontext:visited {
+	COLOR: white; TEXT-DECORATION: none
+}
+.bartd A:visited {
+	COLOR: white
+}
+.barblack A:visited {
+	COLOR: white
+}
+.barblack A {
+	COLOR: white; TEXT-DECORATION: none
+}
+.cpyrigthtxt A:visited {
+	COLOR: #ffffff
+}
+.lightblue {
+	BACKGROUND-COLOR: #3366cc
+}
+.mghead {
+	COLOR: #ffffff; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.srchmode {
+	COLOR: #000000; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; MARGIN-BOTTOM: 6px; MARGIN-LEFT: 2px; MARGIN-TOP: 6px; TEXT-DECORATION: none
+}
+.mgbg {
+	BACKGROUND-COLOR: #003399
+}
+.greybg {
+	BACKGROUND-COLOR: #cccccc
+}
+.srchbg {
+	BACKGROUND-COLOR: #f2f2f2
+}
+.srchsubmit {
+	FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small
+}
+.wipt {
+	WIDTH: 201px
+}
+.tipt {
+	WIDTH: 110px
+}
+.navbg {
+	BACKGROUND-COLOR: #3366cc
+}
+.srchtb {
+	BACKGROUND-COLOR: #f2f2f2
+}
+.srchlb {
+	COLOR: #000000; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.srchop {
+	COLOR: #000000; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small; TEXT-DECORATION: none
+}
+.bartd {
+	BACKGROUND-COLOR: #003399; BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 0px solid; BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small
+}
+.barblack {
+	BACKGROUND-COLOR: #003399; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small
+}
+.buttonright {
+	BACKGROUND-COLOR: #003399; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small
+}
+.buttonleft {
+	BACKGROUND-COLOR: #003399; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small
+}
+.bannerborder {
+	BACKGROUND-COLOR: #cccccc
+}
+.bannerborder-top {
+	BACKGROUND-COLOR: #003399
+}
+.bannerborder-bottom {
+	BACKGROUND-COLOR: #003399
+}
+.mgheader {
+	BACKGROUND-COLOR: #003399; MARGIN-TOP: 4px
+}
+.srchlink {
+	COLOR: #003399; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; TEXT-DECORATION: none
+}
+.srchlinkclicked {
+	BACKGROUND-COLOR: #cccccc; COLOR: #ffffff; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; TEXT-DECORATION: none
+}
+.resultdesc {
+	COLOR: #000000; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small
+}
+.bluebar {
+	COLOR: #ffffff; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small; FONT-WEIGHT: bold
+}
+.srchwhite {
+	COLOR: #ffffff; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small
+}
+.regiontext {
+	COLOR: #ffffff; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; TEXT-DECORATION: underline
+}
+.cpyrigthtxt {
+	COLOR: #ffffff; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small
+}
+.ctlevel1 {
+	COLOR: #3366cc; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: large; TEXT-DECORATION: none
+}
+.ctlevel2 {
+	COLOR: #3366cc; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: medium; TEXT-DECORATION: none
+}
+.ctlevel3 {
+	COLOR: #000000; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: medium; TEXT-DECORATION: none
+}
+.cthead {
+	COLOR: #000000; FONT-FAMILY: Helvetica; FONT-SIZE: large; TEXT-DECORATION: none
+}
+LI {
+	COLOR: #000000; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px; TEXT-DECORATION: none
+}
+TD {
+	COLOR: #000000; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; TEXT-DECORATION: none
+}
+H3 {
+	COLOR: #000000; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; TEXT-DECORATION: none
+}
+.showhide {
+	FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small
+}
+.srchdesc {
+	FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small
+}
+.srchtab {
+	COLOR: #ffffff; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small; FONT-WEIGHT: bold
+}
+.xnewstree {
+	BACKGROUND-COLOR: #ffffff; HEIGHT: 100%; OVERFLOW: scroll; WIDTH: 100%; scroll: auto
+}
+.xnewsgroup {
+	COLOR: #003399; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; TEXT-DECORATION: none
+}
+.xnewsheader {
+	COLOR: #000000; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; TEXT-DECORATION: none
+}
+.xnewsborder {
+	BACKGROUND-COLOR: #3366cc; HEIGHT: 100%; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; WIDTH: 100%
+}
+.faqtitle {
+	FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: medium; FONT-WEIGHT: bold; MARGIN-BOTTOM: 12px; MARGIN-TOP: 0px
+}
+.faqcat {
+	BACKGROUND-COLOR: #cccccc; COLOR: #000000; CURSOR: hand; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; FONT-WEIGHT: bold
+}
+.faqlink {
+	COLOR: #000000; DISPLAY: block; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; FONT-WEIGHT: bold; MARGIN-TOP: 6px
+}
+.faqdesc {
+	COLOR: #000000; DISPLAY: block; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; FONT-WEIGHT: normal
+}
+.faqbody {
+	MARGIN-TOP: 6px
+}
+.faqlabel {
+	COLOR: #000000; DISPLAY: block; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; FONT-WEIGHT: bold; MARGIN-BOTTOM: 4px
+}
+.faqlabelleft {
+	COLOR: #ffffff; DISPLAY: inline; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; FONT-WEIGHT: bold; MARGIN-BOTTOM: 4px; MARGIN-RIGHT: 12px
+}
+.intlH2 {
+	COLOR: #3366cc; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: large; FONT-WEIGHT: bold
+}
+.lastreviewed {
+	DISPLAY: block; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: xx-small; MARGIN-BOTTOM: 6px; MARGIN-TOP: 6px; TEXT-ALIGN: right
+}
+.userData {
+	BEHAVIOR: url(#default#userdata)
+}
+.kbpre {
+	FONT-SIZE: x-small
+}
+.kberrormessage {
+	COLOR: red
+}
+.kbtablegeneric TD {
+	
+}
+.kbtablegeneric TH {
+	BORDER-BOTTOM: black 1px solid; FONT-SIZE: x-small; TEXT-ALIGN: left
+}
+.kbbetaconfidential {
+	
+}
+.kbbetabanner {
+	
+}
+.kbbetapublic {
+	
+}
+.kblink {
+	
+}
+.faqhomedesc {
+	DISPLAY: block; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; MARGIN-BOTTOM: 12px; MARGIN-TOP: 6px
+}
+.faqhomelist {
+	DISPLAY: block; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: x-small; MARGIN-BOTTOM: -12px
+}
+.faqlistcategorytitle {
+	DISPLAY: block; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: small; FONT-WEIGHT: bold; MARGIN-TOP: 6px
+}
+.flyoutLink A:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+.flyoutSubLink A:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+.flyoutMenu {
+	BACKGROUND-COLOR: #f2f2f2; BEHAVIOR: url(/common/script/flyout.htc); BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 0px solid; BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 0px solid
+}
+.flyoutHeading {
+	BACKGROUND-COLOR: #f2f2f2; CURSOR: default; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: 80%; FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; PADDING-LEFT: 2px; PADDING-TOP: 2px
+}
+.flyoutLink {
+	BORDER-BOTTOM: #f2f2f2 1px solid; BORDER-LEFT: #f2f2f2 1px solid; BORDER-RIGHT: #f2f2f2 1px solid; BORDER-TOP: #f2f2f2 1px solid; CURSOR: hand; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: 80%; PADDING-LEFT: 6px; PADDING-RIGHT: 25px; PADDING-TOP: 1px
+}
+.flyoutMenu TD.flyoutLink {
+	BORDER-BOTTOM: #f2f2f2 1px solid; BORDER-LEFT: #f2f2f2 1px solid; BORDER-RIGHT: #f2f2f2 1px solid; BORDER-TOP: #f2f2f2 1px solid; CURSOR: hand; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: 80%; PADDING-BOTTOM: 3px; PADDING-LEFT: 6px; PADDING-RIGHT: 25px; PADDING-TOP: 1px
+}
+.flyoutLink A {
+	COLOR: black; TEXT-DECORATION: none
+}
+.flyoutLink A:hover {
+	COLOR: black; TEXT-DECORATION: none
+}
+.flyoutLink A:visited {
+	COLOR: black; TEXT-DECORATION: none
+}
+.flyoutLink A:active {
+	COLOR: black; TEXT-DECORATION: none
+}
+.flyoutSubHeading {
+	BACKGROUND-COLOR: #f2f2f2; CURSOR: default; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: 80%; FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; PADDING-LEFT: 7px; PADDING-TOP: 2px
+}
+.flyoutSubLink {
+	BORDER-BOTTOM: #f2f2f2 1px solid; BORDER-LEFT: #f2f2f2 1px solid; BORDER-RIGHT: #f2f2f2 1px solid; BORDER-TOP: #f2f2f2 1px solid; CURSOR: hand; FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica; FONT-SIZE: 80%; PADDING-BOTTOM: 3px; PADDING-LEFT: 11px; PADDING-RIGHT: 15px; PADDING-TOP: 1px
+}
+.flyoutSubLink A {
+	COLOR: black; TEXT-DECORATION: none
+}
+.flyoutSubLink A:hover {
+	COLOR: black; TEXT-DECORATION: none
+}
+.flyoutSubLink A:visited {
+	COLOR: black; TEXT-DECORATION: none
+}
+.flyoutSubLink A:active {
+	COLOR: black; TEXT-DECORATION: none
+}
+.noprint {
+	
+}

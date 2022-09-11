@@ -1,0 +1,164 @@
+<html><head>
+
+ <!-- base href="http://helpnet.installshield.com/robo/projects/installshieldlivinghelp/whskin_ep_start.htm" --><script language="javascript">
+<!--
+var sIcon="whstart.ico";
+var sPath=document.location.href;
+if (sPath.indexOf("http")!= -1)
+	document.write("<link REL=\"SHORTCUT ICON\" href=\""+ sIcon +"\">");
+//-->
+</script><link rel="SHORTCUT ICON" href="http://helpnet.installshield.com/robo/projects/installshieldlivinghelp/whstart.ico">
+ 
+ <title>Macrovision HelpNet</title><meta name="generator" content="RoboHelp by eHelp Corporation   www.ehelp.com">
+ <meta name="description" content="WebHelp 5.50">
+<script type="text/javascript" language="javascript" src="InstallShield_files/whver.js"></script>
+<script type="text/javascript" language="javascript" src="InstallShield_files/whutils.js"></script>
+<script type="text/javascript" language="javascript" src="InstallShield_files/whmsg.js"></script>
+<script type="text/javascript" language="javascript">
+<!--
+if (!window.gbWhVer||!window.gbWhUtil||!window.gbWhMsg)
+	document.location.reload();
+//-->
+</script>
+
+<script type="text/javascript" language="javascript" src="InstallShield_files/whstub.js"></script>
+<script language="javascript">
+<!--
+var nWebhelpNavPaneMode = 1;			//1: DHTML 2:Applet 3:PureHTML 4:NoframeAt all
+var strPaneDHTML  = "whskin_pdhtml.htm";		//whd_nvp10.htm  if tab enabled, whnframe.htm if tab disabled.
+var strPaneApplet = "whskin_papplet.htm";
+var strPaneList   = "whskin_plist.htm";
+var bNoApplet  = false;
+
+var strPane = "";
+
+var nViewFrameType = -1;
+
+if (!window.gAgent)
+{
+	// low end browser, we don't even try to determine it.
+	document.location = "/Robo/BIN/Robo.dll?mgr=agm&tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&wnd=InstallShieldLivingHelp%7CMain&agt=wsm&ctxid=kb%2Fview.asp&wks=wksdef";
+}
+else
+{
+	if (!gbNav4&&!gbIE4&&!gbOpera7&&!gbSafari)				
+		document.location = "/Robo/BIN/Robo.dll?mgr=agm&tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&wnd=InstallShieldLivingHelp%7CMain&agt=wsm&ctxid=kb%2Fview.asp&wks=wksdef";
+	else if (gbNav4 && !gbNav6 && ((gnVerMinor <= 4.06)))
+		document.location = "/Robo/BIN/Robo.dll?mgr=agm&tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&wnd=InstallShieldLivingHelp%7CMain&agt=wsm&ctxid=kb%2Fview.asp&wks=wksdef";
+	else if (gbMac && gbIE4 && !gbIE5)		
+		document.location = "/Robo/BIN/Robo.dll?mgr=agm&tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&wnd=InstallShieldLivingHelp%7CMain&agt=wsm&ctxid=kb%2Fview.asp&wks=wksdef";
+	//figure out which mode is the best
+	else
+	{
+		nViewFrameType=nWebhelpNavPaneMode;
+		if (nWebhelpNavPaneMode==1||nWebhelpNavPaneMode == 2)
+		{
+			var gbDHTML=(nWebhelpNavPaneMode==1);
+			if (gbNav4) 										nViewFrameType = 2;
+			if (gbNav4&&(gnVerMinor < 4.1))						nViewFrameType = 3;
+			if (gbNav4&&(gnVerMinor == 4.6))					nViewFrameType = 3;
+			if (gbIE4&&gbDHTML)									nViewFrameType = 1;
+			if (gbIE4&&gbSunOS&&nWebhelpNavPaneMode==2)			nViewFrameType = 3;
+			if (gbNav4&&gbSunOS&&nViewFrameType==2)			nViewFrameType = 3;
+			if (gbNav6&&gbDHTML)								nViewFrameType = 1;
+			if (gbNav6&&!gbNav61&&nWebhelpNavPaneMode == 2)		nViewFrameType = 3;
+			if (gbMac)											nViewFrameType = 3;
+			if (gbOpera7&&nViewFrameType == 2)					nViewFrameType = 3;
+			if ((bNoApplet)&&(nViewFrameType == 2)) 			nViewFrameType = 3;
+		}
+	}
+}
+
+if (nViewFrameType!=-1)
+{
+	var gbWindows = ((gAgent.indexOf("win") != -1) || (gAgent.indexOf("16bit") != -1));
+	//The colordepth of the 16 color on Windows is 1. 
+	if ((gbWindows) && (gbNav4) && (window.screen) && (window.screen.colorDepth <= 4))
+	{
+	   alert("WebHelp has detected that your display is set to 16 colors. For full WebHelp support, please set your display to use 256 or more colors.");
+	   nViewFrameType = 3;
+	}
+
+	//figure out which one is navpane
+	nViewFrameType = 1;
+	if (nViewFrameType == 1)
+	{
+		if (gbNav4 && !gbNav6)
+			strPane = strPaneList;
+		else
+			strPane = strPaneDHTML;
+	}
+	else if (nViewFrameType == 2)
+		strPane = strPaneApplet;
+	else
+		strPane = strPaneList;
+}
+//-->
+</script>
+<script type="text/javascript" language="javascript" src="InstallShield_files/whstart.js"></script>
+<script type="text/javascript" language="javascript">
+<!--
+if (!gbIE4&&!gbNav4&&!gbOpera7&&!gbSafari)
+	document.location = "/Robo/BIN/Robo.dll?mgr=agm&tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&wnd=InstallShieldLivingHelp%7CMain&agt=wsm&ctxid=kb%2Fview.asp&wks=wksdef";
+
+function CMRAgent( strID, strURL, strLabel, strFrameAttr )
+{
+  this.m_strID = strID;
+  this.m_strURL = strURL;
+  this.m_strLabel = strLabel;
+  this.m_strFrameAttr = strFrameAttr;
+}
+
+function CMRServer()
+{
+  this.m_cAgents = new Array;
+}
+var cMRServer = new CMRServer;
+// GetServerInfo
+// Registry the agent array handled by webhelp
+cMRServer.m_strVersion = "3.00.022";
+cMRServer.m_strDefAgent = "toc";
+cMRServer.m_strAgentList = "toc;ndx;nls;gls;custom_22332;custom_10525;custom_22538;custom_5379;custom_13384";
+cMRServer.m_bTrial = 0;
+cMRServer.m_bExpired = 0;
+cMRServer.m_bSinglePane = 0;
+cMRServer.m_bShowSync = 0;
+cMRServer.m_bShowBrowseSequences = 0;
+cMRServer.m_bShowSearchInput = 0;
+cMRServer.m_strProduct = "RoboHelp Enterprise";
+cMRServer.m_strWindow = "installshieldlivinghelp|main";
+cMRServer.m_strProject = "InstallShieldLivingHelp";
+cMRServer.m_strContextID = "kb/view.asp";
+cMRServer.m_strCaption = "Macrovision HelpNet"; 
+cMRServer.m_strURLSkinFile = "/robo/projects/installshieldlivinghelp/webhelp_skin_files/mvsnskinhelpnet/mvsnskinhelpnet.skn";
+cMRServer.m_strURLResource = "/Robo/Resource/";
+cMRServer.m_strURLLogoImg = "/Robo/Resource/mr_sys_logo.gif";
+cMRServer.m_strURLServerIcon = "/Robo/Resource/mr_sys_icon.ico";
+cMRServer.m_strURLTopic = "/robo/projects/helplibdevstudio9/IHelpSetup_EXECmdLine.htm";
+cMRServer.m_strURLDefWorkspace = "/Robo/BIN/Robo.dll?mgr=agm&tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&wnd=InstallShieldLivingHelp%7CMain&agt=wsm&ctxid=kb%2Fview.asp&wks=wksdef";
+cMRServer.m_strURLBase = "http://helpnet.installshield.com/robo/projects/installshieldlivinghelp/whskin_ep_start.htm";
+cMRServer.m_strURLBlank = "/Robo/Resource/mr_wkswhp_blank.htm";
+cMRServer.m_cAgents[0] = new CMRAgent( "toc", "/Robo/BIN/Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&mgr=agm&wnd=InstallShieldLivingHelp%7CMain&agt=toc&js=1&ctxid=kb%2Fview.asp", "Contents", "scrolling=no frameborder=no" );
+cMRServer.m_cAgents[1] = new CMRAgent( "ndx", "/Robo/BIN/Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&mgr=agm&wnd=InstallShieldLivingHelp%7CMain&agt=ndx&js=1&ctxid=kb%2Fview.asp", "Index", "" );
+cMRServer.m_cAgents[2] = new CMRAgent( "nls", "/Robo/BIN/Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&mgr=agm&wnd=InstallShieldLivingHelp%7CMain&agt=nls&js=1&ctxid=kb%2Fview.asp", "Search", "frameborder=0" );
+cMRServer.m_cAgents[3] = new CMRAgent( "gls", "/Robo/BIN/Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&mgr=agm&wnd=InstallShieldLivingHelp%7CMain&agt=gls&js=1&ctxid=kb%2Fview.asp", "Glossary", "" );
+
+//-->
+</script>
+
+<script type="text/javascript" language="javascript">
+<!--
+if (nViewFrameType!=-1)
+{
+	var strHTML = "<frameset rows=\"44,*\" hostof=\"parent:toolbar!startpage:yes\" frameborder=\"0\" border=\"0\"><frame src=\"whskin_tbars.htm\" id=\"toolbar\" frameborder=\"0\" border=\"0\" scrolling=\"no\" noresize marginheight=\"0\" marginwidth=\"0\" title=\"Toolbar\"></frame><frame src=\"whskin_frmset01.htm\"  frameborder=\"1\" border=\"1\" scrolling=\"auto\" marginheight=\"0\" marginwidth=\"0\"></frame></frameset>";
+	document.write(strHTML);
+}
+//-->
+</script></head><frameset rows="44,*" hostof="parent:toolbar!startpage:yes" frameborder="0" border="0"><frame src="InstallShield_files/whskin_tbars.htm" id="toolbar" frameborder="0" border="0" noresize="noresize" marginheight="0" marginwidth="0" title="Toolbar" scrolling="no"><frame src="InstallShield_files/whskin_frmset01.htm" frameborder="1" border="1" marginheight="0" marginwidth="0" scrolling="auto"></frameset>
+
+<frameset cols="100%,*" frameborder="no" border="0">
+  <frame src="InstallShield_files/Robo.htm">
+  <frame src="InstallShield_files/whskin_blank.htm" noresize="noresize">
+</frameset>
+
+</html>

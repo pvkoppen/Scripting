@@ -1,0 +1,166 @@
+Description:  Display the various properties of a user in the directory.
+              There are two variations of this command. The first variation
+              allows you to view the properties of multiple users. The second
+              variation allows you to view the group membership information
+              of a single user.
+Syntax:     dsget user <UserDN ...> [-dn] [-samid] [-sid] [-upn] [-fn] [-mi]
+            [-ln] [-display] [-empid] [-desc] [-office] [-tel] [-email]
+            [-hometel] [-pager] [-mobile] [-fax] [-iptel] [-webpg]
+            [-title] [-dept] [-company] [-mgr] [-hmdir] [-hmdrv]
+            [-profile] [-loscr] [-mustchpwd] [-canchpwd]
+            [-pwdneverexpires] [-disabled] [-acctexpires]
+            [-reversiblepwd] [-part <PartitionDN> [-qlimit] [-qused]]
+            [{-s <Server> | -d <Domain>}] [-u <UserName>] 
+            [-p {<Password> | *}] [-c] [-q] [-l] [{-uc | -uco | -uci}]
+
+            dsget user <UserDN> [-memberof [-expand]]
+            [{-s <Server> | -d <Domain>}] [-u <UserName>]
+            [-p {<Password> | *}] [-c] [-q] [-l]
+            [{-uc | -uco | -uci}]
+            
+Parameters:
+
+Value                   Description
+<UserDN ...>            Required/stdin. Distinguished names (DNs) of one 
+                        or more users to view.
+                        If the target objects are omitted they
+                        will be taken from standard input (stdin)
+                        to support piping of output from another command 
+                        to input of this command. Compare with <UserDN>
+                        below.
+-dn                     Shows the DN of the user. 
+-samid                  Shows the SAM account name of the user. 
+-sid                    Shows the user Security ID. 
+-upn                    Shows the user principal name of the user. 
+-fn                     Shows the first name of the user. 
+-mi                     Shows the middle initial of the user. 
+-ln                     Shows the last name of the user. 
+-display                Shows the display name of the user. 
+-empid                  Shows the user employee ID. 
+-desc                   Shows the description of the user. 
+-office                 Shows the office location of the user. 
+-tel                    Shows the telephone number of the user. 
+-email                  Shows the e-mail address of the user. 
+-hometel                Shows the home telephone number of the user. 
+-pager                  Shows the pager number of the user. 
+-mobile                 Shows the mobile phone number of the user. 
+-fax                    Shows the fax number of the user. 
+-iptel                  Shows the user IP phone number. 
+-webpg                  Shows the user web page URL. 
+-title                  Shows the title of the user. 
+-dept                   Shows the department of the user. 
+-company                Shows the company info of the user. 
+-mgr                    Shows the user's manager. 
+-hmdir                  Shows the user home directory. 
+                        Displays the drive letter to which the 
+                        home directory of the user is mapped 
+                        (if the home directory path is a UNC path). 
+-hmdrv                  Shows the user's home drive letter
+                        (if home directory is a UNC path).
+-profile                Shows the user's profile path. 
+-loscr                  Shows the user's logon script path. 
+-mustchpwd              Shows if the user must change his/her password
+                        at the time of next logon. Displays: yes or no. 
+-canchpwd               Shows if the user can change his/her password.
+                        Displays: yes or no. 
+-pwdneverexpires        Shows if the user password never expires.
+                        Displays: yes or no. 
+-disabled               Shows if the user account is disabled 
+                        for logon or not. Displays: yes or no. 
+-acctexpires            Shows when the user account expires. 
+                        Display values: a date when the account expires
+                        or the string "never" if the account never expires. 
+-reversiblepwd          Shows if the user password is allowed to be 
+                        stored using reversible encryption (yes or no). 
+<UserDN>                Required. DN of group to view.
+-memberof               Displays the groups of which the user is a member.
+-expand                 Displays a recursively expanded list of groups
+                        of which the user is a member.
+{-s <Server> | -d <Domain>}
+                        -s <Server> connects to the domain controller (DC) 
+                        with name <Server>.
+                        -d <Domain> connects to a DC in domain <Domain>.
+                        Default: a DC in the logon domain.
+-u <UserName>           Connect as <UserName>. Default: the logged in user.
+                        User name can be: user name, domain\user name,
+                        or user principal name (UPN).
+-p {<Password> | *}     Password for the user <UserName>. If * then prompt
+                        for password.
+-c                      Continuous operation mode: report errors but continue
+                        with next object in argument list when multiple
+                        target objects are specified. Without this option,
+                        command exits on first error.
+-q                      Quiet mode: suppress all output to standard output.
+-L                      Displays the entries in the search result set in a
+                        list format. Default: table format.
+{-uc | -uco | -uci}	-uc Specifies that input from or output to pipe is
+			formatted in Unicode. 
+			-uco Specifies that output to pipe or file is 
+			formatted in Unicode. 
+			-uci Specifies that input from pipe or file is
+			formatted in Unicode.
+-part <PartitionDN>     Connect to the directory partition with the
+                        distinguished name of <PartitionDN>.
+-qlimit                 Displays the effective quota of the user within
+                        the specified directory partition.
+-qused                  Displays how much of the quota the user has
+                        used within the specified directory partition.
+Remarks:
+If you do not supply a target object at the command prompt, the target
+object is obtained from standard input (stdin). Stdin data can be accepted
+from the keyboard, a redirected file, or as piped output from another
+command. To mark the end of stdin data from the keyboard or in a redirected
+file, use Control+Z, for End of File (EOF).
+
+A quota specification determines the maximum number of directory objects a
+given security principal can own in a specific directory partition.
+
+
+The dsget commands help you view the properties of a
+specific object in the directory: the input to dsget is
+an object and the output is a list of properties for that object.
+To find all objects that meet a given search criterion,
+use the dsquery commands (dsquery /?).
+
+If a value that you supply contains spaces, use quotation marks 
+around the text (for example, "CN=John Smith,CN=Users,DC=microsoft,DC=com").
+If you enter multiple values, the values must be separated by spaces
+(for example, a list of distinguished names). 
+Examples:
+To find all users in a given OU whose names start with "jon" and display
+their descriptions, type:
+
+    dsquery user ou=Test,dc=microsoft,dc=com -name jon* | dsget user -desc
+
+To display the list of groups, recursively expanded, to which a given user
+"Jon Smith" belongs, type:
+
+    dsget user "cn=Jon Smith,cn=users,dc=microsoft,dc=com" -memberof -expand
+
+To display the effective quota and quota used for a given user
+"Jon Smith" on a given partition "cn=domain,dc=microsoft,dc=com", type:
+
+    dsget user "cn=Jon Smith,cn=users,dc=microsoft,dc=com"
+    -part "cn=domain,dc=microsoft,dc=com" -qlimit -qused
+
+
+See also:
+dsget - describes parameters that apply to all commands.
+dsget computer - displays properties of computers in the directory.
+dsget contact - displays properties of contacts in the directory.
+dsget subnet - displays properties of subnets in the directory.
+dsget group - displays properties of groups in the directory.
+dsget ou - displays properties of ou's in the directory.
+dsget server - displays properties of servers in the directory.
+dsget site - displays properties of sites in the directory.
+dsget user - displays properties of users in the directory.
+dsget quota - displays properties of quotas in the directory.
+dsget partition - displays properties of partitions in the directory.
+
+Directory Service command-line tools help:
+dsadd /? - help for adding objects.
+dsget /? - help for displaying objects.
+dsmod /? - help for modifying objects.
+dsmove /? - help for moving objects.
+dsquery /? - help for finding objects matching search criteria.
+dsrm /? - help for deleting objects.

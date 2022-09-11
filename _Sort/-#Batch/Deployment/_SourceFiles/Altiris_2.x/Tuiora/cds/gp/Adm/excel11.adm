@@ -1,0 +1,1267 @@
+CLASS USER
+
+CATEGORY "Microsoft Office Excel 2003"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options\BinaryOptions
+CATEGORY "Tools | Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options\BinaryOptions
+CATEGORY "View"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options\BinaryOptions
+POLICY "Startup Task Pane"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME StartupDialog
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Show Formula bar in Normal View"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fFmlaF_1_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Show Status bar in Normal View"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fStatusBar_2_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Show Formula bar in Full View"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fFmlaFull_68_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Show Status bar in Full View"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fStatusFull_67_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Windows in Taskbar"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME ShowWindowsInTaskbar
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Comments"
+	PART "Comments" DROPDOWNLIST
+	VALUENAME vmdNoteDisp_38_2
+	ITEMLIST
+		NAME "None"		VALUE NUMERIC 0
+		ACTIONLIST 
+			VALUENAME	fNoteOffv5_35_1   VALUE NUMERIC 1
+		END ACTIONLIST
+		NAME "Comment indicator only"			VALUE NUMERIC 1	DEFAULT
+		ACTIONLIST
+			VALUENAME	fNoteOffv5_35_1   VALUE NUMERIC 0
+		END ACTIONLIST
+		NAME "Comment & indicator"		VALUE NUMERIC 2
+		ACTIONLIST
+			VALUENAME	fNoteOffv5_35_1   VALUE NUMERIC 0
+		END ACTIONLIST
+	END ITEMLIST
+	NOSORT
+	END PART
+	ACTIONLISTOFF
+		VALUENAME	fNoteOffv5_35_1	VALUE DELETE
+	END ACTIONLISTOFF
+	END POLICY
+END CATEGORY
+CATEGORY "Edit"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options\BinaryOptions
+POLICY "Edit directly in cell"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fNoInCell_66_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Allow cell drag and drop"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fDisableDman_36_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Alert before overwriting cells"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fNoDragWarning_76_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Move selection after Enter"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fEnterMove_75_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Move selection after Enter direction"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Move selection after Enter direction" DROPDOWNLIST
+	VALUENAME MoveEnterDir
+	ITEMLIST
+		NAME "Down"		VALUE NUMERIC 0	DEFAULT
+		NAME "Right"	VALUE NUMERIC 1
+		NAME "Up"		VALUE NUMERIC 2
+		NAME "Left"		VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Fixed decimal to 2 places"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME AutoDec
+	VALUEON NUMERIC 5
+	VALUEOFF NUMERIC 4
+	END PART
+	END POLICY
+POLICY "Cut, copy, and sort objects with cells"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fObjWCellMove_71_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Ask to update automatic links"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fUpdateExt_78_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Provide feedback with Animation"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAnimationsOK_129_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Enable AutoComplete for cell values"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fAutoComplete_128_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Extend list formats and formulas"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME ExtendList
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Enable automatic percent entry"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fDisableAutoPercent_99_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Show Insert Options buttons"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME EnableInsertCellsOOUI_102_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "General"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options\BinaryOptions
+POLICY "R1C1 reference style"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fRefA1_4_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Ignore other applications"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fDdeEnabled_6_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Function tooltips"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fShowFunTips_101_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Recently used file list"
+	PART "Entries on recently used file list" NUMERIC
+	KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	VALUENAME DefFileMRU
+	MIN 0
+	MAX 9
+	DEFAULT 4
+	END PART
+	ACTIONLISTON
+		VALUENAME	fNoMRU_70_1   VALUE NUMERIC 0
+	END ACTIONLISTON
+	ACTIONLISTOFF
+		VALUENAME	fNoMRU_70_1   VALUE DELETE
+	END ACTIONLISTOFF
+	END POLICY
+POLICY "Prompt for workbook properties"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fPromptSumInfo_65_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Zoom on roll with IntelliMouse"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fRollZoom_98_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Default Sheets"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Sheets in new workbook" NUMERIC
+	VALUENAME DefSheets
+	MIN 1
+	MAX 255
+	DEFAULT 3
+	END PART
+	END POLICY
+POLICY "Font"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Name, Size" COMBOBOX
+	VALUENAME Font
+	DEFAULT "Arial, 10"
+	SUGGESTIONS
+		"Arial, 8"
+		"Arial, 10"
+		"Arial, 11"
+		"Arial, 12"
+		"Courier New, 8"
+		"Courier New, 10"
+		"Courier New, 11"
+		"Times New Roman, 8"
+		"Times New Roman, 10"
+		"Times New Roman, 11"
+		END SUGGESTIONS
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Default file location"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Default file location" EDITTEXT
+	VALUENAME DefaultPath
+	EXPANDABLETEXT
+	REQUIRED
+	END PART
+	END POLICY
+POLICY "Alternate startup file location"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Alternate startup file location" EDITTEXT
+	VALUENAME AltStartup
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Web Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Internet
+CATEGORY "General"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Internet
+POLICY "Save any additional data necessary to maintain formulas"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DoNotSaveHiddenData
+	VALUEON NUMERIC 0 ;Reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Load pictures from Web pages not created in Excel"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DoNotLoadPictures
+	VALUEON NUMERIC 0 ;Reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Transition"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options\BinaryOptions
+POLICY "Save Excel files as"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Save Excel files as" DROPDOWNLIST
+	VALUENAME DefaultFormat
+	ITEMLIST
+		NAME	"Excel Workbook (*.xls)"	VALUE NUMERIC 4294963153 DEFAULT
+		NAME	"Web Page (*.htm; *.html)"	VALUE NUMERIC 44
+		NAME	"Excel 5.0/95 Workbook (*.xls)"	VALUE NUMERIC 39
+		NAME	"Excel 97-2002 & 5.0/95 Workbook (*.xls)"	VALUE NUMERIC 43
+		NAME	"Excel 4.0 Workbook (*.xlw)"	VALUE NUMERIC 35
+		NAME	"Excel 4.0 Worksheet (*.xls)"	VALUE NUMERIC 33
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Microsoft Excel menu or Help key"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Help key" NUMERIC
+	VALUENAME MenuKey
+	SPIN 0
+	DEFAULT 47
+	END PART
+	PART "Enter ASCII value for key of choice (e.g. '/'=47)" TEXT
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Microsoft Excel menus or Lotus 1-2-3 Help" DROPDOWNLIST
+	KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options\BinaryOptions
+	VALUENAME fLotusHelp_34_1
+	ITEMLIST
+		NAME "Microsoft Excel menus"	VALUE NUMERIC 0	DEFAULT
+		NAME "Lotus 1-2-3 Help"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Transition navigation keys"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fISI_33_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Chart"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options\BinaryOptions
+POLICY "Show names"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fShowChartNames_96_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Show values"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fShowChartTipValues_97_1
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Save"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+POLICY "Save AutoRecover info"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME AutoRecoverEnabled
+	VALUEON NUMERIC 1 
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "AutoRecover time"
+	PART "Save AutoRecover info every:" NUMERIC
+	VALUENAME AutoRecoverTime
+		SPIN 1
+		MIN 1
+		MAX 120
+		DEFAULT 10
+	END PART
+	PART "minutes." TEXT
+	END PART
+	END POLICY
+POLICY "AutoRecover save location"
+	PART "AutoRecover save location:" EDITTEXT
+	VALUENAME AutoRecoverPath
+	DEFAULT "%USERPROFILE%\Application Data\Microsoft\Excel"
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "AutoRecover delay"
+	PART "Seconds of idle time before AutoRecover starts" NUMERIC
+	VALUENAME AutoRecoverDelay
+		SPIN 1
+		MIN 1
+		MAX 600
+		DEFAULT 30
+	END PART
+	END POLICY
+POLICY "Disable AutoRepublish"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisableAutoRepublish
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "AutoRepublish Warning Alert"
+	PART "AutoRepublish Warning Alert" DROPDOWNLIST
+	VALUENAME DisableAutoRepublishWarning
+	ITEMLIST
+		NAME "Always show the alert before publishing"	VALUE NUMERIC 0
+		NAME "Never show the alert before publishing"	VALUE NUMERIC 1 DEFAULT	
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Note:  The AutoRepublish warning alert is never shown if" TEXT
+	END PART
+	PART "the Disable AutoRepublish setting is enabled." TEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Right-to-Left"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+POLICY "Default direction"
+	PART "Default direction" DROPDOWNLIST
+	VALUENAME DefaultSheetR2L
+	ITEMLIST
+		NAME "Right to Left"	VALUE NUMERIC 1
+		NAME "Left to Right"	VALUE NUMERIC 0	DEFAULT
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Cursor movement"
+	PART "Cursor movement" DROPDOWNLIST
+	VALUENAME CursorVisual
+	ITEMLIST
+		NAME "Logical"	VALUE NUMERIC 0	DEFAULT
+		NAME "Visual"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Show control characters"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME ControlCharacters
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Tools | Macro"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options\BinaryOptions
+CATEGORY "Record New Macro..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options\BinaryOptions
+POLICY "Store macro in Personal Macro Workbook by default"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME fGlobalSheet_37_1
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Security..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Security
+POLICY "Security Level"
+	PART "Security Level" DROPDOWNLIST
+	VALUENAME Level
+	ITEMLIST
+		NAME "Very High"	VALUE NUMERIC 4
+		NAME "High"		VALUE NUMERIC 3 DEFAULT
+		NAME "Medium"		VALUE NUMERIC 2
+		NAME "Low"		VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Trust all installed add-ins and templates"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DontTrustInstalledFiles
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Trust access to Visual Basic Project"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME AccessVBOM
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Suppress High Security Macro alert for unsigned Macros"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisableHighSecurityMacroAlert
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Tools | Autocorrect Options"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+POLICY "Include new rows and columns in list"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME AutoExpandListRange
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Internet and network paths as hyperlinks"
+	PART "Check to enable Replace as You Type for hyperlinks" CHECKBOX
+	VALUENAME AutoHyperlink
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Customizable error messages"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\CustomizableAlerts
+POLICY "List of error messages to customize"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\CustomizableAlerts
+	PART "List of error messages to customize" LISTBOX
+	EXPLICITVALUE
+	END PART
+	PART "Enter error ID for Value Name and custom button text for Value" TEXT
+	END PART
+	ACTIONLISTON
+	VALUENAME PolicyOn VALUE NUMERIC 1
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME PolicyOn VALUE DELETE
+	END ACTIONLISTOFF
+	END POLICY
+END CATEGORY
+CATEGORY "Data Recovery"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+POLICY "Do not show data extraction options when opening corrupt workbooks"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME ExtractDataDisableUI
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Assume structured storage format of workbook is intact when recovering data"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME ExtractDataMode
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Corrupt formula conversion"
+	PART "Convert unrecoverable references to:" DROPDOWNLIST
+	VALUENAME ExtractDataFormulas
+	ITEMLIST
+		NAME "values"		VALUE NUMERIC 2 DEFAULT
+		NAME "#REF or #NAME"		VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Data Access Security"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+POLICY "Automatic Query Refresh"
+	PART "Automatic Query Refresh Settings" DROPDOWNLIST
+	VALUENAME QuerySecurity
+	ITEMLIST
+		NAME "Default: Prompt for all workbooks"		VALUE NUMERIC 0 DEFAULT
+		NAME "Do not prompt; do not allow auto refresh"	VALUE NUMERIC 1
+		NAME "Do not prompt; allow auto refresh"		VALUE NUMERIC 2
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Refresh Alert Settings"
+	PART "Check to alert user on Refresh Data" CHECKBOX
+			VALUENAME RefreshAlert
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "OLAP PivotTable connect warning"
+	PART "Check to warn user on OLAP data connect" CHECKBOX
+			VALUENAME OLAPSecurityPrompt
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "PivotTable External Data Source connect warning"
+	PART "Check to warn user on connect" CHECKBOX
+			VALUENAME PageFieldSecurityPrompt
+			VALUEON NUMERIC 0
+			VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "New Spreadsheet Links"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Excel\New Spreadsheet"
+POLICY "Custom Link #1"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Excel\New Spreadsheet\CustomPolicy1"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a spreadsheet"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing spreadsheet"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #2"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Excel\New Spreadsheet\CustomPolicy2"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a spreadsheet"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing spreadsheet"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #3"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Excel\New Spreadsheet\CustomPolicy3"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a spreadsheet"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing spreadsheet"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #4"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Excel\New Spreadsheet\CustomPolicy4"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a spreadsheet"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing spreadsheet"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #5"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Excel\New Spreadsheet\CustomPolicy5"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a spreadsheet"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing spreadsheet"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #6"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Excel\New Spreadsheet\CustomPolicy6"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a spreadsheet"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing spreadsheet"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #7"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Excel\New Spreadsheet\CustomPolicy7"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a spreadsheet"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing spreadsheet"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #8"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Excel\New Spreadsheet\CustomPolicy8"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a spreadsheet"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing spreadsheet"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #9"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Excel\New Spreadsheet\CustomPolicy9"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a spreadsheet"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing spreadsheet"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #10"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Excel\New Spreadsheet\CustomPolicy10"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a spreadsheet"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing spreadsheet"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Disable items in user interface"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\DisabledCmdBarItemsCheckBoxes
+CATEGORY "Predefined"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\DisabledCmdBarItemsCheckBoxes
+POLICY "Disable command bar buttons and menu items"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\DisabledCmdBarItemsCheckBoxes
+	PART "File | Open... | Tools | Search..." CHECKBOX
+	VALUENAME FileOpenToolsFind
+	VALUEON 5905
+	VALUEOFF 0
+	END PART
+	PART "File | Save as Web Page..." CHECKBOX
+	VALUENAME FileSaveAsWebPage
+	VALUEON 3823
+	VALUEOFF 0
+	ACTIONLISTON
+	VALUENAME FilePublishAsWebPage VALUE 3903
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME FilePublishAsWebPage VALUE DELETE
+	END ACTIONLISTOFF
+	END PART
+	PART "File | Web Page Preview" CHECKBOX
+	VALUENAME FileWebPagePreview
+	VALUEON 3655
+	VALUEOFF 0
+	END PART
+	PART "File | Send To | Mail Recipient" CHECKBOX
+	VALUENAME FileSendToMailRecipient
+	VALUEON 3738
+	VALUEOFF 0
+	END PART
+	PART "Insert | Hyperlink..." CHECKBOX
+	VALUENAME InsertHyperlink
+	VALUEON 1576
+	VALUEOFF 0
+	END PART
+	PART "Tools | Speech" CHECKBOX
+	VALUENAME ToolsSpeech
+	VALUEON 5764
+	VALUEOFF 0
+	END PART
+	PART "Tools | Protection" CHECKBOX
+	VALUENAME ToolsProtect
+	VALUEON 30029
+	VALUEOFF 0
+	END PART
+	PART "Tools | Protection | Protect Sheet..." CHECKBOX
+	VALUENAME ToolsProtectSheet
+	VALUEON 893
+	VALUEOFF 0
+	END PART
+	PART "Tools | Protection | Protect Workbook..." CHECKBOX
+	VALUENAME ToolsProtectWorkbook
+	VALUEON 894
+	VALUEOFF 0
+	END PART
+	PART "Tools | Protection | Protect and Share Workbook..." CHECKBOX
+	VALUENAME ToolsProtectShare
+	VALUEON 3059
+	VALUEOFF 0
+	END PART
+	PART "Tools | Online Collaboration" CHECKBOX
+	VALUENAME ToolsCollaboration
+	VALUEON 30468
+	VALUEOFF 0
+	END PART
+	PART "Tools | Tools on the Web..." CHECKBOX
+	VALUENAME ToolsontheWeb
+	VALUEON 7032
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro" CHECKBOX
+	VALUENAME ToolsMacro
+	VALUEON 30017
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Macros..." CHECKBOX
+	VALUENAME ToolsMacroMacros
+	VALUEON 186
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Record New Macro..." CHECKBOX
+	VALUENAME ToolsMacroRecord
+	VALUEON 184
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Security..." CHECKBOX
+	VALUENAME ToolsMacroSecurity
+	VALUEON 3627
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Visual Basic Editor" CHECKBOX
+	VALUENAME ToolsMacroVBE
+	VALUEON 1695
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Microsoft Script Editor" CHECKBOX
+	VALUENAME ToolsMacroWeb
+	VALUEON 3631
+	VALUEOFF 0
+	END PART
+	PART "Tools | Add-Ins..." CHECKBOX
+	VALUENAME ToolsAddins
+	VALUEON 943
+	VALUEOFF 0
+	END PART
+	PART "Tools | Customize..." CHECKBOX
+	VALUENAME ToolsCustomize
+	VALUEON 797
+	VALUEOFF 0
+	END PART
+	PART "Tools | Options..." CHECKBOX
+	VALUENAME ToolsOptions
+	VALUEON 522
+	VALUEOFF 0
+	ACTIONLISTON
+	VALUENAME WebOptions VALUE 4107
+	VALUENAME GeneralOptions VALUE 4108
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME WebOptions VALUE DELETE
+	VALUENAME GeneralOptions VALUE DELETE
+	END ACTIONLISTOFF
+	END PART
+	PART "Help | Microsoft Office Online" CHECKBOX
+	VALUENAME HelpOfficeWeb
+	VALUEON 3775
+	VALUEOFF 0
+	END PART
+	PART "Help | Activate Product..." CHECKBOX
+	VALUENAME HelpRegistration
+	VALUEON 5933
+	VALUEOFF 0
+	END PART
+	PART "Help | Detect and Repair..." CHECKBOX
+	VALUENAME HelpRepair
+	VALUEON 3774
+	VALUEOFF 0
+	END PART
+	PART "Web | Refresh Current Page" CHECKBOX
+	VALUENAME WebRefreshCurrentPage
+	VALUEON 1020
+	VALUEOFF 0
+	END PART
+	PART "Web | Start Page" CHECKBOX
+	VALUENAME WebStartPage
+	VALUEON 1016
+	VALUEOFF 0
+	END PART
+	PART "Web | Search the Web" CHECKBOX
+	VALUENAME WebSearchTheWeb
+	VALUEON 1922
+	VALUEOFF 0
+	ACTIONLISTON
+	VALUENAME FileOpenSearchTheWeb VALUE 4087
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME FileOpenSearchTheWeb VALUE DELETE
+	END ACTIONLISTOFF
+	END PART
+	PART "Web | Favorites" CHECKBOX
+	VALUENAME WebFavorites
+	VALUEON 30176
+	VALUEOFF 0
+	END PART
+	PART "Web | Go" CHECKBOX
+	VALUENAME WebGo
+	VALUEON 30328
+	VALUEOFF 0
+	END PART
+	PART "Web | Address" CHECKBOX
+	VALUENAME WebAddress
+	VALUEON 1740
+	VALUEOFF 0
+	END PART
+	ACTIONLISTOFF
+	VALUENAME FilePublishAsWebPage VALUE DELETE
+	VALUENAME WebOptions VALUE DELETE
+	VALUENAME GeneralOptions VALUE DELETE
+	VALUENAME FileOpenSearchTheWeb VALUE DELETE
+	END ACTIONLISTOFF
+	END POLICY
+POLICY "Disable shortcut keys"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\DisabledShortcutKeysCheckBoxes
+	PART "Ctrl+F (Find...)" CHECKBOX
+	VALUENAME Find 
+	VALUEON 70,8
+	VALUEOFF 0
+	END PART
+	PART "Ctrl+K (Insert | Hyperlink...)" CHECKBOX
+	VALUENAME InsertHyperlink
+	VALUEON 75,8
+	VALUEOFF 0
+	END PART
+	PART "Alt+F8 (Tools | Macro | Macros...)" CHECKBOX
+	VALUENAME ToolsMacroMacros
+	VALUEON 119,16
+	VALUEOFF 0
+	END PART
+	PART "Alt+F11 (Tools | Macro | Visual Basic Editor)" CHECKBOX
+	VALUENAME ToolsMacroVBE
+	VALUEON 122,16
+	VALUEOFF 0
+	END PART
+	PART "Alt+Shift+F11 (Tools | Macro | Microsoft Script Editor)" CHECKBOX
+	VALUENAME ToolsMacroWeb
+	VALUEON 122,20
+	VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Custom"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\DisabledCmdBarItemsList
+POLICY "Disable command bar buttons and menu items"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\DisabledCmdBarItemsList
+	PART "Enter a command bar ID to disable" LISTBOX
+	VALUEPREFIX TCID
+	END PART
+	END POLICY
+POLICY "Disable shortcut keys"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\DisabledShortcutKeysList
+	PART "Enter a key and modifier to disable" LISTBOX
+	VALUEPREFIX KeyMod
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Miscellaneous"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+POLICY "Chart gallery path"
+	PART "Chart gallery path" EDITTEXT
+	VALUENAME GalleryPath
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Custom Answer Wizard database path"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Excel\Answer Wizard"
+	PART "Custom Answer Wizard database path" EDITTEXT
+	VALUENAME AdminDatabase
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Enable four-digit year display"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME EnableFourDigitYearDisplay
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Locally cache network file storages"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME NetworkResiliency
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Enabling this setting helps prevent data loss during network" TEXT
+	END PART
+	PART "failures when editing spreadsheets stored on network shares." TEXT
+	END PART
+	END POLICY
+POLICY "Locally cache PivotTable reports"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME PivotTableNetworkResiliency
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART " " TEXT
+	END PART
+	PART "Enabling this setting helps prevent data loss during network" TEXT
+	END PART
+	PART "failures when editing spreadsheets stored on network shares." TEXT
+	END PART
+	END POLICY
+POLICY "OLAP PivotTable User Defined Function (UDF) security setting"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "OLAP PivotTable User Defined Function (UDF) security setting" DROPDOWNLIST
+	VALUENAME OLAPUDFSecurity
+	ITEMLIST
+		NAME "Allow ALL UDFs"	VALUE NUMERIC 1
+		NAME "Allow safe UDFs only"	VALUE NUMERIC 2
+		NAME "Allow NO UDFs"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "PivotTable reports can contain OLAP queries with references to" TEXT
+	END PART
+	PART "User Defined Functions (UDFs). UDFs can be compiled executables," TEXT
+	END PART
+	PART "therefore posing a potential security threat.  With this setting" TEXT
+	END PART
+	PART "you can either (1) allow all UDFs in OLAP queries to execute with" TEXT
+	END PART
+	PART "no IObjectSafety check, (2) allow only UDFs where the developer" TEXT
+	END PART
+	PART "has used IObjectSafety to mark the UDF as a safe executable or (3)" TEXT
+	END PART
+	PART "disable all UDFs from executing in OLAP queries.  The effect of" TEXT
+	END PART
+	PART "setting this key is for Excel to pass the selected value to the" TEXT
+	END PART
+	PART "OLAP provider." TEXT
+	END PART
+	END POLICY
+POLICY "Recognize SmartTags"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Excel\Options
+	PART "Check to block Excel from recognizing SmartTags" CHECKBOX
+	VALUENAME RecognizeSmartTags
+	VALUEON NUMERIC 0
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+
+

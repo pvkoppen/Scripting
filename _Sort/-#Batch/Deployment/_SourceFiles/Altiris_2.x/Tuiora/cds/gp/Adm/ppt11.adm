@@ -1,0 +1,1425 @@
+CLASS USER
+
+CATEGORY "Microsoft Office PowerPoint 2003"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+CATEGORY "Tools | Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+CATEGORY "View"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+POLICY "Startup Task Pane"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME StartupDialog
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Slide Layout task pane when inserting new slides"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME NewSlideDialog
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Status bar"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME ShowStatusBar
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Vertical ruler"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME VerticalRuler
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Windows in taskbar"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME ShowWindowsInTaskbar
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Popup menu on right mouse click"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME SSRightMouse
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Show popup menu button"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME SSMenuButton
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "End with black slide"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME SSEndOnBlankSlide
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "General"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+POLICY "Recently used file list"
+	PART "Enable recently used file list" CHECKBOX
+	VALUENAME MRUListActive
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Size of recently used file list" NUMERIC
+	VALUENAME SizeOfMRUList
+	SPIN 1
+	DEFAULT 4
+	MIN 1
+	MAX 9
+	END PART
+	END POLICY
+POLICY "Link Sounds File Size"
+	PART "Link sounds with file size greater than (Kb):" NUMERIC
+	VALUENAME "Link sound size"
+	DEFAULT 100
+	SPIN 10
+	MIN 0
+	MAX 9999
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Web Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Internet
+CATEGORY "General"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Internet
+POLICY "Slide navigation"
+	PART "Add slide navigation controls" CHECKBOX
+	VALUENAME HideNavigation
+	VALUEON NUMERIC 0 ;Reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	PART "Colors" DROPDOWNLIST
+	VALUENAME FrameColors
+	ITEMLIST
+		NAME "Browser colors"	VALUE	BrowserColors
+		NAME "Presentation colors (text color)"	VALUE	PresentationSchemeTextColor
+		NAME "Presentation colors (accent color)"	VALUE	PresentationSchemeAccentColor
+		NAME "White text on black"	VALUE	WhiteTextOnBlack				DEFAULT
+		NAME "Black text on white"	VALUE	BlackTextOnWhite
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Show slide animation while browsing"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME ShowSlideAnimation
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Resize graphics to fit browser window"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DoNotResizeGraphics
+	VALUEON NUMERIC 0 ;Reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Edit"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+POLICY "When selecting, automatically select entire word"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME WordSelection
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Use smart cut and paste"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME SmartCutPaste
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Drag-and-drop text editing"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DragAndDrop
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "New charts take on PowerPoint font"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME PPTColorsForNewGraphs
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Maximum number of undos"
+	PART "Maximum number of undos" NUMERIC
+	VALUENAME "Number of Undos"
+	SPIN 1
+	DEFAULT 20
+	MIN 3
+	MAX 150
+	END PART
+	END POLICY
+POLICY "New animation effects"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisableNewAnimationUI
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Multiple masters"
+	PART "Number of masters permitted in a presentation:" NUMERIC
+	VALUENAME MaxNumberDesigns
+	SPIN 1
+	MIN 1
+	MAX 9999
+	END PART
+	END POLICY
+POLICY "Password protection"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DisablePasswordUI
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Print"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+POLICY "Background printing"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME BackgroundPrint
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Print TrueType fonts as graphics"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME "Send TrueType fonts as bitmaps"
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Print inserted objects at printer resolution"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME "Send printer information to OLE servers"
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Save"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+POLICY "Allow fast saves"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME "Fast saves"
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Prompt for file properties"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME PromptForFileProperties
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Save AutoRecover info"
+	PART "Enable save AutoRecover info" CHECKBOX
+	VALUENAME SaveAutoRecoveryInfo
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "AutoRecover save frequency (minutes):" NUMERIC
+	VALUENAME FrequencyToSaveAutoRecoveryInfo
+	SPIN 1
+	DEFAULT 10
+	MIN 1
+	MAX 9999
+	END PART
+	END POLICY
+POLICY "Convert charts when saving as previous version"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME ConvertCharts
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Save PowerPoint files as"
+	PART "Save PowerPoint files as" DROPDOWNLIST
+	VALUENAME DefaultFormat
+	ITEMLIST
+		NAME	"PowerPoint Presentation (*.ppt)"	VALUE NUMERIC	0	DEFAULT
+		NAME	"Web Page (*.htm; *.html)"	VALUE NUMERIC	13
+		NAME	"PowerPoint 95 (*.ppt)"	VALUE NUMERIC	4
+		NAME	"PowerPoint 97-2002 & 95 (*.ppt)"	VALUE NUMERIC	3
+		NAME	"Web Archive"	VALUE NUMERIC	16
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Default file location"
+	PART "Default file location" EDITTEXT
+	KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\RecentFolderList
+	VALUENAME Default
+	EXPANDABLETEXT
+	REQUIRED
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Security"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+POLICY "Make hidden markup visible"
+	PART "Check to make hidden markup visible" CHECKBOX
+		VALUENAME MarkupOpenSave
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Spelling and Style"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+POLICY "Check spelling as you type"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME "Background spell checking"
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Always suggest corrections"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME AlwaysSuggest
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Ignore words in UPPERCASE"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME "Ignore UPPERCASE words"
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Ignore words with numbers"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME "Ignore words with numbers"
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Check style"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\PowerPoint\Style Checker"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME TextOffPlaceholder
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Japanese Grammar: Check grammar as you type"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME "Background Jgrammar Checking"
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Japanese Grammar: Hide all grammatical errors"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME "Hide Jgrammar errors"
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+CATEGORY "Style Options..."
+KEYNAME "Software\Policies\Microsoft\Office\11.0\PowerPoint\Style Checker"
+CATEGORY "Case and End Punctuation"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\PowerPoint\Style Checker"
+POLICY "Check slide title case"
+	PART "Check slide title case" CHECKBOX
+	VALUENAME CheckTitleStyle
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Slide title case" DROPDOWNLIST
+	VALUENAME TitleCase
+	ITEMLIST
+		NAME	"Sentence case"	VALUE NUMERIC 1
+		NAME	"lowercase"	VALUE NUMERIC 2
+		NAME	"UPPERCASE"	VALUE	NUMERIC 3
+		NAME	"Title Case"	VALUE NUMERIC 4	DEFAULT
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Check body text case"
+	PART "Check body text case" CHECKBOX
+	VALUENAME CheckBodyStyle
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Body text case" DROPDOWNLIST
+	VALUENAME BodyCase
+	ITEMLIST
+		NAME	"Sentence case"	VALUE NUMERIC 1	DEFAULT
+		NAME	"lowercase"	VALUE NUMERIC 2
+		NAME	"UPPERCASE"	VALUE	NUMERIC 3
+		NAME	"Title Case"	VALUE NUMERIC 4
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Check slide title punctuation"
+	PART "Check slide title punctuation" CHECKBOX
+	VALUENAME CheckTitlePeriods
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Slide title punctuation" DROPDOWNLIST
+	VALUENAME TitlePeriods
+	ITEMLIST
+		NAME	"Paragraphs have punctuation"	VALUE NUMERIC 1	DEFAULT
+		NAME	"Paragraphs do not have punctuation"	VALUE NUMERIC 2
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Check body punctuation"
+	PART "Check body punctuation" CHECKBOX
+	VALUENAME CheckBodyPeriods
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Body punctuation" DROPDOWNLIST
+	VALUENAME BodyPeriods
+	ITEMLIST
+		NAME	"Paragraphs have punctuation"	VALUE NUMERIC 1	DEFAULT
+		NAME	"Paragraphs do not have punctuation"	VALUE NUMERIC 2
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Slide title end punctuation other than period"
+	PART "Slide title end punctuation other than period" EDITTEXT
+	VALUENAME TitleAddlPuncChr
+	END PART
+	END POLICY
+POLICY "Body text end punctuation other than period"
+	PART "Body text end punctuation other than period" EDITTEXT
+	VALUENAME BodyAddlPuncChr
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Visual Clarity"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\PowerPoint\Style Checker"
+POLICY "Check number of fonts"
+	PART "Check number of fonts" CHECKBOX
+	VALUENAME CheckMaxFontNum
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Number of fonts should not exceed" NUMERIC
+	VALUENAME MaxFontNum
+	SPIN 1
+	DEFAULT 3
+	MIN 1
+	MAX 100
+	END PART
+	END POLICY
+POLICY "Check title text size"
+	PART "Check title text size" CHECKBOX
+	VALUENAME CheckTitleMinFontSize
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Title text should be at least" DROPDOWNLIST
+	VALUENAME TitleMinFontSize
+	ITEMLIST
+		NAME	8	VALUE 8
+		NAME	9	VALUE 9
+		NAME	10	VALUE 10
+		NAME	11	VALUE 11
+		NAME	12	VALUE 12
+		NAME	14	VALUE 14
+		NAME	16	VALUE 16
+		NAME	18	VALUE 18
+		NAME	20	VALUE 20
+		NAME	22	VALUE 22
+		NAME	24	VALUE 24
+		NAME	26	VALUE 26
+		NAME	28	VALUE 28
+		NAME	36	VALUE 36	DEFAULT
+		NAME	48	VALUE 48
+		NAME	72	VALUE 72
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Check body text size"
+	PART "Check body text size" CHECKBOX
+	VALUENAME CheckBodyMinFontSize
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Body text should be at least" DROPDOWNLIST
+	VALUENAME BodyMinFontSize
+	ITEMLIST
+		NAME	8	VALUE 8
+		NAME	9	VALUE 9
+		NAME	10	VALUE 10
+		NAME	11	VALUE 11
+		NAME	12	VALUE 12
+		NAME	14	VALUE 14
+		NAME	16	VALUE 16
+		NAME	18	VALUE 18
+		NAME	20	VALUE 20	DEFAULT
+		NAME	22	VALUE 22
+		NAME	24	VALUE 24
+		NAME	26	VALUE 26
+		NAME	28	VALUE 28
+		NAME	36	VALUE 36
+		NAME	48	VALUE 48
+		NAME	72	VALUE 72
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Check number of bullets"
+	PART "Check number of bullets" CHECKBOX
+	VALUENAME CheckBulletsMaxBullets
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Number of bullets should not exceed" NUMERIC
+	VALUENAME BodyMaxBullets
+	SPIN 1
+	DEFAULT 6
+	MIN 1
+	MAX 100
+	END PART
+	END POLICY
+POLICY "Check number of lines per title"
+	PART "Check number of lines per title" CHECKBOX
+	VALUENAME CheckTitleMaxLines
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Number of lines per title should not exceed" NUMERIC
+	VALUENAME TitleMaxLines
+	SPIN 1
+	DEFAULT 2
+	MIN 1
+	MAX 100
+	END PART
+	END POLICY
+POLICY "Check number of lines per bullet"
+	PART "Check number of lines per bullet" CHECKBOX
+	VALUENAME CheckBulletsMaxLines
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Number of lines per bullet should not exceed" NUMERIC
+	VALUENAME BulletsMaxLines
+	SPIN 1
+	DEFAULT 2
+	MIN 1
+	MAX 100
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+END CATEGORY
+CATEGORY "Asian"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+POLICY "Convert font-associated text"
+	PART "Convert font-associated text" CHECKBOX
+	VALUENAME "Convert Font-Associated Text"
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "for" DROPDOWNLIST
+	VALUENAME "Language to Convert Font-Associated Text"
+	ITEMLIST
+		NAME	"Chinese (Simplified)"	VALUE NUMERIC	2052
+		NAME	"Chinese (Traditional)"	VALUE NUMERIC	1028	DEFAULT
+		NAME	"Korean"	VALUE NUMERIC	1042
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Tools | AutoCorrect Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+CATEGORY "AutoFormat as you type"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+POLICY "Replace straight quotes with smart quotes"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME SmartQuotes
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "AutoFit title text to placeholder"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME AutoFitTextTitle
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "AutoFit body text to placeholder"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME AutoFitTextBody
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Tools | Macro"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+CATEGORY "Security..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Security
+POLICY "Security Level"
+	PART "Security Level" DROPDOWNLIST
+	VALUENAME Level
+	ITEMLIST
+		NAME "Very High"	VALUE NUMERIC 4
+		NAME "High"		VALUE NUMERIC 3 DEFAULT
+		NAME "Medium"		VALUE NUMERIC 2
+		NAME "Low"		VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Trust all installed add-ins and templates"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME DontTrustInstalledFiles
+	VALUEON NUMERIC 0 ;reverse
+	VALUEOFF NUMERIC 1
+	END PART
+	END POLICY
+POLICY "Trust access to Visual Basic Project"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME AccessVBOM
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Slide Show | Online Broadcast | Set Up and Schedule..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast
+CATEGORY "Broadcast Settings"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast
+POLICY "Send audio"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME EnableAudio
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Send video"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME EnableVideo
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Camera/microphone is connected to another computer"
+	PART "Camera/microphone is connected to another computer" EDITTEXT
+	VALUENAME REXComputerName
+	END PART
+	END POLICY
+POLICY "Recording"
+	PART "Record the broadcast" CHECKBOX
+	VALUENAME Archive
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	PART "Save it in the following location:" EDITTEXT
+	VALUENAME ArchiveLoc
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+CATEGORY "Other Broadcast Settings"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast
+POLICY "Chat server URL"
+	PART "Chat server URL" EDITTEXT
+	VALUENAME ChatURL
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Chat file CAB"
+	PART "Chat file CAB" EDITTEXT
+	VALUENAME ChatFile
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Override default chat client"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME ChatFileExists
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Media Player ActiveX download"
+	PART "Media Player ActiveX download" EDITTEXT
+	VALUENAME NsCore
+	END PART
+	END POLICY
+POLICY "Transfer Control ActiveX download"
+	PART "Transfer Control ActiveX download" EDITTEXT
+	VALUENAME NsFile
+	END PART
+	END POLICY
+POLICY "Media Player non-ActiveX download"
+	PART "Media Player non-ActiveX download" EDITTEXT
+	VALUENAME NsPlay
+	END PART
+	END POLICY
+POLICY "Event URL"
+	PART "Event URL" EDITTEXT
+	VALUENAME BrowserLoc
+	END PART
+	END POLICY
+POLICY "Mail to"
+	PART "Mail to" EDITTEXT
+	VALUENAME MailTo
+	END PART
+	END POLICY
+POLICY "Help page URL"
+	PART "Help page URL" EDITTEXT
+	VALUENAME HelpURL
+	END PART
+	END POLICY
+POLICY "Video/audio test page URL"
+	PART "Video/audio test page URL" EDITTEXT
+	VALUENAME TestVideoURL
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Server Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast
+POLICY "Shared file location"
+	PART "Shared file location" EDITTEXT
+	VALUENAME FileServerLoc
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Local NetShow server on this LAN"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast\NetShow
+	PART "Local NetShow server on this LAN" EDITTEXT
+	VALUENAME ServerName
+	END PART
+	END POLICY
+POLICY "The server will access presentation files from"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast\NetShow
+	PART "The server will access presentation files from" EDITTEXT
+	VALUENAME NetShowFileLoc
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+CATEGORY "Other NetShow Settings"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast\NetShow
+POLICY "ConnectTimeout"
+	PART "ConnectTimeout" NUMERIC
+	VALUENAME ConnectTimeout
+	SPIN 10
+	DEFAULT 120
+	END PART
+	END POLICY
+POLICY "FECRedundancyRatio"
+	PART "FECRedundancyRatio" NUMERIC
+	VALUENAME FECRedundancyRatio
+	SPIN 1
+	DEFAULT 10
+	END PART
+	END POLICY
+POLICY "Netshow Server high bandwith"
+	PART "Netshow Server high bandwith" NUMERIC
+	VALUENAME FileTransferHiBandwidth
+	SPIN 10
+	DEFAULT 110
+	END PART
+	END POLICY
+POLICY "Netshow Server low bandwith"
+	PART "Netshow Server low bandwith" NUMERIC
+	VALUENAME FileTransferLowBandwidth
+	SPIN 10
+	DEFAULT 40
+	END PART
+	END POLICY
+POLICY "Multicast TTL"
+	PART "Multicast TTL" NUMERIC
+	VALUENAME MulticastTTL
+	SPIN 1
+	DEFAULT 5
+	MAX 255
+	END PART
+	END POLICY
+POLICY "Unicast rollover"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME UnicastRollover
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+POLICY "Location of audio ASD file"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast\NetShow\Options
+	PART "Location of audio ASD file" EDITTEXT
+	VALUENAME AudioAsd
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Location of video ASD file"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast\NetShow\Options
+	PART "Location of video ASD file" EDITTEXT
+	VALUENAME VideoAsd
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Contact address"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast\NetShow\Options
+	PART "Contact address" EDITTEXT
+	VALUENAME ContactAddress
+	END PART
+	END POLICY
+POLICY "Contact phone number"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast\NetShow\Options
+	PART "Contact phone number" EDITTEXT
+	VALUENAME ContactPhone
+	END PART
+	END POLICY
+POLICY "Copyright"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast\NetShow\Options
+	PART "Copyright" EDITTEXT
+	VALUENAME Copyright
+	END PART
+	END POLICY
+POLICY "Multicast address"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast\NetShow\Options
+	PART "Multicast address" EDITTEXT
+	VALUENAME MulticastAddress
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Read/write admin URL"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast\NetShow\Options
+	PART "Read/write admin URL" EDITTEXT
+	VALUENAME ReadWriteAdminURL
+	END PART
+	END POLICY
+POLICY "Read only admin URL"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast\NetShow\Options
+	PART "Read only admin URL" EDITTEXT
+	VALUENAME ReadonlyAdminURL
+	END PART
+	END POLICY
+POLICY "Drop dead time"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Broadcast\NetShow\Options
+	PART "Drop dead time" NUMERIC
+	VALUENAME DropDeadTime
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+END CATEGORY
+CATEGORY "Customizable error messages"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\Options
+POLICY "List of error messages to customize"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\CustomizableAlerts
+	PART "List of error messages to customize" LISTBOX
+	EXPLICITVALUE
+	END PART
+	PART "Enter error ID for Value Name and custom button text for Value" TEXT
+	END PART
+	ACTIONLISTON
+	VALUENAME PolicyOn VALUE NUMERIC 1
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME PolicyOn VALUE DELETE
+	END ACTIONLISTOFF
+	END POLICY
+END CATEGORY
+CATEGORY "New Presentation Links"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Powerpoint\New Presentation"
+POLICY "Custom Link #1"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Powerpoint\New Presentation\CustomPolicy1"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a presentation"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing presentation"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #2"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Powerpoint\New Presentation\CustomPolicy2"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a presentation"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing presentation"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #3"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Powerpoint\New Presentation\CustomPolicy3"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a presentation"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing presentation"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #4"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Powerpoint\New Presentation\CustomPolicy4"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a presentation"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing presentation"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #5"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Powerpoint\New Presentation\CustomPolicy5"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a presentation"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing presentation"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #6"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Powerpoint\New Presentation\CustomPolicy6"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a presentation"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing presentation"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #7"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Powerpoint\New Presentation\CustomPolicy7"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a presentation"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing presentation"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #8"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Powerpoint\New Presentation\CustomPolicy8"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a presentation"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing presentation"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #9"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Powerpoint\New Presentation\CustomPolicy9"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a presentation"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing presentation"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #10"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Powerpoint\New Presentation\CustomPolicy10"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a presentation"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing presentation"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Disable items in user interface"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\DisabledCmdBarItemsCheckBoxes
+CATEGORY "Predefined"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\DisabledCmdBarItemsCheckBoxes
+POLICY "Disable command bar buttons and menu items"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\DisabledCmdBarItemsCheckBoxes
+	PART "File | Open... | Tools | Search..." CHECKBOX
+	VALUENAME FileOpenToolsFind
+	VALUEON 5905
+	VALUEOFF 0
+	END PART
+	PART "File | Save as Web Page..." CHECKBOX
+	VALUENAME FileSaveAsWebPage
+	VALUEON 3823
+	VALUEOFF 0
+	ACTIONLISTON
+	VALUENAME FilePublishAsWebPage VALUE 3903
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME FilePublishAsWebPage VALUE DELETE
+	END ACTIONLISTOFF
+	END PART
+	PART "File | Web Page Preview" CHECKBOX
+	VALUENAME FileWebPagePreview
+	VALUEON 3655
+	VALUEOFF 0
+	END PART
+	PART "File | Send To | Mail Recipient" CHECKBOX
+	VALUENAME FileSendToMailRecipient
+	VALUEON 3738
+	VALUEOFF 0
+	END PART
+	PART "Insert | Hyperlink..." CHECKBOX
+	VALUENAME InsertHyperlink
+	VALUEON 1576
+	VALUEOFF 0
+	END PART
+	PART "Tools | Language..." CHECKBOX
+	VALUENAME ToolsLanguage
+	VALUEON 790
+	VALUEOFF 0
+	END PART
+	PART "Tools | Speech" CHECKBOX
+	VALUENAME ToolsSpeech
+	VALUEON 5764
+	VALUEOFF 0
+	END PART
+	PART "Tools | Online Collaboration" CHECKBOX
+	VALUENAME ToolsCollaboration
+	VALUEON 30468
+	VALUEOFF 0
+	END PART
+	PART "Tools | Tools on the Web..." CHECKBOX
+	VALUENAME ToolsontheWeb
+	VALUEON 7032
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro" CHECKBOX
+	VALUENAME ToolsMacro
+	VALUEON 30017
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Macros..." CHECKBOX
+	VALUENAME ToolsMacroMacros
+	VALUEON 186
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Record New Macro..." CHECKBOX
+	VALUENAME ToolsMacroRecord
+	VALUEON 184
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Security..." CHECKBOX
+	VALUENAME ToolsMacroSecurity
+	VALUEON 3627
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Visual Basic Editor" CHECKBOX
+	VALUENAME ToolsMacroVBE
+	VALUEON 1695
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Microsoft Script Editor" CHECKBOX
+	VALUENAME ToolsMacroWeb
+	VALUEON 3631
+	VALUEOFF 0
+	END PART
+	PART "Tools | Add-Ins..." CHECKBOX
+	VALUENAME ToolsAddins
+	VALUEON 943
+	VALUEOFF 0
+	END PART
+	PART "Tools | Customize..." CHECKBOX
+	VALUENAME ToolsCustomize
+	VALUEON 797
+	VALUEOFF 0
+	END PART
+	PART "Tools | Options..." CHECKBOX
+	VALUENAME ToolsOptions
+	VALUEON 522
+	VALUEOFF 0
+	ACTIONLISTON
+	VALUENAME WebOptions VALUE 4108
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME WebOptions VALUE DELETE
+	END ACTIONLISTOFF
+	END PART
+	PART "Help | Microsoft Office Online" CHECKBOX
+	VALUENAME HelpOfficeWeb
+	VALUEON 3775
+	VALUEOFF 0
+	END PART
+	PART "Help | Activate Product..." CHECKBOX
+	VALUENAME HelpRegistration
+	VALUEON 5933
+	VALUEOFF 0
+	END PART
+	PART "Help | Detect and Repair..." CHECKBOX
+	VALUENAME HelpRepair
+	VALUEON 3774
+	VALUEOFF 0
+	END PART
+	PART "Web | Refresh Current Page" CHECKBOX
+	VALUENAME WebRefreshCurrentPage
+	VALUEON 1020
+	VALUEOFF 0
+	END PART
+	PART "Web | Start Page" CHECKBOX
+	VALUENAME WebStartPage
+	VALUEON 1016
+	VALUEOFF 0
+	END PART
+	PART "Web | Search the Web" CHECKBOX
+	VALUENAME WebSearchTheWeb
+	VALUEON 1922
+	VALUEOFF 0
+	ACTIONLISTON
+	VALUENAME FileOpenSearchTheWeb VALUE 4087
+	END ACTIONLISTON
+	ACTIONLISTOFF
+	VALUENAME FileOpenSearchTheWeb VALUE DELETE
+	END ACTIONLISTOFF
+	END PART
+	PART "Web | Favorites" CHECKBOX
+	VALUENAME WebFavorites
+	VALUEON 30176
+	VALUEOFF 0
+	END PART
+	PART "Web | Go" CHECKBOX
+	VALUENAME WebGo
+	VALUEON 30328
+	VALUEOFF 0
+	END PART
+	PART "Web | Address" CHECKBOX
+	VALUENAME WebAddress
+	VALUEON 1740
+	VALUEOFF 0
+	END PART
+	ACTIONLISTOFF
+	VALUENAME WebOptions VALUE DELETE
+	VALUENAME FilePublishAsWebPage VALUE DELETE
+	VALUENAME FileOpenSearchTheWeb VALUE DELETE
+	END ACTIONLISTOFF
+	END POLICY
+POLICY "Disable shortcut keys"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\DisabledShortcutKeysCheckBoxes
+	PART "Ctrl+F (Find...)" CHECKBOX
+	VALUENAME Find 
+	VALUEON 70,8
+	VALUEOFF 0
+	END PART
+	PART "Ctrl+K (Insert | Hyperlink...)" CHECKBOX
+	VALUENAME InsertHyperlink
+	VALUEON 75,8
+	VALUEOFF 0
+	END PART
+	PART "Alt+F8 (Tools | Macro | Macros...)" CHECKBOX
+	VALUENAME ToolsMacroMacros
+	VALUEON 119,16
+	VALUEOFF 0
+	END PART
+	PART "Alt+F11 (Tools | Macro | Visual Basic Editor)" CHECKBOX
+	VALUENAME ToolsMacroVBE
+	VALUEON 122,16
+	VALUEOFF 0
+	END PART
+	PART "Alt+Shift+F11 (Tools | Macro | Microsoft Script Editor)" CHECKBOX
+	VALUENAME ToolsMacroWeb
+	VALUEON 122,20
+	VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Custom"
+KEYNAME Software\Policies\Microsoft\Office\11.0
+POLICY "Disable command bar buttons and menu items"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\DisabledCmdBarItemsList
+	PART "Enter a command bar ID to disable" LISTBOX
+	VALUEPREFIX TCID
+	END PART
+	END POLICY
+POLICY "Disable shortcut keys"
+KEYNAME Software\Policies\Microsoft\Office\11.0\PowerPoint\DisabledShortcutKeysList
+	PART "Enter a key and modifier to disable" LISTBOX
+	VALUEPREFIX KeyMod
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Miscellaneous"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\PowerPoint\Answer Wizard"
+POLICY "Custom Answer Wizard database path"
+	PART "Custom Answer Wizard database path" EDITTEXT
+	VALUENAME AdminDatabase
+	EXPANDABLETEXT
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+
+

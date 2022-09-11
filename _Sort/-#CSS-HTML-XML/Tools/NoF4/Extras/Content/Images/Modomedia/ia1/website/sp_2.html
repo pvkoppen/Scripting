@@ -1,0 +1,119 @@
+<HTML>
+<HEAD>
+<TITLE>IA1 - By Modomedia</TITLE>
+<SCRIPT LANGUAGE = "JavaScript">
+<!-- Hides script from non-compatible browsers
+
+
+       browserName = navigator.appName;
+       browserVer = parseInt(navigator.appVersion);
+            /*   if (top.frames.length > 1) {
+                        top.location="menu.html";
+                        } */
+
+               if (browserName == "Netscape" && browserVer >= 3) version ="n3";
+               else {version = "n2"};
+               if (navigator.appVersion.substring(0,3) == '4.0') {version="n3"};
+               if (version == "n3") {
+             
+
+              
+               nav1on = new Image;
+               nav1on.src = "images/p1_lit.gif";
+             
+               nav1off = new Image;
+               nav1off.src = "images/p1.gif";
+
+              
+               nav2on = new Image;
+               nav2on.src = "images/p2_lit.gif";
+             
+               nav2off = new Image;
+               nav2off.src = "images/p2.gif";
+
+              
+               nav3on = new Image;
+               nav3on.src = "images/p3_lit.gif";
+             
+               nav3off = new Image;
+               nav3off.src = "images/p3.gif";
+
+              
+               nav4on = new Image;
+               nav4on.src = "images/p4_lit.gif";
+             
+               nav4off = new Image;
+               nav4off.src = "images/p4.gif";
+
+
+              
+               nav7on = new Image;
+               nav7on.src = "images/p7_lit.gif";
+             
+               nav7off = new Image;
+               nav7off.src = "images/p7.gif";
+
+              
+               nav8on = new Image;
+               nav8on.src = "images/p8_lit.gif";
+             
+               nav8off = new Image;
+               nav8off.src = "images/p8.gif";
+
+               
+               nav9on = new Image;
+               nav9on.src = "images/p9_lit.gif";
+             
+               nav9off = new Image;
+               nav9off.src = "images/p9.gif";
+
+               
+                                                    
+            
+            
+             }
+
+       function img_act(imgName) {
+               if (version == "n3") {
+               imgOn = eval(imgName + "on.src");
+               document [imgName].src = imgOn;
+               }
+       }
+
+       function img_inact(imgName) {
+               if (version == "n3") {
+               imgOff = eval(imgName + "off.src");
+               document [imgName].src = imgOff;
+               }
+       }
+
+// End hide script -->
+
+
+</script>
+</HEAD>
+<body bgcolor="#094FA0" background="images/sidepanel.gif">
+
+
+<table border=0 cellpadding=0 cellspacing=0><tr><td>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td><A href="frameset.html" target="_top" onMouseover = "img_act('nav1'); window.status='Return to the top at any time'; return true;" " onMouseout = "img_inact('nav1'); window.status=''; return true;"><img border="0" SRC="images/p1.gif" width=121 height=70 name="nav1"></a></td></tr>
+<tr><td><A href="exit.html" target="screen" onMouseover = "img_act('nav2'); window.status='Close and Exit'; return true;" onMouseout= "img_inact('nav2'); window.status=''; return true;"><img border="0" SRC="images/p2.gif" width=121 height=51 name="nav2"></a></td></tr>
+<tr><td><A href="ds_browse.html" target="selector" onMouseover = "img_act('nav3');img_act('nav8'); window.status='View and Download images from this CD'; return true;" onMouseout= "img_inact('nav3');img_inact('nav8'); window.status=''; return true;"><img border="0" SRC="images/p3.gif" width=121 height=35 name="nav3"></a></td></tr>
+<tr><td><A href="exit.html" target="screen" onMouseover = "img_act('nav4');img_act('nav9'); window.status='Overview and Information about Modomedia'; return true;" onMouseout= "img_inact('nav4');img_inact('nav9'); window.status=''; return true;"><img border="0" SRC="images/p4.gif" width=121 height=59 name="nav4"></a></td></tr>
+<tr><td><img border="0" SRC="images/p5.gif" width=121 height=108></td></tr>
+</table>
+</td><td>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td><img border="0" SRC="images/p6.gif" width=105 height=35></td></tr>
+<tr><td><A href="ds_tips.html" target="selector" onMouseover = "img_act('nav7'); window.status='Hints and Examples to help you maximize this product'; return true;" onMouseout = "img_inact('nav7'); window.status=''; return true;"><img border="0" SRC="images/p7.gif" width=105 height=69 name="nav7"></a></td></tr>
+<tr><td><A href="ds_browse.html" target="selector" onMouseover = "img_act('nav3');img_act('nav8'); window.status='View and Download images from this CD'; return true;" onMouseout= "img_inact('nav3');img_inact('nav8'); window.status=''; return true;"><img border="0" SRC="images/p8.gif" width=105 height=52 name="nav8"></a></td></tr>
+<tr><td><A href="ds_about.html" target="selector" onMouseover = "img_act('nav4');img_act('nav9'); window.status='Overview and Information about Modomedia'; return true;" onMouseout= "img_inact('nav4');img_inact('nav9'); window.status=''; return true;"><img border="0" SRC="images/p9.gif" width=105 height=59 name="nav9"></a></td></tr>
+<tr><td><img border="0" SRC="images/p10.gif" width=105 height=108></td></tr>
+</table>
+
+</td><td><img SRC="images/p11.gif" width=39 height=323></td></tr></table>
+
+</BODY>
+</HTML>

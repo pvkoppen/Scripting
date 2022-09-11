@@ -1,0 +1,8 @@
+
+[GENERAL PARAMETERS]
+OVERWRITE = TRUE
+
+[partition1]
+type=6
+size=2000
+active=true

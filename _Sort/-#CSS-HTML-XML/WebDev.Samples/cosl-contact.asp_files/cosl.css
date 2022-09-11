@@ -1,0 +1,19 @@
+a:link { text-decoration: none }
+a:active { text-decoration: none }
+a:visited {text-decoration: none}
+a:hover { text-decoration: none }
+
+.title { color: #FFFFFF; font-size: 16px; font-family: Arial, Helvetica, sans-serif; font-weight: normal;  }
+
+.body { color: #FFFFFF; font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: normal;  }
+.bodytitle { color: #FFFFFF; font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: bold;  }
+
+.projectbody { color: #FFFFFF; line-height: 12px; font-size: 10px; font-family: Arial, Helvetica, sans-serif; font-weight: normal;  }
+.projectbodytitle { color: #FFFFFF; font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: bold;  }
+
+.nav { color: #FFFFFF; font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: bold;  }
+
+.pagebody { background: #000000; }
+
+.bodyform {background: #FF9933; border-width: 1px; color: #000000; font-size: 12px; font-family: Arial, Helvetica, sans-serif;}
+.bodyformbutton {width: 70; background: #DEDEDE; color: #000000; font-size: 11px; font-family: Arial, Helvetica, sans-serif;}

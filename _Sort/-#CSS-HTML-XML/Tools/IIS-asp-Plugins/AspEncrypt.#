@@ -1,0 +1,63 @@
+
+
+-----Oorspronkelijk bericht-----
+Van: sales@aspencrypt.com [mailto:sales@aspencrypt.com]
+Verzonden: maandag 4 februari 2002 10:10
+Aan: JLE@Alfa-college.nl
+Onderwerp: AspEncrypt Registration Code
+
+Dear Lemstra, Jan:
+
+Thank you for choosing AspEncrypt. Your registration key is
+
+52852-89824-96415
+
+This key needs to be installed in the system registry. You can use one of
+the following simple methods to do it:
+
+Method 1 (recommended): Attached to this message is a file with the
+extension .REG. It contains your registration key in the Registry Entries
+format. Simply click on the attachment and then select 'Open it' to import
+the registration key into the registry. A message should pop up saying,
+'Information in <filename.reg> has been successfully entered into the
+registry.'
+
+Method 2: Run regedit.exe. Manually create a new key RegKey underneath
+HKEY_LOCAL_MACHINE\SOFTWARE\Persits Software\AspEncrypt, and enter
+52852-89824-96415 as the default value for that key.
+
+Do not delete this message. You may need it in the future to install
+AspEncrypt upgrades.
+
+For technical support, please write to support@aspencrypt.com.
+
+Thanks again for choosing our product and we hope to serve you in the
+future.
+
+Persits Software, Inc. Development Team
+http://www.persits.com
+
+---------------------------------------------------------
+Persits Software Transaction Receipt
+---------------------------------------------------------
+Order Number: 815732354-0110
+Date: 2/4/2002 1:10:15 AM
+Product: AspEncrypt Single Server License
+Platform: Intel x86
+Price: US$249.00
+
+Buyer Information
+Company: Alfa-college
+Name: Lemstra, Jan
+Email: JLE@Alfa-college.nl
+Phone: +31(0)528-287658
+Address: Voltastraat 33
+City: Hoogeveen
+State/Province: Drenthe
+Zip/Postal: 7903AA
+Country: NL
+Credit Card: 541330202673XXXX
+Expires: 01/04
+AVS Code: S
+
+

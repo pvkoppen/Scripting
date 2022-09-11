@@ -1,0 +1,1 @@
+vssadmin create shadow /for=d: /autoretry=5 

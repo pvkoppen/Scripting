@@ -1,0 +1,60 @@
+
+==========================================
+Computer: RM5SRV13
+==========================================
+AdminPasswordStatus: 1
+AutomaticResetBootOption: True
+AutomaticResetCapability: True
+BootOptionOnLimit: 
+BootOptionOnWatchDog: 
+BootROMSupported: True
+BootupState: Normal boot
+Caption: RM5SRV13
+ChassisBootupState: 3
+CreationClassName: Win32_ComputerSystem
+CurrentTimeZone: 720
+DaylightInEffect: False
+Description: AT/AT COMPATIBLE
+DNSHostName: RM5SRV13
+Domain: WORKGROUP
+DomainRole: 2
+EnableDaylightSavingsTime: True
+FrontPanelResetStatus: 2
+InfraredSupported: False
+InitialLoadInfo: 
+
+KeyboardPasswordStatus: 2
+LastLoadInfo: 
+Manufacturer: Dell Inc.                
+Model: Dimension 8400               
+Name: RM5SRV13
+NameFormat: 
+NetworkServerModeEnabled: True
+NumberOfProcessors: 1
+OEMLogoBitmap: 
+OEMStringArray: www.dell.com
+PartOfDomain: False
+PauseAfterReset: -1
+PowerManagementCapabilities: 
+PowerManagementSupported: 
+PowerOnPasswordStatus: 1
+PowerState: 0
+PowerSupplyState: 3
+PrimaryOwnerContact: 
+PrimaryOwnerName: ACT
+ResetCapability: 1
+ResetCount: -1
+ResetLimit: -1
+Roles: LM_Workstation,LM_Server,NT,Server_NT,Backup_Browser,DFS
+Status: OK
+SupportContactDescription: 
+SystemStartupDelay: 30
+SystemStartupOptions: "Windows Server 2003, Enterprise" /fastdetect
+SystemStartupSetting: 0
+SystemType: X86-based PC
+ThermalState: 3
+TotalPhysicalMemory: 2145488896
+UserName: RM5SRV13\Administrator
+WakeUpType: 6
+Workgroup: 
+

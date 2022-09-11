@@ -1,0 +1,8 @@
+Command line parameters
+/l <Language ID>
+/S Hide Initial Dialog
+For silent mode use: /S /v/QN
+/V Parameters to MsiExec.exe
+/UA<Url to InstMsiA>
+/UW<Url to InstMsiW>
+/UM<Url to Msi Package>

@@ -1,0 +1,66 @@
+
+
+-----Oorspronkelijk bericht-----
+Van: Persits Software Sales [mailto:sales@persits.com]
+Verzonden: maandag 4 februari 2002 14:24
+Aan: Lemstra, Jan
+Onderwerp: AspUpload Single Server License Registration Key
+
+Dear Lemstra, Jan:
+
+Thank you for choosing AspUpload. Your registration key is
+
+02906-85759-96974
+
+This key needs to be installed in the system registry. You can use one of
+the following simple methods to do it:
+
+Method 1: Attached to this message is a file with the extension .REG. It
+contains your registration key in the Registry Entries format. Simply click
+on the attachment and then select 'Open it' to import the registration key
+into the registry. A message should pop up saying, 'Information in
+<filename.reg> has been successfully entered into the registry.'
+
+Method 2: Run AspUpload.exe setup program. When prompted for User
+Information, type this key in the Serial box.
+
+Method 3: Run regedit.exe. Manually create a new key RegKey underneath
+HKEY_LOCAL_MACHINE\SOFTWARE\Persits Software\AspUpload3, and enter
+02906-85759-96974 as the default value for that key.
+
+Do not delete this message. You may need it in the future to install
+AspUpload upgrades.
+
+For technical support, please write to support@persits.com.
+
+Thanks again for choosing our product and we hope to serve you in the
+future.
+
+Persits Software, Inc. Development Team
+http://www.persits.com
+
+---------------------------------------------------------
+Persits Software Transaction Receipt
+---------------------------------------------------------
+Order Number: 815732354-0057
+Date: 2/4/2002 12:58:00 AM
+Product: AspUpload Single Server License
+Platform: Intel/Windows
+Price: US$149.00
+
+Buyer Information
+Company: Alfa-college
+Name: Lemstra, Jan
+Email: JLE@Alfa-college.nl
+Phone: +31(0)528-287658
+Address: Voltastraat 33
+City: Hoogeveen
+State/Province: Drenthe
+Zip/Postal: 7903AA
+Country: nl
+Credit Card: 541330202673XXXX
+Expires: 01/04
+Approval Code: n/a
+Purchase Order:
+
+

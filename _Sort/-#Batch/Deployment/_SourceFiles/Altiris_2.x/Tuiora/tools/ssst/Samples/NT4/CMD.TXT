@@ -1,0 +1,10 @@
+C:\cpqbfile.exe
+delfile c:\UNATTEND.TXT
+delfile c:\cpqbfile.exe
+deldir C:\NTCSP
+deldir c:\$oem$
+deldir c:\i386
+deldir c:\drivers
+
+
+

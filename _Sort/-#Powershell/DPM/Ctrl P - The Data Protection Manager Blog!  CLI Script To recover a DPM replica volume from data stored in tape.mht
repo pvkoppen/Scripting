@@ -1,0 +1,3647 @@
+From: "Saved by Windows Internet Explorer 7"
+Subject: Ctrl P - The Data Protection Manager Blog! : CLI Script: To recover a DPM replica volume from data stored in tape
+Date: Fri, 17 Oct 2008 14:41:32 +1300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_01B5_01C93066.72E138D0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18049
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_01B5_01C93066.72E138D0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/dpm/archive/2008/06/18/cli-script-to-recover-a-dpm-replica-volume-from-data-stored-in-tape.aspx
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML lang=3Den xml:lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" =
+xmlns:o =3D=20
+"urn:schemas-microsoft-com:office:office"><HEAD><TITLE>Ctrl P - The Data =
+Protection Manager Blog! : CLI Script: To recover a DPM replica volume =
+from data stored in tape</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8">
+<META=20
+content=3D"Tips 'n Tricks,Powershell Scripts,DPM 2007,Tape =
+Media,Maintenance &amp; Troubleshooting,Disaster Recovery"=20
+name=3Dkeywords>
+<META=20
+content=3D"When a disaster occurs, and you lose your replica volume for =
+any datasource, you could re-seed the replica from the backed-up data =
+you have in tape. This little script initializes replica from a tape =
+recovery point. The parameters have to be customized"=20
+name=3Ddescription>
+<META content=3D"MSHTML 6.00.6001.18099" name=3DGENERATOR><LINK=20
+href=3D"http://blogs.technet.com/dpm/pingback.aspx" rel=3Dpingback><LINK =
+
+media=3Dscreen=20
+href=3D"http://blogs.technet.com/Themes/Blogs/marvin3/style/style.css"=20
+type=3Dtext/css rel=3Dstylesheet><LINK media=3Dprint=20
+href=3D"http://blogs.technet.com/Themes/Blogs/marvin3/style/print.css"=20
+type=3Dtext/css rel=3Dstylesheet><LINK media=3Dscreen=20
+href=3D"http://blogs.technet.com/Themes/Blogs/marvin3/style/red.css" =
+type=3Dtext/css=20
+rel=3Dstylesheet><LINK media=3Dscreen=20
+href=3D"http://blogs.technet.com/dpm/customcss.ashx" type=3Dtext/css=20
+rel=3Dstylesheet><LINK href=3D"/favicon.ico" type=3Dimage/ico=20
+rel=3D"shortcut icon"><LINK=20
+title=3D"Ctrl P - The Data Protection Manager Blog! (RSS 2.0)"=20
+href=3D"http://blogs.technet.com/dpm/rss.xml" type=3Dapplication/rss+xml =
+
+rel=3Dalternate><LINK=20
+title=3D"Ctrl P - The Data Protection Manager Blog! (Atom 1.0)"=20
+href=3D"http://blogs.technet.com/dpm/atom.xml" =
+type=3Dapplication/atom+xml=20
+rel=3Dalternate><LINK=20
+title=3D"CLI Script: To recover a DPM replica volume from data stored in =
+tape Comment RSS (RSS 2.0)"=20
+href=3D"http://blogs.technet.com/dpm/commentrss.aspx?PostID=3D3073625"=20
+type=3Dapplication/rss+xml rel=3Dalternate>
+<SCRIPT =
+src=3D"http://blogs.technet.com/Utility/global.js?Version=3D2.1.61025.2" =
+
+type=3Dtext/javascript></SCRIPT>
+</HEAD>
+<BODY>
+<FORM id=3DaspnetForm name=3DaspnetForm=20
+action=3D/dpm/archive/2008/06/18/cli-script-to-recover-a-dpm-replica-volu=
+me-from-data-stored-in-tape.aspx=20
+method=3Dpost>
+<DIV><INPUT id=3D__EVENTTARGET type=3Dhidden name=3D__EVENTTARGET> =
+<INPUT=20
+id=3D__EVENTARGUMENT type=3Dhidden name=3D__EVENTARGUMENT> <INPUT =
+id=3D__VIEWSTATE=20
+type=3Dhidden=20
+value=3D/wEPDwUKLTMyNjg0MDc1MWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tle=
+V9fFgEFJGN0bDAwJF8kY3RsMDAkXyRiczEkXyR3cyRfJFNlYXJjaEJveK+MuGaxoZvO4xI7by=
+A887OvUqUR=20
+name=3D__VIEWSTATE> </DIV>
+<SCRIPT type=3Dtext/javascript>
+//<![CDATA[
+var theForm =3D document.forms['aspnetForm'];
+if (!theForm) {
+    theForm =3D document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() !=3D false)) {
+        theForm.__EVENTTARGET.value =3D eventTarget;
+        theForm.__EVENTARGUMENT.value =3D eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</SCRIPT>
+
+<SCRIPT language=3Djavascript=20
+src=3D"http://blogs.technet.com/Utility/telligent_web_ui/1_0_3/Telligent_=
+Modal.js"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT language=3Djavascript type=3Dtext/javascript>=0A=
+// <![CDATA[=0A=
+Telligent_Modal.Configure('/utility/loading.htm',['Modal'],['ModalTitle']=
+,['ModalClose'],['ModalContent'],['ModalFooter'],['ModalResize'],['ModalM=
+ask'],100);=0A=
+// ]]>=0A=
+</SCRIPT>
+
+<DIV id=3Dmasthead>
+<DIV id=3Dwelcome align=3Dright>Welcome to TechNet Blogs <A=20
+id=3Dctl00___ctl00___duw1_ac1___Login=20
+href=3D"http://blogs.technet.com/login.aspx?ReturnUrl=3D%2fdpm%2farchive%=
+2f2008%2f06%2f18%2fcli-script-to-recover-a-dpm-replica-volume-from-data-s=
+tored-in-tape.aspx">Sign=20
+in</A> | <A id=3Dctl00___ctl00___duw1_ac1___Register=20
+href=3D"http://blogs.technet.com/user/CreateUser.aspx?ReturnUrl=3D/dpm/ar=
+chive/2008/06/18/cli-script-to-recover-a-dpm-replica-volume-from-data-sto=
+red-in-tape.aspx">Join</A>=20
+| <A id=3Dctl00___ctl00___duw1_Faq1=20
+href=3D"http://blogs.technet.com/languages/en-US/docs/faq.aspx">Help</A> =
+
+</DIV></DIV>
+<DIV id=3Dwrapper>
+<DIV id=3Dcontainer>
+<DIV id=3Dheader>
+<DIV id=3Dtitle>
+<H1><A class=3Dheadermaintitle id=3Dctl00___ctl00___bth___BlogTitle=20
+href=3D"http://blogs.technet.com/dpm/default.aspx">Ctrl P - The Data =
+Protection=20
+Manager Blog!</A></H1>
+<P id=3Dtagline></P></DIV></DIV>
+<DIV id=3Dcontentwrapper>
+<DIV id=3Dsidebar-a>
+<DIV id=3DBlogLinksSideBar>
+<DIV id=3DWeblogLinks>
+<H3>This Blog</H3>
+<UL></UL></DIV></DIV>
+<DIV id=3DTasksSideBar></DIV>
+<DIV id=3DSubscriptionsSideBar>
+<DIV id=3DSubscriptions>
+<H3>Syndication</H3>
+<UL>
+  <LI><A id=3Dctl00___ctl00___bs1___bs___rss=20
+  href=3D"http://blogs.technet.com/dpm/rss.xml">RSS 2.0</A>=20
+  <LI><A id=3Dctl00___ctl00___bs1___bs___atom=20
+  href=3D"http://blogs.technet.com/dpm/atom.xml">Atom 1.0</A> =
+</LI></UL></DIV></DIV>
+<DIV id=3DSearchSideBar>
+<DIV id=3DSearch>
+<H3>Search</H3>
+<UL>
+  <LI><INPUT class=3DsearchBox id=3Dctl00___ctl00___bs1___ws___SearchBox =
+
+  =
+onkeydown=3DKeyDownHandlerctl00___ctl00___bs1___ws___SearchButton(event);=
+=20
+  name=3Dctl00$_$ctl00$_$bs1$_$ws$_$SearchBox> <A=20
+  id=3Dctl00___ctl00___bs1___ws___SearchButton=20
+  =
+href=3D"javascript:__doPostBack('ctl00$_$ctl00$_$bs1$_$ws$_$SearchButton'=
+,'')">Go</A>=20
+  </LI></UL></DIV></DIV>
+<DIV id=3DNewsSideBar>
+<H3>News</H3>
+<DIV id=3Dnews><FONT size=3D-4>This posting is provided "AS IS" with no =
+warranties,=20
+and confers no rights. Use of included script samples are subject to the =
+terms=20
+specified in the <A =
+href=3D"http://www.microsoft.com/info/cpyright.htm">Terms of=20
+Use</A>. </FONT>
+<SCRIPT src=3D"http://embed.technorati.com/embed/qe6ceshc2v.js"=20
+type=3Dtext/javascript></SCRIPT>
+<!-- Start of StatCounter Code -->
+<SCRIPT type=3Dtext/javascript>
+sc_project=3D3794876;=20
+sc_invisible=3D1;=20
+sc_partition=3D40;=20
+sc_security=3D"e901fd8a";=20
+</SCRIPT>
+
+<SCRIPT src=3D"http://www.statcounter.com/counter/counter_xhtml.js"=20
+type=3Dtext/javascript></SCRIPT>
+<NOSCRIPT>
+<DIV class=3Dstatcounter><A href=3D"http://www.statcounter.com/" =
+target=3D_blank><IMG=20
+class=3Dstatcounter alt=3D"web page hit counter"=20
+src=3D"http://c41.statcounter.com/3794876/0/e901fd8a/1/"></A></DIV></NOSC=
+RIPT><!-- End of StatCounter Code --></DIV></DIV>
+<DIV id=3DLinkSideBar>
+<H3>DPM Blogs</H3>
+<UL>
+  <LI><A =
+id=3Dctl00___ctl00___bs1___lcl___Categories_ctl00_Links_ctl03_Link=20
+  title=3D"Jason Buffington / DPM Product Manager's blog"=20
+  href=3D"http://blogs.technet.com/jbuff">All Backed Up</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs1___lcl___Categories_ctl00_Links_ctl04_Link=20
+  title=3D"System Center - our management family's blog"=20
+  href=3D"http://blogs.technet.com/systemcenter">System Center blog</A> =
+</LI></UL>
+<H3>Important DPM Links</H3>
+<UL>
+  <LI><A =
+id=3Dctl00___ctl00___bs1___lcl___Categories_ctl01_Links_ctl01_Link=20
+  title=3D"Your best source of information on DPM 2007"=20
+  =
+href=3D"http://www.microsoft.com/windowsserversystem/dpm/default.mspx">Of=
+ficial=20
+  DPM Site</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs1___lcl___Categories_ctl01_Links_ctl02_Link=20
+  href=3D"http://technet.microsoft.com/en-us/dpm/default.aspx">DPM on =
+TechNet</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs1___lcl___Categories_ctl01_Links_ctl03_Link=20
+  title=3D"find DPM blog posts, MVPs and other useful resources"=20
+  =
+href=3D"http://www.microsoft.com/windowsserversystem/dpm/community/defaul=
+t.mspx">DPM=20
+  Community</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs1___lcl___Categories_ctl01_Links_ctl04_Link=20
+  title=3D"post your questions and get answers from other DPM users -- =
+and other experts"=20
+  =
+href=3D"http://www.microsoft.com/technet/community/newsgroups/dgbrowser/e=
+n-us/default.mspx?dg=3Dmicrosoft.public.dataprotectionmanager&amp;lang=3D=
+en&amp;cr=3DUS">DPM=20
+  Newsgroup</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs1___lcl___Categories_ctl01_Links_ctl05_Link=20
+  title=3D"120-day eval of DPM2007 ... plus other goodies"=20
+  href=3D"http://technet.microsoft.com/en-us/dpm/bb847848.aspx">DPM =
+Downloads and=20
+  Trial software</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs1___lcl___Categories_ctl01_Links_ctl06_Link=20
+  =
+href=3D"http://www.microsoft.com/technet/prodtechnol/dpm/proddocs/faq.msp=
+x">DPM=20
+  FAQ</A> </LI></UL></DIV></DIV>
+<DIV id=3Dsidebar-b>
+<DIV id=3DTagSideBar>
+<H3>Tags</H3>
+<UL>
+  <UL class=3DSidebarTagCloud>
+    <LI class=3DTag3><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Application+Protection/=
+default.aspx"=20
+    rel=3Dtag>Application Protection</A>=20
+    <LI class=3DTag4><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Behind+the+Scenes/defau=
+lt.aspx"=20
+    rel=3Dtag>Behind the Scenes</A>=20
+    <LI class=3DTag6><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Community/default.aspx"=
+=20
+    rel=3Dtag>Community</A>=20
+    <LI class=3DTag6><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Customer+success+storie=
+s/default.aspx"=20
+    rel=3Dtag>Customer success stories</A>=20
+    <LI class=3DTag6><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Disaster+Recovery/defau=
+lt.aspx"=20
+    rel=3Dtag>Disaster Recovery</A>=20
+    <LI class=3DTag4><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/DPM+2006+_2800_v1_2900_=
+/default.aspx"=20
+    rel=3Dtag>DPM 2006 (v1)</A>=20
+    <LI class=3DTag1><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/DPM+2007/default.aspx" =
+
+    rel=3Dtag>DPM 2007</A>=20
+    <LI class=3DTag4><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Exchange+Server/default=
+.aspx"=20
+    rel=3Dtag>Exchange Server</A>=20
+    <LI class=3DTag4><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Feedback+Zone/default.a=
+spx"=20
+    rel=3Dtag>Feedback Zone</A>=20
+    <LI class=3DTag4><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Hotfix/default.aspx"=20
+    rel=3Dtag>Hotfix</A>=20
+    <LI class=3DTag4><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/How+does+it+work/defaul=
+t.aspx"=20
+    rel=3Dtag>How does it work</A>=20
+    <LI class=3DTag3><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Maintenance+_2600_amp_3=
+B00_+Troubleshooting/default.aspx"=20
+    rel=3Dtag>Maintenance &amp; Troubleshooting</A>=20
+    <LI class=3DTag6><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Microsoft+Partners/defa=
+ult.aspx"=20
+    rel=3Dtag>Microsoft Partners</A>=20
+    <LI class=3DTag2><A=20
+    href=3D"http://blogs.technet.com/dpm/archive/tags/news/default.aspx" =
+
+    rel=3Dtag>news</A>=20
+    <LI class=3DTag5><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Others/default.aspx"=20
+    rel=3Dtag>Others</A>=20
+    <LI class=3DTag1><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Powershell+Scripts/defa=
+ult.aspx"=20
+    rel=3Dtag>Powershell Scripts</A>=20
+    <LI class=3DTag3><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Setup+_2600_amp_3B00_+C=
+onfiguration/default.aspx"=20
+    rel=3Dtag>Setup &amp; Configuration</A>=20
+    <LI class=3DTag6><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/SharePoint/default.aspx=
+"=20
+    rel=3Dtag>SharePoint</A>=20
+    <LI class=3DTag2><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/SQL+Server/default.aspx=
+"=20
+    rel=3Dtag>SQL Server</A>=20
+    <LI class=3DTag5><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/System+Center/default.a=
+spx"=20
+    rel=3Dtag>System Center</A>=20
+    <LI class=3DTag1><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/System+Center+Data+Prot=
+ection+Manager/default.aspx"=20
+    rel=3Dtag>System Center Data Protection Manager</A>=20
+    <LI class=3DTag4><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Tape+Media/default.aspx=
+"=20
+    rel=3Dtag>Tape Media</A>=20
+    <LI class=3DTag2><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/The+Team/default.aspx" =
+
+    rel=3Dtag>The Team</A>=20
+    <LI class=3DTag1><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Tips+_2700_n+Tricks/def=
+ault.aspx"=20
+    rel=3Dtag>Tips 'n Tricks</A>=20
+    <LI class=3DTag3><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Video/default.aspx"=20
+    rel=3Dtag>Video</A>=20
+    <LI class=3DTag6><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Virtualization/default.=
+aspx"=20
+    rel=3Dtag>Virtualization</A>=20
+    <LI class=3DTag6><A=20
+    =
+href=3D"http://blogs.technet.com/dpm/archive/tags/Windows+Server+2008/def=
+ault.aspx"=20
+    rel=3Dtag>Windows Server 2008</A> </LI></UL></UL></DIV>
+<DIV id=3DRecentPostsSideBar>
+<H3>Recent Posts</H3>
+<UL>
+  <LI><A id=3Dctl00___ctl00___rp___PostList_ctl01_Link=20
+  =
+href=3D"http://blogs.technet.com/dpm/archive/2008/10/16/technet-radio-tot=
+al-wine-success-story-with-system-center.aspx">TechNet=20
+  Radio -- Total Wine success story with System Center</A>=20
+  <LI><A id=3Dctl00___ctl00___rp___PostList_ctl02_Link=20
+  =
+href=3D"http://blogs.technet.com/dpm/archive/2008/09/26/how-to-protect-sq=
+l-server-with-dpm-2007-new-technet-webcast-starting-soon.aspx">How=20
+  to protect SQL SERVER with DPM 2007 -- new Technet Webcast starting =
+soon</A>=20
+  <LI><A id=3Dctl00___ctl00___rp___PostList_ctl03_Link=20
+  =
+href=3D"http://blogs.technet.com/dpm/archive/2008/08/12/video-technical-i=
+ntroduction-of-dpm2007-from-tech-ed-2008-us.aspx">Video=20
+  - Technical Introduction of DPM2007 ... from Tech-Ed 2008 US</A>=20
+  <LI><A id=3Dctl00___ctl00___rp___PostList_ctl04_Link=20
+  =
+href=3D"http://blogs.technet.com/dpm/archive/2008/07/11/known-issues-and-=
+recommended-solutions-on-secondary-protection-disaster-recovery.aspx">Kno=
+wn=20
+  Issues and recommended solutions on Secondary Protection (Disaster=20
+  Recovery)</A>=20
+  <LI><A id=3Dctl00___ctl00___rp___PostList_ctl05_Link=20
+  =
+href=3D"http://blogs.technet.com/dpm/archive/2008/07/06/enabling-disablin=
+g-co-location-of-data-on-tape.aspx">Enabling/Disabling=20
+  co-location of data on Tape</A> </LI></UL></DIV>
+<DIV id=3DArchiveSideBar>
+<H3>Archives</H3>
+<UL>
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2008/10.aspx">October 2008=20
+  (1)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2008/09.aspx">September =
+2008=20
+  (1)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2008/08.aspx">August 2008=20
+  (1)</A>=20
+  <LI><A href=3D"http://blogs.technet.com/dpm/archive/2008/07.aspx">July =
+2008=20
+  (3)</A>=20
+  <LI><A href=3D"http://blogs.technet.com/dpm/archive/2008/06.aspx">June =
+2008=20
+  (12)</A>=20
+  <LI><A href=3D"http://blogs.technet.com/dpm/archive/2008/05.aspx">May =
+2008=20
+  (3)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2008/04.aspx">April 2008=20
+  (3)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2008/03.aspx">March 2008=20
+  (8)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2008/01.aspx">January 2008=20
+  (7)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2007/12.aspx">December 2007 =
+
+  (2)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2007/11.aspx">November 2007 =
+
+  (2)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2007/10.aspx">October 2007=20
+  (3)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2007/09.aspx">September =
+2007=20
+  (6)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2007/08.aspx">August 2007=20
+  (3)</A>=20
+  <LI><A href=3D"http://blogs.technet.com/dpm/archive/2007/07.aspx">July =
+2007=20
+  (6)</A>=20
+  <LI><A href=3D"http://blogs.technet.com/dpm/archive/2007/06.aspx">June =
+2007=20
+  (4)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2007/01.aspx">January 2007=20
+  (3)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2006/10.aspx">October 2006=20
+  (2)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2006/09.aspx">September =
+2006=20
+  (2)</A>=20
+  <LI><A href=3D"http://blogs.technet.com/dpm/archive/2006/06.aspx">June =
+2006=20
+  (2)</A>=20
+  <LI><A href=3D"http://blogs.technet.com/dpm/archive/2006/05.aspx">May =
+2006=20
+  (4)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2006/03.aspx">March 2006=20
+  (5)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2006/02.aspx">February 2006 =
+
+  (1)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2006/01.aspx">January 2006=20
+  (2)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/dpm/archive/2005/12.aspx">December 2005 =
+
+  (1)</A> </LI></UL></DIV></DIV>
+<DIV id=3Dcontent>
+<DIV id=3Dcontent2><BR>
+<DIV class=3Dpost>
+<DIV class=3Dpostsub>
+<H2>CLI Script: To recover a DPM replica volume from data stored in =
+tape</H2>
+<P class=3DMsoNormal style=3D"MARGIN: 0in 0in 0pt"><SPAN=20
+style=3D"mso-bidi-font-family: 'Times New Roman'; mso-ascii-theme-font: =
+minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: =
+minor-bidi; mso-ascii-font-family: Calibri; mso-hansi-font-family: =
+Calibri"><FONT=20
+size=3D3><FONT face=3DCalibri>When a disaster occurs, and you lose your =
+replica=20
+volume for any datasource, you could re-seed the replica from the =
+backed-up data=20
+you have in tape. This little script initializes replica from a tape =
+recovery=20
+point. The parameters have to be customized for your environment first =
+as given=20
+below.<SPAN style=3D"mso-spacerun: yes">&nbsp;=20
+</SPAN><o:p></o:p></FONT></FONT></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0in 0in 0pt"><SPAN=20
+style=3D"mso-bidi-font-family: 'Times New Roman'; mso-ascii-theme-font: =
+minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: =
+minor-bidi; mso-ascii-font-family: Calibri; mso-hansi-font-family: =
+Calibri"><FONT=20
+size=3D3><FONT face=3DCalibri>Save the attached file as a .ps1 file and =
+invoke=20
+through the DPM Management Shell.</FONT></FONT></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0in 0in 0pt"><SPAN=20
+style=3D"mso-bidi-font-family: 'Times New Roman'; mso-ascii-theme-font: =
+minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: =
+minor-bidi; mso-ascii-font-family: Calibri; mso-hansi-font-family: =
+Calibri"><FONT=20
+face=3DCalibri size=3D3></FONT></SPAN>&nbsp;</P>
+<P class=3DMsoNormal style=3D"MARGIN: 0in 0in 0pt"><SPAN=20
+style=3D"mso-bidi-font-family: 'Times New Roman'; mso-ascii-theme-font: =
+minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: =
+minor-bidi; mso-ascii-font-family: Calibri; mso-hansi-font-family: =
+Calibri"><FONT=20
+face=3DCalibri size=3D3>- <A class=3D""=20
+href=3D"http://blogs.technet.com/dpm/pages/madhan-s-bio.aspx" =
+target=3D_blank=20
+mce_href=3D"http://blogs.technet.com/dpm/pages/madhan-s-bio.aspx">Madhan =
+
+S</A></FONT></SPAN></P>
+<DIV class=3Dpostfoot>Published Wednesday, June 18, 2008 6:39 PM by <A=20
+id=3Dctl00___ctl00___ctl01___Entry___AuthorLink=20
+href=3D"http://blogs.technet.com/user/Profile.aspx?UserID=3D5724">dpm</A>=
+=20
+<DIV><SPAN =
+id=3Dctl00___ctl00___ctl01___Entry___InlineTagEditorPanel>Filed under:=20
+<A=20
+href=3D"http://blogs.technet.com/dpm/archive/tags/Tips+_2700_n+Tricks/def=
+ault.aspx"=20
+rel=3Dtag>Tips 'n Tricks</A>, <A=20
+href=3D"http://blogs.technet.com/dpm/archive/tags/Powershell+Scripts/defa=
+ult.aspx"=20
+rel=3Dtag>Powershell Scripts</A>, <A=20
+href=3D"http://blogs.technet.com/dpm/archive/tags/DPM+2007/default.aspx" =
+
+rel=3Dtag>DPM 2007</A>, <A=20
+href=3D"http://blogs.technet.com/dpm/archive/tags/Tape+Media/default.aspx=
+"=20
+rel=3Dtag>Tape Media</A>, <A=20
+href=3D"http://blogs.technet.com/dpm/archive/tags/Maintenance+_2600_amp_3=
+B00_+Troubleshooting/default.aspx"=20
+rel=3Dtag>Maintenance &amp; Troubleshooting</A>, <A=20
+href=3D"http://blogs.technet.com/dpm/archive/tags/Disaster+Recovery/defau=
+lt.aspx"=20
+rel=3Dtag>Disaster Recovery</A></SPAN><INPUT=20
+id=3Dctl00___ctl00___ctl01___Entry___InlineTagEditorPanel_State =
+type=3Dhidden=20
+value=3Dnochange=20
+name=3Dctl00$_$ctl00$_$ctl01$_$Entry$_$InlineTagEditorPanel></DIV><BR><B>=
+Attachment(s):=20
+</B><A id=3Dctl00___ctl00___ctl01___Entry___Attachment___DownLoadLink=20
+href=3D"http://blogs.technet.com/dpm/attachment/3073625.ashx">RecoverRepl=
+icaFromTape.ps1</A>=20
+</DIV></DIV></DIV>
+<H3>Comments </H3>
+<DIV id=3Dcomments>
+<DIV class=3Dcomment>
+<DIV class=3Dcommentssubhead><SPAN class=3Dcommentspan></SPAN>Wednesday, =
+June 18,=20
+2008 8:21 PM by <A =
+id=3Dctl00___ctl00___ctl01___Comments___Comments_ctl00_NameLink=20
+title=3Dleandroamore=20
+href=3D"http://blogs.technet.com/user/Profile.aspx?UserID=3D36838"=20
+target=3D_blank>leandroamore</A> </DIV>
+<H4><A id=3Dctl00___ctl00___ctl01___Comments___Comments_ctl00_PermaLink=20
+title=3Dpermalink=20
+href=3D"http://blogs.technet.com/dpm/archive/2008/06/18/cli-script-to-rec=
+over-a-dpm-replica-volume-from-data-stored-in-tape.aspx#3074010">#</A>=20
+<SPAN>re: CLI Script: To recover a DPM replica volume from data stored =
+in tape<A=20
+name=3D3074010></A></SPAN> </H4>
+<DIV class=3Dcommentsbody>
+<P>is there any way to resync my replica volume in case i lost my OS in =
+a=20
+disaster but I have the DPM database backed up and the replica =
+volume?</P>
+<P>thanks</P></DIV></DIV>
+<DIV class=3Daltcommentowner>
+<DIV class=3Dcommentssubhead><SPAN class=3Dcommentspan></SPAN>Friday, =
+June 20, 2008=20
+4:03 AM by <A =
+id=3Dctl00___ctl00___ctl01___Comments___Comments_ctl01_NameLink=20
+title=3Ddpm =
+href=3D"http://blogs.technet.com/user/Profile.aspx?UserID=3D5724"=20
+target=3D_blank>dpm</A> </DIV>
+<H4><A id=3Dctl00___ctl00___ctl01___Comments___Comments_ctl01_PermaLink=20
+title=3Dpermalink=20
+href=3D"http://blogs.technet.com/dpm/archive/2008/06/18/cli-script-to-rec=
+over-a-dpm-replica-volume-from-data-stored-in-tape.aspx#3074885">#</A>=20
+<SPAN>re: CLI Script: To recover a DPM replica volume from data stored =
+in tape<A=20
+name=3D3074885></A></SPAN> </H4>
+<DIV class=3Dcommentsbody>
+<P>Yes! That is possible, and you can find information under "Disaster =
+Recovery"=20
+and "How to manually load the replica" sections in the &nbsp;online=20
+documentation found. </P></DIV></DIV>
+<DIV class=3Dcomment>
+<DIV class=3Dcommentssubhead><SPAN class=3Dcommentspan></SPAN>Monday, =
+June 30, 2008=20
+10:36 AM by <A =
+id=3Dctl00___ctl00___ctl01___Comments___Comments_ctl02_NameLink=20
+title=3Djafo06 =
+href=3D"http://blogs.technet.com/user/Profile.aspx?UserID=3D37477"=20
+target=3D_blank>jafo06</A> </DIV>
+<H4><A id=3Dctl00___ctl00___ctl01___Comments___Comments_ctl02_PermaLink=20
+title=3Dpermalink=20
+href=3D"http://blogs.technet.com/dpm/archive/2008/06/18/cli-script-to-rec=
+over-a-dpm-replica-volume-from-data-stored-in-tape.aspx#3080916">#</A>=20
+<SPAN>re: CLI Script: To recover a DPM replica volume from data stored =
+in tape<A=20
+name=3D3080916></A></SPAN> </H4>
+<DIV class=3Dcommentsbody>
+<P>for the $dsname, what should we use if we have it stored on a san =
+without a=20
+drive letter?</P></DIV></DIV>
+<DIV class=3Daltcomment>
+<DIV class=3Dcommentssubhead><SPAN class=3Dcommentspan></SPAN>Friday, =
+October 03,=20
+2008 6:19 AM by <A =
+id=3Dctl00___ctl00___ctl01___Comments___Comments_ctl03_NameLink=20
+title=3Ddpmlearner =
+href=3D"http://blogs.technet.com/user/Profile.aspx?UserID=3D43156"=20
+target=3D_blank>dpmlearner</A> </DIV>
+<H4><A id=3Dctl00___ctl00___ctl01___Comments___Comments_ctl03_PermaLink=20
+title=3Dpermalink=20
+href=3D"http://blogs.technet.com/dpm/archive/2008/06/18/cli-script-to-rec=
+over-a-dpm-replica-volume-from-data-stored-in-tape.aspx#3131828">#</A>=20
+<SPAN>re: CLI Script: To recover a DPM replica volume from data stored =
+in tape<A=20
+name=3D3131828></A></SPAN> </H4>
+<DIV class=3Dcommentsbody>
+<P>Hello,</P>
+<P>Is there any method to go for disk to disk to disk to tape? I have =
+heard=20
+about this in a video but was not able to find any details about it.</P>
+<P>Thanks</P></DIV></DIV></DIV><EM>Anonymous comments are disabled</EM>=20
+</DIV></DIV>
+<DIV id=3Dcontentfooter>&nbsp;</DIV></DIV>
+<DIV id=3Dfooter>
+<DIV>=C2=A9 2008 Microsoft Corporation. All rights reserved. <A=20
+href=3D"http://www.microsoft.com/info/cpyright.mspx">Terms of Use</A>=20
+&nbsp;|&nbsp; <A=20
+href=3D"http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.msp=
+x">Trademarks</A>=20
+&nbsp;|&nbsp; <A =
+href=3D"http://privacy.microsoft.com/en-us/default.aspx">Privacy=20
+Statement</A> </DIV></DIV></DIV></DIV>
+<SCRIPT language=3Djavascript type=3Dtext/javascript>=0A=
+<!--=0A=
+function KeyDownHandlerctl00___ctl00___bs1___ws___SearchButton(event)=0A=
+{=0A=
+	if (event.keyCode =3D=3D 13)=0A=
+	{=0A=
+		event.returnValue =3D false;=0A=
+		event.cancel =3D true;=0A=
+     __doPostBack('ctl00$_$ctl00$_$bs1$_$ws$_$SearchButton','')	}=0A=
+}=0A=
+=0A=
+//-->=0A=
+</SCRIPT>
+<!--
+<rdf:RDF xmlns:rdf=3D"http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc=3D"http://purl.org/dc/elements/1.1/"=0A=
+xmlns:trackback=3D"http://madskills.com/public/xml/rss/module/trackback/"=
+>
+<rdf:Description
+rdf:about=3D"http://blogs.technet.com/dpm/archive/2008/06/18/cli-script-t=
+o-recover-a-dpm-replica-volume-from-data-stored-in-tape.aspx"
+dc:identifier=3D"http://blogs.technet.com/dpm/archive/2008/06/18/cli-scri=
+pt-to-recover-a-dpm-replica-volume-from-data-stored-in-tape.aspx"
+dc:title=3D"CLI Script: To recover a DPM replica volume from data stored =
+in tape"
+trackback:ping=3D"http://blogs.technet.com/dpm/trackback.aspx?PostID=3D30=
+73625" />
+</rdf:RDF>
+--></FORM><!-- WT MT Inline v.2.0 -->
+<SCRIPT type=3Dtext/javascript>
+var gTrackEvents=3D0;
+var gDomain=3D"m.webtrends.com";
+var gDcsId=3D"dcs8zd2bz00000w0adote0s3l_1d8j";
+var gFpc=3D"WT_FPC";
+if(document.cookie.indexOf(gFpc+"=3D")=3D=3D-1){document.write("<SCR"+"IP=
+T TYPE=3D'text/javascript' =
+SRC=3D'"+"http"+(window.location.protocol.indexOf('https:')=3D=3D0?'s':''=
+)+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/SCR"+"IPT>");}
+</SCRIPT>
+
+<SCRIPT src=3D"http://blogs.technet.com/wt.js" =
+type=3Dtext/javascript></SCRIPT>
+<NOSCRIPT><IMG id=3DDCSIMG height=3D1 alt=3D""=20
+src=3D"http://m.webtrends.com/dcs8zd2bz00000w0adote0s3l_1d8j/njs.gif?dcsu=
+ri=3D/nojavascript&amp;WT.js=3DNo"=20
+width=3D1 border=3D0> </NOSCRIPT><IMG height=3D0 alt=3D"Page view =
+tracker"=20
+src=3D"http://c.microsoft.com/trans_pixel.aspx?TYPE=3DPV" width=3D0> =
+</BODY></HTML>
+
+------=_NextPart_000_01B5_01C93066.72E138D0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://c41.statcounter.com/3794876/0/e901fd8a/1/
+
+R0lGODlhAQABAJH/AP///wAAAMDAwAAAACH5BAEAAAIALAAAAAABAAEAAAICVAEAOw==
+
+------=_NextPart_000_01B5_01C93066.72E138D0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://m.webtrends.com/dcs8zd2bz00000w0adote0s3l_1d8j/njs.gif?dcsuri=/nojavascript&WT.js=No
+
+R0lGODlhAQABAJH/AP///wAAAP///wAAACH/C0FET0JFOklSMS4wAt7tACH5BAEAAAIALAAAAAAB
+AAEAAAICVAEAOw==
+
+------=_NextPart_000_01B5_01C93066.72E138D0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://c.microsoft.com/trans_pixel.aspx?TYPE=PV
+
+R0lGODlhAQABAIAAAP8zzAAAACH5BAEAAAAALAAAAAABAAEAQAIChFEAOwA=
+
+------=_NextPart_000_01B5_01C93066.72E138D0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/Themes/Blogs/marvin3/style/style.css
+
+HTML {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+auto; COLOR: #333333; PADDING-TOP: 0px
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+auto; COLOR: #333333; PADDING-TOP: 0px
+}
+BODY {
+	FONT-SIZE: 81%; LINE-HEIGHT: 1.2em; FONT-FAMILY: Verdana, Arial, =
+Helvetica, sans-serif; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: center
+}
+A:visited {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+H1 {
+=09
+}
+H2 {
+=09
+}
+H3 {
+=09
+}
+H4 {
+=09
+}
+H5 {
+=09
+}
+H1 {
+	FONT-SIZE: 1.5em; MARGIN: 0px
+}
+H1 A:visited {
+	COLOR: #333333
+}
+H1 A:active {
+	COLOR: #333333
+}
+H1 A:link {
+	COLOR: #333333
+}
+H1 A:hover {
+	COLOR: #47f; TEXT-DECORATION: none
+}
+H2 {
+	MARGIN-TOP: 10px; FONT-SIZE: 1em
+}
+H3 {
+	FONT-SIZE: 1.1em; TEXT-DECORATION: none
+}
+H3 A:hover {
+	TEXT-DECORATION: none
+}
+H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+P {
+	MARGIN: 10px 0px
+}
+INPUT.text {
+	WIDTH: 300px
+}
+TEXTAREA {
+	WIDTH: 300px; HEIGHT: 200px
+}
+#wrapper {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; PADDING-BOTTOM: 0em; =
+PADDING-TOP: 0em
+}
+#container {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+auto; WIDTH: 100%; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#header {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px; BORDER-BOTTOM: #47f 4px solid; BACKGROUND-COLOR: =
+#adf
+}
+#header H1 {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 1.8em; =
+PADDING-BOTTOM: 0.2em; MARGIN: 0px; PADDING-TOP: 0.5em
+}
+#header P {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 1.1em; =
+PADDING-BOTTOM: 1em; MARGIN: 0px; PADDING-TOP: 0em
+}
+#title {
+=09
+}
+#nav {
+	PADDING-BOTTOM: 0.2em; MARGIN: 0em; PADDING-TOP: 0.2em; =
+BACKGROUND-COLOR: #99ffcc; TEXT-ALIGN: left
+}
+#nav UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#nav UL LI {
+	DISPLAY: inline
+}
+#nav UL LI A {
+	PADDING-RIGHT: 1.2em; MARGIN-TOP: 0px; PADDING-LEFT: 1.2em; =
+FONT-WEIGHT: bold; MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 0.2em; =
+PADDING-TOP: 0.2em; TEXT-DECORATION: none
+}
+#subscriptions {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+#contentwrapper {
+	OVERFLOW: hidden; WIDTH: 100%
+}
+#content {
+	BORDER-RIGHT: #555 1px solid; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; =
+PADDING-BOTTOM: 10px; MARGIN: 0px 190px; BORDER-LEFT: #555 1px solid; =
+PADDING-TOP: 10px; BORDER-BOTTOM: #47f 4px solid; HEIGHT: 1%; =
+BACKGROUND-COLOR: #eeeeee
+}
+#content2 {
+	OVERFLOW: hidden; WIDTH: 100%
+}
+#contentfooter {
+	CLEAR: both
+}
+#sidebar-a {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; FONT-SIZE: 0.9em; FLOAT: =
+left; PADDING-BOTTOM: 0.5em; MARGIN: 0px; WIDTH: 180px; PADDING-TOP: =
+0.5em
+}
+#sidebar-a H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 1em; PADDING-BOTTOM: =
+0px; MARGIN: 1em 1em 0em; PADDING-TOP: 0px
+}
+#sidebar-a P {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 0em; =
+PADDING-TOP: 0em
+}
+#sidebar-a UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 5px =
+5px 0px 10px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#sidebar-a LI {
+	MARGIN-TOP: 3px
+}
+#sidebar-a A:active {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; =
+MARGIN-RIGHT: 0px; PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+#sidebar-a A:visited {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; =
+MARGIN-RIGHT: 0px; PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+#sidebar-a A:link {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; =
+MARGIN-RIGHT: 0px; PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+#sidebar-a A:hover {
+	TEXT-DECORATION: underline
+}
+#sidebar-b {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; FONT-SIZE: 0.9em; FLOAT: =
+right; PADDING-BOTTOM: 0.5em; MARGIN: 0px; WIDTH: 180px; PADDING-TOP: =
+0.5em
+}
+#sidebar-b H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 1em; PADDING-BOTTOM: =
+0px; MARGIN: 1em 1em 0em; PADDING-TOP: 0px
+}
+#sidebar-b P {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 0em; =
+PADDING-TOP: 0em
+}
+#sidebar-b UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 5px =
+5px 0px 10px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#sidebar-b LI {
+	MARGIN-TOP: 3px
+}
+#sidebar-b A:active {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; =
+MARGIN-RIGHT: 0px; PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+#sidebar-b A:visited {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; =
+MARGIN-RIGHT: 0px; PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+#sidebar-b A:link {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; =
+MARGIN-RIGHT: 0px; PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+#sidebar-b A:hover {
+	TEXT-DECORATION: underline
+}
+#footer {
+	CLEAR: both; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: =
+5px; MARGIN: 0px; PADDING-TOP: 5px
+}
+.post {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 0em; MARGIN: 0px =
+0px 2em; PADDING-TOP: 0em
+}
+.post IMG {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; MARGIN: 1em =
+0.5em; PADDING-TOP: 5px
+}
+.post H2 {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; FONT-SIZE: 1.2em; =
+PADDING-BOTTOM: 0.5em; MARGIN: 0px; PADDING-TOP: 0em
+}
+.post H5 {
+	FONT-SIZE: 1em; MARGIN: 0px 0px 0.5em
+}
+.postsub {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; FONT-SIZE: 0.9em; =
+PADDING-BOTTOM: 0em; MARGIN: 0px; PADDING-TOP: 0em
+}
+.postsub IMG {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; MARGIN: 5px =
+5px 5px 0px; PADDING-TOP: 5px
+}
+.postsub H2 {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; FONT-SIZE: 1.2em; =
+PADDING-BOTTOM: 0.5em; MARGIN: 0px; PADDING-TOP: 0.5em
+}
+.postfoot {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; FONT-SIZE: 0.9em; =
+PADDING-BOTTOM: 0.5em; MARGIN: 0em; PADDING-TOP: 0.5em
+}
+.postfoot IMG {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: =
+1em; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-TOP: =
+0px; BORDER-BOTTOM: 0px
+}
+.postsubhead {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: =
+1em; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em; BORDER-BOTTOM: #aaaaaa =
+1px solid
+}
+.postsubhead A:link {
+	FONT-WEIGHT: bold; COLOR: #333333; TEXT-DECORATION: none
+}
+.postsubhead A:visited {
+	FONT-WEIGHT: bold; COLOR: #333333; TEXT-DECORATION: none
+}
+.postsubhead A:hover {
+	TEXT-DECORATION: none
+}
+.postsubhead IMG {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: =
+1em; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-TOP: =
+0px; BORDER-BOTTOM: 0px
+}
+#posttoolbar {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; FONT-SIZE: 0.9em; =
+PADDING-BOTTOM: 0px; MARGIN: -2em 0px 0px; PADDING-TOP: 0px
+}
+.ratemenu {
+	BORDER-RIGHT: #666666 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: =
+#666666 1px solid; PADDING-LEFT: 1em; FONT-SIZE: 0.9em; PADDING-BOTTOM: =
+1em; MARGIN: 0.5em; BORDER-LEFT: #666666 1px solid; PADDING-TOP: 1em; =
+BORDER-BOTTOM: #666666 1px solid; BACKGROUND-COLOR: #ffffff
+}
+#comments H4 {
+	FONT-SIZE: 1em; MARGIN: 0px
+}
+#comments {
+	MARGIN: 0px 0px 1em
+}
+.commentsbody {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.9em; =
+PADDING-BOTTOM: 5px; MARGIN: 10px 0px 0px; PADDING-TOP: 0px
+}
+.commentspan {
+	PADDING-LEFT: 5px; FLOAT: right; WIDTH: 200px; TEXT-ALIGN: right
+}
+.commentssubhead {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.85em; =
+PADDING-BOTTOM: 0px; MARGIN: 5px 0px 0px; COLOR: #999999; PADDING-TOP: =
+0px
+}
+.comment {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; =
+PADDING-TOP: 1em
+}
+.altcomment {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; =
+PADDING-TOP: 1em; BACKGROUND-COLOR: #ffffff
+}
+.commentowner {
+	BORDER-RIGHT: #666666 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: =
+#666666 1px solid; PADDING-LEFT: 1em; MARGIN-BOTTOM: 1em; =
+PADDING-BOTTOM: 1em; BORDER-LEFT: #666666 1px solid; PADDING-TOP: 1em; =
+BORDER-BOTTOM: #666666 1px solid; BACKGROUND-COLOR: #e0e0e0
+}
+.altcommentowner {
+	BORDER-RIGHT: #666666 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: =
+#666666 1px solid; PADDING-LEFT: 1em; MARGIN-BOTTOM: 1em; =
+PADDING-BOTTOM: 1em; BORDER-LEFT: #666666 1px solid; PADDING-TOP: 1em; =
+BORDER-BOTTOM: #666666 1px solid; BACKGROUND-COLOR: #f8f8ff
+}
+#commentform {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 3px; =
+PADDING-TOP: 10px
+}
+#commentform DL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+#commentform DT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; =
+PADDING-TOP: 5px
+}
+#commentform DT EM {
+=09
+}
+#commentform .smallbox {
+	BORDER-RIGHT: #333333 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: =
+#333333 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: =
+#333333 1px solid; WIDTH: 300px; PADDING-TOP: 2px; BORDER-BOTTOM: =
+#333333 1px solid
+}
+#commentform TEXTAREA {
+	WIDTH: 400px; HEIGHT: 180px
+}
+#contactform {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 3px; =
+PADDING-TOP: 10px
+}
+#contactform DL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+#contactform DT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; =
+PADDING-TOP: 5px
+}
+#contactform DT EM {
+=09
+}
+#contactform .smallbox {
+	BORDER-RIGHT: #333333 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: =
+#333333 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: =
+#333333 1px solid; WIDTH: 300px; PADDING-TOP: 2px; BORDER-BOTTOM: =
+#333333 1px solid
+}
+#contactform TEXTAREA {
+	WIDTH: 400px; HEIGHT: 180px
+}
+#news {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 0.5em; =
+PADDING-TOP: 0.5em
+}
+#search .searchBox {
+	BORDER-RIGHT: #666 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #666 1px =
+solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; MARGIN: 0em 1em; =
+BORDER-LEFT: #666 1px solid; WIDTH: 110px; PADDING-TOP: 2px; =
+BORDER-BOTTOM: #666 1px solid
+}
+#search {
+	MARGIN-TOP: 10px; MARGIN-BOTTOM: 10px
+}
+.Calendar {
+	FONT-SIZE: 0.95em; WIDTH: 160px
+}
+.CalendarTitle {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; FONT-WEIGHT: bold; =
+FONT-SIZE: 1em; PADDING-BOTTOM: 0.3em; TEXT-ALIGN: center
+}
+.CalendarDayHeader {
+	FONT-WEIGHT: bold
+}
+.CalendarOtherMonth {
+	COLOR: #ffffff
+}
+.CalendarNextPrev {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-WEIGHT: normal; FONT-SIZE: =
+1em; VERTICAL-ALIGN: bottom; PADDING-TOP: 1em
+}
+.CalendarWeekend {
+=09
+}
+.media {
+	FONT-WEIGHT: bold; FONT-SIZE: 0.9em; MARGIN: 10px 10px 5px
+}
+.spacer {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 0px
+}
+#skinbutton {
+	FLOAT: right; MARGIN-RIGHT: 1em
+}
+#skinbutton UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+0px 10px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}
+#skinbutton LI {
+	BORDER-RIGHT: #999 1px solid; BORDER-TOP: #999 1px solid; MARGIN: 5px =
+0px 0px 20px; BORDER-LEFT: #999 1px solid; WIDTH: 9em; BORDER-BOTTOM: =
+#999 1px solid
+}
+#skinbutton LI A {
+	COLOR: #333; TEXT-DECORATION: none
+}
+HEAD:first-child + BODY #skinbutton LI {
+	PADDING-RIGHT: 2px
+}
+.skinbuttonlink {
+	BORDER-RIGHT: white 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: white =
+1px solid; DISPLAY: block; PADDING-LEFT: 0px; BACKGROUND: #ddd; =
+PADDING-BOTTOM: 2px; FONT: 0.75em verdana, arial, sans-serif; =
+BORDER-LEFT: white 1px solid; WIDTH: 100%; COLOR: #333; PADDING-TOP: =
+2px; BORDER-BOTTOM: white 1px solid; TEXT-DECORATION: none
+}
+.skinbuttonlink SPAN {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 2px; FONT: bold =
+1em verdana, arial, sans-serif; COLOR: #fff; PADDING-TOP: 2px
+}
+.cs SPAN {
+	BACKGROUND: #333333
+}
+.CommonRateControlReadOnly {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; PADDING-TOP: 1px; =
+BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.CommonRateControl {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; CURSOR: pointer; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: =
+#eeeeee
+}
+.CommonRateControlActive {
+	BORDER-RIGHT: #cc9933 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#cc9933 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #cc9933 1px solid; CURSOR: pointer; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #cc9933 1px solid; BACKGROUND-COLOR: =
+#ffcc66
+}
+.CommonRateControlReadOnly IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.CommonRateControl IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.CommonRateControlActive IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#masthead {
+	PADDING-RIGHT: 0.4em; PADDING-LEFT: 0px; FONT-SIZE: 0.8em; BACKGROUND: =
+#adf; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; COLOR: #333; =
+PADDING-TOP: 0.4em; TEXT-ALIGN: right
+}
+#masthead UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; COLOR: #333; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#masthead UL LI {
+	DISPLAY: inline
+}
+#masthead UL LI A {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px; TEXT-DECORATION: none
+}
+#masthead A:link {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+#masthead A:visited {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+#masthead A:active {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+#masthead A:hover {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+.TagCloud {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 16px; MARGIN: =
+16px 0px; COLOR: #999999; LINE-HEIGHT: 180%; PADDING-TOP: 16px; =
+LIST-STYLE-TYPE: none; BACKGROUND-COLOR: #f7f7f7
+}
+.SidebarTagCloud {
+	FONT-SIZE: 80%; MARGIN: 0px; LINE-HEIGHT: 200%; LIST-STYLE-TYPE: none
+}
+.Tag1 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag2 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag3 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag4 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag5 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag6 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag1 A:link {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%; COLOR: #00a; MARGIN-RIGHT: 6px
+}
+.Tag1 A:visited {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%; COLOR: #00a; MARGIN-RIGHT: 6px
+}
+.Tag1 A:active {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%; COLOR: #00a; MARGIN-RIGHT: 6px
+}
+.Tag2 A:link {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%; COLOR: #00b; MARGIN-RIGHT: 6px
+}
+.Tag2 A:visited {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%; COLOR: #00b; MARGIN-RIGHT: 6px
+}
+.Tag2 A:active {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%; COLOR: #00b; MARGIN-RIGHT: 6px
+}
+.Tag3 A:link {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%; COLOR: #00c; MARGIN-RIGHT: 6px
+}
+.Tag3 A:visited {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%; COLOR: #00c; MARGIN-RIGHT: 6px
+}
+.Tag3 A:active {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%; COLOR: #00c; MARGIN-RIGHT: 6px
+}
+.Tag4 A:link {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%; COLOR: #00d; MARGIN-RIGHT: 6px
+}
+.Tag4 A:visited {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%; COLOR: #00d; MARGIN-RIGHT: 6px
+}
+.Tag4 A:active {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%; COLOR: #00d; MARGIN-RIGHT: 6px
+}
+.Tag5 A:link {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%; COLOR: #00e; MARGIN-RIGHT: 6px
+}
+.Tag5 A:visited {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%; COLOR: #00e; MARGIN-RIGHT: 6px
+}
+.Tag5 A:active {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%; COLOR: #00e; MARGIN-RIGHT: 6px
+}
+.Tag6 A:link {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%; COLOR: #00f; MARGIN-RIGHT: 6px
+}
+.Tag6 A:visited {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%; COLOR: #00f; MARGIN-RIGHT: 6px
+}
+.Tag6 A:active {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%; COLOR: #00f; MARGIN-RIGHT: 6px
+}
+.SearchStatistics {
+	MARGIN-TOP: 16px; MARGIN-BOTTOM: 16px
+}
+.InlineTagEditor {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: =
+#999999 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; BORDER-LEFT: =
+#999999 1px solid; PADDING-TOP: 4px; BORDER-BOTTOM: #999999 1px solid; =
+BACKGROUND-COLOR: #f3f3f3
+}
+.TextButton {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: =
+#cccccc 1px solid; DISPLAY: inline-block; PADDING-LEFT: 4px; =
+FONT-WEIGHT: bold; FONT-SIZE: 80%; PADDING-BOTTOM: 4px; MARGIN: 1px; =
+BORDER-LEFT: #cccccc 1px solid; COLOR: #333333; PADDING-TOP: 4px; =
+BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: Tahoma, Arial, Helvetica; =
+WHITE-SPACE: nowrap; BACKGROUND-COLOR: #eeeeee
+}
+.TextButton:link {
+	COLOR: #333333; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none
+}
+.TextButton:visited {
+	COLOR: #333333; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none
+}
+.TextButton:active {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.TextButton:hover {
+	COLOR: #333333; BACKGROUND-COLOR: #dddddd; TEXT-DECORATION: underline
+}
+.ModalMask {
+	FILTER: alpha(opacity=3D40); BACKGROUND-COLOR: #333333; opacity: .4
+}
+.Modal {
+	BORDER-RIGHT: #888888 3px solid; BORDER-TOP: #888888 1px solid; =
+BORDER-LEFT: #888888 1px solid; BORDER-BOTTOM: #888888 3px solid; =
+BACKGROUND-COLOR: #eeeeee
+}
+.ModalTitle {
+	BORDER-RIGHT: #cccccc 0px solid; PADDING-RIGHT: 5px; BORDER-TOP: =
+#cccccc 0px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: =
+16px; PADDING-BOTTOM: 7px; OVERFLOW: hidden; BORDER-LEFT: #cccccc 0px =
+solid; CURSOR: move; COLOR: #000000; PADDING-TOP: 5px; BORDER-BOTTOM: =
+#cccccc 1px solid; FONT-FAMILY: Tahoma, Arial, Helvetica; HEIGHT: 18px; =
+BACKGROUND-COLOR: #dddddd; TEXT-ALIGN: left
+}
+.ModalClose {
+	FLOAT: right; BACKGROUND-IMAGE: =
+url(../../../default/images/common/close.gif); OVERFLOW: hidden; WIDTH: =
+33px; CURSOR: pointer; BACKGROUND-REPEAT: no-repeat; HEIGHT: 12px
+}
+.ModalContent {
+	BACKGROUND-COLOR: #ffffff
+}
+.ModalFooter {
+	BORDER-RIGHT: #cccccc 0px solid; PADDING-RIGHT: 2px; BORDER-TOP: =
+#cccccc 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: =
+#cccccc 0px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc 0px solid; =
+BACKGROUND-COLOR: #eeeeee
+}
+.ModalResize {
+	FLOAT: right; BACKGROUND-IMAGE: =
+url(../../../default/images/common/resize.gif); OVERFLOW: hidden; WIDTH: =
+14px; CURSOR: se-resize; BACKGROUND-REPEAT: no-repeat; HEIGHT: 14px
+}
+
+------=_NextPart_000_01B5_01C93066.72E138D0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/Themes/Blogs/marvin3/style/print.css
+
+BODY {
+	FONT-SIZE: 0.9em; MARGIN: 0px; FONT-FAMILY: Verdana, Geneva, Arial, =
+Helvetica, sans-serif
+}
+A:visited {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+H1 {
+	FONT-SIZE: 1.5em; MARGIN: 0px
+}
+H1 A:visited {
+	COLOR: #000
+}
+H1 A:active {
+	COLOR: #000
+}
+H1 A:link {
+	COLOR: #000
+}
+H1 A:hover {
+	COLOR: #47f; TEXT-DECORATION: none
+}
+H2 {
+	MARGIN-TOP: 10px; FONT-SIZE: 1em
+}
+H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+#header {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; COLOR: =
+#000; PADDING-TOP: 10px; BORDER-BOTTOM: #47f 4px solid; =
+BACKGROUND-COLOR: #adf
+}
+#tagline {
+	FONT-SIZE: 0.8em; MARGIN: 0px
+}
+P.date IMG {
+	VERTICAL-ALIGN: middle
+}
+P.date {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: =
+0.9em; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+BLOCKQUOTE {
+	FONT-STYLE: italic
+}
+P.postfoot {
+	FONT-SIZE: 0.75em
+}
+#sidebar-a {
+	DISPLAY: none
+}
+#sidebar-b {
+	DISPLAY: none
+}
+#content {
+	BORDER-BOTTOM: #47f 4px solid; BACKGROUND-COLOR: #eee
+}
+#footer {
+	FONT-SIZE: 0.7em; MARGIN: 0px; PADDING-TOP: 5px; TEXT-ALIGN: center
+}
+INPUT.text {
+	WIDTH: 300px
+}
+TEXTAREA {
+	WIDTH: 300px; HEIGHT: 200px
+}
+#comments H4 SPAN {
+	COLOR: #999
+}
+#comments H4 {
+	FONT-SIZE: 0.9em; MARGIN: 0px
+}
+#comments {
+	MARGIN-TOP: 15px
+}
+P {
+	MARGIN: 10px 0px
+}
+H3 {
+	FONT-SIZE: 1.2em; BORDER-BOTTOM: #aaa 1px solid
+}
+#relatedlinks UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; =
+MARGIN-LEFT: 10px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#commentform {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 3px; =
+PADDING-TOP: 10px
+}
+#contactform {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 3px; =
+PADDING-TOP: 10px
+}
+#commentform {
+	DISPLAY: none
+}
+#commentform DL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+#contactform DL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+#commentform DT {
+	COLOR: #333
+}
+#contactform DT {
+	COLOR: #333
+}
+#commentform DT EM {
+	FONT-WEIGHT: normal; COLOR: #999; FONT-STYLE: normal
+}
+#contactform DT EM {
+	FONT-WEIGHT: normal; COLOR: #999; FONT-STYLE: normal
+}
+#commentform .smallbox {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #ccc 1px =
+solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: #ccc 1px =
+solid; WIDTH: 300px; COLOR: #444; PADDING-TOP: 2px; BORDER-BOTTOM: #ccc =
+1px solid
+}
+#contactform .contactbox {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #ccc 1px =
+solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: #ccc 1px =
+solid; WIDTH: 300px; COLOR: #444; PADDING-TOP: 2px; BORDER-BOTTOM: #ccc =
+1px solid
+}
+#commentform TEXTAREA {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: =
+#ccc 1px solid; WIDTH: 400px; COLOR: #444; BORDER-BOTTOM: #ccc 1px =
+solid; HEIGHT: 180px
+}
+#contactform TEXTAREA {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: =
+#ccc 1px solid; WIDTH: 400px; COLOR: #444; BORDER-BOTTOM: #ccc 1px =
+solid; HEIGHT: 180px
+}
+#search .searchBox {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #ccc 1px =
+solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: #ccc 1px =
+solid; WIDTH: 150px; PADDING-TOP: 2px; BORDER-BOTTOM: #ccc 1px solid
+}
+#search {
+	MARGIN-BOTTOM: 5px
+}
+#news {
+	MARGIN-BOTTOM: 5px
+}
+.CalendarTitle TD {
+	FONT-WEIGHT: bold; FONT-SIZE: 0.75em; WIDTH: 14%; COLOR: #000
+}
+TD.CalendarDays {
+	FONT-WEIGHT: bold; FONT-SIZE: 0.75em; WIDTH: 14%; COLOR: #000
+}
+TD.CalendarNextPrev {
+	FONT-WEIGHT: normal; FONT-SIZE: 0.65em; WIDTH: 15%
+}
+TD.CalendarDay {
+	FONT-SIZE: 0.75em; COLOR: #000
+}
+.copyright {
+	FONT-SIZE: 0.65em; FONT-STYLE: italic; TEXT-ALIGN: center
+}
+.rateMenu {
+	BORDER-RIGHT: 1px outset; BORDER-TOP: 1px outset; BORDER-LEFT: 1px =
+outset; BORDER-BOTTOM: 1px outset; BACKGROUND-COLOR: #fff
+}
+
+------=_NextPart_000_01B5_01C93066.72E138D0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Location: http://blogs.technet.com/Themes/Blogs/marvin3/style/red.css
+
+A:visited {
+	COLOR: #c00
+}
+A:active {
+	COLOR: #c00
+}
+A:link {
+	COLOR: #c00
+}
+H1 A:visited {
+	COLOR: #000
+}
+H1 A:active {
+	COLOR: #000
+}
+H1 A:link {
+	COLOR: #000
+}
+H1 A:hover {
+	COLOR: #c00; TEXT-DECORATION: none
+}
+#header {
+	BORDER-BOTTOM: #c00 4px solid; BACKGROUND-COLOR: #fda
+}
+#content {
+	BORDER-BOTTOM: #c00 4px solid
+}
+.altcomment {
+	BACKGROUND-COLOR: #ffffff
+}
+.CalendarOtherMonth {
+	
+}
+#masthead {
+	BACKGROUND: #fda; COLOR: #333
+}
+#masthead A:link {
+	COLOR: #c00
+}
+#masthead A:visited {
+	COLOR: #c00
+}
+#masthead A:active {
+	COLOR: #c00
+}
+#masthead A:hover {
+	COLOR: #c00
+}
+.Tag1 A:link {
+	COLOR: #700
+}
+.Tag1 A:visited {
+	COLOR: #700
+}
+.Tag1 A:active {
+	COLOR: #700
+}
+.Tag2 A:link {
+	COLOR: #800
+}
+.Tag2 A:visited {
+	COLOR: #800
+}
+.Tag2 A:active {
+	COLOR: #800
+}
+.Tag3 A:link {
+	COLOR: #900
+}
+.Tag3 A:visited {
+	COLOR: #900
+}
+.Tag3 A:active {
+	COLOR: #900
+}
+.Tag4 A:link {
+	COLOR: #a00
+}
+.Tag4 A:visited {
+	COLOR: #a00
+}
+.Tag4 A:active {
+	COLOR: #a00
+}
+.Tag5 A:link {
+	COLOR: #b00
+}
+.Tag5 A:visited {
+	COLOR: #b00
+}
+.Tag5 A:active {
+	COLOR: #b00
+}
+.Tag6 A:link {
+	COLOR: #c00
+}
+.Tag6 A:visited {
+	COLOR: #c00
+}
+.Tag6 A:active {
+	COLOR: #c00
+}
+
+------=_NextPart_000_01B5_01C93066.72E138D0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/dpm/customcss.ashx
+
+#title H1 {
+	VISIBILITY: hidden
+}
+#title {
+	BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: =
+url(http://www.microsoft.com/windowsserversystem/dpm/images/dmp_left.gif)=
+; BACKGROUND-REPEAT: no-repeat; HEIGHT: 124px; BACKGROUND-COLOR: #fa8d20
+}
+#sidebar-a H3 {
+	COLOR: #333333
+}
+#body {
+	BACKGROUND-COLOR: #000000
+}
+#main {
+	BORDER-RIGHT: #555 1px solid; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; =
+PADDING-BOTTOM: 10px; MARGIN: 0px 200px; BORDER-LEFT: #555 1px solid; =
+PADDING-TOP: 10px; BORDER-BOTTOM: #555 4px solid; BACKGROUND-COLOR: #eee
+}
+
+------=_NextPart_000_01B5_01C93066.72E138D0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/Utility/global.js?Version=2.1.61025.2
+
+  /*******/
+
+  var IE4 =3D document.all;
+  var NS6 =3D document.getElementById && !document.all;
+  var disappearDelay =3D 500; // miliseconds
+     =20
+  function DynamicHide (node, e) {
+    if ((IE4 && !node.contains(e.toElement)) ||
+        (NS6 && e.currentTarget !=3D e.relatedTarget && !NS6_Contains( =
+e.currentTarget, e.relatedTarget )))=20
+    {
+      InitTimer( node );
+    }=20
+  } =20
+ =20
+  function HideObject (nodeID) {   =20
+    var node =3D document.getElementById( nodeID );
+   =20
+    if (typeof node !=3D "undefined") {
+      if (IE4 || NS6) {
+        node.style.visibility =3D "hidden";
+        node.style.display =3D 'none';
+      }
+    }
+  }
+ =20
+  function ReleaseTimer (node) {   =20
+    if (typeof node !=3D "undefined") {
+      if (typeof node.HideTimer !=3D "undefined") {
+        clearTimeout( node.HideTimer );
+      }
+    }
+  }
+ =20
+  function InitTimer (node) {
+    if (typeof node !=3D "undefined") {
+      var callBack =3D 'HideObject( "' + node.getAttribute( 'id' ) + '" =
+)';     =20
+      node.HideTimer =3D setTimeout( callBack, disappearDelay );
+    }
+  }
+   =20
+  function NS6_Contains (a, b) {
+    while (b.parentNode) {
+      if ((b =3D b.parentNode) =3D=3D a)
+        return true;
+    }
+   =20
+    return false;
+  }
+       =20
+  /*******/
+  =20
+  function ToggleSendToFriend() {
+    sendToFriendForm =3D document.getElementById('SendToFriendForm');
+    sendToFriendButton =3D =
+document.getElementById('SendToFriendButton');
+
+    if (sendToFriendForm.style.visibility =3D=3D "hidden") {
+      sendToFriendForm.style.visibility =3D "visible";
+      sendToFriendForm.style.display =3D 'block';
+    } else {
+      sendToFriendForm.style.visibility =3D "hidden";
+      sendToFriendForm.style.display =3D 'none';
+    }
+
+    //sendToFriendForm.style.left =3D getposOffset(sendToFriendButton, =
+"left") - sendToFriendForm.offsetWidth + sendToFriendButton.offsetWidth;
+    sendToFriendForm.style.left =3D getposOffset(sendToFriendButton, =
+"left") - (sendToFriendForm.offsetWidth / 2) + =
+(sendToFriendButton.offsetWidth / 2);
+    sendToFriendForm.style.top =3D getposOffset(sendToFriendButton, =
+"top") + sendToFriendButton.offsetHeight;
+  }
+ =20
+  function ToggleAddComment() {
+    commentMenu =3D document.getElementById('CommentMenu');
+    commentButton =3D document.getElementById('CommentButton');
+
+    commentMenu.style.left =3D getposOffset(commentButton, "left");
+    commentMenu.style.top =3D getposOffset(commentButton, "top") + =
+commentButton.offsetHeight;
+
+    if (commentMenu.style.visibility =3D=3D "hidden") {
+      commentMenu.style.visibility =3D "visible";
+      commentMenu.style.display =3D 'block';
+    } else {
+      commentMenu.style.visibility =3D "hidden";
+      commentMenu.style.display =3D 'none';
+    }
+  }
+ =20
+  function ToggleGalleryThumbnail(pictureID) {
+    largeThumbDiv =3D document.getElementById('SecondaryThumbDiv' + =
+pictureID);
+    smallThumb =3D document.getElementById('SmallThumb' + pictureID);
+
+    if (largeThumbDiv.className =3D=3D "secondaryThumbnailHidden") {
+      largeThumbDiv.className =3D "secondaryThumbnailPopup";
+      largeThumbDiv.style.left =3D getposOffset(smallThumb, "left") - =
+((largeThumbDiv.offsetWidth - smallThumb.offsetWidth) / 2) + "px";
+      largeThumbDiv.style.top =3D getposOffset(smallThumb, "top")  - =
+((largeThumbDiv.offsetHeight - smallThumb.offsetHeight) / 2) + "px";
+      setTimeout(function() { largeThumbDiv.style.visibility =3D =
+"visible"; }, 5);
+    } else {
+	  largeThumbDiv.className =3D "secondaryThumbnailHidden";
+    }
+  }
+ =20
+  function ToggleRateMenu() {
+    rateMenu =3D document.getElementById('RateMenu');
+    rateButton =3D document.getElementById('RateButton');
+   =20
+    rateMenu.style.left =3D getposOffset(rateButton, "left");
+    rateMenu.style.top =3D getposOffset(rateButton, "top") + =
+rateButton.offsetHeight;
+
+    if (rateMenu.style.visibility =3D=3D "hidden") {
+      rateMenu.style.visibility =3D "visible";
+      rateMenu.style.display =3D 'block';
+    } else {
+      rateMenu.style.visibility =3D "hidden";
+      rateMenu.style.display =3D 'none';
+    }
+   =20
+    // Init autohide
+    if (window.event) {
+      event.cancelBubble =3D true;
+    }
+   =20
+    ReleaseTimer( rateMenu );
+  }
+ =20
+  function ToggleRatePostMenu(control) {
+	rateButton =3D control.parentNode;
+	rateMenu =3D rateButton.nextSibling.nextSibling;
+
+	if ((rateButton.id !=3D "RateButton") || (rateMenu.id !=3D "RateMenu"))
+		return;
+
+    rateMenu.style.left =3D getposOffset(rateButton, "left");
+    rateMenu.style.top =3D getposOffset(rateButton, "top") + =
+rateButton.offsetHeight;
+
+    if (rateMenu.style.visibility =3D=3D "hidden") {
+      rateMenu.style.visibility =3D "visible";
+      rateMenu.style.display =3D 'block';
+    } else {
+      rateMenu.style.visibility =3D "hidden";
+      rateMenu.style.display =3D 'none';
+    }
+   =20
+    // Init autohide
+    if (window.event) {
+      event.cancelBubble =3D true;
+    }
+   =20
+    ReleaseTimer( rateMenu );
+  }
+
+  function ToggleSearchMenu() {
+    searchMenu =3D document.getElementById('SearchMenu');
+    searchButton =3D document.getElementById('SearchButton');
+
+    searchMenu.style.left =3D getposOffset(searchButton, "left");
+    searchMenu.style.top =3D getposOffset(searchButton, "top") + =
+searchButton.offsetHeight;
+
+    if (searchMenu.style.visibility =3D=3D "hidden") {
+      searchMenu.style.visibility =3D "visible";
+      searchMenu.style.display =3D 'block';
+    } else {
+      searchMenu.style.visibility =3D "hidden";
+      searchMenu.style.display =3D 'none';
+    }
+  }
+
+function getposOffset(what, offsettype){
+  var totaloffset=3D(offsettype=3D=3D"left")? what.offsetLeft : =
+what.offsetTop;
+  var parentEl=3Dwhat.offsetParent;
+  while (parentEl!=3Dnull){
+    totaloffset=3D(offsettype=3D=3D"left")? =
+totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+    parentEl=3DparentEl.offsetParent;
+  }
+  return totaloffset;
+}
+
+function ToggleMenuOnOff (menuName) {
+    var menu =3D document.getElementById(menuName);
+
+    if (menu.style.display =3D=3D 'none') {
+      menu.style.display =3D 'block';
+    } else {
+      menu.style.display =3D 'none';
+    }
+
+}
+
+function OpenWindow (target) {=20
+  window.open(target, "_Child", =
+"toolbar=3Dno,scrollbars=3Dyes,resizable=3Dyes,width=3D400,height=3D400")=
+;=20
+}
+
+function OpenPostWindow (target) {=20
+  window.open(target, "_Child", =
+"resizable=3Dyes,width=3D500,height=3D700");=20
+}
+
+/*
+Keep the user's cookie alive
+*/
+
+function MakeKeepAliveRequest()
+{
+	if (!KeepAliveUrl)
+		return;
+
+	if (KeepAliveTimer !=3D null)
+		window.clearTimeout(KeepAliveTimer);
+
+	var x =3D null;
+	if (typeof XMLHttpRequest !=3D "undefined")=20
+	{
+		x =3D new XMLHttpRequest();
+	}=20
+	else=20
+	{
+		try=20
+		{
+			x =3D new ActiveXObject("Msxml2.XMLHTTP");
+		}=20
+		catch (e)=20
+		{
+			try=20
+			{
+				x =3D new ActiveXObject("Microsoft.XMLHTTP");
+			}=20
+			catch (e)=20
+			{
+			}
+		}
+	}
+=09
+	try
+	{
+		// don't do this asynchronously
+		x.open("GET", KeepAliveUrl, false, "", "");
+		x.send(null);
+	}
+	catch (e)
+	{
+	}
+=09
+	KeepAliveTimer =3D window.setTimeout(MakeKeepAliveRequest, 599999);
+}
+
+function DetermineKeepAliveUrl()
+{
+	var scripts =3D document.getElementsByTagName("SCRIPT");
+	var i;
+	var url;
+=09
+	for (i =3D 0; i < scripts.length; i++)
+	{
+		url =3D scripts[i].src.toLowerCase();
+		if (url.indexOf('utility/global.js') !=3D -1)
+			return url.replace('utility/global.js', 'utility/keepalive.aspx');
+	}
+=09
+	return null;
+}
+
+var KeepAliveUrl =3D DetermineKeepAliveUrl();
+var KeepAliveTimer =3D window.setTimeout(MakeKeepAliveRequest, 599999);
+
+function ShowEditBlock(block) {
+	block.className =3D "CommonContentPartBorderOn";
+}
+function HideEditBlock(block) {
+	block.className =3D "CommonContentPartBorderOff";
+}
+
+function getCookie(sName) {
+	var cookie =3D "" + document.cookie;
+	var start =3D cookie.indexOf(sName);
+	if (cookie =3D=3D "" || start =3D=3D -1)=20
+		return "";
+	var end =3D cookie.indexOf(';',start);
+	if (end =3D=3D -1)
+		end =3D cookie.length;
+	return unescape(cookie.substring(start+sName.length + 1,end));
+}
+function setCookie(sName, value) {
+	document.cookie =3D sName + "=3D" + escape(value) + ";path=3D/;";
+}
+function setCookieForever(sName, value) {
+	document.cookie =3D sName + "=3D" + escape(value) + =
+";path=3D/;expires=3DFri, 1 Jan 2010 00:00:00 GMT;";
+}
+
+function inLineEditOn(control)
+{
+    control.className =3D "CommonInlineEditOn";
+}
+
+function inLineEditOff(control)
+{
+    control.className =3D "CommonInlineEditOff";
+}
+
+//Ajax Start
+
+function Ajax_GetXMLHttpRequest() {
+	if (window.XMLHttpRequest) {
+		return new XMLHttpRequest();
+	} else {
+		if (window.Ajax_XMLHttpRequestProgID) {
+			return new ActiveXObject(window.Ajax_XMLHttpRequestProgID);
+		} else {
+			var progIDs =3D ["Msxml2.XMLHTTP.5.0", "Msxml2.XMLHTTP.4.0", =
+"MSXML2.XMLHTTP.3.0", "MSXML2.XMLHTTP", "Microsoft.XMLHTTP"];
+			for (var i =3D 0; i < progIDs.length; ++i) {
+				var progID =3D progIDs[i];
+				try {
+					var x =3D new ActiveXObject(progID);
+					window.Ajax_XMLHttpRequestProgID =3D progID;
+					return x;
+				} catch (e) {
+				}
+			}
+		}
+	}
+	return null;
+}
+function Ajax_CallBack(type, id, method, args, clientCallBack, =
+debugRequestText, debugResponseText, debugErrors, =
+includeControlValuesWithCallBack, url) {
+=09
+	if (!url)
+	{
+		url =3D window.location.href;
+		url =3D url.replace(/\#.*$/, '');
+		if (url.indexOf('?') > -1)
+			url +=3D "&Ajax_CallBack=3Dtrue";
+		else
+		{
+			if (url.substr(url.length - 1, 1) =3D=3D "/")
+				url +=3D "default.aspx";
+			=09
+			url +=3D "?Ajax_CallBack=3Dtrue";
+		}
+	}
+
+	var x =3D Ajax_GetXMLHttpRequest();
+	var result =3D null;
+	if (!x) {
+		result =3D { "value":null, "error": "NOXMLHTTP"};
+		if (debugErrors) {
+			alert("error: " + result.error);
+		}
+		if (clientCallBack) {
+			clientCallBack(result);
+		}
+		return result;
+	}
+
+	x.open("POST", url, clientCallBack ? true : false);
+	x.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; =
+charset=3Dutf-8");
+	if (clientCallBack) {
+		x.onreadystatechange =3D function() {
+			var result =3D null;
+	=09
+			if (x.readyState !=3D 4) {
+				return;
+			}
+		=09
+			if (debugResponseText) {
+				alert(x.responseText);
+			}
+		=09
+			try
+			{
+				var result =3D eval("(" + x.responseText + ")");
+				if (debugErrors && result.error) {
+					alert("error: " + result.error);
+				}
+			}
+			catch (err)
+			{
+				if (window.confirm('The following error occured while processing an =
+AJAX request: ' + err.message + '\n\nWould you like to see the =
+response?'))
+				{
+					var w =3D window.open();
+					w.document.open('text/plain');
+					w.document.write(x.responseText);
+					w.document.close();
+				}
+			=09
+				result =3D new Object();
+				result.error =3D 'An AJAX error occured.  The response is invalid.';
+			}
+		=09
+			clientCallBack(result);		=09
+		}
+	}
+	var encodedData =3D "Ajax_CallBackType=3D" + type;
+	if (id) {
+		encodedData +=3D "&Ajax_CallBackID=3D" + id.split("$").join(":");
+	}
+	encodedData +=3D "&Ajax_CallBackMethod=3D" + method;
+	if (args) {
+		for (var i in args) {
+			encodedData +=3D "&Ajax_CallBackArgument" + i + "=3D" + =
+encodeURIComponent(args[i]);
+		}
+	}
+	if (includeControlValuesWithCallBack && document.forms.length > 0) {
+		var form =3D document.forms[0];
+		for (var i =3D 0; i < form.length; ++i) {
+			var element =3D form.elements[i];
+			if (element.name) {
+				var elementValue =3D null;
+				if (element.nodeName =3D=3D "INPUT") {
+					var inputType =3D element.getAttribute("TYPE").toUpperCase();
+					if (inputType =3D=3D "TEXT" || inputType =3D=3D "PASSWORD" || =
+inputType =3D=3D "HIDDEN") {
+						elementValue =3D element.value;
+					} else if (inputType =3D=3D "CHECKBOX" || inputType =3D=3D "RADIO") =
+{
+						if (element.checked) {
+							elementValue =3D element.value;
+						}
+					}
+				} else if (element.nodeName =3D=3D "SELECT") {
+					elementValue =3D element.value;
+				} else if (element.nodeName =3D=3D "TEXTAREA") {
+					elementValue =3D element.value;
+				}
+				if (elementValue) {
+					encodedData +=3D "&" + element.name + "=3D" + =
+encodeURIComponent(elementValue);
+				}
+			}
+		}
+	}
+	if (debugRequestText) {
+		alert(encodedData);
+	}
+	x.send(encodedData);
+	if (!clientCallBack) {
+		if (debugResponseText) {
+			alert(x.responseText);
+		}
+		result =3D eval("(" + x.responseText + ")");
+		if (debugErrors && result.error) {
+			alert("error: " + result.error);
+		}
+	}
+	delete x;
+	return result;
+}
+
+//Ajax End
+
+//Element Items Borrowed From Prototype
+
+function $() {
+  var elements =3D new Array();
+
+  for (var i =3D 0; i < arguments.length; i++) {
+    var element =3D arguments[i];
+    if (typeof element =3D=3D 'string')
+      element =3D document.getElementById(element);
+
+    if (arguments.length =3D=3D 1)=20
+      return element;
+
+    elements.push(element);
+  }
+
+  return elements;
+}
+
+
+var Element =3D {
+ =20
+  toggle: function() {
+    for (var i =3D 0; i < arguments.length; i++) {
+      var element =3D $(arguments[i]);
+      element.style.display =3D=20
+        (element.style.display =3D=3D 'none' ? '' : 'none');
+    }
+  },
+
+  hide: function() {
+    for (var i =3D 0; i < arguments.length; i++) {
+      var element =3D $(arguments[i]);
+      element.style.display =3D 'none';
+    }
+  },
+
+  show: function() {
+    for (var i =3D 0; i < arguments.length; i++) {
+      var element =3D $(arguments[i]);
+      element.style.display =3D '';
+    }
+  },
+
+  remove: function(element) {
+    element =3D $(element);
+    element.parentNode.removeChild(element);
+  },
+  =20
+  getHeight: function(element) {
+    element =3D $(element);
+    return element.offsetHeight;=20
+  }
+}
+
+
+//End Element Items
+
+------=_NextPart_000_01B5_01C93066.72E138D0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/Utility/telligent_web_ui/1_0_3/Telligent_Modal.js
+
+=0A=
+Telligent_Modal=3Dnew =
+Object();Telligent_Modal._variableName=3D'Telligent_Modal';Telligent_Moda=
+l.LoadingHtmlUrl=3Dnull;Telligent_Modal.WindowCssClasses=3Dnew =
+Array();Telligent_Modal.WindowTitleCssClasses=3Dnew =
+Array();Telligent_Modal.WindowCloseCssClasses=3Dnew =
+Array();Telligent_Modal.WindowContentCssClasses=3Dnew =
+Array();Telligent_Modal.WindowMaskCssClasses=3Dnew =
+Array();Telligent_Modal.WindowFooterCssClasses=3Dnew =
+Array();Telligent_Modal.WindowResizeCssClasses=3Dnew =
+Array();Telligent_Modal.ZIndex=3D100;Telligent_Modal._isShown=3Dfalse;Tel=
+ligent_Modal._initialized=3Dfalse;Telligent_Modal._modal=3Dnull;Telligent=
+_Modal._modalTitle=3Dnull;Telligent_Modal._modalClose=3Dnull;Telligent_Mo=
+dal._modalAnimationMask=3Dnull;Telligent_Modal._modalMask=3Dnull;Telligen=
+t_Modal._modalIframe=3Dnull;Telligent_Modal._modalResize=3Dnull;Telligent=
+_Modal._modalFooter=3Dnull;Telligent_Modal._modalContent=3Dnull;Telligent=
+_Modal._animationHandle=3Dnull;Telligent_Modal._isOpening=3Dfalse;Tellige=
+nt_Modal._hiddenSelects=3Dnull;Telligent_Modal._checkForScrollResizeHandl=
+e=3Dnull;Telligent_Modal._lastModalInfo=3Dnull;Telligent_Modal._lastWindo=
+wInfo=3Dnull;Telligent_Modal._isDragging=3Dfalse;Telligent_Modal._moveMod=
+alInfo=3Dnull;Telligent_Modal._resizeModalInfo=3Dnull;Telligent_Modal._is=
+Resizing=3Dfalse;Telligent_Modal.Configure=3Dfunction(loadingHtmlUrl,wind=
+owCssClasses,windowTitleCssClasses,windowCloseCssClasses,windowContentCss=
+Classes,windowFooterCssClasses,windowResizeCssClasses,windowMaskCssClasse=
+s,zIndex)=0A=
+{this.LoadingHtmlUrl=3DloadingHtmlUrl;this.WindowCssClasses=3DwindowCssCl=
+asses;this.WindowTitleCssClasses=3DwindowTitleCssClasses;this.WindowClose=
+CssClasses=3DwindowCloseCssClasses;this.WindowContentCssClasses=3DwindowC=
+ontentCssClasses;this.WindowMaskCssClasses=3DwindowMaskCssClasses;this.Wi=
+ndowFooterCssClasses=3DwindowFooterCssClasses;this.WindowResizeCssClasses=
+=3DwindowResizeCssClasses;this.ZIndex=3DzIndex;}=0A=
+Telligent_Modal.IsShown=3Dfunction()=0A=
+{return this._isShown;}=0A=
+Telligent_Modal._getWindowInfo=3Dfunction()=0A=
+{var =
+scrollX=3D0,scrollY=3D0,width=3D0,height=3D0,contentWidth=3D0,contentHeig=
+ht=3D0;if(typeof(window.pageXOffset)=3D=3D'number')=0A=
+{scrollX=3Dwindow.pageXOffset;scrollY=3Dwindow.pageYOffset;}=0A=
+else =
+if(document.body&&(document.body.scrollLeft||document.body.scrollTop))=0A=
+{scrollX=3Ddocument.body.scrollLeft;scrollY=3Ddocument.body.scrollTop;}=0A=
+else =
+if(document.documentElement&&(document.documentElement.scrollLeft||docume=
+nt.documentElement.scrollTop))=0A=
+{scrollX=3Ddocument.documentElement.scrollLeft;scrollY=3Ddocument.documen=
+tElement.scrollTop;}=0A=
+if(typeof(window.innerWidth)=3D=3D'number')=0A=
+{width=3Dwindow.innerWidth;height=3Dwindow.innerHeight;}=0A=
+else =
+if(document.documentElement&&(document.documentElement.clientWidth||docum=
+ent.documentElement.clientHeight))=0A=
+{width=3Ddocument.documentElement.clientWidth;height=3Ddocument.documentE=
+lement.clientHeight;}=0A=
+else =
+if(document.body&&(document.body.clientWidth||document.body.clientHeight)=
+)=0A=
+{width=3Ddocument.body.clientWidth;height=3Ddocument.body.clientHeight;}=0A=
+if(document.documentElement&&(document.documentElement.scrollHeight||docu=
+ment.documentElement.offsetHeight))=0A=
+{if(document.documentElement.scrollHeight>document.documentElement.offset=
+Height)=0A=
+{contentWidth=3Ddocument.documentElement.scrollWidth;contentHeight=3Ddocu=
+ment.documentElement.scrollHeight;}=0A=
+else=0A=
+{contentWidth=3Ddocument.documentElement.offsetWidth;contentHeight=3Ddocu=
+ment.documentElement.offsetHeight;}}=0A=
+else =
+if(document.body&&(document.body.scrollHeight||document.body.offsetHeight=
+))=0A=
+{if(document.body.scrollHeight>document.body.offsetHeight)=0A=
+{contentWidth=3Ddocument.body.scrollWidth;contentHeight=3Ddocument.body.s=
+crollHeight;}=0A=
+else=0A=
+{contentWidth=3Ddocument.body.offsetWidth;contentHeight=3Ddocument.body.o=
+ffsetHeight;}}=0A=
+else=0A=
+{contentWidth=3Dwidth;contentHeight=3Dheight;}=0A=
+if(height>contentHeight)=0A=
+height=3DcontentHeight;if(width>contentWidth)=0A=
+width=3DcontentWidth;var rect=3Dnew =
+Object();rect.ScrollX=3DscrollX;rect.ScrollY=3DscrollY;rect.Width=3Dwidth=
+;rect.Height=3Dheight;rect.ContentWidth=3DcontentWidth;rect.ContentHeight=
+=3DcontentHeight;return rect;}=0A=
+Telligent_Modal._getCurrentStyleValue=3Dfunction(element,styleRule,jsStyl=
+eRule)=0A=
+{var =
+value=3D0;if(document.defaultView&&document.defaultView.getComputedStyle)=0A=
+value=3DparseInt(document.defaultView.getComputedStyle(element,"").getPro=
+pertyValue(styleRule),0);else if(element.currentStyle)=0A=
+value=3DparseInt(element.currentStyle[jsStyleRule],0);if(!isNaN(value))=0A=
+return value;else=0A=
+return 0;}=0A=
+Telligent_Modal._calculateStyleOffset=3Dfunction(element)=0A=
+{var result=3Dnew =
+Object();result.Height=3Dthis._getCurrentStyleValue(element,'border-top-w=
+idth','borderTopWidth')+=0A=
+this._getCurrentStyleValue(element,'border-bottom-width','borderBottomWid=
+th')+=0A=
+this._getCurrentStyleValue(element,'padding-top','paddingTop')+=0A=
+this._getCurrentStyleValue(element,'padding-bottom','paddingBottom');resu=
+lt.Width=3Dthis._getCurrentStyleValue(element,'border-left-width','border=
+LeftWidth')+=0A=
+this._getCurrentStyleValue(element,'border-right-width','borderRightWidth=
+')+=0A=
+this._getCurrentStyleValue(element,'padding-left','paddingLeft')+=0A=
+this._getCurrentStyleValue(element,'padding-right','paddingRight');return=
+ result;}=0A=
+Telligent_Modal.Open=3Dfunction(url,width,height,onCloseFunction,x,y,igno=
+reCloseAndAnimation)=0A=
+{if(!ignoreCloseAndAnimation&&this._isShown)=0A=
+this.Close();else if(this._hiddenSelects)=0A=
+{for(var i=3D0;i<this._hiddenSelects.length;i++)=0A=
+{if(this._hiddenSelects[i].Element.style.visibility=3D=3D'hidden')=0A=
+this._hiddenSelects[i].Element.style.visibility=3Dthis._hiddenSelects[i].=
+Visibility;}=0A=
+this._hiddenSelects=3Dnull;}=0A=
+if(!this._initialized)=0A=
+this._initialize();try=0A=
+{this._modalTitle.childNodes[1].innerHTML=3Dthis._modalIframe.contentWind=
+ow.document.title;}=0A=
+catch(err)=0A=
+{}=0A=
+if(!ignoreCloseAndAnimation)=0A=
+this._modalIframe.src=3Durl;try=0A=
+{this._modalIframe.contentWindow.opener=3Dwindow;}=0A=
+catch(err)=0A=
+{}=0A=
+this._modalAnimationMask.style.display=3D'none';this._modalMask.style.dis=
+play=3D'none';this._lastWindowInfo=3Dthis._getWindowInfo();this._modalAni=
+mationMask.style.display=3D'block';if(width>this._lastWindowInfo.Width)=0A=
+width=3Dthis._lastWindowInfo.Width;this._modalAnimationMask.style.positio=
+n=3D'absolute';this._modalAnimationMask.style.zIndex=3Dthis.ZIndex;this._=
+modalAnimationMask.style.display=3D'block';this._modalAnimationMask.style=
+.visibility=3D'hidden';this._modalAnimationMask.style.overflow=3D'hidden'=
+;this._modalAnimationMask.style.width=3Dwidth+'px';this._modalContent.sty=
+le.width=3Dwidth+'px';this._modal.style.position=3D'absolute';this._modal=
+.style.display=3D'block';this._modal.style.visibility=3D'hidden';this._mo=
+dal.style.left=3D'0px';this._modal.style.top=3D'0px';this._modalMask.styl=
+e.position=3D'absolute';this._modalMask.style.display=3D'block';this._mod=
+alMask.style.zIndex=3Dthis.ZIndex;this._modalMask.style.visibility=3D'vis=
+ible';var =
+modalContentOffset=3Dthis._calculateStyleOffset(this._modalContent);var =
+offset=3D(this._modal.offsetHeight-this._modalContent.offsetHeight)-modal=
+ContentOffset.Height;if(height+offset>this._lastWindowInfo.Height)=0A=
+height=3Dthis._lastWindowInfo.Height-offset;if(width<this._modalResize.of=
+fsetWidth*2)=0A=
+width=3Dthis._modalResize.offsetWidth*2;if(width<this._modalClose.offsetW=
+idth*2)=0A=
+width=3Dthis._modalClose.offsetWidth*2;if(height<this._modalTitle.offsetH=
+eight+this._modalFooter.offsetHeight)=0A=
+height=3Dthis._modalTitle.offsetHeight+this._modalFooter.offsetHeight;thi=
+s._modalIframe.style.height=3Dheight+'px';this._modalContent.style.height=
+=3Dheight+'px';this._modalContent.style.width=3D(width-(this._modal.offse=
+tWidth-this._modalContent.offsetWidth)-modalContentOffset.Width)+'px';thi=
+s._modalAnimationMask.style.width=3Dwidth+'px';this._modalAnimationMask.s=
+tyle.height=3Dthis._modal.offsetHeight+'px';this._modalMask.style.left=3D=
+'0px';this._modalMask.style.top=3D'0px';this._modalMask.style.width=3Dthi=
+s._lastWindowInfo.ContentWidth+'px';this._modalMask.style.height=3Dthis._=
+lastWindowInfo.ContentHeight+'px';this._lastWindowInfo=3Dthis._getWindowI=
+nfo();var panelWidth=3Dthis._modal.offsetWidth;var =
+panelHeight=3Dthis._modal.offsetHeight;var =
+animatePropertyName,animateTargetValue,animateNextValue;if(typeof(x)=3D=3D=
+'undefined'||isNaN(parseInt(x,10)))=0A=
+x=3D((this._lastWindowInfo.Width-panelWidth)/2)+this._lastWindowInfo.Scro=
+llX;if(x+panelWidth>this._lastWindowInfo.Width+this._lastWindowInfo.Scrol=
+lX)=0A=
+x=3Dthis._lastWindowInfo.Width+this._lastWindowInfo.ScrollX-panelWidth;if=
+(x<this._lastWindowInfo.ScrollX)=0A=
+x=3Dthis._lastWindowInfo.ScrollX;if(typeof(y)=3D=3D'undefined'||isNaN(par=
+seInt(y,10)))=0A=
+y=3D((this._lastWindowInfo.Height-panelHeight)/2)+this._lastWindowInfo.Sc=
+rollY;if(y+panelHeight>this._lastWindowInfo.Height+this._lastWindowInfo.S=
+crollY)=0A=
+y=3Dthis._lastWindowInfo.Height+this._lastWindowInfo.ScrollY-panelHeight;=
+if(y<this._lastWindowInfo.ScrollY)=0A=
+y=3Dthis._lastWindowInfo.ScrollY;this._modalAnimationMask.style.left=3Dx+=
+'px';this._modalAnimationMask.style.top=3Dy+'px';animateTargetValue=3D0;a=
+nimateNextValue=3D-panelHeight;this._modal.style.visibility=3D'visible';t=
+his._modalAnimationMask.style.visibility=3D'visible';this._modalAnimation=
+Mask.style.overflow=3D'hidden';if(this._modalAnimationMask.getClientRects=
+)=0A=
+{var =
+selectBoxes=3Ddocument.getElementsByTagName('select');this._hiddenSelects=
+=3Dnew Array();for(var i=3D0;i<selectBoxes.length;i++)=0A=
+{this._hiddenSelects[this._hiddenSelects.length]=3D{Element:selectBoxes[i=
+],Visibility:selectBoxes[i].style.visibility};selectBoxes[i].style.visibi=
+lity=3D'hidden';}}=0A=
+this._isOpening=3Dtrue;if(ignoreCloseAndAnimation)=0A=
+this._animationHandle=3Dwindow.setTimeout(new =
+Function(this._variableName+'._animate(0,0,0,0);'),9);else=0A=
+{this._modalIframe.style.display=3D'none';this._animate(0,-panelHeight,pa=
+nelHeight/3,.67);}=0A=
+this._lastModalInfo=3D{Url:this._modalIframe.src,OnCloseFunction:onCloseF=
+unction,X:x,Y:y,Width:parseInt(width,10),Height:parseInt(height,10)};this=
+._isShown=3Dtrue;}=0A=
+Telligent_Modal._checkForScrollResize=3Dfunction()=0A=
+{if(this._checkForScrollResizeHandle)=0A=
+window.clearTimeout(this._checkForScrollResizeHandle);if(this._isShown&&!=
+this._isOpening&&this._lastWindowInfo)=0A=
+{try=0A=
+{this._modalTitle.childNodes[1].innerHTML=3Dthis._modalIframe.contentWind=
+ow.document.title;}=0A=
+catch(err)=0A=
+{}=0A=
+var =
+windowInfo=3Dthis._getWindowInfo();if(windowInfo.ScrollX!=3Dthis._lastWin=
+dowInfo.ScrollX||windowInfo.ScrollY!=3Dthis._lastWindowInfo.ScrollY||wind=
+owInfo.Width!=3Dthis._lastWindowInfo.Width||windowInfo.Height!=3Dthis._la=
+stWindowInfo.Height)=0A=
+this.Open(null,this._lastModalInfo.Width,this._lastModalInfo.Height,this.=
+_lastModalInfo.OnCloseFunction,this._lastModalInfo.X,this._lastModalInfo.=
+Y,true);else=0A=
+this._checkForScrollResizeHandle=3Dwindow.setTimeout(new =
+Function('window.'+this._variableName+'._checkForScrollResize();'),999);}=
+}=0A=
+Telligent_Modal.Close=3Dfunction(returnValue)=0A=
+{if(this._isShown)=0A=
+{if(!this._initialized)=0A=
+this._initialize();this._modal.style.position=3D'absolute';this._modal.st=
+yle.display=3D'none';this._modalAnimationMask.style.position=3D'absolute'=
+;this._modalAnimationMask.style.display=3D'none';this._modalMask.style.po=
+sition=3D'absolute';this._modalMask.style.display=3D'none';this._modalIfr=
+ame.src=3Dthis.LoadingHtmlUrl;var =
+onCloseFunction=3Dthis._lastModalInfo.OnCloseFunction;this._isShown=3Dfal=
+se;this._lastModalInfo=3Dnull;this._windowInfo=3Dnull;if(this._hiddenSele=
+cts)=0A=
+{for(var i=3D0;i<this._hiddenSelects.length;i++)=0A=
+{if(this._hiddenSelects[i].Element.style.visibility=3D=3D'hidden')=0A=
+this._hiddenSelects[i].Element.style.visibility=3Dthis._hiddenSelects[i].=
+Visibility;}=0A=
+this._hiddenSelects=3Dnull;}=0A=
+if(onCloseFunction)=0A=
+onCloseFunction(returnValue);this.Dispose();}}=0A=
+Telligent_Modal.Refresh=3Dfunction()=0A=
+{if(this._animationHandle)=0A=
+window.clearTimeout(this._animationHandle);this.Dispose();if(this._isShow=
+n&&this._lastModalInfo)=0A=
+this.Open(this._lastModalInfo.Url,this._lastModalInfo.Width,this._lastMod=
+alInfo.OnCloseFunction,this._lastModalInfo.Height,this._lastModalInfo.OnC=
+loseFunction,this._lastModalInfo.X,this._lastModalInfo.Y);}=0A=
+Telligent_Modal._initialize=3Dfunction()=0A=
+{this._modalMask=3Ddocument.createElement('div');this._modalMask.style.wi=
+dth=3D'auto';this._modalMask.style.height=3D'auto';this._modalMask.style.=
+position=3D'absolute';this._modalMask.style.display=3D'none';var =
+mm=3Dthis._modalMask;if(this.WindowMaskCssClasses.length>0)=0A=
+{mm.className=3Dthis.WindowMaskCssClasses[0];for(var =
+i=3D1;i<this.WindowMaskCssClasses.length;i++)=0A=
+{mm.appendChild(document.createElement('div'));mm=3Dmm.childNodes[0];mm.c=
+lassName=3Dthis.WindowMaskCssClasses[i];mm.style.width=3D'auto';mm.style.=
+height=3D'auto';}}=0A=
+document.body.appendChild(this._modalMask);this._modalAnimationMask=3Ddoc=
+ument.createElement('div');this._modalAnimationMask.style.position=3D'abs=
+olute';this._modalAnimationMask.style.display=3D'none';this._modalAnimati=
+onMask.style.overflow=3D'hidden';this._modal=3Ddocument.createElement('di=
+v');this._modal.style.width=3D'auto';this._modal.style.height=3D'auto';th=
+is._modal.style.position=3D'absolute';this._modal.style.display=3D'none';=
+var m=3Dthis._modal;if(this.WindowCssClasses.length>0)=0A=
+{m.className=3Dthis.WindowCssClasses[0];for(var =
+i=3D1;i<this.WindowCssClasses.length;i++)=0A=
+{m.appendChild(document.createElement('div'));m=3Dm.childNodes[0];m.class=
+Name=3Dthis.WindowCssClasses[i];m.style.width=3D'auto';m.style.height=3D'=
+auto';}}=0A=
+this._modalTitle=3Ddocument.createElement('div');m.appendChild(this._moda=
+lTitle);if(this.WindowTitleCssClasses.length>0)=0A=
+{this._modalTitle.className=3Dthis.WindowTitleCssClasses[0];for(var =
+i=3D1;i<this.WindowTitleCssClasses.length;i++)=0A=
+{this._modalTitle.appendChild(document.createElement('div'));this._modalT=
+itle=3Dthis._modalTitle.childNodes[0];this._modalTitle.className=3Dthis.W=
+indowTitleCssClasses[i];}}=0A=
+this._modalTitle.onmousedown=3Dnew =
+Function('event','window.'+this._variableName+'._startDrag(event); =
+return =
+false;');this._modalClose=3Ddocument.createElement('div');this._modalTitl=
+e.appendChild(this._modalClose);var =
+mc=3Dthis._modalClose;if(this.WindowCloseCssClasses.length>0)=0A=
+{mc.className=3Dthis.WindowCloseCssClasses[0];for(var =
+i=3D1;i<this.WindowCloseCssClasses.length;i++)=0A=
+{mc.appendChild(document.createElement('div'));mc=3Dmc.childNodes[0];mc.c=
+lassName=3Dthis.WindowCloseCssClasses[i];}}=0A=
+this._modalClose.onclick=3Dnew =
+Function('window.'+this._variableName+'.Close();');this._modalTitle.appen=
+dChild(document.createElement('span'));var =
+e=3Ddocument.createElement('div');e.style.clear=3D'both';this._modalTitle=
+.appendChild(e);this._modalContent=3Ddocument.createElement('div');m.appe=
+ndChild(this._modalContent);if(this.WindowContentCssClasses.length>0)=0A=
+{this._modalContent.className=3Dthis.WindowContentCssClasses[0];for(var =
+i=3D1;i<this.WindowContentCssClasses.length;i++)=0A=
+{this._modalContent.appendChild(document.createElement('div'));this._moda=
+lContent=3Dthis._modalContent.childNodes[0];this._modalContent.className=3D=
+this.WindowContentCssClasses[i];}}=0A=
+this._modalIframe=3Ddocument.createElement('iframe');this._modalIframe.sr=
+c=3Dthis.LoadingHtmlUrl;this._modalIframe.width=3D'100%';this._modalIfram=
+e.border=3D'0';this._modalIframe.frameBorder=3D'no';this._modalIframe.sty=
+le.borderLeftWidth=3D'0px';this._modalIframe.style.borderRightWidth=3D'0p=
+x';this._modalIframe.style.borderTopWidth=3D'0px';this._modalIframe.style=
+.borderBottomWidth=3D'0px';this._modalContent.appendChild(this._modalIfra=
+me);this._modalFooter=3Ddocument.createElement('div');m.appendChild(this.=
+_modalFooter);var =
+mf=3Dthis._modalFooter;if(this.WindowFooterCssClasses.length>0)=0A=
+{mf.className=3Dthis.WindowFooterCssClasses[0];for(var =
+i=3D1;i<this.WindowFooterCssClasses.length;i++)=0A=
+{mf.appendChild(document.createElement('div'));mf=3Dmf.childNodes[0];mf.c=
+lassName=3Dthis.WindowFooterCssClasses[i];}}=0A=
+this._modalResize=3Ddocument.createElement('div');mf.appendChild(this._mo=
+dalResize);var =
+e=3Ddocument.createElement('div');e.style.clear=3D'both';mf.appendChild(e=
+);var mr=3Dthis._modalResize;if(this.WindowResizeCssClasses.length>0)=0A=
+{mr.className=3Dthis.WindowResizeCssClasses[0];for(var =
+i=3D1;i<this.WindowResizeCssClasses.length;i++)=0A=
+{mr.appendChild(document.createElement('div'));mr=3Dmr.childNodes[0];mr.c=
+lassName=3Dthis.WindowResizeCssClasses[i];}}=0A=
+this._modalResize.onmousedown=3Dnew =
+Function('event','window.'+this._variableName+'._startResize(event); =
+return =
+false;');this._modalAnimationMask.appendChild(this._modal);document.body.=
+appendChild(this._modalAnimationMask);this._initialized=3Dtrue;}=0A=
+Telligent_Modal.Dispose=3Dfunction()=0A=
+{if(this._initialized)=0A=
+{if(this._animationHandle)=0A=
+window.clearTimeout(this._animationHandle);this._isShown=3Dfalse;this._is=
+Opening=3Dfalse;if(document&&document.body)=0A=
+{document.body.removeChild(this._modalAnimationMask);document.body.remove=
+Child(this._modalMask);this._modalClose.onclick=3Dnull;this._modalTitle.o=
+nmousedown=3Dnull;this._modalResize.onmousedown=3Dnull;this._modal=3Dnull=
+;this._modalTitle=3Dnull;this._modalClose=3Dnull;this._modalAnimationMask=
+=3Dnull;this._modalMask=3Dnull;this._modalIframe=3Dnull;this._modalResize=
+=3Dnull;this._modalFooter=3Dnull;this._modalContent=3Dnull;}=0A=
+this._initialized=3Dfalse;}}=0A=
+Telligent_Modal._animate=3Dfunction(targetValue,nextValue,step,accelerati=
+on)=0A=
+{if(this._animationHandle)=0A=
+window.clearTimeout(this._animationHandle);if(!this._isOpening)=0A=
+return;var =
+currValue=3DparseInt(this._modal.style.top,10);if((step<0&&currValue<targ=
+etValue)||(step>0&&currValue>targetValue)||Math.abs(step)<1)=0A=
+{if(this._hiddenSelects)=0A=
+{for(var i=3D0;i<this._hiddenSelects.length;i++)=0A=
+this._hiddenSelects[i].Element.style.visibility=3D'hidden';}=0A=
+this._modal.style.top=3DtargetValue+'px';this._modal.style.position=3D'st=
+atic';this._modalAnimationMask.style.overflow=3D'visible';this._animation=
+Handle=3Dnull;if(!this._isResizing&&!this._isDragging)=0A=
+this._modalIframe.style.display=3D'block';this._isOpening=3Dfalse;this._l=
+astWindowInfo=3Dthis._getWindowInfo();this._checkForScrollResizeHandle=3D=
+window.setTimeout(new =
+Function('window.'+this._variableName+'._checkForScrollResize();'),999);}=0A=
+else=0A=
+{this._modal.style.top=3DnextValue+'px';nextValue=3DnextValue+step;if(ste=
+p>0&&nextValue>targetValue)=0A=
+nextValue=3DtargetValue;else if(step<0&&nextValue<targetValue)=0A=
+nextValue=3DtargetValue;step=3Dstep*acceleration;this._animationHandle=3D=
+window.setTimeout(new =
+Function(this._variableName+'._animate('+targetValue+','+nextValue+','+st=
+ep+','+acceleration+');'),19);}}=0A=
+Telligent_Modal._startDrag=3Dfunction(event)=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(!event)=0A=
+event=3Dwindow.event;this._moveModalInfo=3Dnew =
+Object();this._moveModalInfo.StartMouseX=3Devent.pageX?event.pageX:event.=
+screenX;this._moveModalInfo.StartMouseY=3Devent.pageY?event.pageY:event.s=
+creenY;this._moveModalInfo.StartModalX=3Dthis._lastModalInfo.X;this._move=
+ModalInfo.StartModalY=3Dthis._lastModalInfo.Y;this._moveModalInfo.Button=3D=
+event.button;document.onmouseup=3Dnew =
+Function('event','window.'+this._variableName+'._endDrag(event); return =
+false;');document.onmousemove=3Dnew =
+Function('event','window.'+this._variableName+'._drag(event); return =
+false;');this._modalIframe.style.display=3D'none';this._isDragging=3Dtrue=
+;}=0A=
+Telligent_Modal._endDrag=3Dfunction(event)=0A=
+{if(!this._initialized)=0A=
+this._initialize();this._isDragging=3Dfalse;this._moveModalInfo=3Dnull;do=
+cument.onmouseup=3Dnull;document.onmousemove=3Dnull;this._modalIframe.sty=
+le.display=3D'block';}=0A=
+Telligent_Modal._drag=3Dfunction(event)=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(!event)=0A=
+event=3Dwindow.event;if(event.button!=3Dthis._moveModalInfo.Button)=0A=
+{this._endDrag(event);return;}=0A=
+var =
+eventX=3Dtypeof(event.pageX)!=3D'undefined'?event.pageX:event.screenX;var=
+ =
+eventY=3Dtypeof(event.pageY)!=3D'undefined'?event.pageY:event.screenY;var=
+ xChange=3DeventX-this._moveModalInfo.StartMouseX;var =
+yChange=3DeventY-this._moveModalInfo.StartMouseY;this.Open(null,this._las=
+tModalInfo.Width,this._lastModalInfo.Height,this._lastModalInfo.OnCloseFu=
+nction,this._moveModalInfo.StartModalX+xChange,this._moveModalInfo.StartM=
+odalY+yChange,true);}=0A=
+Telligent_Modal._startResize=3Dfunction(event)=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(!event)=0A=
+event=3Dwindow.event;this._resizeModalInfo=3Dnew =
+Object();this._resizeModalInfo.StartMouseX=3Devent.pageX?event.pageX:even=
+t.screenX;this._resizeModalInfo.StartMouseY=3Devent.pageY?event.pageY:eve=
+nt.screenY;this._resizeModalInfo.StartModalWidth=3Dthis._lastModalInfo.Wi=
+dth;this._resizeModalInfo.StartModalHeight=3Dthis._lastModalInfo.Height;t=
+his._resizeModalInfo.Button=3Devent.button;document.onmouseup=3Dnew =
+Function('event','window.'+this._variableName+'._endResize(event); =
+return false;');document.onmousemove=3Dnew =
+Function('event','window.'+this._variableName+'._resize(event); return =
+false;');this._modalIframe.style.display=3D'none';this._isResizing=3Dtrue=
+;}=0A=
+Telligent_Modal._endResize=3Dfunction(event)=0A=
+{if(!this._initialized)=0A=
+this._initialize();this._isResizing=3Dfalse;this._resizeModalInfo=3Dnull;=
+document.onmouseup=3Dnull;document.onmousemove=3Dnull;this._modalIframe.s=
+tyle.display=3D'block';}=0A=
+Telligent_Modal._resize=3Dfunction(event)=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(!event)=0A=
+event=3Dwindow.event;if(event.button!=3Dthis._resizeModalInfo.Button)=0A=
+{this._endResize(event);return;}=0A=
+var =
+eventX=3Dtypeof(event.pageX)!=3D'undefined'?event.pageX:event.screenX;var=
+ =
+eventY=3Dtypeof(event.pageY)!=3D'undefined'?event.pageY:event.screenY;var=
+ xChange=3DeventX-this._resizeModalInfo.StartMouseX;var =
+yChange=3DeventY-this._resizeModalInfo.StartMouseY;this.Open(null,this._r=
+esizeModalInfo.StartModalWidth+xChange,this._resizeModalInfo.StartModalHe=
+ight+yChange,this._lastModalInfo.OnCloseFunction,this._lastModalInfo.X,th=
+is._lastModalInfo.Y,true);}
+------=_NextPart_000_01B5_01C93066.72E138D0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://embed.technorati.com/embed/qe6ceshc2v.js
+
+<!--=0A=
+/* Embed was not displayable.  Please verify your embed settings at =
+http://technorati.com/account/#blogs. */=0A=
+-->
+------=_NextPart_000_01B5_01C93066.72E138D0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.statcounter.com/counter/counter_xhtml.js
+
+var sc_width=3Dscreen.width;var sc_height=3Dscreen.height;var =
+sc_referer=3D""+document.referrer;try{sc_referer=3D""+parent.document.ref=
+errer}catch(ex){sc_referer=3D""+document.referrer}var sc_os=3D"";var =
+sc_title=3D"";var sc_url=3D"";var sc_unique=3D0;var sc_returning=3D0;var =
+sc_returns=3D0;var sc_base_dir;var sc_click_dir;var sc_error=3D0;var =
+sc_remove=3D0;var sc_http_url=3D"http";var sc_link_back_start=3D"";var =
+sc_link_back_end=3D"";var sc_security_code=3D"";var sc_cls=3D-1;var =
+sc_host=3D"statcounter.com";if(window.sc_click_stat){sc_cls=3Dwindow.sc_c=
+lick_stat}if(window.sc_https){if(sc_https=3D=3D1){sc_doc_loc=3D''+documen=
+t.location;myRE=3Dnew =
+RegExp("^https","i");if(sc_doc_loc.match(myRE)){sc_http_url=3D"https"}}}i=
+f(window.sc_local){sc_base_dir=3Dsc_local}else{if(window.sc_partition){if=
+(sc_cls=3D=3D-1&&sc_partition=3D=3D3){sc_cls=3D1}var =
+sc_counter=3D"";if(window.sc_partition!=3D34&&sc_partition<=3D45){sc_coun=
+ter=3Dsc_partition+1}sc_base_dir=3Dsc_http_url+"://c"+sc_counter+"."+sc_h=
+ost+"/"}else{sc_base_dir=3Dsc_http_url+"://c1."+sc_host+"/"}}sc_click_dir=
+=3Dsc_base_dir;if(window.sc_text){sc_base_dir+=3D"text.php?"}else{sc_base=
+_dir+=3D"t.php?"}if(window.sc_project){sc_base_dir+=3D"sc_project=3D"+sc_=
+project}else =
+if(window.usr){sc_base_dir+=3D"usr=3D"+usr}else{sc_error=3D1}if(window.sc=
+_remove_link){sc_link_back_start=3D"";sc_link_back_end=3D""}else{sc_link_=
+back_start=3D"<a class=3D\"statcounter\" =
+href=3D\"http://www."+sc_host+"\" =
+target=3D\"_blank\">";sc_link_back_end=3D"<\/a>"}sc_date=3Dnew =
+Date();sc_time=3Dsc_date.getTime();sc_time_difference=3D3600000;sc_title=3D=
+""+document.title;sc_url=3D""+document.location;sc_referer=3Dsc_referer.s=
+ubstring(0,255);sc_title=3Dsc_title.substring(0,150);sc_url=3Dsc_url.subs=
+tring(0,150);sc_referer=3Descape(sc_referer);if(encodeURIComponent){sc_ti=
+tle=3DencodeURIComponent(sc_title)}else{sc_title=3Descape(sc_title)}sc_ur=
+l=3Descape(sc_url);if(window.sc_security){sc_security_code=3Dsc_security}=
+var =
+sc_tracking_url=3Dsc_base_dir+"&resolution=3D"+sc_width+"&h=3D"+sc_height=
++"&camefrom=3D"+sc_referer+"&u=3D"+sc_url+"&t=3D"+sc_title+"&java=3D1&sec=
+urity=3D"+sc_security_code+"&sc_random=3D"+Math.random();var =
+sc_clstr=3D"<span class=3D\"statcounter\">";var sc_cltext=3D"\" =
+alt=3D\"StatCounter - Free Web Tracker and Counter\" =
+border=3D\"0\">";var sc_strout=3Dsc_clstr+sc_link_back_start+"<img =
+src=3D\""+sc_tracking_url+sc_cltext+sc_link_back_end+"</span>";if(sc_erro=
+r=3D=3D1){document.writeln("Code corrupted. Insert fresh copy.")}else =
+if(sc_remove=3D=3D1){}else =
+if(window.sc_invisible){if(window.sc_invisible=3D=3D1){if(window.sc_call)=
+{sc_call++}else{sc_call=3D1}eval("var sc_img"+sc_call+" =3D new =
+Image();sc_img"+sc_call+".src =3D =
+\""+sc_tracking_url+"&invisible=3D1\"")}else{document.writeln(sc_strout)}=
+}else if(window.sc_text){document.writeln('<scr'+'ipt =
+language=3D"JavaScript"'+' =
+src=3D'+sc_tracking_url+"&text=3D"+sc_text+'></scr'+'ipt>')}else{document=
+.writeln(sc_strout)}if(sc_cls>0){if(clickstat_done!=3D1){var =
+clickstat_done=3D1;var clickstat_project=3Dwindow.sc_project;var =
+clickstat_security=3Dwindow.sc_security_code;var =
+dlext=3D"7z|aac|avi|csv|doc|exe|flv|gif|gz|jpe?g|js|mp(3|4|e?g)|mov|pdf|p=
+hps|png|ppt|rar|sit|tar|torrent|txt|wma|wmv|xls|xml|zip";if(typeof(window=
+.sc_download_type)=3D=3D'string'){dlext=3Dwindow.sc_download_type}var =
+ltype=3D"https?|ftp|telnet|ssh|ssl|mailto";var =
+second=3D"ac|co|gov|ltd|me|mod|net|nic|nhs|org|plc|police|sch|com";var =
+dl=3Dnew RegExp("\\.("+dlext+")$","i");var lnk=3Dnew =
+RegExp("^("+ltype+"):","i");var domsec=3Dnew =
+RegExp("\^("+second+")$","i");var =
+host_name=3Dlocation.host.replace(/^www\./i,"");var =
+host_splitted=3Dhost_name.split(".");var =
+domain=3Dhost_splitted.pop();var =
+host_split=3Dhost_splitted.pop();if(domsec.test(host_split)){domain=3Dhos=
+t_split+"."+domain;host_split=3Dhost_splitted.pop()}domain=3Dhost_split+"=
+."+domain;var lnklocal_mask=3D"^https?:\/\/(.*)"+domain;var =
+lnklocal=3Dnew =
+RegExp(lnklocal_mask,"i");if(document.getElementsByTagName){var =
+anchors=3Ddocument.getElementsByTagName('a');for(var =
+i=3D0;i<anchors.length;i++){var =
+anchor=3Danchors[i];if(anchor.onmousedown){var =
+original_click=3Danchor.onmousedown;var =
+s=3Doriginal_click.toString().split("\n").join(" ");var =
+bs=3Ds.indexOf('{');var head=3Ds.substr(0,bs);var =
+ps=3Dhead.indexOf('(');var pe=3Dhead.indexOf(')');var =
+params=3Dhead.substring(ps+1,pe);var plist=3Dparams.split(",");var =
+body=3Ds.substr(bs+1,s.length-bs-2);var =
+insert=3D"sc_clickstat_call(this,'"+sc_click_dir+"');";var =
+final_body=3Dinsert+body;var ev_head=3D"new Function (";var =
+ev_params=3D"";var ev_sep=3D"";for(var =
+sc_i=3D0;sc_i<plist.length;sc_i++){ev_params=3Dev_sep+"'"+plist[sc_i]+"'"=
+;ev_sep=3D","}if(ev_sep=3D=3D","){ev_params+=3D","}var =
+ev_foot=3D"final_body);";var =
+ev_final=3Dev_head+ev_params+ev_foot;anchor.onmousedown=3Deval(ev_final)}=
+else{anchor.onmousedown=3Dnew =
+Function("event","sc_clickstat_call(this,'"+sc_click_dir+"');return =
+true;")}}}function sc_none(){return}function =
+sc_clickstat_call(adata,sc_click_dir){if(adata){var =
+clickmode=3D0;if(lnk.test(adata)){if((lnklocal.test(adata))){if(dl.test(a=
+data)){clickmode=3D1}else{if(sc_cls=3D=3D2){clickmode=3D2}}}else{clickmod=
+e=3D2}}if(clickmode!=3D0){var =
+sc_link=3Descape(adata);if(sc_link.length>0){var =
+sc_req=3Dsc_click_dir+"click.gif?sc_project=3D"+clickstat_project+"&secur=
+ity=3D"+clickstat_security+"&c=3D"+sc_link+"&m=3D"+clickmode+"&rand=3D"+M=
+ath.random();var sc_req_image=3Dnew =
+Image(1,1);sc_req_image.onload=3Dsc_none;sc_req_image.src=3Dsc_req;var =
+d=3Dtypeof(window.sc_delay)!=3D"undefined"?sc_delay:250;var n=3Dnew =
+Date();var t=3Dn.getTime()+d;while(n.getTime()<t)var n=3Dnew Date()}}}}}}
+------=_NextPart_000_01B5_01C93066.72E138D0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/wt.js
+
+//Tag Version: MNP 2.2-no dcsAdSearch/2008-10-01
+//This tag has been modified to remove the dcsAdSearch function.
+var gTagVer =3D "MNP 2.2b/2008-10-01";
+var gService =3D true;
+var gTimeZone =3D -8;
+function dcsCookie(){
+	if (typeof(dcsOther)=3D=3D"function"){
+		dcsOther();
+	}
+	else if (typeof(dcsPlugin)=3D=3D"function"){
+		dcsPlugin();
+	}
+	else if (typeof(dcsFPC)=3D=3D"function"){
+		dcsFPC(gTimeZone);
+	}
+}
+function dcsGetCookie(name){
+	var pos=3Ddocument.cookie.indexOf(name+"=3D");
+	if (pos!=3D-1){
+		var start=3Dpos+name.length+1;
+		var end=3Ddocument.cookie.indexOf(";",start);
+		if (end=3D=3D-1){
+			end=3Ddocument.cookie.length;
+		}
+		return unescape(document.cookie.substring(start,end));
+	}
+	return null;
+}
+function dcsGetCrumb(name,crumb){
+	var aCookie=3DdcsGetCookie(name).split(":");
+	for (var i=3D0;i<aCookie.length;i++){
+		var aCrumb=3DaCookie[i].split("=3D");
+		if (crumb=3D=3DaCrumb[0]){
+			return aCrumb[1];
+		}
+	}
+	return null;
+}
+function dcsGetIdCrumb(name,crumb){
+	var cookie=3DdcsGetCookie(name);
+	var id=3Dcookie.substring(0,cookie.indexOf(":lv=3D"));
+	var aCrumb=3Did.split("=3D");
+	for (var i=3D0;i<aCrumb.length;i++){
+		if (crumb=3D=3DaCrumb[0]){
+			return aCrumb[1];
+		}
+	}
+	return null;
+}
+function dcsFPC(offset){
+	if (typeof(offset)=3D=3D"undefined"){
+		return;
+	}
+	if (document.cookie.indexOf("WTLOPTOUT=3D")!=3D-1){
+		return;
+	}
+	var name=3DgFpc;
+	var dCur=3Dnew Date();
+	var adj=3D(dCur.getTimezoneOffset()*60000)+(offset*3600000);
+	dCur.setTime(dCur.getTime()+adj);
+	var dExp=3Dnew Date(dCur.getTime()+315360000000);
+	var dSes=3Dnew Date(dCur.getTime());
+	if (document.cookie.indexOf(name+"=3D")=3D=3D-1){
+		if ((typeof(gWtId)!=3D"undefined")&&(gWtId!=3D"")){
+			WT.co_f=3DgWtId;
+		}
+		else if ((typeof(gTempWtId)!=3D"undefined")&&(gTempWtId!=3D"")){
+			WT.co_f=3DgTempWtId;
+			WT.vt_f=3D"1";
+		}
+		else{
+			WT.co_f=3D"2";
+			var cur=3DdCur.getTime().toString();
+			for (var i=3D2;i<=3D(32-cur.length);i++){
+				WT.co_f+=3DMath.floor(Math.random()*16.0).toString(16);
+			}
+			WT.co_f+=3Dcur;
+			WT.vt_f=3D"1";
+		}
+		if (typeof(gWtAccountRollup)=3D=3D"undefined"){
+			WT.vt_f_a=3D"1";
+		}
+		WT.vt_f_s=3D"1";
+		WT.vt_f_d=3D"1";
+		WT.vt_f_tlh=3DWT.vt_f_tlv=3D"0";
+	}
+	else{
+		var id=3DdcsGetIdCrumb(name,"id");
+		var lv=3DparseInt(dcsGetCrumb(name,"lv"));
+		var ss=3DparseInt(dcsGetCrumb(name,"ss"));
+		if ((id=3D=3Dnull)||(id=3D=3D"null")||isNaN(lv)||isNaN(ss)){
+			return;
+		}
+		WT.co_f=3Did;
+		var dLst=3Dnew Date(lv);
+		WT.vt_f_tlh=3DMath.floor((dLst.getTime()-adj)/1000);
+		dSes.setTime(ss);
+		if =
+((dCur.getTime()>(dLst.getTime()+1800000))||(dCur.getTime()>(dSes.getTime=
+()+28800000))){
+			WT.vt_f_tlv=3DMath.floor((dSes.getTime()-adj)/1000);
+			dSes.setTime(dCur.getTime());
+			WT.vt_f_s=3D"1";
+		}
+		if =
+((dCur.getDay()!=3DdLst.getDay())||(dCur.getMonth()!=3DdLst.getMonth())||=
+(dCur.getYear()!=3DdLst.getYear())){
+			WT.vt_f_d=3D"1";
+		}
+	}
+	WT.co_f=3Descape(WT.co_f);
+	WT.vt_sid=3DWT.co_f+"."+(dSes.getTime()-adj);
+	var expiry=3D"; expires=3D"+dExp.toGMTString();
+	=
+document.cookie=3Dname+"=3D"+"id=3D"+WT.co_f+":lv=3D"+dCur.getTime().toSt=
+ring()+":ss=3D"+dSes.getTime().toString()+expiry+"; =
+path=3D/"+(((typeof(gFpcDom)!=3D"undefined")&&(gFpcDom!=3D""))?("; =
+domain=3D"+gFpcDom):(""));
+	if (document.cookie.indexOf(name+"=3D")=3D=3D-1){
+		=
+WT.co_f=3DWT.vt_sid=3DWT.vt_f_s=3DWT.vt_f_d=3DWT.vt_f_tlh=3DWT.vt_f_tlv=3D=
+"";
+		WT.vt_f=3DWT.vt_f_a=3D"2";
+	}
+}
+
+var gFpcDom=3D".microsoft.com";
+
+function dcsEvt(evt,tag){
+	var e=3Devt.target||evt.srcElement;
+	while (e.tagName&&(e.tagName!=3Dtag)){
+		e=3De.parentElement||e.parentNode;
+	}
+	return e;
+}
+function dcsBind(event,func){
+	if ((typeof(window[func])=3D=3D"function")&&document.body){
+		if (document.body.addEventListener){
+			document.body.addEventListener(event, window[func], true);
+		}
+		else if(document.body.attachEvent){
+			document.body.attachEvent("on"+event, window[func]);
+		}
+	}
+}
+function dcsET(){
+	var =
+e=3D(navigator.appVersion.indexOf("MSIE")!=3D-1)?"click":"mousedown";
+	dcsBind(e,"dcsDownload");
+	dcsBind(e,"dcsFormButton");
+	dcsBind("keypress","dcsFormButton");
+	dcsBind(e,"dcsImageMap");
+}
+function dcsMultiTrack(){
+	if (arguments.length%2=3D=3D0){
+		for (var i=3D0;i<arguments.length;i+=3D2){
+			if (arguments[i].indexOf('WT.')=3D=3D0){
+				WT[arguments[i].substring(3)]=3Darguments[i+1];
+			}
+			else if (arguments[i].indexOf('DCS.')=3D=3D0){
+				DCS[arguments[i].substring(4)]=3Darguments[i+1];
+			}
+			else if (arguments[i].indexOf('DCSext.')=3D=3D0){
+				DCSext[arguments[i].substring(7)]=3Darguments[i+1];
+			}
+		}
+		var dCurrent=3Dnew Date();
+		DCS.dcsdat=3DdCurrent.getTime();
+		dcsTag();
+	}
+}
+function dcsSetVar(){
+	if =
+((arguments.length%2=3D=3D0)&&(navigator.appVersion.indexOf("MSIE")!=3D-1=
+)){
+		for (var i=3D0;i<arguments.length;i+=3D2){
+			if (arguments[i].indexOf('WT.')=3D=3D0){
+				if (dcsSetVarValidate(arguments[i])){
+					WT["setvar_"+arguments[i].substring(3)]=3Darguments[i+1];
+				}
+				else{WT[arguments[i].substring(3)]=3Darguments[i+1];}
+			}
+			else if (arguments[i].indexOf('DCS.')=3D=3D0){
+				if (dcsSetVarValidate(arguments[i])){
+					DCS["setvar_"+arguments[i].substring(4)]=3Darguments[i+1];
+				}
+				else{DCS[arguments[i].substring(4)]=3Darguments[i+1];}
+
+			}
+			else if (arguments[i].indexOf('DCSext.')=3D=3D0){
+				if (dcsSetVarValidate(arguments[i])){
+					DCSext["setvar_"+arguments[i].substring(7)]=3Darguments[i+1];
+				}
+				else{DCSext[arguments[i].substring(7)]=3Darguments[i+1];}
+			}
+		}
+    }
+}
+function dcsSetVarValidate(validate){
+	var wtParamList =3D "DCS.dcssip,DCS.dcsuri,DCS.dcsqry,WT.ti,WT.mc_id";
+	wtParamList =3D wtParamList.split(",");
+	for(var i=3D0;i<wtParamList.length;i++){
+		if(wtParamList[i]=3D=3Dvalidate){
+			return 1;
+		}
+	}
+	return 0;
+}
+function dcsSetVarCap(e){
+	var gCap =3D e.onclick.toString();
+	var gStart =3D =
+gCap.substring(gCap.indexOf("dcsSetVar(")+10,gCap.length);
+  	var gEnd =3D =
+gStart.substring(0,gStart.indexOf(");")).replace(/\s"/gi,"").replace(/"/g=
+i,"");
+  	var gSplit =3D gEnd.split(",");
+  	if (gSplit.length!=3D-1){
+		for (var i=3D0;i<gSplit.length;i+=3D2){
+    		if (gSplit[i].indexOf('WT.')=3D=3D0){
+				if (dcsSetVarValidate(gSplit[i])){
+					WT["setvar_"+gSplit[i].substring(3)]=3DgSplit[i+1];
+				}
+				else{WT[gSplit[i].substring(3)]=3DgSplit[i+1];}
+			}
+			else if (gSplit[i].indexOf('DCS.')=3D=3D0){
+				if (dcsSetVarValidate(gSplit[i])){
+					DCS["setvar_"+gSplit[i].substring(4)]=3DgSplit[i+1];
+				}
+				else{DCS[gSplit[i].substring(4)]=3DgSplit[i+1];}
+
+			}
+			else if (gSplit[i].indexOf('DCSext.')=3D=3D0){
+				if (dcsSetVarValidate(gSplit[i])){
+					DCSext["setvar_"+gSplit[i].substring(7)]=3DgSplit[i+1];
+				}
+				else{DCSext[gSplit[i].substring(7)]=3DgSplit[i+1];}
+			}
+		}
+  	}
+}
+function dcsDownload(evt){
+	evt=3Devt||(window.event||"");
+	if (evt){
+		var e=3DdcsEvt(evt,"A");
+		var f=3DdcsEvt(evt,"IMG");
+		if(e){
+			if =
+(e.hostname&&e.href&&e.protocol&&(e.protocol.indexOf("http")!=3D-1)){
+				dcsNavigation(e);
+				=
+if((navigator.appVersion.indexOf("MSIE")=3D=3D-1)&&(e.onclick)){dcsSetVar=
+Cap(e);}
+       			var =
+gPath=3De.pathname?((e.pathname.indexOf("/")!=3D0)?"/"+e.pathname:e.pathn=
+ame):"/";
+       			var gPath=3DDCS.setvar_dcsuri||gPath;
+       			var gHost=3DDCS.setvar_dcssip||e.hostname;
+       			var gQry=3DDCS.setvar_dcsqry||e.search||"";
+				if(f.alt){gTitle=3Df.alt;}
+				=
+else{if(document.all){gTitle=3De.innerText||e.innerHTML||"";}else{gTitle=3D=
+e.text||e.innerHTML||"";}}
+				gTitle=3DWT.setvar_ti||gTitle;
+				WT.mc_id=3DWT.setvar_mc_id||"";
+				=
+WT.sp=3DWT.ad=3DDCS.setvar_dcsuri=3DDCS.setvar_dcssip=3DDCS.setvar_dcsqry=
+=3DWT.setvar_ti=3D"";
+				=
+dcsMultiTrack("DCS.dcssip",gHost,"DCS.dcsuri",gPath,"DCS.dcsqry",gQry,"WT=
+.ti","Link:"+gTitle,"WT.dl","1","WT.sp","","WT.ad","");
+				=
+DCS.dcssip=3DDCS.dcsuri=3DDCS.dcsqry=3DWT.ti=3DWT.dl=3DgTitle=3DgPath=3Dg=
+Qry=3DgHost=3D"";
+			}
+		}
+	}
+}
+function dcsNavigation(wtnode){
+	try{
+	var wtCount=3D0;
+	while(wtCount!=3D1){
+		if(wtnode.parentNode.tagName!=3D"DIV"){
+			wtnode=3Dwtnode.parentNode;
+		}
+		if(wtnode.parentNode.tagName=3D=3D"DIV"){
+			=
+if((wtnode.parentNode.getAttribute('id'))||(wtnode.parentNode.className))=
+{
+				DCSext.wtNavigation =3D =
+wtnode.parentNode.getAttribute("id")||wtnode.parentNode.className;
+				wtCount=3D1;
+			}
+			else{
+				wtnode=3Dwtnode.parentNode;
+			}
+		}
+	}}
+	catch(error){}
+}
+function dcsImageMap(evt){
+	evt=3Devt||(window.event||"");
+	if (evt){
+		var e=3DdcsEvt(evt,"AREA");
+		if(e){
+			if =
+(e.hostname&&e.href&&e.protocol&&(e.protocol.indexOf("http")!=3D-1)){
+				dcsNavigation(e);
+				=
+if((navigator.appVersion.indexOf("MSIE")=3D=3D-1)&&(e.onclick)){dcsSetVar=
+Cap(e);}
+				var =
+gPath=3De.pathname?((e.pathname.indexOf("/")!=3D0)?"/"+e.pathname:e.pathn=
+ame):"/";
+       			var gHost=3DDCS.setvar_dcssip||e.hostname;
+       			var gQry=3DDCS.setvar_dcsqry||e.search||"";
+				=
+dcsMultiTrack("DCS.dcssip",gHost,"DCS.dcsuri",gPath,"DCS.dcsqry",gQry,"WT=
+.ti","Link:Image Map","WT.dl","1","WT.sp","","WT.ad","");
+				=
+DCS.dcssip=3DDCS.dcsuri=3DDCS.dcsqry=3DWT.ti=3DWT.dl=3DgPath=3DgHost=3DgQ=
+ry=3D"";
+			}
+		}
+	}
+}
+function dcsFormButton(evt){
+	evt=3Devt||(window.event||"");
+	if (evt){
+		var e=3DdcsEvt(evt,"INPUT");
+		var type=3De.type||"";
+		if =
+(type&&((type=3D=3D"submit")||(type=3D=3D"image")||(type=3D=3D"button")||=
+(type=3D=3D"reset"))||((type=3D=3D"text")&&((evt.which||evt.keyCode)=3D=3D=
+13))){
+			var gUri=3DgTitle=3DgMethod=3Dqry=3D"";
+			if(e.form){
+				if((WT.z_collect_form_data =3D=3D e.form.name) || =
+(WT.z_collect_form_data =3D=3D e.form.className) || =
+(WT.z_collect_form_data =3D=3D 'all')){
+					var elems=3De.form.elements;
+					for (var i=3D0;i<elems.length;i++){
+						var etype=3Delems[i].type;
+						if (etype=3D=3D"text"){
+							=
+qry+=3D((qry=3D=3D"")?"":"&")+escape(elems[i].name)+"=3D"+escape(elems[i]=
+.value);
+						}
+					}
+				}
+				gUri=3De.form.action||window.location.pathname;
+				gTitle=3De.form.id||e.form.className||e.form.name||"Unknown";
+				gMethod=3De.form.method||"Unknown";
+			}
+			else{
+				gUri=3Dwindow.location.pathname;
+				gTitle=3De.name||e.id||"Unknown";
+				gMethod=3D"Input";
+			}
+			=
+if((gUri!=3D"")&&(gTitle!=3D"")&&(gMethod!=3D"")&&(evt.keyCode!=3D9)){
+				=
+dcsMultiTrack("DCS.dcsuri",gUri,"DCS.dcsqry",qry,"WT.ti","FormButton:"+gT=
+itle,"WT.dl","2","WT.fm",gMethod,"WT.ad","","WT.mc_id","","WT.sp","");
+			}
+			=
+DCS.dcsuri=3DDCS.dcsqry=3Dqry=3DWT.ti=3DWT.dl=3DWT.fm=3DgUri=3DgTitle=3Dg=
+Method=3D"";
+		}
+	}
+}
+function dcsNvr(){
+	if (document.cookie.indexOf("WTLOPTOUT=3D")!=3D-1){
+		return;
+	}
+	var cur=3Dnew Date();
+	var exp=3Dnew Date(cur.getTime()+315360000000);
+	var cfields=3D{name:"WT_NVR",value:"",expiry:"; =
+expires=3D"+exp.toGMTString(),path:"; path=3D/",domain:"; =
+domain=3D"+window.location.hostname};
+	var cdata=3DdcsNvrRead(cfields.name);
+	var isnew=3DdcsNvrProcess(cdata);
+	if (isnew||dcsNvrFind(cfields.name,",")){
+		var c=3DdcsNvrCompose(cdata,cfields);
+		for (var i=3D0;i<c.length;i++){
+			document.cookie=3Dc[i];
+		}
+	}
+	if (isnew){
+		var val=3D(document.cookie.indexOf(cfields.name+"=3D")!=3D-1)?"1":"2";
+		for (var i=3D0;i<cdata.length;i++){
+			if (cdata[i][1]){
+				WT["vt_nvr"+(i+1)]=3Dval;
+			}
+		}
+	}
+}
+
+function dcsNvrRead(name){
+	var data=3Dnew Array();
+	var num=3D0;
+	var re=3D/,/g;
+	var value=3DdcsNvrGetCookie(name);
+	while(value){
+		var levels=3Dvalue.split(":");
+		for (var i=3D0;i<levels.length;i++){
+			var crumbs=3Dlevels[i].split("=3D");
+			var level=3DparseInt(crumbs[0]);
+			var paths=3Dcrumbs[1].replace(re,"|").split("|");
+			if (typeof(data[level])!=3D"object"){
+				data[level]=3Dnew Array(paths,false);
+			}
+			else{
+				data[level][0]=3Ddata[level][0].concat(paths);
+			}
+		}
+		num++;
+		value=3DdcsNvrGetCookie(name+num);
+	}
+	return data;
+}
+
+function dcsNvrFind(name,tofind){
+	var found=3Dfalse;
+	var num=3D0;
+	var value=3DdcsNvrGetCookie(name);
+	while(value){
+		if (value.indexOf(tofind)!=3D-1){
+			found=3Dtrue;
+			break;
+		}
+		num++;
+		value=3DdcsNvrGetCookie(name+num);
+	}
+	return found;
+}
+
+function dcsNvrGetCookie(name){
+	var pos=3Ddocument.cookie.indexOf(name+"=3D");
+	if (pos!=3D-1){
+		var start=3Dpos+name.length+1;
+		var end=3Ddocument.cookie.indexOf(";",start);
+		if (end=3D=3D-1){
+			end=3Ddocument.cookie.length;
+		}
+		return document.cookie.substring(start,end);
+	}
+	return null;
+}
+
+function dcsNvrProcess(data){
+	var newv=3Dfalse;
+	var maxlevel=3D3;
+	var curlevel=3D0;
+	var splitp=3Dnew Array();
+	var p=3Dwindow.location.pathname;
+	var =
+curpath=3Dp.substring(p.indexOf("/")+1,p.lastIndexOf("/")).toLowerCase();=
+
+	var badchars=3D{"%09":/\t/g,"%20":/ /g,"%2C":/,/g,"%3B":/;/g};
+	var tmp=3Dnew String(curpath);
+	for (var ch in badchars){
+		tmp=3Dtmp.replace(badchars[ch],ch);
+	}
+	curpath=3Dtmp;
+
+	if (curpath.length>1){
+		splitp=3Dcurpath.split("/",maxlevel);
+		curlevel=3Dsplitp.length;
+		curpath=3Dsplitp.join("/");
+	}
+	if (data.length>0){
+		var found=3Dfalse;
+		if (data.length>curlevel){
+			for (var i=3D0;i<data[curlevel][0].length;i++){
+				if (data[curlevel][0][i]=3D=3Dcurpath){
+					found=3Dtrue;
+					break;
+				}
+			}
+			if (!found){
+				data[curlevel][0][data[curlevel][0].length]=3Dcurpath;
+				data[curlevel][1]=3Dtrue;
+				newv=3Dtrue;
+			}
+		}
+		else{
+			for (var i=3D0;i<(curlevel+1);i++){
+				if (typeof(data[i])!=3D"object"){
+					data[i]=3Dnew =
+Array([(i=3D=3D0)?"/":splitp.slice(0,i).join("/")],true);
+				}
+			}
+			newv=3Dtrue;
+		}
+	}
+	else{
+		for (var i=3D0;i<(curlevel+1);i++){
+			data[i]=3Dnew =
+Array([(i=3D=3D0)?"/":splitp.slice(0,i).join("/")],true);
+		}
+		newv=3Dtrue;
+	}
+	return newv;
+}
+
+function dcsNvrCompose(data,fields){
+	var cookies=3Dnew Array();
+	var paths=3Dnew Array();
+	var num=3D0;
+	var maxnum=3D10;
+	var maxval=3D4000;
+	var maxed=3Dfalse;
+	for (var i=3D0;(i<data.length)&&!maxed;i++){
+		paths=3Ddata[i][0];
+		var newpath=3Di+"=3D";
+		for (var j=3D0;(j<paths.length)&&!maxed;j++){
+			newpath+=3D((j=3D=3D0)?"":"|")+paths[j];
+			if =
+(((fields.name+num).length+fields.value.length+newpath.length+1)<=3Dmaxva=
+l){
+				if ((fields.value.length>0)&&(j=3D=3D0)){
+					fields.value+=3D":";
+				}
+				fields.value+=3Dnewpath;
+			}
+			else if (fields.value.length>0){
+				=
+cookies[num]=3Dfields.name+(num||"")+"=3D"+fields.value+fields.expiry+fie=
+lds.path+fields.domain;
+				fields.value=3Di+"=3D"+paths[j];
+				if ((++num)>(maxnum-1)){
+					maxed=3Dtrue;
+				}
+			}
+			newpath=3D"";
+		}
+	}
+	if (!maxed){
+		=
+cookies[num]=3Dfields.name+(num||"")+"=3D"+fields.value+fields.expiry+fie=
+lds.path+fields.domain;
+	}
+	return cookies;
+}
+function dcsAdv(){
+	if ((typeof(gTrackEvents)!=3D"undefined")&&gTrackEvents){
+		WT.wtsv=3D1;
+		if(typeof(WT.sp)!=3D"undefined"){WT.sv_sp=3DWT.sp;}
+		dcsFunc("dcsET");
+	}
+	dcsFunc("dcsCookie");
+	dcsFunc("dcsNvr");
+	DCSext.wtEvtSrc=3DDCS.dcssip+DCS.dcsuri;
+}
+
+var gImages=3Dnew Array;
+var gIndex=3D0;
+var DCS=3Dnew Object();
+var WT=3Dnew Object();
+var DCSext=3Dnew Object();
+var gQP=3Dnew Array();
+var gI18n=3Dfalse;
+if (window.RegExp){
+	var RE=3D{"%09":/\t/g,"%20":/ =
+/g,"%23":/\#/g,"%26":/\&/g,"%2B":/\+/g,"%3F":/\?/g,"%5C":/\\/g};
+	var I18NRE=3D{"%25":/\%/g};
+}
+
+function dcsVar(){
+	var dCurrent=3Dnew Date();
+	WT.tz=3DdCurrent.getTimezoneOffset()/60*-1;
+	if (WT.tz=3D=3D0){
+		WT.tz=3D"0";
+	}
+	WT.bh=3DdCurrent.getHours();
+	=
+WT.ul=3Dnavigator.appName=3D=3D"Netscape"?navigator.language:navigator.us=
+erLanguage;
+	if (typeof(screen)=3D=3D"object"){
+		=
+WT.cd=3Dnavigator.appName=3D=3D"Netscape"?screen.pixelDepth:screen.colorD=
+epth;
+		WT.sr=3Dscreen.width+"x"+screen.height;
+	}
+	if (typeof(navigator.javaEnabled())=3D=3D"boolean"){
+		WT.jo=3Dnavigator.javaEnabled()?"Yes":"No";
+	}
+	if (document.title){
+		=
+WT.ti=3DgI18n?dcsEscape(dcsEncode(document.title),I18NRE):document.title;=
+
+	}
+	WT.js=3D"Yes";
+	WT.jv=3DdcsJV();
+	if (document.body&&document.body.addBehavior){
+		document.body.addBehavior("#default#clientCaps");
+		if (document.body.connectionType){
+			WT.ct=3Ddocument.body.connectionType;
+		}
+		document.body.addBehavior("#default#homePage");
+		WT.hp=3Ddocument.body.isHomePage(location.href)?"1":"0";
+	}
+	if (parseInt(navigator.appVersion)>3){
+		if ((navigator.appName=3D=3D"Microsoft Internet =
+Explorer")&&document.body){
+			WT.bs=3Ddocument.body.offsetWidth+"x"+document.body.offsetHeight;
+		}
+		else if (navigator.appName=3D=3D"Netscape"){
+			WT.bs=3Dwindow.innerWidth+"x"+window.innerHeight;
+		}
+	}
+	WT.fi=3D"No";
+	WT.fv=3D(function(){
+		var i,flash;
+		if (window.ActiveXObject){
+			for(i=3D10;i>0;i--){
+				try{
+					flash=3Dnew ActiveXObject("ShockwaveFlash.ShockwaveFlash."+i);
+					WT.fi=3D"Yes";
+					return i+".0";
+				}
+				catch(e){
+				}
+			}
+		}
+		else if (navigator.plugins&&navigator.plugins.length){
+			for (i=3D0;i<navigator.plugins.length;i++){
+				if (navigator.plugins[i].name.indexOf('Shockwave Flash')!=3D-1){
+					WT.fi=3D"Yes";
+					return navigator.plugins[i].description.split(" ")[2];
+				}
+			}
+		}
+		return "";
+	})();
+	WT.sli=3D(function(){
+    try{
+    	if(navigator.userAgent.indexOf('MSIE')!=3D-1){
+    		var wtsli =3D new ActiveXObject('AgControl.AgControl');
+      	if(wtsli){return "Installed";}
+      }
+      else{
+				if (navigator.plugins["Silverlight Plug-In"]){
+        	return "Installed";
+        }
+      }
+ 		}
+    catch(e){}
+    return "Not Installed";
+	})();
+	WT.slv=3D(function(){
+		var i,j,slv;
+    if =
+((typeof(Silverlight)=3D=3D"object")&&(typeof(Silverlight.isInstalled)=3D=
+=3D"function")){
+			for(j=3D9;j>=3D0;j--){
+				for(i=3D3;i>0;i--){
+					slv=3Di+"."+j;
+					if (Silverlight.isInstalled(slv)){
+						return slv;
+					}
+				}
+			}
+		}
+		return "Version Unavailable";
+	})();
+	if (gI18n){
+		WT.em=3D(typeof(encodeURIComponent)=3D=3D"function")?"uri":"esc";
+		if (typeof(document.defaultCharset)=3D=3D"string"){
+			WT.le=3Ddocument.defaultCharset;
+		}
+		else if (typeof(document.characterSet)=3D=3D"string"){
+			WT.le=3Ddocument.characterSet;
+		}
+	}
+	WT.dl=3D"0";
+	WT.dcsvid=3DdcsGetCookie("MC1");
+	DCS.dcsdat=3DdCurrent.getTime();
+	DCS.dcssip=3Dwindow.location.hostname;
+	DCS.dcsuri=3Dwindow.location.pathname;
+	var gDirLevels =3D 5;
+	var gFpath =3D =
+window.location.pathname.substring(window.location.pathname.indexOf('/')+=
+1,window.location.pathname.lastIndexOf('/')+1).toLowerCase();
+	if(gFpath=3D=3D''){gFpath=3D"/";}
+	else{
+		var gSplit=3DgFpath.split("/");
+		gFpath=3D"";
+		for(var i=3D1;i<gSplit.length&&i<=3DgDirLevels;i++){
+			gFpath+=3D"/";
+			for(var b=3D0;b<i;b++){
+					gFpath+=3DgSplit[b]+"/";
+			}
+			if(i!=3DgDirLevels&&i!=3DgSplit.length-1){
+				gFpath+=3D";";
+			}
+		}
+	}
+	DCSext.wtDrillDir=3DgFpath;
+	if (window.location.search){
+		DCS.dcsqry=3Dwindow.location.search;
+		if (gQP.length>0){
+			for (var i=3D0;i<gQP.length;i++){
+				var pos=3DDCS.dcsqry.indexOf(gQP[i]);
+				if (pos!=3D-1){
+					var front=3DDCS.dcsqry.substring(0,pos);
+					var =
+end=3DDCS.dcsqry.substring(pos+gQP[i].length,DCS.dcsqry.length);
+					DCS.dcsqry=3Dfront+end;
+				}
+			}
+		}
+	}
+	if =
+((window.document.referrer!=3D"")&&(window.document.referrer!=3D"-")){
+		if (!(navigator.appName=3D=3D"Microsoft Internet =
+Explorer"&&parseInt(navigator.appVersion)<4)){
+			DCS.dcsref=3DgI18n?dcsEscape(window.document.referrer, =
+I18NRE):window.document.referrer;
+		}
+	}
+}
+function dcsA(N,V){
+	return "&"+N+"=3D"+dcsEscape(V, RE);
+}
+function dcsEscape(S, REL){
+	if (typeof(REL)!=3D"undefined"){
+		var retStr =3D new String(S);
+		for (R in REL){
+			retStr =3D retStr.replace(REL[R],R);
+		}
+		return retStr;
+	}
+	else{
+		return escape(S);
+	}
+}
+function dcsEncode(S){
+	return =
+(typeof(encodeURIComponent)=3D=3D"function")?encodeURIComponent(S):escape=
+(S);
+}
+function dcsCreateImage(dcsSrc){
+	if (document.images){
+		gImages[gIndex]=3Dnew Image;
+		gImages[gIndex].src=3DdcsSrc;
+		gIndex++;
+	}
+	else{
+		document.write('<IMG ALT=3D"" BORDER=3D"0" NAME=3D"DCSIMG" WIDTH=3D"1" =
+HEIGHT=3D"1" SRC=3D"'+dcsSrc+'">');
+	}
+}
+function dcsMeta(){
+	var elems;
+	if (document.all){
+		elems=3Ddocument.all.tags("meta");
+	}
+	else if (document.documentElement){
+		elems=3Ddocument.getElementsByTagName("meta");
+	}
+	if (typeof(elems)!=3D"undefined"){
+		for (var i=3D1;i<=3Delems.length;i++){
+			var meta=3Delems.item(i-1);
+			if (meta.name){
+				if (meta.name.indexOf('WT.')=3D=3D0){
+					=
+WT[meta.name.substring(3)]=3D(gI18n&&(meta.name.indexOf('WT.ti')=3D=3D0))=
+?dcsEscape(dcsEncode(meta.content),I18NRE):meta.content;
+				}
+				else if (meta.name.indexOf('DCSext.')=3D=3D0){
+					DCSext[meta.name.substring(7)]=3Dmeta.content;
+				}
+				else if (meta.name.indexOf('DCS.')=3D=3D0){
+					=
+DCS[meta.name.substring(4)]=3D(gI18n&&(meta.name.indexOf('DCS.dcsref')=3D=
+=3D0))?dcsEscape(meta.content,I18NRE):meta.content;
+				}
+			}
+		}
+	}
+}
+function dcsTag(){
+	if (document.cookie.indexOf("WTLOPTOUT=3D")!=3D-1){
+		return;
+	}
+	var =
+P=3D"http"+(window.location.protocol.indexOf('https:')=3D=3D0?'s':'')+":/=
+/"+gDomain+(gDcsId=3D=3D""?'':'/'+gDcsId)+"/dcs.gif?";
+	for (N in DCS){
+		if (DCS[N]) {
+			P+=3DdcsA(N,DCS[N]);
+		}
+	}
+	for (N in WT){
+		if (WT[N]) {
+			P+=3DdcsA("WT."+N,WT[N]);
+		}
+	}
+	for (N in DCSext){
+		if (DCSext[N]) {
+			P+=3DdcsA(N,DCSext[N]);
+		}
+	}
+	if (P.length>2048&&navigator.userAgent.indexOf('MSIE')>=3D0){
+		P=3DP.substring(0,2040)+"&WT.tu=3D1";
+	}
+	dcsCreateImage(P);
+}
+function dcsJV(){
+	var agt=3Dnavigator.userAgent.toLowerCase();
+	var major=3DparseInt(navigator.appVersion);
+	var mac=3D(agt.indexOf("mac")!=3D-1);
+	var =
+nn=3D((agt.indexOf("mozilla")!=3D-1)&&(agt.indexOf("compatible")=3D=3D-1)=
+);
+	var nn4=3D(nn&&(major=3D=3D4));
+	var nn6up=3D(nn&&(major>=3D5));
+	var ie=3D((agt.indexOf("msie")!=3D-1)&&(agt.indexOf("opera")=3D=3D-1));
+	var ie4=3D(ie&&(major=3D=3D4)&&(agt.indexOf("msie 4")!=3D-1));
+	var ie5up=3D(ie&&!ie4);
+	var op=3D(agt.indexOf("opera")!=3D-1);
+	var op5=3D(agt.indexOf("opera 5")!=3D-1||agt.indexOf("opera/5")!=3D-1);
+	var op6=3D(agt.indexOf("opera 6")!=3D-1||agt.indexOf("opera/6")!=3D-1);
+	var op7up=3D(op&&!op5&&!op6);
+	var jv=3D"1.1";
+	if (nn6up||op7up){
+		jv=3D"1.5";
+	}
+	else if ((mac&&ie5up)||op6){
+		jv=3D"1.4";
+	}
+	else if (ie5up||nn4||op5){
+		jv=3D"1.3";
+	}
+	else if (ie4){
+		jv=3D"1.2";
+	}
+	return jv;
+}
+function dcsFunc(func){
+	if (typeof(window[func])=3D=3D"function"){
+		window[func]();
+	}
+}
+function dcsDebug()
+{
+	var wtVars=3D"\nTag Version =3D "+gTagVer+"\nDomain =3D =
+"+gDomain+"\nDCSId =3D "+gDcsId;
+	for(N in DCS){wtVars+=3D"\nDCS."+N+" =3D "+DCS[N];}
+	for(N in WT){wtVars+=3D"\nWT."+N+" =3D "+WT[N];}
+	for(N in DCSext){wtVars+=3D"\nDCSext."+N+" =3D "+DCSext[N];}
+	alert(wtVars);
+}
+if(typeof(wtMnpDisabled)=3D=3D"undefined"||!wtMnpDisabled){
+   dcsVar();
+   dcsMeta();
+   dcsFunc("dcsAdv");
+   dcsTag();
+}
+------=_NextPart_000_01B5_01C93066.72E138D0--

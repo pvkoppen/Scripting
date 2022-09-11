@@ -1,0 +1,456 @@
+/* Common */
+a:link { color: #000099; }
+a:visited { color: #660099; }
+a:hover, a:active { color: #990000; }
+
+body, td, th, li, input, select, option {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: Georgia, "Bitstream Vera Serif", "Times New Roman", Times, serif; }
+
+h1 {
+	font-size: 26px;
+	font-weight: bold;
+	margin: 0px 0px 2px 0px;
+}
+
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+	margin: 10px 0px 5px 0px;
+  clear:both;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 10px 0px 5px 0px;
+	border-bottom: 1px dotted grey;
+}
+
+h4 {
+	font-size: 16px;
+	font-weight: normal;
+	margin: 10px 0px 5px 0px;
+	font-style: italic;
+}
+
+h5 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 10px 0px 5px 0px;
+}
+
+h6 {
+	font-size: 12px;
+	font-weight: normal;
+	margin: 10px 0px 5px 0px;
+	font-style: italic;
+}
+
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p { margin-top: 0px; }
+
+p { margin: 10px 0px 10px 0px; }
+
+textarea {
+	font-family: Menlo, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, mono;
+	font-size: 12px;
+	width: 100%;
+}
+
+.achtung {
+  font-size:48px;
+  color:red;
+}
+
+/* Page Header */
+#siteName {
+	padding: 20px;
+	background-color: #F3E0C7;
+	white-space: nowrap;
+}
+#siteName h1 { font-size: 48px; }
+
+#siteName a {
+	color: #000000;
+	text-decoration: none;
+}
+
+#utilityNav {
+	text-align: right;
+	white-space: nowrap;
+	color: #000000;
+	padding: 5px 5px 0 0;
+	background-color: #F3E0C7;
+}
+
+#utilityNav a { margin: 0 5px 0 5px; }
+#utilityNav a:link, #utilityNav a:visited { color: #000099; }
+#utilityNav a:hover, #utilityNav a:active { color: #990000; }
+
+/* DHTML Menu */
+#coreContentNav {
+	padding: 0px;
+	border-width: 1px;
+	border-style: solid none solid none;
+	border-color: #000000;
+	white-space: nowrap;
+	color: #ffffff;
+	background-color: #993300;
+	background-image: url(/images/menuBarBkg.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+a.menuButton, a.menuButton:visited {
+	float: left;
+	padding: 3px 10px 3px 10px;
+	display: block;
+	left: 0px;
+	top: 0px;
+	z-index: 100;
+	border-color: #000000;
+	border-width: 1px;
+	border-style: none dotted none none;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 16px;
+
+}
+
+div.dhtmlMenu {
+	position: absolute;
+	visibility: hidden;
+	z-index: 101;
+	margin-left: -1px;
+	border-color: #000000;
+	border-width: 1px;
+	border-style: solid;
+	color: #ffffff;
+	background-color: #993300;
+	background-image: url(/images/menuBkg.gif);
+	background-repeat: repeat-x;
+
+}
+
+div.dhtmlMenu a.dhtmlMenuItem {
+	display: block;
+	padding: 2px 10px 2px 10px;
+	font-weight: normal;
+	text-decoration: none;
+	white-space: nowrap;
+	color: #ffffff;
+}
+
+div.dhtmlMenu a.dhtmlMenuItem:hover {
+	padding: 2px 10px 2px 10px;
+	margin: 0px;
+	font-weight: normal;
+	white-space: nowrap;
+	background-color: #D95200;
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	color: #ffffff;
+}
+
+/* Path Navigation */
+#pathNav {
+	padding: 3px 0px 8px 10px;
+	font-size: 10px;
+	color: #999999;
+}
+
+#pathNav a:link, #pathNav a:visited { color: #6699FF; }
+#pathNav a:hover, #pathNav a:active { color: #000000; }
+
+/* Content and Featured Images Column */
+#content { padding: 0 20px 20px 20px; }
+
+/* Images */
+img {
+  border-color: #000000;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.forSalePix {
+  border: 0;
+  padding: 0 0 10px 10px;
+  float: right;
+}
+
+/* Body Content Styles */
+#bodytext { }
+
+.caption {
+	font-size: 10px;
+	margin: 5px 0 0 10px;
+  font-style: italic;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.emphasis {
+  font-weight: bold;
+}
+
+fieldset.annotatedLinks {
+  border-color: #999999;
+  border-width: 1px;
+  border-style: dotted;
+  padding: 5px;
+}
+
+fieldset.annotatedLinks legend {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 5px 0 5px;
+}
+
+fieldset.annotatedLinks th {
+  text-align: right;
+  white-space: nowrap;
+}
+
+fieldset.annotatedLinks td { }
+
+#movieListTable td {
+  border-width: 1px 0px 0px 0px;
+  border-color: #cccccc;
+  border-style: solid;
+  padding: 0px 2px 0px 2px;
+}
+
+.note {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.title {
+  font-style:italic;
+}
+
+/* Tables */
+table.dataTable {
+	border-collapse: collapse;
+	border-color: #537DB9;
+	border-width: 1px;
+	border-style: solid;
+}
+
+table.dataTable th {
+	text-transform: inherit;
+	white-space: nowrap;
+	background-color: #3366CC;
+	color: #FFFFFF;
+	padding: 2px 10px 2px 10px;
+	border-right: #FFFFFF;
+	border-width: 1px;
+	border-style: none dotted none none;
+}
+
+table.dataTable td {
+	padding: 5px 10px 5px 10px;
+	border-right: #cccccc;
+	border-width: 1px;
+	border-style: none dotted none none;
+	vertical-align: top;
+}
+
+table.dataTable tr.odd { background-color: #FFFFFF; }
+table.dataTable tr.even { background-color: #E6E6E6; }
+
+/* Forms */
+fieldset {
+	border-color: #cccccc;
+	border-width: 1px;
+	border-style: solid;
+	margin: 0 0 10px 0;
+}
+
+legend {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0 10px 0 10px;
+}
+
+/* Footer */
+#footer {
+	font-size: 10px;
+	text-align: center;
+	margin: 5px 0 10px 0;
+	color: #6f6f6f;
+}
+
+#footer a:link, #footer a:visited { color: #6f6f6f; }
+#footer a:hover, #footer a:active { color: #6f6f6f; }
+
+/*Site Map*/
+.liOne {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 0px 0px 0px;
+}
+
+.liTwo {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.liThree {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+/* Flickr */
+#flickr_badge_source_link_box {
+	background-color: #E8E8E8;
+	border-color: #CCCCCC;
+	border-width: 1px;
+	border-style: solid;
+}
+
+/* TinyMCE */
+.mceContentBody {
+	background-color: #FFFFFF;
+	padding: 10px;
+}
+
+/* Table of Contents */
+div.toc {
+  background-color: #E8E8E8;
+  margin: 10px;
+  border-color: #CCCCCC;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  float: left;
+  width: 30em;
+}
+
+div.toc p {
+  font-weight: bold;
+}
+
+div.toc ol {
+  counter-reset: item;
+}
+
+div.toc li {
+  display: block;
+  margin-top:0;
+}
+
+div.toc li:before {
+  content: counters(item, ".") " "; counter-increment: item;
+}
+
+/*** Syllabi ***/
+.callOut {
+  background-color: #E6E8F2;
+  margin-right: 30px;
+  margin-left: 30px;
+  padding: 6px;
+  border: thin solid #CCC;
+}
+
+.syllabusCourseTitle {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Linux Syllabus */
+.linuxCommands {
+  margin-top: -10px;
+}
+
+.linuxPrograms {
+  margin-top: -10px;
+}
+
+.linuxReadings {
+  margin-top: -10px;
+}
+
+/* Web Design Syllabus */
+.advancedCSS {
+  font-style: italic;
+}
+
+/* Computer History */
+
+.compHistoryColHeader {
+  font-family: Georgia, "Bitstream Vera Serif", "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.compHistoryRowHeader {
+  font-family: Georgia, "Bitstream Vera Serif", "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+td.compHistoryDataColor {
+  font-size: 10px;
+  vertical-align: top;
+  background-color: #C0C0C0;
+}
+
+td.compHistoryDataColor > p {
+  font-size: 10px;
+  vertical-align: top;
+  background-color: #C0C0C0;
+}
+
+td.compHistoryDataPlain {
+  font-size: 10px;
+  vertical-align: top;
+}
+
+td.compHistoryDataPlain > p {
+  font-size: 10px;
+  vertical-align: top;
+}
+
+td.compHistoryDataPlain li {
+  font-size: 10px;
+}
+
+/* Publications */
+.securityFocusColumns p {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.securityFocusColumns blockquote {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Creative Commons */
+
+.creativeCommonsNotice {
+  text-align: center;
+  background-color: #e2e2e2;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding: 6px;
+  border: thin solid #000;
+}

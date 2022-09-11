@@ -1,0 +1,125 @@
+/* HOME <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.home .nav	.title						{background-color:#7E71B4}
+
+.home .chan .container-LEFT				{background-color:#D8D4E8}
+.home .chan .container-RIGHT			{background-color:#ECEAF4}
+
+.home .subchan .container-LEFT			{background-color:#D8D4E8}
+.home .subchan .container-RIGHT			{background-color:#ECEAF4}
+
+.home .article .container-LEFT			{background-color:#D8D4E8}
+.home .article .container-RIGHT			{background-color:#ECEAF4}
+
+
+
+/* PRODUCTEN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.producten .nav	.title ,.prodHP					{background-color:#FF9706}
+
+.producten .chan .container-LEFT		{background-color:#FFE0B4}
+.producten .chan .container-RIGHT		{background-color:#FFEFDA}
+
+.producten .subchan .container-LEFT		{background-color:#FFE0B4}
+.producten .subchan .container-RIGHT	{background-color:#FFEFDA}
+
+.producten .article .container-LEFT		{background-color:#FFE0B4}
+.producten .article .container-RIGHT	{background-color:#FFEFDA}
+
+
+
+/* HELPDESK <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.helpdesk .nav	.title, .helpHP					{background-color:#162273}
+
+.helpdesk .chan .container-LEFT			{background-color:#C3C6DB}
+.helpdesk .chan .container-RIGHT		{background-color:#EDEEF4}
+
+.helpdesk .subchan .container-LEFT		{background-color:#C3C6DB}
+.helpdesk .subchan .container-RIGHT		{background-color:#EDEEF4}
+
+.helpdesk .article .container-LEFT		{background-color:#C3C6DB}
+.helpdesk .article .container-RIGHT		{background-color:#EDEEF4}
+
+
+
+/* DIENSTEN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.diensten .nav	.title, .dienHP					{background-color:#61AF32}
+
+.diensten .chan .container-LEFT			{background-color:#D4EEC5}
+.diensten .chan .container-RIGHT		{background-color:#EAF7E2}
+
+.diensten .subchan .container-LEFT		{background-color:#D4EEC5}
+.diensten .subchan .container-RIGHT		{background-color:#EAF7E2}
+
+.diensten .article .container-LEFT		{background-color:#D4EEC5}
+.diensten .article .container-RIGHT		{background-color:#EAF7E2}
+
+
+
+/* ACTUEEL <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.actueel .nav	.title, .actuHP					{background-color:#0061b4}
+
+.actueel .chan .container-LEFT			{background-color:#CCDFF0}
+.actueel .chan .container-RIGHT			{background-color:#E6EFF7}
+
+.actueel .subchan .container-LEFT		{background-color:#CCDFF0}
+.actueel .subchan .container-RIGHT		{background-color:#E6EFF7}
+
+.actueel .article .container-LEFT		{background-color:#CCDFF0}
+.actueel .article .container-RIGHT		{background-color:#E6EFF7}
+
+
+
+/* ENTERTAINMENT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.entertainment .nav	.title, .enteHP				{background-color:#D8005F}
+
+.entertainment .chan .container-LEFT	{background-color:#F3B2CF}
+.entertainment .chan .container-RIGHT	{background-color:#FCEBF2}
+
+.entertainment .subchan .container-LEFT	{background-color:#F3B2CF}
+.entertainment .subchan .container-RIGHT{background-color:#FCEBF2}
+
+.entertainment .article .container-LEFT	{background-color:#F3B2CF}
+.entertainment .article .container-RIGHT{background-color:#FCEBF2}
+
+
+/* WALLIE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.wallie .nav	.title					{background-color:#C45800}
+
+.wallie .chan .container-LEFT			{background-color:#EDCDB2}
+.wallie .chan .container-RIGHT			{background-color:#FAF2EB}
+
+.wallie .subchan .container-LEFT		{background-color:#EDCDB2}
+.wallie .subchan .container-RIGHT		{background-color:#FAF2EB}
+
+.wallie .article .container-LEFT		{background-color:#EDCDB2}
+.wallie .article .container-RIGHT		{background-color:#FAF2EB}
+
+/* PRINTARTICLE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.home .printarticle, .producten .printarticle, .helpdesk .printarticle, .actueel .printarticle, .diensten .printarticle, .entertainment .printarticle, .wallie .printarticle {height:20px;width:600px;}
+
+.home .printarticle {background-color:#7E71B4;}
+.producten .printarticle {background-color:#FF9706;}
+.helpdesk .printarticle {background-color:#162273;}
+.actueel .printarticle {background-color:#0061b4;}
+.diensten .printarticle	{background-color:#61AF32;}
+.entertainment .printarticle {background-color:#D8005F;}
+.wallie .printarticle {background-color:#C45800;}
+
+/* PHOTOGALERY <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.home .photocontain, .producten .photocontain, .helpdesk .photocontain, .actueel .photocontain, .diensten .photocontain, .entertainment .photocontain, .wallie .photocontain {height:410px;}
+.home .photobottomnav, .producten .photobottomnav, .helpdesk .photobottomnav, .actueel .photobottomnav, .diensten .photobottomnav, .entertainment .photobottomnav, .wallie .photobottomnav {height:31px;}
+
+.home .photocontain {background-color:#ECEAF4;}
+.producten .photocontain {background-color:#FFEFDA;}
+.helpdesk .photocontain {background-color:#EDEEF4;}
+.actueel .photocontain {background-color:#E6EFF7;}
+.diensten .photocontain	{background-color:#EAF7E2;}
+.entertainment .photocontain {background-color:#FCEBF2;}
+.wallie .photocontain {background-color:#FAF2EB;}
+
+.home .photobottomnav {background-color:#D8D4E8;}
+.producten .photobottomnav {background-color:#FFE0B4;}
+.helpdesk .photobottomnav {background-color:#C3C6DB;}
+.actueel .photobottomnav {background-color:#CCDFF0;}
+.diensten .photobottomnav	{background-color:#D4EEC5;}
+.entertainment .photobottomnav {background-color:#F3B2CF;}
+.wallie .photobottomnav {background-color:#EDCDB2;}

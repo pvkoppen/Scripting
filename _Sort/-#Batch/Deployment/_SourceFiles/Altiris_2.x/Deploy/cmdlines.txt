@@ -1,0 +1,2 @@
+[Commands]
+"c:\altiris\aclient\aclient.exe c:\altiris\aclient\aclient.inp -silent -install -scriptedinstall"

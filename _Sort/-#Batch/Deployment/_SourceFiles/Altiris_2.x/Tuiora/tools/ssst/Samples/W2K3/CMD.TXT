@@ -1,0 +1,30 @@
+HP Installation Utility
+Installing and configuring HP programs. Please wait...
+C:\ntcsp\setupc.exe /f /use-latest 
+
+regedit -s c:\$oem$\cpqrdf.reg
+
+C:\CMSISU.EXE
+C:\XMMzero.exe
+C:\cpqbfile.exe
+C:\CPQclean.cmd
+delfile C:\UNATTEND.TXT
+delfile C:\CMDLINES.TXT
+delfile C:\CMSISU.EXE
+deldir C:\NTCSP
+deldir C:\QUICKLCH
+deldir c:\i386
+deldir c:\$win_nt$.~bt
+deldir c:\$ldr$
+delfile C:\cpqbfile.exe
+delfile C:\txtsetup.oem
+delfile c:\$ldr$
+delfile C:\txtsetup.sif
+delfile C:\cpqclean.cmd
+delfile C:\$winnt.log
+deldir C:\drivers
+deldir C:\$oem$
+delfile C:\XMMzero.exe
+delfile C:\compaq.bmp
+C:\windows\system32\rundll32.exe setupapi,InstallHinfSection DefaultInstall 129 c:\reboot.inf
+

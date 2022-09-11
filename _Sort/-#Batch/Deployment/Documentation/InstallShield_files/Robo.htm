@@ -1,0 +1,38 @@
+<html><head>
+
+
+
+
+<meta name="Copyrights" content="Copyright(c) 2001-2002 eHelp Corporation. All rights reserved.">
+<meta name="Product" content="RoboEngine">
+<link rel="shortcut icon" href="http://helpnet.installshield.com/Robo/Resource/mr_sys_icon.ico"><title>Macrovision HelpNet</title>
+
+<script language="Javascript">
+doMain();
+
+function doMain()
+{
+	doCreateFrameSet();
+};
+function doCreateFrameSet()
+{
+	var strURL = "Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&mgr=agm&wnd=InstallShieldLivingHelp%7CMain&wks=wksdef&agt=wsm&ctxid=kb%2Fview.asp&pos=main";
+	if( strURL.indexOf( '?' ) < 0 )	strURL += '?'; else	strURL += '&';
+	strURL += 'js=1';
+	document.open();
+	document.write( '<frameset cols="100%,*" frameborder=no border=0>\n' );
+	document.write( '<frame name="bsscmain" src="'+strURL+'">' );
+	document.write( '<frame name="bsscnull" src="/Robo/Resource/mr_wsm_dot.gif" noresize>\n' );
+	document.write( '</frameset>' );
+	document.close();
+};
+</script></head><frameset cols="100%,*" frameborder="no" border="0">
+<frame name="bsscmain" src="Robo_data/Robo.htm"><frame name="bsscnull" src="Robo_data/mr_wsm_dot.gif" noresize="noresize">
+</frameset>
+<noscript>
+<frameset cols="100%,*" frameborder=no border=0> <frame name="bsscmain"
+src="Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&mgr=agm&wnd=InstallShieldLivingHelp%7CMain&wks=wksdef&agt=wsm&ctxid=kb%2Fview.asp&pos=main">
+<frame name="bsscnull" src="/Robo/Resource/mr_wsm_dot.gif" noresize>
+</frameset>
+</noscript>
+</html>

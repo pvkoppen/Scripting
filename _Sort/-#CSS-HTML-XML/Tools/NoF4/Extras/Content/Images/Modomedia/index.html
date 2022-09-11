@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+	<TITLE>Get IE4</TITLE>
+</HEAD>
+
+<script>
+<!--
+//this script runs when page is loaded and sets browserVersion's value
+
+// start assuming generic browser
+var gotoframe = "pleaseInstallIE4.html";
+
+// change basedir to whatever directory you want to go to
+
+var basedir = "";
+var browserVersion = "generic";
+var digit = 0;
+
+// check for netscape
+if (navigator.appName == "Netscape") {
+      browserVersion = "netscape";
+} 
+
+//check for microsoft
+if (navigator.appVersion.indexOf("MSIE") != -1) {
+      browserVersion = "ie";
+}
+
+//add single digit version number to name of browser
+digit = navigator.appVersion.charAt(0);
+browserVersion = browserVersion + digit;
+
+
+// now to use this information:
+function jumpPage(){
+  // for net3, net4, ie4
+  if (browserVersion == "netscape3" || browserVersion == "netscape4" || browserVersion == "ie4"){   
+    gotoframe = "welcome.html";
+    gotoframe = basedir + gotoframe;
+    self.location.href=gotoframe;
+  }
+  //for net or ie 5 and above
+  var checksum = navigator.appVersion.indexOf("MSIE") + navigator.appVersion.indexOf("Netscape");
+  if (checksum != -2 && digit >= 5){   
+    gotoframe = "welcome.html";
+    gotoframe = basedir + gotoframe;
+    self.location.href=gotoframe;
+  }
+
+
+}
+
+
+//-->
+</script>
+
+
+<BODY bgcolor="000000" text="ffffff" link="#094FA0" vlink="#094FA0" background="ia1/website/images/indexbg.gif" onLoad="jumpPage()">
+
+<center>
+<table border=0 cellpadding=0 cellspacing=0 height="100%" width="430">
+<tr valign="middle"><td align=center>
+
+<img border=0 src="ia1/website/images/ia1_mast1.jpg">
+<p>
+<font face="Arial" size="2">
+The IA1 image browser is not compatible with Internet Explorer 3 or below.  
+<br>
+</td></tr>
+
+<tr><td>
+<font face="Arial" size="2">
+<b>Microsoft&reg; Internet Explorer 4.0 is provided on the IA1 CD.  </b><p>
+
+<b>To Install MSIE 4.0:</b>
+<ul>
+<li>Exit this browser
+<li>Make sure that the IA1 CD is in your CD-ROM drive.
+<li>Click Start (lower left in Windows95), then Run...
+<li>In the box provided type D:\ie4inst.exe 
+(where "D" is the letter of your CD-ROM drive)
+<ul>
+
+</td></tr></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</BODY>
+</HTML>

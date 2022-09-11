@@ -1,0 +1,25 @@
+
+/* HTML Elements */
+body {
+};
+h1 {
+};
+h2 {
+};
+p {
+};
+
+
+/* Class Elements */
+.Error {
+ color: red;
+};
+.Warning {
+ color: Navy;
+};
+.Info {
+ color: Black;
+};
+
+
+/* DIV Sections */

@@ -1,0 +1,1396 @@
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun03082008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B489476c10000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun10082008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B489db12d0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun17082008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B48a6ebb10000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun24082008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B48b0262d0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun31082008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B48b960af0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun07092008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B48c29b2d0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun14092008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B48cbd5340000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun21092008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B48d5102d0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun28092008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B48de3c9d0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun05102008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B48e7771c0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun12102008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B48f0b19d0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun19102008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B48f9ec1d0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun02112008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B490c611d0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun09112008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B49159b9d0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun16112008-0301am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B491ed64e0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun23112008-0302am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B492810e30000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun30112008-0302am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B49314b7a0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun07122008-0302am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B493a86040000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun14122008-0302am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4943c08b0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun21122008-0302am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B494cfb050000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun28122008-0302am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B495635840000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun04012009-0302am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B495f70040000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Mon05012009-0308pm
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B49616ba50000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun22022009-0937am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+The system cannot find the file specified.
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B49a066250000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun01032009-0302am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B49a943d60000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun08032009-0303am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B49b27e990000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\AutomatedWeeklyRestart.LOG
+INFO Script Parameters: /PrintDate
+-------------------------------------- 
+-- Date-Time=Sun15032009-0303am
+-------------------------------------- 
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "IT.Services@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "IT.Services@tuiora.co.nz" "Weekly Reboot (TOLSS02)"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B49bbb92a0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\LogFiles\Restart-DPM-Server.Log
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=Sun31052009-0303am 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tol.local"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tol.local" "Weekly Reboot (TOLSS02).Sun31052009-0303am"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a214ab10000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\LogFiles\Restart-DPM-Server.Log
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=Sun07062009-0303am 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Weekly Reboot (TOLSS02).Sun07062009-0303am"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a2a85370000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\LogFiles\Restart-DPM-Server.Log
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=Sun14062009-0303am 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Weekly Reboot (TOLSS02).Sun14062009-0303am"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a33bfb80000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Weekly Reboot (TOLSS02)" C:\Scripts\LogFiles\Restart-DPM-Server.Log
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=Sun21062009-0303am 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Weekly Reboot (TOLSS02).Sun21062009-0303am"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a3cfa350000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090628(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090628(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a4634b40000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090705(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090705(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a4f6f340000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090712(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090712(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a58a9c50000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090719(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090719(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a61e4340000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090726(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090726(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a6b1eb70000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090802(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090802(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a74593a0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090809(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090809(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a7d93b60000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090816(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090816(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a86ce000000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090823(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090823(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a9008b70000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090830(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090830(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4a9943380000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090906(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090906(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4aa27dbc0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090913(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090913(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4aabb8440000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090920(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090920(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4ab4f2bc0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20090927(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20090927(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4abe1f3c0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPM-Server (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPM-Server.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20091004(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPM-Server (TOLSS02).20091004(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4ac759b10000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-Server-DPM (TOLSS02)" "C:\Scripts\LogFiles\Restart-Server-DPM.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20091011(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-Server-DPM (TOLSS02).20091011(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4ad0943b0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-Server-DPM (TOLSS02)" "C:\Scripts\LogFiles\Restart-Server-DPM.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20091018(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-Server-DPM (TOLSS02).20091018(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4ad9ce6f0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-Server-DPM (TOLSS02)" "C:\Scripts\LogFiles\Restart-Server-DPM.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20091025(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-Server-DPM (TOLSS02).20091025(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4ae3092c0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-Server-DPM (TOLSS02)" "C:\Scripts\LogFiles\Restart-Server-DPM.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20091101(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-Server-DPM (TOLSS02).20091101(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4aec43b30000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20091108(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20091108(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4af57e350000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20091115(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20091115(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4afeb8b40000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20091122(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20091122(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b07f33a0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20091129(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20091129(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b112db90000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20091206(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20091206(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b1a683a0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20091213(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20091213(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b23a2c40000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20091220(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20091220(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b2cdd390000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20091227(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20091227(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b3617b90000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100103(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100103(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b3f52310000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100110(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100110(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b488cbf0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100117(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100117(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b51c7420000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100124(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100124(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b5b01bf0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100131(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100131(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b643c4f0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100207(Sun)-am0304 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100207(Sun)-am0304"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b6d76f10000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100214(Sun)-am0304 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100214(Sun)-am0304"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b76b1560000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100221(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100221(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b7febc80000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100228(Sun)-am0304 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100228(Sun)-am0304"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b89265c0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100303(Wed)-pm0417 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100303(Wed)-pm0417"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b8dd4bc0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Reboot-DPMClientInstallServers (TOLSS02)" "C:\Scripts\LogFiles\Reboot-DPMClientInstallServers.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100304(Thu)-pm0708 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Reboot-DPMClientInstallServers (TOLSS02).20100304(Thu)-pm0708"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.TOL.LOCAL [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b8f4e4e0000 Message accepted for delivery
+INFO Script Parameters: /Log /ProcessRecipient "peter@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "peter@tuiora.co.nz" "Reboot-DPMClientInstallServers (TOLSS02).now"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.TOL.LOCAL [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b8f4e4e0001 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100307(Sun)-am0304 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100307(Sun)-am0304"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.81] on port 25
+220 smtp.tuiora.co.nz (smtp.tuiora.co.nz) ESMTP MailMarshal (v6.1.8.2172) Ready
+250 B4b9260e10000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100314(Sun)-am0303 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100314(Sun)-am0303"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.10.93] on port 25
+220 smtp.tuiora.co.nz ESMTP MailMarshal (v6.7.2.8378) Ready
+250 B4b9b9b510000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315(Mon)-pm1252 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100315(Mon)-pm1252"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.10.93] on port 25
+220 smtp.tuiora.co.nz ESMTP MailMarshal (v6.7.2.8378) Ready
+250 B4b9d76cd0000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100321(Sun)-am0304 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100321(Sun)-am0304"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.93] on port 25
+220 smtp.tuiora.co.nz ESMTP MailMarshal (v6.7.2.8378) Ready
+250 B4ba4d5d60000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Startup (TOLSS02)" "C:\Scripts\LogFiles\Startup.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100322(Mon)-pm0107 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Startup (TOLSS02).20100322(Mon)-pm0107"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.tol.local [10.203.30.93] on port 25
+220 smtp.tuiora.co.nz ESMTP MailMarshal (v6.7.2.8378) Ready
+250 B4ba6b4c00000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727(Tue)-pm0826 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20100727(Tue)-pm0826"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.TOL.LOCAL [10.203.30.93] on port 25
+220 smtp.tuiora.co.nz ESMTP MailMarshal (v6.7.2.8378) Ready
+250 B4c4e98400000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20110518(Wed)-pm0120 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20110518(Wed)-pm0120"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.TOL.LOCAL [10.203.30.93] on port 25
+220 smtp.tuiora.co.nz ESMTP MailMarshal (v6.7.2.8378) Ready
+250 B4dd31ee10000 Message accepted for delivery
+ 
+INFO Script Parameters: /Log "Restart-DPMServer (TOLSS02)" "C:\Scripts\LogFiles\Restart-DPMServer.Log"
+INFO Script Parameters: /PrintDateTime
+-----------------------------------------------------------------------
+-- DATE-TIME=20110518(Wed)-pm0132 
+-----------------------------------------------------------------------
+INFO: Save Email, Check or make recipient folder
+INFO: Save Email, Place Content in email file
+INFO: Send Emails, Open All subfolders of mailqueue folder with an @ symbol
+INFO Script Parameters: /Log /ProcessRecipient "ITServices@tuiora.co.nz"
+INFO: Send Emails, Open all email files and send: to=Foldername, subject=filename, body=File content.
+INFO Script Parameters: /Log /ProcessEmail "ITServices@tuiora.co.nz" "Restart-DPMServer (TOLSS02).20110518(Wed)-pm0132"
+
+Command Line SMTP Emailer V1.07
+Copyright(C) 2002-2004 Craig.Peacock@beyondlogic.org
+Opening connection to smtp.TOL.LOCAL [10.203.30.93] on port 25
+220 smtp.tuiora.co.nz ESMTP MailMarshal (v6.7.2.8378) Ready
+250 B4dd321df0000 Message accepted for delivery

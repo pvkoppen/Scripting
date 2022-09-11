@@ -1,0 +1,23 @@
+
+---------------- Start: \\tol16\y$\PvK\Windows SBS Support DVD\ToDo\Scripts\Fix-UsersSecurity.cmd on  TOLTS05 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111031[Mon]-pm0419 
+-----------------------------------------------------------------------
+-- Processing folder: \\TOLFP01\D$\Users Shared Folders\AUAHA
+INFO : Processing user folder succeeded "\\TOLFP01\D$\Users Shared Folders\AUAHA"\"AndreaG"
+INFO : Processing user folder succeeded "\\TOLFP01\D$\Users Shared Folders\AUAHA"\"BonnyW"
+INFO : Processing user folder succeeded "\\TOLFP01\D$\Users Shared Folders\AUAHA"\"CarolH"
+INFO : Processing user folder succeeded "\\TOLFP01\D$\Users Shared Folders\AUAHA"\"CharmaineB"
+INFO : Processing user folder succeeded "\\TOLFP01\D$\Users Shared Folders\AUAHA"\"DallasR"
+INFO : Processing user folder succeeded "\\TOLFP01\D$\Users Shared Folders\AUAHA"\"FranH"
+INFO : Processing user folder succeeded "\\TOLFP01\D$\Users Shared Folders\AUAHA"\"HayleyO"
+INFO : Processing user folder succeeded "\\TOLFP01\D$\Users Shared Folders\AUAHA"\"HowardM"
+INFO : Processing user folder succeeded "\\TOLFP01\D$\Users Shared Folders\AUAHA"\"JaneS"
+INFO : Processing user folder succeeded "\\TOLFP01\D$\Users Shared Folders\AUAHA"\"MareeW"
+INFO : Processing user folder succeeded "\\TOLFP01\D$\Users Shared Folders\AUAHA"\"NgaioH"
+INFO : Processing user folder succeeded "\\TOLFP01\D$\Users Shared Folders\AUAHA"\"SandraJ"
+INFO : Processing user folder succeeded "\\TOLFP01\D$\Users Shared Folders\AUAHA"\"ShereeA"
+---------------- End  : \\tol16\y$\PvK\Windows SBS Support DVD\ToDo\Scripts\Fix-UsersSecurity.cmd on TOLTS05 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111031[Mon]-pm0419 
+-----------------------------------------------------------------------

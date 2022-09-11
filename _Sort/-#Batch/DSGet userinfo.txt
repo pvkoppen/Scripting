@@ -1,0 +1,3 @@
+dsquery user |dsget user -samid -profile
+dsquery user |dsget user -samid >c:\users.txt
+for /f %A in (c:\users.txt) do @ECHO %A && @tscmd SCSBS01 %A TerminalServerProfilePath

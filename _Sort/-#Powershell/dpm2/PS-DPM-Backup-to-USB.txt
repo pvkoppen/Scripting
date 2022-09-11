@@ -1,0 +1,12 @@
+
+$start = get-date
+$Start
+mkdir 'E:\Backup\TOLBU01\DPM\Volumes'
+robocopy /r:2 /w:1 *.errlog 'C:\Program Files\Microsoft DPM\DPM' 'E:\Backup\TOLBU01\DPM'
+$LogsDone = get-date
+$LogsDone
+robocopy /e /mir /r:2 /w:1 'C;\Program Files\Microsoft DPM\DPM\Volumes' 'E:\Backup\TOLBU01\DPM\Volumes'
+$End = get-date
+write "[INFO] Start:    $Start"
+write "[INFO] LogsDOne: $LogsDone"
+write "[INFO] End:      $End"

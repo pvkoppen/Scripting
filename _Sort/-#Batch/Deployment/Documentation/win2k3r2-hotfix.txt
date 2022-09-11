@@ -1,0 +1,168 @@
+Microsoft Windows Server 2003
+
+
+ 
+Security Update for Windows Server 2003 (KB914388)
+Typical download size: 535 KB , 1 minute 
+A remote code execution security issue has been identified in the DHCP Client service that could allow an attacker to remotely compromise your Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB917159)
+Typical download size: 642 KB , 2 minutes 
+A remote code execution security issue has been identified in the Server service that could allow an attacker to remotely compromise your Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Windows Malicious Software Removal Tool - July 2006 (KB890830)
+Download size: 2.5 MB , 2 minutes 
+After the download, this tool runs once to check your computer for infection by specific, prevalent malicious software (including Blaster, Sasser, and Mydoom) and helps to remove any infection found. If an infection is found, the tool will display a status report the next time you start your computer. A new version of the tool will be offered every month. If you want to manually run the tool on your computer, you can download a copy from the Microsoft Download Center or run an online version from microsoft.com. This tool is not a replacement for an anti-virus product. To help protect your computer, you should use an anti-virus product.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB911280)
+Typical download size: 507 KB , 1 minute 
+A remote code execution security issue has been identified in the Routing and Remote Access service that could allow an attacker to remotely compromise your Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB917734)
+Typical download size: 1.2 MB , 2 minutes 
+A security issue has been identified that could allow an attacker to remotely compromise your Windows-based system using Windows Media Player and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB914389)
+Typical download size: 639 KB , 2 minutes 
+A local elevation of privilege security issue has been identified in the Server Message Block that could allow an attacker to compromise your Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB917344)
+Typical download size: 674 KB , 2 minutes 
+A security issue has been identified in the Windows Script Host that could allow an attacker to compromise your Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB918439)
+Typical download size: 616 KB , 1 minute 
+A security issue has been identified in the way ART images are handled that could allow an attacker to compromise a computer running Microsoft Windows and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Cumulative Security Update for Internet Explorer for Windows Server 2003 (KB916281)
+Typical download size: 3.1 MB , 5 minutes 
+Security issues have been identified that could allow an attacker to compromise a computer running Microsoft Internet Explorer and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB917953)
+Typical download size: 636 KB , 2 minutes 
+A security issue has been identified that could allow an attacker to compromise your Microsoft Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB908531)
+Typical download size: 1.3 MB , 2 minutes 
+A security issue has been identified in Windows Explorer that could allow an attacker to compromise your Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Cumulative Security Update for Outlook Express for Windows Server 2003 (KB911567)
+Typical download size: 1005 KB , 2 minutes 
+A security issue has been identified that could allow an attacker to remotely compromise your Windows-based system using Outlook Express and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB911562)
+Typical download size: 539 KB , 1 minute 
+A security issue has been identified that could allow an attacker to remotely compromise your Windows-based system using Microsoft Data Access Components and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB911927)
+Typical download size: 505 KB , 1 minute 
+A security issue has been identified that could allow an attacker to remotely compromise your Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB908519)
+Typical download size: 474 KB , 1 minute 
+A security issue has been identified that could allow an attacker to compromise your Microsoft Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB912919)
+Typical download size: 523 KB , 1 minute 
+A remote code execution security issue has been identified in the Graphics Rendering Engine that could allow an attacker to remotely compromise your Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Update for Windows Server 2003 (KB910437)
+Download size: 1.3 MB , 1 minute 
+Install this update to prevent or resolve an issue in which Windows Update and Automatic Updates can no longer download updates after an Access Violation error occurs when using the Automatic Updates service. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB904706)
+Typical download size: 564 KB , 1 minute 
+A security issue has been identified that could allow an attacker to remotely compromise your Windows-based system using DirectShow and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB896424)
+Typical download size: 940 KB , 2 minutes 
+A remote code execution security issue has been identified in the Graphics Rendering Engine that could allow an attacker to remotely compromise your Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB900725)
+Typical download size: 1.1 MB , 2 minutes 
+A security issue has been identified that could allow an authenticated attacker to gain access and potentially compromise your Microsoft Windows-based system. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB902400)
+Typical download size: 1.4 MB , 3 minutes 
+A remote code execution security issue has been identified that could allow an attacker to remotely compromise your Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB899589)
+Typical download size: 480 KB , 1 minute 
+A security issue has been identified in the Client Service for NetWare that could allow an attacker to compromise your Microsoft Windows-based system and gain control over it, if you have installed this service. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB901017)
+Typical download size: 652 KB , 2 minutes 
+A security issue has been identified that could allow an attacker to remotely compromise your Windows-based system using Collaboration Data Objects (CDO) and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB905414)
+Typical download size: 493 KB , 1 minute 
+A denial of service security issue has been identified that could cause the Network Manager service to stop responding on your Windows-based system. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB893756)
+Typical download size: 503 KB , 1 minute 
+A security issue has been identified in the Telephony Application Programming Interface (TAPI) that could allow an attacker to compromise your Microsoft Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB896428)
+Typical download size: 471 KB , 1 minute 
+A security issue in Telnet has been identified that could allow an attacker to learn information about your Windows-based system. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB896358)
+Typical download size: 781 KB , 2 minutes 
+A security issue has been identified in the HTML Help component that could allow an attacker to compromise your Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB899587)
+Typical download size: 632 KB , 2 minutes 
+A security issue has been identified that could allow an attacker to gain access to sensitive data transmitted through your Microsoft Windows-based system in a domain environment, and to perform denial of service attacks against domain controllers. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB890046)
+Typical download size: 472 KB , 1 minute 
+A security issue has been identified in Microsoft Agent that could allow an attacker to compromise your Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB899591)
+Typical download size: 483 KB , 1 minute 
+A security issue has been identified in the Remote Desktop Protocol (RDP) that could allow an attacker to remotely cause your Microsoft Windows-based system to stop responding. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB899588)
+Typical download size: 485 KB , 1 minute 
+A security issue has been identified in the Plug and Play service that could allow an attacker to compromise your Microsoft Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Security Update for Windows Server 2003 (KB901214)
+Typical download size: 467 KB , 1 minute 
+A security issue has been identified in the Color Management Module that could allow an attacker to compromise your Microsoft Windows-based system and gain control over it. You can help protect your computer by installing this update from Microsoft. After you install this item, you may have to restart your computer.  Details... 
+Don't show this update again 
+ 
+Update for Windows Server 2003 (KB898715)
+Download size: 1.5 MB , 1 minute 
+This update addresses application compatibility issues with Windows Installer 3.1 and certain applications as described in Knowledge Base article 898715. After you install this update, you may have to restart your computer.  Details... 
+Don't show this update again 

@@ -1,0 +1,1 @@
+C:\WINDOWS\system32\ntbackup.exe backup "@C:\Documents and Settings\User\Local Settings\Application Data\Microsoft\Windows NT\NTBackup\data\Run Once.bks" /a /d "Set created 10/02/2010 at 8:10 a.m." /v:no /r:no /rs:no /hc:off /m normal /j "Run Once" /l:s /f "D:\Backup-Config-Dump\SystemState.bkf"

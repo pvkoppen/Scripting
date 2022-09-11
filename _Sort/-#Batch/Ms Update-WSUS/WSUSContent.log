@@ -1,0 +1,10 @@
+2007-03-19T03:37:24 Successfully stopped WsusService.
+2007-03-19T03:37:24 Beginning content file location change to D:\WSUS\
+2007-03-19T03:37:24 Successfully copied content files.
+2007-03-19T03:37:24 Successfully changed WUS configuration.
+2007-03-19T03:37:24 Successfully changed IIS virtual directory path.
+2007-03-19T03:37:24 Successfully changed registry value for content store directory.
+2007-03-19T03:37:24 Successfully changed content file location.
+2007-03-19T03:37:26 Successfully started WsusService.
+2007-03-19T03:37:26 Content integrity check and repair...
+2007-03-19T03:37:26 Initiated content integrity check and repair.

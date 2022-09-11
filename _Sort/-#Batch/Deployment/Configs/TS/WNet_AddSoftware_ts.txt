@@ -1,0 +1,15 @@
+; Windows Server 2003 Unattend script
+; Install/Update/Remove component: TS
+
+[Components]
+;Security
+   IEHardenAdmin=off			;Internet Explorer Enhanced Security Configuration for the Administrator group
+   IEHardenUser=off			;Internet Explorer Enhanced Security Configuration for the Users group
+;Terminal Services
+   TerminalServer=on			;Terminal Server (Terminal Services for multiple users)
+
+[TerminalServices]
+   AllowConnections=1			;
+   ;LicensingMode=PerDevice|PerSeat	;
+   PermissionsSetting=0		;0=FullSecurity,1=RelaxedSecurity
+

@@ -1,0 +1,3 @@
+ROBOCOPY "\\Tolvs12\c$\ClusterStorage\Volume2\Hyper-V\TOLSP04\Virtual Hard Disks" \\TOLMM02\Backup$\CustomBackup\SharePoint\TOLSP04-PreInsallHRTool /W:0 /R:0 /E
+ROBOCOPY "\\Tolvs12\c$\ClusterStorage\Volume2\Hyper-V\TOLSP05\Virtual Hard Disks" \\TOLMM02\Backup$\CustomBackup\SharePoint\TOLSP05-PreInsallHRTool /W:0 /R:0 /E
+ROBOCOPY "\\Tolvs12\c$\ClusterStorage\Volume1\Hyper-V\TOLDB05\Virtual Hard Disks" \\TOLMM02\Backup$\CustomBackup\SharePoint\TOLDB05-PreInsallHRTool /W:0 /R:0 /E

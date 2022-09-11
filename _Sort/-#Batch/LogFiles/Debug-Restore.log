@@ -1,0 +1,32 @@
+
+C:\Scripts>IF ' == ' GOTO Log 
+
+C:\Scripts>IF NOT EXIST "C:\Scripts\LogFiles\." MKDIR "C:\Scripts\LogFiles" 
+
+C:\Scripts>CALL "C:\Scripts\Debug-Restore.cmd"  1>>"C:\Scripts\LogFiles\Debug-Restore.log" 2>>&1 
+The process cannot access the file because it is being used by another process.
+
+C:\Scripts>GOTO End 
+
+C:\Scripts>IF ' == ' GOTO Log 
+
+C:\Scripts>IF NOT EXIST "C:\Scripts\LogFiles\." MKDIR "C:\Scripts\LogFiles" 
+
+C:\Scripts>CALL C:\Scripts\Debug-Restore.cmd  1>>"C:\Scripts\LogFiles\Debug-Restore.log" 2>>&1 
+The process cannot access the file because it is being used by another process.
+
+C:\Scripts>GOTO End 
+
+C:\Scripts>IF /Action' == ' GOTO Log 
+
+C:\Scripts>IF /Action' == /Action' GOTO Action 
+
+C:\Scripts>dir D:\_Restored\DPM_Recovery_Point_11-30-2009_8.21.1p.m. 
+ Volume in drive D is Data-iSCSI-Files
+ Volume Serial Number is DC6B-6957
+
+ Directory of D:\_Restored
+
+File Not Found
+
+C:\Scripts>GOTO End 

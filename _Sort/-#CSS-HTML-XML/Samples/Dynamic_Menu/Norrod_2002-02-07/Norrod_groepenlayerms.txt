@@ -1,0 +1,1033 @@
+<!-- manno@dds.nl good grief! -->
+<!-- a.dikhoff@tmlc.com you can say that again -->
+
+<html>
+<head>
+<title>Products Layer</title>
+<script language="JavaScript">
+
+var aLayer = "";							// store the shown layer in a var
+var theSelection = "";							// string containing the selected items
+var mainGroupImage = "";						// the indicator-image of the main group presently selected
+var NS = (navigator.appName=="Netscape" ? true : false)			// could somebody pûlease get rid of one of them? (and put the timebomb back in Netscape)
+var multimode = false							// for the impatient... set to true if you're picky
+var rolledImage = new Array()
+var syschoice = ""							// clicked system
+
+function changemode(){
+	multimode=(multimode==true ? false : true);
+	instoptions();
+	wisselectie();
+}
+
+function instoptions(){
+	if(NS){
+		vertpos =  document.layers["groepen02"].top + bottom;
+		vertposone =  document.layers["groepen01"].top + bottomone;
+		if(multimode){
+			document.layers["optionsone"].moveTo(155, vertpos);
+			document.layers["optionstwo"].moveTo(2, vertposone);
+		}
+		else{
+			document.layers["optionsone"].moveTo(-500, -500);
+			document.layers["optionstwo"].moveTo(2, vertposone);
+		}
+	}
+	else{
+		vertpos =  parseInt(document.all["groepen02"].style.top) + bottom;
+		vertposone =  parseInt(document.all["groepen01"].style.top) + bottomone;
+		if(multimode){
+			document.all["optionsone"].style.left = 155;
+			document.all["optionsone"].style.top = vertpos;
+			document.all["optionstwo"].style.left = 2;
+			document.all["optionstwo"].style.top = vertposone;
+		}
+		else{
+			document.all["optionsone"].style.left = -500;
+			document.all["optionsone"].style.top = -500;
+			document.all["optionstwo"].style.left = 2;
+			document.all["optionstwo"].style.top = vertposone;
+		}
+	}
+}
+
+function clipmenu(){
+	if(NS){
+		vertpos = 2 + bottom;
+		document.layers["groepen02"].clip.bottom = vertpos;
+	}
+	else{
+		vertpos = 2 + bottom;
+		document.all["groepen02"].style.height = vertpos;
+	}
+}
+
+function zoekprompt(){
+	url = "typequery.asp?input=";
+	query = prompt("Voer kernwoorden in gescheiden door comma's", "");
+	if(query==null || query == ""){return;}
+	url += query;
+	parent.data.document.location = url;
+}
+
+function rollImg(lyrId, imgId){
+	if (NS){
+		rolledImage[0] = document.layers[lyrId].document.images[imgId];
+		rolledImage[1] = document.layers[lyrId].document.images[imgId].src;
+		document.layers[lyrId].document.images[imgId].src = "images/blok_loss_000.gif";
+	}
+	else{
+		rolledImage[0] = document.all[imgId];
+		rolledImage[1] = document.all[imgId].src;
+		document.all[imgId].src = "images/blok_loss_000.gif";
+	}
+}
+
+function resetRollImg(){
+	if (NS){
+		rolledImage[0].src = rolledImage[1];
+	}
+	else{
+		rolledImage[0].src = rolledImage[1];
+	}
+}
+
+// to the systems page
+function naarSys(nme){
+	theUrl = 'systeemviewV2.asp?systeem=' + nme;
+	parent.data.location=theUrl;
+	setSysImg('sys', nme);
+	if (NS){
+		rolledImage[1] = document.layers['sys'].document.images[nme].src;
+	}
+	else{
+		rolledImage[1] = document.all[nme].src;
+	}
+}
+
+function setSysImg(lyr, imgId){
+	if(imgId==null){
+		// reset choise
+		if(syschoice==''){return;}
+		if (NS){
+			syschoice.src = "images/blok_neut.gif";
+		}
+		else{
+			syschoice.src = "images/blok_neut.gif";
+		}
+	}
+	else{
+		if (NS){
+			if(syschoice!=''){syschoice.src = "images/blok_neut.gif";}
+			syschoice = document.layers[lyr].document.images[imgId];
+			syschoice.src = "images/blok_loss_000.gif";
+		}
+		else{
+			if(syschoice!=''){syschoice.src = "images/blok_neut.gif";}
+			syschoice = document.all[imgId];
+			syschoice.src = "images/blok_loss_000.gif";
+		}
+	}
+}
+
+// show what selection was made
+function indicateSelection(layerNme, imagesId, flNme){
+	if (NS){
+		document.layers[layerNme].document.images[imagesId].src="images/" + flNme + ".gif";
+		rolledImage[0] = document.layers[layerNme].document.images[imagesId];
+		rolledImage[1] = document.layers[layerNme].document.images[imagesId].src
+	}
+	else{
+		document.all[imagesId].src = "images/" + flNme + ".gif";
+		rolledImage[0] = document.all[imagesId];
+		rolledImage[1] = document.all[imagesId].src
+	}
+}
+
+//onMouseOver='JAVASCRIPT:placeLayer(linecounter as Int ,"layerName","submenu-layername", roloverID)'
+function placeLayer(vert, mainlyr, sublyr, rollnme){
+	// remove possible previous layer
+	if(aLayer != ""){
+		window.clearTimeout(timeID);
+		hideLayer(aLayer, -500, -500);
+	}
+
+	// rollover image
+	rollImg(placeLayer.arguments[1], placeLayer.arguments[3]);
+
+	// place a new layer
+	aLayer = placeLayer.arguments[2];
+	if (NS){
+		if(document.layers[sublyr].document.images.length==0){return;}
+		theLeft = document.layers[mainlyr].left;
+		theWidth = document.layers[mainlyr].clip.width;
+		if(placeLayer.arguments[1] == "groepen02"){
+			thePos = document.layers["groepen01"].left + 10;			// was  + 20
+		}
+		else{
+			thePos = document.layers["groepen02"].left - 10;			// devide by 2
+		}
+		if(vert - 8 < 0){vert = 8}
+		document.layers[sublyr].moveTo(thePos, vert - 8);
+		document.layers["schaduw"].clip.height = (document.layers[sublyr].document.images.length * 15) + 2
+		document.layers["schaduw"].moveTo((thePos + 4), (vert - 4));
+		mainGroupImage = document.layers[mainlyr].document.images[rollnme];
+	}
+	else{
+		if(document.all[sublyr].all.length==2){return;}
+		theLeft = parseInt(document.all[mainlyr].style.left);
+		theWidth = parseInt(document.all[mainlyr].style.width);
+		if(placeLayer.arguments[1] == "groepen02"){
+			thePos = parseInt(document.all["groepen01"].style.left) + 10;
+		}
+		else{
+			thePos = parseInt(document.all["groepen02"].style.left) - 10;
+		}
+		if(vert - 8 < 0){vert = 8}
+		document.all[sublyr].style.left = thePos;
+		document.all[sublyr].style.top = vert - 8;
+		myHeight = (document.all[sublyr].all.length - 2) / 6 * 15			// talking about reusable :)
+		document.all["schaduw"].style.height = myHeight + 2
+		document.all["schaduw"].style.left = thePos + 4;
+		document.all["schaduw"].style.top = vert - 4;
+		mainGroupImage = document.all[rollnme];
+	}
+}
+
+function delayHide(theName, theHpos, theVpos){
+	timeID = window.setTimeout('hideLayer(aLayer, -500, -500)', 400);
+}
+
+function hideLayer(myLayer, hPos, vPos){
+	resetRollImg()
+	if (NS){
+		document.layers[myLayer].moveTo(hPos, vPos);
+		document.layers["schaduw"].moveTo(-500, -500);
+	}
+	else{
+		document.all[myLayer].style.left = hPos;
+		document.all[myLayer].style.top = vPos;
+		document.all["schaduw"].style.left = -500;
+		document.all["schaduw"].style.top = -500;
+	}
+	var aLayer = "";
+}
+
+function installgroups(){
+	setSysImg('sys', null);
+	if(NS){
+		document.layers["groepen01"].moveTo(2, 2);
+		document.layers["groepen02"].moveTo(155, 2);
+	}
+	else{
+		document.all["groepen01"].style.left = 2;
+		document.all["groepen01"].style.top = 2;
+		document.all["groepen02"].style.left = 155;
+		document.all["groepen02"].style.top = 2;
+	}
+	instoptions();
+}
+
+function installsys(){
+	setSysImg('sys', null);
+	if(NS){
+		document.layers["sys"].moveTo(2, 2);
+	}
+	else{
+		document.all["sys"].style.left = 2;
+		document.all["sys"].style.top = 2;
+	}
+}
+
+function installnote(){
+	setSysImg('sys', null);
+	if(NS){
+		document.layers["note"].moveTo(2, 2);
+	}
+	else{
+		document.all["note"].style.left = 2;
+		document.all["note"].style.top = 2;
+	}
+}
+
+function hidesys(){
+	if(NS){
+		document.layers["sys"].moveTo(-500, -500);
+	}
+	else{
+		document.all["sys"].style.left = -500;
+		document.all["sys"].style.top = -500;
+	}
+}
+
+function hidenote(){
+	if(NS){
+		document.layers["note"].moveTo(-500, -500);
+	}
+	else{
+		document.all["note"].style.left = -500;
+		document.all["note"].style.top = -500;
+	}
+}
+
+function hidegroups(){
+	if(NS){
+		document.layers["groepen01"].moveTo(-500, -500);
+		document.layers["groepen02"].moveTo(-500, -500);
+		document.layers["optionsone"].moveTo(-500, -500);
+		document.layers["optionstwo"].moveTo(-500, -500);
+	}
+	else{
+		document.all["groepen01"].style.left = -500;
+		document.all["groepen01"].style.top = -500;
+		document.all["groepen02"].style.left = -500;
+		document.all["groepen02"].style.top = -500;
+		document.all["optionsone"].style.left = -500;
+		document.all["optionsone"].style.top = -500;
+		document.all["optionstwo"].style.left = -500;
+		document.all["optionstwo"].style.top = -500;
+	}
+}
+										// theSelection ziet eruit als: #cd-rom drives*16*20#monitoren*all
+function selecttoview(myGroup, mySelection, layerNme, imagesId){		// (groupname && sub-layername), ("all" of integer), (mainlayername), (name of hilite image)
+	if(multimode==false){
+		document.bestelling.bestellijst.value = "#" + myGroup + "*" + mySelection + "*";
+		document.bestelling.submit()
+		return;
+	}
+	//if already some selected, start munching
+	if(theSelection.indexOf(myGroup) != -1){
+		// cut the string to pieces
+		var firstPart = "";
+		var midPart = "";
+		var endPart = "";
+		firstPart = theSelection.substring(0, (theSelection.indexOf(myGroup) + myGroup.length ));
+		// if there's only one groep there's no "#" left
+		if(theSelection.indexOf("#", firstPart.length) == -1){
+			midPart = theSelection.substring(firstPart.length, theSelection.length);
+		}
+		else{
+			midPart = theSelection.substring(firstPart.length, theSelection.indexOf("#", firstPart.length));
+		}
+		start = firstPart.length + midPart.length;
+		end = theSelection.length;
+		endPart = theSelection.substring(start, end);
+
+		if(mySelection == "all"){			// maingroup-name is pressed
+				if(midPart == "*all*"){
+					// all deselected
+					firstPart = firstPart.substring(0, firstPart.lastIndexOf("#"));
+					midPart = "";
+					// deselect all images in the sublayer, var aLayer contains it's name
+					submenuselection(myGroup)
+					indicateSelection(layerNme, imagesId, "blok_neut");
+				}
+				else{
+					// all selected
+					midPart = "*all*";
+					// deselect all images in the sublayer, var aLayer contains it's name
+					submenuselection(myGroup)
+					indicateSelection(layerNme, imagesId, "blok_loss_000");
+				}
+		}
+		else{						// subgroup is selected
+				if(midPart == "*all*"){
+					midPart = "*" + mySelection + "*";
+					indicateSelection(layerNme, imagesId, "blok_loss_000");
+					// group = partially selected
+					mainGroupImage.src =  "images/blok_loss_dem.gif";
+				}
+				else{								//subgroup is selected or deselected midPart will look like *12*30*
+					if(midPart.indexOf("*" + mySelection + "*") == -1){	// it's NOT selected yet
+						// select subgroup
+						indicateSelection(layerNme, imagesId, "blok_loss_000");
+						if(midPart == ""){
+							midPart = "*" + mySelection + "*";
+						}
+						else{
+							midPart = midPart + mySelection + "*";
+						}
+					}
+					else{							// it IS selected, remove it
+						// deselect subgroup
+						midPart = removeSubString(midPart, mySelection + "*");
+						indicateSelection(layerNme, imagesId, "blok_neut");
+						if(midPart == "*"){
+							//remove entire group
+							midPart = "";
+							firstPart = firstPart.substring(0, firstPart.lastIndexOf("#"));
+							// deselect maingroup-image
+							mainGroupImage.src =  "images/blok_neut.gif";
+						}
+					}
+				}	
+		}
+		theSelection = firstPart + midPart + endPart;
+	}
+	// if none yet selected, add to selection list
+	else{
+		// (partially) selected
+		if(mySelection != "all"){mainGroupImage.src =  "images/blok_loss_dem.gif";}
+		indicateSelection(layerNme, imagesId, "blok_loss_000");
+		theSelection = theSelection + "#" + myGroup + "*" + mySelection + "*";
+	}
+	document.bestelling.bestellijst.value = theSelection;
+}
+
+function submenuselection(lyer){
+	if(NS){
+		times=document.layers[lyer].document.images.length;
+		for(t=0; t<times; t++){
+			document.layers[lyer].document.images[t].src="images/blok_neut.gif"
+		}
+	}
+	else{
+		times=document.all[lyer].all.length;
+		for(t=0; t<times; t++){
+			if(document.all[lyer].all[t].name!=null){
+				if(document.all[lyer].all[t].name.indexOf("nme") !=-1){
+					document.all[lyer].all[t].src="images/blok_neut.gif"
+				}
+			}
+		}
+	}
+}
+// reset all images in the selection menu
+function wisselectie(){
+	theSelection = "";
+	document.bestelling.bestellijst.value = theSelection;
+	if(NS){
+		times=document.layers.length;
+		for(n=0; n < times; n++){
+			numof=document.layers[n].document.images.length;
+			for(t=0; t < numof; t++){
+				if(document.layers[n].document.images[t].name.indexOf("nme") !=-1){document.layers[n].document.images[t].src="images/blok_neut.gif"}
+			}
+		}
+	}
+	else{
+		times=document.images.length;
+		for(n=0; n < times; n++){
+			if(document.images(n).name != null){
+				if(document.images(n).name.indexOf("nme")!=-1){document.images(n).src="images/blok_neut.gif"}
+			}
+		}
+	}
+}
+function removeSubString(str, toRemove){
+	if(str.indexOf(toRemove) != -1){
+		frst = str.substring(0, str.indexOf(toRemove));
+		end = str.substring(frst.length + toRemove.length, str.length);
+		retstr = frst + end;
+		return retstr;
+	}
+}
+
+// put the navigation menu-layer at it's place
+function refresh(){
+	if(NS){
+		document.layers["menu"].moveTo(document.layers["menu"].left, calcWinSize("y") - document.layers["menu"].clip.height);
+		parent.code.LS()
+	}
+	else{
+		document.all["menu"].style.left = parseInt(document.all["menu"].style.left);
+		document.all["menu"].style.top = calcWinSize("y") - parseInt(document.all["menu"].style.height);
+	}
+}
+function calcWinSize(dim){
+	if(dim=="x"){
+		if(NS){
+			return window.innerWidth;
+		}
+		else{
+			return window.overzicht.document.body.clientWidth;
+		}
+	}
+	else{
+		if(NS){
+			return window.innerHeight;
+		}
+		else{
+			return top.frames["overzicht"].document.body.clientHeight;
+		}
+	}
+}
+function exec(func){
+	eval(func);
+	parent.nav.document.location.reload();
+	hidegroups();
+}
+
+function loadpage(ur, trgt){
+	parent.frames[trgt].document.location = ur;
+	parent.nav.document.location.reload();
+	hidegroups();
+}
+
+</script>
+<style type="text/css">
+<!--
+.textjes { font-family: Arial, sans-serif; font-size: 10px; font-style: normal; line-height: 10px; color: #000000; text-decoration: none }
+td { font-family: Arial, sans-serif; font-size: 10px; font-style: normal; line-height: 12px; color: #000000; text-decoration: none }
+a {  text-decoration: none; color: #FFFFFF}
+-->
+</style></head>
+<body bgcolor="#FFFFFF" background="images/backmenu.gif" bgproperties="fixed" text="#000000" link="#000000" vlink="#000000" alink="#000000" class="textjes" window onresize=refresh() onLoad=refresh()>
+
+<div id="groepen01" style="position:absolute; left:-500px; top:-500px; width:150px; height:250px; z-index:2;">
+<table border="0" width="150" cellspacing="1" cellpadding="1">
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("backup/ups", "all", "groepen01", "nmebackup/ups")' onMouseOver='JAVASCRIPT:placeLayer(3,"groepen01","backup/ups", "nmebackup/ups")' onMouseOut='JAVASCRIPT:delayHide("backup/ups", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmebackup/ups'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("backup/ups", "all", "groepen01", "nmebackup/ups")' onMouseOver='JAVASCRIPT:placeLayer(3,"groepen01","backup/ups", "nmebackup/ups")' onMouseOut='JAVASCRIPT:delayHide("backup/ups", -500, -500)'>backup/ups</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("behuizing", "all", "groepen01", "nmebehuizing")' onMouseOver='JAVASCRIPT:placeLayer(18,"groepen01","behuizing", "nmebehuizing")' onMouseOut='JAVASCRIPT:delayHide("behuizing", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmebehuizing'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("behuizing", "all", "groepen01", "nmebehuizing")' onMouseOver='JAVASCRIPT:placeLayer(18,"groepen01","behuizing", "nmebehuizing")' onMouseOut='JAVASCRIPT:delayHide("behuizing", -500, -500)'>behuizing</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("bekabeling", "all", "groepen01", "nmebekabeling")' onMouseOver='JAVASCRIPT:placeLayer(33,"groepen01","bekabeling", "nmebekabeling")' onMouseOut='JAVASCRIPT:delayHide("bekabeling", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmebekabeling'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("bekabeling", "all", "groepen01", "nmebekabeling")' onMouseOver='JAVASCRIPT:placeLayer(33,"groepen01","bekabeling", "nmebekabeling")' onMouseOut='JAVASCRIPT:delayHide("bekabeling", -500, -500)'>bekabeling</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("camera", "all", "groepen01", "nmecamera")' onMouseOver='JAVASCRIPT:placeLayer(48,"groepen01","camera", "nmecamera")' onMouseOut='JAVASCRIPT:delayHide("camera", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmecamera'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("camera", "all", "groepen01", "nmecamera")' onMouseOver='JAVASCRIPT:placeLayer(48,"groepen01","camera", "nmecamera")' onMouseOut='JAVASCRIPT:delayHide("camera", -500, -500)'>camera</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("cd media en toebehoren", "all", "groepen01", "nmecd media en toebehoren")' onMouseOver='JAVASCRIPT:placeLayer(63,"groepen01","cd media en toebehoren", "nmecd media en toebehoren")' onMouseOut='JAVASCRIPT:delayHide("cd media en toebehoren", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmecd media en toebehoren'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("cd media en toebehoren", "all", "groepen01", "nmecd media en toebehoren")' onMouseOver='JAVASCRIPT:placeLayer(63,"groepen01","cd media en toebehoren", "nmecd media en toebehoren")' onMouseOut='JAVASCRIPT:delayHide("cd media en toebehoren", -500, -500)'>cd media en toebehoren</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("cd-rom (re)writers", "all", "groepen01", "nmecd-rom (re)writers")' onMouseOver='JAVASCRIPT:placeLayer(78,"groepen01","cd-rom (re)writers", "nmecd-rom (re)writers")' onMouseOut='JAVASCRIPT:delayHide("cd-rom (re)writers", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmecd-rom (re)writers'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("cd-rom (re)writers", "all", "groepen01", "nmecd-rom (re)writers")' onMouseOver='JAVASCRIPT:placeLayer(78,"groepen01","cd-rom (re)writers", "nmecd-rom (re)writers")' onMouseOut='JAVASCRIPT:delayHide("cd-rom (re)writers", -500, -500)'>cd-rom (re)writers</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("cd-rom spelers", "all", "groepen01", "nmecd-rom spelers")' onMouseOver='JAVASCRIPT:placeLayer(93,"groepen01","cd-rom spelers", "nmecd-rom spelers")' onMouseOut='JAVASCRIPT:delayHide("cd-rom spelers", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmecd-rom spelers'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("cd-rom spelers", "all", "groepen01", "nmecd-rom spelers")' onMouseOver='JAVASCRIPT:placeLayer(93,"groepen01","cd-rom spelers", "nmecd-rom spelers")' onMouseOut='JAVASCRIPT:delayHide("cd-rom spelers", -500, -500)'>cd-rom spelers</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("controllers", "all", "groepen01", "nmecontrollers")' onMouseOver='JAVASCRIPT:placeLayer(108,"groepen01","controllers", "nmecontrollers")' onMouseOut='JAVASCRIPT:delayHide("controllers", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmecontrollers'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("controllers", "all", "groepen01", "nmecontrollers")' onMouseOver='JAVASCRIPT:placeLayer(108,"groepen01","controllers", "nmecontrollers")' onMouseOut='JAVASCRIPT:delayHide("controllers", -500, -500)'>controllers</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("diskettestation", "all", "groepen01", "nmediskettestation")' onMouseOver='JAVASCRIPT:placeLayer(123,"groepen01","diskettestation", "nmediskettestation")' onMouseOut='JAVASCRIPT:delayHide("diskettestation", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmediskettestation'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("diskettestation", "all", "groepen01", "nmediskettestation")' onMouseOver='JAVASCRIPT:placeLayer(123,"groepen01","diskettestation", "nmediskettestation")' onMouseOut='JAVASCRIPT:delayHide("diskettestation", -500, -500)'>diskettestation</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("dvd", "all", "groepen01", "nmedvd")' onMouseOver='JAVASCRIPT:placeLayer(138,"groepen01","dvd", "nmedvd")' onMouseOut='JAVASCRIPT:delayHide("dvd", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmedvd'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("dvd", "all", "groepen01", "nmedvd")' onMouseOver='JAVASCRIPT:placeLayer(138,"groepen01","dvd", "nmedvd")' onMouseOut='JAVASCRIPT:delayHide("dvd", -500, -500)'>dvd</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("ergonomie", "all", "groepen01", "nmeergonomie")' onMouseOver='JAVASCRIPT:placeLayer(153,"groepen01","ergonomie", "nmeergonomie")' onMouseOut='JAVASCRIPT:delayHide("ergonomie", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmeergonomie'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("ergonomie", "all", "groepen01", "nmeergonomie")' onMouseOver='JAVASCRIPT:placeLayer(153,"groepen01","ergonomie", "nmeergonomie")' onMouseOut='JAVASCRIPT:delayHide("ergonomie", -500, -500)'>ergonomie</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("fax/modem", "all", "groepen01", "nmefax/modem")' onMouseOver='JAVASCRIPT:placeLayer(168,"groepen01","fax/modem", "nmefax/modem")' onMouseOut='JAVASCRIPT:delayHide("fax/modem", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmefax/modem'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("fax/modem", "all", "groepen01", "nmefax/modem")' onMouseOver='JAVASCRIPT:placeLayer(168,"groepen01","fax/modem", "nmefax/modem")' onMouseOut='JAVASCRIPT:delayHide("fax/modem", -500, -500)'>fax/modem</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("game controllers", "all", "groepen01", "nmegame controllers")' onMouseOver='JAVASCRIPT:placeLayer(183,"groepen01","game controllers", "nmegame controllers")' onMouseOut='JAVASCRIPT:delayHide("game controllers", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmegame controllers'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("game controllers", "all", "groepen01", "nmegame controllers")' onMouseOver='JAVASCRIPT:placeLayer(183,"groepen01","game controllers", "nmegame controllers")' onMouseOut='JAVASCRIPT:delayHide("game controllers", -500, -500)'>game controllers</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geheugen", "all", "groepen01", "nmegeheugen")' onMouseOver='JAVASCRIPT:placeLayer(198,"groepen01","geheugen", "nmegeheugen")' onMouseOut='JAVASCRIPT:delayHide("geheugen", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmegeheugen'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("geheugen", "all", "groepen01", "nmegeheugen")' onMouseOver='JAVASCRIPT:placeLayer(198,"groepen01","geheugen", "nmegeheugen")' onMouseOut='JAVASCRIPT:delayHide("geheugen", -500, -500)'>geheugen</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geluidskaarten", "all", "groepen01", "nmegeluidskaarten")' onMouseOver='JAVASCRIPT:placeLayer(213,"groepen01","geluidskaarten", "nmegeluidskaarten")' onMouseOut='JAVASCRIPT:delayHide("geluidskaarten", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmegeluidskaarten'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("geluidskaarten", "all", "groepen01", "nmegeluidskaarten")' onMouseOver='JAVASCRIPT:placeLayer(213,"groepen01","geluidskaarten", "nmegeluidskaarten")' onMouseOut='JAVASCRIPT:delayHide("geluidskaarten", -500, -500)'>geluidskaarten</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("handhelds pda", "all", "groepen01", "nmehandhelds pda")' onMouseOver='JAVASCRIPT:placeLayer(228,"groepen01","handhelds pda", "nmehandhelds pda")' onMouseOut='JAVASCRIPT:delayHide("handhelds pda", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmehandhelds pda'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("handhelds pda", "all", "groepen01", "nmehandhelds pda")' onMouseOver='JAVASCRIPT:placeLayer(228,"groepen01","handhelds pda", "nmehandhelds pda")' onMouseOut='JAVASCRIPT:delayHide("handhelds pda", -500, -500)'>handhelds pda</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("harde schijven", "all", "groepen01", "nmeharde schijven")' onMouseOver='JAVASCRIPT:placeLayer(243,"groepen01","harde schijven", "nmeharde schijven")' onMouseOut='JAVASCRIPT:delayHide("harde schijven", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmeharde schijven'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("harde schijven", "all", "groepen01", "nmeharde schijven")' onMouseOver='JAVASCRIPT:placeLayer(243,"groepen01","harde schijven", "nmeharde schijven")' onMouseOut='JAVASCRIPT:delayHide("harde schijven", -500, -500)'>harde schijven</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("hp up to date", "all", "groepen01", "nmehp up to date")' onMouseOver='JAVASCRIPT:placeLayer(258,"groepen01","hp up to date", "nmehp up to date")' onMouseOut='JAVASCRIPT:delayHide("hp up to date", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmehp up to date'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("hp up to date", "all", "groepen01", "nmehp up to date")' onMouseOver='JAVASCRIPT:placeLayer(258,"groepen01","hp up to date", "nmehp up to date")' onMouseOut='JAVASCRIPT:delayHide("hp up to date", -500, -500)'>hp up to date</a></td>
+
+</tr>
+
+</table></div>
+
+<div id="groepen02" style="position:absolute; left:-500px; top:-500px; width:150px; height:250; z-index:3; overflow: hidden"><table border="0" width="150" cellspacing="1" cellpadding="1">
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("moederborden", "all", "groepen02", "nmemoederborden")' onMouseOver='JAVASCRIPT:placeLayer(3,"groepen02","moederborden", "nmemoederborden")' onMouseOut='JAVASCRIPT:delayHide("moederborden", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmemoederborden'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("moederborden", "all", "groepen02", "nmemoederborden")' onMouseOver='JAVASCRIPT:placeLayer(3,"groepen02","moederborden", "nmemoederborden")' onMouseOut='JAVASCRIPT:delayHide("moederborden", -500, -500)'>moederborden</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("monitoren", "all", "groepen02", "nmemonitoren")' onMouseOver='JAVASCRIPT:placeLayer(18,"groepen02","monitoren", "nmemonitoren")' onMouseOut='JAVASCRIPT:delayHide("monitoren", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmemonitoren'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("monitoren", "all", "groepen02", "nmemonitoren")' onMouseOver='JAVASCRIPT:placeLayer(18,"groepen02","monitoren", "nmemonitoren")' onMouseOut='JAVASCRIPT:delayHide("monitoren", -500, -500)'>monitoren</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("mp3", "all", "groepen02", "nmemp3")' onMouseOver='JAVASCRIPT:placeLayer(33,"groepen02","mp3", "nmemp3")' onMouseOut='JAVASCRIPT:delayHide("mp3", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmemp3'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("mp3", "all", "groepen02", "nmemp3")' onMouseOver='JAVASCRIPT:placeLayer(33,"groepen02","mp3", "nmemp3")' onMouseOut='JAVASCRIPT:delayHide("mp3", -500, -500)'>mp3</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("netwerk", "all", "groepen02", "nmenetwerk")' onMouseOver='JAVASCRIPT:placeLayer(48,"groepen02","netwerk", "nmenetwerk")' onMouseOut='JAVASCRIPT:delayHide("netwerk", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmenetwerk'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("netwerk", "all", "groepen02", "nmenetwerk")' onMouseOver='JAVASCRIPT:placeLayer(48,"groepen02","netwerk", "nmenetwerk")' onMouseOut='JAVASCRIPT:delayHide("netwerk", -500, -500)'>netwerk</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("pctv en editing", "all", "groepen02", "nmepctv en editing")' onMouseOver='JAVASCRIPT:placeLayer(63,"groepen02","pctv en editing", "nmepctv en editing")' onMouseOut='JAVASCRIPT:delayHide("pctv en editing", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmepctv en editing'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("pctv en editing", "all", "groepen02", "nmepctv en editing")' onMouseOver='JAVASCRIPT:placeLayer(63,"groepen02","pctv en editing", "nmepctv en editing")' onMouseOut='JAVASCRIPT:delayHide("pctv en editing", -500, -500)'>pctv en editing</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("printers", "all", "groepen02", "nmeprinters")' onMouseOver='JAVASCRIPT:placeLayer(78,"groepen02","printers", "nmeprinters")' onMouseOut='JAVASCRIPT:delayHide("printers", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmeprinters'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("printers", "all", "groepen02", "nmeprinters")' onMouseOver='JAVASCRIPT:placeLayer(78,"groepen02","printers", "nmeprinters")' onMouseOut='JAVASCRIPT:delayHide("printers", -500, -500)'>printers</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("processoren", "all", "groepen02", "nmeprocessoren")' onMouseOver='JAVASCRIPT:placeLayer(93,"groepen02","processoren", "nmeprocessoren")' onMouseOut='JAVASCRIPT:delayHide("processoren", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmeprocessoren'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("processoren", "all", "groepen02", "nmeprocessoren")' onMouseOver='JAVASCRIPT:placeLayer(93,"groepen02","processoren", "nmeprocessoren")' onMouseOut='JAVASCRIPT:delayHide("processoren", -500, -500)'>processoren</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("scanners", "all", "groepen02", "nmescanners")' onMouseOver='JAVASCRIPT:placeLayer(108,"groepen02","scanners", "nmescanners")' onMouseOut='JAVASCRIPT:delayHide("scanners", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmescanners'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("scanners", "all", "groepen02", "nmescanners")' onMouseOver='JAVASCRIPT:placeLayer(108,"groepen02","scanners", "nmescanners")' onMouseOut='JAVASCRIPT:delayHide("scanners", -500, -500)'>scanners</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("software", "all", "groepen02", "nmesoftware")' onMouseOver='JAVASCRIPT:placeLayer(123,"groepen02","software", "nmesoftware")' onMouseOut='JAVASCRIPT:delayHide("software", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmesoftware'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("software", "all", "groepen02", "nmesoftware")' onMouseOver='JAVASCRIPT:placeLayer(123,"groepen02","software", "nmesoftware")' onMouseOut='JAVASCRIPT:delayHide("software", -500, -500)'>software</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("speakers microfoons", "all", "groepen02", "nmespeakers microfoons")' onMouseOver='JAVASCRIPT:placeLayer(138,"groepen02","speakers microfoons", "nmespeakers microfoons")' onMouseOut='JAVASCRIPT:delayHide("speakers microfoons", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmespeakers microfoons'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("speakers microfoons", "all", "groepen02", "nmespeakers microfoons")' onMouseOver='JAVASCRIPT:placeLayer(138,"groepen02","speakers microfoons", "nmespeakers microfoons")' onMouseOut='JAVASCRIPT:delayHide("speakers microfoons", -500, -500)'>speakers microfoons</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "all", "groepen02", "nmetoetsenbord/muis")' onMouseOver='JAVASCRIPT:placeLayer(153,"groepen02","toetsenbord/muis", "nmetoetsenbord/muis")' onMouseOut='JAVASCRIPT:delayHide("toetsenbord/muis", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmetoetsenbord/muis'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "all", "groepen02", "nmetoetsenbord/muis")' onMouseOver='JAVASCRIPT:placeLayer(153,"groepen02","toetsenbord/muis", "nmetoetsenbord/muis")' onMouseOut='JAVASCRIPT:delayHide("toetsenbord/muis", -500, -500)'>toetsenbord/muis</a></td>
+
+</tr>
+
+<tr>
+      <td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("videokaarten", "all", "groepen02", "nmevideokaarten")' onMouseOver='JAVASCRIPT:placeLayer(168,"groepen02","videokaarten", "nmevideokaarten")' onMouseOut='JAVASCRIPT:delayHide("videokaarten", -500, -500)'><img src="images/blok_neut.gif" border=0  width="9" height="9" name='nmevideokaarten'></a></td>
+
+      <td width="140" bgcolor="#0065FF"><a href='JAVASCRIPT:selecttoview("videokaarten", "all", "groepen02", "nmevideokaarten")' onMouseOver='JAVASCRIPT:placeLayer(168,"groepen02","videokaarten", "nmevideokaarten")' onMouseOut='JAVASCRIPT:delayHide("videokaarten", -500, -500)'>videokaarten</a></td>
+
+</tr>
+
+</table>
+</div>
+<div id="backup/ups" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:6; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("backup/ups", "1", "backup/ups", "nme28841")'><img src='images/blok_neut.gif' border=0 name='nme28841'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("backup/ups", "1", "backup/ups", "nme28841")'></a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("backup/ups", "6", "backup/ups", "nme28844")'><img src='images/blok_neut.gif' border=0 name='nme28844'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("backup/ups", "6", "backup/ups", "nme28844")'>Dat Streamers</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("backup/ups", "8", "backup/ups", "nme28842")'><img src='images/blok_neut.gif' border=0 name='nme28842'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("backup/ups", "8", "backup/ups", "nme28842")'>Zip</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("backup/ups", "13", "backup/ups", "nme28815")'><img src='images/blok_neut.gif' border=0 name='nme28815'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("backup/ups", "13", "backup/ups", "nme28815")'>Media</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("backup/ups", "24", "backup/ups", "nme29746")'><img src='images/blok_neut.gif' border=0 name='nme29746'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("backup/ups", "24", "backup/ups", "nme29746")'>APC ups</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("backup/ups", "36", "backup/ups", "nme30015")'><img src='images/blok_neut.gif' border=0 name='nme30015'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("backup/ups", "36", "backup/ups", "nme30015")'>Trust</a></td></tr>
+</table></div>
+<div id="behuizing" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:7; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("behuizing", "1", "behuizing", "nme28671")'><img src='images/blok_neut.gif' border=0 name='nme28671'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("behuizing", "1", "behuizing", "nme28671")'>ATX</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("behuizing", "8", "behuizing", "nme29321")'><img src='images/blok_neut.gif' border=0 name='nme29321'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("behuizing", "8", "behuizing", "nme29321")'>Speciale behuizingen</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("behuizing", "13", "behuizing", "nme28868")'><img src='images/blok_neut.gif' border=0 name='nme28868'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("behuizing", "13", "behuizing", "nme28868")'>Server</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("behuizing", "17", "behuizing", "nme28928")'><img src='images/blok_neut.gif' border=0 name='nme28928'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("behuizing", "17", "behuizing", "nme28928")'>Server 19 inch</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("behuizing", "21", "behuizing", "nme28862")'><img src='images/blok_neut.gif' border=0 name='nme28862'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("behuizing", "21", "behuizing", "nme28862")'>Voeding</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("behuizing", "25", "behuizing", "nme29023")'><img src='images/blok_neut.gif' border=0 name='nme29023'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("behuizing", "25", "behuizing", "nme29023")'>Externe HD/CD</a></td></tr>
+</table></div>
+<div id="bekabeling" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:8; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("bekabeling", "1", "bekabeling", "nme29165")'><img src='images/blok_neut.gif' border=0 name='nme29165'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("bekabeling", "1", "bekabeling", "nme29165")'>UTP kabels</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("bekabeling", "9", "bekabeling", "nme29168")'><img src='images/blok_neut.gif' border=0 name='nme29168'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("bekabeling", "9", "bekabeling", "nme29168")'>USB kabels</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("bekabeling", "16", "bekabeling", "nme29167")'><img src='images/blok_neut.gif' border=0 name='nme29167'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("bekabeling", "16", "bekabeling", "nme29167")'>SCSI kabels</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("bekabeling", "27", "bekabeling", "nme29169")'><img src='images/blok_neut.gif' border=0 name='nme29169'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("bekabeling", "27", "bekabeling", "nme29169")'>VGA Kabels</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("bekabeling", "33", "bekabeling", "nme29170")'><img src='images/blok_neut.gif' border=0 name='nme29170'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("bekabeling", "33", "bekabeling", "nme29170")'>Switchbox</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("bekabeling", "36", "bekabeling", "nme29171")'><img src='images/blok_neut.gif' border=0 name='nme29171'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("bekabeling", "36", "bekabeling", "nme29171")'>Overige kabels</a></td></tr>
+</table></div>
+<div id="camera" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:9; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("camera", "1", "camera", "nme29301")'><img src='images/blok_neut.gif' border=0 name='nme29301'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("camera", "1", "camera", "nme29301")'></a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("camera", "10", "camera", "nme29302")'><img src='images/blok_neut.gif' border=0 name='nme29302'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("camera", "10", "camera", "nme29302")'>Fuji toebehoren</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("camera", "20", "camera", "nme29831")'><img src='images/blok_neut.gif' border=0 name='nme29831'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("camera", "20", "camera", "nme29831")'>HP camera</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("camera", "25", "camera", "nme29832")'><img src='images/blok_neut.gif' border=0 name='nme29832'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("camera", "25", "camera", "nme29832")'>HP toebehoren</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("camera", "29", "camera", "nme29893")'><img src='images/blok_neut.gif' border=0 name='nme29893'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("camera", "29", "camera", "nme29893")'>Olympus Camedia</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("camera", "33", "camera", "nme29894")'><img src='images/blok_neut.gif' border=0 name='nme29894'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("camera", "33", "camera", "nme29894")'>Olympus Camedia toebehoren</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("camera", "37", "camera", "nme29152")'><img src='images/blok_neut.gif' border=0 name='nme29152'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("camera", "37", "camera", "nme29152")'>Web cameras</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("camera", "43", "camera", "nme29833")'><img src='images/blok_neut.gif' border=0 name='nme29833'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("camera", "43", "camera", "nme29833")'>Kijk voor opslagmedia bij geheugen</a></td></tr>
+</table></div>
+<div id="cd media en toebehoren" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:10; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("cd media en toebehoren", "1", "cd media en toebehoren", "nme29717")'><img src='images/blok_neut.gif' border=0 name='nme29717'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("cd media en toebehoren", "1", "cd media en toebehoren", "nme29717")'>Fuji</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("cd media en toebehoren", "4", "cd media en toebehoren", "nme29716")'><img src='images/blok_neut.gif' border=0 name='nme29716'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("cd media en toebehoren", "4", "cd media en toebehoren", "nme29716")'>Mitsui</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("cd media en toebehoren", "6", "cd media en toebehoren", "nme29715")'><img src='images/blok_neut.gif' border=0 name='nme29715'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("cd media en toebehoren", "6", "cd media en toebehoren", "nme29715")'>That's Write</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("cd media en toebehoren", "13", "cd media en toebehoren", "nme28954")'><img src='images/blok_neut.gif' border=0 name='nme28954'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("cd media en toebehoren", "13", "cd media en toebehoren", "nme28954")'>CD labeling</a></td></tr>
+</table></div>
+<div id="cd-rom (re)writers" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:11; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("cd-rom (re)writers", "1", "cd-rom (re)writers", "nme30019")'><img src='images/blok_neut.gif' border=0 name='nme30019'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("cd-rom (re)writers", "1", "cd-rom (re)writers", "nme30019")'>Standaard</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("cd-rom (re)writers", "5", "cd-rom (re)writers", "nme30174")'><img src='images/blok_neut.gif' border=0 name='nme30174'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("cd-rom (re)writers", "5", "cd-rom (re)writers", "nme30174")'>Acer</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("cd-rom (re)writers", "7", "cd-rom (re)writers", "nme29098")'><img src='images/blok_neut.gif' border=0 name='nme29098'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("cd-rom (re)writers", "7", "cd-rom (re)writers", "nme29098")'>Plextor</a></td></tr>
+</table></div>
+<div id="cd-rom spelers" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:12; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("cd-rom spelers", "1", "cd-rom spelers", "nme28864")'><img src='images/blok_neut.gif' border=0 name='nme28864'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("cd-rom spelers", "1", "cd-rom spelers", "nme28864")'>IDE</a></td></tr>
+</table></div>
+<div id="controllers" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:13; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("controllers", "1", "controllers", "nme28892")'><img src='images/blok_neut.gif' border=0 name='nme28892'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("controllers", "1", "controllers", "nme28892")'>Adaptec SCSI</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("controllers", "4", "controllers", "nme28893")'><img src='images/blok_neut.gif' border=0 name='nme28893'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("controllers", "4", "controllers", "nme28893")'>NCR SCSI</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("controllers", "7", "controllers", "nme29236")'><img src='images/blok_neut.gif' border=0 name='nme29236'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("controllers", "7", "controllers", "nme29236")'>Promise controllers</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("controllers", "10", "controllers", "nme28849")'><img src='images/blok_neut.gif' border=0 name='nme28849'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("controllers", "10", "controllers", "nme28849")'>Overig</a></td></tr>
+</table></div>
+<div id="diskettestation" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:14; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+</table></div>
+<div id="dvd" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:15; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("dvd", "1", "dvd", "nme28895")'><img src='images/blok_neut.gif' border=0 name='nme28895'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("dvd", "1", "dvd", "nme28895")'>Speler en decoder</a></td></tr>
+</table></div>
+<div id="ergonomie" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:16; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("ergonomie", "1", "ergonomie", "nme29769")'><img src='images/blok_neut.gif' border=0 name='nme29769'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("ergonomie", "1", "ergonomie", "nme29769")'>Fellowes</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("ergonomie", "9", "ergonomie", "nme29784")'><img src='images/blok_neut.gif' border=0 name='nme29784'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("ergonomie", "9", "ergonomie", "nme29784")'>Overig</a></td></tr>
+</table></div>
+<div id="fax/modem" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:17; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("fax/modem", "1", "fax/modem", "nme28896")'><img src='images/blok_neut.gif' border=0 name='nme28896'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("fax/modem", "1", "fax/modem", "nme28896")'>56K6</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("fax/modem", "6", "fax/modem", "nme28850")'><img src='images/blok_neut.gif' border=0 name='nme28850'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("fax/modem", "6", "fax/modem", "nme28850")'>ISDN</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("fax/modem", "9", "fax/modem", "nme28851")'><img src='images/blok_neut.gif' border=0 name='nme28851'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("fax/modem", "9", "fax/modem", "nme28851")'>PCMCIA</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("fax/modem", "13", "fax/modem", "nme29250")'><img src='images/blok_neut.gif' border=0 name='nme29250'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("fax/modem", "13", "fax/modem", "nme29250")'>Dynalink</a></td></tr>
+</table></div>
+<div id="game controllers" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:18; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("game controllers", "1", "game controllers", "nme28829")'><img src='images/blok_neut.gif' border=0 name='nme28829'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("game controllers", "1", "game controllers", "nme28829")'>Joysticks</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("game controllers", "7", "game controllers", "nme28831")'><img src='images/blok_neut.gif' border=0 name='nme28831'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("game controllers", "7", "game controllers", "nme28831")'>Gamepads</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("game controllers", "12", "game controllers", "nme28897")'><img src='images/blok_neut.gif' border=0 name='nme28897'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("game controllers", "12", "game controllers", "nme28897")'>Stuur</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("game controllers", "18", "game controllers", "nme29471")'><img src='images/blok_neut.gif' border=0 name='nme29471'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("game controllers", "18", "game controllers", "nme29471")'>Overig</a></td></tr>
+</table></div>
+<div id="geheugen" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:19; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geheugen", "1", "geheugen", "nme29174")'><img src='images/blok_neut.gif' border=0 name='nme29174'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("geheugen", "1", "geheugen", "nme29174")'>SDRam PC 133</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geheugen", "8", "geheugen", "nme29648")'><img src='images/blok_neut.gif' border=0 name='nme29648'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("geheugen", "8", "geheugen", "nme29648")'>DDRam PC 266</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geheugen", "12", "geheugen", "nme29702")'><img src='images/blok_neut.gif' border=0 name='nme29702'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("geheugen", "12", "geheugen", "nme29702")'>RDRam PC 800 (Rimm)</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geheugen", "16", "geheugen", "nme29403")'><img src='images/blok_neut.gif' border=0 name='nme29403'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("geheugen", "16", "geheugen", "nme29403")'>Notebook Memory</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geheugen", "20", "geheugen", "nme29697")'><img src='images/blok_neut.gif' border=0 name='nme29697'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("geheugen", "20", "geheugen", "nme29697")'>Compact Flash</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geheugen", "25", "geheugen", "nme29696")'><img src='images/blok_neut.gif' border=0 name='nme29696'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("geheugen", "25", "geheugen", "nme29696")'>Memory Stick</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geheugen", "28", "geheugen", "nme29695")'><img src='images/blok_neut.gif' border=0 name='nme29695'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("geheugen", "28", "geheugen", "nme29695")'>Smart Media</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geheugen", "32", "geheugen", "nme29698")'><img src='images/blok_neut.gif' border=0 name='nme29698'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("geheugen", "32", "geheugen", "nme29698")'>Toebehoren</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geheugen", "34", "geheugen", "nme29875")'><img src='images/blok_neut.gif' border=0 name='nme29875'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("geheugen", "34", "geheugen", "nme29875")'>Thumbdrive</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geheugen", "38", "geheugen", "nme30112")'><img src='images/blok_neut.gif' border=0 name='nme30112'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("geheugen", "38", "geheugen", "nme30112")'>Multi Media Card</a></td></tr>
+</table></div>
+<div id="geluidskaarten" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:20; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geluidskaarten", "1", "geluidskaarten", "nme28828")'><img src='images/blok_neut.gif' border=0 name='nme28828'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("geluidskaarten", "1", "geluidskaarten", "nme28828")'>Standaard</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("geluidskaarten", "3", "geluidskaarten", "nme28826")'><img src='images/blok_neut.gif' border=0 name='nme28826'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("geluidskaarten", "3", "geluidskaarten", "nme28826")'>Creative</a></td></tr>
+</table></div>
+<div id="handhelds pda" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:21; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("handhelds pda", "1", "handhelds pda", "nme29390")'><img src='images/blok_neut.gif' border=0 name='nme29390'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("handhelds pda", "1", "handhelds pda", "nme29390")'>HP</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("handhelds pda", "4", "handhelds pda", "nme29837")'><img src='images/blok_neut.gif' border=0 name='nme29837'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("handhelds pda", "4", "handhelds pda", "nme29837")'>3Com palm</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("handhelds pda", "11", "handhelds pda", "nme29836")'><img src='images/blok_neut.gif' border=0 name='nme29836'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("handhelds pda", "11", "handhelds pda", "nme29836")'>Psion dacom</a></td></tr>
+</table></div>
+<div id="harde schijven" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:22; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("harde schijven", "1", "harde schijven", "nme29209")'><img src='images/blok_neut.gif' border=0 name='nme29209'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("harde schijven", "1", "harde schijven", "nme29209")'>IDE 5400 rpm</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("harde schijven", "7", "harde schijven", "nme29210")'><img src='images/blok_neut.gif' border=0 name='nme29210'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("harde schijven", "7", "harde schijven", "nme29210")'>IDE 7200 rpm</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("harde schijven", "12", "harde schijven", "nme28668")'><img src='images/blok_neut.gif' border=0 name='nme28668'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("harde schijven", "12", "harde schijven", "nme28668")'>SCSI</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("harde schijven", "15", "harde schijven", "nme29404")'><img src='images/blok_neut.gif' border=0 name='nme29404'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("harde schijven", "15", "harde schijven", "nme29404")'>Notebook HDD</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("harde schijven", "18", "harde schijven", "nme28817")'><img src='images/blok_neut.gif' border=0 name='nme28817'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("harde schijven", "18", "harde schijven", "nme28817")'>Toebehoren</a></td></tr>
+</table></div>
+<div id="hp up to date" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:23; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("hp up to date", "1", "hp up to date", "nme29385")'><img src='images/blok_neut.gif' border=0 name='nme29385'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("hp up to date", "1", "hp up to date", "nme29385")'>HP e-Vectra</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("hp up to date", "3", "hp up to date", "nme29294")'><img src='images/blok_neut.gif' border=0 name='nme29294'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("hp up to date", "3", "hp up to date", "nme29294")'>HP Vectra</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("hp up to date", "11", "hp up to date", "nme29296")'><img src='images/blok_neut.gif' border=0 name='nme29296'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("hp up to date", "11", "hp up to date", "nme29296")'>HP Omnibook</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("hp up to date", "18", "hp up to date", "nme29699")'><img src='images/blok_neut.gif' border=0 name='nme29699'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("hp up to date", "18", "hp up to date", "nme29699")'>HP Monitor</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("hp up to date", "20", "hp up to date", "nme29938")'><img src='images/blok_neut.gif' border=0 name='nme29938'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("hp up to date", "20", "hp up to date", "nme29938")'>HP Supportpacks</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("hp up to date", "26", "hp up to date", "nme29295")'><img src='images/blok_neut.gif' border=0 name='nme29295'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("hp up to date", "26", "hp up to date", "nme29295")'>HP Netserver</a></td></tr>
+</table></div>
+<div id="moederborden" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:24; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("moederborden", "1", "moederborden", "nme29067")'><img src='images/blok_neut.gif' border=0 name='nme29067'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("moederborden", "1", "moederborden", "nme29067")'>Standaard</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("moederborden", "7", "moederborden", "nme28658")'><img src='images/blok_neut.gif' border=0 name='nme28658'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("moederborden", "7", "moederborden", "nme28658")'>Asus</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("moederborden", "15", "moederborden", "nme28813")'><img src='images/blok_neut.gif' border=0 name='nme28813'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("moederborden", "15", "moederborden", "nme28813")'>MSI</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("moederborden", "25", "moederborden", "nme29482")'><img src='images/blok_neut.gif' border=0 name='nme29482'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("moederborden", "25", "moederborden", "nme29482")'>Intel P IV</a></td></tr>
+</table></div>
+<div id="monitoren" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:25; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("monitoren", "1", "monitoren", "nme28945")'><img src='images/blok_neut.gif' border=0 name='nme28945'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("monitoren", "1", "monitoren", "nme28945")'></a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("monitoren", "2", "monitoren", "nme29362")'><img src='images/blok_neut.gif' border=0 name='nme29362'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("monitoren", "2", "monitoren", "nme29362")'>Standaard</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("monitoren", "8", "monitoren", "nme28819")'><img src='images/blok_neut.gif' border=0 name='nme28819'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("monitoren", "8", "monitoren", "nme28819")'>IIyama</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("monitoren", "13", "monitoren", "nme29720")'><img src='images/blok_neut.gif' border=0 name='nme29720'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("monitoren", "13", "monitoren", "nme29720")'>IIyama TFT</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("monitoren", "22", "monitoren", "nme29815")'><img src='images/blok_neut.gif' border=0 name='nme29815'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("monitoren", "22", "monitoren", "nme29815")'>IIyama Projector</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("monitoren", "24", "monitoren", "nme29087")'><img src='images/blok_neut.gif' border=0 name='nme29087'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("monitoren", "24", "monitoren", "nme29087")'>Samsung</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("monitoren", "31", "monitoren", "nme29718")'><img src='images/blok_neut.gif' border=0 name='nme29718'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("monitoren", "31", "monitoren", "nme29718")'>Samsung TFT</a></td></tr>
+</table></div>
+<div id="mp3" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:26; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("mp3", "1", "mp3", "nme29442")'><img src='images/blok_neut.gif' border=0 name='nme29442'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("mp3", "1", "mp3", "nme29442")'>Creative</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("mp3", "4", "mp3", "nme30085")'><img src='images/blok_neut.gif' border=0 name='nme30085'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("mp3", "4", "mp3", "nme30085")'>Rio</a></td></tr>
+</table></div>
+<div id="netwerk" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:27; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("netwerk", "1", "netwerk", "nme28833")'><img src='images/blok_neut.gif' border=0 name='nme28833'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("netwerk", "1", "netwerk", "nme28833")'></a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("netwerk", "5", "netwerk", "nme29125")'><img src='images/blok_neut.gif' border=0 name='nme29125'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("netwerk", "5", "netwerk", "nme29125")'>Unex</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("netwerk", "16", "netwerk", "nme28834")'><img src='images/blok_neut.gif' border=0 name='nme28834'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("netwerk", "16", "netwerk", "nme28834")'>3com</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("netwerk", "22", "netwerk", "nme29251")'><img src='images/blok_neut.gif' border=0 name='nme29251'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("netwerk", "22", "netwerk", "nme29251")'>Dynalink</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("netwerk", "25", "netwerk", "nme29655")'><img src='images/blok_neut.gif' border=0 name='nme29655'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("netwerk", "25", "netwerk", "nme29655")'>Ovislink</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("netwerk", "29", "netwerk", "nme29840")'><img src='images/blok_neut.gif' border=0 name='nme29840'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("netwerk", "29", "netwerk", "nme29840")'>Xircom</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("netwerk", "32", "netwerk", "nme29839")'><img src='images/blok_neut.gif' border=0 name='nme29839'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("netwerk", "32", "netwerk", "nme29839")'>HP</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("netwerk", "34", "netwerk", "nme29841")'><img src='images/blok_neut.gif' border=0 name='nme29841'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("netwerk", "34", "netwerk", "nme29841")'>Asus</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("netwerk", "36", "netwerk", "nme29842")'><img src='images/blok_neut.gif' border=0 name='nme29842'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("netwerk", "36", "netwerk", "nme29842")'>Intel</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("netwerk", "40", "netwerk", "nme29700")'><img src='images/blok_neut.gif' border=0 name='nme29700'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("netwerk", "40", "netwerk", "nme29700")'>SMC</a></td></tr>
+</table></div>
+<div id="pctv en editing" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:28; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("pctv en editing", "1", "pctv en editing", "nme28920")'><img src='images/blok_neut.gif' border=0 name='nme28920'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("pctv en editing", "1", "pctv en editing", "nme28920")'>Pinnacle</a></td></tr>
+</table></div>
+<div id="printers" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:29; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("printers", "1", "printers", "nme30071")'><img src='images/blok_neut.gif' border=0 name='nme30071'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("printers", "1", "printers", "nme30071")'>Acer</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("printers", "4", "printers", "nme29176")'><img src='images/blok_neut.gif' border=0 name='nme29176'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("printers", "4", "printers", "nme29176")'></a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("printers", "13", "printers", "nme29545")'><img src='images/blok_neut.gif' border=0 name='nme29545'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("printers", "13", "printers", "nme29545")'>HP Photosmart Prn.</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("printers", "17", "printers", "nme29937")'><img src='images/blok_neut.gif' border=0 name='nme29937'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("printers", "17", "printers", "nme29937")'>HP Designjet</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("printers", "19", "printers", "nme29843")'><img src='images/blok_neut.gif' border=0 name='nme29843'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("printers", "19", "printers", "nme29843")'>HP Laserjet printer</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("printers", "32", "printers", "nme29241")'><img src='images/blok_neut.gif' border=0 name='nme29241'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("printers", "32", "printers", "nme29241")'>HP Officejet</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("printers", "40", "printers", "nme29179")'><img src='images/blok_neut.gif' border=0 name='nme29179'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("printers", "40", "printers", "nme29179")'>Epson Stylus printer</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("printers", "46", "printers", "nme29177")'><img src='images/blok_neut.gif' border=0 name='nme29177'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("printers", "46", "printers", "nme29177")'>HP Cartridge</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("printers", "58", "printers", "nme29178")'><img src='images/blok_neut.gif' border=0 name='nme29178'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("printers", "58", "printers", "nme29178")'>HP Toner</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("printers", "71", "printers", "nme28910")'><img src='images/blok_neut.gif' border=0 name='nme28910'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("printers", "71", "printers", "nme28910")'>Epson cartridge</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("printers", "83", "printers", "nme29772")'><img src='images/blok_neut.gif' border=0 name='nme29772'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("printers", "83", "printers", "nme29772")'>Printpapier</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("printers", "85", "printers", "nme30016")'><img src='images/blok_neut.gif' border=0 name='nme30016'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("printers", "85", "printers", "nme30016")'>HP Printer Accessoires</a></td></tr>
+</table></div>
+<div id="processoren" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:30; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("processoren", "1", "processoren", "nme29491")'><img src='images/blok_neut.gif' border=0 name='nme29491'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("processoren", "1", "processoren", "nme29491")'></a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("processoren", "2", "processoren", "nme29844")'><img src='images/blok_neut.gif' border=0 name='nme29844'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("processoren", "2", "processoren", "nme29844")'>Intel Celeron</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("processoren", "6", "processoren", "nme30073")'><img src='images/blok_neut.gif' border=0 name='nme30073'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("processoren", "6", "processoren", "nme30073")'>Intel Pentium III 133MHz</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("processoren", "8", "processoren", "nme29846")'><img src='images/blok_neut.gif' border=0 name='nme29846'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("processoren", "8", "processoren", "nme29846")'>Intel Pentium IV 400MHz</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("processoren", "10", "processoren", "nme29917")'><img src='images/blok_neut.gif' border=0 name='nme29917'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("processoren", "10", "processoren", "nme29917")'>Intel Pentium IV 478</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("processoren", "14", "processoren", "nme29847")'><img src='images/blok_neut.gif' border=0 name='nme29847'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("processoren", "14", "processoren", "nme29847")'>AMD Duron</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("processoren", "19", "processoren", "nme29848")'><img src='images/blok_neut.gif' border=0 name='nme29848'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("processoren", "19", "processoren", "nme29848")'>AMD Thunderbird</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("processoren", "23", "processoren", "nme29985")'><img src='images/blok_neut.gif' border=0 name='nme29985'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("processoren", "23", "processoren", "nme29985")'>AMD Athlon XP+</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("processoren", "28", "processoren", "nme29707")'><img src='images/blok_neut.gif' border=0 name='nme29707'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("processoren", "28", "processoren", "nme29707")'>Koeling</a></td></tr>
+</table></div>
+<div id="scanners" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:31; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("scanners", "1", "scanners", "nme29849")'><img src='images/blok_neut.gif' border=0 name='nme29849'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("scanners", "1", "scanners", "nme29849")'>Acer</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("scanners", "3", "scanners", "nme30088")'><img src='images/blok_neut.gif' border=0 name='nme30088'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("scanners", "3", "scanners", "nme30088")'>Epson</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("scanners", "6", "scanners", "nme29850")'><img src='images/blok_neut.gif' border=0 name='nme29850'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("scanners", "6", "scanners", "nme29850")'>HP Scanjet</a></td></tr>
+</table></div>
+<div id="software" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:32; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("software", "1", "software", "nme28912")'><img src='images/blok_neut.gif' border=0 name='nme28912'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("software", "1", "software", "nme28912")'></a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("software", "5", "software", "nme29339")'><img src='images/blok_neut.gif' border=0 name='nme29339'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("software", "5", "software", "nme29339")'>Microsoft Windows</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("software", "13", "software", "nme29340")'><img src='images/blok_neut.gif' border=0 name='nme29340'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("software", "13", "software", "nme29340")'>Microsoft Office</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("software", "18", "software", "nme28914")'><img src='images/blok_neut.gif' border=0 name='nme28914'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("software", "18", "software", "nme28914")'>(Re)writer software</a></td></tr>
+</table></div>
+<div id="speakers microfoons" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:33; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("speakers microfoons", "1", "speakers microfoons", "nme29145")'><img src='images/blok_neut.gif' border=0 name='nme29145'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("speakers microfoons", "1", "speakers microfoons", "nme29145")'>Standaard speakers</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("speakers microfoons", "5", "speakers microfoons", "nme29147")'><img src='images/blok_neut.gif' border=0 name='nme29147'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("speakers microfoons", "5", "speakers microfoons", "nme29147")'>Standaard headset/microfoons</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("speakers microfoons", "9", "speakers microfoons", "nme29144")'><img src='images/blok_neut.gif' border=0 name='nme29144'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("speakers microfoons", "9", "speakers microfoons", "nme29144")'>Labtec speakers</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("speakers microfoons", "15", "speakers microfoons", "nme29143")'><img src='images/blok_neut.gif' border=0 name='nme29143'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("speakers microfoons", "15", "speakers microfoons", "nme29143")'>Labtec headset/microfoons</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("speakers microfoons", "22", "speakers microfoons", "nme29146")'><img src='images/blok_neut.gif' border=0 name='nme29146'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("speakers microfoons", "22", "speakers microfoons", "nme29146")'>Creative speakers</a></td></tr>
+</table></div>
+<div id="toetsenbord/muis" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:34; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "1", "toetsenbord/muis", "nme28903")'><img src='images/blok_neut.gif' border=0 name='nme28903'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "1", "toetsenbord/muis", "nme28903")'>Standaard</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "3", "toetsenbord/muis", "nme28904")'><img src='images/blok_neut.gif' border=0 name='nme28904'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "3", "toetsenbord/muis", "nme28904")'>Logitech</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "15", "toetsenbord/muis", "nme28959")'><img src='images/blok_neut.gif' border=0 name='nme28959'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "15", "toetsenbord/muis", "nme28959")'>Trackball</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "18", "toetsenbord/muis", "nme28905")'><img src='images/blok_neut.gif' border=0 name='nme28905'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "18", "toetsenbord/muis", "nme28905")'>Muismat</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "20", "toetsenbord/muis", "nme29341")'><img src='images/blok_neut.gif' border=0 name='nme29341'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "20", "toetsenbord/muis", "nme29341")'>Teken tablet</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "22", "toetsenbord/muis", "nme29748")'><img src='images/blok_neut.gif' border=0 name='nme29748'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "22", "toetsenbord/muis", "nme29748")'>Logitech toetsenbord</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "26", "toetsenbord/muis", "nme29751")'><img src='images/blok_neut.gif' border=0 name='nme29751'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "26", "toetsenbord/muis", "nme29751")'>Microsoft toetstenbord</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "29", "toetsenbord/muis", "nme29750")'><img src='images/blok_neut.gif' border=0 name='nme29750'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "29", "toetsenbord/muis", "nme29750")'>Samsung toetsenbord</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "31", "toetsenbord/muis", "nme29749")'><img src='images/blok_neut.gif' border=0 name='nme29749'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("toetsenbord/muis", "31", "toetsenbord/muis", "nme29749")'>BTC toetsenbord</a></td></tr>
+</table></div>
+<div id="videokaarten" style="position:absolute; left:-500px; top:-500px; width:140px; height:10px; z-index:35; background-color:#CCCCFF; layer-background-color:#CCCCFF; border: 1px none #BBBBBB" onMouseOver='JAVASCRIPT:window.clearTimeout(timeID);' onMouseOut='JAVASCRIPT:delayHide()'>
+<table border="0" width="140" cellspacing="1" cellpadding="1">
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("videokaarten", "1", "videokaarten", "nme29069")'><img src='images/blok_neut.gif' border=0 name='nme29069'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("videokaarten", "1", "videokaarten", "nme29069")'>ASUS</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("videokaarten", "6", "videokaarten", "nme28836")'><img src='images/blok_neut.gif' border=0 name='nme28836'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("videokaarten", "6", "videokaarten", "nme28836")'>Standaard</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("videokaarten", "18", "videokaarten", "nme29450")'><img src='images/blok_neut.gif' border=0 name='nme29450'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("videokaarten", "18", "videokaarten", "nme29450")'>ATI</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("videokaarten", "22", "videokaarten", "nme29496")'><img src='images/blok_neut.gif' border=0 name='nme29496'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("videokaarten", "22", "videokaarten", "nme29496")'>Matrox</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("videokaarten", "25", "videokaarten", "nme29741")'><img src='images/blok_neut.gif' border=0 name='nme29741'></a></td><td width="128" bgcolor="#0424FC"><a href='JAVASCRIPT:selecttoview("videokaarten", "25", "videokaarten", "nme29741")'>MSI</a></td></tr>
+</table></div>
+</table></div>
+
+
+<div id="sys" style="position:absolute; width:200px; height:88px; z-index:1; left: -500px; top: -500px"><table border="0" width="200" cellspacing="1" cellpadding="1"><tr><td colspan="2" width="199" bgcolor="#0065FF">&nbsp;<font color="#FFFFFF">Systeem keuzes</font></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href="JavaScript:naarSys('sys001')" onMouseOver="JavaScript:rollImg('sys','sys001')" onMouseOut="JavaScript:resetRollImg()"><img src="images/blok_neut.gif" border=0  width="9" height="9" name='sys001'></a></td>
+<td width="190" bgcolor="#0065FF">&nbsp;<a href="JavaScript:naarSys('sys001')" onMouseOver="JavaScript:rollImg('sys','sys001')" onMouseOut="JavaScript:resetRollImg()">NoRRoD AMD Duron</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href="JavaScript:naarSys('sys002')" onMouseOver="JavaScript:rollImg('sys','sys002')" onMouseOut="JavaScript:resetRollImg()"><img src="images/blok_neut.gif" border=0  width="9" height="9" name='sys002'></a></td>
+<td width="190" bgcolor="#0065FF">&nbsp;<a href="JavaScript:naarSys('sys002')" onMouseOver="JavaScript:rollImg('sys','sys002')" onMouseOut="JavaScript:resetRollImg()">NoRRoD AMD Thunderbird</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href="JavaScript:naarSys('sys003')" onMouseOver="JavaScript:rollImg('sys','sys003')" onMouseOut="JavaScript:resetRollImg()"><img src="images/blok_neut.gif" border=0  width="9" height="9" name='sys003'></a></td>
+<td width="190" bgcolor="#0065FF">&nbsp;<a href="JavaScript:naarSys('sys003')" onMouseOver="JavaScript:rollImg('sys','sys003')" onMouseOut="JavaScript:resetRollImg()">NoRRoD AMD Thunderbird DDR</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href="JavaScript:naarSys('sys004')" onMouseOver="JavaScript:rollImg('sys','sys004')" onMouseOut="JavaScript:resetRollImg()"><img src="images/blok_neut.gif" border=0  width="9" height="9" name='sys004'></a></td>
+<td width="190" bgcolor="#0065FF">&nbsp;<a href="JavaScript:naarSys('sys004')" onMouseOver="JavaScript:rollImg('sys','sys004')" onMouseOut="JavaScript:resetRollImg()">NoRRoD Intel Celeron</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href="JavaScript:naarSys('sys005')" onMouseOver="JavaScript:rollImg('sys','sys005')" onMouseOut="JavaScript:resetRollImg()"><img src="images/blok_neut.gif" border=0  width="9" height="9" name='sys005'></a></td>
+<td width="190" bgcolor="#0065FF">&nbsp;<a href="JavaScript:naarSys('sys005')" onMouseOver="JavaScript:rollImg('sys','sys005')" onMouseOut="JavaScript:resetRollImg()">NoRRoD Intel P4 S478 SDRAM</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href="JavaScript:naarSys('sys006')" onMouseOver="JavaScript:rollImg('sys','sys006')" onMouseOut="JavaScript:resetRollImg()"><img src="images/blok_neut.gif" border=0  width="9" height="9" name='sys006'></a></td>
+<td width="190" bgcolor="#0065FF">&nbsp;<a href="JavaScript:naarSys('sys006')" onMouseOver="JavaScript:rollImg('sys','sys006')" onMouseOut="JavaScript:resetRollImg()">NoRRoD Intel P4 S478 DDR</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href="JavaScript:naarSys('sys007')" onMouseOver="JavaScript:rollImg('sys','sys007')" onMouseOut="JavaScript:resetRollImg()"><img src="images/blok_neut.gif" border=0  width="9" height="9" name='sys007'></a></td>
+<td width="190" bgcolor="#0065FF">&nbsp;<a href="JavaScript:naarSys('sys007')" onMouseOver="JavaScript:rollImg('sys','sys007')" onMouseOut="JavaScript:resetRollImg()">NoRRoD Intel Server</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href="JavaScript:naarSys('sys008')" onMouseOver="JavaScript:rollImg('sys','sys008')" onMouseOut="JavaScript:resetRollImg()"><img src="images/blok_neut.gif" border=0  width="9" height="9" name='sys008'></a></td>
+<td width="190" bgcolor="#0065FF">&nbsp;<a href="JavaScript:naarSys('sys008')" onMouseOver="JavaScript:rollImg('sys','sys008')" onMouseOut="JavaScript:resetRollImg()">NoRRoD Intel P4 S478 RIMM</a></td></tr>
+</table></div>
+<div id="note" style="position:absolute; width:200px; height:88px; z-index:1; left: -500px; top: -500px"><table border="0" width="200" cellspacing="1" cellpadding="1"><tr><td colspan="2" width="199" bgcolor="#0065FF">&nbsp;<font color="#FFFFFF"><a href='JAVASCRIPT:selecttoview("notebooks", "all", "notebooks", "nmenotebooks")'>Notebooks</a></font></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("notebooks", "1", "notebooks", "nme29771")' onMouseOver="JavaScript:rollImg('sys','Asus notebooks')" onMouseOut="JavaScript:resetRollImg()"><img src="images/blok_neut.gif" border=0  width="9" height="9" name='Asus notebooks'></a></td>
+<td width="190" bgcolor="#0065FF">&nbsp;<a href='JAVASCRIPT:selecttoview("notebooks", "1", "notebooks", "nme29771")' onMouseOver="JavaScript:rollImg('sys','Asus notebooks')" onMouseOut="JavaScript:resetRollImg()">Asus notebooks</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("notebooks", "7", "notebooks", "nme29701")' onMouseOver="JavaScript:rollImg('sys','Asus accessoires')" onMouseOut="JavaScript:resetRollImg()"><img src="images/blok_neut.gif" border=0  width="9" height="9" name='Asus accessoires'></a></td>
+<td width="190" bgcolor="#0065FF">&nbsp;<a href='JAVASCRIPT:selecttoview("notebooks", "7", "notebooks", "nme29701")' onMouseOver="JavaScript:rollImg('sys','Asus accessoires')" onMouseOut="JavaScript:resetRollImg()">Asus accessoires</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("notebooks", "16", "notebooks", "nme29305")' onMouseOver="JavaScript:rollImg('sys','Toshiba Notebooks')" onMouseOut="JavaScript:resetRollImg()"><img src="images/blok_neut.gif" border=0  width="9" height="9" name='Toshiba Notebooks'></a></td>
+<td width="190" bgcolor="#0065FF">&nbsp;<a href='JAVASCRIPT:selecttoview("notebooks", "16", "notebooks", "nme29305")' onMouseOver="JavaScript:rollImg('sys','Toshiba Notebooks')" onMouseOut="JavaScript:resetRollImg()">Toshiba Notebooks</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("notebooks", "24", "notebooks", "nme30040")' onMouseOver="JavaScript:rollImg('sys','Notebook accessoires')" onMouseOut="JavaScript:resetRollImg()"><img src="images/blok_neut.gif" border=0  width="9" height="9" name='Notebook accessoires'></a></td>
+<td width="190" bgcolor="#0065FF">&nbsp;<a href='JAVASCRIPT:selecttoview("notebooks", "24", "notebooks", "nme30040")' onMouseOver="JavaScript:rollImg('sys','Notebook accessoires')" onMouseOut="JavaScript:resetRollImg()">Notebook accessoires</a></td></tr>
+<tr><td width="9" bgcolor="#666666"><a href='JAVASCRIPT:selecttoview("notebooks", "31", "notebooks", "nme30039")' onMouseOver="JavaScript:rollImg('sys','Notebook beveiliging')" onMouseOut="JavaScript:resetRollImg()"><img src="images/blok_neut.gif" border=0  width="9" height="9" name='Notebook beveiliging'></a></td>
+<td width="190" bgcolor="#0065FF">&nbsp;<a href='JAVASCRIPT:selecttoview("notebooks", "31", "notebooks", "nme30039")' onMouseOver="JavaScript:rollImg('sys','Notebook beveiliging')" onMouseOut="JavaScript:resetRollImg()">Notebook beveiliging</a></td></tr>
+</table></div>
+
+
+<!-- eerste optie menu (toon selectie en wis selectie) -->
+
+<div id="optionsone" style="position:absolute; width:150px; height:88px; z-index:1; left: -500px; top: -500px">
+
+  <table border="0" cellspacing="1" cellpadding="1">
+    <tr>
+      <td width="9" bgcolor="#339900" height="20"><a href='JAVASCRIPT:document.forms["bestelling"].submit()'><img src="images/blok_toon_000.gif" width="9" height="9" border="0"></a></td>
+      <td  width="140" bgcolor="#99FF99" height="20"><a href='JAVASCRIPT:document.forms["bestelling"].submit()'><img src="images/toon4.gif" width="76" height="10" border="0"></a></td>
+    </tr>
+    <tr>
+      <td width="9" bgcolor="#FF0000" height="20"><a href="JAVASCRIPT:wisselectie()"><img src="images/blok_wis_000.gif" width="9" height="9" border="0"></a></td>
+      <td width="140" bgcolor="#FFCCCC" height="20"><a href="JAVASCRIPT:wisselectie()"><img src="images/wis4.gif" width="76" height="10" border="0"></a></td>
+    </tr>
+  </table>
+
+</div>
+<div id="optionstwo" style="position:absolute; width:150px; height:45px; z-index:1; left: -500px; top: -500px">
+
+  <table border="0" cellspacing="1" cellpadding="1">
+    <tr>
+      <td width="9" bgcolor="#FFCCCC" height="20"><a href="JAVASCRIPT:zoekprompt()"><img src="images/blok_type_000.gif" width="9" height="9" border="0"></a></td>
+      <td width="140" bgcolor="#FFCCCC" valign="top" height="20"><a href="JAVASCRIPT:zoekprompt()"><img src="images/key.gif" width="114" height="18" border="0"></a></td>
+    </tr>
+    <tr>
+      <td width="9" bgcolor="#3574B9" height="20"><a href="JAVASCRIPT:changemode()"><img src="images/blok_mode_000.gif" width="9" height="9" border="0"></a></td>
+      <td width="140" bgcolor="#3574B9" valign="top" height="20"><a href="JAVASCRIPT:changemode()"><img src="images/mode.gif" width="114" height="18" border="0" alt="klik hierop om meerdere productgroepen tegelijkertijd te bekijken"></a></td>
+    </tr>
+  </table>
+
+</div>
+<form name="bestelling" action="viewproducts.asp" method="post" target="data"><input type="hidden" name="bestellijst"></form>
+<div id="menu" style="position:absolute; width:200px; height:54px; z-index:0; left: 2px; top: -250px">
+<table border="0" cellspacing="1"><tr><td valign="top"><img src="images/ani.gif" width="297" height="50" name="bill"></td></tr></table>
+</div><div id="schaduw" style="position:absolute; left:-500px; top:-500px; width:140px; height:100px; z-index:4; background-color: #000000; layer-background-image: url(images/schaduw.gif); border: 1px none #000000"></div>
+<script language="JavaScript">
+bottom = 180
+bottomone = 270
+clipmenu();
+
+
+function bottommenuCheck(){
+	// bottom navigation
+	botloaded = top.bottommenu.go;
+	if(botloaded!=true){
+		botID = window.setTimeout('bottommenuCheck()', 500)
+	}
+	else{
+		top.bottommenu.loadcheck();
+	}
+}
+
+function topmenuCheck(){
+	// top navigation
+	topload = top.nav.go;
+	if(topload!=true){
+		topID = window.setTimeout('topmenuCheck()', 500)
+	}
+	else{
+		top.nav.loadcheck();
+	}
+}
+
+bottommenuCheck()
+topmenuCheck()
+</script>
+</body>
+</html>

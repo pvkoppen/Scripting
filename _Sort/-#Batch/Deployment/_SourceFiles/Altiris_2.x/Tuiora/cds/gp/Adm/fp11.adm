@@ -1,0 +1,604 @@
+CLASS USER
+
+CATEGORY "Microsoft Office FrontPage 2003"
+KEYNAME Software\Policies\Microsoft\Office\11.0
+CATEGORY "Tools | Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0
+CATEGORY "General"
+KEYNAME Software\Policies\Microsoft\FrontPage\Editor
+POLICY "Startup Task Pane"
+KEYNAME Software\Policies\Microsoft\FrontPage\Editor
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+	VALUENAME StartupDialog
+	VALUEON NUMERIC 1
+	VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "New Page or Web Links"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Frontpage\New Page or Web"
+POLICY "Custom Link #1"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Frontpage\New Page or Web\CustomPolicy1"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a page or web"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing page or web"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #2"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Frontpage\New Page or Web\CustomPolicy2"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a page or web"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing page or web"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #3"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Frontpage\New Page or Web\CustomPolicy3"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a page or web"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing page or web"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #4"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Frontpage\New Page or Web\CustomPolicy4"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a page or web"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing page or web"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #5"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Frontpage\New Page or Web\CustomPolicy5"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a page or web"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing page or web"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #6"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Frontpage\New Page or Web\CustomPolicy6"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a page or web"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing page or web"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #7"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Frontpage\New Page or Web\CustomPolicy7"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a page or web"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing page or web"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #8"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Frontpage\New Page or Web\CustomPolicy8"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a page or web"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing page or web"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #9"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Frontpage\New Page or Web\CustomPolicy9"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a page or web"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing page or web"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+POLICY "Custom Link #10"
+KEYNAME "Software\Policies\Microsoft\Office\11.0\Frontpage\New Page or Web\CustomPolicy10"
+	PART "Display Name:" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME DisplayName
+	END PART;
+	PART "Full path including filename (required):" TEXT
+	END PART
+	PART " " EDITTEXT
+	VALUENAME Filename
+	END PART
+	PART "Section of workpane to display link:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Section
+	ITEMLIST
+		NAME "Open a page or web"		VALUE NUMERIC 0  DEFAULT
+		NAME "New"		VALUE NUMERIC 1
+		NAME "New from existing page or web"	VALUE NUMERIC 2
+		NAME "New from template"	VALUE NUMERIC 3
+	END ITEMLIST
+	NOSORT
+	END PART
+	PART "Action:" TEXT
+	END PART
+	PART " " DROPDOWNLIST
+	VALUENAME Action
+	ITEMLIST
+		NAME "Open existing file"		VALUE NUMERIC 0 DEFAULT
+		NAME "Create new file"	VALUE NUMERIC 1
+	END ITEMLIST
+	NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Disable items in user interface"
+KEYNAME Software\Policies\Microsoft\Office\11.0\FrontPage\DisabledCmdBarItemsCheckBoxes
+CATEGORY "Predefined"
+KEYNAME Software\Policies\Microsoft\Office\11.0\FrontPage\DisabledCmdBarItemsCheckBoxes
+POLICY "Disable command bar buttons and menu items"
+KEYNAME Software\Policies\Microsoft\Office\11.0\FrontPage\DisabledCmdBarItemsCheckBoxes
+	PART "File | Open... | Tools | Search..." CHECKBOX
+	VALUENAME FileOpenToolsFind
+	VALUEON 5905
+	VALUEOFF 0
+	END PART
+	PART "View | Toolbars | Customize..." CHECKBOX
+	VALUENAME ViewToolbarsCustomize
+	VALUEON 797
+	VALUEOFF 0
+	END PART
+	PART "Insert | Component | Office Spreadsheet" CHECKBOX
+	VALUENAME InsertCompWebCalc
+	VALUEON 3892
+	VALUEOFF 0
+	END PART
+	PART "Insert | Component | Office PivotTable" CHECKBOX
+	VALUENAME InsertCompPivotList
+	VALUEON 3725
+	VALUEOFF 0
+	END PART
+	PART "Insert | Component | Office Chart" CHECKBOX
+	VALUENAME InsertCompWebChart
+	VALUEON 3726
+	VALUEOFF 0
+	END PART
+	PART "Insert | Component | Banner Ad Manager..." CHECKBOX
+	VALUENAME InsertCompBannerAdManager
+	VALUEON 4210
+	VALUEOFF 0
+	END PART
+	PART "Insert | Component | Hit Counter..." CHECKBOX
+	VALUENAME InsertCompHitCounter
+	VALUEON 4207
+	VALUEOFF 0
+	END PART
+	PART "Insert | Component | Hover Button..." CHECKBOX
+	VALUENAME InsertCompHoverButton
+	VALUEON 4206
+	VALUEOFF 0
+	END PART
+	PART "Insert | Component | Marquee..." CHECKBOX
+	VALUENAME InsertCompMarquee
+	VALUEON 4208
+	VALUEOFF 0
+	END PART
+	PART "Insert | Component | Confirmation Field..." CHECKBOX
+	VALUENAME InsertCompConfirmationField
+	VALUEON 4211
+	VALUEOFF 0
+	END PART
+	PART "Insert | Component | Search Form..." CHECKBOX
+	VALUENAME InsertCompSearchForm
+	VALUEON 4209
+	VALUEOFF 0
+	END PART
+	PART "Insert | Database | Results..." CHECKBOX
+	VALUENAME InsertDBResults
+	VALUEON 4218
+	VALUEOFF 0
+	END PART
+	PART "Insert | Database | Column Value..." CHECKBOX
+	VALUENAME InsertDBColValue
+	VALUEON 4219
+	VALUEOFF 0
+	END PART
+	PART "Insert | Advanced | Design-Time Control..." CHECKBOX
+	VALUENAME InsertAdvDTC
+	VALUEON 4302
+	VALUEOFF 0
+	END PART
+	PART "Insert | Advanced | Java Applet..." CHECKBOX
+	VALUENAME InsertAdvJavaApplet
+	VALUEON 4303
+	VALUEOFF 0
+	END PART
+	PART "Insert | Advanced | PlugIn..." CHECKBOX
+	VALUENAME InsertAdvPlugIn
+	VALUEON 4304
+	VALUEOFF 0
+	END PART
+	PART "Insert | Advanced | ActiveX Control..." CHECKBOX
+	VALUENAME InsertAdvActiveXControl
+	VALUEON 4305
+	VALUEOFF 0
+	END PART
+	PART "Insert | Advanced | Show Design-Time Controls" CHECKBOX
+	VALUENAME InsertAdvShowDTC
+	VALUEON 4300
+	VALUEOFF 0
+	END PART
+	PART "Insert | Picture | Video..." CHECKBOX
+	VALUENAME InsertPictureVideo
+	VALUEON 3799
+	VALUEOFF 0
+	END PART
+	PART "Format | Position" CHECKBOX
+	VALUENAME FormatPosition
+	VALUEON 4220
+	VALUEOFF 0
+	END PART
+	PART "Format | Dynamic HTML Effects" CHECKBOX
+	VALUENAME FormatDHTMLEffects
+	VALUEON 4240
+	VALUEOFF 0
+	END PART
+	PART "Format | Style" CHECKBOX
+	VALUENAME FormatStyle
+	VALUEON 254
+	VALUEOFF 0
+	END PART
+	PART "Format | Style Sheet Links..." CHECKBOX
+	VALUENAME FormatStyleSheetLinks
+	VALUEON 4223
+	VALUEOFF 0
+	END PART
+	PART "Format | Theme" CHECKBOX
+	VALUENAME FormatTheme
+	VALUEON 3623
+	VALUEOFF 0
+	END PART
+	PART "Format | Shared Borders..." CHECKBOX
+	VALUENAME FormatSharedBorders
+	VALUEON 4221
+	VALUEOFF 0
+	END PART
+	PART "Format | Page Transition..." CHECKBOX
+	VALUENAME FormatPageTransitions
+	VALUEON 731
+	VALUEOFF 0
+	END PART
+	PART "Tools | Speech" CHECKBOX
+	VALUENAME ToolsSpeech
+	VALUEON 5764
+	VALUEOFF 0
+	END PART
+	PART "Tools | Security | Permissions..." CHECKBOX
+	VALUENAME ToolsSecurityPermissions
+	VALUEON 572
+	VALUEOFF 0
+	END PART
+	PART "Tools | Security | Change Password..." CHECKBOX
+	VALUENAME ToolsSecurityChangePassword
+	VALUEON 4229
+	VALUEOFF 0
+	END PART
+	PART "Tools | Tools on the Web..." CHECKBOX
+	VALUENAME ToolsontheWeb
+	VALUEON 7032
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Macros..." CHECKBOX
+	VALUENAME ToolsMacroMacros
+	VALUEON 3484
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Visual Basic Editor" CHECKBOX
+	VALUENAME ToolsMacroVBE
+	VALUEON 1695
+	VALUEOFF 0
+	END PART
+	PART "Tools | Macro | Microsoft Script Editor" CHECKBOX
+	VALUENAME ToolsMacroMSE
+	VALUEON 3631
+	VALUEOFF 0
+	END PART
+	PART "Tools | Add-Ins..." CHECKBOX
+	VALUENAME ToolsAddIns
+	VALUEON 943
+	VALUEOFF 0
+	END PART
+	PART "Tools | Customize" CHECKBOX
+	VALUENAME ToolsCustomize
+	VALUEON 797
+	VALUEOFF 0
+	END PART
+	PART "Tools | Web Settings..." CHECKBOX
+	VALUENAME ToolsWebSettings
+	VALUEON 4228
+	VALUEOFF 0
+	END PART
+	PART "Tools | Options" CHECKBOX
+	VALUENAME ToolsOptions
+	VALUEON 522
+	VALUEOFF 0
+	END PART
+	PART "Help | Microsoft Office Online" CHECKBOX
+	VALUENAME HelpOfficeWeb
+	VALUEON 3775
+	VALUEOFF 0
+	END PART
+	PART "Help | Activate Product..." CHECKBOX
+	VALUENAME HelpRegistration
+	VALUEON 5933
+	VALUEOFF 0
+	END PART
+	PART "Help | Detect and Repair" CHECKBOX
+	VALUENAME HelpRepair
+	VALUEON 3774
+	VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Custom"
+KEYNAME Software\Policies\Microsoft\Office\11.0\FrontPage\DisabledCmdBarItemsList
+POLICY "Disable command bar buttons and menu items"
+KEYNAME Software\Policies\Microsoft\Office\11.0\FrontPage\DisabledCmdBarItemsList
+	PART "Enter a command bar ID to disable" LISTBOX
+	VALUEPREFIX TCID
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Miscellaneous"
+KEYNAME Software\Policies\Microsoft\Office\11.0\FrontPage
+CATEGORY "Remote Website Properties" 
+POLICY "Disable Optimize HTML on publish checkbox"
+	PART "Check to disable Optimize HTML on publish checkbox" CHECKBOX
+			VALUENAME DisableCleanOnPublish
+			VALUEON "TRUE"
+			VALUEOFF "FALSE"
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+END CATEGORY
+
+

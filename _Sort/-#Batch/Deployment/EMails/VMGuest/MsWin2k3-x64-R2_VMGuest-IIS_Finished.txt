@@ -1,0 +1,24 @@
+Hello Administrator(s),
+----------------------------------------------------------------
+
+Altiris has just finished the (re)build of a server with:
+- OS           = Windows Server 2003 Standard/Enterprise x64 R2
+- Hardware     = VMWare Virtual.
+- Specific Task= VMGuest: IIS
+- ...
+
+Please check or Configure the following services:
+- ...
+
+Any required Post Build activities can now be performed.
+- Exchange	: 
+- SharePoint	: 
+- Webserver(PHP): 
+- WSUS  	: 
+- ...
+
+----------------------------------------------------------------
+Altiris Automated Build Process.
+
+This is a generated email message, do not reply to this message.
+

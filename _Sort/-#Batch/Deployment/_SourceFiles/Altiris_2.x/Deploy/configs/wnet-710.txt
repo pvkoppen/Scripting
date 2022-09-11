@@ -1,0 +1,211 @@
+; Base Server Unattended Install Script for Windows .NET
+;
+
+[Unattended]
+    DisableVirtualOemDevices=Yes
+    DriverSigningPolicy=Ignore
+    Emsskipunattendprocessing=yes
+    ExtendOemPartition=1
+    FileSystem=ConvertNTFS
+    KeyboardLayout=US
+    NtUpgrade=No
+    OemFilesPath=C:
+	OemPnPDriversPath = "drivers\net;drivers\scsi"
+    OemPreinstall=Yes
+    OemSkipEula=Yes
+    OverwriteOemFilesOnUpgrade=No
+    TargetPath=\WINDOWS
+    UnattendMode=FullUnattended
+    Win9xUpgrade=No
+
+[Components]
+    TSClients=On
+    TSEnable=On
+;Added/Replaced Settings;
+    AccessOpt=off
+    appsrv_console=off
+    aspnet=off
+    AutoUpdate=off
+    Calc=on
+    charmap=on
+    chat=off
+    clipbook=on
+    complusnetwork=off
+    deskpaper=off
+    dialer=off
+    dtcnetwork=off
+    iis_asp=off
+    iis_common=off
+    iis_ftp=off
+    iis_inetmgr=off
+    iis_internetdataconnector=0ff
+    iis_serversidesincludes=0ff
+    iis_webadmin=off
+    iis_webdav=off
+    iis_www=off
+    indexsrv_system=off
+    inetprint=off
+    licenseserver=off
+    mousepoint=on
+    msnexpir=off
+    mswordpad=on
+    netoc=off
+    paint=on
+    Pop3Service=off
+    Pop3Srv=off
+    rec=off
+    templates=on
+    TerminalServer=off
+    IEHardenUser=on
+    IEHardenAdmin=on
+    vol=off
+
+[Data]
+    AutoPartition=1
+    MsDosInitiated="0"
+    UnattendedInstall="Yes"
+
+[Display]
+    AutoConfirm=1
+    BitsPerPel=16
+    ConfigureAtLogon=0
+    VRefresh=60
+    Xresolution=800
+    Yresolution=600
+
+[FavoritesEx]
+    Title1="TuiOraLtd.url"
+    URL1="http://www.tuiora.co.nz"
+    Title2="TuiOra Management page.url"
+    URL2="http://helpdesk.tuiora.local/default.html"
+
+[GuiRunOnce]
+    Command0=c:\$oem$\runonce.cmd
+
+[GuiUnattended]
+    AdminPassword="Pa55word"
+    AutoLogon=Yes
+    AutoLogonCount=1
+    OEMSkipRegional=1
+    OemSkipWelcome=1
+;default;   TimeZone=20
+;Added/Replaced Settings;
+    TimeZone=290
+    ServerWelcome=No
+    EncryptedAdminPassword=NO
+
+[Identification]
+    JoinWorkgroup=WORKGROUP
+
+[LicenseFilePrintData]
+;Default;   AutoMode=PerServer
+;Default;   AutoUsers=999
+;Added/Replaced Settings;
+    AutoMode=PerSeat
+
+[MassStorageDrivers]
+    "Adaptec Ultra160 Family Manager Set"=OEM
+    "Compaq Smart Array Controllers"=OEM
+    "Smart Array 5300 Controller"=OEM
+    "Smart Array 5i, 532, 5312 Controllers"=OEM
+    "Smart Array 6i, 641, 642, 6400 EM, 6400 Controllers"=OEM
+    "CSB-6 Ultra ATA-100 IDE RAID Controller"=OEM
+    "Integrated Ultra ATA-100 IDE RAID Controller"=OEM
+    "LSI Logic Ultra320 1020/1030 Driver"=OEM
+    "Emulex LP7000 PCI-Fibre Channel HBA 0E11 Version"=OEM
+    "Emulex LP8000 PCI-Fibre Channel HBA 0E11 Version"=OEM
+    "Emulex LP9000 PCI-Fibre Channel HBA 0E11 Version"=OEM
+    "Emulex LP9802 PCI-Fibre Channel HBA 0E11 Version"=OEM
+    "Emulex LP10000 PCI-Fibre Channel HBA 0E11 Version"=OEM
+    "Emulex LP952 PCI-Fibre Channel HBA 0E11 Version"=OEM
+    "Emulex LP982 PCI-Fibre Channel HBA 0E11 Version"=OEM
+    "Emulex LP6000 PCI-Fibre Channel HBA"=OEM
+    "Emulex LP7000 PCI-Fibre Channel HBA"=OEM
+    "Emulex LP8000 PCI-Fibre Channel HBA"=OEM
+    "Emulex LP9000 PCI-Fibre Channel HBA"=OEM
+    "Emulex LP9802 PCI-Fibre Channel HBA"=OEM
+    "Emulex LP10000 PCI-Fibre Channel HBA"=OEM
+    "Emulex LPX1000 PCI-Fibre Channel HBA"=OEM
+    "Emulex LP850 PCI-Fibre Channel HBA"=OEM
+    "Emulex LP950 PCI-Fibre Channel HBA"=OEM
+    "Emulex LP982 PCI-Fibre Channel HBA"=OEM
+    "Emulex LP1050 PCI-Fibre Channel HBA"=OEM
+    "Emulex LP101 PCI-Fibre Channel HBA"=OEM
+    "QLogic Fibre Channel Adapter"=OEM
+;    "IDE CD-ROM (ATAPI 1.2)/PCI IDE Controller"=OEM
+;    "LSI Logic C8100 PCI SCSI Host Adapter"=OEM
+;    "LSI Logic C896 PCI SCSI Host Adapter"=OEM
+;    "LSI Logic C8xx PCI SCSI Host Adapter"=OEM
+   "IDE CD-ROM (ATAPI 1.2)/PCI IDE Controller"="RETAIL"
+   "LSI Logic C8100 PCI SCSI Host Adapter"="RETAIL"
+   "LSI Logic C896 PCI SCSI Host Adapter"="RETAIL"
+   "LSI Logic C8xx PCI SCSI Host Adapter"="RETAIL"
+
+[NetOptionalComponents]
+    SNMP=1
+    WBEMSNMP=1
+    SimpTCP=1
+
+[Networking]
+    InstallDefaultComponents=Yes
+
+[OEMBootFiles]
+   ADPU160M.SYS
+   CPQARRY2.SYS
+   CPQCISSM.SYS
+   LSICSB6.SYS
+   MEGAIDE.SYS
+   SYMMPI.SYS
+   LPXNDS.SYS
+   LPXFTR.SYS
+   QL2300.SYS
+   TXTSETUP.OEM
+
+[Proxy]
+    Proxy_Enable=1
+    Use_Same_Proxy=1
+    HTTP_Proxy_Server=gw.tuiora.local:8080
+    Proxy_Override=<local>
+
+[RegionalSettings]
+;Default;   Language=00000409
+    LanguageGroup=1
+;Added/Replaced Settings;
+    Language=00001409
+;   The entry Language should over-ride the following values....
+;   SystemLocale=1409
+;   UserLocale=1409
+;   InputLocale=1409:00000409
+
+[SNMP]
+;Default;   Accept_CommunityName=public:Read_Only, private:Read_Create
+    Community_Name=public
+    Traps=localhost
+;Added/Replaced Settings;
+    Accept_CommunityName=public:Read_Only
+
+
+;Added/Replaced Settings;
+[TapiLocation]
+    CountryCode=64
+    AreaCode=06
+[TerminalServices]
+;Default;   ApplicationServer=0
+;Default;   PermissionsSetting=0
+;Added/Replaced Settings;
+    ApplicationServer=1
+    PermissionsSetting=1
+
+[URL]
+    Search_Page=http:\\www.google.co.nz
+
+[UserData]
+	ComputerName = "*"
+;Default;   FullName=HP
+;Default;   OrgName=HPQ
+;Added/Replaced Settings;
+   FullName="Pre-installed"
+   OrgName="Tuiora LTD"
+    ProductKey=WHRR9-66RM6-4H8T3-YHGG8-62QHM
+
+

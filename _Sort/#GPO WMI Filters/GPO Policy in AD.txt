@@ -1,0 +1,33 @@
+-----------------------------------------------
+-- GPO Conditions
+-----------------------------------------------
+	Description = "Detects if Operating System is VMware";
+	Name = "VMware_machines";
+	Query = "SELECT * FROM Win32_ComputerSystem WHERE Manufacturer = 'VMware, Inc.'";
+	QueryLanguage = "WQL";
+	TargetNameSpace = "root\\CIMv2";
+
+	Description = "To apply to Windows 7 workstations only";
+	Name = "Windows_7_TDHB";
+	Query = "SELECT Version, ProductType FROM Win32_OperatingSystem WHERE Version >= '6' AND ProductType = '1'";
+	QueryLanguage = "WQL";
+	TargetNameSpace = "root\\CIMv2";
+
+	Description = "Apply policy to x86 versions of Windows (any)";
+	Name = "Windows_x86";
+	Query = "SELECT AddressWidth FROM Win32_Processor WHERE AddressWidth ='32'";
+	QueryLanguage = "WQL";
+	TargetNameSpace = "root\\CIMv2";
+
+	Description = "Apply policy to x64 versions of Windows (any)";
+	Name = "Windows_x64";
+	Query = "SELECT AddressWidth FROM Win32_Processor WHERE AddressWidth ='64'";
+	QueryLanguage = "WQL";
+	TargetNameSpace = "root\\CIMv2";
+
+	Description = "Apply Policy to Windows XP Machines only";
+	Name = "Windows XP";
+	Query = "select * from Win32_OperatingSystem where Version like \"5.1%\" and ProductType =\"1\"";
+	QueryLanguage = "WQL";
+	TargetNameSpace = "root\\CIMv2";
+

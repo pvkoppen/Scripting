@@ -1,0 +1,175 @@
+<html><head><title>Default Workspace</title>
+
+
+
+
+<meta name="Copyrights" content="Copyright(c) 2001-2002 eHelp Corporation. All rights reserved.">
+<meta name="Product" content="RoboEngine">
+<script language="Javascript">
+//<!--
+// add a new tag to url
+function CBrowserInfo()
+{
+	this.m_nVersion = 0;
+	this.m_bIsNetscape = false;
+	this.m_bIsExplorer = false;
+	this.m_bIsExplorer3 = false;
+	this.m_bIsExplorer5 = false;
+	this.m_bIsPrimary = false;
+	this.m_bIsJavaEnabled = false;
+
+	var strAgent = navigator.userAgent;
+	var nIdx = strAgent.indexOf('MSIE');
+	if( nIdx >= 0 )
+	{
+		this.m_bIsExplorer = true;
+		this.m_nVersion = parseInt( strAgent.substring(nIdx+5, nIdx+6) );
+		this.m_bIsPrimary = this.m_nVersion >= 4;
+		this.m_bIsExplorer5 = this.m_nVersion >= 5;
+		this.m_bIsExplorer3 = this.m_nVersion <= 3;
+		if( this.m_bIsPrimary == true )
+			this.m_bIsJavaEnabled = navigator.javaEnabled();
+	}else
+	if( navigator.appName.toLowerCase() == 'netscape' )
+	{
+		this.m_bIsNetscape = true;
+		this.m_nVersion = parseInt(navigator.appVersion);
+		this.m_bIsPrimary = this.m_nVersion >= 4;
+		if( this.m_bIsPrimary == true )
+			this.m_bIsJavaEnabled = navigator.javaEnalbed;
+	}else
+	{
+		//...
+	};
+};
+function doesSupportJS()
+{
+	var bRet = false;
+	var cInfo = new CBrowserInfo();
+	if( cInfo.m_bIsExplorer && cInfo.m_nVersion >= 3 )
+		bRet = true;
+	if( cInfo.m_bIsNetscape && cInfo.m_nVersion >= 3 )
+		bRet = true;
+	return bRet;	
+};
+function doAddTagToURL( strURL, strTag, strValue )
+{
+	strURL += (strURL.indexOf( '?' ) >= 0) ? '&' : '?';
+	strURL += strTag + '=' + strValue;
+	return strURL;
+};
+function doSetImgSrc( strName, strURL )
+{
+	var eImg = document[strName];
+	if( eImg != null )	eImg.src = strURL;
+};
+function doGetLeftFrame()
+{
+	var cRet = null;
+	if( parent != null )
+	{
+		var cBtmFrame = parent['bsscbtm'];
+		if( cBtmFrame != null )
+		{
+			cRet = cBtmFrame['bsscleft'];
+		};
+	};
+	return cRet;
+};
+function doOnAgentClick( strMoniker )
+{
+	if( doesSupportJS() == false )			// doesn't support
+		return true;
+	var strTopURL = doAddTagToURL('Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&mgr=agm&wnd=InstallShieldLivingHelp%7CMain&wks=wksdef&agt=wsm&js=1&ctxid=kb%2Fview.asp&pos=top', 'curagt', strMoniker );
+	var strLeftURL = doAddTagToURL('Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&mgr=agm&wnd=InstallShieldLivingHelp%7CMain&wks=wksdef&agt=wsm&js=1&ctxid=kb%2Fview.asp&pos=left', 'curagt', strMoniker );
+	// set the left frame url
+	var cLeftFrame = doGetLeftFrame();
+	if( cLeftFrame != null )
+	{
+		cLeftFrame.window.document.location.href = strLeftURL;
+	};
+	// set the self url
+	window.document.location.href = strTopURL;
+	return false;
+};
+//-->
+</script>
+<link rel="stylesheet" type="text/css" href="Robo_data/mr_wsm_style_ns.css"></head><body topmargin="0" leftmargin="0" bgcolor="#99ccff" marginheight="0" marginwidth="0">
+<table class="clsColorNormal" bgcolor="#99ccff" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+  <tbody><tr>
+    <td rowspan="2" class="clsColorLight" bgcolor="#ceffff"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="41" width="1"></td>
+    <td class="clsColorLight" colspan="3" bgcolor="#ceffff" height="1"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td>
+  </tr>
+  <tr>
+    <td valign="top">
+     <table border="0" cellspacing="0">
+       <tbody><tr><td>&nbsp;</td>
+<td>
+ <table class="clsColorSelected" bgcolor="#639ace" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td rowspan="2" class="clsColorDark" bgcolor="#003366"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td>
+    <td class="clsColorDark" colspan="3" bgcolor="#003366" height="1"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td>
+    <td rowspan="2" class="clsColorLight" bgcolor="#ceffff" height="1"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://helpnet.installshield.com/Robo/BIN/Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&amp;mgr=agm&amp;wnd=InstallShieldLivingHelp%7CMain&amp;wks=wksdef&amp;agt=wsm&amp;js=1&amp;ctxid=kb%2Fview.asp&amp;curagt=toc&amp;pos=main" target="_parent" onclick="return doOnAgentClick('toc')" onmouseover="doSetImgSrc( 'eImgtoc', '/Robo/Resource/mr_toc_h.gif' )" onmouseout="doSetImgSrc( 'eImgtoc', '/Robo/Resource/mr_toc_n.gif' )" style="text-decoration: none;"><img src="Robo_data/mr_wsm_dot.gif" border="0" width="4"><img src="Robo_data/mr_toc_n.gif" name="eImgtoc" border="0" vspace="2"><img src="Robo_data/mr_wsm_dot.gif" border="0" width="4"></a></td>
+    <td><a href="http://helpnet.installshield.com/Robo/BIN/Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&amp;mgr=agm&amp;wnd=InstallShieldLivingHelp%7CMain&amp;wks=wksdef&amp;agt=wsm&amp;js=1&amp;ctxid=kb%2Fview.asp&amp;curagt=toc&amp;pos=main" target="_parent" onclick="return doOnAgentClick('toc')" onmouseover="doSetImgSrc( 'eImgtoc', '/Robo/Resource/mr_toc_h.gif' )" onmouseout="doSetImgSrc( 'eImgtoc', '/Robo/Resource/mr_toc_n.gif' )" style="text-decoration: none;"><font color="#ffffff"><b>Contents</b></font></a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr><td colspan="5" class="clsColorLight" bgcolor="#ceffff"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td></tr>
+ </tbody></table>
+</td>
+<td>
+ <table class="clsColorNormal" bgcolor="#99ccff" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td rowspan="2" class="clsColorLight" bgcolor="#ceffff"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td>
+    <td class="clsColorLight" colspan="3" bgcolor="#ceffff" height="1"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td>
+    <td rowspan="2" class="clsColorDark" bgcolor="#003366" height="1"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://helpnet.installshield.com/Robo/BIN/Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&amp;mgr=agm&amp;wnd=InstallShieldLivingHelp%7CMain&amp;wks=wksdef&amp;agt=wsm&amp;js=1&amp;ctxid=kb%2Fview.asp&amp;curagt=ndx&amp;pos=main" target="_parent" onclick="return doOnAgentClick('ndx')" onmouseover="doSetImgSrc( 'eImgndx', '/Robo/Resource/mr_ndx_h.gif' )" onmouseout="doSetImgSrc( 'eImgndx', '/Robo/Resource/mr_ndx_n.gif' )" style="text-decoration: none;"><img src="Robo_data/mr_wsm_dot.gif" border="0" width="4"><img src="Robo_data/mr_ndx_n.gif" name="eImgndx" border="0" vspace="2"><img src="Robo_data/mr_wsm_dot.gif" border="0" width="4"></a></td>
+    <td><a href="http://helpnet.installshield.com/Robo/BIN/Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&amp;mgr=agm&amp;wnd=InstallShieldLivingHelp%7CMain&amp;wks=wksdef&amp;agt=wsm&amp;js=1&amp;ctxid=kb%2Fview.asp&amp;curagt=ndx&amp;pos=main" target="_parent" onclick="return doOnAgentClick('ndx')" onmouseover="doSetImgSrc( 'eImgndx', '/Robo/Resource/mr_ndx_h.gif' )" onmouseout="doSetImgSrc( 'eImgndx', '/Robo/Resource/mr_ndx_n.gif' )" style="text-decoration: none;"><b>Index</b></a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr><td colspan="4" class="clsColorDark" bgcolor="#003366"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td></tr>
+ </tbody></table>
+</td>
+<td>
+ <table class="clsColorNormal" bgcolor="#99ccff" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td rowspan="2" class="clsColorLight" bgcolor="#ceffff"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td>
+    <td class="clsColorLight" colspan="3" bgcolor="#ceffff" height="1"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td>
+    <td rowspan="2" class="clsColorDark" bgcolor="#003366" height="1"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://helpnet.installshield.com/Robo/BIN/Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&amp;mgr=agm&amp;wnd=InstallShieldLivingHelp%7CMain&amp;wks=wksdef&amp;agt=wsm&amp;js=1&amp;ctxid=kb%2Fview.asp&amp;curagt=nls&amp;pos=main" target="_parent" onclick="return doOnAgentClick('nls')" onmouseover="doSetImgSrc( 'eImgnls', '/Robo/Resource/mr_nls_h.gif' )" onmouseout="doSetImgSrc( 'eImgnls', '/Robo/Resource/mr_nls_n.gif' )" style="text-decoration: none;"><img src="Robo_data/mr_wsm_dot.gif" border="0" width="4"><img src="Robo_data/mr_nls_n.gif" name="eImgnls" border="0" vspace="2"><img src="Robo_data/mr_wsm_dot.gif" border="0" width="4"></a></td>
+    <td><a href="http://helpnet.installshield.com/Robo/BIN/Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&amp;mgr=agm&amp;wnd=InstallShieldLivingHelp%7CMain&amp;wks=wksdef&amp;agt=wsm&amp;js=1&amp;ctxid=kb%2Fview.asp&amp;curagt=nls&amp;pos=main" target="_parent" onclick="return doOnAgentClick('nls')" onmouseover="doSetImgSrc( 'eImgnls', '/Robo/Resource/mr_nls_h.gif' )" onmouseout="doSetImgSrc( 'eImgnls', '/Robo/Resource/mr_nls_n.gif' )" style="text-decoration: none;"><b>Search</b></a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr><td colspan="4" class="clsColorDark" bgcolor="#003366"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td></tr>
+ </tbody></table>
+</td>
+<td>
+ <table class="clsColorNormal" bgcolor="#99ccff" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td rowspan="2" class="clsColorLight" bgcolor="#ceffff"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td>
+    <td class="clsColorLight" colspan="3" bgcolor="#ceffff" height="1"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td>
+    <td rowspan="2" class="clsColorDark" bgcolor="#003366" height="1"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://helpnet.installshield.com/Robo/BIN/Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&amp;mgr=agm&amp;wnd=InstallShieldLivingHelp%7CMain&amp;wks=wksdef&amp;agt=wsm&amp;js=1&amp;ctxid=kb%2Fview.asp&amp;curagt=gls&amp;pos=main" target="_parent" onclick="return doOnAgentClick('gls')" onmouseover="doSetImgSrc( 'eImggls', '/Robo/Resource/mr_gls_h.gif' )" onmouseout="doSetImgSrc( 'eImggls', '/Robo/Resource/mr_gls_n.gif' )" style="text-decoration: none;"><img src="Robo_data/mr_wsm_dot.gif" border="0" width="4"><img src="Robo_data/mr_gls_n.gif" name="eImggls" border="0" vspace="2"><img src="Robo_data/mr_wsm_dot.gif" border="0" width="4"></a></td>
+    <td><a href="http://helpnet.installshield.com/Robo/BIN/Robo.dll?tpc=%2Frobo%2Fprojects%2Fhelplibdevstudio9%2FIHelpSetup_EXECmdLine.htm&amp;mgr=agm&amp;wnd=InstallShieldLivingHelp%7CMain&amp;wks=wksdef&amp;agt=wsm&amp;js=1&amp;ctxid=kb%2Fview.asp&amp;curagt=gls&amp;pos=main" target="_parent" onclick="return doOnAgentClick('gls')" onmouseover="doSetImgSrc( 'eImggls', '/Robo/Resource/mr_gls_h.gif' )" onmouseout="doSetImgSrc( 'eImggls', '/Robo/Resource/mr_gls_n.gif' )" style="text-decoration: none;"><b>Glossary</b></a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr><td colspan="4" class="clsColorDark" bgcolor="#003366"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td></tr>
+ </tbody></table>
+</td></tr>
+     </tbody></table>
+    </td>
+	<td align="center" bgcolor="#99ccff" nowrap="nowrap" valign="top" width="100%">&nbsp;&nbsp;</td>
+	<td align="right" bgcolor="#99ccff" valign="top"><a href="http://www.ehelp.com/" target="_blank"><img src="Robo_data/mr_sys_logo.gif" border="0"></a>&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr><td colspan="4" class="clsColorDark" bgcolor="#003366"><img src="Robo_data/mr_wsm_dot.gif" border="0" height="1" width="1"></td></tr>
+</tbody></table>
+
+</body></html>

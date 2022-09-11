@@ -1,0 +1,122 @@
+-- Start Processing BITS
+{B1A56ADF-A564-427F-9536-9DCC1BBF313A}
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+ERROR FILE:    http://au.download.windowsupdate.com/msdownload/update/v3-19990518/cabpool/2003ptksp2ff_98b65834333ba451e1a67ce376a1e8a2fbea3e4b.cab -> D:\WSUS\WsusContent\4B\98B65834333BA451E1A67CE376A1E8A2FBEA3E4B.CAB
+ERROR CODE:    0x80200013 - The server does not support the necessary HTTP protocol. Background Intelligent Transfer Service (BITS) requires that the server support the Range protocol header.
+ERROR CONTEXT: 0x00000005 - The error occurred while the remote file was being processed.
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+notification command line set to 'notepad.exe' 'NULL'.
+{1B2937DA-EB4D-4474-9DF8-B8BDE181F739}
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+ERROR FILE:    http://au.download.windowsupdate.com/msdownload/update/v3-19990518/cabpool/owc10sp3ff_bf3fe4b6a9e43c7402b34faf7fc361bad94e423c.cab -> D:\WSUS\WsusContent\3C\BF3FE4B6A9E43C7402B34FAF7FC361BAD94E423C.cab
+ERROR CODE:    0x80200013 - The server does not support the necessary HTTP protocol. Background Intelligent Transfer Service (BITS) requires that the server support the Range protocol header.
+ERROR CONTEXT: 0x00000005 - The error occurred while the remote file was being processed.
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+notification command line set to 'notepad.exe' 'NULL'.
+{997E60FF-136B-4D1E-8149-20406C6085B1}
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+ERROR FILE:    http://au.download.windowsupdate.com/msdownload/update/v3-19990518/cabpool/mainsp3ff_c17c360913a83f1d7db6864a11ecd133d2581c79.cab -> D:\WSUS\WsusContent\79\C17C360913A83F1D7DB6864A11ECD133D2581C79.cab
+ERROR CODE:    0x80200013 - The server does not support the necessary HTTP protocol. Background Intelligent Transfer Service (BITS) requires that the server support the Range protocol header.
+ERROR CONTEXT: 0x00000005 - The error occurred while the remote file was being processed.
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+notification command line set to 'notepad.exe' 'NULL'.
+{8A65F612-0984-40D5-92C4-F7BDCAA26065}
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+ERROR FILE:    http://au.download.windowsupdate.com/msdownload/update/v3-19990518/cabpool/mainsp3ff_9b23d60de47eb4320036bc4e0dc3cfca3c9125bc.cab -> D:\WSUS\WsusContent\BC\9B23D60DE47EB4320036BC4E0DC3CFCA3C9125BC.cab
+ERROR CODE:    0x80200013 - The server does not support the necessary HTTP protocol. Background Intelligent Transfer Service (BITS) requires that the server support the Range protocol header.
+ERROR CONTEXT: 0x00000005 - The error occurred while the remote file was being processed.
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+notification command line set to 'notepad.exe' 'NULL'.
+{67AD1A1B-6704-43CB-9FE0-695DBBB5F2FC}
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+ERROR FILE:    http://au.download.windowsupdate.com/msdownload/update/v3-19990518/cabpool/mainsp3ff_6fd03a4de1c7ad895a138ce3ccf9c6fdf95a62d7.cab -> D:\WSUS\WsusContent\D7\6FD03A4DE1C7AD895A138CE3CCF9C6FDF95A62D7.cab
+ERROR CODE:    0x80200013 - The server does not support the necessary HTTP protocol. Background Intelligent Transfer Service (BITS) requires that the server support the Range protocol header.
+ERROR CONTEXT: 0x00000005 - The error occurred while the remote file was being processed.
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+notification command line set to 'notepad.exe' 'NULL'.
+{843EC841-9B78-4D2C-9C9E-226D24D3FB51}
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+ERROR FILE:    http://au.download.windowsupdate.com/msdownload/update/v3-19990518/cabpool/owc10sp3ff_e671261f25c0628e40b089a472a2001529e3ccd9.cab -> D:\WSUS\WsusContent\D9\E671261F25C0628E40B089A472A2001529E3CCD9.cab
+ERROR CODE:    0x80200013 - The server does not support the necessary HTTP protocol. Background Intelligent Transfer Service (BITS) requires that the server support the Range protocol header.
+ERROR CONTEXT: 0x00000005 - The error occurred while the remote file was being processed.
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+notification command line set to 'notepad.exe' 'NULL'.
+{D7DFA4F1-833E-4872-851D-B8A7BB732950}
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+ERROR FILE:    http://au.download.windowsupdate.com/msdownload/update/v3-19990518/cabpool/mainsp3ff_6f771b8fe3aae283de6f0f9413a88e823b6ed0f0.cab -> D:\WSUS\WsusContent\F0\6F771B8FE3AAE283DE6F0F9413A88E823B6ED0F0.cab
+ERROR CODE:    0x80200013 - The server does not support the necessary HTTP protocol. Background Intelligent Transfer Service (BITS) requires that the server support the Range protocol header.
+ERROR CONTEXT: 0x00000005 - The error occurred while the remote file was being processed.
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+notification command line set to 'notepad.exe' 'NULL'.
+{F485B204-500F-4295-BB04-23A6D739EB1F}
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+ERROR FILE:    http://au.download.windowsupdate.com/msdownload/update/v3-19990518/cabpool/owc10sp3ff_11495d4c41770a984e65a0f322d344e7bc89d445.cab -> D:\WSUS\WsusContent\45\11495D4C41770A984E65A0F322D344E7BC89D445.cab
+ERROR CODE:    0x80200013 - The server does not support the necessary HTTP protocol. Background Intelligent Transfer Service (BITS) requires that the server support the Range protocol header.
+ERROR CONTEXT: 0x00000005 - The error occurred while the remote file was being processed.
+
+BITSADMIN version 2.0 [ 6.6.3790.1830 ]
+BITS administration utility.
+(C) Copyright 2000-2004 Microsoft Corp.
+
+notification command line set to 'notepad.exe' 'NULL'.
+-- Done Processing BITS

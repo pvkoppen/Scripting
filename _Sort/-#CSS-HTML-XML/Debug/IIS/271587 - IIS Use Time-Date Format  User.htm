@@ -1,0 +1,549 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0062)http://support.microsoft.com/default.aspx?scid=kb;en-us;271587 -->
+<!-- CONTENT NAMESPACE:  http://support.microsoft.com/common/schemas/kbpub/2/kbpubv2.dtd --><!-- CONTENT CLASS:  MS.Support.GSFx.Web.KBArticle CREATION OK --><HTML><HEAD><TITLE>271587 - ASP Pages Use Time/Date Format Based on User That Is Logged On</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><!-- (c) 2001, 2002 Microsoft Corporation. All Rights Reserved --><!-- TK2MSFTWBSU09 ASM: GSS, Version=3.4.9.0, Culture=neutral, PublicKeyToken=null FW: 1.0.3705.288 --><!-- REGC: ISO-8859-1 DEFRC: utf-8 RESG: 4/2/2003 6:45:01 AM RESX: 1/1/0001 12:00:00 AM -->
+<META 
+content="kbbug kbenv kbQFE kbui KB271587 kbwin2000AdvServ kbwin2000AdvServSearch kbwin2000Pro kbwin2000ProSearch kbwin2000Search kbwin2000Serv kbwin2000ServSearch kbWinAdvServSearch " 
+name=Keywords>
+<META 
+content='When you view an ASP Web page that returns the date, the format that is displayed may be dependant on the last person that was logged on to the computer. This is actually based on the last time that the cache was "touched" but may be affected by other...' 
+name=Description>
+<META content=en-us name=MS.LOCALE>
+<SCRIPT language=Javascript>
+var CookieDomain = "support.microsoft.com";
+document.domain = "support.microsoft.com";
+function fetchcookieval(key){
+	var cookiename;
+	var cookieval;
+	var keyfound = false;
+	var cookiearray = document.cookie.split(";")
+	for(i=0;i<cookiearray.length;i++){
+		cookiename = cookiearray[i].substring(0, cookiearray[i].indexOf("="));
+		if(cookiename.charAt(0) == " ") cookiename = cookiename.substring(1, cookiename.length);
+		cookieval = cookiearray[i].substring(cookiearray[i].indexOf("=")+1, cookiearray[i].length);
+		if(key == cookiename){keyfound = true; break;}
+	}
+	if(keyfound) return cookieval;
+	else return "blank";
+}
+function setcookieval(key, val){
+	if(typeof(CookieDomain) != "undefined"){
+		if(document.domain.indexOf(".com") > -1 && CookieDomain.length > 0){
+			document.domain = CookieDomain;
+			document.cookie = key+'='+val+'; expires=Wed, 31 Dec 2003 23:59:59 GMT; Domain=' + CookieDomain  + '; path=/';
+		}else{ 
+			document.cookie = key+'='+val+'; expires=Wed, 31 Dec 2003 23:59:59 GMT; path=/';
+		}
+	}
+}
+</SCRIPT>
+<LINK href="271587 - IIS Use Time-Date Format  User_bestanden/default.css" 
+type=text/css rel=stylesheet></LINK>
+<SCRIPT language=Javascript 
+src="271587 - IIS Use Time-Date Format  User_bestanden/common.js"></SCRIPT>
+
+<SCRIPT language=Javascript 
+src="271587 - IIS Use Time-Date Format  User_bestanden/uplevel.js"></SCRIPT>
+<LINK href="271587 - IIS Use Time-Date Format  User_bestanden/KBArticleV2.css" 
+type=text/css rel=stylesheet></LINK><LINK 
+href="271587 - IIS Use Time-Date Format  User_bestanden/webparts.css" 
+type=text/css rel=stylesheet></LINK>
+<META content="MSHTML 5.50.4922.900" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0 onload=thisLoad(); 
+onunload=thisUnload(); marginwidth="0" marginheight="0"><!-- USING XSLT:  KBPUBV2 -->
+<DIV id=TopPanel name="TopPanel">
+<SCRIPT language=JavaScript 
+src="271587 - IIS Use Time-Date Format  User_bestanden/toolbar.js"></SCRIPT>
+
+<SCRIPT language=javascript 
+src="271587 - IIS Use Time-Date Format  User_bestanden/global.js"></SCRIPT>
+
+<SCRIPT language=javascript>
+<!--
+	var ToolBar_Supported = ToolBar_Supported;
+	if(ToolBar_Supported != null && ToolBar_Supported == true){
+		Frame_Supported = false;
+		setToolbarBGColor("#3366CC");
+		setICPBanner("/library/images/support/en-us/banner.gif","/default.aspx","Return to Support home page");
+		setMSBanner("mslogo_3366CC.gif","/isapi/gomscom.asp?target=/","Microsoft.com Home Page");
+ 		HTMLStr = HTMLStr.replace(/\/library\/toolbar\/images\/curve.gif/g, "/library/images/support/curve_003399.gif");
+		drawToolbar();
+	}
+//-->
+</SCRIPT>
+</DIV>
+<TABLE id=CenterPanel height="100%" cellSpacing=0 cellPadding=0 width="100%" 
+border=0 name="CenterPanel">
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE class=tpl_top_banner cellSpacing=0 cellPadding=0 width="100%" 
+      border=0>
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE class=bbar_outer height=18 cellSpacing=0 cellPadding=0 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Return to Support Home Page" 
+                  href="http://support.microsoft.com/">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=fh;EN-US;KBHOWTO'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Search the Knowledge Base" 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;KBHOWTO">&nbsp;&nbsp;Search&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=fh;[LN];faqs'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Frequently Asked Questions" 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;[LN];faqs">&nbsp;&nbsp;FAQs&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=fh;EN-US;downloadover'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Software Downloads, Updates, and Service Packs" 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;downloadover">&nbsp;&nbsp;Downloads&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/newsgroups/default.aspx'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Community Newsgroups" 
+                  href="http://support.microsoft.com/newsgroups/default.aspx">&nbsp;&nbsp;Newsgroups&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=bbar_cell 
+                onmouseover="this.className='bbar_cell_hot';" 
+                onclick="top.location.href='/default.aspx?scid=fh;[ln];csshome&amp;style=home'" 
+                onmouseout="this.className='bbar_cell';" noWrap><A 
+                  title="Customer Service" 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;[ln];csshome&amp;style=home">&nbsp;&nbsp;Customer 
+                  Service&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/1ptrans.gif" 
+                  width=1></TD></TR></TBODY></TABLE></TD>
+          <TD align=right>
+            <TABLE class=fbtn_outer cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class=fbtn_cell 
+                onmouseover="this.className='fbtn_cell_hot';" onclick="" 
+                onmouseout="this.className='fbtn_cell';" noWrap>&nbsp;&nbsp;<A 
+                  title="Send the contents of this page to a Friend" target="" 
+                  href="mailto:?body=http://support.microsoft.com/default.aspx?scid=kb;en-us;271587">Send&nbsp;<IMG 
+                  height=16 alt="Send the contents of this page to a Friend" 
+                  hspace=0 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/send_icon.gif" 
+                  width=16 align=absMiddle border=0></A>&nbsp;&nbsp;</TD>
+                <TD class=fbtn_cell 
+                onmouseover="this.className='fbtn_cell_hot';" onclick="" 
+                onmouseout="this.className='fbtn_cell';" noWrap>&nbsp;&nbsp;<A 
+                  title="Print the contents of this page" target="" 
+                  href="javascript:PrintContents();">Print&nbsp;<IMG height=16 
+                  alt="Print the contents of this page" hspace=0 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/print_icon.gif" 
+                  width=16 align=absMiddle border=0></A>&nbsp;&nbsp;</TD>
+                <TD class=fbtn_cell 
+                onmouseover="this.className='fbtn_cell_hot';" 
+                onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=/default.aspx?scid=fh;en-us;gsshelp&amp;style=flat'" 
+                onmouseout="this.className='fbtn_cell';" noWrap>&nbsp;&nbsp;<A 
+                  title="View information on how to use this site effectively" 
+                  target="" 
+                  href="http://support.microsoft.com/default.aspx?scid=/default.aspx?scid=fh;en-us;gsshelp&amp;style=flat">Help&nbsp;<IMG 
+                  height=16 
+                  alt="View information on how to use this site effectively" 
+                  hspace=0 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/help_icon.gif" 
+                  width=16 align=absMiddle 
+              border=0></A>&nbsp;&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD height="100%">
+      <TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=tpl_left_nav_cell vAlign=top width=207>
+            <DIV class=kbRightNav>
+            <DIV class=ListNugget id=KBFeedback style="WIDTH: 180px" 
+            name="KBFeedback">
+            <TABLE class=ListNuggetHeader id=KBFeedbackHeader cellSpacing=0 
+            cellPadding=0 width="100%" name="KBFeedbackHeader">
+              <TBODY>
+              <TR>
+                <TD class=ListNuggetTitleCellBlue 
+                onselectstart="window.event.cancelBubble=true; return false;" 
+                onclick="PartWrapperToggle('KBFeedback');"><A 
+                  class=ListNuggetTitle 
+                  onclick="return PartWrapperToggle('KBFeedback');" 
+                  href="javascript:PartWrapperToggle('KBFeedback');">Comments?</A></TD>
+                <TD class=ListNuggetButtonCellBlue 
+                onclick="PartWrapperToggle('KBFeedback');">
+                  <DIV class=ListNuggetButton><IMG class=ListNuggetUpButton 
+                  id=KBFeedbackUp height=17 alt="Hide options" 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/blue-chevron_up.gif" 
+                  width=17 align=right border=0 name=KBFeedbackUp><IMG 
+                  class=ListNuggetDownButton id=KBFeedbackDown height=17 
+                  alt=Options 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/gray-chevron_down.gif" 
+                  width=17 align=right border=0 
+              name=KBFeedbackDown></DIV></TD></TR></TBODY></TABLE>
+            <DIV class=ListNuggetBody id=KBFeedbackBody name="KBFeedbackBody">
+            <TABLE cellSpacing=0 cellPadding=2 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=center width=10><IMG height=5 hspace=5 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/blue_bullet.gif" 
+                  width=5 border=0 VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="javascript:ShowSurveyWindow('/common/survey.aspx?scid=sw;EN;1075', 'GN', 'en-us' ,'/default.aspx', 'KB', 'en-us', '271587 ')">Provide 
+                  us with feedback on this 
+            article</A></TD></TR></TBODY></TABLE></DIV></DIV>
+            <DIV class=ListNugget id=SupportCenters style="WIDTH: 180px" 
+            name="SupportCenters">
+            <TABLE class=ListNuggetHeader id=SupportCentersHeader cellSpacing=0 
+            cellPadding=0 width="100%" name="SupportCentersHeader">
+              <TBODY>
+              <TR>
+                <TD class=ListNuggetTitleCellBlue 
+                onselectstart="window.event.cancelBubble=true; return false;" 
+                onclick="PartWrapperToggle('SupportCenters');"><A 
+                  class=ListNuggetTitle 
+                  onclick="return PartWrapperToggle('SupportCenters');" 
+                  href="javascript:PartWrapperToggle('SupportCenters');">Product 
+                  Support Centers</A></TD>
+                <TD class=ListNuggetButtonCellBlue 
+                onclick="PartWrapperToggle('SupportCenters');">
+                  <DIV class=ListNuggetButton><IMG class=ListNuggetUpButton 
+                  id=SupportCentersUp height=17 alt="Hide options" 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/blue-chevron_up.gif" 
+                  width=17 align=right border=0 name=SupportCentersUp><IMG 
+                  class=ListNuggetDownButton id=SupportCentersDown height=17 
+                  alt=Options 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/gray-chevron_down.gif" 
+                  width=17 align=right border=0 
+              name=SupportCentersDown></DIV></TD></TR></TBODY></TABLE>
+            <DIV class=ListNuggetBody id=SupportCentersBody 
+            name="SupportCentersBody">
+            <TABLE cellSpacing=0 cellPadding=2 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=center width=10><IMG height=5 hspace=5 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/blue_bullet.gif" 
+                  width=5 border=0 VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;en-us;sbs">Small 
+                  Business Server</A> </TD></TR>
+              <TR>
+                <TD vAlign=center width=10><IMG height=5 hspace=5 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/blue_bullet.gif" 
+                  width=5 border=0 VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;en-us;win2000">Windows 
+                  2000</A> </TD></TR>
+              <TR>
+                <TD vAlign=center width=10><IMG height=5 hspace=5 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/blue_bullet.gif" 
+                  width=5 border=0 VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;en-us;win2000dev">Windows 
+                  2000 - Developer</A> </TD></TR></TBODY></TABLE></DIV></DIV>
+            <DIV class=ListNugget id=GeneralInfo style="WIDTH: 180px" 
+            name="GeneralInfo">
+            <TABLE class=ListNuggetHeader id=GeneralInfoHeader cellSpacing=0 
+            cellPadding=0 width="100%" name="GeneralInfoHeader">
+              <TBODY>
+              <TR>
+                <TD class=ListNuggetTitleCellBlue 
+                onselectstart="window.event.cancelBubble=true; return false;" 
+                onclick="PartWrapperToggle('GeneralInfo');"><A 
+                  class=ListNuggetTitle 
+                  onclick="return PartWrapperToggle('GeneralInfo');" 
+                  href="javascript:PartWrapperToggle('GeneralInfo');">Other 
+                  Support Options</A></TD>
+                <TD class=ListNuggetButtonCellBlue 
+                onclick="PartWrapperToggle('GeneralInfo');">
+                  <DIV class=ListNuggetButton><IMG class=ListNuggetUpButton 
+                  id=GeneralInfoUp height=17 alt="Hide options" 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/blue-chevron_up.gif" 
+                  width=17 align=right border=0 name=GeneralInfoUp><IMG 
+                  class=ListNuggetDownButton id=GeneralInfoDown height=17 
+                  alt=Options 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/gray-chevron_down.gif" 
+                  width=17 align=right border=0 
+              name=GeneralInfoDown></DIV></TD></TR></TBODY></TABLE>
+            <DIV class=ListNuggetBody id=GeneralInfoBody name="GeneralInfoBody">
+            <TABLE cellSpacing=0 cellPadding=2 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top width=10><IMG height=5 hspace=5 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/blue_bullet.gif" 
+                  width=5 vspace=4 border=0 VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;CNTACTMS">Contact 
+                  Microsoft</A>
+                  <P>Phone Numbers, Support Options and Pricing, Online Help, 
+                  and more.</P></TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG height=5 hspace=5 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/blue_bullet.gif" 
+                  width=5 vspace=4 border=0 VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;[ln];csshome&amp;style=home">Customer 
+                  Service</A>
+                  <P>For non-technical assistance with product purchases, 
+                  subscriptions, online services, events, training courses, 
+                  corporate sales, piracy issues, and more.</P></TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG height=5 hspace=5 
+                  src="271587 - IIS Use Time-Date Format  User_bestanden/blue_bullet.gif" 
+                  width=5 vspace=4 border=0 VALIGN="MIDDLE"></TD>
+                <TD class=ListNuggetItem vAlign=top><A 
+                  class=ListNuggetItemLink 
+                  href="http://support.microsoft.com/newsgroups">Newsgroups</A>
+                  <P>Pose a question to other users. Discussion groups and 
+                  Forums about specific Microsoft products, technologies, and 
+                  services.</P></TD></TR></TBODY></TABLE></DIV></DIV></DIV></TD>
+          <TD vAlign=top width="100%">
+            <DIV class=tpl_content_bar>Microsoft Knowledge Base 
+            Article&nbsp;-&nbsp;271587 </DIV>
+            <DIV class=tpl_content><!--START KBCONTENT-->
+            <DIV class=LTRContent id=LTRContent dir=ltr><IMG 
+            class=tpl_header_icon height=75 
+            alt="ASP Pages Use Time/Date Format Based on User That Is Logged On" 
+            src="271587 - IIS Use Time-Date Format  User_bestanden/kb_hdr_icon.jpg" 
+            width=75>
+            <DIV class=KBPUBV2 name="KBPUBV2"><!-- - - - - - - - - - - PAGE TEXT BEGINS BELOW HERE - - - - - - - - - - -->
+            <H1 class=title>ASP Pages Use Time/Date Format Based on User That Is 
+            Logged On</H1>
+            <DIV class=appliesto>The information in this article applies to:
+            <UL>
+              <LI>Microsoft Windows 2000 Server
+              <LI>Microsoft Windows 2000 Advanced Server
+              <LI>Microsoft Windows 2000 Professional</LI></UL></DIV>
+            <DIV class=notice>This article was previously published under 
+            Q271587 </DIV>
+            <DIV class=notice><STRONG>IMPORTANT</STRONG>: This article contains 
+            information about modifying the registry. Before you modify the 
+            registry, make sure to back it up and make sure that you understand 
+            how to restore the registry if a problem occurs. For information 
+            about how to back up, restore, and edit the registry, click the 
+            following article number to view the article in the Microsoft 
+            Knowledge Base: 
+            <P class=indent><A class=KBlink 
+            href="http://support.microsoft.com/default.aspx?scid=kb;EN-US;256986">256986</A> 
+            Description of the Microsoft Windows Registry </P></DIV>
+            <DIV class=symptoms>
+            <H2>SYMPTOMS</H2>When you view an ASP Web page that returns the 
+            date, the format that is displayed may be dependant on the last 
+            person that was logged on to the computer. This is actually based on 
+            the last time that the cache was "touched" but may be affected by 
+            other events that reset the cache. Note that this problem may also 
+            affect other regional setting formats. </DIV>
+            <DIV class=cause>
+            <H2>CAUSE</H2>To improve performance in Microsoft Windows NT, the 
+            regional settings are cached, and this cache is used to determine 
+            how to format Date and Time strings. Because this is done by a 
+            common component, Oleaut32.dll, you receive the format of the 
+            last-cached entry. This behavior can result in an inconsistent 
+            format that is based on which user last updated the cache. </DIV>
+            <DIV class=resolution>
+            <H2>RESOLUTION</H2>A supported fix is now available from Microsoft, 
+            but it is only intended to correct the problem that is described in 
+            this article. Apply it only to computers that are experiencing this 
+            specific problem. This fix may receive additional testing. 
+            Therefore, if you are not severely affected by this problem, 
+            Microsoft recommends that you wait for the next Windows 2000 service 
+            pack that contains this fix.<BR><BR>To resolve this problem 
+            immediately, contact Microsoft Product Support Services to obtain 
+            the fix. For a complete list of Microsoft Product Support Services 
+            phone numbers and information about support costs, visit the 
+            following Microsoft Web site:
+            <P class=indent><A class=URLLink target=_top 
+            href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;CNTACTMS">http://support.microsoft.com/default.aspx?scid=fh;EN-US;CNTACTMS</A></P><STRONG>NOTE</STRONG>: 
+            In special cases, charges that are ordinarily incurred for support 
+            calls may be canceled if a Microsoft Support Professional determines 
+            that a specific update will resolve your problem. The typical 
+            support costs will apply to additional support questions and issues 
+            that do not qualify for the specific update in question.<BR><BR>The 
+            English version of this fix should have the following file 
+            attributes or later:<BR><PRE class=in_text>   Date        Time    Version       Size     File name
+   --------------------------------------------------
+   02/13/2001  06:58p  2.40.4517.0   143,632  Asycfilt.dll
+   02/13/2001  06:58p  2.40.4517.0   626,960  Oleaut32.dll
+   02/13/2001  06:58p  2.40.4517.0   164,112  Olepro32.dll
+   02/13/2001  05:39p  2.40.4517.0    16,896  Stdole2.tlb
+   02/13/2001  05:39p  2.40.4517.0   123,152  Iisrtl.dll
+				</PRE><BR></DIV>
+            <DIV class=status>
+            <H2>STATUS</H2>Microsoft has confirmed that this is a problem in the 
+            Microsoft products that are listed at the beginning of this article. 
+            </DIV>
+            <DIV class=moreinformation>
+            <H2>MORE INFORMATION</H2><STRONG>WARNING</STRONG>: If you use 
+            Registry Editor incorrectly, you may cause serious problems that may 
+            require you to reinstall your operating system. Microsoft cannot 
+            guarantee that you can solve problems that result from using 
+            Registry Editor incorrectly. Use Registry Editor at your own 
+            risk.<BR><BR>For additional information about how to install Windows 
+            2000 and Windows 2000 hotfixes at the same time, click the article 
+            number below to view the article in the Microsoft Knowledge Base: 
+            <P class=indent><A class=KBlink 
+            href="http://support.microsoft.com/default.aspx?scid=kb;EN-US;249149">249149</A> 
+            Installing Microsoft Windows 2000 and Windows 2000 Hotfixes </P>The 
+            fix for this problem requires some registry entries for the default 
+            behavior to change. This fix affects two components, OLEAUT and IIS. 
+            The first change is for the base OLEAUT component, and second is for 
+            IIS so that it can enact this change in OLEAUT. There is now a call 
+            exposed by OLEAUT that allows you to set the behavior for each 
+            process.<BR><BR>The registry entry for OLEAUT can be set globally. 
+            This does not override a process that explicitly sets the option by 
+            using the exposed call, so setting the following IIS setting 
+            overrides the OLEAUT setting.<BR><BR><STRONG>NOTE</STRONG>: The 
+            OLEAUT key may not exist, and if it does not, you must create the 
+            key first. 
+            <P 
+            class=indent><STRONG>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OLEAUT</STRONG></P><STRONG>VarConversionLocaleSetting</STRONG> 
+            = 0,1,2 (DWORD)<BR><BR>You can also set the value for IIS which, 
+            again, overrides any global setting for OLEAUT. Moreover, IIS will 
+            call this OLEAUT API whether or not the registry entry is set. 
+            <P 
+            class=indent><STRONG>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\InetInfo\Parameters\</STRONG></P><STRONG>SetVarConversionLocaleSetting</STRONG> 
+            = 0,1,2 (DWORD)<BR><BR>The values of 0, 1, and 2 are defined as 
+            follows and are the same for OLEAUT and IIS:<BR><BR>0 - Default 
+            behavior as it exists right now. This format is completely random. 
+            It is based on the last user or process that set the 
+            cache.<BR><BR>1. Format is based on the current identity of the 
+            thread requesting these values. This is based on the identity of the 
+            thread that makes the call to the OLEAUT32.dll. In the case of IIS, 
+            it is the Authenticating User profile settings (since IIS 
+            impersonates the authenticating user by default). If the 
+            Authenticating user's profile doesn't exist/ or is not loaded into 
+            the registry, it defaults to System Default settings from the 
+            following registry hive. 
+            <P class=indent><STRONG>HKEY_USERS\.default\Control 
+            Panel\International</STRONG></P>You can configure your web 
+            application in such a way that the impersonated user on a thread 
+            requesting these formats is the same user at all times. In this way, 
+            you can expect a consistent format.(For example: using Anonymous 
+            access on an ASP page would always result in the same date format 
+            irrespective of who is logged on to the system and also irrespective 
+            of the identity of the actual user requesting the page.) <BR><BR>2 - 
+            Format is forced to use the system default regional settings. The 
+            system default settings are set for a computer at reboot. The 
+            default system settings can be modified by clicking <STRONG>Set 
+            Default...</STRONG> in the Regional Settings tool in Control Panel. 
+            You can then choose a new locale to be the default locale, and you 
+            should then restart your computer. In this case, the date format is 
+            not read from the registry but from the Locale.nls file for that 
+            locale. <BR><BR><STRONG>NOTE</STRONG>: Changing the default locale 
+            changes all regional settings (time, money, date formats etc.). 
+            There is no way to modify a specific setting with in the locale. 
+            </DIV><!--******************* PUBLIC INFO SECTION ***********************-->
+            <TABLE class=docinfo cellSpacing=1 cellPadding=3 align=center>
+              <TBODY>
+              <TR>
+                <TD class=label vAlign=top noWrap align=right width="5%">Last 
+                  Reviewed:</TD>
+                <TD class=data vAlign=top align=left>10/16/2002</TD></TR>
+              <TR class=composite>
+                <TD class=label vAlign=top noWrap align=right 
+                  width="5%">Keywords:</TD>
+                <TD class=data vAlign=top align=left>kbbug kbenv kbQFE kbui 
+                  KB271587</TD></TR></TBODY></TABLE><!--********************* END PUBLIC INFO SECTION ***********************--><!-- - - - - - - - - - - - PAGE TEXT ENDS ABOVE HERE - - - - - - - - - - - --><BR>
+            <DIV 
+        class=disclaimer></DIV></DIV></DIV><!--END KBCONTENT--></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<DIV class=tpl_footer id=BottomPanel name="BottomPanel">
+<DIV class=tpl_footer_row1>
+<TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
+  <TBODY>
+  <TR>
+    <TD align=left width="50%">
+      <TABLE class=fbtn_outer cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=fbtn_cell onmouseover="this.className='fbtn_cell_hot';" 
+          onclick="" onmouseout="this.className='fbtn_cell';" 
+            noWrap>&nbsp;&nbsp;<A 
+            title="Send the contents of this page to a Friend" target="" 
+            href="mailto:?body=http://support.microsoft.com/default.aspx?scid=kb;en-us;271587">Send&nbsp;<IMG 
+            height=16 alt="Send the contents of this page to a Friend" hspace=0 
+            src="271587 - IIS Use Time-Date Format  User_bestanden/send_icon.gif" 
+            width=16 align=absMiddle border=0></A>&nbsp;&nbsp;</TD>
+          <TD class=fbtn_cell onmouseover="this.className='fbtn_cell_hot';" 
+          onclick="" onmouseout="this.className='fbtn_cell';" 
+            noWrap>&nbsp;&nbsp;<A title="Print the contents of this page" 
+            target="" href="javascript:PrintContents();">Print&nbsp;<IMG 
+            height=16 alt="Print the contents of this page" hspace=0 
+            src="271587 - IIS Use Time-Date Format  User_bestanden/print_icon.gif" 
+            width=16 align=absMiddle border=0></A>&nbsp;&nbsp;</TD>
+          <TD class=fbtn_cell onmouseover="this.className='fbtn_cell_hot';" 
+          onclick="top.location.href='http://support.microsoft.com/default.aspx?scid=/default.aspx?scid=fh;en-us;gsshelp&amp;style=flat'" 
+          onmouseout="this.className='fbtn_cell';" noWrap>&nbsp;&nbsp;<A 
+            title="View information on how to use this site effectively" 
+            target="" 
+            href="http://support.microsoft.com/default.aspx?scid=/default.aspx?scid=fh;en-us;gsshelp&amp;style=flat">Help&nbsp;<IMG 
+            height=16 alt="View information on how to use this site effectively" 
+            hspace=0 
+            src="271587 - IIS Use Time-Date Format  User_bestanden/help_icon.gif" 
+            width=16 align=absMiddle 
+      border=0></A>&nbsp;&nbsp;</TD></TR></TBODY></TABLE></TD>
+    <TD noWrap align=right>
+      <DIV style="MARGIN-RIGHT: 12px">Last reviewed &nbsp;Wednesday, October 16, 
+      2002</DIV></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tpl_footer_row2>© 2003 Microsoft Corporation. All rights 
+reserved.&nbsp;&nbsp;<A class=ftr_copyright_text target=_top 
+href="http://support.microsoft.com/default.aspx?scid=/support/misc/cpyright.asp">Terms 
+of use</A>&nbsp;&nbsp;<A class=ftr_copyright_text target=_top 
+href="http://www.microsoft.com/security/default.asp">Security &amp; 
+Privacy</A>&nbsp;&nbsp;<A class=ftr_copyright_text target=_top 
+href="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm">Accessibility</A>&nbsp;&nbsp;</DIV></DIV><IMG 
+style="DISPLAY: none" 
+src="271587 - IIS Use Time-Date Format  User_bestanden/1ptrans.gif" 
+name=metrixgif><IMG style="DISPLAY: none" height=0 alt=* 
+src="271587 - IIS Use Time-Date Format  User_bestanden/c.gif" width=0 border=0><!-- Qualified for Survey -->
+<SCRIPT language=javascript 
+src="271587 - IIS Use Time-Date Format  User_bestanden/surveytrigger.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+
+					var Exp = 90;
+					var Delay = 0;
+					var Freq = 600;
+					var CookieDef = 'ST_GN_EN-US';
+				
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+	function thisLoad(){
+setcookieval('sd', 'GN');setcookieval('SD', 'GN');gsfxUpLevel();
+LogHit('http://c.microsoft.com/trans_pixel.asp?TYPE=SSPV&SOURCE=SUPPORT&URI=/GN/en-us/kb_en-us_271587&GUID=1F4FC18C-F71E-47fb-8FC9-612F8EE59C61&R=');
+   g_reSupportedHostnames = new RegExp(".msn.com$|.passport.com$|.xbox.com$|.microsoft.com$|.microsoft.cz$|.msbpn.com$|.microsoft.co.*", "i");  ForeignLink_Hookup(); 	}
+
+	function thisUnload(){
+fireTrigger('/common/survey.aspx?scid=sw;en;1020&XSL=','GN','en-us','%2fdefault.aspx%3fscid%3dkb%3ben-us%3b271587','kb','en-us','271587','','','','','','','');	}
+</SCRIPT>
+ </BODY></HTML>

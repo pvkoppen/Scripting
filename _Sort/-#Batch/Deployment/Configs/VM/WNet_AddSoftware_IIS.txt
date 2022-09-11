@@ -1,0 +1,21 @@
+; Windows Server 2003 Unattend script
+; Install/Update/Remove component: IIS
+
+[Components]
+;Connectivity
+   ComPlusNetwork=on			;Enable network COM+ access
+;IIS Services
+   AppSrv_Console=on			;Application Server Console
+   IIS_Asp=on				;Active Server Pages for Internet Information Services (IIS)
+   IIS_Common=on			;common set of files required by IIS
+   IIS_InetMgr=on			;MMC-based administration tools for IIS
+   IIS_WWW=on				;World Wide Web Service
+
+;[InternetServer]
+   ;SvcManualStart = www,ftp
+   ;PathFTPRoot = path to FTProot
+   ;PathWWWRoot = path to WWWroot
+   ;ApplicationDependency = ApplicationName, GroupID, GroupID
+   ;ExtensionFile = <Enabled Flag>,<File Path>[ ,<UI Deletable Flag> [ ,<Group ID> [ ,<Description> ] ] ]
+   ;DisableWebServiceOnUpgrade = True/False
+

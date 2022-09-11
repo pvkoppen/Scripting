@@ -1,0 +1,122 @@
+
+if (!$DPMServerName)
+{
+    $DPMServerName = Read-Host "DPM server name: "
+
+    if (!$DPMServerName)
+    {
+        Write-Error "DPM server name not specified."
+        exit 1
+    }
+}
+
+if (!(Connect-DPMServer $DPMServerName))
+{
+    Write-Error "Failed to connect To DPM server: $DPMServerName"
+    exit 1
+}
+
+if (!$srcLibraryName)
+{
+    Write-Host "Select the source library for the copy process: "
+    Get-DPMLibrary $DPMServerName | Where-Object {$_.IsEnabled -and !$_.IsOffline} | Format-Table UserFriendlyName
+    $srcLibraryName = Read-Host "Source Library name: "
+
+    if (!$srcLibraryName)
+    {
+        Write-Error "Source Library name not specified."
+        exit 1
+    }
+}
+
+$srcLibrary = Get-DPMLibrary $DPMServerName | where {$_.UserFriendlyName -eq $srcLibraryName}
+
+if (!$srcLibrary)
+{
+    Write-Error "Failed to find source library with user friendly name: $srcLibraryName"
+    exit 1
+}
+
+
+if (!$dstLibraryName)
+{
+    Write-Host "Select the destination library for the copy process: "
+    Get-DPMLibrary $DPMServerName | Where-Object {$_.IsEnabled -and !$_.IsOffline} | Format-Table UserFriendlyName
+    $dstLibraryName = Read-Host "Destination Library name: "
+
+    if (!$dstLibraryName)
+    {
+        Write-Error "Destination Library name not specified."
+        exit 1
+    }
+}
+
+$dstLibrary = Get-DPMLibrary $DPMServerName | where {$_.UserFriendlyName -eq $dstLibraryName}
+
+if (!$dstLibrary)
+{
+    Write-Error "Failed to find destination library with user friendly name: $dstLibraryName"
+    exit 1
+}
+
+if (!$srcTapeLocation)
+{
+    Write-Host "Select the tape location:"
+    Write-Host "[Tape Location]    ([Tape Label])"
+    foreach ($media in @(Get-Tape -DPMLibrary $srcLibrary))
+    {
+        Write-Host "$($media.Location)    ($($media.Label))"
+    }
+    $srcTapeLocation = Read-Host "Tape location: "
+
+    if (!$srcTapeLocation)
+    {
+        Write-Error "Tape location not specified."
+        exit 1
+    }
+}
+
+foreach ($media in @(Get-Tape -DPMLibrary $srcLibrary))
+{
+    if ($srcTapeLocation -contains $media.Location)
+        {
+            $srcTape=$media
+        }
+}
+
+if (!$cpyNewJobTxt)
+{
+    $cpyNewJobTxt = Read-Host "Is this a new job (=True), or an extention of an old job (=False): "
+
+    if (!$cpyNewJobTxt)
+    {
+        Write-Error "New job details not specified."
+        exit 1
+    }
+    else
+    {
+        if ($cpyNewJobTxt -eq "True") { $cpyNewJob = True }
+    }
+}
+
+foreach ($media in @(Get-Tape -DPMLibrary $srcLibrary))
+{
+    if ($srcTapeLocation -contains $media.Location)
+        {
+            $srcTape=$media
+        }
+}
+
+# ----------------------------------------------------------------------------------------------
+# ---- TODO From Here
+# ----------------------------------------------------------------------------------------------
+
+foreach ($rp in @(Get-RecoveryPoint -Tape $srcTape)) {$rp}
+
+foreach ($rp in @(Get-RecoveryPoint -Tape $srcTape)) {
+  $rp 
+  Copy-DPMTapeData -RecoveryPoint $rp -SourceLibrary $srcLibrary -TargetLibrary $dstLibrary -TapeOption 0 -TapeLabel "ProtGrp TOL-Monthly-00000008-copy"
+}
+
+
+

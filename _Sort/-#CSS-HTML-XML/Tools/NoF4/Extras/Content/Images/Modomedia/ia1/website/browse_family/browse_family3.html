@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<TITLE>Browse - By Family </TITLE>
+
+<SCRIPT LANGUAGE = "JavaScript">
+<!-- Hides script from non-compatible browsers
+
+
+       browserName = navigator.appName;
+       browserVer = parseInt(navigator.appVersion);
+            /*   if (top.frames.length > 1) {
+                        top.location="menu.html";
+                        } */
+
+               if (browserName == "Netscape" && browserVer >= 3) version ="n3";
+               else {version = "n2"};
+               if (navigator.appVersion.substring(0,3) == '4.0') {version="n3"};
+               if (version == "n3") {
+             
+
+              
+               nav1on = new Image;
+               nav1on.src = "../images/more_lit.gif";
+             
+               nav1off = new Image;
+               nav1off.src = "../images/more.gif";
+
+              
+               nav2on = new Image;
+               nav2on.src = "../images/back_lit.gif";
+             
+               nav2off = new Image;
+               nav2off.src = "../images/back.gif";
+
+                             
+                                                    
+            
+            
+             }
+
+       function img_act(imgName) {
+               if (version == "n3") {
+               imgOn = eval(imgName + "on.src");
+               document [imgName].src = imgOn;
+               }
+       }
+
+       function img_inact(imgName) {
+               if (version == "n3") {
+               imgOff = eval(imgName + "off.src");
+               document [imgName].src = imgOff;
+               }
+       }
+
+// End hide script -->
+
+
+</script>
+
+</HEAD>
+<body background="../images/bg.gif" bgcolor="000000" text="#FFFFFF">
+<center>
+<a href="../../21/index.html"><img border=0 src="../../21/sample.gif" width=164 height=51 alt="Click this image to see family"></a>
+
+<a href="../../22/index.html"><img border=0 src="../../22/sample.gif" width=164 height=51 alt="Click this image to see family"></a>
+
+<a href="../../23/index.html"><img border=0 src="../../23/sample.gif" width=164 height=51 alt="Click this image to see family"></a>
+
+<a href="../../24/index.html"><img border=0 src="../../24/sample.gif" width=164 height=51 alt="Click this image to see family"></a>
+
+<a href="../../25/index.html"><img border=0 src="../../25/sample.gif" width=164 height=51 alt="Click this image to see family"></a>
+
+<a href="../../26/index.html"><img border=0 src="../../26/sample.gif" width=164 height=51 alt="Click this image to see family"></a>
+
+<a href="../../27/index.html"><img border=0 src="../../27/sample.gif" width=164 height=51 alt="Click this image to see family"></a>
+
+<a href="../../28/index.html"><img border=0 src="../../28/sample.gif" width=164 height=51 alt="Click this image to see family"></a>
+
+<a href="../../29/index.html"><img border=0 src="../../29/sample.gif" width=164 height=51 alt="Click this image to see family"></a>
+
+<a href="../../30/index.html"><img border=0 src="../../30/sample.gif" width=164 height=51 alt="Click this image to see family"></a>
+
+
+<br>
+<a href="browse_family2.html" onMouseover = "img_act('nav2'); window.status='View previous families'; return true;" onMouseout= "img_inact('nav2'); window.status=''; return true;"><img src="../images/back.gif" border="0" name="nav2"></a>
+<a href="browse_family4.html" onMouseover = "img_act('nav1'); window.status='View more families'; return true;" onMouseout= "img_inact('nav1'); window.status=''; return true;"><img src="../images/more.gif" border="0" name="nav1"></a>
+
+
+</BODY>
+</HTML>

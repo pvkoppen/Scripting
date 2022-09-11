@@ -1,0 +1,1213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0041)http://www.w3.org/MarkUp/Guide/Style.html -->
+<HTML><HEAD><TITLE>Dave Raggett's Introduction to CSS</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<META content="MSHTML 5.00.3502.5390" name=GENERATOR>
+<STYLE type=text/css>BODY {
+	FONT-FAMILY: sans-serif; MARGIN-LEFT: 10%; MARGIN-RIGHT: 10%
+}
+H2 {
+	MARGIN-LEFT: -3%
+}
+H3 {
+	MARGIN-LEFT: -3%
+}
+H4 {
+	MARGIN-LEFT: -3%
+}
+H5 {
+	MARGIN-LEFT: -3%
+}
+H6 {
+	MARGIN-LEFT: -3%
+}
+PRE {
+	COLOR: green; FONT-FAMILY: monospace; FONT-WEIGHT: bold; WHITE-SPACE: pre
+}
+TT {
+	COLOR: green
+}
+EM {
+	FONT-STYLE: italic; FONT-WEIGHT: bold
+}
+STRONG {
+	FONT-WEIGHT: bold
+}
+.navbar {
+	TEXT-ALIGN: center
+}
+DIV.box {
+	BORDER-BOTTOM: thin solid; BORDER-LEFT: thin solid; BORDER-RIGHT: thin solid; BORDER-TOP: thin solid; PADDING-BOTTOM: 0.2em; PADDING-LEFT: 0.2em; PADDING-RIGHT: 0.2em; PADDING-TOP: 0.2em; WIDTH: 100%
+}
+DIV.color {
+	BACKGROUND-COLOR: rgb(204,204,255); BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; WIDTH: 100%
+}
+PRE.bad {
+	COLOR: rgb(192,101,101)
+}
+P.changed {
+	BORDER-BOTTOM: red; BORDER-LEFT: red thin solid; BORDER-RIGHT: red; BORDER-TOP: red; PADDING-LEFT: 0.2em
+}
+.dropcap {
+	BACKGROUND: white; BORDER-BOTTOM-COLOR: white; BORDER-BOTTOM-WIDTH: 2px; BORDER-LEFT-COLOR: white; BORDER-LEFT-WIDTH: 2px; BORDER-RIGHT-COLOR: white; BORDER-RIGHT-WIDTH: 2px; BORDER-TOP-COLOR: white; BORDER-TOP-WIDTH: 2px; COLOR: rgb(51,0,102); FLOAT: left; FONT: bold 80% "Times New Roman", serif; table: -4%
+    font-family: sans-serif
+}
+TD {
+	FONT-FAMILY: sans-serif; FONT-SIZE: 80%
+}
+TD.shaded {
+	BACKGROUND: rgb(255,255,153)
+}
+TH.shaded {
+	BACKGROUND: rgb(204,204,153)
+}
+</STYLE>
+</HEAD>
+<BODY background="Intro to CSS_bestanden/book.jpg" bgColor=white text=black>
+<P class=navbar><A href="http://www.w3.org/"><IMG alt=W3C border=0 height=48 
+src="Intro to CSS_bestanden/w3c_home.gif" width=72></A><BR><A 
+href="http://www.w3.org/MarkUp/Guide/Overview.html">Basic HTML</A> | <A 
+href="http://www.w3.org/MarkUp/Guide/Advanced.html">Advanced HTML</A></P>
+<H1><A href="http://www.w3.org/People/Raggett"><IMG align=middle 
+alt="Dave Raggett" border=0 src="Intro to CSS_bestanden/dsr.jpg"></A> 
+&nbsp;&nbsp;Adding a touch of style</H1>
+<P><EM><A href="http://www.w3.org/People/Raggett">Dave Raggett</A>, 8th April 
+2002.</EM></P>
+<P>This is a short guide to styling your Web pages. It will show you how to use 
+W3C's <A href="http://www.w3.org/Style/CSS/">Cascading Style Sheets language</A> 
+(CSS) as well as alternatives using HTML itself. The route will steer you clear 
+of most of the problems caused by differences between different brands and 
+versions of browsers.</P>
+<P>For style sheets to work, it is important that your markup be free of errors. 
+A convenient way to automatically fix markup errors is to use the <A 
+href="http://www.w3.org/People/Raggett/tidy/">HTML Tidy</A> utility. This also 
+tidies the markup making it easier to read and easier to edit. I recommend you 
+regularly run Tidy over any markup you are editing. Tidy is very effective at 
+cleaning up markup created by authoring tools with sloppy habits.</P>
+<P>The following will teach you how to:</P>
+<UL>
+  <LI>use the style element 
+  <LI>link to separate style sheets 
+  <LI>set page margins 
+  <LI>set left and right and first-line indents 
+  <LI>set the amount of whitespace above and below 
+  <LI>set the font type, style and size 
+  <LI>add borders and backgrounds 
+  <LI>set colors with named or numeric values 
+  <LI>add style for browsers that don't understand CSS </LI></UL>
+<H2>Getting started</H2>
+<P>Let's start with setting the color of the text and the background. You can do 
+this by using the STYLE element to set style properties for the document's 
+tags:</P><PRE>&lt;style type="text/css"&gt;
+  body { color: black; background: white; }
+&lt;/style&gt;
+</PRE>
+<P>The stuff between the &lt;style&gt; and &lt;/style&gt; is written in special 
+notation for style rules. Each rule starts with a tag name followed by a list of 
+style properties bracketed by { and }. In this example, the rule matches the 
+<EM>body</EM> tag. As you will see, the body tag provides the basis for setting 
+the overall look and feel of your Web page.</P>
+<P>Each style property starts with the property's name, then a colon and lastly 
+the value for this property. When there is more than one style property in the 
+list, you need to use a semicolon between each of them to delimit one property 
+from the next. In this example, there are two properties - "color" which sets 
+the color of the text, and "background" which sets the color of the page 
+background. I recommend always adding the semicolon even after the last 
+property.</P>
+<P>Colors can be given as names or as numerical values, for instance 
+<TT>rgb(255, 204, 204)</TT> which is a fleshy pink. The 3 numbers correspond to 
+red, green and blue respectively in the range 0 to 255. You can also use a 
+hexadecimal notation, the same color can also be written as <TT>#FFCCCC</TT>. 
+More <A href="http://www.w3.org/MarkUp/Guide/Style.html#colors">details</A> on 
+color are given in a later section.</P>
+<P>Note that the style element must be placed in the document's head along with 
+the title element. It shouldn't be placed within the body.</P>
+<H3>Linking to a separate style sheet</H3>
+<P>If you are likely to want to use the same styles for several Web pages it is 
+worth considering using a separate style sheet which you then link from each 
+page. You can do this as follows:</P><PRE>&lt;link type="text/css" rel="stylesheet" href="style.css"&gt;
+</PRE>
+<P>The LINK tag should be placed in the document's head. The <EM>rel</EM> 
+attribute must be set to the value "stylesheet" to allow the browser to 
+recognize that the <EM>href</EM> attribute gives the Web address (URL) for your 
+style sheet.</P>
+<H3>Setting the page margins</H3>
+<P>Web pages look a lot nicer with bigger margins. You can set the left and 
+right margins with the "margin-left" and "margin-right" properties, e.g.</P><PRE>&lt;style type="text/css"&gt;
+  body { margin-left: 10%; margin-right: 10%; }
+&lt;/style&gt;
+</PRE>
+<P>This sets both margins to 10% of the window width, and the margins will scale 
+when you resize the browser window.</P>
+<H3>Setting left and right indents</H3>
+<P>To make headings a little more distinctive, you can make them start within 
+the margin set for the body, e.g.</P><PRE>&lt;style type="text/css"&gt;
+  body { margin-left: 10%; margin-right: 10%; }
+  h1 { margin-left: -8%;}
+  h2,h3,h4,h5,h6 { margin-left: -4%; }
+&lt;/style&gt;
+</PRE>
+<P>This example has three style rules. One for the body, one for h1 (used for 
+the most important headings) and one for the rest of the headings (h2, h3, h4, 
+h5 and h6). The margins for the headings are additive to the margins for the 
+body. Negative values are used to move the start of the headings to the left of 
+the margin set for the body.</P>
+<P>In the following sections, the examples of particular style rules will need 
+to be placed within the style element in the document's head (if present) or in 
+a linked style sheet.</P>
+<H3>Controlling the white space above and below</H3>
+<P>Browsers do a pretty good job for the white space above and below headings 
+and paragraphs etc. Two reasons for taking control of this yourself are: when 
+you want a lot of white space before a particular heading or paragraph, or when 
+you need precise control for the general spacings.</P>
+<P>The "margin-top" property specifies the space above and the "margin-bottom" 
+specifies the space below. To set these for all h2 headings you can write:</P><PRE>h2 { margin-top: 8em; margin-bottom: 3em; }
+</PRE>
+<P>The em is a very useful unit as it scales with the size of the font. One em 
+is the height of the font. By using em's you can preserve the general look of 
+the Web page independently of the font size. This is much safer than 
+alternatives such as pixels or points, which can cause problems for users who 
+need large fonts to read the text.</P>
+<P>Points are commonly used in word processing packages, e.g. 10pt text. 
+Unfortunately the same point size is rendered differently on different browsers. 
+What works fine for one browser will be illegible on another! Sticking with em's 
+avoids these problems.</P>
+<P>To specify the space above a particular heading, you should create a named 
+style for the heading. You do this with the <EM>class</EM> attribute in the 
+markup, e.g.</P><PRE>&lt;h2 class="subsection"&gt;Getting started&lt;/h2&gt;
+</PRE>
+<P>The style rule is then written as:</P><PRE>h2.subsection { margin-top: 8em; margin-bottom: 3em; }
+</PRE>
+<P>The rule starts with the tag name, a dot and then the value of the class 
+attribute. Be careful to avoid placing a space before or after the dot. If you 
+do the rule won't work. There are other ways to set the styles for a particular 
+element but the class attribute is the most flexible.</P>
+<P>When a heading is followed by a paragraph, the value for margin-bottom for 
+the heading isn't added to the value for margin-top for the paragraph. Instead, 
+the maximum of the two values is used for the spacing between the heading and 
+paragraph. This subtlety applies to margin-top and margin-bottom regardless of 
+which tags are involved.</P>
+<H3>First-line indent</H3>
+<P>Sometimes you may want to indent the first line of each paragraph. The 
+following style rule emulates the traditional way paragraphs are rendered in 
+novels:</P><PRE>p { text-indent: 2em; margin-top: 0; margin-bottom: 0; }
+</PRE>
+<P>It indents the first line of each paragraph by 2 em's and suppresses the 
+inter-paragraph spacing.</P>
+<H2>Controlling the font</H2>
+<P>This section explains how to set the font and size, and how to add italic, 
+bold and other styles.</P>
+<H3>Font styles</H3>
+<P>The most common styles are to place text in italic or bold. Most browsers 
+render the <EM>em</EM> tag in italic and the <EM>strong</EM> tag in bold. Let's 
+assume you instead want em to appear in <EM>bold italic</EM> and strong in 
+<STRONG>bold uppercase</STRONG>:</P><PRE>em { font-style: italic; font-weight: bold; }
+strong { text-transform: uppercase;  font-weight: bold; }
+</PRE>
+<P>If you feel so inclined, you can fold headings to lower case as follows:</P><PRE>h2 { text-transform: lowercase; }
+</PRE>
+<H3>Setting the font size</H3>
+<P>Most browsers use a larger font size for more important headings. If you 
+override the default size, you run the risk of making the text too small to be 
+legible, particularly if you use points. You are therefore recommended to 
+specify font sizes in relative terms.</P>
+<P>This example sets heading sizes in percentages relative to the size used for 
+normal text:</P><PRE>h1 { font-size: 200%; }
+h2 { font-size: 150%; }
+h3 { font-size: 100%; }
+</PRE>
+<H3>Setting the font family</H3>
+<P>It is likely that your favorite font won't be available on all browsers. To 
+get around this, you are allowed to list several fonts in preference order. 
+There is a short list of generic font names which are garanteed to be available, 
+so you are recommended to end your list with one of these: serif, sans-serif, 
+cursive, fantasy, or monospace, for instance:</P><PRE>body { font-family: Verdana, sans-serif; }
+h1,h2 { font-family: Garamond, "Times New Roman", serif; }
+</PRE>
+<P>In this example, important headings would preferably be shown in Garamond, 
+failing that in Times New Roman, and if that is unavailable in the browsers 
+default serif font. Paragraph text would appear in Verdana or if that is 
+unavailable in the browser's default sans-serif font.</P>
+<P>The legibility of different fonts generally depends more on the height of 
+lower case letters than on the font size itself. Fonts like Verdana are much 
+more legible than ones like "Times New Roman" and are therefore recommended for 
+paragraph text.</P><!--
+<h3>Drop Caps</h3>
+
+<p><span class="dropcap">T</span>his is an example of how
+to produce the effect of drop caps, without running afoul
+of browser compatibity problems. It relies on you placing
+the first letter of the paragraph in a span element.
+In future, the need for the span element should disappear
+as browsers implement the CSS first-letter mechanism.</p>
+
+<pre>
+<p><span class="dropcap">T</span>his is an example
+of how to produce the effect of drop caps, without ...
+</pre>
+
+<p>The style rule used to achieve this effect is:</p>
+
+<pre>
+  .dropcap {
+     float: left;
+     font: bold 1.4em "Times New Roman", serif;
+     color: rgb(51, 0, 102);
+     background: rgb(255, 255, 153;)
+  }
+</pre>
+-->
+<H3>Avoid problems with fonts and margins</H3>
+<P>My first rule is to avoid text at the body level that isn't wrapped in a 
+block level element such as <EM>p</EM>. For instance:</P><PRE class=bad>&lt;h2&gt;Spring in Wiltshire&lt;/h2&gt;
+
+Blossom on the trees, bird song and the sound of lambs
+bleating in the fields.
+</PRE>
+<P>The text following the heading runs the risk on some browsers of being 
+rendered with the wrong font and margins. You are therefore advised to enclose 
+all such text in a paragraph, e.g.</P><PRE class=good>&lt;h2&gt;Spring in Wiltshire&lt;/h2&gt;
+
+&lt;p&gt;Blossom on the trees, bird song and the sound of lambs
+bleating in the fields.&lt;/p&gt;
+</PRE>
+<P>My second rule is to set the font family for <EM>pre</EM> elements, as some 
+browsers forget to use a fixed pitch font when you set the font size or other 
+properties for pre.</P><PRE>pre { font-family: monospace; }
+</PRE>
+<P>My third rule is to set the font family on headings, p and ul elements if you 
+intend to set borders or backgrounds on elements such as div. This is a 
+work-around for a bug where the browser forgets to use the inherited font 
+family, instead switching to the default font as set by the browser 
+preferences.</P><PRE>h1,h2,h3,h4,h5,p,ul { font-family: sans-serif; }
+</PRE>
+<H2>Adding borders and backgrounds</H2>
+<DIV class=box>
+<P>You can easily add a border around a heading, list, paragraph or a group of 
+these enclosed with a <EM>div</EM> element. For instance:</P><PRE>div.box { border: solid; border-width: thin; width: 100% }
+</PRE>
+<P>Note that without the "width" property some browsers will place the right 
+margin too far to the right. This can then be used with markup such as:</P><PRE>&lt;div class="box"&gt;
+The content within this DIV element will be enclosed
+in a box with a thin line around it.
+&lt;/div&gt;
+</PRE></DIV>
+<P>There are a limited choice of border types: dotted, dashed, solid, double, 
+groove, ridge, inset and outset. The border-width property sets the width. Its 
+values include thin, medium and thick as well as a specified width e.g. 0.1em. 
+The border-color property allows you to set the color.</P>
+<DIV class=color>
+<P>A nice effect is to paint the background of the box with a solid color or 
+with a tiled image. To do this you use the background property. You can fill the 
+box enclosing a div as follows:</P><PRE>  div.color {
+    background: rgb(204,204,255);
+    padding: 0.5em;
+    border: none;
+  }
+</PRE>
+<P>Without an explicit definition for border property some browsers will only 
+paint the background color under each character. The padding property introduces 
+some space between the edges of the colored region and the text it contains.</P>
+<P>You can set different values for padding on the left, top, right and bottom 
+sides with the padding-left, padding-top, padding-right and padding-bottom 
+properties, e.g. <TT>padding-left: 1em</TT>.</P></DIV>
+<P>Suppose you only want borders on some of the sides. You can control the 
+border properties for each of the sides independently using the border-left, 
+border-top, border-right and border-bottom family of properties together with 
+the appropriate suffix: style, width or color, e.g.</P><PRE>  p.changed {
+    padding-left: 0.2em;
+    border-left: solid;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    border-left-width: thin;
+    border-color: red;
+  }
+</PRE>
+<P class=changed>which sets a red border down the left hand side only of any 
+paragraph with the class "changed".</P>
+<H2><A id=colors name=colors>Setting Colors</A></H2>
+<P>Some examples for setting colors appeared in earlier sections. Here is a 
+reminder:</P><PRE>  body {
+    color: black;
+    background: white;
+  }
+  strong { color: red }
+</PRE>
+<P>This sets the default to black text on a white background, but renders strong 
+elements in red. There are 16 standard color name, which are explained just 
+below. You can also use decimal values for red, green and blue, where each value 
+appears in the range 0 to 255, e.g. <I>rgb(255, 0, 0)</I> is the same as 
+<I>red.</I> You can also used hex color values which start with the '#' 
+characted followed by six hexadecimal digits. A two-way converter is included 
+below which allows you to convert from RGB to hex color values.</P>
+<H3>Setting Link Colors</H3>
+<P>You can use CSS to set the color for hypertext links, with a different color 
+for links that you have yet to follow, ones you have followed, and the active 
+color for when the link is being clicked. You can even set the color for when 
+the mouse pointer is hovering over the link.</P><PRE>  :link { color: rgb(0, 0, 153) }  /* for unvisited links */
+  :visited { color: rgb(153, 0, 153) } /* for visited links */
+  :active { color: rgb(255, 0, 102) } /* when link is clicked */
+  :hover { color: rgb(0, 96, 255) } /* when mouse is over link */
+</PRE>
+<P>Sometimes you may want to show hypertext links without them being underlined. 
+You can do this by setting the <I>text-decoration</I> property to <I>none</I>, 
+for example:</P><PRE>  a.plain { text-decoration: none }
+</PRE>
+<P>Which would suppress underlining for a link such as:</P><PRE>This is &lt;a class="plain" href="what.html"&gt;not underlined&lt;/a&gt;
+</PRE>
+<P>Most people when they see underlined text on a Web page, will expect it to be 
+part of a hypertext link. As a result, you are advised to leave underlining on 
+for hypertext links. A similar argument applies to the link colors, most people 
+will interpret underlined blue text as hypertext links. You are advised to leave 
+link colors alone, except when the color of the background would otherwise make 
+the text hard to read.</P>
+<H3>Color Blindness</H3>
+<P>When using color, remember that 5 to 10% of men have some form of color 
+blindness. This can cause difficulties distinguishing between red and green, or 
+between yellow and blue. In rare cases, there is an inability to perceive any 
+colors at all. You are recommended to avoid foreground/background color 
+combinations that would make the text hard to read for people with color 
+blindness.</P>
+<H3>Named colors</H3>
+<P>The standard set of color names is: aqua, black, blue, fuchsia, gray, green, 
+lime, maroon, navy, olive, purple, red, silver, teal, white, and yellow. These 
+16 colors are defined in HTML 3.2 and 4.01 and correspond to the basic VGA set 
+on PCs. Most browsers accept a wider set of color names but use of these is not 
+recommended.</P>
+<TABLE align=center border=0 cellPadding=5 cellSpacing=0 width="80%" 
+  summary=""><CAPTION><B>Color names and sRGB values</B><BR></CAPTION>
+  <TBODY>
+  <TR>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/black.gif"></TD>
+    <TD>black = "#000000"</TD>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/green.gif"></TD>
+    <TD>green = "#008000"<BR></TD></TR>
+  <TR>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/silver.gif"></TD>
+    <TD>silver = "#C0C0C0"</TD>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/lime.gif"></TD>
+    <TD>lime = "#00FF00"<BR></TD></TR>
+  <TR>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/gray.gif"></TD>
+    <TD>gray = "#808080"</TD>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/olive.gif"></TD>
+    <TD>olive = "#808000"<BR></TD></TR>
+  <TR>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/white.gif"></TD>
+    <TD>white = "#FFFFFF"</TD>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/yellow.gif"></TD>
+    <TD>yellow = "#FFFF00"<BR></TD></TR>
+  <TR>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/maroon.gif"></TD>
+    <TD>maroon = "#800000"</TD>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/navy.gif"></TD>
+    <TD>navy = "#000080"<BR></TD></TR>
+  <TR>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/red.gif"></TD>
+    <TD>red = "#FF0000"</TD>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/blue.gif"></TD>
+    <TD>blue = "#0000FF"<BR></TD></TR>
+  <TR>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/purple.gif"></TD>
+    <TD>purple = "#800080"</TD>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/teal.gif"></TD>
+    <TD>teal = "#008080"<BR></TD></TR>
+  <TR>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/fuchsia.gif"></TD>
+    <TD>fuchsia = "#FF00FF"</TD>
+    <TD width=16><IMG alt="" src="Intro to CSS_bestanden/aqua.gif"></TD>
+    <TD>aqua = "#00FFFF"<BR></TD></TR></TBODY></TABLE>
+<P>Thus, the color value "#800080" is the same as "purple".</P>
+<H3><A id=hexcolors name=hexcolors>Hexadecimal color values</A></H3>
+<P>Values like "#FF9999" represent colors as hexadecimal numbers for red, green 
+and blue. The first two characters following the # give the number for red, the 
+next two for green and the last two for blue. These numbers are always in the 
+range 0 to 255 decimal. If you know the values in decimal, you can convert to 
+hexadecimal using a calculator, like the one that comes as part of Microsoft 
+Windows.</P>
+<SCRIPT type=text/javascript>
+
+
+
+function updateHex()
+{
+    var red = parseInt(document.forms.colorcalc.red.value);
+    var green = parseInt(document.forms.colorcalc.green.value);
+    var blue = parseInt(document.forms.colorcalc.blue.value);
+    document.forms.colorcalc.hexcolor.value =
+      "#" + Color2Hex(red)+Color2Hex(green)+Color2Hex(blue);
+}
+
+function Color2Hex(n)
+{
+    return ToHex(n >> 4) + ToHex(n);
+}
+
+function ToHex(n)
+{
+    n = n % 16;
+
+    if (n <= 0)
+        return "0";
+
+    if (n < 10)
+        return n.toString();
+
+    if (n == 10)
+        return "A";
+
+    if (n == 11)
+        return "B";
+
+    if (n == 12)
+        return "C";
+
+    if (n == 13)
+        return "D";
+
+    if (n == 14)
+        return "E";
+
+    if (n == 15)
+        return "F";
+}    
+
+function CheckDecimal(s)
+{
+    var n = parseInt(s);
+    var i, c;
+
+    for (i = 0; i < s.length; ++i)
+    {
+        c = s.charAt(i);
+
+        if (c < '0' || '9' < c)
+        {
+            alert("Please enter a value between 0 and 255");
+            return false;
+        }
+    }
+
+    if (n < 0 || 255 < n)
+    {
+        alert("Please enter a value between 0 and 255");
+        return false;
+    }
+
+    return true;
+}
+
+function CheckHex(s)
+{
+    if (!isHexColor(s))
+    {
+        alert("Please enter a value starting with '#' followed" +
+        "\nby 6 hexadecimal digits, for example: #00FF66");
+        return false;
+    }
+
+    return true;
+}
+
+function isHexColor(s)
+{
+    var i, c;
+
+    if (s.charAt(0) != '#' || s.length != 7)
+        return false;
+
+    for (i = 1; i < 7; ++i)
+    {
+        c = s.charAt(i);
+
+        if ('0' <= c && c <= '9')
+            continue;
+
+        if ('A' <= c && c <= 'F')
+            continue;
+
+        if ('a' <= c && c <= 'f')
+            continue;
+
+        return false;  // bad character
+    }
+
+    return true;
+}
+
+function updateRGB()
+{
+    var s = document.forms.colorcalc.hexcolor.value;
+
+    if (CheckHex(s))
+    {
+        var red = HexColor2Decimal(s, 1);
+        var green = HexColor2Decimal(s, 3);
+        var blue = HexColor2Decimal(s, 5);
+        document.forms.colorcalc.red.value = red.toString();
+        document.forms.colorcalc.green.value = green.toString();
+        document.forms.colorcalc.blue.value = blue.toString();
+    }
+}
+
+function HexColor2Decimal(s, n)
+{
+    return 16 * HexDigit2Dec(s.charAt(n))
+            + HexDigit2Dec(s.charAt(n+1));
+}
+
+// called with hex character
+function HexDigit2Dec(hex)
+{
+    if ('0' <= hex && hex <= '9')
+        return parseInt(hex);
+
+    if (hex == 'A' || hex == 'a')
+        return 10;
+
+    if (hex == 'B' || hex == 'b')
+        return 11;
+
+    if (hex == 'C' || hex == 'c')
+        return 12;
+
+    if (hex == 'D' || hex == 'd')
+        return 13;
+
+    if (hex == 'E' || hex == 'e')
+        return 14;
+
+    if (hex == 'F' || hex == 'f')
+        return 15;
+    return 0;
+}
+
+
+
+</SCRIPT>
+
+<CENTER>
+<FORM action="" name=colorcalc>
+<TABLE border=0 cellPadding=3 cellSpacing=0>
+  <CAPTION>Enter RGB or Hex value and press appropriate button to 
+  convert</CAPTION>
+  <TBODY>
+  <TR>
+    <TD align=right class=shaded>red:</TD>
+    <TD class=shaded><INPUT maxLength=3 name=red 
+      onblur=CheckDecimal(this.value) size=4 value=255></TD>
+    <TD align=middle class=shaded>Hex color value</TD></TR>
+  <TR>
+    <TD align=right class=shaded>green:</TD>
+    <TD class=shaded><INPUT maxLength=3 name=green 
+      onblur=CheckDecimal(this.value) size=4 value=255></TD>
+    <TD class=shaded><INPUT maxLength=7 name=hexcolor 
+      onblur=CheckHex(this.value) size=8 value=#FFFFFF></TD></TR>
+  <TR>
+    <TD align=right class=shaded>blue:</TD>
+    <TD class=shaded><INPUT maxLength=3 name=blue 
+      onblur=CheckDecimal(this.value) size=4 value=255></TD>
+    <TD align=middle class=shaded><INPUT onclick=updateHex() type=button value=HEX?><INPUT onclick=updateRGB() type=button value=RGB?></TD></TR></TBODY></TABLE></FORM></CENTER>
+<H3>Browser safe colors</H3>
+<P>New computers support thousands or millions of colors, but many older color 
+systems can only show up to 256 colors at a time. To cope with this, these 
+browsers make do with colors from a fixed palette. The effect of this is often 
+visible as a speckling of colors as the browser tries to approximate the true 
+color at any point in the image. This problem will gradually go away as older 
+computers are replaced by newer models.</P>
+<P>Most browsers support the same so called "browser safe" palette. This uses 6 
+evenly spaced gradations in red, green and blue and their combinations. If you 
+select image colors from this palette, you can avoid the speckling effect. This 
+is particularly useful for background areas of images.</P>
+<P>If the browser is using the browser safe palette, the page background uses 
+the nearest color in the palette. If you set the page background to a color 
+which isn't in the browser safe palette, you run the risk that the background 
+will have different colors depending on whether the computer is using indexed or 
+true-color.</P><!--
+<p><img src="bsafe.gif" width="432" height="72"
+alt="all colors in the browser safe palette"></p>
+-->
+<P>These are constructed from colors where red, green and blue are restricted to 
+the values:</P>
+<TABLE border=1 cellPadding=5 cellSpacing=2>
+  <TBODY>
+  <TR>
+    <TH class=shaded>RGB</TH>
+    <TD class=shaded>00</TD>
+    <TD class=shaded>51</TD>
+    <TD class=shaded>102</TD>
+    <TD class=shaded>153</TD>
+    <TD class=shaded>204</TD>
+    <TD class=shaded>255</TD></TR>
+  <TR>
+    <TH class=shaded>Hex</TH>
+    <TD class=shaded>00</TD>
+    <TD class=shaded>33</TD>
+    <TD class=shaded>66</TD>
+    <TD class=shaded>99</TD>
+    <TD class=shaded>CC</TD>
+    <TD class=shaded>FF</TD></TR></TBODY></TABLE>
+<P>Here is a table of the browser safe colors and their hex values. My thanks to 
+Bob Stein for this arrangement.</P>
+<TABLE border=1 cellPadding=2 cellSpacing=0 width="80%"><!-- Arrangement by Bob Stein, www.visibone.com -->
+  <TBODY>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ffffff; COLOR: black">FFF<BR>&nbsp;FFF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cccccc; COLOR: black">CCC<BR>&nbsp;CCC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #999999; COLOR: black">999<BR>&nbsp;999</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #666666; COLOR: white">666<BR>&nbsp;666</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #333333; COLOR: white">333<BR>&nbsp;333</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #000000; COLOR: white">000<BR>&nbsp;000</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ffcc00; COLOR: black">FFC<BR>&nbsp;C00</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff9900; COLOR: black">FF9<BR>&nbsp;900</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff6600; COLOR: black">FF6<BR>&nbsp;600</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff3300; COLOR: white">FF3<BR>&nbsp;300</TD>
+    <TD colSpan=6></TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #99cc00; COLOR: black">99C<BR>&nbsp;C00</TD>
+    <TD colSpan=4></TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc9900; COLOR: black">CC9<BR>&nbsp;900</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ffcc33; COLOR: black">FFC<BR>&nbsp;C33</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ffcc66; COLOR: black">FFC<BR>&nbsp;C66</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff9966; COLOR: black">FF9<BR>&nbsp;966</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff6633; COLOR: black">FF6<BR>&nbsp;633</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc3300; COLOR: white">CC3<BR>&nbsp;300</TD>
+    <TD colSpan=4></TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc0033; COLOR: white">CC0<BR>&nbsp;033</TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ccff00; COLOR: black">CCF<BR>&nbsp;F00</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ccff33; COLOR: black">CCF<BR>&nbsp;F33</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #333300; COLOR: white">333<BR>&nbsp;300</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #666600; COLOR: white">666<BR>&nbsp;600</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #999900; COLOR: black">999<BR>&nbsp;900</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cccc00; COLOR: black">CCC<BR>&nbsp;C00</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ffff00; COLOR: black">FFF<BR>&nbsp;F00</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc9933; COLOR: black">CC9<BR>&nbsp;933</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc6633; COLOR: white">CC6<BR>&nbsp;633</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #330000; COLOR: white">330<BR>&nbsp;000</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #660000; COLOR: white">660<BR>&nbsp;000</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #990000; COLOR: white">990<BR>&nbsp;000</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc0000; COLOR: white">CC0<BR>&nbsp;000</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff0000; COLOR: white">FF0<BR>&nbsp;000</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff3366; COLOR: white">FF3<BR>&nbsp;366</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff0033; COLOR: white">FF0<BR>&nbsp;033</TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #99ff00; COLOR: black">99F<BR>&nbsp;F00</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ccff66; COLOR: black">CCF<BR>&nbsp;F66</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #99cc33; COLOR: black">99C<BR>&nbsp;C33</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #666633; COLOR: white">666<BR>&nbsp;633</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #999933; COLOR: black">999<BR>&nbsp;933</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cccc33; COLOR: black">CCC<BR>&nbsp;C33</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ffff33; COLOR: black">FFF<BR>&nbsp;F33</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #996600; COLOR: white">996<BR>&nbsp;600</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #993300; COLOR: white">993<BR>&nbsp;300</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #663333; COLOR: white">663<BR>&nbsp;333</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #993333; COLOR: white">993<BR>&nbsp;333</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc3333; COLOR: white">CC3<BR>&nbsp;333</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff3333; COLOR: white">FF3<BR>&nbsp;333</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc3366; COLOR: white">CC3<BR>&nbsp;366</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff6699; COLOR: black">FF6<BR>&nbsp;699</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff0066; COLOR: white">FF0<BR>&nbsp;066</TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #66ff00; COLOR: black">66F<BR>&nbsp;F00</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #99ff66; COLOR: black">99F<BR>&nbsp;F66</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #66cc33; COLOR: black">66C<BR>&nbsp;C33</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #669900; COLOR: white">669<BR>&nbsp;900</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #999966; COLOR: black">999<BR>&nbsp;966</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cccc66; COLOR: black">CCC<BR>&nbsp;C66</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ffff66; COLOR: black">FFF<BR>&nbsp;F66</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #996633; COLOR: white">996<BR>&nbsp;633</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #663300; COLOR: white">663<BR>&nbsp;300</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #996666; COLOR: white">996<BR>&nbsp;666</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc6666; COLOR: black">CC6<BR>&nbsp;666</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff6666; COLOR: black">FF6<BR>&nbsp;666</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #990033; COLOR: white">990<BR>&nbsp;033</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc3399; COLOR: white">CC3<BR>&nbsp;399</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff66cc; COLOR: black">FF6<BR>&nbsp;6CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff0099; COLOR: white">FF0<BR>&nbsp;099</TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #33ff00; COLOR: black">33F<BR>&nbsp;F00</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #66ff33; COLOR: black">66F<BR>&nbsp;F33</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #339900; COLOR: white">339<BR>&nbsp;900</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #66cc00; COLOR: black">66C<BR>&nbsp;C00</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #99ff33; COLOR: black">99F<BR>&nbsp;F33</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cccc99; COLOR: black">CCC<BR>&nbsp;C99</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ffff99; COLOR: black">FFF<BR>&nbsp;F99</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc9966; COLOR: black">CC9<BR>&nbsp;966</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc6600; COLOR: white">CC6<BR>&nbsp;600</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc9999; COLOR: black">CC9<BR>&nbsp;999</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff9999; COLOR: black">FF9<BR>&nbsp;999</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff3399; COLOR: white">FF3<BR>&nbsp;399</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc0066; COLOR: white">CC0<BR>&nbsp;066</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #990066; COLOR: white">990<BR>&nbsp;066</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff33cc; COLOR: black">FF3<BR>&nbsp;3CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff00cc; COLOR: white">FF0<BR>&nbsp;0CC</TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #00cc00; COLOR: white">00C<BR>&nbsp;C00</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #33cc00; COLOR: black">33C<BR>&nbsp;C00</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #336600; COLOR: white">336<BR>&nbsp;600</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #669933; COLOR: white">669<BR>&nbsp;933</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #99cc66; COLOR: black">99C<BR>&nbsp;C66</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ccff99; COLOR: black">CCF<BR>&nbsp;F99</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ffffcc; COLOR: black">FFF<BR>&nbsp;FCC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ffcc99; COLOR: black">FFC<BR>&nbsp;C99</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff9933; COLOR: black">FF9<BR>&nbsp;933</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ffcccc; COLOR: black">FFC<BR>&nbsp;CCC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff99cc; COLOR: black">FF9<BR>&nbsp;9CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc6699; COLOR: black">CC6<BR>&nbsp;699</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #993366; COLOR: white">993<BR>&nbsp;366</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #660033; COLOR: white">660<BR>&nbsp;033</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc0099; COLOR: white">CC0<BR>&nbsp;099</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #330033; COLOR: white">330<BR>&nbsp;033</TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #33cc33; COLOR: black">33C<BR>&nbsp;C33</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #66cc66; COLOR: black">66C<BR>&nbsp;C66</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #00ff00; COLOR: black">00F<BR>&nbsp;F00</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #33ff33; COLOR: black">33F<BR>&nbsp;F33</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #66ff66; COLOR: black">66F<BR>&nbsp;F66</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #99ff99; COLOR: black">99F<BR>&nbsp;F99</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ccffcc; COLOR: black">CCF<BR>&nbsp;FCC</TD>
+    <TD colSpan=3></TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc99cc; COLOR: black">CC9<BR>&nbsp;9CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #996699; COLOR: white">996<BR>&nbsp;699</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #993399; COLOR: white">993<BR>&nbsp;399</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #990099; COLOR: white">990<BR>&nbsp;099</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #663366; COLOR: white">663<BR>&nbsp;366</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #660066; COLOR: white">660<BR>&nbsp;066</TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #006600; COLOR: white">006<BR>&nbsp;600</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #336633; COLOR: white">336<BR>&nbsp;633</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #009900; COLOR: white">009<BR>&nbsp;900</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #339933; COLOR: white">339<BR>&nbsp;933</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #669966; COLOR: black">669<BR>&nbsp;966</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #99cc99; COLOR: black">99C<BR>&nbsp;C99</TD>
+    <TD colSpan=3></TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ffccff; COLOR: black">FFC<BR>&nbsp;CFF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff99ff; COLOR: black">FF9<BR>&nbsp;9FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff66ff; COLOR: black">FF6<BR>&nbsp;6FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff33ff; COLOR: black">FF3<BR>&nbsp;3FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ff00ff; COLOR: white">FF0<BR>&nbsp;0FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc66cc; COLOR: black">CC6<BR>&nbsp;6CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc33cc; COLOR: white">CC3<BR>&nbsp;3CC</TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #003300; COLOR: white">003<BR>&nbsp;300</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #00cc33; COLOR: white">00C<BR>&nbsp;C33</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #006633; COLOR: white">006<BR>&nbsp;633</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #339966; COLOR: white">339<BR>&nbsp;966</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #66cc99; COLOR: black">66C<BR>&nbsp;C99</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #99ffcc; COLOR: black">99F<BR>&nbsp;FCC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ccffff; COLOR: black">CCF<BR>&nbsp;FFF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #3399ff; COLOR: black">339<BR>&nbsp;9FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #99ccff; COLOR: black">99C<BR>&nbsp;CFF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #ccccff; COLOR: black">CCC<BR>&nbsp;CFF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc99ff; COLOR: black">CC9<BR>&nbsp;9FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #9966cc; COLOR: black">996<BR>&nbsp;6CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #663399; COLOR: white">663<BR>&nbsp;399</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #330066; COLOR: white">330<BR>&nbsp;066</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #9900cc; COLOR: white">990<BR>&nbsp;0CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc00cc; COLOR: white">CC0<BR>&nbsp;0CC</TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #00ff33; COLOR: black">00F<BR>&nbsp;F33</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #33ff66; COLOR: black">33F<BR>&nbsp;F66</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #009933; COLOR: white">009<BR>&nbsp;933</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #00cc66; COLOR: black">00C<BR>&nbsp;C66</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #33ff99; COLOR: black">33F<BR>&nbsp;F99</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #99ffff; COLOR: black">99F<BR>&nbsp;FFF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #99cccc; COLOR: black">99C<BR>&nbsp;CCC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #0066cc; COLOR: white">006<BR>&nbsp;6CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #6699cc; COLOR: black">669<BR>&nbsp;9CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #9999ff; COLOR: black">999<BR>&nbsp;9FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #9999cc; COLOR: black">999<BR>&nbsp;9CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #9933ff; COLOR: white">993<BR>&nbsp;3FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #6600cc; COLOR: white">660<BR>&nbsp;0CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #660099; COLOR: white">660<BR>&nbsp;099</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc33ff; COLOR: white">CC3<BR>&nbsp;3FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc00ff; COLOR: white">CC0<BR>&nbsp;0FF</TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #00ff66; COLOR: black">00F<BR>&nbsp;F66</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #66ff99; COLOR: black">66F<BR>&nbsp;F99</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #33cc66; COLOR: black">33C<BR>&nbsp;C66</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #009966; COLOR: white">009<BR>&nbsp;966</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #66ffff; COLOR: black">66F<BR>&nbsp;FFF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #66cccc; COLOR: black">66C<BR>&nbsp;CCC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #669999; COLOR: black">669<BR>&nbsp;999</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #003366; COLOR: white">003<BR>&nbsp;366</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #336699; COLOR: white">336<BR>&nbsp;699</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #6666ff; COLOR: white">666<BR>&nbsp;6FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #6666cc; COLOR: white">666<BR>&nbsp;6CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #666699; COLOR: white">666<BR>&nbsp;699</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #330099; COLOR: white">330<BR>&nbsp;099</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #9933cc; COLOR: white">993<BR>&nbsp;3CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #cc66ff; COLOR: black">CC6<BR>&nbsp;6FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #9900ff; COLOR: white">990<BR>&nbsp;0FF</TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #00ff99; COLOR: black">00F<BR>&nbsp;F99</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #66ffcc; COLOR: black">66F<BR>&nbsp;FCC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #33cc99; COLOR: black">33C<BR>&nbsp;C99</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #33ffff; COLOR: black">33F<BR>&nbsp;FFF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #33cccc; COLOR: black">33C<BR>&nbsp;CCC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #339999; COLOR: white">339<BR>&nbsp;999</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #336666; COLOR: white">336<BR>&nbsp;666</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #006699; COLOR: white">006<BR>&nbsp;699</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #003399; COLOR: white">003<BR>&nbsp;399</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #3333ff; COLOR: white">333<BR>&nbsp;3FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #3333cc; COLOR: white">333<BR>&nbsp;3CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #333399; COLOR: white">333<BR>&nbsp;399</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #333366; COLOR: white">333<BR>&nbsp;366</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #6633cc; COLOR: white">663<BR>&nbsp;3CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #9966ff; COLOR: black">996<BR>&nbsp;6FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #6600ff; COLOR: white">660<BR>&nbsp;0FF</TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #00ffcc; COLOR: black">00F<BR>&nbsp;FCC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #33ffcc; COLOR: black">33F<BR>&nbsp;FCC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #00ffff; COLOR: black">00F<BR>&nbsp;FFF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #00cccc; COLOR: black">00C<BR>&nbsp;CCC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #009999; COLOR: white">009<BR>&nbsp;999</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #006666; COLOR: white">006<BR>&nbsp;666</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #003333; COLOR: white">003<BR>&nbsp;333</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #3399cc; COLOR: black">339<BR>&nbsp;9CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #3366cc; COLOR: white">336<BR>&nbsp;6CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #0000ff; COLOR: white">000<BR>&nbsp;0FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #0000cc; COLOR: white">000<BR>&nbsp;0CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #000099; COLOR: white">000<BR>&nbsp;099</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #000066; COLOR: white">000<BR>&nbsp;066</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #000033; COLOR: white">000<BR>&nbsp;033</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #6633ff; COLOR: white">663<BR>&nbsp;3FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #3300ff; COLOR: white">330<BR>&nbsp;0FF</TD></TR>
+  <TR>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #00cc99; COLOR: black">00C<BR>&nbsp;C99</TD>
+    <TD colSpan=4></TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #0099cc; COLOR: white">009<BR>&nbsp;9CC</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #33ccff; COLOR: black">33C<BR>&nbsp;CFF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #66ccff; COLOR: black">66C<BR>&nbsp;CFF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #6699ff; COLOR: black">669<BR>&nbsp;9FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #3366ff; COLOR: white">336<BR>&nbsp;6FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #0033cc; COLOR: white">003<BR>&nbsp;3CC</TD>
+    <TD colSpan=4></TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #3300cc; COLOR: white">330<BR>&nbsp;0CC</TD></TR>
+  <TR>
+    <TD colSpan=6></TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #00ccff; COLOR: black">00C<BR>&nbsp;CFF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #0099ff; COLOR: white">009<BR>&nbsp;9FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #0066ff; COLOR: white">006<BR>&nbsp;6FF</TD>
+    <TD noWrap 
+    style="BACKGROUND-COLOR: #0033ff; COLOR: white">003<BR>&nbsp;3FF</TD>
+    <TD colSpan=6></TD></TR></TBODY></TABLE>
+<P><A href="http://www.visibone.com/swatches/">Color swatches</A> for the 
+browser safe palette are available free for many popular graphics packages, from 
+<A href="http://www.visibone.com/">http://www.visibone.com/</A>.</P>
+<H2>What about browsers that don't support CSS?</H2>
+<P>Older browsers, that is to say before Netscape 4.0 and Internet Explorer 4.0, 
+either don't support CSS at all or do so inconsistently. For these browsers you 
+can still control the style by using HTML itself.</P>
+<H3>Setting the color and background</H3>
+<P>You can set the color using the BODY tag. The following example sets the 
+background color to white and the text color to black:</P><PRE>&lt;body bgcolor="white" text="black"&gt;
+</PRE>
+<P>The BODY element should be placed before the visible content of the Web page, 
+e.g. before the first heading. You can also control the color of hypertext 
+links. There are three attributes for this:</P>
+<UL>
+  <LI><STRONG>link</STRONG> for unvisited links 
+  <LI><STRONG>vlink</STRONG> for visited links 
+  <LI><STRONG>alink</STRONG> for the color used when you click the link </LI></UL>
+<P>Here is an example that sets all three:</P><PRE>&lt;body bgcolor="white" text="black"
+  link="navy" vlink="maroon" alink="red"&gt;
+</PRE>
+<P>You can also get the browser to tile the page background with an image using 
+the background attribute to specify the Web address for the image, e.g.</P><PRE>&lt;body bgcolor="white" background="texture.jpeg" text="black"
+  link="navy" vlink="maroon" alink="red"&gt;
+</PRE>
+<P>It is a good idea to specify a background color using the bgcolor attribute 
+in case the browser is unable to render the image. You should check that the 
+colors you have chosen don't cause legibility problems. As an extreme case 
+consider the following:</P><PRE>&lt;body bgcolor="black"&gt;
+</PRE>
+<P>Most browsers will render text in black by default. The end result is that 
+the page will be shown with black text on a black background! Lots of people 
+suffer from one form of color blindness or another, for example olive green may 
+appear brown to some people.</P>
+<P>A separate problem appears when you try to print the Web page. Many browsers 
+will ignore the background color, but will obey the text color. Setting the text 
+to white will often result in a blank page when printed, so the following is not 
+recommended:</P><PRE>&lt;body bgcolor="black" text="white"&gt;
+</PRE>
+<P>You can also use the bgcolor attribute on table cells, e.g.</P><PRE>&lt;table border="0" cellpadding="5"&gt;
+ &lt;tr&gt;
+  &lt;td bgcolor="yellow"&gt;colored table cell&lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;
+</PRE>
+<P>Tables can be used for a variety of layout effects and have been widely 
+exploited for this. In the future this role is likely to be supplanted by style 
+sheets, which make it practical to achieve precise layout with less effort.</P>
+<H3>Setting the font, its size and color</H3>
+<P>The FONT tag can be used to select the font, to set its size and the color. 
+This example just sets the color:</P><PRE>This sentence has a &lt;font color="yellow"&gt;word&lt;/font&gt; in yellow.
+</PRE>
+<P>The <EM>face</EM> attribute is used to set the font. It takes a list of fonts 
+in preference order, e.g.</P><PRE>&lt;font face="Garamond, Times New Roman"&gt;some text ...&lt;/font&gt;
+</PRE>
+<P>The <EM>size</EM> attribute can be used to select the font size as a number 
+from 1 to 6. If you place a - or + sign before the number it is interpreted as a 
+relative value. Use size="+1" when you want to use the next larger font size and 
+size="-1" when you want to use the next smaller font size, e.g.</P><PRE>&lt;font size="+1" color="maroon"
+  face="Garamond, Times New Roman"&gt;some text ...&lt;/font&gt;
+</PRE>
+<P>There are a couple of things you should avoid: Don't choose color 
+combinations that make text hard to read for people who are color blind. Don't 
+use font to make regular text into headings, which should always be marked up 
+using the h1 to h6 tags as appropriate to the importance of the heading.</P>
+<H2>Getting Further Information</H2>
+<P>For further information on CSS and tools that support it, you should look at 
+the <A href="http://www.w3.org/Style/CSS/">W3C home page for CSS</A>. This 
+includes pointers to books on HTML and CSS, for example, "<A 
+href="http://www.w3.org/People/Raggett#htmlbook">Raggett on HTML 4</A>", 
+published 1998 by Addison Wesley.<!-- See also <em>"<a href=
+"http://www.wrox.com/Consumer/Store/Details.asp?ISBN=
+1861003439">Beginning XHTML</a>"</em>, published 2000 by Wrox
+Press.--> 
+For a more detailed explanation of CSS, <A 
+href="http://www.awl.com/css">"Cascading Style Sheets"</A> by Håkon Wium Lie and 
+Bert Bos, pub. 1999 by Addison Wesley, which provides an in-depth look at CSS as 
+seen by the architects of CSS themselves.</P>
+<P>I plan to extend this guide with additional pages explaining CSS positioning, 
+printing and aural style sheets.</P>
+<P>Best of luck and get writing!</P>
+<P class=policyfooter><SMALL><A 
+href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright" 
+rel=Copyright>Copyright</A> © 1994-2003 <A href="http://www.w3.org/"><ACRONYM 
+title="World Wide Web Consortium">W3C</ACRONYM></A><SUP>®</SUP> (<A 
+href="http://www.lcs.mit.edu/"><ACRONYM 
+title="Massachusetts Institute of Technology">MIT</ACRONYM></A>, <A 
+href="http://www.ercim.org/"><ACRONYM 
+title="European Research Consortium for Informatics and Mathematics">ERCIM</ACRONYM></A>, 
+<A href="http://www.keio.ac.jp/">Keio</A>), All Rights Reserved. W3C <A 
+href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</A>, 
+<A 
+href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</A>, 
+<A href="http://www.w3.org/Consortium/Legal/copyright-documents" 
+rel=Copyright>document use</A> and <A 
+href="http://www.w3.org/Consortium/Legal/copyright-software" 
+rel=Copyright>software licensing</A> rules apply. Your interactions with this 
+site are in accordance with our <A 
+href="http://www.w3.org/Consortium/Legal/privacy-statement#Public">public</A> 
+and <A 
+href="http://www.w3.org/Consortium/Legal/privacy-statement#Members">Member</A> 
+privacy statements.</SMALL></P></BODY></HTML>

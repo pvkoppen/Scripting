@@ -1,0 +1,8 @@
+wmic nic get AdapterType, AutoSense, Availability, ConfigManagerErrorCode, ConfigManagerUserConfig, Description, DeviceID, ErrorCleared, ErrorDescription, Index, InstallDate, Installed, LastErrorCode, MACAddress, Manufacturer, MaxNumberControlled, MaxSpeed, Name, NetConnectionID, NetConnectionStatus, NetworkAddresses, PermanentAddress, PNPDeviceID, PowerManagementCapabilities, PowerManagementSupported, ProductName, ServiceName, Speed, Status, StatusInfo, TimeOfLastReset
+
+wmic nic get DeviceID,Description,Name,NetConnectionID,ProductName
+
+wmic nicconfig get ArpAlwaysSourceRoute, ArpUseEtherSNAP, DeadGWDetectEnabled, DefaultIPGateway, DefaultTOS, DefaultTTL, Description, DHCPEnabled, DHCPLeaseExpires, DHCPLeaseObtained, DHCPServer, DNSDomain, DNSDomainSuffixSearchOrder, DNSEnabledForWINSResolution, DNSHostName, DNSServerSearchOrder, DomainDNSRegistrationEnabled, ForwardBufferMemoryFullDNSRegistrationEnabled, GatewayCostMetric, IGMPLevel, Index, IPAddress, IPConnectionMetric, IPEnabled, IPFilterSecurityEnabled, IPPortSecurityEnabled, IPSecPermitIPProtocols, IPSecPermitTCPPorts, IPSecPermitUDPPorts, IPSubnet, IPUseZeroBroadcast, IPXAddress, IPXEnabled, IPXFrameType, IPXMediaType, IPXNetworkNumber, IPXVirtualNetNumber, KeepAliveInterval, KeepAliveTime, MACAddress, MTU, NumForwardPackets, PMTUBHDetectEnabled, PMTUDiscoveryEnabled, ServiceName, SettingID, TcpipNetbiosOptions, TcpMaxConnectRetransmissions, TcpMaxDataRetransmissions, TcpNumConnections, TcpUseRFC1122UrgentPointer, TcpWindowSize, WINSEnableLMHostsLookup, WINSHostLookupFile, WINSPrimaryServer, WINSScopeID, WINSSecondaryServer
+
+wmic nicconfig get Description,IPEnabled,SettingID
+'DHCPEnabled,DNSHostName,

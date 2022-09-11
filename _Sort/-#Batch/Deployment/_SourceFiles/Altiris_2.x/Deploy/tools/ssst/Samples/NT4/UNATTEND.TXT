@@ -1,0 +1,109 @@
+[NETWORK]
+	InstallAdapters=SelectedAdaptersSection
+	InstallInternetServer=InternetParamSection
+	InstallProtocols=ProtocolsSection
+	InstallServices=ServicesSection
+	JoinWorkgroup="Workgroup"
+	
+[SelectedAdaptersSection]
+	Q57NT4=OEMCardParameters, C:\i386\$OEM$\C\DRIVERS\NET\NC_NICS
+
+[MassStorageDrivers]
+	"IDE CD-ROM (ATAPI 1.2)/PCI IDE Controller"=RETAIL
+	"Compaq Integrated Smart Array 42xx Controllers"=OEM
+	"Compaq 32-Bit SCSI-2 Controllers"=OEM
+	"Compaq Drive Array"=OEM
+	"Compaq Service Manager"=OEM
+	"Compaq Ultra 160m PCI SCSI Controller (NT 4.0)"=OEM
+	"Compaq Smart Array 53xx Controller"=OEM
+	"Compaq CMD 0649 Ultra DMA IDE Controller"=OEM
+	"Integrated Ultra ATA-100 Dual Channel Controller (Windows NT)"=OEM
+	"Integrated Ultra ATA-100 IDE RAID Controller (Windows NT)"=OEM
+
+[Display]
+	AutoConfirm=1
+	BitsPerPel=8
+	ConfigureAtLogon=0
+	VRefresh=60
+	XResolution=640
+	YResolution=480
+
+[OEMBootFiles]
+	cpqarry2.sys
+	adpu160m.sys
+	MegaIDE.sys
+	cpqcissm.sys
+	cpq32fs2.sys
+	txtsetup.oem
+	cpqarray.sys
+	cpqsmgrk.sys
+	csa64xx.sys
+
+[OEM_ADS]
+	LOGO="COMPAQ.BMP"
+
+[InternetParamSection]
+	FTPRoot=C:\INETSRV\FTPROOT
+	GopherRoot=C:\INETSRV\GOPHERROOT
+	InstallADMIN=1
+	InstallDir=C:\Inetsrv
+	InstallFTP=1
+	InstallGOPHER=1
+	InstallHTMLA=1
+	InstallINETSTP=1
+	InstallW3SAMP=1
+	InstallWWW=1
+	WWWRoot=C:\INETSRV\WWWROOT
+
+[ProtocolsSection]
+	NBF="NetBUIParameters"
+	TC="TCPIPParameters"
+
+[TCPIPParameters]
+	DHCP="Yes"
+	DNSName=""
+	DNSServer=""
+
+[Unattended]
+	ConfirmHardware=no
+	ExtendOemPartition=1
+	FileSystem=ConvertNTFS
+	KeyboardLayout="US"
+	NoWaitAfterGUIMode=1
+	NoWaitAfterTextMode=1
+	NtUpgrade=no
+	OemPreinstall=Yes
+	OemSkipEula=Yes
+	OverWriteOemFilesOnUpgrade=No
+	TargetPath=WINNT
+	UnattendMode=FullUnattended
+	Win31Upgrade=no
+	OemPnPDriversPath=C:\i386\$OEM$
+
+[ServicesSection]
+	SNMP=SNMPParamSection
+
+[SNMPParamSection]
+	Accept_CommunityName=public
+	Send_Authentication=yes
+	Any_Host=yes
+	Service=Applications, Internet, EndToEnd
+
+[GuiUnattended]
+	OEMBlankAdminPassword=1
+	AdvServerType=SERVERNT
+	AutoLogon=Yes
+	AutoLogonCount=1
+	OEMSkipRegional=1
+	OemSkipWelcome=1
+	TimeZone="(GMT-06:00) Central Time (US & Canada)"
+
+[LicenseFilePrintData]
+	AutoMode=PERSERVER
+	AutoUsers=5
+
+[UserData]
+	ComputerName="DL320G2"
+	FullName="DL320G2"
+	OrgName="HP"
+	ProductId="XXX-XXXXXXX"

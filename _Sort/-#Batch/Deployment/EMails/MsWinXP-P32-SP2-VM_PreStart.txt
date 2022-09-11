@@ -1,0 +1,18 @@
+Hello Administrator(s),
+----------------------------------------------------------------
+
+Altiris has just been signaled to (re)build a server with:
+- OS           = Windows XP Pro 32 SP2
+- Hardware     = VMWare Virtual Hardware
+- Specific Task= (Unknown at this point)
+- ...
+
+For the rebuild to work correctly please check the following:
+- All Server names that this Server is known under have been renamed/moved or deleted.
+- ...
+
+----------------------------------------------------------------
+Altiris Automated Build Process.
+
+This is a generated email message, do not reply to this message.
+

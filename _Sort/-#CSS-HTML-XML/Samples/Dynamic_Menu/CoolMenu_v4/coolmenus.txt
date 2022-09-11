@@ -1,0 +1,173 @@
+
+<html>
+<head>
+	<title>DHTMLCentral.com - CoolMenus - Dynamic HTML menu script</title>
+<meta name="KeyWords" content="CoolMenus, DHTML, HTML, Dynamic HTML, ASP, Cross-browser, Cross browser, Javascript, Free, CSS, Cascading Style Sheets, DOM, Crossbrowser, jScript, Scripts, VBscript">
+<meta name="Description" content="DHTML Coolmenus - the most advanced menu system that exists!">
+<link rel="STYLESHEET" type="text/css" href="/css/styles.css">
+</head>
+<body onload="winit(2,0,130,250,'winpage.x50-360',170,130,150,'winpage.x50-360',430)" background="/images/top_bg.gif" topmargin=0 marginheight=0>
+<script language="JavaScript1.2" src="/js/general.js"></script>
+<script language="JavaScript1.2" src="/js/wins2.js"></script>
+<script language="JavaScript1.2" src="/js/coolmenus4.js">
+/*****************************************************************************
+Copyright (c) 2001 Thomas Brattli (www.dhtmlcentral.com)
+This site uses the coolMenus. You can get it for your own site by
+going to http://www.dhtmlcentral.com/projects/coolmenus
+******************************************************************************/
+</script>
+<script language="JavaScript1.2" src="/js/menu2.js"></script>
+<script language="JavaScript1.2">
+
+
+var avail="190+((cmpage.x2-235)/7)";oM.menuPlacement=new Array(192,avail+"-11",avail+"*2-8",avail+"*3-12",avail+"*4-7",avail+"*5-9",avail+"*6+5")
+if(!(bw.ie5&&bw.mac)) oM.construct()
+
+</script>
+<img src="/images/fill.gif" width="400" height="3" alt="" border="0"><br>
+<table width="99%" border="0" cellspacing="0" cellpadding="1" align="center">
+<tr>
+	<td bgcolor="#336699">
+	<table width="100%" height="60" border="0" cellspacing="0" cellpadding="0" bgcolor="#CDDBEB">
+	<tr>	
+    <form name="frmdclogin" action="/projects/coolmenus/index.asp" method="post">
+		<td width="2%"><img src="/images/fill.gif" width="5" height="4" alt="" border="0"></td>
+    
+      <td nowrap>  
+        <INPUT type="hidden" name="Method_Type" value="login">
+        <strong>Login</strong><span class="clErrTxt"></span><br>
+        <input type="text" size="5" class="clInput" onfocus="this.select()" name="username" value="username">
+        <input value="password" onfocus="this.select()" type="password" size="4" class="clInput" name="password">
+        <script>if(bw.ie){document.frmdclogin.username.style.width=72; document.frmdclogin.password.style.width=72}</script>
+        <a href="#" onclick="v1=document.forms[0].username.value; v2=document.forms[0].password.value; if(v1!='username' && v1!='' && v2!='password' && v2!='') document.forms[0].submit(); return false"><img src="/images/go.gif" width="22" height="19" alt="" border="0" align="absmiddle"></a>
+		    <br><span class="clMode"><INPUT type="checkbox" name="SavePassWord" value="true" CHECKED>Save Password</span>
+        - <a href="JavaScript:openWindow('/forums/pop_pword.asp')" class="clMode">Forgot Pass?</a>
+      </td>
+      <td nowrap><strong>Not a member?</strong><br><span class="clMode"><a href="/forums/policy.asp">Become a DC<br>member now!</a></span></td>
+    
+		  <td width="2%"><img src="/images/fill.gif" width="2" height="4" alt="" border="0"></td>
+    </form>
+    </tr>
+	</table>
+	</td>
+<td align="right" width="468"><!-- FASTCLICK.COM v1.2 for dhtmlcentral.com -->
+<script language="Javascript"><!-- 
+if(!bw.ns6&&!bw.mac&&!bw.ns4){var a=b=c=d=e=h=i=j=l=n=p=s=t=u=v=w=x=y=z=dc='';
+var id=o=k=f=0;  var jar=new Date(); var f=jar.getSeconds() * jar.getMinutes();
+dc=document;  n=navigator;  v=parseFloat(n.appVersion);  e=escape(dc.referrer);
+dc.cookie='mc=y'; j=(n.javaEnabled()? 'Y':'N'); c=(dc.cookie.length>0?'Y':'N');
+if(v>=4){x=screen; } if(n.appName.indexOf('Mic')>=0) {o=1; } if(v>=4){ id=6194;
+if(o==1){s=x.colorDepth}w=x.width;h=x.height;}x='|';p=w+x+h+x+s+'||||'+j+x+c+x;
+u='ht'+'tp://media.fastclick.net/w'; c=' alt="Click"></a>'; x='/get.media?t=n';
+l=' width=468 height=60 border=0 ';t=l+'marginheight=0 marginwidth=';b='&sid=';
+i=u+x+b+id+'&m=1&f=a&v=1.2&c='+f+'&j='+p+'&r='+e;d='ameborder=0 scrolling=no>';
+u = '<a  hr'+'ef="'+u+'/cli'+'ck.here?sid='+id+'&m=1&c='+f+'"  target="_blank">';
+dc.write('<ifr'+'ame src="'+i+'&d=f"'+t+'0 hspace=0 vspace=0 fr'+d);if(o!=1){
+dc.write(u+'<i'+'mg sr'+'c="'+i+'&d=n"'+l+c);}dc.write('</iframe>');}else{
+document.write('<a href="/dhtmlcentral/?m=40"><img src="/images/banner.gif" border=0 width=468 height=60></a>')
+} 
+// --></script><!-- FASTCLICK.COM v1.2 for dhtmlcentral.com --></td>
+</tr>
+</table>
+<img src="/images/fill.gif" width="400" height="3" alt="" border="0"><br>	
+<div id="divLogo"><a href="/index.asp"><img src="/images/logo.gif" width="165" height="54" hspace="0" alt="" border="0"></a></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+  <td align="left" colspan="7" valign="top" height="14"></td>
+  <td align="right" valign="top" height="14">
+    
+  </td>
+</tr>
+</table><img src="/images/fill.gif" width="175" height="63" alt="" border="0"><br>
+<br><div id="divWin0" class="clWin">
+<div class="clLogo"><img src="/images/win_logo.gif" width="18" height="14" alt="" border="0" align="top"></div>
+<div id="divWinHead0" class="clWinHead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CoolMenus</div>
+<div id="divWinButtons0" class="clWinButtons">
+<map name="map0">
+<area shape="rect" coords="26,2,35,11" href="#" onclick="oWin[0].close(); return false">
+<area shape="rect" coords="14,2,23,11" href="#" onClick="oWin[0].maximize(); return false">
+<area shape="rect" coords="2,2,11,11" href="#" onClick="oWin[0].minimize(); return false">
+</map>
+<img usemap="#map0" src="/images/buttons.gif" width="38" height="14" alt="" border="0">
+</div>
+<div id="divWinResize0" class="clWinResize">
+</div>
+<div id="divWindow0" class="clWindow">
+<div id="divWinText0" class="clText">
+<a href="/projects/news.asp?m=30">Latest news</a><br><a href="/projects/coolmenus/?m=31">Examples</a><br><a href="/projects/coolmenus/?m=32">Download</a><br><a href="/projects/coolmenus/?m=33">MenuMaker</a><br><a href="/projects/coolmenus/faq.asp?m=34">FAQ</a><br><a href="/projects/coolmenus/reference.asp?m=35">Reference/help</a><br><a href="/projects/coolmenus/reference.asp?m=37">CSS help</a><br><a href="/projects/coolmenus/browser.asp?m=36">Browser Compatibility</a><br><a href="/projects/coolmenus/?m=38">Known bugs</a><br><a href="/projects/coolmenus/add-ins.asp?m=46">Add-ins</a><br><a href="http://www.dhtmlcentral.com/forums/FORUM.asp?FORUM_ID=10&CAT_ID=3&Forum_Title=CoolMenus+4">CoolMenus forum</a><br><a href="/projects/coolmenus/tutorials.asp?m=59">Upgrading from version 3</a><br><a href="/projects/coolmenus/v3/?m=60">Coolmenus 3</a><br></div>
+</div>
+<div id="divWinUp0" class="clUp"><a href="#" onmouseover="winScroll=1; oWin[0].down();"  onmouseout="noScroll()"><img src="/images/arrow_up.gif" width="11" height="12" alt="" border="0"></a></div>
+<div id="divWinDown0" class="clDown"><a href="#" onmouseover="winScroll=1; oWin[0].up();" onmouseout="noScroll()"><img src="/images/arrow_down.gif" width="11" height="12" alt="" border="0"></a></div>
+
+</div>
+
+<div id="divWin1" class="clWin">
+<div class="clLogo"><img src="/images/win_logo.gif" width="18" height="14" alt="" border="0" align="top"></div>
+<div id="divWinHead1" class="clWinHead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects</div>
+<div id="divWinButtons1" class="clWinButtons">
+<map name="map1">
+<area shape="rect" coords="26,2,35,11" href="#" onclick="oWin[1].close(); return false">
+<area shape="rect" coords="14,2,23,11" href="#" onClick="oWin[1].maximize(); return false">
+<area shape="rect" coords="2,2,11,11" href="#" onClick="oWin[1].minimize(); return false">
+</map>
+<img usemap="#map1" src="/images/buttons.gif" width="38" height="14" alt="" border="0">
+</div>
+<div id="divWinResize1" class="clWinResize">
+</div>
+<div id="divWindow1" class="clWindow">
+<div id="divWinText1" class="clText">
+<a href="/projects/coolmenus/?m=10">CoolMenus</a><br><a href="/projects/lib/?m=11">DHTML Library</a><br><a href="/projects/guestbook/?m=12">DHTML Guestbook</a><br></div>
+</div>
+<div id="divWinUp1" class="clUp"><a href="#" onmouseover="winScroll=1; oWin[1].down();"  onmouseout="noScroll()"><img src="/images/arrow_up.gif" width="11" height="12" alt="" border="0"></a></div>
+<div id="divWinDown1" class="clDown"><a href="#" onmouseover="winScroll=1; oWin[1].up();" onmouseout="noScroll()"><img src="/images/arrow_down.gif" width="11" height="12" alt="" border="0"></a></div>
+
+</div>
+
+
+<table width="700" align="center" border="0"><tr><td valign="top" width="120">	
+		<img src="/images/fill.gif" width="120" height=1  alt="" border="0"><br>
+	</td>
+	<td valign="top" width="10">
+		<img src="/images/fill.gif" width="10" height=1  alt="" border="0">
+	</td>
+	<td width="600" valign="top">
+  
+		<h3 class="clHeading">Project: Coolmenus<br>
+		<span class="clLine"></span></h3>
+		<img src="/images/project_coolmenus.gif" align="left">
+    <p class="clWinText">
+			CoolMenus is an advanced menu script that I have been working on for years. If you have been browsing this site you have already used the script. The coolMenus have been downloaded over 100 000 times! <BR><BR><STRONG>Please note:</STRONG> The new version called 4.0_beta1 is still in BETA. I am sorry to do this, but I had to get out the updates to the site (new backend) so I had to add this new content. The content in this section is still under development and so is the script. Hopefully I'll have a version that I can call 4.0 period later this week. <BR><BR>See <A href="http://www.dhtmlcentral.com/projects/news.asp?m=30">latest news</A> for info about the next version and support - Updated 5th february.
+		</p>
+  
+		<h3 class="clHeading">Main features<br>
+		<span class="clLine"></span></h3>
+		
+    <p class="clWinText">
+			- Unlimited submenus<BR>- 99% Browser compatibility (the web can be so tricky that I can't say 100%)<BR>- Very customizable<BR>- Very fast (considering the browser compatibility)
+		</p>
+  
+		<h3 class="clHeading">News and changes in version 4<br>
+		<span class="clLine"></span></h3>
+		
+    <p class="clWinText">
+			- It now actually works cross-browser. <BR>- Arrow support added (will be automaticly shown if there are submenus)<BR>- The coolmenus.js file is now a lot lighter, from now on I'll call that the core file and I'll be adding new features to another js file. That means that you more then before can have only the parts of the code you need.<BR>- <STRONG>NOTE: </STRONG>This version does NOT support frames yet. I will be adding that soon, but probably a little different then in version 3 because the frame stuff was the main reason the script was unstable on some systems.<BR>- You no longer set the colors or style in the script. You make CSS classes in a stylesheet that you tell the script to use. You can set classes on levels or on individual menu items. This makes it easier to customize the look of the menu. It does however require some css knowledge.<BR><BR>Everyone that uses coolMenus 3 WITHOUT frames should upgrade as soon as possible. Though it does require some tweaking of the settings of the script to upgrade I assure you it's worth it. See the <A href="/projects/coolmenus/tutorials.asp?m=59">Upgrading to CoolMenus 4</A> tutorial for help.<BR>
+		</p>
+  
+		<h3 class="clHeading">Licensing<br>
+		<span class="clLine"></span></h3>
+		
+    <p class="clWinText">
+			The coolMenu script is made by and copyrighted to Thomas Brattli. <BR><BR>The coolMenu script is FREE to use as long you keep the copyright message in the source. If you wish to use the script in an enviroment that requires that you remove the copyright notice, or you just wish to remove it you'll have to <A href="mailto:licence@dhtmlcentral.com">contact</A> me to buy a licence for the script.
+		</p>
+  
+    <br>
+    <span class="clLine"></span>
+    <p class="clSmall" align="center">Copyright ©2000-2002 DHTMLCentral.com, Bratta Communications. All rights reserved.</p>
+
+	</td>
+</tr>
+</table>
+<script>if(oM && bw.mac && bw.ie5) oM.construct()</script>
+
+</body>
+</html>

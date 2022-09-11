@@ -1,0 +1,300 @@
+CLASS USER
+
+CATEGORY "Microsoft Office Publisher 2003"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher
+CATEGORY "Default File Locations"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher
+POLICY "Publication location"
+	PART "Publication location" EDITTEXT
+		VALUENAME Doc_Path
+		EXPANDABLETEXT
+	END PART
+	END POLICY
+POLICY "Picture location"
+	PART "Picture location" EDITTEXT
+		VALUENAME Picture_Path
+		EXPANDABLETEXT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Tools | Options..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Preferences
+CATEGORY "General"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Preferences
+POLICY "Show basic colors in color palette"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME ShowBasicColors
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Preview fonts in font list"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME PreviewFonts
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Use New Publication task pane at startup"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME UseStartupDlg
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Show rectangle for text in web graphic region"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME ShowOverlapGroups
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Edit"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Preferences
+POLICY "Drag-and-drop text editing"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME TextDragNDrop
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "When selecting, automatically select entire word"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AutoWordSel
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "When formatting, automatically format entire word"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME AutoWordFormat
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Use Chinese font sizes"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME PRCFontSizes
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Automatically hyphenate in new text frames"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DefAutoHyph
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "User Assistance"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Preferences
+POLICY "Use Quick Publication wizard for blank publications"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME UseQuickPub
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Update personal information when saving"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME SavePersonalInfo
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Show tippages"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME EnableFirstTimeHelp
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Use helpful mouse pointers"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME UseCoolCursor
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Print"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Preferences
+POLICY "Automatically display Print Troubleshooter"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME UsePrintTroubleShooter
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Save"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Preferences
+POLICY "Allow background saves"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME BackgroundSave
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Tools | Spelling"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Spelling
+POLICY "Do not flag spelling errors in words containing mixed digits"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME IgnoreMixedDigits
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Do not flag spelling errors in words that look like URLs or e-mail addresses"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME IgnoreURLs
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Use the user dictionary for spelling correction suggestions"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME SuggestFromUserDict
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Arabic spelling options"
+	PART "Arabic spelling options" DROPDOWNLIST
+		VALUENAME ArabicMode
+	ITEMLIST
+			NAME "None"		VALUE 0
+			NAME "Strict initial alef hamza"	VALUE 1
+			NAME "Strict final yaa"		VALUE 2
+			NAME "Both strict"		VALUE 3 DEFAULT
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Hebrew spelling options"
+	PART "Hebrew spelling options" DROPDOWNLIST
+		VALUENAME HebrewMode
+	ITEMLIST
+			NAME "Full Script"		VALUE 0 DEFAULT
+			NAME "Partial Script"		VALUE 1
+			NAME "Mixed Script"		VALUE 2
+			NAME "Mixed Authorized Script"	VALUE 3
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Tools | Macro"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Security
+CATEGORY "Security..."
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Security
+POLICY "Security Level"
+	PART "Security Level" DROPDOWNLIST
+		VALUENAME Level
+	ITEMLIST
+			NAME "Very High"	VALUE NUMERIC 4
+			NAME "High"		VALUE NUMERIC 3	DEFAULT
+			NAME "Medium"	VALUE NUMERIC 2
+			NAME "Low"		VALUE NUMERIC 1
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Trust all installed add-ins and templates"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DontTrustInstalledFiles
+		VALUEON NUMERIC 1
+		VALUEOFF NUMERIC 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+CATEGORY "Format"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Preferences
+POLICY "Prompt user when reapplying a style"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME PromptToUpdateStyle
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Spelling"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Spelling
+POLICY "Check spelling as you type"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME "Background Spell Checking"
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Ignore words in UPPERCASE"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME "Ignore UpperCase"
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Show repeated words"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME "Show Repeated Words"
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+CATEGORY "Miscellaneous"
+KEYNAME Software\Policies\Microsoft\Office\11.0\Publisher\Preferences
+POLICY "Prevent web pages displayed in Publisher from accessing the Office object model"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME WCIDisableOM
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Default Publisher direction"
+	PART "Default Publisher direction" DROPDOWNLIST
+		VALUENAME DefaultRTL
+	ITEMLIST
+			NAME "left to right"	VALUE NUMERIC 2 DEFAULT
+			NAME "right to left"	VALUE NUMERIC 1
+	END ITEMLIST
+		NOSORT
+	END PART
+	END POLICY
+POLICY "Activate Input Sequence Checker"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME SeqCheck
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Use type and replace"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME TypeReplace
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Add double quotes in Hebrew alphabet numbering"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME DubQuoHebAlpNum
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+POLICY "Convert wizards to right-to-left layout"
+	PART "Check to enforce setting on; uncheck to enforce setting off" CHECKBOX
+		VALUENAME ConvertWizardsToRTL
+		VALUEON 1
+		VALUEOFF 0
+	END PART
+	END POLICY
+END CATEGORY
+END CATEGORY
+
+

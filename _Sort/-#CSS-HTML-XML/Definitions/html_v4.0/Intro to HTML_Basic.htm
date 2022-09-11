@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0044)http://www.w3.org/MarkUp/Guide/Overview.html -->
+<HTML><HEAD><TITLE>Dave Raggett's Introduction to HTML</TITLE>
+<META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+<STYLE type=text/css>BODY {
+	FONT-FAMILY: sans-serif; MARGIN-LEFT: 10%; MARGIN-RIGHT: 10%
+}
+H2 {
+	MARGIN-LEFT: -3%
+}
+H3 {
+	MARGIN-LEFT: -3%
+}
+H4 {
+	MARGIN-LEFT: -3%
+}
+H5 {
+	MARGIN-LEFT: -3%
+}
+H6 {
+	MARGIN-LEFT: -3%
+}
+PRE {
+	COLOR: green; FONT-FAMILY: "Courier New", monospace; FONT-WEIGHT: bold; WHITE-SPACE: pre
+}
+EM {
+	FONT-STYLE: italic; FONT-WEIGHT: bold
+}
+STRONG {
+	FONT-WEIGHT: bold; TEXT-TRANSFORM: uppercase
+}
+.navbar {
+	TEXT-ALIGN: center
+}
+</STYLE>
+
+<META content="MSHTML 5.00.3502.5390" name=GENERATOR></HEAD>
+<BODY background="Intro to HTML_Basic_bestanden/book.jpg" bgColor=white 
+text=black>
+<P class=navbar><A href="http://www.w3.org/"><IMG alt=W3C border=0 height=48 
+src="Intro to HTML_Basic_bestanden/w3c_home.gif" width=72></A><BR><A 
+href="http://www.w3.org/MarkUp/Guide/Advanced.html">Advanced HTML</A> | <A 
+href="http://www.w3.org/MarkUp/Guide/Style.html">Adding a touch of style</A></P>
+<H1><A href="http://www.w3.org/People/Raggett"><IMG align=middle 
+alt="Dave Raggett" border=0 src="Intro to HTML_Basic_bestanden/dsr.jpg"></A> 
+&nbsp;&nbsp;Getting started with HTML</H1>
+<P><EM><A href="http://www.w3.org/People/Raggett">Dave Raggett</A>, revised 13th 
+February 2002.</EM></P>
+<P>This is a short introduction to writing HTML. Many people still write HTML by 
+hand using tools such as NotePad on Windows, or SimpleText on the Mac. This 
+guide will get you up and running. Even if you don't intend to edit HTML 
+directly and instead plan to use an HTML editor such as Netscape Composer, or 
+W3C's Amaya, this guide will enable you to understand enough to make better use 
+of such tools and how to make your HTML documents accessible on a wide range of 
+browsers. Once you are comfortable with the basics of authoring HTML, you may 
+want to learn how to <A href="http://www.w3.org/MarkUp/Guide/Style.html">add a 
+touch of style</A> using CSS, and to go on to try out features covered in my 
+page on <A href="http://www.w3.org/MarkUp/Guide/Advanced.html">advanced 
+HTML</A></P>
+<P>A convenient way to automatically fix markup errors is to use the <A 
+href="http://www.w3.org/People/Raggett/tidy/">HTML Tidy</A> utility. This also 
+tidies the markup making it easier to read and easier to edit. I recommend you 
+regularly run Tidy over any markup you are editing. Tidy is very effective at 
+cleaning up markup created by authoring tools with sloppy habits.</P>
+<P><I>p.s.</I> a good way to learn is to look at how other people have coded 
+their html pages. To do this, click on the "View" menu and then on "Source". Try 
+it with this page to see how I have applied the ideas I explain below. You will 
+find yourself developing a critical eye as many pages look rather a mess under 
+the hood!</P>
+<P>This page will teach you how to:</P>
+<UL>
+  <LI>start with a title 
+  <LI>add headings and paragraphs 
+  <LI>add emphasis to your text 
+  <LI>add images 
+  <LI>add links to other pages 
+  <LI>use various kinds of lists </LI></UL>
+<P>If you are looking for something else, try the <A 
+href="http://www.w3.org/MarkUp/Guide/Advanced.html">advanced HTML</A> page.</P>
+<H2>Start with a title</H2>
+<P>Every HTML document needs a title. Here is what you need to type:</P><PRE>&lt;title&gt;My first HTML document&lt;/title&gt;</PRE>
+<P>Change the text from "My first HTML document" to suit your own needs. The 
+title text is preceded by the start tag &lt;title&gt; and ends with the matching 
+end tag &lt;/title&gt;. The title should be placed at the beginning of your 
+document.</P>
+<P>To try this out, type the above into a text editor and save the file as 
+"test.html", then view the file in a web browser. If the file extension is 
+".html" or ".htm" then the browser will recognize it as HTML. Most browsers show 
+the title in the window caption bar.</P>
+<H2>Add headings and paragraphs</H2>
+<P>If you have used Microsoft Word, you will be familiar with the built in 
+styles for headings of differing importance. In HTML there are six levels of 
+headings. H1 is the most important, H2 is slightly less important, and so on 
+down to H6, the least important.</P>
+<P>Here is how to add an important heading:</P><PRE>&lt;h1&gt;An important heading&lt;/h1&gt;</PRE>
+<P>and here is a slightly less important heading:</P><PRE>&lt;h2&gt;A slightly less important heading&lt;/h2&gt;</PRE>
+<P>Each paragraph you write should start with a &lt;p&gt; tag. The &lt;/p&gt; is 
+optional, unlike the end tags for elements like headings. For example:</P><PRE>&lt;p&gt;This is the first paragraph.&lt;/p&gt;
+
+&lt;p&gt;This is the second paragraph.&lt;/p&gt;</PRE>
+<H2>Adding a bit of emphasis</H2>
+<P>You can emphasize one or more words with the &lt;em&gt; tag, for 
+instance:</P><PRE>This is a really &lt;em&gt;interesting&lt;/em&gt; topic!</PRE>
+<H2>Adding interest to your pages with images</H2>
+<P>Images can be used to make your Web pages distinctive and greatly help to get 
+your message across. The simple way to add an image is using the &lt;img&gt; 
+tag. Let's assume you have an image file called "peter.jpg" in the same 
+folder/directory as your HTML file. It is 200 pixels wide by 150 pixels 
+high.</P><PRE>&lt;img src="peter.jpg" width="200" height="150"&gt;</PRE>
+<P>The src attribute names the image file. The width and height aren't strictly 
+necessary but help to speed the display of your Web page. Something is still 
+missing! People who can't see the image need a description they can read in its 
+absence. You can add a short description as follows:</P><PRE>&lt;img src="peter.jpg" width="200" height="150"
+alt="My friend Peter"&gt;</PRE>
+<P>The alt attribute is used to give the short description, in this case "My 
+friend Peter". For complex images, you may need to also give a longer 
+description. Assuming this has been written in the file "peter.html", you can 
+add one as follows using the longdesc attribute:</P><PRE>&lt;img src="peter.jpg" width="200" height="150"
+alt="My friend Peter" longdesc="peter.html"&gt;</PRE>
+<P>You can create images in a number of ways, for instance with a digital 
+camera, by scanning an image in, or creating one with a painting or drawing 
+program. Most browsers understand GIF and JPEG image formats, newer browsers 
+also understand the PNG image format. To avoid long delays while the image is 
+downloaded over the network, you should avoid using large image files.</P>
+<P>Generally speaking, JPEG is best for photographs and other smoothly varying 
+images, while GIF and PNG are good for graphics art involving flat areas of 
+color, lines and text. All three formats support options for progressive 
+rendering where a crude version of the image is sent first and progressively 
+refined.</P>
+<H2>Adding links to other pages</H2>
+<P>What makes the Web so effective is the ability to define links from one page 
+to another, and to follow links at the click of a button. A single click can 
+take you right across the world!</P>
+<P>Links are defined with the &lt;a&gt; tag. Lets define a link to the page 
+defined in the file "peter.html":</P><PRE>This a link to &lt;a href="peter.html"&gt;Peter's page&lt;/a&gt;.</PRE>
+<P>The text between the &lt;a&gt; and the &lt;/a&gt; is used as the caption for 
+the link. It is common for the caption to be in blue underlined text.</P>
+<P>To link to a page on another Web site you need to give the full Web address 
+(commonly called a URL), for instance to link to www.w3.org you need to 
+write:</P><PRE>This is a link to &lt;a href="http://www.w3.org/"&gt;W3C&lt;/a&gt;.</PRE>
+<P>You can turn an image into a hypertext link, for example, the following 
+allows you to click on the company logo to get to the home page:</P><PRE>&lt;a href="/"&gt;&lt;img src="logo.gif" alt="home page"&gt;&lt;/a&gt;</PRE>
+<H2>Three kinds of lists</H2>
+<P>HTML supports three kinds of lists. The first kind is a bulletted list, often 
+called an <EM>unordered list</EM>. It uses the &lt;ul&gt; and &lt;li&gt; tags, 
+for instance:</P><PRE>&lt;ul&gt;
+  &lt;li&gt;the first list item&lt;/li&gt;
+
+  &lt;li&gt;the second list item&lt;/li&gt;
+
+  &lt;li&gt;the third list item&lt;/li&gt;
+&lt;/ul&gt;</PRE>
+<P>Note that you always need to end the list with the &lt;/ul&gt; end tag, but 
+that the &lt;/li&gt; is optional and can be left off. The second kind of list is 
+a numbered list, often called an <EM>ordered list</EM>. It uses the &lt;ol&gt; 
+and &lt;li&gt; tags. For instance:</P><PRE>&lt;ol&gt;
+  &lt;li&gt;the first list item&lt;/li&gt;
+
+  &lt;li&gt;the second list item&lt;/li&gt;
+
+  &lt;li&gt;the third list item&lt;/li&gt;
+&lt;/ol&gt;</PRE>
+<P>Like bulletted lists, you always need to end the list with the &lt;/ol&gt; 
+end tag, but the &lt;/li&gt; end tag is optional and can be left off.</P>
+<P>The third and final kind of list is the definition list. This allows you to 
+list terms and their definitions. This kind of list starts with a &lt;dl&gt; tag 
+and ends with &lt;/dl&gt; Each term starts with a &lt;dt&gt; tag and each 
+definition starts with a &lt;dd&gt;. For instance:</P><PRE>&lt;dl&gt;
+  &lt;dt&gt;the first term&lt;/dt&gt;
+  &lt;dd&gt;its definition&lt;/dd&gt;
+
+  &lt;dt&gt;the second term&lt;/dt&gt;
+  &lt;dd&gt;its definition&lt;/dd&gt;
+
+  &lt;dt&gt;the third term&lt;/dt&gt;
+  &lt;dd&gt;its definition&lt;/dd&gt;
+&lt;/dl&gt;</PRE>
+<P>The end tags &lt;/dt&gt; and &lt;/dd&gt; are optional and can be left off. 
+Note that lists can be nested, one within another. For instance:</P><PRE>&lt;ol&gt;
+  &lt;li&gt;the first list item&lt;/li&gt;
+
+  &lt;li&gt;
+    the second list item
+    &lt;ul&gt;
+      &lt;li&gt;first nested item&lt;/li&gt;
+      &lt;li&gt;second nested item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;the third list item&lt;/li&gt;
+&lt;/ol&gt;</PRE>
+<P>You can also make use of paragraphs and headings etc. for longer list 
+items.</P>
+<H2>Getting Further Information</H2>
+<P>If you are ready to learn more, I have prepared some accompanying material on 
+<A href="http://www.w3.org/MarkUp/Guide/Advanced.html">advanced HTML</A> and <A 
+href="http://www.w3.org/MarkUp/Guide/Style.html">adding a touch of 
+style</A>.</P>
+<P>W3C's Recommendation for <A href="http://www.w3.org/TR/REC-html40">HTML 
+4.0</A> is the authorative specification for HTML. However, it is a technical 
+specification. For a less technical source of information you may want to 
+purchase one of the many books on HTML, for example "<A 
+href="http://www.w3.org/People/Raggett#htmlbook">Raggett on HTML 4</A>", 
+published 1998 by Addison Wesley.<!-- See also <em>"<a
+href="http://www.wrox.com/Consumer/Store/Details.asp?ISBN=1861003439">Beginning
+XHTML</a>"</em>, published 2000 by Wrox Press, which introduces W3C's
+reformulation of HTML as an application of XML.--> 
+<A href="http://www.w3.org/TR/xhtml1/">XHTML 1.0</A> is now a W3C 
+Recommendation.</P>
+<P>Best of luck and get writing!</P>
+<P><I><A href="http://www.w3.org/People/Raggett">Dave Raggett</A> &lt;<A 
+href="mailto:dsr@w3.org">dsr@w3.org</A>&gt;</I></P>
+<P class=policyfooter><SMALL><A 
+href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright" 
+rel=Copyright>Copyright</A> © 1994-2003 <A href="http://www.w3.org/"><ACRONYM 
+title="World Wide Web Consortium">W3C</ACRONYM></A><SUP>®</SUP> (<A 
+href="http://www.lcs.mit.edu/"><ACRONYM 
+title="Massachusetts Institute of Technology">MIT</ACRONYM></A>, <A 
+href="http://www.ercim.org/"><ACRONYM 
+title="European Research Consortium for Informatics and Mathematics">ERCIM</ACRONYM></A>, 
+<A href="http://www.keio.ac.jp/">Keio</A>), All Rights Reserved. W3C <A 
+href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</A>, 
+<A 
+href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</A>, 
+<A href="http://www.w3.org/Consortium/Legal/copyright-documents" 
+rel=Copyright>document use</A> and <A 
+href="http://www.w3.org/Consortium/Legal/copyright-software" 
+rel=Copyright>software licensing</A> rules apply. Your interactions with this 
+site are in accordance with our <A 
+href="http://www.w3.org/Consortium/Legal/privacy-statement#Public">public</A> 
+and <A 
+href="http://www.w3.org/Consortium/Legal/privacy-statement#Members">Member</A> 
+privacy statements.</SMALL></P></BODY></HTML>

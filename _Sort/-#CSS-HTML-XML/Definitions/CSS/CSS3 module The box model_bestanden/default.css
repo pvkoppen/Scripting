@@ -1,0 +1,488 @@
+
+@media Print    
+{
+.dlink {
+	DISPLAY: none
+}
+DIV.navbar {
+	DISPLAY: none
+}
+HTML {
+	MARGIN: 0px
+}
+BODY {
+	FONT-FAMILY: serif; MARGIN: 0px 0px 0px 8.5em
+}
+TH {
+	FONT-FAMILY: inherit
+}
+TD {
+	FONT-FAMILY: inherit
+}
+A {
+	
+}
+DIV.example:unknown {
+	FONT-FAMILY: serif! important
+}
+PRE.example:unknown {
+	FONT-FAMILY: serif! important
+}
+A:link {
+	TEXT-DECORATION: none! important
+}
+A:visited {
+	TEXT-DECORATION: none! important
+}
+A:link:unknown {
+	
+}
+A:visited:unknown {
+	
+}
+    }
+HTML BODY {
+	MARGIN-LEFT: 8.5em
+}
+BODY {
+	TEXT-ALIGN: justify
+}
+H2 {
+	MARGIN-TOP: 2em; TEXT-ALIGN: left
+}
+H3 {
+	MARGIN-TOP: 2em; TEXT-ALIGN: left
+}
+H5 {
+	MARGIN-TOP: 2em; TEXT-ALIGN: left
+}
+H6 {
+	MARGIN-TOP: 2em; TEXT-ALIGN: left
+}
+H1 {
+	FONT-FAMILY: inherit
+}
+H2 {
+	FONT-FAMILY: inherit
+}
+H3 {
+	FONT-FAMILY: inherit
+}
+H4 {
+	FONT-FAMILY: inherit
+}
+H5 {
+	FONT-FAMILY: inherit
+}
+H6 {
+	FONT-FAMILY: inherit
+}
+DIV.figure {
+	page-break-inside: avoid
+}
+PRE {
+	page-break-inside: avoid
+}
+TABLE.propdef {
+	page-break-inside: avoid
+}
+DIV.example {
+	page-break-inside: avoid
+}
+DT {
+	
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0.8em; TEXT-INDENT: 0px
+}
+P.issue {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0.8em; TEXT-INDENT: 0px
+}
+P {
+	MARGIN-TOP: 0px; TEXT-INDENT: 2em
+}
+DD P {
+	MARGIN-TOP: 0px
+}
+H2 {
+	MARGIN-TOP: 0px
+}
+PRE {
+	FONT-SIZE: 90%; MARGIN-BOTTOM: 1em; MARGIN-TOP: 1em; TEXT-ALIGN: left; TEXT-INDENT: 0px
+}
+IMG {
+	BORDER-BOTTOM-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: white
+}
+.toc {
+	TEXT-ALIGN: left; TEXT-INDENT: 0px
+}
+A.noxref:link {
+	COLOR: black
+}
+A.noxref:visited {
+	COLOR: black
+}
+DIV.example A:link {
+	COLOR: #600
+}
+DIV.example A:visited {
+	COLOR: #600
+}
+DIV.deprecated-html-example A:link {
+	COLOR: red
+}
+DIV.deprecated-html-example A:visited {
+	COLOR: red
+}
+.note A:link {
+	COLOR: green
+}
+.note A:visited {
+	COLOR: green
+}
+
+@media All    
+{
+BODY {
+	LINE-HEIGHT: 1.3
+}
+A:link {
+	TEXT-DECORATION: underline
+}
+A:visited {
+	TEXT-DECORATION: underline
+}
+A:link:unknown {
+	content: counter(dummy, disc)
+}
+A:visited:unknown {
+	content: counter(dummy, disc)
+}
+A.logo:link {
+	BORDER-BOTTOM-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+A.logo:visited {
+	BORDER-BOTTOM-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DT {
+	MARGIN-LEFT: 0px
+}
+DD {
+	MARGIN-LEFT: 2em
+}
+DL {
+	MARGIN-LEFT: 0px
+}
+UL {
+	MARGIN-LEFT: 0px
+}
+OL {
+	MARGIN-LEFT: 0px
+}
+LI {
+	MARGIN-LEFT: 2em
+}
+    }
+UL.indexlist {
+	MARGIN-LEFT: 0px
+}
+UL.indexlist LI {
+	LIST-STYLE: none; MARGIN-LEFT: 0px
+}
+UL.indexlist LI LI {
+	MARGIN-LEFT: 1em
+}
+DIV.example:unknown {
+	BACKGROUND: #600; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; COLOR: #fff8dd; FONT: bold small/1em sans-serif; LEFT: -2.5em; PADDING-BOTTOM: 0.1em; PADDING-LEFT: 0.1em; PADDING-RIGHT: 0.1em; PADDING-TOP: 0.1em; POSITION: absolute; TEXT-ALIGN: center; TOP: -0.6em; WIDTH: 7.5em; content: "Example " counter(exampleno, upper-roman); counter-increment: exampleno
+}
+PRE.example:unknown {
+	BACKGROUND: #600; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; COLOR: #fff8dd; FONT: bold small/1em sans-serif; LEFT: -2.5em; PADDING-BOTTOM: 0.1em; PADDING-LEFT: 0.1em; PADDING-RIGHT: 0.1em; PADDING-TOP: 0.1em; POSITION: absolute; TEXT-ALIGN: center; TOP: -0.6em; WIDTH: 7.5em; content: "Example " counter(exampleno, upper-roman); counter-increment: exampleno
+}
+DIV.example {
+	BACKGROUND: #fff8dd; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; MARGIN: 1em 0px; PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; POSITION: relative
+}
+DIV.illegal-example {
+	BACKGROUND: #fff8dd; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; MARGIN: 1em 0px; PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; POSITION: relative
+}
+DIV.html {
+	BACKGROUND: #fff8dd; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; MARGIN: 1em 0px; PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; POSITION: relative
+}
+DIV.illegal-html {
+	BACKGROUND: #fff8dd; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; MARGIN: 1em 0px; PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; POSITION: relative
+}
+DIV.xml {
+	BACKGROUND: #fff8dd; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; MARGIN: 1em 0px; PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; POSITION: relative
+}
+DIV.illegal-xml {
+	BACKGROUND: #fff8dd; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; MARGIN: 1em 0px; PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; POSITION: relative
+}
+PRE.example {
+	BACKGROUND: #fff8dd; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; MARGIN: 1em 0px; PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; POSITION: relative
+}
+PRE.illegal-example {
+	BACKGROUND: #fff8dd; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; MARGIN: 1em 0px; PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; POSITION: relative
+}
+PRE.html {
+	BACKGROUND: #fff8dd; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; MARGIN: 1em 0px; PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; POSITION: relative
+}
+PRE.illegal-html {
+	BACKGROUND: #fff8dd; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; MARGIN: 1em 0px; PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; POSITION: relative
+}
+PRE.xml {
+	BACKGROUND: #fff8dd; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; MARGIN: 1em 0px; PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; POSITION: relative
+}
+PRE.illegal-xml {
+	BACKGROUND: #fff8dd; BORDER-BOTTOM: #999 thin solid; BORDER-LEFT: #999 thin solid; BORDER-RIGHT: #999 thin solid; BORDER-TOP: #999 thin solid; MARGIN: 1em 0px; PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; POSITION: relative
+}
+DIV.example {
+	COLOR: #600
+}
+PRE.example {
+	COLOR: #600
+}
+PRE.illegal-example {
+	COLOR: red
+}
+DIV.illegal-example {
+	COLOR: red
+}
+DIV.illegal-example P {
+	COLOR: black
+}
+DIV.html {
+	COLOR: #600
+}
+PRE.html {
+	COLOR: #600
+}
+PRE.illegal-html {
+	COLOR: red
+}
+DIV.illegal-html {
+	COLOR: red
+}
+DIV.illegal-html P {
+	COLOR: black
+}
+PRE.deprecated-html {
+	COLOR: red
+}
+DIV.deprecated-html {
+	COLOR: red
+}
+DIV.deprecated-html P {
+	COLOR: black
+}
+DIV.xml {
+	COLOR: #600
+}
+PRE.xml {
+	COLOR: #600
+}
+PRE.illegal-xml {
+	COLOR: red
+}
+DIV.illegal-xml {
+	COLOR: red
+}
+DIV.illegal-xml P {
+	COLOR: black
+}
+.css {
+	COLOR: #7f0000
+}
+CODE.html {
+	COLOR: #600
+}
+CODE.xml {
+	COLOR: #600
+}
+.property {
+	
+}
+.descriptor {
+	
+}
+.issue {
+	COLOR: #e50000
+}
+.type {
+	FONT-STYLE: italic
+}
+DFN {
+	FONT-SIZE: 1em
+}
+.note {
+	COLOR: green
+}
+P.note {
+	
+}
+DIV.note {
+	
+}
+P.note:unknown {
+	content: "\2023" " "
+}
+SPAN.note:unknown {
+	content: "\2023" " "
+}
+P:unknown {
+	content: "\2023" " "
+}
+.normref {
+	COLOR: red
+}
+.informref {
+	COLOR: green
+}
+UL.toc {
+	FONT-WEIGHT: bold; MARGIN-LEFT: 0px; MARGIN-TOP: 0.5em
+}
+UL.toc LI {
+	FONT-WEIGHT: bold; MARGIN-LEFT: 0px; MARGIN-TOP: 0.5em
+}
+UL.toc LI LI {
+	FONT-WEIGHT: normal; MARGIN-LEFT: 2em; MARGIN-TOP: 0px
+}
+UL.toc LI LI LI {
+	DISPLAY: inline; FONT-STYLE: italic; MARGIN-LEFT: 0px
+}
+UL.index {
+	LIST-STYLE: none
+}
+S {
+	COLOR: red; TEXT-DECORATION: line-through
+}
+DEL {
+	COLOR: red; TEXT-DECORATION: line-through
+}
+U {
+	BACKGROUND: #bfa; TEXT-DECORATION: underline
+}
+INS {
+	BACKGROUND: #bfa; TEXT-DECORATION: underline
+}
+DIV.figure {
+	BACKGROUND: white; MARGIN: 2.5em 0px; POSITION: relative; TEXT-ALIGN: left
+}
+P.caption {
+	FONT-SIZE: 90%; FONT-STYLE: italic; TEXT-ALIGN: right
+}
+CAPTION {
+	FONT-SIZE: 90%; FONT-STYLE: italic; TEXT-ALIGN: right
+}
+P.caption {
+	BOTTOM: 0px; LEFT: -9em; MARGIN: 0px; POSITION: absolute; TEXT-INDENT: 0px; WIDTH: 8em
+}
+CAPTION {
+	MARGIN: 1em
+}
+DD {
+	MARGIN-LEFT: 2em
+}
+DD DIV.figure {
+	MARGIN-LEFT: -2em
+}
+UL.index {
+	TEXT-ALIGN: left
+}
+DT {
+	TEXT-ALIGN: left
+}
+SUP {
+	FONT-SIZE: 80%; VERTICAL-ALIGN: super
+}
+BLOCKQUOTE {
+	MARGIN: 0.5em 4em 0.5em 2em; TEXT-ALIGN: left; TEXT-INDENT: 0px
+}
+.eqno {
+	FLOAT: right; FONT-WEIGHT: bold; MARGIN: 0px -4em 0px 0px; TEXT-ALIGN: right; WIDTH: 3em
+}
+TABLE.equiv-table {
+	MARGIN: 0.5em 0px; border-spacing: 0
+}
+TABLE.equiv-table TH {
+	PADDING-BOTTOM: 0.3em; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; PADDING-TOP: 0.3em
+}
+TABLE.equiv-table TD {
+	PADDING-BOTTOM: 0.3em; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; PADDING-TOP: 0.3em
+}
+TABLE.equiv-table TH {
+	TEXT-ALIGN: left
+}
+TABLE.equiv-table TH:unknown {
+	TEXT-ALIGN: right
+}
+TABLE.equiv-table TD {
+	BORDER-BOTTOM: #666 thin solid
+}
+TABLE.equiv-table TH {
+	BORDER-BOTTOM: #666 thin solid
+}
+TABLE.equiv-table {
+	BORDER-BOTTOM: medium none
+}
+TABLE.equiv-table {
+	empty-cells: show
+}
+TABLE.equiv-table CAPTION {
+	MARGIN: 0.5em 0px 0px
+}
+P.testlink {
+	FLOAT: left; FONT-WEIGHT: bold; MARGIN: 0px 0px 0px -3.6em; WIDTH: 3em
+}
+P.testlink A {
+	BACKGROUND: silver; BORDER-BOTTOM: silver thin outset; BORDER-LEFT: silver thin outset; BORDER-RIGHT: silver thin outset; BORDER-TOP: silver thin outset; COLOR: black; FONT-SIZE: smaller; PADDING-BOTTOM: 0.2em; PADDING-LEFT: 0.6em; PADDING-RIGHT: 0.6em; PADDING-TOP: 0.2em; TEXT-DECORATION: none; text-shadow: -1px -1px white
+}
+P.testlink A:active {
+	BORDER-BOTTOM-STYLE: inset; BORDER-LEFT-STYLE: inset; BORDER-RIGHT-STYLE: inset; BORDER-TOP-STYLE: inset
+}
+DL.bibliography {
+	TEXT-ALIGN: left
+}
+TABLE.proptable {
+	BORDER-COLLAPSE: collapse; FONT-SIZE: small; MARGIN: 1em 0px 1em -8.5em; TEXT-ALIGN: left; border-spacing: 0
+}
+TABLE.proptable TD {
+	BORDER-BOTTOM: red thin; BORDER-LEFT: red thin dotted; BORDER-RIGHT: red thin; BORDER-TOP: red thin solid
+}
+TABLE.proptable TH {
+	BORDER-BOTTOM: red thin; BORDER-LEFT: red thin dotted; BORDER-RIGHT: red thin; BORDER-TOP: red thin solid
+}
+TABLE.proptable TH:unknown {
+	BORDER-LEFT-STYLE: none
+}
+TABLE.proptable TD:unknown {
+	BORDER-LEFT-STYLE: none
+}
+TABLE.propdef {
+	BACKGROUND: #def; BORDER-COLLAPSE: collapse; MARGIN-BOTTOM: 1.2em; MARGIN-TOP: 1.2em; TABLE-LAYOUT: fixed; WIDTH: 100%; border-spacing: 0
+}
+TABLE.descdef {
+	BACKGROUND: #def; BORDER-COLLAPSE: collapse; MARGIN-BOTTOM: 1.2em; MARGIN-TOP: 1.2em; TABLE-LAYOUT: fixed; WIDTH: 100%; border-spacing: 0
+}
+TABLE.propdef TD {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; PADDING-TOP: 0px; TEXT-ALIGN: left; VERTICAL-ALIGN: baseline
+}
+TABLE.descdef TD {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0.3em; PADDING-RIGHT: 0.3em; PADDING-TOP: 0px; TEXT-ALIGN: left; VERTICAL-ALIGN: baseline
+}
+TABLE.propdef DFN {
+	FONT-STYLE: normal; FONT-WEIGHT: bold
+}
+TABLE.descdef DFN {
+	FONT-STYLE: normal; FONT-WEIGHT: bold
+}
+TABLE.propdef TD:unknown {
+	WIDTH: 8em
+}
+TABLE.descdef TD:unknown {
+	WIDTH: 8em
+}
+TABLE.propdef TR:unknown {
+	BACKGROUND: #005a9c; COLOR: white
+}
+TABLE.descdef TR:unknown {
+	BACKGROUND: #005a9c; COLOR: white
+}

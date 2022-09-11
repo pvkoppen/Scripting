@@ -1,0 +1,359 @@
+Known Issues:
+1. Failed: Allocate disk space (DONE)
+- No autoaction, just report
+  $DPMServerName="TOLSS02"
+  $pgAll = Get-ProtectionGroup -DPMServerName $DPMServerName
+  foreach ($pgIndex in $pgAll) do {
+    $dsAll = Get-Datasource -ProtectionGroup $pgIndex
+    $dsGrowRequired = $dsAll | ? {$_.ReplicaGrowRequired} 
+    $dsGrowRequired | Format-List ProtectableObjectLoadPath,ReplicaSize,ShadowCopyAreaSize,RequiredReplicaSize,RequiredShadowCopyAreaSize,ReplicaGrowRequired,ReplicaUsedSpace,ShadowCopyUsedSpace
+  }
+2. Failed: Datasource Inconsistent (DONE)
+- Reschedule Sync
+  $DPMServerName="TOLSS02"
+  $pg = Get-ProtectionGroup -DPMServerName $DPMServerName
+  foreach ($pgIndex in $pgAll) {
+    $dsAll = Get-Datasource -ProtectionGroup $pgIndex
+    $dsInvalid = $dsAll | ? {$_.Protected -and $_.State -eq "Invalid"} 
+    $dsInvalid | format-List ProtectionGroupName,MountPoints,Name,Protected,State,Activity,Alert
+    $dsInvalid | Start-DatasourceConsistencyCheck
+#    foreach ($dsIndex in $dsInvalid) {
+#      Start-DatasourceConsistencyCheck -DataSource $dsIndex -HeavyWeight
+#    }
+  }
+3. Failed: synchronization
+- Rerun sync
+	$pg = Get-ProtectionGroup -DPMServerName TOLSS02
+	$ds = Get-Datasource -protectionGroup $pg
+	??
+4. Failed: recovery point creation (shadow copy)
+- Rerun RecoveryPoint
+	$pg = Get-ProtectionGroup -DPMServerName TOLSS02
+	$ds = Get-Datasource -ProtectionGroup $pg
+	New-RecoveryPoint -DataSource $ds[index] -Disk -DiskRecoveryPointOption WithSynchronize
+
+Logic:
+  Write-Host "# Variables:" -foregroundcolor Yellow
+  $dtNow = Get-Date
+  $DPMServerName = "TOLSS02"
+  $minJobRunTime = 60
+  $minMargin = 5
+  Write-Host "# Get-ProtectionGroups:" -ForegroundColor Yellow
+  $pgAll = Get-ProtectionGroup -DPMServerName $DPMServerName
+  $pgAll
+  foreach ($pgIndex in $pgAll) {
+    Write-Host "  # Get-PolicySchedules:" -ForegroundColor Yellow
+    $psAll = Get-PolicySchedule -ProtectionGroup $pgIndex -ShortTerm
+    $psAll
+    foreach ($psIndex in $psAll) {
+      if ($($psIndex.JobType) -eq "FullReplicationForApplication") {
+        foreach ($dtIndex in $psIndex.TimesOfDay) {
+          # If a Policy Schedule is later today, check yesterday's instead.
+          if ($dtIndex -gt $dtNow) { $dtIndex = $($dtIndex.AddDays(-1)) }
+          if ($($dtIndex.AddMinutes($minJobRunTime)) -lt $dtNow) {
+            Write-Host "    # Get-PolicySchedules: $($psIndex.JobType) ($($dtIndex.AddDays(-1)))" -ForegroundColor Yellow
+            $dsAll = Get-Datasource -ProtectionGroup $pg
+            foreach ($dsIndex in $dsAll) {
+              foreach ($valueIndex in $dsIndex.NodeType.JunctionLessPath) {
+                if ($valueIndex.Type -eq "ApplicationComponent") {
+                  $ProtectionCompleted = $False
+                  $rpDisk = $dsIndex | Get-RecoveryPoint | Where-Object {$_.DataLocation -eq "Disk"}
+                  foreach ($rpIndex in $rpDisk) {
+                    if ($($rpIndex.RepresentedPointInTime.AddMinutes($minMargin)) -ge $dtIndex) {
+                     $ProtectionCompleted = $True
+                    } # Found a recent RecoveryPoint
+                  } # Walk thru RecoveryPoints
+                  if ($ProtectionCompleted) {
+                    Write-Host "      # '$dsIndex' is protected ($($rpIndex.RepresentedPointInTime))" -ForegroundColor Yellow
+                  } else {
+                    Write-Host "      # '$dsIndex' is NOT protected. (Schedule Protection)" -ForegroundColor Red
+                    # TODO
+                  }
+                } # It is an ApplicationComponent
+              } # Find out if DataSource is an ApplicationComponent
+            } # Check all the DataSources in the ProtectionGroup
+          } else {
+            Write-Host "    # Get-PolicySchedules: $($psIndex.JobType) ($dtIndex): Within RunTime..." -ForegroundColor Yellow
+          } # After JobRunTime
+        } # ForEach ScheduleTime
+      } elseif ($($psIndex.JobType) -eq "Replication") {
+        Write-Host "    # Get-PolicySchedules: $($psIndex.JobType)= Ignored" -ForegroundColor Yellow
+      } elseif ($($psIndex.JobType) -eq "ShadowCopy") {
+        foreach ($dtIndex in $psIndex.TimesOfDay) {
+          # If a Policy Schedule is later today, check yesterday's instead.
+          if ($dtIndex -gt $dtNow) { $dtIndex = $($dtIndex.AddDays(-1)) }
+          if ($($dtIndex.AddMinutes($minJobRunTime)) -lt $dtNow) {
+            Write-Host "    # Get-PolicySchedules: $($psIndex.JobType) ($dtIndex)" -ForegroundColor Yellow
+            $dsAll = Get-Datasource -ProtectionGroup $pg
+            foreach ($dsIndex in $dsAll) {
+              foreach ($valueIndex in $dsIndex.NodeType.JunctionLessPath) {
+                if ($valueIndex.Type -eq "Volume") {
+                  $ProtectionCompleted = $False
+                  $rpDisk = $dsIndex | Get-RecoveryPoint | Where-Object {$_.DataLocation -eq "Disk"}
+                  foreach ($rpIndex in $rpDisk) {
+                    if ($($rpIndex.RepresentedPointInTime.AddMinutes($minMargin)) -ge $dtIndex) {
+                     $ProtectionCompleted = $True
+                    } # Found a recent RecoveryPoint
+                  } # Walk thru RecoveryPoints
+                  if ($ProtectionCompleted) {
+                    Write-Host "      # '$dsIndex' is protected ($($rpIndex.RepresentedPointInTime))" -ForegroundColor Yellow
+                  } else {
+                    Write-Host "      # '$dsIndex' is NOT protected. (Schedule Protection)" -ForegroundColor Red
+                    # TODO
+                  }
+                } # It is a Volume
+              } # Find out if DataSource is a Volume
+            } # Check all the DataSources in the ProtectionGroup
+          } else {
+            Write-Host "    # Get-PolicySchedules: $($psIndex.JobType) ($dtIndex): Within RunTime..." -ForegroundColor Yellow
+          } # After JobRunTime
+        } # ForEach ScheduleTime
+      } else {
+        Write-Host "### Get-PolicySchedules: $($psIndex.JobType)= Unknown Type" -ForegroundColor Red
+      } # If $($psIndex.JobType)
+    } # ForEach $psIndex
+  } # ForEach $pgIndex
+  Write-Host "# The End." -foregroundcolor Yellow
+
+
+
+
+Code:
+if (!(Get-PSSnapin microsoft.dataprotectionmanager.powershell)){
+  write-host "Adding PS Snapin for DPM." -Fore Green
+  add-PSSnapin Microsoft.DataProtectionManager.PowerShell
+}else{
+  write-host "PS Snapin for DPM already loaded." -Fore Green
+}
+
+
+
+Library:
+----------------------------------------------------------------------------------------------------------------------------------------------
+NAME
+    Get-DatasourceDiskAllocation
+    
+SYNOPSIS
+    Retrieves the amount of disk space that is allocated to the protected data.
+    
+    
+SYNTAX
+    Get-DatasourceDiskAllocation [-Datasource] <Datasource> [-Async] [-Calculat
+    eSize] [-Tag <Object>] [<CommonParameters>]
+    
+    
+DETAILED DESCRIPTION
+    The Get-DatasourceDiskAllocation cmdlet retrieves the amount of disk space 
+    that is allocated to the protected data. 
+    
+    This cmdlet returns all the properties of the data source. Use the Get-Memb
+    er cmdlet to see the properties returned. Refer to PowerShell documentation
+     on how to use the Get-Member cmdlet.
+    
+
+PARAMETERS
+    -Datasource <Datasource>
+        A Windows file system share or volume, Microsoft SQL database, Microsof
+        t Exchange storage group, Microsoft SharePoint, Microsoft Virtual Machi
+        ne, Microsoft DPM database, or system state that is a member of a prote
+        ction group.
+        
+    -Async
+        Allows the user to indicate that the cmdlet should run asynchronously. 
+        This is useful with cmdlets that take a long time to complete. The cont
+        rol returns to the user immediately after the operation starts. The pro
+        gress of the operation is communicated to the user periodically. This i
+        s useful when building a GUI using cmdlets. It is not used when working
+         with the DPM Management Shell.
+        
+    -CalculateSize
+        Calculates the space allocated on a disk.
+        
+    -Tag <Object>
+        The Tag parameter helps distinguish the replies to each asynchronous ca
+        ll made by a cmdlet. This is useful when building a GUI using cmdlets. 
+        It is not used when working with the DPM Management Shell.
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: -Verbose, -Debug,
+        -ErrorAction, -ErrorVariable, and -OutVariable. For more information,
+        type, "get-help about_commonparameters".
+    
+    EXAMPLE 1
+    
+    $pg = Get-ProtectionGroup -DPMServerName "TestingServer"
+    $ds = Get-Datasource -ProtectionGroup $pg
+    Get-DatasourceDiskAllocation -Datasource $ds[1] -CalculateSize
+    
+    The command returns the amount of disk space allocated to the data source.
+    
+    
+    
+REMARKS
+    For more information, type: "get-help Get-DatasourceDiskAllocation -detaile
+    d".
+    For technical information, type: "get-help Get-DatasourceDiskAllocation -fu
+    ll".
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+NAME
+    New-RecoveryPoint
+    
+SYNOPSIS
+    Creates a new recovery point for the data source.
+    
+    
+SYNTAX
+    New-RecoveryPoint -Datasource <Datasource> -Disk [-BackupType <BackupType>]
+     [-JobStateChangedEventHandler <JobStateChangedEventHandler>] [<CommonParam
+    eters>]
+    
+    New-RecoveryPoint -Datasource <Datasource> -ProtectionType <ProtectionType>
+     -Tape <Media> [-JobStateChangedEventHandler <JobStateChangedEventHandler>]
+     [<CommonParameters>]
+    
+    New-RecoveryPoint -Datasource <Datasource> -Disk -DiskRecoveryPointOption <
+    CreateDiskRecoveryPointOption> [-JobStateChangedEventHandler <JobStateChang
+    edEventHandler>] [<CommonParameters>]
+    
+    
+DETAILED DESCRIPTION
+    The New-RecoveryPoint cmdlets creates a new recovery point for the data sou
+    rce. 
+    
+    The valid values for ProtectionType are ShortTerm and LongTerm.
+    
+
+PARAMETERS
+    -Datasource <Datasource>
+        A Windows file system share or volume, Microsoft SQL database, Microsof
+        t Exchange storage group, Microsoft SharePoint, Microsoft Virtual Machi
+        ne, Microsoft DPM database, or system state that is a member of a prote
+        ction group.
+        
+    -Disk
+        Indicates that the operation must be performed on a disk.
+        
+    -DiskRecoveryPointOption <CreateDiskRecoveryPointOption>
+        Indicates whether recovery point should be created while synchronizing 
+        or whether only synchronization should occur. The valid values are With
+        Synchronize, WithoutSynchronize and OnlySynchronize.
+        
+    -ProtectionType <ProtectionType>
+        Indicates the type of protection.
+        
+    -Tape <Media>
+        Indicates a tape object.
+        
+    -BackupType <BackupType>
+        Indicates the type of backup. The valid values are ExpressFull and Incr
+        emental.
+        
+    -JobStateChangedEventHandler <JobStateChangedEventHandler>
+        The JobStateChangedEventHandler is used along with the -Async parameter
+         so that the user can be informed of the status of the operation. This 
+        is useful when building a GUI using cmdlets. It is not used when workin
+        g with the DPM Management Shell.
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: -Verbose, -Debug,
+        -ErrorAction, -ErrorVariable, and -OutVariable. For more information,
+        type, "get-help about_commonparameters".
+    
+    EXAMPLE 1
+    
+    $pg = Get-ProtectionGroup -DPMServerName TestingServer
+    $ds = Get-Datasource -ProtectionGroup $pg
+    New-RecoveryPoint -Datasource $ds -Disk -BackupType expressfull
+    
+    This command runs an Expressfull backup and creates a recovery point.
+    
+    
+    
+    EXAMPLE 2
+    
+    $pg = Get-ProtectionGroup -DPMServerName TestingServer
+    $ds = Get-Datasource -ProtectionGroup $pg
+    New-RecoveryPoint -Datasource $ds -Disk -DiskRecoveryPointOption withsynchr
+    onize
+    
+    This command synchronizes and then creates a new recovery point for the dat
+    asource on disk.
+    
+    
+    
+    EXAMPLE 3
+    
+    $pg = Get-ProtectionGroup -DPMServerName TestingServer
+    $ds = Get-Datasource -ProtectionGroup $pg
+    New-RecoveryPoint -Datasource $ds -Tape -ProtectionType ShortTerm
+    
+    This command creates a new recovery point for the data source on a tape wit
+    h type set to short-term.
+    
+    
+    
+REMARKS
+    For more information, type: "get-help New-RecoveryPoint -detailed".
+    For technical information, type: "get-help New-RecoveryPoint -full".
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+NAME
+    Start-DatasourceConsistencyCheck
+    
+SYNOPSIS
+    Performs a consistency check on a data source.
+    
+    
+SYNTAX
+    Start-DatasourceConsistencyCheck [-Datasource] <Datasource> [-HeavyWeight] 
+    [-JobStateChangedEventHandler <JobStateChangedEventHandler>] [<CommonParame
+    ters>]
+    
+    
+DETAILED DESCRIPTION
+    The Start-ConsistencyCheck performs a consistency check on a data source. 
+    
+    By default, DPM performs a light-weight consistency check. Use the -HeavyWe
+    ight parameter to perform a heavy-weight consistency check.
+    
+
+PARAMETERS
+    -Datasource <Datasource>
+        A Windows file system share or volume, Microsoft SQL database, Microsof
+        t Exchange storage group, Microsoft SharePoint, Microsoft Virtual Machi
+        ne, Microsoft DPM database, or system state that is a member of a prote
+        ction group.
+        
+    -HeavyWeight
+        Indicates that a heavy weight validation must be performed. This proces
+        s checksums the contents of each file.
+        
+    -JobStateChangedEventHandler <JobStateChangedEventHandler>
+        The JobStateChangedEventHandler is used along with the -Async parameter
+         so that the user can be informed of the status of the operation. This 
+        is useful when building a GUI using cmdlets. It is not used when workin
+        g with the DPM Management Shell.
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: -Verbose, -Debug,
+        -ErrorAction, -ErrorVariable, and -OutVariable. For more information,
+        type, "get-help about_commonparameters".
+    
+    EXAMPLE 1
+    
+    $pg = Get-ProtectionGroup -DPMServerName "TestingServer"
+    $ds = Get-Datasource -ProtectionGroup $pg
+    Start-DatasourceConsistencyCheck -Datasource $ds
+    
+    This command performs a consistency check on the data source.
+    
+    
+    
+REMARKS
+    For more information, type: "get-help Start-DatasourceConsistencyCheck -det
+    ailed".
+    For technical information, type: "get-help Start-DatasourceConsistencyCheck
+     -full".
+
+----------------------------------------------------------------------------------------------------------------------------------------------

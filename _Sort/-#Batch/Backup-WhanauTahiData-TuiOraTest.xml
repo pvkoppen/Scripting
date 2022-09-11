@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WtFetch>
+  <DataWarehouse ConnectionString="Persist Security Info=false;Server=L-Datawarehouse;Initial Catalog=WTN_DW;Integrated Security=true;" />
+  <Connection orgname="Tui Ora" url="https://tuioratest.crm6.dynamics.com" orgkey="1" />
+  <EntityExtractList>
+    <Entity name="account" />
+    <Entity name="activitypointer" />
+    <Entity name="annotation" />
+    <Entity name="appointment" />
+    <Entity name="contact" />
+    <Entity name="fax" />
+    <Entity name="lead" />
+    <Entity name="letter" />
+    <Entity name="mag_activitycode" />
+    <Entity name="mag_agegroup" />
+    <Entity name="mag_analysiscode" />
+    <Entity name="mag_asm_whakaahua" />
+    <Entity name="mag_contractservice" />
+    <Entity name="mag_contractservicetype" />
+    <Entity name="mag_contracttype" />
+    <Entity name="mag_domain" />
+    <Entity name="mag_domain_analysiscode" />
+    <Entity name="mag_employmentstatus" />
+    <Entity name="mag_ethnicity" />
+    <Entity name="mag_externalcontacttype" />
+    <Entity name="mag_familygroup" />
+    <Entity name="mag_fundingcontract" />
+    <Entity name="mag_gatheringplace" />
+    <Entity name="mag_levelofeducation" />
+    <Entity name="mag_mag_familygroup_contact" />
+    <Entity name="mag_note" />
+    <Entity name="mag_organisationtype" />
+    <Entity name="mag_outcome" />
+    <Entity name="mag_outcome_analysiscode" />
+    <Entity name="mag_outcomestep" />
+    <Entity name="mag_outcomestep_analysiscode" />
+    <Entity name="mag_plan" />
+    <Entity name="mag_reasonforreferral" />
+    <Entity name="mag_referral" />
+    <Entity name="mag_referralcode" />
+    <Entity name="mag_tmocontact" />
+    <Entity name="mag_tribe" filename="mag_tribe-iwi" filter='&lt;condition attribute="mag_parenttribeid" operator="null" /&gt;&lt;condition attribute="statecode" operator="eq" value="0" /&gt;'/>
+    <Entity name="mag_tribe" filename="mag_tribe-hapu" filter='&lt;condition attribute="mag_parenttribeidname" operator="like" value="%%" /&gt;&lt;condition attribute="statecode" operator="eq" value="0" /&gt;'/>
+    <Entity name="phonecall" />
+    <Entity name="systemuser" />
+    <Entity name="task" />
+    <Entity name="tui_b4schoolchecknurse" />
+    <Entity name="tui_immunisationoutreach" />
+    <Entity name="tui_tamarikiora" />
+  </EntityExtractList>
+</WtFetch>

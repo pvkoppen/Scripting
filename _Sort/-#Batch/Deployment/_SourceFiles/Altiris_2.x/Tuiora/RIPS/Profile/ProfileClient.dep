@@ -1,0 +1,39 @@
+***   List of Dependencies not originally found in RIP   ***
+
+C:\WINDOWS\system32\RPCRT4.dll
+C:\WINDOWS\system32\ADVAPI32.dll
+C:\WINDOWS\system32\msvcrt.dll
+C:\WINDOWS\system32\ole32.dll
+C:\WINDOWS\system32\GDI32.dll
+C:\WINDOWS\system32\USER32.dll
+C:\WINDOWS\system32\ntdll.dll
+C:\WINDOWS\system32\KERNEL32.dll
+C:\WINDOWS\system32\UrlMon.dll
+C:\Program Files\Intrahealth\Profile\Bin\Vcldb40.bpl
+C:\Program Files\Intrahealth\Profile\Bin\IHRB40.bpl
+C:\Program Files\Intrahealth\Profile\Bin\IHProfBL.bpl
+C:\Program Files\Intrahealth\Profile\Bin\VclSmp40.bpl
+C:\WINDOWS\system32\netapi32.dll
+C:\Program Files\Intrahealth\Profile\Bin\vcljpg40.bpl
+C:\Program Files\Intrahealth\Profile\Bin\IHComp40.bpl
+C:\WINDOWS\system32\MSASN1.dll
+C:\WINDOWS\system32\CRYPT32.dll
+C:\WINDOWS\system32\wininet.dll
+C:\WINDOWS\system32\winmm.dll
+C:\Program Files\Intrahealth\Profile\Bin\Vclx40.bpl
+C:\WINDOWS\system32\winspool.drv
+C:\WINDOWS\system32\oledlg.dll
+C:\WINDOWS\system32\WS2HELP.dll
+C:\WINDOWS\system32\WS2_32.dll
+C:\WINDOWS\system32\wsock32.dll
+C:\WINDOWS\system32\SHELL32.dll
+C:\WINDOWS\system32\SHLWAPI.dll
+C:\WINDOWS\system32\comdlg32.dll
+C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_5.82.0.0_x-ww_8A69BA05\comctl32.dll
+C:\WINDOWS\system32\version.dll
+C:\WINDOWS\system32\mpr.dll
+C:\WINDOWS\system32\oleaut32.dll
+C:\Program Files\Intrahealth\Profile\Bin\Vcl40.bpl
+
+
+NOTE:  The resolve dependencies option has added these files manually to your RapidInstall package.  To avoid dependency issues completely, please build RIPs on a lightly configured machine.

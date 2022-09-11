@@ -1,0 +1,61 @@
+Usage: shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f]
+    [/m \\computer][/t xxx][/d [p:]xx:yy [/c "comment"]]
+
+    No args    Display help. This is the same as typing /?
+    /?         Display help. This is the same as not typing any options
+    /i         Display the graphical user interface (GUI).
+               This must be the first option
+    /l         Log off. This cannot be used with /m or /d option
+    /s         Shutdown the computer
+    /r         Shutdown and restart the computer
+    /a         Abort a system shutdown.
+               This can only be used during the time-out period
+    /p         Turn off the local computer with no time-out or warning.
+               This can only be used with /d option
+    /h         Hibernate the local computer.
+               This can only be used with the /f option
+    /e         Document the reason for an unexpected shutdown of a computer
+    /m \\computer Specify the target computer
+    /t xxx     Set time-out period before shutdown to xxx seconds.
+               The valid range is 0-600, with a default of 30
+    /c "comment" Comment on the reason for the restart or shutdown.
+               Maximum of 127 characters allowed
+    /f         Force running applications to close without forewarning users
+    /d [p:]xx:yy  Provide the reason for the restart or shutdown
+               p indicates that the restart or shutdown is planned
+               xx is the major reason number (positive integer less than 256)
+               yy is the minor reason number (positive integer less than 65536)
+
+Reasons on this computer:
+(E = Expected U = Unexpected P = planned, C = customer defined)
+Type	Major	Minor	Title
+
+ U  	0	0	Other (Unplanned)
+E   	0	0	Other (Unplanned)
+E P 	0	0	Other (Planned)
+ U  	0	5	Other Failure: System Unresponsive
+E   	1	1	Hardware: Maintenance (Unplanned)
+E P 	1	1	Hardware: Maintenance (Planned)
+E   	1	2	Hardware: Installation (Unplanned)
+E P 	1	2	Hardware: Installation (Planned)
+  P 	2	3	Operating System: Upgrade (Planned)
+E   	2	4	Operating System: Reconfiguration (Unplanned)
+E P 	2	4	Operating System: Reconfiguration (Planned)
+  P 	2	16	Operating System: Service pack (Planned)
+    	2	17	Operating System: Hot fix (Unplanned)
+  P 	2	17	Operating System: Hot fix (Planned)
+    	2	18	Operating System: Security fix (Unplanned)
+  P 	2	18	Operating System: Security fix (Planned)
+E   	4	1	Application: Maintenance (Unplanned)
+E P 	4	1	Application: Maintenance (Planned)
+E P 	4	2	Application: Installation (Planned)
+E   	4	5	Application: Unresponsive
+E   	4	6	Application: Unstable
+ U  	5	15	System Failure: Stop error
+E   	5	19	Security issue
+ U  	5	19	Security issue
+E P 	5	19	Security issue
+E   	5	20	Loss of network connectivity (Unplanned)
+ U  	6	11	Power Failure: Cord Unplugged
+ U  	6	12	Power Failure: Environment
+  P 	7	0	Legacy API shutdown

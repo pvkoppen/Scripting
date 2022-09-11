@@ -1,0 +1,102 @@
+A:visited {
+	COLOR: #c00
+}
+A:active {
+	COLOR: #c00
+}
+A:link {
+	COLOR: #c00
+}
+H1 A:visited {
+	COLOR: #000
+}
+H1 A:active {
+	COLOR: #000
+}
+H1 A:link {
+	COLOR: #000
+}
+H1 A:hover {
+	COLOR: #c00; TEXT-DECORATION: none
+}
+#header {
+	BORDER-BOTTOM: #c00 4px solid; BACKGROUND-COLOR: #fda
+}
+#content {
+	BORDER-BOTTOM: #c00 4px solid
+}
+.altcomment {
+	BACKGROUND-COLOR: #ffffff
+}
+.CalendarOtherMonth {
+	
+}
+#masthead {
+	BACKGROUND: #fda; COLOR: #333
+}
+#masthead A:link {
+	COLOR: #c00
+}
+#masthead A:visited {
+	COLOR: #c00
+}
+#masthead A:active {
+	COLOR: #c00
+}
+#masthead A:hover {
+	COLOR: #c00
+}
+.Tag1 A:link {
+	COLOR: #700
+}
+.Tag1 A:visited {
+	COLOR: #700
+}
+.Tag1 A:active {
+	COLOR: #700
+}
+.Tag2 A:link {
+	COLOR: #800
+}
+.Tag2 A:visited {
+	COLOR: #800
+}
+.Tag2 A:active {
+	COLOR: #800
+}
+.Tag3 A:link {
+	COLOR: #900
+}
+.Tag3 A:visited {
+	COLOR: #900
+}
+.Tag3 A:active {
+	COLOR: #900
+}
+.Tag4 A:link {
+	COLOR: #a00
+}
+.Tag4 A:visited {
+	COLOR: #a00
+}
+.Tag4 A:active {
+	COLOR: #a00
+}
+.Tag5 A:link {
+	COLOR: #b00
+}
+.Tag5 A:visited {
+	COLOR: #b00
+}
+.Tag5 A:active {
+	COLOR: #b00
+}
+.Tag6 A:link {
+	COLOR: #c00
+}
+.Tag6 A:visited {
+	COLOR: #c00
+}
+.Tag6 A:active {
+	COLOR: #c00
+}

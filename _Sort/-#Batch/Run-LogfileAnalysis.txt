@@ -1,0 +1,4 @@
+\\toles01\c$\Windows\system32\logfiles\
+\\tolms01\c$\Windows\system32\logfiles\
+\\tolws01\c$\Windows\system32\logfiles\
+\\tolws02\c$\Windows\system32\logfiles\

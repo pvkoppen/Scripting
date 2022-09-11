@@ -1,0 +1,25 @@
+  'Archive
+  'Dim objIMSysInfo, objIMNet, objIMUser, objIMGroup
+  'Dim strIMDomain, strIMUser, strIMContext
+  'Set objIMNet   = CreateObject("WScript.Network")
+  'WScript.echo "user=" & objIMNet.ADSPath
+  'strIMDomain    = objIMNet.UserDomain
+  'strIMContext   = objIMNet.UserDomain
+  'strIMUser      = objIMNet.UserName
+  'WScript.Echo "WinNT://" & strIMDomain & "/" & strIMUser & ",user"
+  'Set objIMUser  = GetObject("WinNT://" & strIMDomain & "/" & strIMUser & ",user")
+  'WScript.Echo "LDAP://" & strIMUser & strIMContext & strIMDomain
+  'Set objIMNet   = Nothing
+
+' Bind to Active Directory
+'Dim strContainer, strDNSDomain, strMember
+'Dim objRootDSE, objGroup
+'Dim arrMemberOf
+'strContainer   = "cn=Administrators,cn=Builtin, "
+'Set objRootDSE = GetObject("LDAP://RootDSE")
+'strDNSDomain   = objRootDSE.Get("DefaultNamingContext")
+'  Get the Builtin Administrators group
+'Set objGroup = GetObject ("LDAP://"& strContainer & strDNSDomain)
+'objGroup.getInfo
+'DEBUG:wscript.echo "strDNSDomain= " & strDNSDomain
+'Set objRootDSE   = Nothing

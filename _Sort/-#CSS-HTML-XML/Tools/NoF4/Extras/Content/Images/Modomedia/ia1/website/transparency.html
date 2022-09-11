@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE>IA1 - By Modomedia</TITLE>
+</HEAD>
+<body background="images/bg.gif" bgcolor="000000" text="#00FFFF" link="ffffff" vlink="008888">
+
+<basefont size=2>
+<font face="Arial">
+
+<center><font size="3"><b>Preserving Transparency</b><font></center>
+<blockquote>
+<p><br>
+
+Sometimes when you convert images from one color pallette to another as is necessary <a href="antialiased.html">to avoid jagged text</a> you will lose the transparency information saved with the image.  That can make an ugly grey patch appear around the image that looks like this when saved:<br>
+<center><img src="images/examples/transp.gif" width=122 height=52></center>
+<p>
+
+<b>To Preserve Transparency</b>
+<br>
+<font color="yellow"><b><i>In Adobe Photoshop:</i></b></font>
+<br>
+<li>When Saving your image, instead of "Save As" choose "Export", then "Gif89A Export".
+<li>Choose your transparent area (the grey background) with the Eyedropper tool. Make sure you drag it around to pick up any stray grey pixels that might have been created when the image was transferred back to INDEXED color.
+<li>Save image
+<p><br>
+
+<b>To Preserve Transparency</b>
+<br>
+<font color="yellow"><b><i>In Ulead PhotoImpact<sup><font size=1>tm</font></sup>:</i></b></font>
+<br>
+<li>After editing your image (adding text), you will need to click the button in the lower right hand corner which refers to the image color palette.  If the image is currently in more than 256 colors you cannot save it as a .GIF (for the web).  Change it by selecting "Optimized Indexed - 256 Color (8 bit)". 
+<li>File, Save As...Name the file but don't click "Save" yet.
+<li>Make sure that the File Type is "GIF"
+<li>Click Options... Make sure that "Enable transparent color" is selected (there should be a "check" in the checkbox.
+
+<li>Now you will most likely need to select the color that is to be assigned as
+transparent. Just click on the correct color in the top portion of the
+dialog box. If you are not sure which color it is, cancel out of both the
+Options and Save dialogs and then select the Eyedropper from the tool panel
+on the left. Now hold it over the color that is to be transparent.... you
+will see the index number for this color on the Attribute toolbar. 
+<li>Now save
+the file: File, Save As, set Type to GIF, click Options.
+
+
+<li>click "OK"
+<li>click "Save"
+
+<P>
+Now our image should have no grey border.  Like this:<br>
+<center><img src="images/examples/transp2.gif" width=122 height=52></center>
+<blockquote>
+<p>
+<br>
+
+
+</blockquote>
+</font>
+</BODY>
+</HTML>

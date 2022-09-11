@@ -1,0 +1,32 @@
+Hello Administrator(s),
+----------------------------------------------------------------
+
+Altiris is in the process of finishing the (re)build of a server with:
+- OS           = Windows Server 2003 Standard/Enterprise x86/x64 R2.
+- Hardware     = HP Proliant / VMWare Virtual.
+- Specific Task= Domain Controller
+- ...
+
+Please check or Configure the following services:
+- ...
+
+Any optional/required Post Build activities can now be performed:
+- DCPROMO to a Domain Controller
+- Installation of DNS
+- Installation of DHCP (Optional)
+- Installation of Certificate Authority (CA)
+- Installation of License Server
+- Configuring of FSMO Roles (5+1= PDC Emulator, RID Master, Intrastructure Master, 
+  Domain Naming Master, Schema Master AND Global Catalog Server(s))
+  - In a single domain environment the roles can be all on one box 
+    and all DC's should be GC.
+  - In a multi domain environment IM and GC should be on different boxes and 
+    the GC's should only be in well connected sites. Other sites could have 
+    Caching Credentials enabled.
+- ...
+
+----------------------------------------------------------------
+Altiris Automated Build Process.
+
+This is a generated email message, do not reply to this message.
+

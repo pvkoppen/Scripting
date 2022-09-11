@@ -1,0 +1,105 @@
+<html>
+<head>
+<!--
+This file retrieved from the JS-Examples archives
+http://www.js-examples.com
+1000s of free ready to use scripts, tutorials, forums.
+Author: Grigory Danileyko - http://mpp.by.ru 
+-->
+
+  <script type=text/javascript>
+
+var newformat = {date:{m:0,d:1,y:2},time:{h:0,m:1}};
+
+String.prototype.getDateStr = function (dateformat) {
+ re = {d:"\\d(\\d|)",m:"([\\d]|)\\d",y:"\\d\\d([\\d]|)([\\d]|)" };
+ tempobj = {};
+ for(var i=0; i<3; i++)
+  for(var j in dateformat)
+   if(dateformat[j]==i) {
+    dateformat[i]=j;
+    break;
+   }
+ var re_str = "\\b" + re[dateformat[0]] + "([\\.]|[\\/])" + re[dateformat[1]] + "([\.]|[\/])" + re[dateformat[2]] + "\\b";
+ var date = this.match(new RegExp(re_str,"gmi"));
+ return  (date==null ? null : date[0].indexOf(".")!=-1 && date[0].indexOf("/")!=-1? null : date[0]);
+}
+
+String.prototype.getTimeStr = function (timeformat) {
+ var time = this.match(/\b(\d|)\d\:\d\d\b/);
+ return (time==null ? null : time[0]);
+}
+
+
+String.prototype.toDateTime = function (format) {
+ typeof(format)=="undefined"? format = {date:{y:2,m:1,d:0},time:{h:0,m:1}} : null;
+ with(this) {
+  var d_ = getDateStr(format.date);
+  var d = d_!= null? d_.split(d_.match(/\D/)) : [1,1,1970];
+  d[format.date.m]--;
+  new String(d[format.date.y]).length==2? d[format.date.y]=parseInt("19" + d[format.date.y]) : null;
+  var t_ = getTimeStr(format.time);
+  t = t_!=null? t_.split(t_.match(/\D/)) : [0,0];
+ }
+
+ with(format) {
+  var td = new Date (d[date.y],d[date.m],d[date.d],t[time.h],t[time.m]);
+  return (td.getFullYear()==d[date.y] && td.getMonth()==d[date.m] && 
+         td.getDate()==d[date.d] && td.getHours()==t[time.h] && 
+         td.getMinutes()==t[time.m]? td : null);
+ }
+}
+
+function update(thisEl) {
+ var text = thisEl.options[thisEl.selectedIndex].innerHTML;
+ var items = document.getElementsByTagName("SELECT");
+ for(var i=0; i<items.length; i++) {
+  try {
+  if(items[i]==thisEl) {continue;}
+  if(items[i].selectedIndex!=-1 && items[i].options[items[i].selectedIndex].innerHTML==text)
+    items[i].selectedIndex=-1;
+  } catch(exc) {}
+ }
+}
+
+  </script>
+
+
+</head>
+<body>
+
+   <table>
+    <caption>Check string of datetime</caption>
+    <tr><td><pre>Please set:
+
+format of date: <select onchange="newformat.date[this.options[this.selectedIndex].innerHTML.charAt(0)]=0;update(this);">
+                 <option>date</option>
+                 <option selected>month</option>
+                 <option>year</option>
+                </select><select onchange="newformat.date[this.options[this.selectedIndex].innerHTML.charAt(0)]=1;update(this);">
+                 <option selected>date</option>
+                 <option>month</option>
+                 <option>year</option>
+                </select><select  onchange="newformat.date[this.options[this.selectedIndex].innerHTML.charAt(0)]=2;update(this);">
+                 <option>date</option>
+                 <option>month</option>
+                 <option selected>year</option>
+                </select>
+
+format of time: <select onchange="newformat.time[this.options[this.selectedIndex].innerHTML.charAt(0)]=0;update(this);">
+                 <option>hours</option>
+                </select><select onchange="newformat.time[this.options[this.selectedIndex].innerHTML.charAt(0)]=1;update(this);">
+                 <option selected>mitutes</option>
+                </select></pre></td></tr>
+    <tr><td>Enter date / date+time and check it</td></tr>
+    <tr>
+     <td><input type=text id=val value="03.11.1973"><input type=button value=check onclick="var text = document.getElementById('val').value; document.getElementById('result').innerHTML = text.toDateTime(newformat);alert(Date.UTC(text.toDateTime(newformat))==Date.UTC(new Date(1970,0,1,0,0,0))? 'not entering' : text.toDateTime(newformat)!=null? 'valid datetime' : 'date or time invalid');"></td>
+    </tr>
+    <tr>
+     <td id=result>Sun Mar 11 00:00:00 UTC+0600 1973</td>
+    </tr>
+   </table>
+
+<BR><center><a href='http://www.js-examples.com'>JS-Examples.com</a></center> 
+</body>
+</html>

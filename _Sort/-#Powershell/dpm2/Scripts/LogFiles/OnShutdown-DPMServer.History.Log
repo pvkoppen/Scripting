@@ -1,0 +1,3017 @@
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm1253 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm1253 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm0130 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm0130 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm0312 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm0312 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm0923 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100315[Mon]-pm0923 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100321[Sun]-am0304 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100321[Sun]-am0304 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100322[Mon]-am1006 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100322[Mon]-am1006 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100322[Mon]-am1111 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100322[Mon]-am1111 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100322[Mon]-pm1259 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100322[Mon]-pm1259 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100322[Mon]-pm0141 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100322[Mon]-pm0141 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100322[Mon]-pm0320 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100322[Mon]-pm0320 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am0918 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am0918 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am1015 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am1015 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am1038 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am1038 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am1116 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-am1116 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-pm1207 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100323[Tue]-pm1207 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100725[Sun]-am1002 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100725[Sun]-am1002 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100725[Sun]-am1102 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100725[Sun]-am1102 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-am0838 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-am0838 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-am1114 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-am1114 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm1253 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm1253 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0218 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0218 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0318 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0318 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0345 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0345 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0417 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0417 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0433 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100726[Mon]-pm0433 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-am0845 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-am0845 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-pm0205 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-pm0205 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-pm0223 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-pm0223 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-pm0342 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-pm0342 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-pm0827 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100727[Tue]-pm0827 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100728[Wed]-am0910 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100728[Wed]-am0910 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0317 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0317 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0337 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 2
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 2
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0337 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0351 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0351 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0406 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0406 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0416 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0416 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0435 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20100731[Sat]-pm0435 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101118[Thu]-am0917 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101118[Thu]-am0917 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101118[Thu]-am0949 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101118[Thu]-am0949 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101118[Thu]-am1146 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101118[Thu]-am1146 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101118[Thu]-pm1217 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101118[Thu]-pm1217 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101118[Thu]-pm1236 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101118[Thu]-pm1236 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101118[Thu]-pm0113 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101118[Thu]-pm0113 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101225[Sat]-am0539 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101225[Sat]-am0539 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101227[Mon]-pm0830 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101227[Mon]-pm0830 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101227[Mon]-pm0917 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101227[Mon]-pm0917 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101227[Mon]-pm0933 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 3
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20101227[Mon]-pm0933 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110518[Wed]-pm1233 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 3
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110518[Wed]-pm1233 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110518[Wed]-pm0104 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 3
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110518[Wed]-pm0104 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110524[Tue]-am0929 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 3
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110524[Tue]-am0929 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110525[Wed]-am0744 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 3
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110525[Wed]-am0744 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110620[Mon]-am0805 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+Real RegValue: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 3
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+Real RegValue: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110620[Mon]-am0805 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0803 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: 3
+Registry Type: REG_DWORD
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: 4
+Registry Type: REG_DWORD
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0803 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0825 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 3
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0825 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0847 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0847 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0910 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-am0910 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-pm0251 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-pm0251 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-pm0306 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110621[Tue]-pm0306 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110622[Wed]-am0854 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110622[Wed]-am0854 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110623[Thu]-pm0342 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110623[Thu]-pm0342 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110623[Thu]-pm0432 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110623[Thu]-pm0432 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110623[Thu]-pm0520 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110623[Thu]-pm0520 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110623[Thu]-pm0534 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 3
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110623[Thu]-pm0534 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110701[Fri]-pm1210 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110701[Fri]-pm1210 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110701[Fri]-pm0444 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110701[Fri]-pm0444 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110701[Fri]-pm0455 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110701[Fri]-pm0455 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110701[Fri]-pm0907 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110701[Fri]-pm0907 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110702[Sat]-am1228 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 3
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 3
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSDPM\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMAC\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMWriter\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMLA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\DPMRA\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\SQLAgent$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\MSSQL$MS$DPM2007$\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110702[Sat]-am1228 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110702[Sat]-am0856 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110702[Sat]-am0856 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110708[Fri]-pm0505 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110708[Fri]-pm0505 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110709[Sat]-am0837 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110709[Sat]-am0837 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110724[Sun]-pm0713 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20110724[Sun]-pm0713 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111008[Sat]-pm0154 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 2
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111008[Sat]-pm0154 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111203[Sat]-pm0211 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111203[Sat]-pm0211 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111213[Tue]-pm1235 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20111213[Tue]-pm1235 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20120214[Tue]-am1038 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20120214[Tue]-am1038 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20120703[Tue]-am1049 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20120703[Tue]-am1049 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121104[Sun]-pm0140 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121104[Sun]-pm0140 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121104[Sun]-pm0419 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121104[Sun]-pm0419 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121105[Mon]-pm0837 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121105[Mon]-pm0837 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121106[Tue]-pm0539 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121106[Tue]-pm0539 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121115[Thu]-am0938 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121115[Thu]-am0938 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121115[Thu]-pm0348 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121115[Thu]-pm0348 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121126[Mon]-am1020 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121126[Mon]-am1020 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121126[Mon]-pm0229 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121126[Mon]-pm0229 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121127[Tue]-am0930 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121127[Tue]-am0930 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121128[Wed]-pm0335 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121128[Wed]-pm0335 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121129[Thu]-pm0211 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121129[Thu]-pm0211 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121212[Wed]-am0952 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121212[Wed]-am0952 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121214[Fri]-am0903 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20121214[Fri]-am0903 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20130129[Tue]-pm0822 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20130129[Tue]-pm0822 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20130221[Thu]-am1138 
+-----------------------------------------------------------------------
+
+-- Set Service: "NtmsSvc (Removable Storage)" to start automatically
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20130221[Thu]-am1138 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20130627[Thu]-am0845 
+-----------------------------------------------------------------------
+
+-- Set correct Service status for DPM reboot.
+-- -- "Server Administrator (Secure Port Server)" = Disabled
+-- -- "NtmsSvc (Removable Storage)" = Disabled
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20130627[Thu]-am0845 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140315[Sat]-am0830 
+-----------------------------------------------------------------------
+
+-- Set correct Service status for DPM reboot.
+-- -- "Server Administrator (Secure Port Server)" = Disabled
+-- -- "NtmsSvc (Removable Storage)" = Disabled
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140315[Sat]-am0830 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140317[Mon]-pm0638 
+-----------------------------------------------------------------------
+
+-- Set correct Service status for DPM reboot.
+-- -- "Server Administrator (Secure Port Server)" = Disabled
+-- -- "NtmsSvc (Removable Storage)" = Disabled
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140317[Mon]-pm0638 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140317[Mon]-pm0917 
+-----------------------------------------------------------------------
+
+-- Set correct Service status for DPM reboot.
+-- -- "Server Administrator (Secure Port Server)" = Disabled
+-- -- "NtmsSvc (Removable Storage)" = Disabled
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140317[Mon]-pm0917 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140625[Wed]-pm1228 
+-----------------------------------------------------------------------
+
+-- Set correct Service status for DPM reboot.
+-- -- "Server Administrator (Secure Port Server)" = Disabled
+-- -- "NtmsSvc (Removable Storage)" = Disabled
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140625[Wed]-pm1228 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140701[Tue]-pm0418 
+-----------------------------------------------------------------------
+
+-- Set correct Service status for DPM reboot.
+-- -- "Server Administrator (Secure Port Server)" = Disabled
+-- -- "NtmsSvc (Removable Storage)" = Disabled
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140701[Tue]-pm0418 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140711[Fri]-pm0146 
+-----------------------------------------------------------------------
+
+-- Set correct Service status for DPM reboot.
+-- -- "Server Administrator (Secure Port Server)" = Disabled
+-- -- "NtmsSvc (Removable Storage)" = Disabled
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140711[Fri]-pm0146 
+-----------------------------------------------------------------------
+
+---------------- Start: C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140803[Sun]-pm0833 
+-----------------------------------------------------------------------
+
+-- Set correct Service status for DPM reboot.
+-- -- "Server Administrator (Secure Port Server)" = Disabled
+-- -- "NtmsSvc (Removable Storage)" = Disabled
+Microsoft (R) Windows Script Host Version 5.6
+Copyright (C) Microsoft Corporation 1996-2001. All rights reserved.
+
+RegValue Before Write: 3
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\NtmsSvc\Start
+Registry Value: [REG_DWORD] 4
+
+RegValue Before Write: 4
+RegValue After Write: 4
+SetReg: Succes (Write Registry Key)
+Registry Key: HKLM\System\CurrentControlSet\Services\Server Administrator\Start
+Registry Value: [REG_DWORD] 4
+
+---------------- End  : C:\Scripts\OnShutdown-DPMServer.cmd on TOLSS02 ----------------
+-----------------------------------------------------------------------
+-- DATE-TIME=20140803[Sun]-pm0833 
+-----------------------------------------------------------------------

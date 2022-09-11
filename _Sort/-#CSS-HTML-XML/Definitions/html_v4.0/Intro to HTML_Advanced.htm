@@ -1,0 +1,1254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0044)http://www.w3.org/MarkUp/Guide/Advanced.html -->
+<HTML><HEAD><TITLE>Dave Raggett's Introduction to HTML</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<STYLE type=text/css>BODY {
+	FONT-FAMILY: sans-serif; MARGIN-LEFT: 10%; MARGIN-RIGHT: 10%
+}
+H2 {
+	MARGIN-TOP: 1em
+}
+H2 {
+	MARGIN-LEFT: -3%
+}
+H3 {
+	MARGIN-LEFT: -3%
+}
+H4 {
+	MARGIN-LEFT: -3%
+}
+H5 {
+	MARGIN-LEFT: -3%
+}
+H6 {
+	MARGIN-LEFT: -3%
+}
+PRE {
+	COLOR: green; FONT-FAMILY: "Courier New", monospace; FONT-WEIGHT: bold; WHITE-SPACE: pre
+}
+TT {
+	COLOR: green
+}
+EM {
+	FONT-STYLE: italic; FONT-WEIGHT: bold
+}
+STRONG {
+	FONT-WEIGHT: bold; TEXT-TRANSFORM: uppercase
+}
+.navbar {
+	TEXT-ALIGN: center
+}
+.example {
+	BACKGROUND-COLOR: rgb(255,255,153); BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; COLOR: rgb(153,0,51); PADDING-BOTTOM: 0.5em; PADDING-LEFT: 0.5em; PADDING-RIGHT: 0.5em; PADDING-TOP: 0.5em; WIDTH: 100%
+}
+PRE.example {
+	FONT-FAMILY: "Lucida Console", "Courier New", monospace; WHITE-SPACE: pre
+}
+TABLE {
+	BACKGROUND: white; BORDER-BOTTOM-COLOR: white; BORDER-BOTTOM-WIDTH: 2px; BORDER-LEFT-COLOR: white; BORDER-LEFT-WIDTH: 2px; BORDER-RIGHT-COLOR: white; BORDER-RIGHT-WIDTH: 2px; BORDER-TOP-COLOR: white; BORDER-TOP-WIDTH: 2px; FONT-FAMILY: sans-serif; MARGIN-LEFT: -4%
+}
+TH {
+	BACKGROUND: rgb(204,204,153); FONT-FAMILY: sans-serif
+}
+TD {
+	BACKGROUND: rgb(255,255,153); FONT-FAMILY: sans-serif
+}
+</STYLE>
+
+<SCRIPT type=text/javascript>
+
+
+if (document.images)
+{
+    adImages = new Array("hosts/mit.gif",
+                "hosts/inria.gif", "hosts/keio.gif");
+    adURLs = new Array("www.lcs.mit.edu",
+                "www.inria.fr", "www.keio.ac.jp");
+    thisAd = 0;
+}
+
+function cycleAds()
+{
+    if (document.images)
+    {
+        if (document.adBanner.complete)
+        {
+            if (++thisAd == adImages.length)
+                thisAd = 0;
+
+            document.adBanner.src = adImages[thisAd];
+        }
+    }
+
+    // change to next sponsor every 3 seconds
+    setTimeout("cycleAds()", 3000);
+}
+
+function gotoAd()
+{
+    document.location.href = "http://" + adURLs[thisAd];
+}
+
+
+</SCRIPT>
+
+<META content="MSHTML 5.00.3502.5390" name=GENERATOR></HEAD>
+<BODY background="Intro to HTML_Advanced_bestanden/book.jpg" bgColor=white 
+onload=cycleAds() text=black>
+<P class=navbar><A href="http://www.w3.org/"><IMG alt=W3C border=0 height=48 
+src="Intro to HTML_Advanced_bestanden/w3c_home.gif" width=72></A><BR><A 
+href="http://www.w3.org/MarkUp/Guide/Overview.html">Basic HTML</A> | <A 
+href="http://www.w3.org/MarkUp/Guide/Style.html">Adding a touch of style</A></P>
+<H1><A href="http://www.w3.org/People/Raggett"><IMG align=middle 
+alt="Dave Raggett" border=0 src="Intro to HTML_Advanced_bestanden/dsr.jpg"></A> 
+&nbsp;&nbsp;More advanced features</H1>
+<P><EM><A href="http://www.w3.org/People/Raggett">Dave Raggett</A>, 29th August 
+2000.</EM></P>
+<P>Having mastered the basics, it is time to move on to more advanced features. 
+The following will teach you how to:</P>
+<UL>
+  <LI>force line breaks 
+  <LI>introduce non-breaking spaces 
+  <LI>use entities for special characters 
+  <LI>link into the middle of pages 
+  <LI>use preformatted text 
+  <LI>flow text around images 
+  <LI>define clickable regions within images 
+  <LI>create tables 
+  <LI>use roll-overs and other tricks </LI></UL>
+<P><I>p.s.</I> I recommend you use <A 
+href="http://www.w3.org/People/Raggett/tidy">HTML Tidy</A> to keep your markup 
+clean and free of errors.</P>
+<H2>How to force line breaks</H2>
+<P>Just occasionally, you will want to force a line break. You do this using the 
+<EM>br</EM> element, for example when you want to include a postal address:</P><PRE>&lt;p&gt;The Willows&lt;br&gt;
+21 Runnymede Avenue&lt;br&gt;
+Morton-in-the-marsh&lt;br&gt;
+Oxfordshire OX27 3BQ&lt;/p&gt;
+</PRE>
+<P>The <EM>br</EM> element never needs an end-tag. In general, elements that 
+don't take end-tags are known as <I>empty</I> elements.</P>
+<H2>How to introduce non-breaking spaces</H2>
+<P>Browsers automatically wrap text to fit within the margins. Line breaks can 
+be introduced wherever space characters appear in the markup. Sometimes you will 
+want to prevent the browser from wrapping text between two particular words. For 
+instance between two words in a brand name such as "Coca Cola". The trick is to 
+use <EM>&amp;nbsp;</EM> in place of the space character, for example:</P><PRE>Sweetened carbonated beverages, such as Coca&amp;nbsp;Cola,
+have attained world-wide popularity.
+</PRE>
+<P>It is bad practice to use repeated non-breaking spaces to indent text. 
+Instead, you are advised to set the indent via <A 
+href="http://www.w3.org/MarkUp/Guide/Style.html">style rules</A>.</P>
+<H2>How to use entities for special characters</H2>
+<P>For copyright notices, or trademarks it is customary to include the 
+appropriate signs:</P>
+<CENTER>
+<TABLE cellPadding=8 cellSpacing=1>
+  <TBODY>
+  <TR align=middle>
+    <TH>Symbol</TH>
+    <TH>Entity</TH>
+    <TH>Example</TH></TR>
+  <TR align=middle>
+    <TD>Copyright sign</TD>
+    <TD>&amp;copy;</TD>
+    <TD>Copyright © 1999 W3C</TD></TR>
+  <TR align=middle>
+    <TD>Registered trademark</TD>
+    <TD>&amp;reg;</TD>
+    <TD>MagiCo ®</TD></TR>
+  <TR align=middle>
+    <TD>Trademark</TD>
+    <TD>&amp;#8482;</TD>
+    <TD>Webfarer&#8482;</TD></TR></TBODY></TABLE></CENTER>
+<P>Note HTML 4.0 defines &amp;trade; for the trademark sign but this is not yet 
+as widely supported as &amp;#8482;</P>
+<P>There are a number of other entities you may find useful:</P>
+<CENTER>
+<TABLE cellPadding=8 cellSpacing=1>
+  <TBODY>
+  <TR align=middle>
+    <TH>Symbol</TH>
+    <TH>Entity</TH>
+    <TH>Example</TH></TR>
+  <TR align=middle>
+    <TD>Less than</TD>
+    <TD>&amp;lt;</TD>
+    <TD>&lt;</TD></TR>
+  <TR align=middle>
+    <TD>Greater than</TD>
+    <TD>&amp;gt;</TD>
+    <TD>&gt;</TD></TR>
+  <TR align=middle>
+    <TD>Ampersand</TD>
+    <TD>&amp;amp;</TD>
+    <TD>&amp;</TD></TR>
+  <TR align=middle>
+    <TD>nonbreaking space</TD>
+    <TD>&amp;nbsp;</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR align=middle>
+    <TD>em dash</TD>
+    <TD>&amp;#8212;</TD>
+    <TD>&#8212;</TD></TR>
+  <TR align=middle>
+    <TD>quotation mark</TD>
+    <TD>&amp;quot;</TD>
+    <TD>"</TD></TR></TBODY></TABLE></CENTER>
+<P>And then, there are entities for accented characters and miscellaneous 
+symbols in the Latin-1 character set:</P>
+<CENTER>
+<TABLE border=0 cellPadding=2 width="60%">
+  <TBODY>
+  <TR>
+    <TH width=20>&nbsp;</TH>
+    <TD>&amp;nbsp;</TD>
+    <TD>&amp;#160;</TD>
+    <TH width=20>Ð</TH>
+    <TD>&amp;ETH;</TD>
+    <TD>&amp;#208;</TD></TR>
+  <TR>
+    <TH>¡</TH>
+    <TD>&amp;iexcl;</TD>
+    <TD>&amp;#161;</TD>
+    <TH>Ñ</TH>
+    <TD>&amp;Ntilde;</TD>
+    <TD>&amp;#209;</TD></TR>
+  <TR>
+    <TH>¢</TH>
+    <TD>&amp;cent;</TD>
+    <TD>&amp;#162;</TD>
+    <TH>Ò</TH>
+    <TD>&amp;Ograve;</TD>
+    <TD>&amp;#210;</TD></TR>
+  <TR>
+    <TH>£</TH>
+    <TD>&amp;pound;</TD>
+    <TD>&amp;#163;</TD>
+    <TH>Ó</TH>
+    <TD>&amp;Oacute;</TD>
+    <TD>&amp;#211;</TD></TR>
+  <TR>
+    <TH>¤</TH>
+    <TD>&amp;curren;</TD>
+    <TD>&amp;#164;</TD>
+    <TH>Ô</TH>
+    <TD>&amp;Ocirc;</TD>
+    <TD>&amp;#212;</TD></TR>
+  <TR>
+    <TH>¥</TH>
+    <TD>&amp;yen;</TD>
+    <TD>&amp;#165;</TD>
+    <TH>Õ</TH>
+    <TD>&amp;Otilde;</TD>
+    <TD>&amp;#213;</TD></TR>
+  <TR>
+    <TH>¦</TH>
+    <TD>&amp;brvbar;</TD>
+    <TD>&amp;#166;</TD>
+    <TH>Ö</TH>
+    <TD>&amp;Ouml;</TD>
+    <TD>&amp;#214;</TD></TR>
+  <TR>
+    <TH>§</TH>
+    <TD>&amp;sect;</TD>
+    <TD>&amp;#167;</TD>
+    <TH>×</TH>
+    <TD>&amp;times;</TD>
+    <TD>&amp;#215;</TD></TR>
+  <TR>
+    <TH>¨</TH>
+    <TD>&amp;uml;</TD>
+    <TD>&amp;#168;</TD>
+    <TH>Ø</TH>
+    <TD>&amp;Oslash;</TD>
+    <TD>&amp;#216;</TD></TR>
+  <TR>
+    <TH>©</TH>
+    <TD>&amp;copy;</TD>
+    <TD>&amp;#169;</TD>
+    <TH>Ù</TH>
+    <TD>&amp;Ugrave;</TD>
+    <TD>&amp;#217;</TD></TR>
+  <TR>
+    <TH>ª</TH>
+    <TD>&amp;ordf;</TD>
+    <TD>&amp;#170;</TD>
+    <TH>Ú</TH>
+    <TD>&amp;Uacute;</TD>
+    <TD>&amp;#218;</TD></TR>
+  <TR>
+    <TH>«</TH>
+    <TD>&amp;laquo;</TD>
+    <TD>&amp;#171;</TD>
+    <TH>Û</TH>
+    <TD>&amp;Ucirc;</TD>
+    <TD>&amp;#219;</TD></TR>
+  <TR>
+    <TH>¬</TH>
+    <TD>&amp;not;</TD>
+    <TD>&amp;#172;</TD>
+    <TH>Ü</TH>
+    <TD>&amp;Uuml;</TD>
+    <TD>&amp;#220;</TD></TR>
+  <TR>
+    <TH>&shy;</TH>
+    <TD>&amp;shy;</TD>
+    <TD>&amp;#173;</TD>
+    <TH>Ý</TH>
+    <TD>&amp;Yacute;</TD>
+    <TD>&amp;#221;</TD></TR>
+  <TR>
+    <TH>®</TH>
+    <TD>&amp;reg;</TD>
+    <TD>&amp;#174;</TD>
+    <TH>Þ</TH>
+    <TD>&amp;THORN;</TD>
+    <TD>&amp;#222;</TD></TR>
+  <TR>
+    <TH>¯</TH>
+    <TD>&amp;macr;</TD>
+    <TD>&amp;#175;</TD>
+    <TH>ß</TH>
+    <TD>&amp;szlig;</TD>
+    <TD>&amp;#223;</TD></TR>
+  <TR>
+    <TH>°</TH>
+    <TD>&amp;deg;</TD>
+    <TD>&amp;#176;</TD>
+    <TH>à</TH>
+    <TD>&amp;agrave;</TD>
+    <TD>&amp;#224;</TD></TR>
+  <TR>
+    <TH>±</TH>
+    <TD>&amp;plusmn;</TD>
+    <TD>&amp;#177;</TD>
+    <TH>á</TH>
+    <TD>&amp;aacute;</TD>
+    <TD>&amp;#225;</TD></TR>
+  <TR>
+    <TH>²</TH>
+    <TD>&amp;sup2;</TD>
+    <TD>&amp;#178;</TD>
+    <TH>â</TH>
+    <TD>&amp;acirc;</TD>
+    <TD>&amp;#226;</TD></TR>
+  <TR>
+    <TH>³</TH>
+    <TD>&amp;sup3;</TD>
+    <TD>&amp;#179;</TD>
+    <TH>ã</TH>
+    <TD>&amp;atilde;</TD>
+    <TD>&amp;#227;</TD></TR>
+  <TR>
+    <TH>´</TH>
+    <TD>&amp;acute;</TD>
+    <TD>&amp;#180;</TD>
+    <TH>ä</TH>
+    <TD>&amp;auml;</TD>
+    <TD>&amp;#228;</TD></TR>
+  <TR>
+    <TH>µ</TH>
+    <TD>&amp;micro;</TD>
+    <TD>&amp;#181;</TD>
+    <TH>å</TH>
+    <TD>&amp;aring;</TD>
+    <TD>&amp;#229;</TD></TR>
+  <TR>
+    <TH>¶</TH>
+    <TD>&amp;para;</TD>
+    <TD>&amp;#182;</TD>
+    <TH>æ</TH>
+    <TD>&amp;aelig;</TD>
+    <TD>&amp;#230;</TD></TR>
+  <TR>
+    <TH>·</TH>
+    <TD>&amp;middot;</TD>
+    <TD>&amp;#183;</TD>
+    <TH>ç</TH>
+    <TD>&amp;ccedil;</TD>
+    <TD>&amp;#231;</TD></TR>
+  <TR>
+    <TH>¸</TH>
+    <TD>&amp;cedil;</TD>
+    <TD>&amp;#184;</TD>
+    <TH>è</TH>
+    <TD>&amp;egrave;</TD>
+    <TD>&amp;#232;</TD></TR>
+  <TR>
+    <TH>¹</TH>
+    <TD>&amp;sup1;</TD>
+    <TD>&amp;#185;</TD>
+    <TH>é</TH>
+    <TD>&amp;eacute;</TD>
+    <TD>&amp;#233;</TD></TR>
+  <TR>
+    <TH>º</TH>
+    <TD>&amp;ordm;</TD>
+    <TD>&amp;#186;</TD>
+    <TH>ê</TH>
+    <TD>&amp;ecirc;</TD>
+    <TD>&amp;#234;</TD></TR>
+  <TR>
+    <TH>»</TH>
+    <TD>&amp;raquo;</TD>
+    <TD>&amp;#187;</TD>
+    <TH>ë</TH>
+    <TD>&amp;euml;</TD>
+    <TD>&amp;#235;</TD></TR>
+  <TR>
+    <TH>¼</TH>
+    <TD>&amp;frac14;</TD>
+    <TD>&amp;#188;</TD>
+    <TH>ì</TH>
+    <TD>&amp;igrave;</TD>
+    <TD>&amp;#236;</TD></TR>
+  <TR>
+    <TH>½</TH>
+    <TD>&amp;frac12;</TD>
+    <TD>&amp;#189;</TD>
+    <TH>í</TH>
+    <TD>&amp;iacute;</TD>
+    <TD>&amp;#237;</TD></TR>
+  <TR>
+    <TH>¾</TH>
+    <TD>&amp;frac34;</TD>
+    <TD>&amp;#190;</TD>
+    <TH>î</TH>
+    <TD>&amp;icirc;</TD>
+    <TD>&amp;#238;</TD></TR>
+  <TR>
+    <TH>¿</TH>
+    <TD>&amp;iquest;</TD>
+    <TD>&amp;#191;</TD>
+    <TH>ï</TH>
+    <TD>&amp;iuml;</TD>
+    <TD>&amp;#239;</TD></TR>
+  <TR>
+    <TH>À</TH>
+    <TD>&amp;Agrave;</TD>
+    <TD>&amp;#192;</TD>
+    <TH>ð</TH>
+    <TD>&amp;eth;</TD>
+    <TD>&amp;#240;</TD></TR>
+  <TR>
+    <TH>Á</TH>
+    <TD>&amp;Aacute;</TD>
+    <TD>&amp;#193;</TD>
+    <TH>ñ</TH>
+    <TD>&amp;ntilde;</TD>
+    <TD>&amp;#241;</TD></TR>
+  <TR>
+    <TH>Â</TH>
+    <TD>&amp;Acirc;</TD>
+    <TD>&amp;#194;</TD>
+    <TH>ò</TH>
+    <TD>&amp;ograve;</TD>
+    <TD>&amp;#242;</TD></TR>
+  <TR>
+    <TH>Ã</TH>
+    <TD>&amp;Atilde;</TD>
+    <TD>&amp;#195;</TD>
+    <TH>ó</TH>
+    <TD>&amp;oacute;</TD>
+    <TD>&amp;#243;</TD></TR>
+  <TR>
+    <TH>Ä</TH>
+    <TD>&amp;Auml;</TD>
+    <TD>&amp;#196;</TD>
+    <TH>ô</TH>
+    <TD>&amp;ocirc;</TD>
+    <TD>&amp;#244;</TD></TR>
+  <TR>
+    <TH>Å</TH>
+    <TD>&amp;Aring;</TD>
+    <TD>&amp;#197;</TD>
+    <TH>õ</TH>
+    <TD>&amp;otilde;</TD>
+    <TD>&amp;#245;</TD></TR>
+  <TR>
+    <TH>Æ</TH>
+    <TD>&amp;AElig;</TD>
+    <TD>&amp;#198;</TD>
+    <TH>ö</TH>
+    <TD>&amp;ouml;</TD>
+    <TD>&amp;#246;</TD></TR>
+  <TR>
+    <TH>Ç</TH>
+    <TD>&amp;Ccedil;</TD>
+    <TD>&amp;#199;</TD>
+    <TH>÷</TH>
+    <TD>&amp;divide;</TD>
+    <TD>&amp;#247;</TD></TR>
+  <TR>
+    <TH>È</TH>
+    <TD>&amp;Egrave;</TD>
+    <TD>&amp;#200;</TD>
+    <TH>ø</TH>
+    <TD>&amp;oslash;</TD>
+    <TD>&amp;#248;</TD></TR>
+  <TR>
+    <TH>É</TH>
+    <TD>&amp;Eacute;</TD>
+    <TD>&amp;#201;</TD>
+    <TH>ù</TH>
+    <TD>&amp;ugrave;</TD>
+    <TD>&amp;#249;</TD></TR>
+  <TR>
+    <TH>Ê</TH>
+    <TD>&amp;Ecirc;</TD>
+    <TD>&amp;#202;</TD>
+    <TH>ú</TH>
+    <TD>&amp;uacute;</TD>
+    <TD>&amp;#250;</TD></TR>
+  <TR>
+    <TH>Ë</TH>
+    <TD>&amp;Euml;</TD>
+    <TD>&amp;#203;</TD>
+    <TH>û</TH>
+    <TD>&amp;ucirc;</TD>
+    <TD>&amp;#251;</TD></TR>
+  <TR>
+    <TH>Ì</TH>
+    <TD>&amp;Igrave;</TD>
+    <TD>&amp;#204;</TD>
+    <TH>ü</TH>
+    <TD>&amp;uuml;</TD>
+    <TD>&amp;#252;</TD></TR>
+  <TR>
+    <TH>Í</TH>
+    <TD>&amp;Iacute;</TD>
+    <TD>&amp;#205;</TD>
+    <TH>ý</TH>
+    <TD>&amp;yacute;</TD>
+    <TD>&amp;#253;</TD></TR>
+  <TR>
+    <TH>Î</TH>
+    <TD>&amp;Icirc;</TD>
+    <TD>&amp;#206;</TD>
+    <TH>þ</TH>
+    <TD>&amp;thorn;</TD>
+    <TD>&amp;#254;</TD></TR>
+  <TR>
+    <TH>Ï</TH>
+    <TD>&amp;Iuml;</TD>
+    <TD>&amp;#207;</TD>
+    <TH>ÿ</TH>
+    <TD>&amp;yuml;</TD>
+    <TD>&amp;#255;</TD></TR></TBODY></TABLE></CENTER>
+<P>You can also use numeric character entities for the greek letters and 
+mathematical symbols defined in Unicode. For more details, take a look at the 
+list specified in the HTML 4 specification. Note that the entity names for these 
+characters aren't recognized in Navigator 4, so you are recommended to stick to 
+the numeric entities instead.</P>
+<H2>Linking into the middle of Web pages</H2>
+<P>Imagine you have written a long Web page with a table of contents near the 
+start. How do you make the entries in the table contents into hypertext links to 
+the corresponding sections?</P>
+<P>Let's assume that each section starts with a heading, for instance:</P><PRE>&lt;h2&gt;Local Night Spots&lt;/h2&gt;
+</PRE>
+<P>You make the heading into a potential target for a hypertext link by 
+enclosing its contents with <TT>&lt;a&nbsp;name=<I>identifier</I>&gt; .... 
+&lt;/a&gt;</TT></P><PRE>&lt;h2&gt;&lt;a name="night-spots"&gt;Local Night Spots&lt;/a&gt;&lt;/h2&gt;
+</PRE>
+<P>The name attribute specifies the name you will use to identify the link 
+target, in this case: "night-spots". The table of contents can now include a 
+hypertext link using this name, for instance:</P><PRE>&lt;ul&gt;
+  ...
+  &lt;li&gt;&lt;a href="#night-spots"&gt;Local Night Spots&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</PRE>
+<P>The # character is needed before the target name. If the target is in a 
+different document, then you need to place the web address of that document 
+before the # character. For example if the document is in 
+"http://www.bath.co.uk/", then the link becomes:</P><PRE>&lt;a href="http://www.bath.co.uk/#night-spots"&gt;Local Night Spots&lt;/a&gt;
+</PRE>
+<P>In the future, you will eventually be able to define link targets without the 
+need for the <I>&lt;a&gt;</I> element. The new method is much easier, as all you 
+need to do is to add an <I>id</I> attribute to the heading, for instance:</P><PRE>&lt;h2 id="night-spots"&gt;Local Night Spots&lt;/h2&gt;
+</PRE>
+<P>This method doesn't work for 4th generation or earlier browsers, so it should 
+be used with care while these browsers are still in use!</P>
+<H2>Preformatted Text</H2>
+<P>One of the advantage of the Web is that text is automatically wrapped into 
+lines fitting within the current window size. Sometimes though, you will want to 
+disable this behavior. For example when including samples of program code. You 
+do this using the <I>pre</I> element. For instance:</P><PRE>&lt;pre&gt;
+    void Node::Remove()
+    {
+        if (prev)
+            prev-&gt;next = next;
+        else if (parent)
+            parent-&gt;SetContent(null);
+
+        if (next)
+            next-&gt;prev = prev;
+
+        parent = null;
+    }
+&lt;/pre&gt;
+</PRE>
+<P>Which renders as:</P><PRE class=example>    void Node::Remove()
+    {
+        if (prev)
+            prev-&gt;next = next;
+        else if (parent)
+            parent-&gt;SetContent(null);
+
+        if (next)
+            next-&gt;prev = prev;
+
+        parent = null;
+    }
+</PRE>
+<P>The text and background colors were set via the style sheet. Note that all 
+line breaks and spaces are rendered exactly as they appear in the HTML. The 
+exception is a newline immediately after the start tag <I>&lt;pre&gt;</I> and 
+immediately before the end tag <I>&lt;/pre&gt;</I>, which are discarded. This 
+means that the following two examples are rendered identically:</P><PRE>&lt;pre&gt;preformatted text&lt;/pre&gt;
+
+&lt;pre&gt;
+preformatted text
+&lt;/pre&gt;
+</PRE>
+<P>Preformatted text is generally rendered using a monospaced font where each 
+character has the same width. If you define a style rule for the <I>pre</I> 
+element, some browsers forget to use the monospace font, necessitating the use 
+of the font-family property. For instance if you want to render all pre elements 
+in green you can define the style rule:</P><PRE>&lt;style type="text/css"&gt;
+  pre { color: green; background: white; font-family: monospace; }
+&lt;/style&gt;
+</PRE>
+<P>When setting the foreground color for text, you are advised to also set the 
+color for the background. This will prevent accidents where the background color 
+is hard to distinguish from the foreground. Rather than setting the background 
+color on the pre element, you may find it more convenient to set it on the body 
+element, for instance:</P><PRE>&lt;style type="text/css"&gt;
+  body { color: black; background: white; }
+  pre { color: green; font-family: monospace; }
+&lt;/style&gt;
+</PRE>
+<H2>Flowing text around images</H2>
+<P>With HTML, you can choose whether any given image is treated as part of the 
+current text line or is floated to the left or right margins. You control this 
+via the <I>align</I> attribute. If the align attribute is set to <I>left</I> the 
+image floats to the left margin. If it is set to <I>right</I> the image floats 
+to the right margin. For instance:</P><PRE>&lt;p&gt;&lt;img src="sun.jpg" alt="sunburst graphic"
+width="32" height="21" align="left"&gt; This text will be
+flowed around the right side of the graphic.&lt;/p&gt;
+</PRE>
+<P>which renders as:</P>
+<P class=example><IMG align=left alt="sunburst graphic" height=21 
+src="Intro to HTML_Advanced_bestanden/sun.jpg" width=32> This text will be 
+flowed around the right side of the graphic.<BR clear=all></P>
+<P>The following uses align=<I>"right"</I></P><PRE>&lt;p&gt;&lt;img src="sun.jpg" alt="sunburst graphic"
+width="32" height="21" align="right"&gt; This text will be
+flowed around the left side of the graphic.&lt;/p&gt;
+</PRE>
+<P>which renders as:</P>
+<P class=example><IMG align=right alt="sunburst graphic" height=21 
+src="Intro to HTML_Advanced_bestanden/sun.jpg" width=32> This text will be 
+flowed around the left side of the graphic.</P>
+<P>To force rendering to continue below the floated image you can use the 
+<I>&lt;br&nbsp;clear=all&gt;</I> element, for example:</P><PRE>&lt;p&gt;&lt;img src="sun.jpg" alt="sunburst graphic"
+width="32" height="21" align="left"&gt; This text will be
+flowed around the right side of the graphic.&lt;br clear="all"&gt;
+This starts a new line below the floated image.&lt;/p&gt;
+</PRE>
+<P>which renders as:</P>
+<P class=example><IMG align=left alt="sunburst graphic" height=21 
+src="Intro to HTML_Advanced_bestanden/sun.jpg" width=32> This text will be 
+flowed around the right side of the graphic.<BR clear=all>This starts a new line 
+below the floated image.</P>
+<H2>Clickable regions within images</H2>
+<P>The following image acts as a map of a group of Web pages. You can click on 
+the circles to go to the corresponding page.</P>
+<P align=center><IMG alt="site map" border=0 height=245 
+src="Intro to HTML_Advanced_bestanden/pages.gif" useMap=#sitemap width=384><MAP 
+name=sitemap> <AREA alt="Getting Started" coords=186,44,45 
+  href="http://www.w3.org/MarkUp/Guide/Overview.html" shape=CIRCLE><AREA 
+  alt="A Touch of Style" coords=42,171,45 
+  href="http://www.w3.org/MarkUp/Guide/Style.html" shape=CIRCLE><AREA 
+  alt="Web Page Design" coords=186,171,45 shape=CIRCLE><AREA alt="Advanced HTML" 
+  coords=318,173,45 href="http://www.w3.org/MarkUp/Guide/Advanced.html" 
+  shape=CIRCLE></MAP></P>
+<P>The markup for this is as follows:</P><PRE>&lt;p align="center"&gt;
+   &lt;img src="pages.gif" width="384" height="245"
+      alt="site map" usemap="#sitemap" border="0"&gt;
+   &lt;map name="sitemap"&gt;
+      &lt;area shape="circle" coords="186,44,45" 
+         href="Overview.html" alt="Getting Started"&gt;
+      &lt;area shape="circle" coords="42,171,45" 
+         href="Style.html" alt="A Touch of Style"&gt;
+      &lt;area shape="circle" coords="186,171,45"
+         alt="Web Page Design"&gt;
+      &lt;area shape="circle" coords="318,173,45"
+         href="Advanced.html" alt="Advanced HTML"&gt;
+   &lt;/map&gt;
+&lt;/p&gt;
+</PRE>
+<P>The <I>src</I> attribute on the img element specifies the image "pages.gif". 
+The <I>usemap</I> attribute references a map element. It uses a Web address to 
+do so, hence the # character. The <I>border</I> attribute is set to "0" to 
+suppress the blue border around the image.</P>
+<P>The map element specifies which regions in the image act as hypertext links. 
+The <I>name</I> attribute matches <I>usemap</I> attribute on the img element and 
+acts much like the name attribute on the &lt;a&gt; element. In practice, the map 
+element needs to be in the same file as the img element.</P>
+<P>The area element is used to define a region on the image and to bind it to a 
+Web address. The <I>shape</I> attribute specifies "rect", "circle" or "poly". 
+The <I>coords</I> attribute specifies the coordinates for the region depending 
+on the shape.</P>
+<UL>
+  <LI>rect: <I><TT>left-x, top-y, right-x, bottom-y</TT></I> 
+  <LI>circle: <I><TT>center-x, center-y, radius</TT></I> 
+  <LI>poly: <I><TT>x<SUB>1</SUB>,y<SUB>1</SUB>, x<SUB>2</SUB>,y<SUB>2</SUB>, ... 
+  x<SUB>n</SUB>,y<SUB>n</SUB></TT></I> </LI></UL>
+<P>The top left pixel is considered as the origin of the image with x and y both 
+equal to zero, x increases rightwards across the image and y increases 
+downwards. Most image manipulation tools allow you to find the pixel coordinates 
+of any given point in the image.</P>
+<P>If two or more defined regions overlap, the region-defining element that 
+appears earliest in the document takes precedence (i.e., responds to user 
+input). For a complex shape such as an anular ring, you can make part of a 
+region inactive by overlaying it with another region using the <I>nohref</I> 
+attribute, for example:</P><PRE>      &lt;area shape="circle" coords="186,44,50" nohref&gt;
+      &lt;area shape="circle" coords="186,44,100" 
+         href="Overview.html" alt="Getting Started"&gt;
+</PRE>
+<P>Where the first circle creates an inactive region within the larger circle 
+created by the second area element. To have any effect, the inactive shape needs 
+to be placed first as otherwise it will be hidden by the active shape.</P>
+<H3>Why you need to specify the <I>alt</I> attribute</H3>
+<P>The <I>alt</I> attribute on the area element is used to supply a text label 
+for the link. Without it the image map is inaccessible to people who can't see 
+the image.</P>
+<H2>Tables</H2>
+<P>Tables are used for information as well as for layout. You can stretch tables 
+to fill the margins, specify a fixed width or leave it to the browser to 
+automatically size the table to match the contents.</P>
+<P>Tables consist of one or more rows of table cells. Here is a simple 
+example:</P>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TH>Year</TH>
+    <TH>Sales</TH></TR>
+  <TR>
+    <TD>2000</TD>
+    <TD>$18M</TD></TR>
+  <TR>
+    <TD>2001</TD>
+    <TD>$25M</TD></TR>
+  <TR>
+    <TD>2002</TD>
+    <TD>$36M</TD></TR></TBODY></TABLE>
+<P>The markup for this is:</P><PRE>&lt;table border="1"&gt;
+&lt;tr&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Sales&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2000&lt;/td&gt;&lt;td&gt;$18M&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2001&lt;/td&gt;&lt;td&gt;$25M&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2002&lt;/td&gt;&lt;td&gt;$36M&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</PRE>
+<P>The <I>table</I> element acts as the container for the table. The 
+<I>border</I> attribute specifies the border width in pixels. The <I>tr</I> 
+element acts as a container for each table row. The <I>th</I> and <I>td</I> 
+elements act as containers for heading and data cells respectively.</P>
+<H3>Cell Padding</H3>
+<P>You can increase the amount of padding for all cells using the 
+<I>cellpadding</I> attribute on the table element. For instance, to set the 
+padding to 10 pixels:</P><PRE>&lt;table border="1" cellpadding="10"&gt;
+</PRE>
+<P>this has the effect:</P>
+<TABLE border=1 cellPadding=10>
+  <TBODY>
+  <TR>
+    <TH>Year</TH>
+    <TH>Sales</TH></TR>
+  <TR>
+    <TD>2000</TD>
+    <TD>$18M</TD></TR>
+  <TR>
+    <TD>2001</TD>
+    <TD>$25M</TD></TR>
+  <TR>
+    <TD>2002</TD>
+    <TD>$36M</TD></TR></TBODY></TABLE>
+<H3>Cell Spacing</H3>
+<P>By contrast the <I>cellspacing</I> attribute sets the space between the 
+cells. Setting the cell spacing to 10:</P><PRE>&lt;table border="1" cellpadding="10" cellspacing="10"&gt;
+</PRE>
+<P>has the effect:</P>
+<TABLE border=1 cellPadding=10 cellSpacing=10>
+  <TBODY>
+  <TR>
+    <TH>Year</TH>
+    <TH>Sales</TH></TR>
+  <TR>
+    <TD>2000</TD>
+    <TD>$18M</TD></TR>
+  <TR>
+    <TD>2001</TD>
+    <TD>$25M</TD></TR>
+  <TR>
+    <TD>2002</TD>
+    <TD>$36M</TD></TR></TBODY></TABLE>
+<H3>Table Width</H3>
+<P>You can set the width of the table using the <I>width</I> attribute. The 
+value is either the width in pixels or a percentage value representing the 
+percentage of the space available between the left and right margins. For 
+instance to set the width to 80% of the margins:</P><PRE>&lt;table border="1" cellpadding="10" width="80%"&gt;
+</PRE>
+<P>which has the effect:</P>
+<TABLE border=1 cellPadding=10 width="80%">
+  <TBODY>
+  <TR>
+    <TH>Year</TH>
+    <TH>Sales</TH></TR>
+  <TR>
+    <TD>2000</TD>
+    <TD>$18M</TD></TR>
+  <TR>
+    <TD>2001</TD>
+    <TD>$25M</TD></TR>
+  <TR>
+    <TD>2002</TD>
+    <TD>$36M</TD></TR></TBODY></TABLE>
+<H3>Text Alignment within Cells</H3>
+<P>By default browsers center heading cells (th), and left align data cells 
+(td). You can change alignment using the <I>align</I> attribute, which can be 
+added to each cell or to the row (tr element). It is used with the values 
+"left", "center" or "right":</P><PRE>&lt;table border="1" cellpadding="10" width="80%"&gt;
+&lt;tr align="center"&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Sales&lt;/th&gt;&lt;/tr&gt;
+&lt;tr align="center"&gt;&lt;td&gt;2000&lt;/td&gt;&lt;td&gt;$18M&lt;/td&gt;&lt;/tr&gt;
+&lt;tr align="center"&gt;&lt;td&gt;2001&lt;/td&gt;&lt;td&gt;$25M&lt;/td&gt;&lt;/tr&gt;
+&lt;tr align="center"&gt;&lt;td&gt;2002&lt;/td&gt;&lt;td&gt;$36M&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</PRE>
+<P>with the following result:</P>
+<TABLE border=1 cellPadding=10 width="80%">
+  <TBODY>
+  <TR align=middle>
+    <TH>Year</TH>
+    <TH>Sales</TH></TR>
+  <TR align=middle>
+    <TD>2000</TD>
+    <TD>$18M</TD></TR>
+  <TR align=middle>
+    <TD>2001</TD>
+    <TD>$25M</TD></TR>
+  <TR align=middle>
+    <TD>2002</TD>
+    <TD>$36M</TD></TR></TBODY></TABLE>
+<P>The <I>valign</I> attribute plays a similar role for the vertical alignment 
+of cell content. It is used with the values "top", "middle" or "bottom", and can 
+be added to each cell or row. By default, heading cells (th) position their 
+content in the middle of the cells while data cells align their content at the 
+top of each cell.</P>
+<H3>Empty Cells</H3>
+<P>One quirk is the way browsers deal with empty cells, compare:</P>
+<TABLE border=1 cellPadding=10 width="80%">
+  <TBODY>
+  <TR align=middle>
+    <TH>Year</TH>
+    <TH>Sales</TH></TR>
+  <TR align=middle>
+    <TD>2000</TD>
+    <TD>$18M</TD></TR>
+  <TR align=middle>
+    <TD>2001</TD>
+    <TD>$25M</TD></TR>
+  <TR align=middle>
+    <TD>2002</TD>
+    <TD>$36M</TD></TR>
+  <TR align=middle>
+    <TD>2003</TD>
+    <TD></TD></TR></TBODY></TABLE>
+<P>with</P>
+<TABLE border=1 cellPadding=10 width="80%">
+  <TBODY>
+  <TR align=middle>
+    <TH>Year</TH>
+    <TH>Sales</TH></TR>
+  <TR align=middle>
+    <TD>2000</TD>
+    <TD>$18M</TD></TR>
+  <TR align=middle>
+    <TD>2001</TD>
+    <TD>$25M</TD></TR>
+  <TR align=middle>
+    <TD>2002</TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<P>The former occurs when a cell is empty:</P><PRE>&lt;td&gt;&lt;/td&gt;
+</PRE>
+<P>To prevent this, include a non-breaking space:</P><PRE>&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+</PRE>
+<H3>Cells that span more than one row or column</H3>
+<P>Let's extend the above example to break out sales by north and south sales 
+regions:</P>
+<TABLE border=1 cellPadding=10 width="80%">
+  <TBODY>
+  <TR align=middle>
+    <TH rowSpan=2>Year</TH>
+    <TH colSpan=3>Sales</TH></TR>
+  <TR align=middle>
+    <TH>North</TH>
+    <TH>South</TH>
+    <TH>Total</TH></TR>
+  <TR align=middle>
+    <TD>2000</TD>
+    <TD>$10M</TD>
+    <TD>$8M</TD>
+    <TD>$18M</TD></TR>
+  <TR align=middle>
+    <TD>2001</TD>
+    <TD>$14M</TD>
+    <TD>$11M</TD>
+    <TD>$25M</TD></TR></TBODY></TABLE>
+<P>The heading "Year" now spans two rows, while the heading "Sales" spans three 
+columns. This is done by setting the <I>rowspan</I> and <I>colspan</I> 
+attributes respectively. The markup for the above is:</P><PRE>&lt;table border="1" cellpadding="10" width="80%"&gt;
+&lt;tr align="center"&gt;&lt;th rowspan="2"&gt;Year&lt;/th&gt;&lt;th colspan="3"&gt;Sales&lt;/th&gt;&lt;/tr&gt;
+&lt;tr align="center"&gt;&lt;th&gt;North&lt;/th&gt;&lt;th&gt;South&lt;/th&gt;&lt;th&gt;Total&lt;/th&gt;&lt;/tr&gt;
+&lt;tr align="center"&gt;&lt;td&gt;2000&lt;/td&gt;&lt;td&gt;$10M&lt;/td&gt;&lt;td&gt;$8M&lt;/td&gt;&lt;td&gt;$18M&lt;/td&gt;&lt;/tr&gt;
+&lt;tr align="center"&gt;&lt;td&gt;2001&lt;/td&gt;&lt;td&gt;$14M&lt;/td&gt;&lt;td&gt;$11M&lt;/td&gt;&lt;td&gt;$25M&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</PRE>
+<P>You can simplify this by taking advantage of the fact that browsers don't 
+need the end tags for table cells and rows:</P><PRE>&lt;table border="1" cellpadding="10" width="80%"&gt;
+&lt;tr align="center"&gt;&lt;th rowspan="2"&gt;Year&lt;th colspan="3"&gt;Sales
+&lt;tr align="center"&gt;&lt;th&gt;North&lt;th&gt;South&lt;th&gt;Total
+&lt;tr align="center"&gt;&lt;td&gt;2000&lt;td&gt;$10M&lt;td&gt;$8M&lt;td&gt;$18M
+&lt;tr align="center"&gt;&lt;td&gt;2001&lt;td&gt;$14M&lt;td&gt;$11M&lt;td&gt;$25M
+&lt;/table&gt;
+</PRE>
+<P>Notice that as the heading "Year" spans two rows, the first th element on the 
+second row appears on the second rather than the first column.</P>
+<H3>Borderless tables</H3>
+<P>These are commonly used for laying out pages in a gridded fashion. All you 
+need to do is to add <I>border="0"</I> and <I>cellspacing="0"</I> to the table 
+element:</P>
+<TABLE border=0 cellPadding=10 cellSpacing=0>
+  <TBODY>
+  <TR>
+    <TH>Year</TH>
+    <TH>Sales</TH></TR>
+  <TR>
+    <TD>2000</TD>
+    <TD>$18M</TD></TR>
+  <TR>
+    <TD>2001</TD>
+    <TD>$25M</TD></TR>
+  <TR>
+    <TD>2002</TD>
+    <TD>$36M</TD></TR></TBODY></TABLE>
+<P>This was produced using the following markup:</P><PRE>&lt;table border="0" cellspacing="0" cellpadding="10"&gt;
+&lt;tr&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Sales&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2000&lt;/td&gt;&lt;td&gt;$18M&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2001&lt;/td&gt;&lt;td&gt;$25M&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2002&lt;/td&gt;&lt;td&gt;$36M&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</PRE>
+<P>If you leave out the cellspacing attribute you will get a thin gap between 
+the cells, as shown below:</P>
+<TABLE border=0 cellPadding=10>
+  <TBODY>
+  <TR>
+    <TH>Year</TH>
+    <TH>Sales</TH></TR>
+  <TR>
+    <TD>2000</TD>
+    <TD>$18M</TD></TR>
+  <TR>
+    <TD>2001</TD>
+    <TD>$25M</TD></TR>
+  <TR>
+    <TD>2002</TD>
+    <TD>$36M</TD></TR></TBODY></TABLE>
+<H3>Coloring your tables</H3>
+<P>This page uses a <A href="http://www.w3.org/MarkUp/Guide/Style.html">style 
+sheet</A> to set the background colors for tables, with a different color for 
+heading and data cells. The style rules I used are as follows:</P><PRE>table {
+  margin-left: -4%;
+  font-family: sans-serif;
+  background: white;
+  border-width: 2;
+  border-color: white;
+}
+th { font-family: sans-serif; background: rgb(204, 204, 153) }
+td { font-family: sans-serif; background: rgb(255, 255, 153) }
+</PRE>
+<P>The last two lines above set the background color for th and td cells to 
+given red/green/blue values. The numbers are in the range 0 to 255 (fully 
+saturated).</P>
+<P>Another way to set the background color is to use the <I>bgcolor</I> 
+attribute. This works with nearly all browsers, and doesn't rely on style sheet 
+support. The first step is to determine the hexadecimal values for the red, 
+green and blue components of the color you wish to use. A <A 
+href="http://www.w3.org/MarkUp/Guide/Style.html#hexcolors">convertor</A> is 
+included in the <A href="http://www.w3.org/MarkUp/Guide/Style.html">style 
+page</A>.</P><PRE>&lt;table border="0" cellspacing="0" cellpadding="10"&gt;
+  &lt;tr&gt;
+    &lt;th bgcolor="#CCCC99"&gt;Year&lt;/th&gt;
+    &lt;th bgcolor="#CCCC99"&gt;Sales&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td bgcolor="#FFFF66"&gt;2000&lt;/td&gt;
+    &lt;td bgcolor="#FFFF66"&gt;$18M&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td bgcolor="#FFFF66"&gt;2001&lt;/td&gt;
+    &lt;td bgcolor="#FFFF66"&gt;$25M&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td bgcolor="#FFFF66"&gt;2002&lt;/td&gt;
+    &lt;td bgcolor="#FFFF66"&gt;$36M&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</PRE>
+<H3>Making your tables accessible</H3>
+<P>If you are unable to see the table it can be quite hard to understand what 
+the table is about. The first step is to add information describing the purpose 
+and structure of the table. The caption element allows you to provide a caption, 
+and to position this above or below the table. The caption element should appear 
+before the tr element for the first row.</P>
+<TABLE border=1 cellPadding=10 width="80%">
+  <CAPTION>Projected sales revenue by year</CAPTION>
+  <TBODY>
+  <TR align=middle>
+    <TH>Year</TH>
+    <TH>Sales</TH></TR>
+  <TR align=middle>
+    <TD>2000</TD>
+    <TD>$18M</TD></TR>
+  <TR align=middle>
+    <TD>2001</TD>
+    <TD>$25M</TD></TR></TBODY></TABLE>
+<P>which was produced by the following markup:</P><PRE>&lt;table border="1" cellpadding="10" width="80%"&gt;
+&lt;caption&gt;Projected sales revenue by year&lt;/caption&gt;
+&lt;tr align="center"&gt;
+  &lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Sales&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr align="center"&gt;&lt;td&gt;2000&lt;/td&gt;&lt;td&gt;$18M&lt;/td&gt;&lt;/tr&gt;
+&lt;tr align="center"&gt;&lt;td&gt;2001&lt;/td&gt;&lt;td&gt;$25M&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</PRE>
+<P>Here is the same table with <TT>align="bottom"</TT> added to the caption 
+element:</P>
+<TABLE border=1 cellPadding=10 width="60%">
+  <CAPTION align=bottom>Projected sales revenue by year</CAPTION>
+  <TBODY>
+  <TR align=middle>
+    <TH>Year</TH>
+    <TH>Sales</TH></TR>
+  <TR align=middle>
+    <TD>2000</TD>
+    <TD>$18M</TD></TR>
+  <TR align=middle>
+    <TD>2001</TD>
+    <TD>$25M</TD></TR></TBODY></TABLE>
+<P>The table element's <I>summary</I> attribute should be used to describe the 
+structure of the table for people who can't see the table. For instance: "the 
+first column gives the year and the second, the revenue for that year".</P><PRE>&lt;table summary="the first column gives the year
+and the second, the revenue for that year"&gt;
+</PRE>
+<H4>Specifying the relation between header and data cells</H4>
+<P>When a table is rendered to audio or to Braille, it is useful to be able to 
+identify which headers describe each cell. For instance, an aural browser could 
+allow you to move up and down or left and right from cell to cell, with the 
+appropriate headers spoken before each cell.</P>
+<P>To support this you need to annotate the header and/or data cells. The 
+simplest approach is to add the <I>scope</I> attribute to header cells. It may 
+be used with the following values:</P>
+<UL>
+  <LI><B>row</B>: The current cell provides header information for the rest of 
+  the row that contains it. 
+  <LI><B>col</B>: The current cell provides header information for the rest of 
+  the column that contains it. </LI></UL>
+<P>Applying this to the example table gives:</P><PRE>&lt;table border="1" cellpadding="10" width="80%"&gt;
+&lt;caption&gt;Projected sales revenue by year&lt;/caption&gt;
+&lt;tr align="center"&gt;
+  &lt;th scope="col"&gt;Year&lt;/th&gt;
+  &lt;th scope="col"&gt;Sales&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr align="center"&gt;&lt;td&gt;2000&lt;/td&gt;&lt;td&gt;$18M&lt;/td&gt;&lt;/tr&gt;
+&lt;tr align="center"&gt;&lt;td&gt;2001&lt;/td&gt;&lt;td&gt;$25M&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</PRE>
+<P>For more complex tables, you can use the <I>headers</I> attribute on 
+individual data cells to provide a space separated list of identifiers for 
+header cells. Each such header cell must have an <I>id</I> attribute with a 
+matching identifier.</P>
+<P>A final point is that you should consider using the <I>abbr</I> attribute to 
+specify an abbreviation for long headers. This makes it tolerable to listen to 
+lists of headers for each cell, for instance:</P><PRE>&lt;th abbr="W3C"&gt;World Wide Web Consortium&lt;/th&gt;
+</PRE>
+<H2>Roll-Overs and other tricks</H2>
+<P>A little JavaScript can go a long way to enliven your pages. You will be 
+shown below how to create "rollovers" where the appearence of a link changes as 
+you move the mouse over it. You will also learn how to create cycling banner ads 
+which help to direct visitors to your sponsors' sites</P>
+<H3>Roll-Overs</H3>
+<P>In the most common form, a roll-over consists of an image serving as a 
+hypertext link. While the mouse pointer is over the image, it changes appearence 
+to attract attention to the link. For example, you could add a glow effect, a 
+drop shadow or simply change the background color. Here is an example:</P><PRE>&lt;script type="text/javascript"&gt;
+if (document.images)
+{
+    image1 = new Image;
+    image2 = new Image;
+    image1.src = "enter1.gif";
+    image2.src = "enter2.gif";
+}
+
+function chgImg(name, image)
+{
+    if (document.images)
+    {
+        document[name].src = eval(image+".src");
+    }
+}
+&lt;/script&gt;
+
+...
+
+&lt;a href="/" onMouseOver='chgImg("enter", "image2")'
+onMouseOut='chgImg("enter", "image1")'&gt;&lt;img name="enter"
+src="enter1.gif" border="0" alt="Enter if you dare!"&gt;&lt;/a&gt;
+</PRE>
+<P>and here is what it looks like ...</P>
+<SCRIPT type=text/javascript>
+
+
+
+if (document.images)
+{
+    image1 = new Image;
+    image2 = new Image;
+    image1.src = "enter1.gif";
+    image2.src = "enter2.gif";
+}
+
+function chgImg(name, image)
+{
+    if (document.images)
+    {
+        document[name].src = eval(image+".src");
+    }
+}
+
+
+
+</SCRIPT>
+<A href="http://www.w3.org/" onmouseout='chgImg("enter", &#10;"image1")' 
+onmouseover='chgImg("enter", &#10;"image2")'><IMG alt="Enter if you dare!" 
+border=0 name=enter src="Intro to HTML_Advanced_bestanden/enter1.gif"></A> 
+<P>I created these images using a freeware painting tool by adding a hot wax 
+effect and then a drop shadow to the text. You can find lots of advice and 
+royalty free clipart on the Web via most search engines.</P>
+<H3>Banner Ads</H3>
+<P>If your website has several sponsors, then you can use an image link that 
+cycles through each of the sponsors in turn. The first step is to create an 
+image for each of your sponsors. All the images should have the same size. The 
+corresponding URLs for the images and for the websites are then placed into the 
+arrays named <I>adImages</I> and <I>adURLs</I> defined at the start of the 
+script. The img element for the link should be initialized to the first image in 
+the array. The cycle is started off using the onload event on the body 
+element.</P><PRE>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;cycling banner ads&lt;/title&gt;
+&lt;script type="text/javascript"&gt;
+if (document.images)
+{
+    adImages = new Array("hosts/mit.gif",
+                "hosts/inria.gif", "hosts/keio.gif");
+    adURLs = new Array("www.lcs.mit.edu",
+                "www.inria.fr", "www.keio.ac.jp");
+    thisAd = 0;
+}
+
+function cycleAds()
+{
+    if (document.images)
+    {
+        if (document.adBanner.complete)
+        {
+            if (++thisAd == adImages.length)
+                thisAd = 0;
+
+            document.adBanner.src = adImages[thisAd];
+        }
+    }
+
+    // change to next sponsor every 3 seconds
+    setTimeout("cycleAds()", 3000);
+}
+
+function gotoAd()
+{
+    document.location.href = "http://" + adURLs[thisAd];
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload="cycleAds()"&gt;
+...
+
+&lt;a href="javascript:gotoAd()"&gt;&lt;img name="adBanner"
+src="hosts/mit.gif" border="0" alt="Our sponsors"&gt;&lt;/a&gt;
+</PRE>
+<P>Our Sponsors: <A href="javascript:gotoAd()"><IMG alt="Our sponsors" border=0 
+height=48 name=adBanner src="Intro to HTML_Advanced_bestanden/mit.gif" 
+width=48></A></P>
+<P><I>Note:</I> you are recommended to make sure that all of the images are the 
+same width and height. An alternative is to add width and height attributes to 
+the img element to ensure the images are all shown at the same size.</P>
+<H3>What about browsers that don't support scripting?</H3>
+<P>The content of a <I>noscript</I> element is only shown if the browser doesn't 
+support scripting. It should be used when you want to give people access to 
+information that would otherwise be inaccessible to people with browsers that 
+don't support scripting. Let's assume that you want to make the links for your 
+sponsors available as text:</P><PRE>&lt;noscript&gt;
+Our sponsors: &lt;a href="http://www.lcs.mit.edu/"&gt;MIT&lt;/a&gt;,
+&lt;a href="http://www.inria.fr/"&gt;INRIA&lt;/a&gt;, and
+&lt;a href="http://www.keio.ac.jp/"&gt;Keio University&lt;/a&gt;.
+&lt;/noscript&gt;
+</PRE>
+<P>There are many free sources of information about scripting, which can be 
+easily found via most search engines.</P>
+<H2>Getting Further Information</H2>
+<P>W3C's Recommendation for <A href="http://www.w3.org/TR/REC-html40">HTML 
+4.0</A> is the authorative specification for HTML. However, it is a technical 
+specification. For a less technical source of information you may want to 
+purchase one of the many books on HTML, for example "<A 
+href="http://www.w3.org/People/Raggett#htmlbook">Raggett on HTML 4</A>", 
+published 1998 by Addison Wesley.<!-- See also <em>"<a href= 
+"http://www.wrox.com/Consumer/Store/Details.asp?ISBN=1861003439">Beginning
+XHTML</a>"</em>, published 2000 by Wrox Press, which introduces
+W3C's reformulation of HTML as an application of XML.--> 
+<A href="http://www.w3.org/TR/xhtml1/">XHTML 1.0</A> is now a W3C 
+Recommendation.</P>
+<P>Best of luck and get writing!</P>
+<P><I><A href="http://www.w3.org/People/Raggett">Dave Raggett</A> &lt;<A 
+href="mailto:dsr@w3.org">dsr@w3.org</A>&gt;</I></P>
+<P class=policyfooter><SMALL><A 
+href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright" 
+rel=Copyright>Copyright</A> © 1994-2003 <A href="http://www.w3.org/"><ACRONYM 
+title="World Wide Web Consortium">W3C</ACRONYM></A><SUP>®</SUP> (<A 
+href="http://www.lcs.mit.edu/"><ACRONYM 
+title="Massachusetts Institute of Technology">MIT</ACRONYM></A>, <A 
+href="http://www.ercim.org/"><ACRONYM 
+title="European Research Consortium for Informatics and Mathematics">ERCIM</ACRONYM></A>, 
+<A href="http://www.keio.ac.jp/">Keio</A>), All Rights Reserved. W3C <A 
+href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</A>, 
+<A 
+href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</A>, 
+<A href="http://www.w3.org/Consortium/Legal/copyright-documents" 
+rel=Copyright>document use</A> and <A 
+href="http://www.w3.org/Consortium/Legal/copyright-software" 
+rel=Copyright>software licensing</A> rules apply. Your interactions with this 
+site are in accordance with our <A 
+href="http://www.w3.org/Consortium/Legal/privacy-statement#Public">public</A> 
+and <A 
+href="http://www.w3.org/Consortium/Legal/privacy-statement#Members">Member</A> 
+privacy statements.</SMALL></P></BODY></HTML>

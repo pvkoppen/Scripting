@@ -1,0 +1,96 @@
+A {
+	COLOR: #039; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular; TEXT-DECORATION: underline
+}
+BODY {
+	FONT-SIZE: 13px; COLOR: black; LINE-HEIGHT: 16px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+P {
+	FONT-SIZE: 13px; COLOR: black; LINE-HEIGHT: 16px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+LINK {
+	FONT-SIZE: 13px; COLOR: black; LINE-HEIGHT: 16px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+OPTION {
+	FONT-SIZE: 13px; COLOR: black; LINE-HEIGHT: 16px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+LI {
+	FONT-SIZE: 13px; COLOR: black; LINE-HEIGHT: 16px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+OL {
+	FONT-SIZE: 13px; COLOR: black; LINE-HEIGHT: 16px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+UL {
+	FONT-SIZE: 13px; COLOR: black; LINE-HEIGHT: 16px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+TD {
+	FONT-SIZE: 12px; COLOR: black; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+TH {
+	FONT-SIZE: 12px; COLOR: black; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; MARGIN-BOTTOM: 4px; COLOR: black; LINE-HEIGHT: 18px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head1a {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #663; LINE-HEIGHT: 18px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head1b {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: black; LINE-HEIGHT: 18px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular; LETTER-SPACING: 2px
+}
+.head1w {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: white; LINE-HEIGHT: 18px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: black; LINE-HEIGHT: 15px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head2a {
+	MARGIN-TOP: 5px; FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #663; LINE-HEIGHT: 15px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head2tm6 {
+	MARGIN-TOP: 6px; FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: black; LINE-HEIGHT: 15px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head2w {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #fff; LINE-HEIGHT: 16px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head2indent {
+	MARGIN-TOP: 8px; FONT-WEIGHT: bold; FONT-SIZE: 13px; MARGIN-LEFT: 6px; COLOR: black; LINE-HEIGHT: 15px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head3 {
+	FONT-WEIGHT: bold; COLOR: black; LINE-HEIGHT: 12px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head3a {
+	MARGIN-TOP: 8px; FONT-WEIGHT: bold; COLOR: black; LINE-HEIGHT: 12px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head3c {
+	FONT-WEIGHT: bold; COLOR: #663; LINE-HEIGHT: 12px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head3b {
+	MARGIN-TOP: 0.4em; FONT-WEIGHT: bold; FONT-SIZE: 1em; MARGIN-BOTTOM: 0.4em; COLOR: black; BORDER-BOTTOM: #6c8899 2px solid; LETTER-SPACING: 0.1em
+}
+.head3indent {
+	FONT-WEIGHT: bold; MARGIN-LEFT: 6px; COLOR: black; LINE-HEIGHT: 12px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head3tm6 {
+	MARGIN-TOP: 6px; FONT-WEIGHT: bold; COLOR: black; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head4 {
+	FONT-WEIGHT: bold; COLOR: black; LINE-HEIGHT: 10px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.head4b {
+	FONT-WEIGHT: bold; COLOR: #663; LINE-HEIGHT: 10px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.smalltext {
+	FONT-SIZE: 10px; LINE-HEIGHT: 13px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.smalltext2a {
+	FONT-SIZE: 11px; COLOR: black; LINE-HEIGHT: 13px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.smalltext2b {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #663; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.smalltext2c {
+	FONT-SIZE: 6px; WIDTH: 400px; COLOR: #355263; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}
+.smalltext2d {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #663; LINE-HEIGHT: 12px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, Geneva, "Trebuchet MS", Arial, Helvetica, Geneva, Swiss, SunSans-Regular
+}

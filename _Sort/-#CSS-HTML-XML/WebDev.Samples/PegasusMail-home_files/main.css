@@ -1,0 +1,22 @@
+
+ /* $MVD$:color("10","a80000","Dk Blue","1") */
+ /* $MVD$:color("18","eeffff","HintYellow","0") */
+ /* $MVD$:color("19","80ff","Orange","1") */
+ /* $MVD$:color("20","ffd6ce","Lavender","1") */
+
+ BODY {background-color="white"; font-size : 10pt; font-family : "Arial", Helvetica, sans-serif ; color : black}
+ P { font-size : 10pt; font-family : "Arial", Helvetica, sans-serif ; color: black}
+ LI { font-size : 10pt; font-family : "Arial", Helvetica, sans-serif ; color: black}
+ BLOCKQUOTE {font-size : 10pt; font-family : "Verdana", "Arial", Helvetica, sans-serif ; color : black}
+ TD { font-size : 10pt; font-family : "Arial", Helvetica, sans-serif ; color: black}
+ CODE {font-size : 8pt; font-family : "Verdana", "Arial", Helvetica, sans-serif ; color : "#999999"}
+
+ A:link { text-decoration : none;
+          color : blue;}
+ A:visited { text-decoration : none;
+             color : purple;}
+ A:active { text-decoration : none;
+            color : black;}
+ A:hover { text-decoration : underline;
+          color : blue;}
+ 

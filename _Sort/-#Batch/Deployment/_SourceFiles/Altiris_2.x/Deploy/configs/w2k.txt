@@ -1,0 +1,138 @@
+; Base Server Unattended Install Script for Windows 2000
+;
+
+[Unattended]
+   DriverSigningPolicy=Ignore
+   ExtendOemPartition=1
+   FileSystem=ConvertNTFS
+   KeyboardLayout="US"
+   NtUpgrade=No
+   OemFilesPath=C:
+   OemPnPDriversPath=drivers\net;drivers\scsi
+   OemPreinstall=Yes
+   OemSkipEula=Yes
+   OverwriteOemFilesOnUpgrade=No
+   TargetPath=\WINNT
+   UnattendMode=FullUnattended
+   Win9xUpgrade=No
+
+[MassStorageDrivers]
+   "Adaptec Ultra160 Family Manager Set"=OEM
+   "Compaq Smart Array Controllers"=OEM
+   "Smart Array 5300 Controller"=OEM
+   "Smart Array 5i, 532, 5312 Controllers"=OEM
+   "Smart Array 6i, 641, 642, 6400 EM, 6400 Controllers"=OEM
+   "CSB-6 Ultra ATA-100 IDE RAID Controller"=OEM
+   "Integrated Ultra ATA-100 Dual Channel Controller"=OEM
+   "Integrated Ultra ATA-100 IDE RAID Controller"=OEM
+   "LSI Logic Ultra320 1020/1030 Driver"=OEM
+   "Emulex LP7000 PCI-Fibre Channel HBA 0E11 Version"=OEM
+   "Emulex LP8000 PCI-Fibre Channel HBA 0E11 Version"=OEM
+   "Emulex LP9000 PCI-Fibre Channel HBA 0E11 Version"=OEM
+   "Emulex LP9802 PCI-Fibre Channel HBA 0E11 Version"=OEM
+   "Emulex LP10000 PCI-Fibre Channel HBA 0E11 Version"=OEM
+   "Emulex LP952 PCI-Fibre Channel HBA 0E11 Version"=OEM
+   "Emulex LP982 PCI-Fibre Channel HBA 0E11 Version"=OEM
+   "Emulex LP6000 PCI-Fibre Channel HBA"=OEM
+   "Emulex LP7000 PCI-Fibre Channel HBA"=OEM
+   "Emulex LP8000 PCI-Fibre Channel HBA"=OEM
+   "Emulex LP9000 PCI-Fibre Channel HBA"=OEM
+   "Emulex LP9802 PCI-Fibre Channel HBA"=OEM
+   "Emulex LP10000 PCI-Fibre Channel HBA"=OEM
+   "Emulex LPX1000 PCI-Fibre Channel HBA"=OEM
+   "Emulex LP850 PCI-Fibre Channel HBA"=OEM
+   "Emulex LP950 PCI-Fibre Channel HBA"=OEM
+   "Emulex LP982 PCI-Fibre Channel HBA"=OEM
+   "Emulex LP1050 PCI-Fibre Channel HBA"=OEM
+   "Emulex LP101 PCI-Fibre Channel HBA"=OEM
+   "QLogic Fibre Channel Adapter"=OEM
+   "IDE CD-ROM (ATAPI 1.2)/PCI IDE Controller"=RETAIL
+   "Symbios Logic C8100 PCI SCSI Host Adapter"=RETAIL
+   "Symbios Logic C896 PCI SCSI Host Adapter"=RETAIL
+   "Symbios Logic C8xx PCI SCSI Host Adapter"=RETAIL
+
+[OEMBootFiles]
+   ADPU160M.SYS
+   CPQARRY2.SYS
+   CPQCISSM.SYS
+   LSICSB6.SYS
+   MEGAIDE.SYS
+   SYMMPI.SYS
+   LPXNDS.SYS
+   LPXFTR.SYS
+   QL2300.SYS
+   TXTSETUP.OEM
+
+[GuiUnattended]
+   AdminPassword=password
+   AutoLogon=Yes
+   AutoLogonCount=1
+   OEMSkipRegional=1
+   OemSkipWelcome=1
+   TimeZone=20
+
+[UserData]
+   ComputerName=*
+   FullName=HP
+   OrgName=HPQ
+
+[Proxy]
+   Proxy_Enable=0
+   Use_Same_Proxy=0
+
+[LicenseFilePrintData]
+   AutoMode=PerServer
+   AutoUsers=999
+
+[GuiRunOnce]
+   "c:\$oem$\ntcsp\setupc.exe /f /silent /use-first-csp:1989"
+   "c:\$oem$\cpqdmf.exe /fix"
+   "c:\$oem$\xmmzero.exe"
+   "cmd /c rmdir /s /q c:\drivers"
+   "cmd /c rename c:\altiris\aclient\wlogev~1.exe wlogevent.exe"
+   "c:\altiris\aclient\aclient.exe c:\altiris\aclient\aclient.inp -silent -install -ns"
+   "c:\$oem$\cpqreb~1.exe /yes"
+
+[Display]
+   AutoConfirm=1
+   BitsPerPel=16
+   ConfigureAtLogon=0
+   VRefresh=60
+   Xresolution=800
+   Yresolution=600
+
+[RegionalSettings]
+   Language=00000409
+   LanguageGroup=1
+
+[Components]
+   iis_pwmgr=Off
+   iis_inetmgr=Off
+   iis_www=Off
+   iis_ftp=Off
+   TSClients=On
+   TSEnable=On
+
+[Networking]
+   InstallDefaultComponents=Yes
+
+[Identification]
+   JoinWorkgroup=WORKGROUP
+
+[NetOptionalComponents]
+   SNMP=1
+   WBEMSNMP=1
+   SimpTCP=1
+
+[SNMP]
+   Community_Name=public
+   Traps=localhost
+
+[TerminalServices]
+   ApplicationServer=0
+   PermissionsSetting=0
+
+[Data]
+   AutoPartition=1
+   MsDosInitiated="0"
+   UnattendedInstall="Yes"

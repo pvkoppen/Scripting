@@ -1,0 +1,7 @@
+device=a:\himem.sys /testmem:off
+FILES=40
+buffers=30
+DOS=HIGH,UMB
+device=a:\cpqidecd.sys /D:CPQCDROM
+lastdrive=z
+

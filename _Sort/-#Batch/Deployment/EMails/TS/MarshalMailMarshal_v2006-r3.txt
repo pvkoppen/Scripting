@@ -1,0 +1,17 @@
+Hello Administrator(s),
+----------------------------------------------------------------
+
+This Software Install Can not be automated: MailMarshal v2006. 
+Please perform the following activities manually:
+- Logon to the new Terminal Sever using an Administrator account.
+- Run the MailMarshal Install from: \\TOLDS01\eXpress\_usr.lib\Scripts\TS\MarshalMailMarshal_v2006-r3-Manual.cmd
+  - Perform a Custom Install.
+  - Install only the MailMarshal Console.
+  - Accept all other default settings.
+- Wait for the command-line box to disappear and the terminal server will reboot.
+
+----------------------------------------------------------------
+Altiris Automated Build Process.
+
+This is a generated email message, do not reply to this message.
+

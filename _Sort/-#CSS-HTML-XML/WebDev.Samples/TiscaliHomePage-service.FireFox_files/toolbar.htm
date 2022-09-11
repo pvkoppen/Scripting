@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><!-- CORPORATE TOOLBAR 1.01 ------------------------------------------------------------------------->
+<!-- Author: Mauro Sardu (msardu@tiscali.com) ------------------------------------------------------>
+<!-- Version:1.01 ----------------------------------------------------------------------------------->
+<!-- Please read the readme.txt to know how to install the toolbar --------------------------------><!-- For any problem or just to comment or suggest something feel free to write me or better ------><!-- Use the forum  at http://gui.tiscali.com/forum ------------------------------------------------>
+<!-- ----------------------------------------------------------------------------------------------->
+<!-- If you don't want to use this inside IFRAME please remember that it only works ----><!-- with strict.dtd in the page ------------------------------------------------------------------><!-- Problems fixed ------------------------------------------------------------------><!-- v 1.01 Topmargin and height of the IFRAME  fixed ---------------------------------------------->
+
+
+
+
+
+
+<!-- base -->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Tiscali</title>
+	
+<link rel="stylesheet" href="toolbar_data/776w3c.css" type="text/css"></head>
+
+<body onload="klick(document.getElementById('six'));">
+<script type="text/javascript" src="toolbar_data/776scripts.js"></script><!------ CONTAINER OMVAT TOPBAR EN SEARCHBAR ------>
+<div class="container">
+<!------ TOPBAR BEGIN ------>
+ <div class="topbar">
+  <div class="logo"><img src="toolbar_data/hhelp.gif" alt="Tiscali Logo"></div>
+<!-- JUST CHANGE THE LABEL NAME AND PUT THE INDEX URL IN onclick="top.location.href='<index url>';" -->
+<div class="tabs" id="bar">
+   <div class="tab five" style="background-color: rgb(216, 0, 95);" onmouseover="klick(this);" onmouseout="leavemenu();" id="five"><b>entertainment</b></div>
+   <div class="tab four" style="background-color: rgb(0, 97, 180);" onmouseover="klick(this);" onmouseout="leavemenu();" id="four"><b>Actueel</b></div>
+   <div class="tab three" style="background-color: rgb(97, 175, 50);" onmouseover="klick(this);" onmouseout="leavemenu();" id="three"><b>diensten</b></div>
+   <div class="tab six" style="background-color: rgb(22, 34, 115);" onmouseover="klick(this);" onmouseout="leavemenu();" id="six" onclick="{top.location.href='/helpdesk/default.asp';}"><b style="border-bottom: 1px solid rgb(22, 34, 115);">helpdesk</b></div>
+   <div class="tab two" style="background-color: rgb(255, 151, 6);" onmouseover="klick(this);" onmouseout="leavemenu();" id="two"><b>Producten</b></div>
+   <div class="tab one" style="background-color: rgb(126, 113, 180);" onmouseover="klick(this);" onmouseout="leavemenu();" id="one" onclick="{top.location.href='/home/home_center.asp';}"><b>home</b></div>   </div> <!-- einde tabs -->
+</div>
+  </div>
+
+
+<div style="background-color: rgb(22, 34, 115);" class="lowbar" id="lowbar" onmouseover="noklick();" onmouseout="leavemenu();"><div class="menu" id="menu"> 
+<a href="http://www.tiscali.nl/helpdesk/mededelingen.asp">.Mededelingen</a>
+<a href="http://www.tiscali.nl/helpdesk/handleidingen.asp">.Handleidingen</a>
+<a href="http://www.tiscali.nl/helpdesk/faq.asp">.Veelgestelde vragen</a>
+<a href="http://www.tiscali.nl/helpdesk/mijnabonnement.asp">.Mijn abonnement</a>
+<a href="http://www.tiscali-business.nl/klantenservice/default.asp" target="_blank">.Zakelijk</a>
+</div></div>
+<!------ TOPBAR EINDE ------>
+
+<!------ SEARCHBAR BEGIN ------>
+<!-- CHANGE THE ACTION OF THE SEARCH AND THE URL OF THE MAIL. --> 
+<div class="search-bar">
+	<div class="mail">
+		<div class="mailicon"><img src="toolbar_data/email.gif" alt="" border="0" height="17" width="17"></div>
+		<a href="http://www.tiscali.nl/content/clicks/clickout.asp?id=236">E-mail</a>
+	</div>
+	<div class="search">
+		<form action="http://search-dyn.tiscali.nl/search.php?" name="searchForm" id="searchForm">
+			<div class="form">
+				<a href="http://search.tiscali.nl/">Ik zoek</a><input class="keyword" id="keyword" name="key" type="text">
+				<a href="http://search.tiscali.nl/" onclick="searchForm.submit();return false;" class="button"><img src="toolbar_data/zoeken.gif" alt="Zoeken" border="0"></a>
+				<input name="collection" value="nl" type="hidden">
+				<input name="collapse" value="on" type="hidden">
+				<input name="language" value="nl" type="hidden">
+				<input name="spell" value="suggest" type="hidden">
+				<input name="hits" value="10" type="hidden">
+				<input name="tiscalitype" value="web" type="hidden">
+				<input name="pg" value="1" type="hidden">
+				<input name="offset" value="0" type="hidden">
+				<input name="external" value="1" type="hidden">
+				<div style="float: right;"><img src="toolbar_data/zoekmetgoogle.gif" alt="zoekt met Google" border="0" height="27" width="123"></div>
+			</div>
+		</form>
+	 </div>
+</div>
+<!------ SEARCHBAR EINDE ------>
+
+<!------ CONTAINERDIV EINDE ------>
+<!-- FILL ALL THE MENUS WITH THE REAL CONTENTS -->
+<div id="H-one" class="hidden-menu">
+<a href="http://www.tiscali.nl/home/overtiscali/default.asp">.Over Tiscali</a>
+
+<a href="http://www.tiscali.nl/helpdesk/default.asp" target="_top">.Helpdesk</a>
+<a target="_top" href="http://www.tiscali-business.nl/default.asp">.Zakelijke diensten</a></div>
+<div id="H-two" class="hidden-menu"> 
+<a href="http://www.tiscali.nl/content/clicks/clickout.asp?id=3164">.ADSL</a>
+<a href="http://www.tiscali.nl/producten/homepage/domeinnaam.asp?activationcode=15597">.Domeinnaam</a>
+<a href="http://www.tiscali.nl/producten/inbellen/default.asp?activationcode=15076">.Inbellen</a>
+
+<a href="http://www.overstappendoejezo.nl/">.Overstappen</a>
+
+<a href="http://www.tiscali.nl/producten/telefonie/default.asp">.Telefonie</a>
+<a href="http://www.tiscali.nl/producten/veiligheid/default.asp">.Veiligheid</a><a href="http://www.tiscali-business.nl/default.asp">.Zakelijk</a>
+<a href="http://www.tiscali.nl/helpdesk/faq.asp">.Veel gestelde vragen</a>
+</div>
+
+<div id="H-three" class="hidden-menu"> 
+<a href="http://webchat.tiscali.nl/">.Chat</a>
+<a href="http://www.tiscali.nl/diensten/cards/default.asp">.E-cards</a>
+<a href="http://forum.tiscali.nl/">.Forum</a>
+<a href="http://www.tiscali.nl/diensten/cmobi/mobi_center.asp">.Mobiel</a>
+<a href="http://www.tiscali.nl/diensten/sms/sms_center.asp">.SMS</a>
+<a href="http://www.tiscali.nl/content/clicks/clickout.asp?id=236">.Webmail</a>
+</div>
+
+<div id="H-four" class="hidden-menu"> 
+<a href="http://www.tiscali.nl/actueel/cnews/news_center.asp">.Nieuws</a>
+<a href="http://www.tiscali.nl/actueel/cspor/spor_center.asp">.Sport</a>
+<a href="http://www.tiscali.nl/actueel/cfina/fina_center.asp">.Finance</a>
+<a href="http://www.tiscali.nl/actueel/weather/default.asp">.Weer</a>
+<a href="http://www.tiscali.nl/actueel/file/default.asp">.Verkeer</a>
+<a href="http://automotor.tiscali.nl/sites/nl/index.php3">.Auto &amp; motor</a>
+<a href="http://gezondheid.tiscali.nl/">.Gezondheid</a>
+<a href="http://www.tiscali.nl/actueel/ctrav/trav_center.asp">.Reizen</a>
+<a href="http://www.tiscali.nl/actueel/cmult/mult_center.asp">.Internet</a>
+</div>
+
+<div id="H-five" class="hidden-menu"> 
+<a href="http://www.tiscali.nl/entertainment/dating/default.asp">.Dating</a>
+<a href="http://www.ditmoetjezien.nl/" target="_blank">.Film</a>
+<a href="http://www.tiscali.nl/entertainment/cgame/game_center.asp">.Games</a>
+<a href="http://www.tiscali.nl/entertainment/photovote/intro.asp">.Photovote</a>
+<a href="http://www.tiscali.nl/entertainment/ente_center.asp">.Showbiz</a>
+<a target="_blank" href="http://tmc.tiscali.nl/">.Music</a>
+<a href="http://videoclub.tiscali.nl/">.Videoclub</a>
+<!-- FILL ALL THE MENUS WITH THE REAL CONTENTS -->
+</div>
+<div id="H-six" class="hidden-menu"> 
+<a href="http://www.tiscali.nl/helpdesk/mededelingen.asp">.Mededelingen</a>
+<a href="http://www.tiscali.nl/helpdesk/handleidingen.asp">.Handleidingen</a>
+<a href="http://www.tiscali.nl/helpdesk/faq.asp">.Veelgestelde vragen</a>
+<a href="http://www.tiscali.nl/helpdesk/mijnabonnement.asp">.Mijn abonnement</a>
+<a href="http://www.tiscali-business.nl/klantenservice/default.asp" target="_blank">.Zakelijk</a>
+</div>
+</body></html>

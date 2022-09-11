@@ -1,0 +1,147 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: How to directly call console-mode VBScript programs from the command-line
+Date: Wed, 16 Jul 2008 10:25:17 +1200
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01C8E72E.3DDE2660"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.3790.4133
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C8E72E.3DDE2660
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.source-code.biz/snippets/vbscript/4.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>How to directly call console-mode VBScript programs =
+from the command-line</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252"><LINK=20
+href=3D"http://www.source-code.biz/style.css" type=3Dtext/css =
+rel=3Dstylesheet>
+<META content=3D"MSHTML 6.00.6000.16608" name=3DGENERATOR></HEAD>
+<BODY>
+<P><B><FONT size=3D4>How to directly call console-mode VBScript programs =
+from the=20
+command-line</FONT></B></P>
+<P>The normal procedure to call a console-mode VBScript is to execute it =
+through=20
+cscript.exe</P>
+<BLOCKQUOTE><PRE>cscript /nologo scriptname.vbs parm1 parm2 =
+...</PRE></BLOCKQUOTE>
+<P>In order to avoid having to type "cscript /nologo" for calling =
+VBScripts, a=20
+new file extension can be registered. (This works with Windows 2000, XP =
+or=20
+newer). After that, the script can be directly called from the command =
+line:</P>
+<BLOCKQUOTE><PRE>scriptname parm1 parm2 ...</PRE></BLOCKQUOTE>
+<P>The following commands can be used to register the file extension=20
+".vbs_console" for console-mode VBScript files. (This registration is =
+stored=20
+permanently within the Windows system registry):</P>
+<BLOCKQUOTE><PRE>assoc .vbs_console=3DVBS_Console_File
+ftype VBS_Console_File=3D"%%SystemRoot%%\system32\CScript.exe" //E:vbs =
+//nologo "%%1" %%*</PRE></BLOCKQUOTE>
+<P>Additionally, the new file extension ".vbs_console" has to be added =
+to the=20
+PATHEXT environment variable.</P>
+<BLOCKQUOTE><PRE>set pathext=3D.vbs_console;%pathext%</PRE></BLOCKQUOTE>
+<P>(The Scripts have to be renamed from *.vbs to *.vbs_console)</P>
+<P>Author: <A href=3D"mailto:chdh@source-code.biz">Christian =
+d'Heureuse</A> (<A=20
+href=3D"http://www.source-code.biz/">http://www.source-code.biz/</A>, <A =
+
+href=3D"http://www.inventec.ch/chdh">www.inventec.ch/chdh</A>)<BR><A=20
+href=3D"http://www.source-code.biz/snippets/vbscript/">Index</A></P></BOD=
+Y></HTML>
+
+------=_NextPart_000_0000_01C8E72E.3DDE2660
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.source-code.biz/style.css
+
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif
+}
+TABLE {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif
+}
+BODY {
+	COLOR: black; BACKGROUND-COLOR: white
+}
+BODY.main {
+	BACKGROUND-IMAGE: url(images/page_background.gif); BACKGROUND-REPEAT: =
+repeat-y
+}
+H1 {
+	MARGIN-TOP: 1.8em; FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; MARGIN-BOTTOM: =
+1.6em
+}
+H2 {
+	MARGIN-TOP: 2em; FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN-BOTTOM: 1em
+}
+H3 {
+	MARGIN-TOP: 1.7em; FONT-WEIGHT: bold; FONT-SIZE: 100%; MARGIN-BOTTOM: =
+0.75em
+}
+UL.extended {
+	PADDING-LEFT: 0.7em; MARGIN-LEFT: 0.8em
+}
+UL.extended LI {
+	MARGIN-TOP: 0.4em; MARGIN-BOTTOM: 0.4em
+}
+UL.snippets {
+	PADDING-LEFT: 0.7em; MARGIN-LEFT: 0.8em
+}
+UL.snippets LI {
+	MARGIN-TOP: 0.5em; FONT-WEIGHT: bold; MARGIN-BOTTOM: 0.5em
+}
+OL.extended {
+	PADDING-LEFT: 0em; MARGIN-LEFT: 2.5em
+}
+LI {
+	MARGIN-TOP: 0.2em; MARGIN-BOTTOM: 0.2em
+}
+TABLE.std {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; =
+BORDER-LEFT: black 1px solid; WIDTH: 100%; BORDER-BOTTOM: black 1px =
+solid; BORDER-COLLAPSE: collapse
+}
+TABLE.std TBODY {
+	VERTICAL-ALIGN: top
+}
+TABLE.std TD {
+	BORDER-RIGHT: #888 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #888 1px =
+solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; BORDER-LEFT: #888 1px =
+solid; PADDING-TOP: 4px; BORDER-BOTTOM: #888 1px solid
+}
+TABLE.std TH {
+	BORDER-RIGHT: #888 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #888 1px =
+solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; BORDER-LEFT: #888 1px =
+solid; PADDING-TOP: 4px; BORDER-BOTTOM: #888 1px solid
+}
+DIV.tocEntry {
+	MARGIN-TOP: 8px; FONT-WEIGHT: bold; FONT-SIZE: 9pt; MARGIN-BOTTOM: 8px
+}
+DIV.tocTitle {
+	MARGIN-TOP: 25px; FONT-WEIGHT: bold; FONT-SIZE: 9pt; MARGIN-BOTTOM: =
+10px
+}
+DIV.hr {
+	MARGIN-TOP: 50px; MARGIN-BOTTOM: 50px; OVERFLOW: hidden; COLOR: white; =
+HEIGHT: 1px; BACKGROUND-COLOR: black
+}
+DIV.hr1 {
+	BORDER-TOP: #888 1px solid; MARGIN-TOP: 25px; MARGIN-BOTTOM: 25px; =
+OVERFLOW: hidden; BORDER-BOTTOM: #ccc 1px solid
+}
+PRE {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+
+------=_NextPart_000_0000_01C8E72E.3DDE2660--

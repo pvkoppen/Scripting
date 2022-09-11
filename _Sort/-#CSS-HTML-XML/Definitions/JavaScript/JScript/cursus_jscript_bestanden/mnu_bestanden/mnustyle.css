@@ -1,0 +1,63 @@
+A.mnu_mnu:hover {
+	COLOR: yellow; TEXT-DECORATION: underline
+}
+P {
+	FONT-FAMILY: verdana, arial; FONT-SIZE: 11px; LINE-HEIGHT: 1; MARGIN-LEFT: 9px; MARGIN-RIGHT: 10px
+}
+H1 {
+	COLOR: #000000; FILTER: dropshadow(offy=6,offx=12,color=ffffaa); FONT-FAMILY: verdana, arial; FONT-SIZE: x-large; HEIGHT: 47px; LETTER-SPACING: -2px; TEXT-DECORATION: none
+}
+H2 {
+	FONT-FAMILY: verdana, arial; FONT-SIZE: 21px; FONT-WEIGHT: bold
+}
+H3 {
+	BACKGROUND-COLOR: #000000; COLOR: #ffffff; FILTER: Alpha(opacity=60, finishopacity=100, style=3); FONT-FAMILY: verdana, arial; FONT-SIZE: 10px; FONT-WEIGHT: bold; HEIGHT: 10px; LINE-HEIGHT: 2; MARGIN: 10px 0px; WIDTH: 100%
+}
+A.mnu_mnu {
+	COLOR: #ffffdd; FONT-FAMILY: Verdana, arial black; FONT-SIZE: 10px; MARGIN: 10px; TEXT-DECORATION: none
+}
+A {
+	COLOR: #000000; FONT-FAMILY: Verdana, arial black; FONT-SIZE: 10px; FONT-WEIGHT: bold; LINE-HEIGHT: 1; MARGIN: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px; TEXT-DECORATION: none
+}
+A:visited {
+	
+}
+A:active {
+	BACKGROUND-COLOR: #ffff00
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+BODY {
+	BACKGROUND-COLOR: #ffffdd; FONT-FAMILY: Verdana, arial; FONT-SIZE: 11px; MARGIN: 5px; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; PADDING-TOP: 2px
+}
+SELECT {
+	BACKGROUND-COLOR: #ffff00; COLOR: #0000ff; CURSOR: hand; FONT-FAMILY: Verdana, arial; FONT-SIZE: 11px; FONT-WEIGHT: bold; LINE-HEIGHT: 2; TEXT-ALIGN: center
+}
+BUTTON {
+	BACKGROUND-COLOR: #000080; COLOR: #ffffff; CURSOR: hand; FONT-FAMILY: Arial
+}
+P.blue {
+	COLOR: #0000ff; FONT-FAMILY: Verdana, arial; FONT-SIZE: 11px
+}
+INPUT {
+	COLOR: #000080; FONT-FAMILY: Verdana; FONT-SIZE: 11px
+}
+MARQUEE {
+	BACKGROUND-COLOR: #000000; BORDER-BOTTOM: #ffffff 5px groove; BORDER-LEFT: #ffffff 0px groove; BORDER-RIGHT: #ffffff 0px groove; BORDER-TOP: #ffffff 2px groove; COLOR: #ffff00; FONT-FAMILY: Arial Narrow; FONT-SIZE: x-small; FONT-WEIGHT: bold; HEIGHT: 22px; LINE-HEIGHT: 2; MARGIN: 0px; WIDTH: 100%
+}
+HR {
+	COLOR: #000000; MARGIN: 20px
+}
+TABLE {
+	BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; MARGIN-LEFT: 0px; MARGIN-RIGHT: 0px
+}
+DL {
+	FONT-FAMILY: verdana, arial; FONT-SIZE: 11px
+}
+DT {
+	MARGIN-TOP: 5px
+}
+TD {
+	FONT-FAMILY: verdana, arial; FONT-SIZE: 11px; LINE-HEIGHT: 1; MARGIN-LEFT: 9px; MARGIN-RIGHT: 10px
+}

@@ -1,0 +1,9 @@
+
+
+[GENERAL PARAMETERS]
+OVERWRITE = TRUE
+
+[PARTITION2]
+size = 32
+type = 12
+active = FALSE

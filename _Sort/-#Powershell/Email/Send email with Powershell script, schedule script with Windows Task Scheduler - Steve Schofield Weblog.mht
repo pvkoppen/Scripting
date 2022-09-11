@@ -1,0 +1,3289 @@
+From: "Saved by Windows Internet Explorer 7"
+Subject: Send email with Powershell script, schedule script with Windows Task Scheduler - Steve Schofield Weblog
+Date: Fri, 17 Oct 2008 13:59:58 +1300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_008A_01C93060.A45A3A20"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18049
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_008A_01C93060.A45A3A20
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://weblogs.asp.net/steveschofield/archive/2008/01/09/send-email-with-powershell-script-schedule-script-with-windows-task-scheduler.aspx
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML lang=3Den xml:lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" =
+xmlns:o =3D=20
+"urn:schemas-microsoft-com:office:office"><HEAD =
+id=3Dctl00_ctl00><TITLE>Send email with Powershell script, schedule =
+script with Windows Task Scheduler - Steve Schofield Weblog</TITLE>
+<META content=3Dpowershell name=3Dkeywords>
+<META content=3D"MSHTML 6.00.6001.18099" name=3DGENERATOR><LINK=20
+href=3D"http://weblogs.asp.net/steveschofield/pingback.aspx" =
+rel=3Dpingback><LINK=20
+href=3D"/favicon.ico" type=3Dimage/ico rel=3D"shortcut icon"><LINK=20
+title=3D"Steve Schofield Weblog (RSS 2.0)"=20
+href=3D"http://weblogs.asp.net/steveschofield/rss.aspx" =
+type=3Dapplication/rss+xml=20
+rel=3Dalternate><LINK title=3D"Steve Schofield Weblog (Atom 1.0)"=20
+href=3D"http://weblogs.asp.net/steveschofield/atom.aspx" =
+type=3Dapplication/atom+xml=20
+rel=3Dalternate><LINK title=3D"Steve Schofield Weblog - All Comments =
+(RSS 2.0)"=20
+href=3D"http://weblogs.asp.net/steveschofield/rsscomments.aspx"=20
+type=3Dapplication/rss+xml rel=3Dalternate><LINK=20
+title=3D"Send email with Powershell script, schedule script with Windows =
+Task Scheduler - Comments for this post (RSS 2.0)"=20
+href=3D"http://weblogs.asp.net/steveschofield/rsscomments.aspx?PostID=3D5=
+575784"=20
+type=3Dapplication/rss+xml rel=3Dalternate>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3DUTF-8">
+<META http-equiv=3DX-UA-Compatible content=3DIE=3D7><LINK media=3Dscreen =
+
+href=3D"http://weblogs.asp.net/Themes/Blogs/traveler/style/style.css?Sect=
+ionID=3D482"=20
+type=3Dtext/css rel=3Dstylesheet><LINK media=3Dprint=20
+href=3D"http://weblogs.asp.net/Themes/Blogs/traveler/style/print.css?Sect=
+ionID=3D482"=20
+type=3Dtext/css rel=3Dstylesheet><LINK media=3Dscreen=20
+href=3D"http://weblogs.asp.net/Themes/Blogs/traveler/style/DynamicStyle.a=
+spx?SectionID=3D482"=20
+type=3Dtext/css rel=3Dstylesheet><!--[if lte IE 6]>
+		<style>
+		#titleWrapper { padding: 62px 65px 14px 14px; border-bottom: solid 1px =
+#000; border-right: solid 1px #000;}
+		</style>
+	<![endif]--><LINK title=3DRSD href=3D"" type=3Dapplication/rsd+xml =
+rel=3DEditURI><LINK=20
+title=3DWLWManifest href=3D"" type=3Dapplication/wlwmanifest+xml=20
+rel=3Dwlwmanifest></HEAD>
+<BODY>
+<FORM id=3DaspnetForm name=3DaspnetForm=20
+action=3D/steveschofield/archive/2008/01/09/send-email-with-powershell-sc=
+ript-schedule-script-with-windows-task-scheduler.aspx=20
+method=3Dpost>
+<DIV><INPUT id=3D__VIEWSTATE type=3Dhidden=20
+value=3D/wEPDwULLTE3MDQ0Njc3MDNkZD8sPhJwvsEwM0MAhM5r2rbnRDjq =
+name=3D__VIEWSTATE>=20
+</DIV>
+<SCRIPT=20
+src=3D"http://weblogs.asp.net/WebResource.axd?d=3DJ1hksw-hD7hv_ORyTj2qdhH=
+KlC7Oddil8eixZtT8LFu2jE2HPY18SDuMZGMBCOJ6l7dkFeWC7-7HlOpMTdQFThunYDA1Tuos=
+0&amp;t=3D633307998080000000"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT=20
+src=3D"http://weblogs.asp.net/WebResource.axd?d=3DJ1hksw-hD7hv_ORyTj2qdhH=
+KlC7Oddil8eixZtT8LFu2jE2HPY18SDuMZGMBCOJ6l7dkFeWC7-4SIfYTq56Jecj_6aYg8oHA=
+0&amp;t=3D633307998080000000"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT=20
+src=3D"http://weblogs.asp.net/WebResource.axd?d=3DJ1hksw-hD7hv_ORyTj2qdhH=
+KlC7Oddil8eixZtT8LFu2jE2HPY18SDuMZGMBCOJ6l7dkFeWC7-5PVAZynK7g4lylkvdYWgJz=
+sm-QMifpaa01&amp;t=3D633307998080000000"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT=20
+src=3D"http://weblogs.asp.net/WebResource.axd?d=3DJ1hksw-hD7hv_ORyTj2qdhH=
+KlC7Oddil8eixZtT8LFu2jE2HPY18SDuMZGMBCOJ6l7dkFeWC7-4OzNqfh2FvZofa6ymHH65s=
+8SbaOOvrObw1&amp;t=3D633307998080000000"=20
+type=3Dtext/javascript></SCRIPT>
+
+<DIV id=3Dwrapper>
+<DIV id=3Dcontainer>
+<DIV id=3Dheader>
+<DIV id=3DtitleWrapper>
+<DIV id=3Dtitle>
+<H1><A class=3Dheadermaintitle=20
+href=3D"http://weblogs.asp.net/steveschofield/default.aspx">Steve =
+Schofield=20
+Weblog</A></H1>
+<DIV>Windows Server MVP - IIS</DIV></DIV></DIV></DIV>
+<DIV id=3Dnavigation>
+<DIV id=3Dwelcome><A=20
+href=3D"http://weblogs.asp.net/login.aspx?ReturnUrl=3D%2fsteveschofield%2=
+farchive%2f2008%2f01%2f09%2fsend-email-with-powershell-script-schedule-sc=
+ript-with-windows-task-scheduler.aspx">Sign=20
+in </A>| <A=20
+href=3D"http://weblogs.asp.net/user/CreateUser.aspx?ReturnUrl=3D">Join</A=
+> </DIV>
+<UL>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/default.aspx">Home</A>=20
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/contact.aspx">Contact</A>=20
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/about.aspx">About</A>=20
+  <LI><A href=3D"http://weblogs.asp.net/steveschofield/rss.aspx">RSS</A> =
+
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/atom.aspx">Atom</A>=20
+  <LI id=3DRssComments><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/rsscomments.aspx">Comments =
+RSS</A>=20
+  </LI></UL></DIV>
+<DIV id=3Dcontentwrapper>
+<DIV id=3Dsidebar-a>
+<DIV id=3DTasksSideBar></DIV>
+<DIV id=3DSubscriptionsSideBar></DIV>
+<DIV id=3DSearchSideBar>
+<DIV id=3DSearch>
+<H3>Search</H3>
+<UL>
+  <DIV id=3DSearch align=3Dleft>
+  <LI><INPUT class=3DsearchBox id=3Dctl00_SideBar_ctl02_ctl00_SearchBox=20
+  onblur=3D"if(this.value=3D=3D'') this.value=3Dthis.defaultValue;"=20
+  onclick=3D"if(this.defaultValue=3D=3Dthis.value) this.value=3D'';"=20
+  name=3Dctl00$SideBar$ctl02$ctl00$SearchBox Button=3D"SearchButton"> =
+<INPUT class=3DSearchButton id=3Dctl00_SideBar_ctl02_ctl00_SearchButton =
+type=3Dsubmit value=3DGo name=3Dctl00$SideBar$ctl02$ctl00$SearchButton>=20
+  </LI></DIV></UL></DIV></DIV>
+<DIV id=3DTagSideBar>
+<H3>Tags</H3>
+<UL class=3DSidebarTagCloud>
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/.NET/default.a=
+spx"=20
+  rel=3Dtag>.NET</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Access2007/def=
+ault.aspx"=20
+  rel=3Dtag>Access2007</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/ajax/default.a=
+spx"=20
+  rel=3Dtag>ajax</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/appcmd/default=
+.aspx"=20
+  rel=3Dtag>appcmd</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/ASP/default.as=
+px"=20
+  rel=3Dtag>ASP</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/ASP.NET/defaul=
+t.aspx"=20
+  rel=3Dtag>ASP.NET</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Certification/=
+default.aspx"=20
+  rel=3Dtag>Certification</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Classic+ASP/de=
+fault.aspx"=20
+  rel=3Dtag>Classic ASP</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/debugging/defa=
+ult.aspx"=20
+  rel=3Dtag>debugging</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Exchange/defau=
+lt.aspx"=20
+  rel=3Dtag>Exchange</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Exchange2007/d=
+efault.aspx"=20
+  rel=3Dtag>Exchange2007</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/FTP/default.as=
+px"=20
+  rel=3Dtag>FTP</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/grdotnet/defau=
+lt.aspx"=20
+  rel=3Dtag>grdotnet</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Homer/default.=
+aspx"=20
+  rel=3Dtag>Homer</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/HyperV/default=
+.aspx"=20
+  rel=3Dtag>HyperV</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/IDS/default.as=
+px"=20
+  rel=3Dtag>IDS</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/IIS/default.as=
+px"=20
+  rel=3Dtag>IIS</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/IISLogs/defaul=
+t.aspx"=20
+  rel=3Dtag>IISLogs</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Image+Burner/d=
+efault.aspx"=20
+  rel=3Dtag>Image Burner</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/localhost/defa=
+ult.aspx"=20
+  rel=3Dtag>localhost</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Log+Analysis/d=
+efault.aspx"=20
+  rel=3Dtag>Log Analysis</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Logparser/defa=
+ult.aspx"=20
+  rel=3Dtag>Logparser</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Longhorn/defau=
+lt.aspx"=20
+  rel=3Dtag>Longhorn</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Manage+IISLogs=
+/default.aspx"=20
+  rel=3Dtag>Manage IISLogs</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/perl/default.a=
+spx"=20
+  rel=3Dtag>perl</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/PHP/default.as=
+px"=20
+  rel=3Dtag>PHP</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/powershell/def=
+ault.aspx"=20
+  rel=3Dtag>powershell</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Scripting/defa=
+ult.aspx"=20
+  rel=3Dtag>Scripting</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Sharepoint/def=
+ault.aspx"=20
+  rel=3Dtag>Sharepoint</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/SimpleCMS/defa=
+ult.aspx"=20
+  rel=3Dtag>SimpleCMS</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/SMS/default.as=
+px"=20
+  rel=3Dtag>SMS</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/SMTP/default.a=
+spx"=20
+  rel=3Dtag>SMTP</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/SQL/default.as=
+px"=20
+  rel=3Dtag>SQL</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/sql+injection/=
+default.aspx"=20
+  rel=3Dtag>sql injection</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/SQL+Perfmon+co=
+unters/default.aspx"=20
+  rel=3Dtag>SQL Perfmon counters</A>=20
+  <LI class=3DTag2><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Troubleshootin=
+g/default.aspx"=20
+  rel=3Dtag>Troubleshooting</A>=20
+  <LI class=3DTag2><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/UNC/default.as=
+px"=20
+  rel=3Dtag>UNC</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/VBS/default.as=
+px"=20
+  rel=3Dtag>VBS</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Vista/default.=
+aspx"=20
+  rel=3Dtag>Vista</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Volume+Licensi=
+ng/default.aspx"=20
+  rel=3Dtag>Volume Licensing</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/WAST/default.a=
+spx"=20
+  rel=3Dtag>WAST</A>=20
+  <LI class=3DTag2><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/WDS/default.as=
+px"=20
+  rel=3Dtag>WDS</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/WebDAV/default=
+.aspx"=20
+  rel=3Dtag>WebDAV</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/WinDBG/default=
+.aspx"=20
+  rel=3Dtag>WinDBG</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Windows+Servic=
+es/default.aspx"=20
+  rel=3Dtag>Windows Services</A>=20
+  <LI class=3DTag2><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/WMI/default.as=
+px"=20
+  rel=3Dtag>WMI</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/Zune/default.a=
+spx"=20
+  rel=3Dtag>Zune</A> </LI></UL></DIV>
+<DIV id=3DNewsSidebar>
+<H3>News</H3>
+<UL><A href=3D"http://feeds.feedburner.com/SteveSchofield"><IMG=20
+  style=3D"BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; =
+BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px"=20
+  height=3D26 alt=3D""=20
+  =
+src=3D"http://feeds.feedburner.com/~fc/SteveSchofield?bg=3D99CCFF&amp;fg=3D=
+444444&amp;anim=3D0"=20
+  width=3D88></A> <BR><A=20
+  =
+href=3D"http://www.bloglines.com/sub/http://weblogs.asp.net/steveschofiel=
+d/"><IMG=20
+  alt=3D"Subscribe with Bloglines"=20
+  src=3D"http://static.bloglines.com/images/sub_modern9.gif" border=3D0> =
+</A><BR><A=20
+  =
+href=3D"http://www.amazon.com/Internet-Information-Services-IIS-Resource/=
+dp/0735624410"><IMG=20
+  alt=3D"" src=3D"http://www.iislogs.com/images/9550.gif" =
+border=3D0></A> </UL></DIV>
+<DIV id=3DNavSideBar>
+<H3>Navigation</H3>
+<UL>
+  <LI><A href=3D"http://weblogs.asp.net/">Home</A>
+  <LI><A href=3D"http://weblogs.asp.net/">Blogs</A> </LI></UL></DIV>
+<DIV id=3DArchiveSideBar>
+<H3>Archives</H3>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/10.aspx">Octob=
+er 2008=20
+  (7)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/09.aspx">Septe=
+mber=20
+  2008 (4)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/08.aspx">Augus=
+t 2008=20
+  (5)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/07.aspx">July =
+
+  2008 (6)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/06.aspx">June =
+
+  2008 (7)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/05.aspx">May=20
+  2008 (16)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/04.aspx">April=
+=20
+  2008 (4)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/03.aspx">March=
+=20
+  2008 (6)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/02.aspx">Febru=
+ary=20
+  2008 (5)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/01.aspx">Janua=
+ry 2008=20
+  (9)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2007/12.aspx">Decem=
+ber=20
+  2007 (8)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2007/11.aspx">Novem=
+ber=20
+  2007 (3)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2007/10.aspx">Octob=
+er 2007=20
+  (5)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2007/09.aspx">Septe=
+mber=20
+  2007 (6)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2007/08.aspx">Augus=
+t 2007=20
+  (7)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2007/07.aspx">July =
+
+  2007 (11)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2007/06.aspx">June =
+
+  2007 (11)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2007/05.aspx">May=20
+  2007 (8)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2007/04.aspx">April=
+=20
+  2007 (9)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2007/03.aspx">March=
+=20
+  2007 (12)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2007/02.aspx">Febru=
+ary=20
+  2007 (6)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2007/01.aspx">Janua=
+ry 2007=20
+  (13)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2006/12.aspx">Decem=
+ber=20
+  2006 (13)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2006/11.aspx">Novem=
+ber=20
+  2006 (7)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2006/10.aspx">Octob=
+er 2006=20
+  (15)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2006/09.aspx">Septe=
+mber=20
+  2006 (13)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2006/08.aspx">Augus=
+t 2006=20
+  (8)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2006/07.aspx">July =
+
+  2006 (7)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2006/06.aspx">June =
+
+  2006 (10)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2006/05.aspx">May=20
+  2006 (4)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2006/04.aspx">April=
+=20
+  2006 (2)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2006/03.aspx">March=
+=20
+  2006 (5)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2006/01.aspx">Janua=
+ry 2006=20
+  (1)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2005/12.aspx">Decem=
+ber=20
+  2005 (2)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2005/09.aspx">Septe=
+mber=20
+  2005 (1)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2004/10.aspx">Octob=
+er 2004=20
+  (2)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2004/08.aspx">Augus=
+t 2004=20
+  (1)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2004/07.aspx">July =
+
+  2004 (1)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2004/06.aspx">June =
+
+  2004 (1)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2004/05.aspx">May=20
+  2004 (1)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2004/04.aspx">April=
+=20
+  2004 (4)</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2004/03.aspx">March=
+=20
+  2004 (2)</A>
+  <LI><A=20
+  =
+href=3D"http://weblogs.asp.net/steveschofield/archive/2004/01.aspx">Janua=
+ry 2004=20
+  (4)</A> </LI></UL></DIV>
+<H3>Blogs</H3>
+<DIV id=3DLinkSideBar>
+<UL class=3DCommonSidebarList>
+  <LI><A href=3D"http://weblogs.asp.net/scottgu">Scott Guthrie</A>
+  <LI><A href=3D"http://blogs.sqladvice.com/dpenton">David Penton</A>
+  <LI><A href=3D"http://www.gafvert.info/iis/">Kristofer Gafvert</A>
+  <LI><A href=3D"http://brettblog.com/">Brett Hill</A>
+  <LI><A href=3D"http://blogs.msdn.com/david.wang/default.aspx">David =
+Wang</A>
+  <LI><A href=3D"http://www.adopenstatic.com/cs/blogs/ken/">Ken =
+Schaefer</A>
+  <LI><A =
+href=3D"http://blog.crowe.co.nz/archive/2005/11/27/335.aspx">Chris=20
+  Crowe</A>
+  <LI><A href=3D"http://blogs.technet.com/chrisad/">Chris Adams</A>
+  <LI><A href=3D"http://aspadvice.com/blogs/ssmith/">Steve Smith =
+(ASPAlliance=20
+  guru!)</A>
+  <LI><A href=3D"http://msmvps.com/blogs/bernard/">Bernard Cheah</A>
+  <LI><A href=3D"http://blogs.iis.net/">IIS Team blogs</A>
+  <LI><A href=3D"http://mvolo.com/">Mike Volodarsky</A>
+  <LI><A href=3D"http://blogs.iis.net/bills/default.aspx">Bill =
+Staples</A>
+  <LI><A href=3D"http://w3-4u.blogspot.com/">David Wang #2</A>
+  <LI><A =
+href=3D"http://weblogs.asp.net/hosterposter/default.aspx">Hoster=20
+  Poser</A> </LI></UL></DIV>
+<H3>Hosting Needs</H3>
+<DIV id=3DLinkSideBar>
+<UL class=3DCommonSidebarList>
+  <LI><A href=3D"http://www.orcsweb.com/">ORCSWeb, Inc</A> =
+</LI></UL></DIV>
+<H3>Misc components</H3>
+<DIV id=3DLinkSideBar>
+<UL class=3DCommonSidebarList>
+  <LI><A href=3D"http://www.iislogs.com/">IISLogs - #1 component for =
+managing log=20
+  files</A> </LI></UL></DIV>
+<H3>Misc Links</H3>
+<DIV id=3DLinkSideBar>
+<UL class=3DCommonSidebarList>
+  <LI><A href=3D"http://securityfocus.com/">SecurityFocus</A>
+  <LI><A href=3D"http://www.nessus.org/">Nessus network scanner</A>
+  <LI><A href=3D"http://iislists.com/">IISLists</A>
+  <LI><A href=3D"http://www.iistoolbox.com/">IISToolbox by Tom K (IIS =
+MVP)</A>
+  <LI><A href=3D"http://www.iis-digest.com/">IIS-Digest</A>
+  <LI><A href=3D"http://www.iis-resources.com/">IIS-Resources</A>
+  <LI><A href=3D"http://www.iis.net/">IIS.net</A> </LI></UL></DIV></DIV>
+<DIV id=3Dcontent>
+<DIV id=3Dcontent2>
+<H2 class=3DpageTitle>Send email with Powershell script, schedule script =
+with=20
+Windows Task Scheduler </H2>
+<DIV class=3Dpost>
+<DIV class=3Dpostsub>
+<P class=3DMsoPlainText style=3D"MARGIN: 0in 0in 0pt"><FONT =
+size=3D2><FONT=20
+face=3DVerdana>Here is a set of samples I used to do a common task in my =
+scripting=20
+life.&nbsp; This go around I wanted to use =
+Powershell.&nbsp;</FONT></FONT></P>
+<P class=3DMsoPlainText style=3D"MARGIN: 0in 0in 0pt"><FONT =
+size=3D2><FONT=20
+face=3DVerdana><STRONG></STRONG></FONT></FONT>&nbsp;</P><FONT =
+size=3D2><FONT=20
+face=3DVerdana><STRONG>A) Create a script to send emails in=20
+powershell<BR><o:p></o:p></STRONG></FONT></FONT><FONT size=3D2><FONT=20
+face=3DVerdana>----------------------------------------------------<BR><o=
+:p></o:p></FONT></FONT><FONT=20
+size=3D2><FONT face=3DVerdana>1) Open Powershell type =
+set-executionpolicy=20
+Unrestricted<o:p></o:p><o:p><FONT face=3DVerdana=20
+size=3D2>&nbsp;<BR></FONT></o:p><EM>'This allows scripts to be =
+run'<BR>'You'll=20
+want to also look at using =
+RemoteSigned<o:p></o:p></EM></FONT></FONT><FONT=20
+size=3D2><FONT face=3DVerdana>Type <BR></FONT></FONT><o:p><FONT =
+face=3DVerdana=20
+size=3D2><BR></FONT></o:p><FONT size=3D2><FONT face=3DVerdana>2) Type =
+<STRONG>Notepad=20
+myscript.ps1</STRONG></FONT></FONT>=20
+<P class=3DMsoPlainText style=3D"MARGIN: 0in 0in 0pt"><FONT =
+size=3D2><FONT=20
+face=3DVerdana><BR>3) Paste&nbsp;sample code and save in=20
+myscript.ps1</FONT></FONT></P><FONT size=3D2><FONT =
+face=3DVerdana><BR>$SmtpClient =3D=20
+new-object system.net.mail.smtpClient<BR><o:p></o:p></FONT></FONT><FONT=20
+size=3D2><FONT face=3DVerdana>$SmtpServer =3D=20
+"localhost"<BR><o:p></o:p></FONT></FONT><FONT size=3D2><FONT=20
+face=3DVerdana>$SmtpClient.host =3D=20
+<BR>$SmtpServer<o:p></o:p></FONT></FONT><o:p><FONT face=3DVerdana=20
+size=3D2>&nbsp;<BR><BR></FONT></o:p><FONT size=3D2><FONT =
+face=3DVerdana>$From =3D=20
+"Friendly Reminder =
+&lt;User@example.com&gt;"<BR><o:p></o:p></FONT></FONT><FONT=20
+size=3D2><FONT face=3DVerdana>$To =3D=20
+User2@example.com<BR><o:p></o:p></FONT></FONT><FONT size=3D2><FONT=20
+face=3DVerdana>$Title =3D "Subject =
+Matter"<BR><o:p></o:p></FONT></FONT><FONT=20
+size=3D2><FONT face=3DVerdana>$Body =3D "Body =
+Text"<o:p></o:p></FONT></FONT><o:p><FONT=20
+face=3DVerdana size=3D2>&nbsp;<BR></FONT></o:p><FONT size=3D2><FONT=20
+face=3DVerdana>$SmtpClient.Send($from,$to,$title,$Body)<o:p></o:p></FONT>=
+</FONT><o:p><FONT=20
+face=3DVerdana size=3D2>&nbsp;</FONT></o:p><o:p><FONT face=3DVerdana=20
+size=3D2>&nbsp;<BR><BR></FONT></o:p><FONT size=3D2><FONT =
+face=3DVerdana><STRONG>B)=20
+Testing Script<BR><o:p></o:p></STRONG></FONT></FONT><FONT size=3D2><FONT =
+
+face=3DVerdana>----------------------------------------------------<BR><o=
+:p></o:p></FONT></FONT><FONT=20
+size=3D2><FONT face=3DVerdana>1) Type <STRONG>./myscript.ps1=20
+<BR><o:p></o:p></STRONG></FONT></FONT><FONT size=3D2><FONT=20
+face=3DVerdana><EM>'Verify you receive the=20
+email.<o:p></o:p></EM></FONT></FONT><o:p><FONT face=3DVerdana=20
+size=3D2>&nbsp;</FONT></o:p><o:p><FONT face=3DVerdana=20
+size=3D2>&nbsp;<BR><BR></FONT></o:p><FONT size=3D2><FONT =
+face=3DVerdana><STRONG>C) How=20
+to schedule a powershell script in Windows Task=20
+Scheduler<BR><o:p></o:p></STRONG></FONT></FONT><FONT size=3D2><FONT=20
+face=3DVerdana>----------------------------------------------------<BR><o=
+:p></o:p></FONT></FONT><FONT=20
+size=3D2><FONT face=3DVerdana>1) Create a new scheduled task. =
+<BR><BR><EM>'The=20
+syntax is to execute the script =
+is:<BR><o:p></o:p></EM></FONT></FONT><FONT=20
+size=3D2><FONT face=3DVerdana>powershell -command "&amp;=20
+'SomeDir\myScript.ps1'"<o:p></o:p></FONT></FONT><o:p><FONT =
+face=3DVerdana=20
+size=3D2>&nbsp;</FONT></o:p> <BR><BR>
+<P class=3DMsoPlainText style=3D"MARGIN: 0in 0in 0pt"><FONT =
+size=3D2><FONT=20
+face=3DVerdana>2) Set the script to run as your normal task scheduler=20
+accounts.</FONT></FONT></P>
+<P class=3DMsoPlainText style=3D"MARGIN: 0in 0in 0pt"><FONT=20
+face=3DVerdana></FONT>&nbsp;</P>
+<P class=3DMsoPlainText style=3D"MARGIN: 0in 0in 0pt"><FONT =
+size=3D2><FONT=20
+face=3DVerdana>3) Execute task, verify you receive the =
+email</FONT></FONT></P>
+<P mce_keep=3D"true">Hope this helps,</P>
+<P mce_keep=3D"true">Steve</P>
+<DIV class=3Dpostfoot>Published Wednesday, January 09, 2008 10:27 AM by =
+<A=20
+href=3D"http://weblogs.asp.net/members/steve-schofield.aspx">steve =
+schofield</A>=20
+<DIV class=3Dem><SPAN id=3Dctl00_Main_ctl06_ctl01>Filed under: <A=20
+href=3D"http://weblogs.asp.net/steveschofield/archive/tags/powershell/def=
+ault.aspx"=20
+rel=3Dtag>powershell</A></SPAN><INPUT id=3Dctl00_Main_ctl06_ctl01_State =
+type=3Dhidden=20
+value=3Dnochange name=3Dctl00$Main$ctl06$ctl01></DIV></DIV></DIV></DIV>
+<H3 class=3DpageTitle>Comments</H3>
+<DIV id=3Dcomments>
+<DIV class=3Dcomment>
+<H4><A=20
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/01/09/send-ema=
+il-with-powershell-script-schedule-script-with-windows-task-scheduler.asp=
+x#5575958">#</A>=20
+<SPAN>Send email with Powershell script, schedule script with Windows =
+Task=20
+Scheduler - Steve Schofield Weblog </SPAN></H4>
+<DIV class=3Dcommentssubhead>Wednesday, January 09, 2008 11:14 AM by <A=20
+title=3DTrackBack=20
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/01/09/send-ema=
+il-with-powershell-script-schedule-script-with-windows-task-scheduler.asp=
+x"=20
+rel=3Dnofollow>Send email with Powershell script, schedule script with =
+Windows=20
+Task Scheduler - Steve Schofield Weblog</A> </DIV>
+<P>Pingback from &nbsp;Send email with Powershell script, schedule =
+script with=20
+Windows Task Scheduler - Steve Schofield Weblog</P></DIV>
+<DIV class=3Dcomment>
+<H4><A=20
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/01/09/send-ema=
+il-with-powershell-script-schedule-script-with-windows-task-scheduler.asp=
+x#5584100">#</A>=20
+<SPAN>re: Send email with Powershell script, schedule script with =
+Windows Task=20
+Scheduler </SPAN></H4>
+<DIV class=3Dcommentssubhead>Thursday, January 10, 2008 5:28 PM by Neel =
+</DIV>
+<P>I am trying to use the same command in process can you please help me =
+out=20
+here</P>
+<P>Dim oProcess As Process =3D New Process</P>
+<P>oProcess.StartInfo.UseShellExecute =3D False</P>
+<P>oProcess.StartInfo.RedirectStandardOutput =3D True</P>
+<P>oProcess.StartInfo.CreateNoWindow =3D False</P>
+<P>oProcess.StartInfo.WindowStyle =3D ProcessWindowStyle.Normal</P>
+<P>oProcess.StartInfo.FileName =3D "powershell.exe"</P>
+<P>Dim sArguments as string =3D powershell -command "&amp;=20
+'SomeDir\myScript.ps1'"</P>
+<P>oProcess.Start()</P>
+<P>oProcess.WaitForExit(1000 * iTimeOutSec)</P></DIV>
+<DIV class=3Dcommentowner>
+<H4><A=20
+href=3D"http://weblogs.asp.net/steveschofield/archive/2008/01/09/send-ema=
+il-with-powershell-script-schedule-script-with-windows-task-scheduler.asp=
+x#5585432">#</A>=20
+<SPAN>re: Send email with Powershell script, schedule script with =
+Windows Task=20
+Scheduler </SPAN></H4>
+<DIV class=3Dcommentssubhead>Thursday, January 10, 2008 11:00 PM by <A=20
+title=3D"steve schofield" =
+href=3D"http://weblogs.asp.net/steveschofield">steve=20
+schofield</A> </DIV>
+<P>Are you trying to do this in a console=20
+application?</P></DIV></DIV></DIV></DIV></DIV>
+<DIV id=3Dcontentfooter>
+<DIV><SPAN><A href=3D"http://www.microsoft.com/info/cpyright.mspx">Terms =
+of=20
+Use</A></SPAN></DIV></DIV></DIV></DIV><!--
+<rdf:RDF xmlns:rdf=3D"http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc=3D"http://purl.org/dc/elements/1.1/"
+xmlns:trackback=3D"http://madskills.com/public/xml/rss/module/trackback/"=
+>
+<rdf:Description
+rdf:about=3D"http://weblogs.asp.net/steveschofield/archive/2008/01/09/sen=
+d-email-with-powershell-script-schedule-script-with-windows-task-schedule=
+r.aspx"
+dc:identifier=3D"http://weblogs.asp.net/steveschofield/archive/2008/01/09=
+/send-email-with-powershell-script-schedule-script-with-windows-task-sche=
+duler.aspx"
+dc:title=3D"Send email with Powershell script, schedule script with =
+Windows Task Scheduler"
+trackback:ping=3D"http://weblogs.asp.net/steveschofield/trackback.ashx?Po=
+stID=3D5575784" />
+</rdf:RDF>
+-->
+<SCRIPT type=3Dtext/javascript>=0A=
+// <![CDATA[=0A=
+Telligent_Modal.Configure('/utility/loading.htm',['Modal'],['ModalTitle']=
+,['ModalClose'],['ModalContent'],['ModalFooter'],['ModalResize'],['ModalM=
+ask'],100);=0A=
+// ]]>=0A=
+</SCRIPT>
+
+<SCRIPT type=3Dtext/javascript>=0A=
+// <![CDATA[=0A=
+window.ctl00_Main_ctl06_ctl01 =3D new =
+Telligent_InlineEditorPanel('ctl00_Main_ctl06_ctl01','ctl00_Main_ctl06_ct=
+l01','ctl00_Main_ctl06_ctl01_State','ctl00_Main_ctl06_ctl00',false,null,n=
+ull,null);=0A=
+// ]]>=0A=
+</SCRIPT>
+</FORM></BODY></HTML>
+
+------=_NextPart_000_008A_01C93060.A45A3A20
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://feeds.feedburner.com/~fc/SteveSchofield?bg=99CCFF&fg=444444&anim=0
+
+R0lGODlhWAAaAPMAANr//5nM/2uOso6hsszm/////0RERAAAAWZmZgAAAAAAAAAAAAAAAAAAAAAA
+AAAAACH5BAEAAAcALAAAAABYABoAAAT+EMhJq7046813+GAojmRpnmhaCsA3vHAsz3T9qngesi7h
+/8CgcEgs6I4qXmBAbDqbRqR01Vo+r9jo9GPYKpnYsM9A/mm33elXHDb83ITzNC1ds9nwczdNpvdB
+fXxkXAF+gztVYHdXZT56fIAie5F+hZUkdotYeSGGf5aDlYGTnXQgmZpDcASckYSdlLGwI6YBqKlC
+fWazXJ+BvYe/pp+IPbhhcltqicfIys+2iQXT1NXW19jZydA6Stzf4CPe4eTfLALo6err7O3u7/Dx
+8u8H9fb3+Pn6+/z9/v8AEQi8h8BeQX0CDx5IaHBgPYYPHT6cGFHhQoMNFUIkSHGiRXxKH0OCpHhQ
+Y8eSDU+OvEhQIkZ+G2NKRLnQJc2aFgvqzMhzpUiYK1++pGmS5cWcEYV6zLdRKVOQM6NqdFmTo9Gi
+OIcC3Mq1q1euEQAAOw==
+
+------=_NextPart_000_008A_01C93060.A45A3A20
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://static.bloglines.com/images/sub_modern9.gif
+
+R0lGODlhTAARAPcAAOXl5fONAPGFAP6oAOmya/qaAP2XAPmVAPyWAP78+PKSDuhyAeNhCONiAv3/
+/+ViCfiPAPCAC/aQAPaTAPygAOh0C/WUDvWXDfGOHe+hS/KMGPTHgP6nAPnZrPOXC/iiCuh1DOyr
+Qvv37v/77/ny4vv07N5cDfC5cPqWAP+oAPGoQveqMO+UFuujOvOqRu+HCOhtAOaQGt99Gfrz5+t+
+DPXhwPmbFP2jAOt6AO/GfvefEPCYFvaDAPjv2vueGPGeSf79+O2eIuuPA/CNDvqbAP2nAPCFAPvJ
+Z/aVDPvbqPr7/P2mAPz7+fOUBvexL/369/6kAO+ZDel3A/747O+0S+RxCfCiY/O2ZPqlJuBfDe6G
+DPqoCvfkx+yoZeqFDO17APyjAOp9Be6uR/3v0eWZO/mmE/vJaPC3bOp1CPidFOugQ+pzAfqmDf/7
+9fqIAPSKBvOtRvapLe+OHOd1Gu2CC/6YAPmZAPOTD/mLAPv27PeNAOZtDPudAPWaEOx+B/qOAP7x
+2Pn9///99ul1COPj48zMzGZmZv///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAABMABEA
+AAj/AA8ZGkiwoMGDCBMqXMgw4SEAhg5JnEixosWLGDNq3GjRUCGIEkEskOJHy5A7fXSU4ciypcuO
+HyNWqNIlgxwBeuxQgJJiy8ufQDF6BDlIhpJDTzqsKHBjyQA2FwtOHEho48CpQWGCpBFGzQkuh4Ac
+AVOEwwehhAhFPKS2qlW3bLNSHBqRjpczcKJQyXPIjAEEE9AKdGuI8FqBVwcjlkhw7uHFUWMeehEj
+0KExToLMaIPFTQChBAlXLax2cFvFikmvjVjaNNy5khU0cbHBgaA4IQ4l4WEEbdrVo4MXTi2aOGKq
+jDPSPWQBD5ILYpgAElIjgQYcgo0PL7w9OGPv3dPCkn0MGyQEFiRGeMhxSAWBQz9gRC2YFjLV0cgT
+d7evn3RkkCjs0MMUNrQgwhVklGBFAxiJV59EDz7I1nBsuWUhhBZG+Fp5EfFRRxo+/PEGBhGsMccD
+Wcg1lX8qCiXZIUQcIEEAAnyBxh4MmNDiRBLuWNFyPgaZFV0NFWnkkUgSVIhEhTTp5JNQRinllFRW
+aaWUhwQEADs=
+
+------=_NextPart_000_008A_01C93060.A45A3A20
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.iislogs.com/images/9550.gif
+
+R0lGODlhggCCAMQAAAWn2////wZGb5fS7gF1sAKJvt25NgACA2eJq7O2ugQwTpWvzAFnndHT1QFX
+iVR1ln3H6m+u0j+o11hkdCl9rFS14Wi+5jdmjUSSvnSavbbL4ejo6SlTdrjf9JyPZfPz8yH5BAAA
+AAAALAAAAACCAIIAAAX/4CGOZGmeaKqubIsGcCzPdB27uHIovCL8jiBjSCgaj8ikcslkHj7Qj21K
+xbF0u54PKGQQiM2weIw8bDZRqnq2a/OyWa18Pv9xg46hfs/vf/9eSxSDFEyFZWdoUGuMcXSPcgI+
+W3Z2DgKXeJqbmn2eYEgLHRoaGBmnCBmmCxoZZQ0NZ4uMao6Qj5K5lZaYmJycDHl5wcSfekgUHR9n
+pKMaGxodDR2uRwcasLK0tbeQkpO7QOK/5MXDxnvICBjr66amqRgYh0YHCQmxaNtV3ZFauuEykdtE
+7Nw5dMfCBDqysN69bFL22bDVLxelgL0G4ik45CDCdH8AhQzZ0NrDWBEl/9KgiKsHwF2ZfGkUZu6j
+TYQEKDDQeYGQPXwoVdZg6e0ixplCuhS7yZSIl50MevYc1PMnRKErK4ILxwupMI9NP355+oXQTkIU
+plKwGhSrDKJ0XsKUWS4px7B+Po3lSTUtoaon9bm9oWXCBH9cu9IFthEsXk8ivehE65cyhQdsBQ8O
+4OgBApc9EBxOHGTxpgUXaC59PPapa0Bnd6rt+2BQ5pSDOx/mYPiBgAn3OPxG8ICDgwfIL3hGkNoB
+gufOG2RI/ZhP67HYn6KdTbn25dubYTgiriBBBuAPgC+Y8GD9AubSJ2RoMGFBAucLHiR4Lp2645vX
+kSXgZGdZdhkhtYEXnv8jhpV3GHAKiCaAeRMgkABwHHBwym/5mddeAhwkQF11sEUmkoHdDVLbAxhg
+Fhhubo03gYYcKMDBAhrOmIAHnj1wQQKYZICAABdkoJ+QxDGgwQWsCVhEIGQdUQiKCFLQ4pUKbjZe
+cSAqAKGQEw5p3I9BZOABke4h0MWSYZn45JtGFEjlivNcKQ8GWeZW2AQCeFCjfL/R9+MC612wQBDQ
+FalcAoQ+4IB9DzDlZhhTGujdPBQgYGWL6+QZo0sC1CjcD6NeIBwHF8zogHGrstqcckwOEalNIsFp
+CJWD1GmlO+6w4ylWWXxjFEwaBaPUf36MRIaUKNZWp6bytMMOni+Gx9n/VqQ9ZxpBeyA7yDElLYtr
+nXWyGO25nVa7oEWecaUfnwMZu1ofOiGwgFPKklGpZbreee6/Qv4q1A65IHAmqaeCGYSpnRATa14M
+ZHAvSMsSUEARVMqzqb/+PmeKKhkIrBLBkmj7XAYiPgCLj4Tm58Ap7y2AspD26STxexTAcjIDGNi3
+AAYE3FxKEhfnVAAFR1NGLse8ygPyxyJLdEAl2jaAgIYZ3Hj1fhxY+GPKGyDXAGqEMuAjAg0wYF/E
+C1CggaYZaOB2AmonYMTFeBeQNCFLc8yxKu+cInjU+5AswHMh8onhcz+ymoB+jj6gQR7v4bfTKRow
+kMrLp9BdRCvv8dx2/xF6W2w00nxbubHfgIN8yschq6sl1VfjSCSQQmIYxOMuSz5E5fZaSNySp0Tc
+eSBvvxf06KXrrXfqffu9juuvR5CB9REQvs3UdiAuogD6ae2AeUXi+LjZaautpsQoF5l23Mu7nQEF
+ESTgNgLxW+w86kcXEP3fTvuYKbB3vetpjxbc+0F6uiacCwwJOcchlJFexiQKZGAISWKH2mR2QQrI
+7DkE6BmhCqGKELrCeSj03//8ZgoJqAJ7BIyADLMnu9yQZiAXGJExsFOIhdDDYvTIWwr7hwEirs5f
+IHPhADEAwxlGYAE0BIpmbMiLOxBEKXpZVtH0p78hpvBOemOdBJjIRP8ZXs+JM4RiFK+yrko48GpX
+dIwroiSGo83Df0grgAzBGEYnyqMAElgABO40xghgwIUuNCQa0QjFBRywEVQzD2qAAZnp0JEJF3vP
+EwnwtgJogFEwc179WCEdQI6tAaVAZAYk0MRFpvGJEHBkDWPUC61xISo61Ek6jjEPjAHNl0XrGQE2
++bb6dbEVKYyA3DzZNglI55CsjAAro+lKKMbymo9cw9QygTJXyWw/dZMYAn5nr51oYIRCo9858TdM
+VxBzHQ0oot4IVQAA1BMDA1gAIFshAQloQJoypKYrYQmBawpSllKEEbDEcaMG+IZQHFDZBd7mHLp5
+cKIezEAeMPA2Jdn/54KkUx49kRkBaOhNmUXEAAD8WUR/GlICHfhZNCsw0AhAwKaCLKggB5DNWtAF
+fA71WaNcxsn24M9+SyoCBsbGCszpc56uiKUnMxDGUexTpfY8JyBdesiYspKmaLSATW16TZ0O4KwI
+ZaOWBBKEG6Hsaqkx1Kw6dwFO3q8IccPfIdy2AIvJrAAjpareKhBPlG6VGiuF6QIAQNgMVICmNBWr
+WG+q08oOAAKXPWtPq6CJVFgIOfshDgXOt5MNgDRzcXsdoZhIvyc+VYYFkCo/NQABrcbykABgBSBv
+GgFUnvOrM7TAZMla0OJm9qyanSWwNPGAUzjKOc7VHBg0VQR2ss+v/399omD3SQEX6vGQLVNpKxJr
+gQysFIoSqK3MIitcyVqguPA9LnKTm1BrHSBeqgFFuI6wRS8CNgJ6s2c9BxxbmfbzwBXoZ4IXXAHh
+RkC48CUuZjE7X+Rudgr3pSRk9itE/wbYnv0c8EoT28+XHlgCDH6sihvc3ve+F74FzSyFK3zhiVxR
+L/vtoodFHGIAjHiMJ0bwilG8Yha3GMIwjvGMK0xfteZGw8kimun8a08QnxgA0Awyiolc5C4fub1J
+nvBZlzzfGg+lE/9Zwo5FXE8SJ1jLCi5ye1VsASN/OcxKli+TzbwSbuVFyh6uso/dHIE3n9jLLW6w
+nb+M5CTrmck8Vf/uwDaSRSTsuMr1BDKCH1xnLq/4zoxmNJ7FLGYmd4DPbLALZPirYxQKeNBafuyL
+6yznFsM31LYGs6PJXOEORLq+C8qvdYjmPEwLGsuJ7XKMaX1nJRdX1C6GwIthLONqI9fXvkb1W9Ch
+hBQeeNA+PjStZU1haR+5oOX1TATGPOtbS/vd084zpH1dZkmPbIfE1hucSYzgOw9AAwNotAWIUyMe
+PGDM7w5ztKkNaVMP4NT2llprKMZfFEITsrEmt7nf+29f3xQDpyrODxRwAYQrHM8NT3mT26IlJpQE
+hQeWIcbjLOt4x9jXV+tB194zqgmYfNQMv7bK6w3slpPBedCUYaL/ay3vCDzHNzbyzM2y9oOSX5ba
+KL92B7A99JVPMUZ4M52anVfiB9+a2WA+q9MzlKqTtaxlWROO5K6+5DBrnd5dt3DEC+dFsU+Z7JGV
+sLkbjG4jmcpGptLPOd8uwQxFdMyPZvjWuY73rmv7Bmse4krNbtyzY+DwNkqFzJpLCplJsKmmevyj
+6T7jyT/89Xn3ukIH1mZMr5mVL55vQVtUcPBJbPEtKz3jZZb6g+uZ3q3f+sO5zmR5E93JMQK3jwlM
+5fQiN5bTyRBypE4o4d8sAedkH9yL32vlU9j1lG9+tUv9a+gDS/rSr/66z8octqdi6sM3PStOP/r6
+R/R6ZzV5lId3/5VXeZDXeZB3eeIBf4PGZsVWTxWgXsoBMxLEOIIDd8PHPjlUf6miQBEggMwHewHY
+fPGFgBCggJzBgPFne+FmAf/GMhJkJKXyHByUgcTne6aiHHbQNR2wAQY4dM6GdTGGggeggvDHZokF
+AR3AHOIkcnbQXPmxEzUId44ygaYyAcqxffLxgw0HdM6WWURohAxYewo2AOeBOJUgHzhDBPaif5VD
+eiDCdko4CqKRAVx4fV5YghMWhmJohApWXsoxKqFiL/MDLvAAM9MBhUsYKhkiCluXH8bXhXlodye4
+d9vTh36IYhYAcj4SKu0hJNjxJJcRUahHHJ0YKkQSgFtHWyo3if+jxoeYKH00FwFVB4WakmOXgADL
+8AA84AvfoH0Pxwod4HSnUGGuCHSwGIuw5mmN2Ao/tATKkR+Ihwn/wAM+xxzrdlPIsVOs92zHWIlF
+lxvKCG5c1l4XcDjUJQYOsAUKICQ9ECw65xnzFQHOQVsnl3A2l2TJqIzlKFy8qACDMAZ2oADtogMX
+YZA2kgHHlQFAlVMnN235WFz7iIkslkgyNCQ28oxJcAkjF1EGOSOVUI0KOQARkHhCImGglnB4NpFi
+SG6r0Hg+cAEXo5EMEJLvGCFXIwAEcI6XIAcIMEg9kno/uXEb52IQFpFEWHuYCGED0DOk8E+CmBNL
+9AW7oAU7kAr/phJCjjIEk2CQmdIKD+aJRolr8KaS4Oh+tKeULclxcQMLrZAaNeIsDfAB86MLb4AF
+EZJ9IdRLBNCTOicxZDUAxMFpuAZtEmmJCFRsschxwkgKzBEq8zEPCyAdg1BwcOADnmEqTsMkfSkH
+hoIjF+BuX7ZohXmWLJcbKUSRHGd+0pYhDRAA8SQx8uB0BikCUSeDF8BEF2AjfskDESUaEQVjo1ln
+xEmaR0aEpKOYKkhn54dcEQCF5/QMHPQZbZCFQnKOldmLcjAmxHEKKClcXiZrxtleyJmcAaaWsMZi
+MQZ5gIMA5zQBpPCPItA1zZV9odKLAxmTUPgez2FzS9dln7Zo/+VpnucJfwzWaAVlPadADQ6ClztQ
+JDKIilzxf561HAgQb3MGoABanMI1oARaoORYcwh6euZRI3GwA851jjXSC6TyRs/BHMjxokn2nxqq
+oR76oQ/oZiIKAUZyf8WBl6myA/XxmKPCkRT6okj6dBcqnBnaZZ7WZTeKow8oZCyGAdY4Hd/woDhy
+AEaVegylHEmKpELSowrXpFumYk+qYlFaNB1Gdof2WLvpCCIgAFHBAQcAocWBKjtIHC7qWSfzoiwy
+oxvnpG9maAsmAVE6ZXfzRUFWAbxoCxEVp27lKIJIJMQRpmEqJJ4RkTR6pnCWYAO6RYraYf6CYBgg
+CW7wjgfQNf98ypGY4EAWiiQviiRIwiL+OZqPFWT8dmBJOaph96sWV6pjFKdycJXvYSqW4KKymqmA
+WkZHOaNLN24JllgrlZTNM6p/B0RLM0bQRAGo6pnJYaQWiqmYKg9ftWjGiHA/N60jZq0o9HfO02op
+xULnWAeDwJF9Sq5I6izmSmQcio+Ed2Q1JwHg5q7A+qs6hjR/xEK9qXMzqK9+yiKr0290p2voFoHo
+Rpx1Jn0GG69tmrB2NK+6Iiz/QCTLiqnIoToppWklNmPtdnUVcHXg+V7s6mMdi7DwGqwqmytUISwd
+Oa4oy6/mekiApKO5ymBverRXNn0AYLBdhK1tWkRWgkdoUXD/BpevYeodU5tSajRW0lZot4Zi6AYB
+IhptYiVoBdCrCLu2OauwdmQZwgK0+6q1/QJIhXa3hfam0hRnW9a3SFsBtleebAto+oM6g7A3aNED
+fbocKUsI/sOt0pRlsTZGI5ZpJBZuSysB1JeoWnQ6KLKbJDeuWss3KoRGrNS1AbVIADBDCeZEAgVF
+KcS5FXM6iEsINQKmyYEiKnRIvAtkEUCtA6ZSgHSeAaa5VaZSwhu7iNkIlzS7RmAgUOGJtZET/OI/
+t3dGh/RSAdW7sLW6AGZIvOuxRPhnSfAaObYvBMIBk2EgSWO9/sVE0zSbhURGTLRK8rSwClpEJhGO
+MUIru+QU/3Q0JTkRFVBxFtTLP3mUeQrsYaSDBEMwvsjSJlCiE2UxwZXSvgvcph6bNw28BK5BhDcW
+wTgxIEQgwKwWdnejqA3MtijcwMgRJ54AwkHwAB5gADZsAM+1FCIMLtrRvLMrqkmAAAZADzVcCDY8
+cd3iADLsABNgwx5Qwzj8Cxyxw+DivMsixIdQwx7wBUliNh7AJJtAhL3QxBOABzbsFQ0jKTxcvg7M
+xpozxG/sAZ5Qw82hCWL8A2TcCzXMKhPwxF+MBzT8xMJwAX4sx0NAyLqkOeOkOcjhAYscyI6sB368
+yH0gxGZjAIYsKxPAAE2MyX5ix8urTWNsAHzyA2fMxJ5sw//GocVPnBoP4MRQzCSvPCsMUMNDgMlO
+/Ma4LMcU4MS53Ac1/MqGbMYe4ABQjMmp4Qt3/BuYbBg1zCcXgMkNhMkOIM14EM0GAMjUPMvCgMm3
+jMOH7M17YMtDQMd98MqnrAnUzMyCyJHL3Mk3PCrPnCocgMl9Qsp8TMqaUMOonMO2XM0GQAzBfA7R
+/MU5NNDGEgTHXMdBYM/3LBwceQnvbM/PHCrHfMN+0slfzMxljAf8/ModbczZXM3FrNABrQnYfMM2
+HNJ40MTYDNGmfDBNXKk/MNGlvMcPPSOGYRwWbcOpQsoywc8uTcypQc0mzSoLg8xYiIW/MNP1bACC
+6NA4vQv/Ni0ceZzHEpqGpNzExdwL1MzVmFDPf2zUx6HP6tzVbFUalzDTzOwnMY3HUG0UNk0qqvzU
+htHHfOIBzgzUWrzXZWzXfWzNZP3U6dHH96zXfXwmrgrXwqEAWiwJDs3VIGkHc83YPe3EwnHMIMkB
+Fw0vzAzLnyzIpcHZGI0Jnc0VbC0JZOzYHuCbWryiNR3KPrWDguh4pHLXo8Ibk40wO80Luu14l5Ah
+MREqd10Jv50YNmKXGSIJja3apZwLy5wY0j3d1F3d1s0VXWkR2mmXoBHb/LtQ1x3e4b3Y4h2SFjFy
+AAEOW6HeRGgF7v3e8B3fKCDbVLAMsHAP+J3f+r3f/N3frv793wAe4ALO32ipEsuwAfc94Aq+4Aze
+4AOeDV+HFQcOCw3g4BZ+4Rge4BA+ewY+4RT+4SAe4iI+4iRe4iZ+4ig+4rLA4RIBBYmA4Cke4zI+
+4zR+4omQBtYSBS++4zze4z7+40Ae5EI+5EKO49YSAFGQ5Eq+5Eze5E7+5FAe5VIu5UdeA1Jw5Uie
+5Vi+5Vre5Vz+5V4e5mA+5mJe5lxe5Wie5mq+5mze5m7+5moQAgA7
+
+------=_NextPart_000_008A_01C93060.A45A3A20
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://weblogs.asp.net/Themes/Blogs/traveler/style/style.css?SectionID=482
+
+HTML {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+auto; COLOR: #333333; PADDING-TOP: 0px
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+auto; COLOR: #333333; PADDING-TOP: 0px
+}
+BODY {
+	FONT-SIZE: 76%; PADDING-TOP: 30px; FONT-FAMILY: Arial, Helvetica, =
+sans-serif; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: center
+}
+A:visited {
+	COLOR: #39f
+}
+A:active {
+	COLOR: #39f
+}
+A:link {
+	COLOR: #39f
+}
+A:hover {
+	COLOR: #06c
+}
+H1 {
+=09
+}
+H2 {
+=09
+}
+H3 {
+=09
+}
+H4 {
+=09
+}
+H5 {
+=09
+}
+H1 {
+	FONT-SIZE: 1.5em; MARGIN: 0px
+}
+H1 A:visited {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+H1 A:active {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+H1 A:link {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+H1 A:hover {
+	TEXT-DECORATION: none
+}
+H2 {
+	MARGIN-TOP: 10px; FONT-SIZE: 1em
+}
+H3 {
+	FONT-SIZE: 1.1em; TEXT-DECORATION: none
+}
+H3 A:hover {
+	TEXT-DECORATION: none
+}
+H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+P {
+	MARGIN: 10px 0px
+}
+INPUT.text {
+	WIDTH: 300px
+}
+TEXTAREA {
+	WIDTH: 300px; HEIGHT: 200px
+}
+#wrapper {
+	MARGIN-LEFT: auto; WIDTH: 859px; MARGIN-RIGHT: auto
+}
+#container {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+auto; WIDTH: 100%; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#header {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: left top; MARGIN-TOP: 5px; =
+PADDING-LEFT: 0px; BACKGROUND-IMAGE: url(../images/rome.jpg); =
+PADDING-BOTTOM: 0px; WIDTH: 859px; PADDING-TOP: 0px; BACKGROUND-REPEAT: =
+no-repeat; POSITION: relative; HEIGHT: 220px
+}
+#title H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: =
+2.5em; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 8px; PADDING-TOP: 0px
+}
+#title DIV {
+	FONT-SIZE: 1.2em; FONT-STYLE: italic
+}
+#title {
+	MARGIN-TOP: auto
+}
+#titleWrapper {
+	PADDING-RIGHT: 65px; BACKGROUND-POSITION: left top; PADDING-LEFT: 24px; =
+LEFT: -18px; BACKGROUND-IMAGE: url(../images/postcard-alpha.png); =
+PADDING-BOTTOM: 24px; WIDTH: 229px; COLOR: #963; PADDING-TOP: 62px; =
+BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Georgia, 'Serif', 'Arial', =
+'Helvetica'; POSITION: absolute; TOP: -18px; HEIGHT: 100px
+}
+#title A {
+	COLOR: #963
+}
+#contentwrapper {
+	WIDTH: 100%
+}
+#content {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; OVERFLOW: =
+hidden; PADDING-TOP: 0px; HEIGHT: 1%
+}
+#content2 {
+	OVERFLOW: hidden; WIDTH: 100%; PADDING-TOP: 20px
+}
+#contentfooter {
+	CLEAR: both; PADDING-RIGHT: 8px; BORDER-TOP: #ebdaa6 1px dashed; =
+MARGIN-TOP: 30px; PADDING-LEFT: 8px; FONT-SIZE: 80%; PADDING-BOTTOM: =
+20px; PADDING-TOP: 10px; TEXT-ALIGN: center
+}
+#navigation {
+	PADDING-RIGHT: 0.1em; BORDER-TOP: #ebdaa6 1px dashed; MARGIN-TOP: =
+0.5em; PADDING-LEFT: 0.1em; FONT-SIZE: 125%; MARGIN-BOTTOM: 1em; =
+PADDING-BOTTOM: 0.5em; PADDING-TOP: 0.5em; BORDER-BOTTOM: #ebdaa6 1px =
+dashed
+}
+#welcome {
+	FONT-WEIGHT: bold; FONT-SIZE: 60%; FLOAT: right
+}
+#welcome A:link {
+	COLOR: #39f; TEXT-DECORATION: none
+}
+#welcome A:visited {
+	COLOR: #39f; TEXT-DECORATION: none
+}
+#welcome A:active {
+	COLOR: #39f; TEXT-DECORATION: none
+}
+#welcome A:hover {
+	COLOR: #39f; TEXT-DECORATION: underline
+}
+#navigation UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#navigation UL LI {
+	DISPLAY: inline; FONT-WEIGHT: bold; MARGIN-RIGHT: 1.5em
+}
+#navigation UL LI A:link {
+	COLOR: #c68b4a; TEXT-DECORATION: none
+}
+#navigation UL LI A:active {
+	COLOR: #c68b4a; TEXT-DECORATION: none
+}
+#navigation UL LI A:visited {
+	COLOR: #c68b4a; TEXT-DECORATION: none
+}
+#navigation UL LI A:hover {
+	COLOR: #c68b4a; TEXT-DECORATION: underline
+}
+#sidebar-a {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; FLOAT: right; PADDING-BOTTOM: =
+0px; MARGIN: 0px; WIDTH: 220px; PADDING-TOP: 20px
+}
+#sidebar-a H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: =
+2em; PADDING-BOTTOM: 0px; MARGIN: 20px 0px 0.5em; COLOR: #c68b4a; =
+PADDING-TOP: 0px; LETTER-SPACING: -1px
+}
+#sidebar-a P {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; =
+PADDING-TOP: 0px
+}
+#sidebar-a UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#sidebar-a LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.5em; =
+PADDING-TOP: 0.5em; BORDER-BOTTOM: #ebdaa6 1px dashed
+}
+#sidebar-a LI A:link {
+	TEXT-DECORATION: none
+}
+#sidebar-a LI A:visited {
+	TEXT-DECORATION: none
+}
+#sidebar-a LI A:active {
+	TEXT-DECORATION: none
+}
+#sidebar-a LI A:hover {
+	TEXT-DECORATION: underline
+}
+#footer {
+	CLEAR: both; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: =
+5px; MARGIN: 0px; PADDING-TOP: 5px
+}
+.pageTitle {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: =
+2.4em; PADDING-BOTTOM: 0px; MARGIN: 20px 0px 0.8em; COLOR: #c68b4a; =
+LINE-HEIGHT: 100%; PADDING-TOP: 4px; LETTER-SPACING: -2px
+}
+.pageTitle A:link {
+	FONT-WEIGHT: bold; COLOR: #c68b4a; TEXT-DECORATION: none
+}
+.pageTitle A:visited {
+	FONT-WEIGHT: bold; COLOR: #c68b4a; TEXT-DECORATION: none
+}
+.pageTitle A:hover {
+	TEXT-DECORATION: none
+}
+.post {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 20px; PADDING-TOP: 0px
+}
+.post IMG {
+	MAX-WIDTH: 100%; MARGIN: 0.5em
+}
+.post H2 {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; FONT-SIZE: 1.2em; =
+PADDING-BOTTOM: 0.5em; MARGIN: 0px; PADDING-TOP: 0em
+}
+.post H2 SPAN {
+	FONT-WEIGHT: normal; FONT-SIZE: 90%
+}
+.post H5 {
+	FONT-SIZE: 1em; MARGIN: 0px 0px 0.5em
+}
+.postfoot {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; FONT-SIZE: 0.9em; =
+PADDING-BOTTOM: 0.5em; MARGIN: 0em; COLOR: #666; PADDING-TOP: 0.5em
+}
+.postfoot A:link {
+	COLOR: #666
+}
+.postfoot A:active {
+	COLOR: #666
+}
+.postfoot A:visited {
+	COLOR: #666
+}
+.postfoot IMG {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: =
+1em; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-TOP: =
+0px; BORDER-BOTTOM: 0px
+}
+.postasidecomment {
+	MARGIN-LEFT: 90px
+}
+.postcommentarea {
+	PADDING-RIGHT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 90%; FLOAT: left; =
+OVERFLOW: hidden; TEXT-TRANSFORM: uppercase; WIDTH: 80px; COLOR: #999; =
+FONT-FAMILY: Georgia, Serif; TEXT-ALIGN: center
+}
+.postcommentarea A:link {
+	FONT-WEIGHT: normal; FONT-SIZE: 250%; COLOR: #c68b4a; LINE-HEIGHT: =
+110%; TEXT-DECORATION: none
+}
+.postcommentarea A:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 250%; COLOR: #c68b4a; LINE-HEIGHT: =
+110%; TEXT-DECORATION: none
+}
+.postcommentarea A:active {
+	FONT-WEIGHT: normal; FONT-SIZE: 250%; COLOR: #c68b4a; LINE-HEIGHT: =
+110%; TEXT-DECORATION: none
+}
+.postcommentarea A:hover {
+	TEXT-DECORATION: underline
+}
+#search .searchBox {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: =
+#999999 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; MARGIN: 0em =
+5px 0em 10px; BORDER-LEFT: #999999 1px solid; WIDTH: 120px; PADDING-TOP: =
+2px; BORDER-BOTTOM: #999999 1px solid
+}
+#search A:visited {
+	DISPLAY: inline; FONT-WEIGHT: bold; COLOR: #066
+}
+#search A:active {
+	DISPLAY: inline; FONT-WEIGHT: bold; COLOR: #066
+}
+#search A:link {
+	DISPLAY: inline; FONT-WEIGHT: bold; COLOR: #066
+}
+#search A:hover {
+	COLOR: #933
+}
+#search {
+	MARGIN-BOTTOM: 5px
+}
+.spacer {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 0px
+}
+.TagCloud {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 16px; MARGIN: =
+16px 0px; COLOR: #999999; LINE-HEIGHT: 180%; PADDING-TOP: 16px; =
+LIST-STYLE-TYPE: none; BACKGROUND-COLOR: #f7f7f7
+}
+.SidebarTagCloud {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 90%; PADDING-BOTTOM: =
+0px; MARGIN: 0px; LINE-HEIGHT: 200%; PADDING-TOP: 0px; LIST-STYLE-TYPE: =
+none
+}
+.TagCloud LI {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: =
+0px; BORDER-RIGHT-WIDTH: 0px
+}
+#sidebar-a .SidebarTagCloud LI {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: =
+0px; BORDER-RIGHT-WIDTH: 0px
+}
+.Tag1 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag2 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag3 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag4 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag5 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag6 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag1 A:link {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%; COLOR: #04a; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag1 A:visited {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%; COLOR: #04a; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag1 A:active {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%; COLOR: #04a; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag2 A:link {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%; COLOR: #05b; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag2 A:visited {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%; COLOR: #05b; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag2 A:active {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%; COLOR: #05b; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag3 A:link {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%; COLOR: #06c; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag3 A:visited {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%; COLOR: #06c; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag3 A:active {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%; COLOR: #06c; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag4 A:link {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%; COLOR: #17d; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag4 A:visited {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%; COLOR: #17d; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag4 A:active {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%; COLOR: #17d; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag5 A:link {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%; COLOR: #28e; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag5 A:visited {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%; COLOR: #28e; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag5 A:active {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%; COLOR: #28e; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag6 A:link {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%; COLOR: #39f; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag6 A:visited {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%; COLOR: #39f; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag6 A:active {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%; COLOR: #39f; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag1 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag2 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag3 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag4 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag5 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag6 A:hover {
+	TEXT-DECORATION: underline
+}
+#sidebar-a .SidebarTagCloud A:link {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; DISPLAY: inline; MARGIN: auto; =
+BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+#sidebar-a .SidebarTagCloud A:active {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; DISPLAY: inline; MARGIN: auto; =
+BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+#sidebar-a .SidebarTagCloud A:visited {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; DISPLAY: inline; MARGIN: auto; =
+BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+#sidebar-a .SidebarTagCloud A:hover {
+	BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline
+}
+.SearchStatistics {
+	MARGIN-TOP: 16px; MARGIN-BOTTOM: 16px
+}
+.InlineTagEditor {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: =
+#999999 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; BORDER-LEFT: =
+#999999 1px solid; PADDING-TOP: 4px; BORDER-BOTTOM: #999999 1px solid; =
+BACKGROUND-COLOR: #f3f3f3
+}
+.TextButton {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: =
+#cccccc 1px solid; DISPLAY: inline-block; PADDING-LEFT: 4px; =
+FONT-WEIGHT: bold; FONT-SIZE: 80%; PADDING-BOTTOM: 4px; MARGIN: 1px; =
+BORDER-LEFT: #cccccc 1px solid; COLOR: #333333; PADDING-TOP: 4px; =
+BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: Tahoma, Arial, Helvetica; =
+WHITE-SPACE: nowrap; BACKGROUND-COLOR: #eeeeee
+}
+.TextButton:link {
+	COLOR: #333333; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none
+}
+.TextButton:visited {
+	COLOR: #333333; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none
+}
+.TextButton:active {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.TextButton:hover {
+	COLOR: #333333; BACKGROUND-COLOR: #dddddd; TEXT-DECORATION: underline
+}
+.ModalMask {
+	FILTER: alpha(opacity=3D40); BACKGROUND-COLOR: #333333; opacity: .4
+}
+.Modal {
+	BORDER-RIGHT: #888888 3px solid; BORDER-TOP: #888888 1px solid; =
+BORDER-LEFT: #888888 1px solid; BORDER-BOTTOM: #888888 3px solid; =
+BACKGROUND-COLOR: #eeeeee
+}
+.ModalTitle {
+	BORDER-RIGHT: #cccccc 0px solid; PADDING-RIGHT: 5px; BORDER-TOP: =
+#cccccc 0px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: =
+16px; PADDING-BOTTOM: 7px; OVERFLOW: hidden; BORDER-LEFT: #cccccc 0px =
+solid; CURSOR: move; COLOR: #000000; PADDING-TOP: 5px; BORDER-BOTTOM: =
+#cccccc 1px solid; FONT-FAMILY: Tahoma, Arial, Helvetica; HEIGHT: 18px; =
+BACKGROUND-COLOR: #dddddd; TEXT-ALIGN: left
+}
+.ModalClose {
+	FLOAT: right; BACKGROUND-IMAGE: =
+url(../../../default/images/common/close.gif); OVERFLOW: hidden; WIDTH: =
+33px; CURSOR: pointer; BACKGROUND-REPEAT: no-repeat; HEIGHT: 12px
+}
+.ModalContent {
+	BACKGROUND-COLOR: #ffffff
+}
+.ModalFooter {
+	BORDER-RIGHT: #cccccc 0px solid; PADDING-RIGHT: 2px; BORDER-TOP: =
+#cccccc 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: =
+#cccccc 0px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc 0px solid; =
+BACKGROUND-COLOR: #eeeeee
+}
+.ModalResize {
+	FLOAT: right; BACKGROUND-IMAGE: =
+url(../../../default/images/common/resize.gif); OVERFLOW: hidden; WIDTH: =
+14px; CURSOR: se-resize; BACKGROUND-REPEAT: no-repeat; HEIGHT: 14px
+}
+.BlogSubNotification {
+	FONT-SIZE: 80%; COLOR: #ff0000
+}
+.SubscriptionButton {
+	MARGIN-LEFT: 0px
+}
+.CommonRateControlReadOnly {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; PADDING-TOP: 1px; =
+BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.CommonRateControl {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; CURSOR: pointer; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: =
+#eeeeee
+}
+.CommonRateControlActive {
+	BORDER-RIGHT: #cc9933 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#cc9933 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #cc9933 1px solid; CURSOR: pointer; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #cc9933 1px solid; BACKGROUND-COLOR: =
+#ffcc66
+}
+.CommonRateControlReadOnly IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.CommonRateControl IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.CommonRateControlActive IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+DL {
+=09
+}
+DT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; =
+PADDING-BOTTOM: 0px; MARGIN: 1em 0px 0.3em; PADDING-TOP: 0px
+}
+DD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.smallbox {
+	WIDTH: 80%
+}
+TEXTAREA {
+	WIDTH: 80%; HEIGHT: 100px
+}
+
+------=_NextPart_000_008A_01C93060.A45A3A20
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://weblogs.asp.net/Themes/Blogs/traveler/style/print.css?SectionID=482
+
+HTML {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+auto; COLOR: #333333; PADDING-TOP: 0px
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+auto; COLOR: #333333; PADDING-TOP: 0px
+}
+BODY {
+	FONT-SIZE: 76%; PADDING-TOP: 30px; FONT-FAMILY: Arial, Helvetica, =
+sans-serif; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: center
+}
+A:visited {
+	COLOR: #39f
+}
+A:active {
+	COLOR: #39f
+}
+A:link {
+	COLOR: #39f
+}
+A:hover {
+	COLOR: #06c
+}
+H1 {
+=09
+}
+H2 {
+=09
+}
+H3 {
+=09
+}
+H4 {
+=09
+}
+H5 {
+=09
+}
+H1 {
+	FONT-SIZE: 1.5em; MARGIN: 0px
+}
+H1 A:visited {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+H1 A:active {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+H1 A:link {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+H1 A:hover {
+	TEXT-DECORATION: none
+}
+H2 {
+	MARGIN-TOP: 10px; FONT-SIZE: 1em
+}
+H3 {
+	FONT-SIZE: 1.1em; TEXT-DECORATION: none
+}
+H3 A:hover {
+	TEXT-DECORATION: none
+}
+H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+P {
+	MARGIN: 10px 0px
+}
+INPUT.text {
+	WIDTH: 300px
+}
+TEXTAREA {
+	WIDTH: 300px; HEIGHT: 200px
+}
+#wrapper {
+	WIDTH: auto
+}
+#container {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+auto; WIDTH: 100%; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#header {
+	DISPLAY: none
+}
+#title {
+	DISPLAY: none
+}
+#titleWrapper {
+	DISPLAY: none
+}
+#contentwrapper {
+	WIDTH: 100%
+}
+#content {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; OVERFLOW: =
+hidden; PADDING-TOP: 0px; HEIGHT: 1%
+}
+#content2 {
+	OVERFLOW: hidden; WIDTH: 100%; PADDING-TOP: 20px
+}
+#contentfooter {
+	CLEAR: both; PADDING-RIGHT: 8px; MARGIN-TOP: 30px; PADDING-LEFT: 8px; =
+FONT-SIZE: 80%; PADDING-BOTTOM: 20px; PADDING-TOP: 10px; TEXT-ALIGN: =
+center
+}
+#navigation {
+	DISPLAY: none
+}
+#welcome {
+	DISPLAY: none
+}
+#sidebar-a {
+	DISPLAY: none
+}
+#footer {
+	DISPLAY: none
+}
+.pageTitle {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: =
+2.4em; PADDING-BOTTOM: 0px; MARGIN: 20px 0px 0.8em; COLOR: #c68b4a; =
+LINE-HEIGHT: 100%; PADDING-TOP: 4px; LETTER-SPACING: -2px
+}
+.pageTitle A:link {
+	FONT-WEIGHT: bold; COLOR: #c68b4a; TEXT-DECORATION: none
+}
+.pageTitle A:visited {
+	FONT-WEIGHT: bold; COLOR: #c68b4a; TEXT-DECORATION: none
+}
+.pageTitle A:hover {
+	TEXT-DECORATION: none
+}
+.post {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 20px; PADDING-TOP: 0px
+}
+.post IMG {
+	MAX-WIDTH: 100%; MARGIN: 0.5em
+}
+.post H2 {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; FONT-SIZE: 1.2em; =
+PADDING-BOTTOM: 0.5em; MARGIN: 0px; PADDING-TOP: 0em
+}
+.post H2 SPAN {
+	FONT-WEIGHT: normal; FONT-SIZE: 90%
+}
+.post H5 {
+	FONT-SIZE: 1em; MARGIN: 0px 0px 0.5em
+}
+.postfoot {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; FONT-SIZE: 0.9em; =
+PADDING-BOTTOM: 0.5em; MARGIN: 0em; COLOR: #666; PADDING-TOP: 0.5em
+}
+.postfoot A:link {
+	COLOR: #666
+}
+.postfoot A:active {
+	COLOR: #666
+}
+.postfoot A:visited {
+	COLOR: #666
+}
+.postfoot IMG {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: =
+1em; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-TOP: =
+0px; BORDER-BOTTOM: 0px
+}
+.postasidecomment {
+	MARGIN-LEFT: 90px
+}
+.postcommentarea {
+	PADDING-RIGHT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 90%; FLOAT: left; =
+OVERFLOW: hidden; TEXT-TRANSFORM: uppercase; WIDTH: 80px; COLOR: #999; =
+FONT-FAMILY: Georgia, Serif; TEXT-ALIGN: center
+}
+.postcommentarea A:link {
+	FONT-WEIGHT: normal; FONT-SIZE: 250%; COLOR: #c68b4a; LINE-HEIGHT: =
+110%; TEXT-DECORATION: none
+}
+.postcommentarea A:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 250%; COLOR: #c68b4a; LINE-HEIGHT: =
+110%; TEXT-DECORATION: none
+}
+.postcommentarea A:active {
+	FONT-WEIGHT: normal; FONT-SIZE: 250%; COLOR: #c68b4a; LINE-HEIGHT: =
+110%; TEXT-DECORATION: none
+}
+.postcommentarea A:hover {
+	TEXT-DECORATION: underline
+}
+.spacer {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 0px
+}
+.TagCloud {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 16px; MARGIN: =
+16px 0px; COLOR: #999999; LINE-HEIGHT: 180%; PADDING-TOP: 16px; =
+LIST-STYLE-TYPE: none; BACKGROUND-COLOR: #f7f7f7
+}
+.SidebarTagCloud {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 90%; PADDING-BOTTOM: =
+0px; MARGIN: 0px; LINE-HEIGHT: 200%; PADDING-TOP: 0px; LIST-STYLE-TYPE: =
+none
+}
+.TagCloud LI {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: =
+0px; BORDER-RIGHT-WIDTH: 0px
+}
+#sidebar-a .SidebarTagCloud LI {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: =
+0px; BORDER-RIGHT-WIDTH: 0px
+}
+.Tag1 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag2 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag3 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag4 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag5 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag6 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag1 A:link {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%; COLOR: #04a; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag1 A:visited {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%; COLOR: #04a; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag1 A:active {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%; COLOR: #04a; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag2 A:link {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%; COLOR: #05b; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag2 A:visited {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%; COLOR: #05b; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag2 A:active {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%; COLOR: #05b; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag3 A:link {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%; COLOR: #06c; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag3 A:visited {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%; COLOR: #06c; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag3 A:active {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%; COLOR: #06c; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag4 A:link {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%; COLOR: #17d; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag4 A:visited {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%; COLOR: #17d; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag4 A:active {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%; COLOR: #17d; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag5 A:link {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%; COLOR: #28e; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag5 A:visited {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%; COLOR: #28e; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag5 A:active {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%; COLOR: #28e; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag6 A:link {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%; COLOR: #39f; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag6 A:visited {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%; COLOR: #39f; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag6 A:active {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%; COLOR: #39f; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag1 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag2 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag3 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag4 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag5 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag6 A:hover {
+	TEXT-DECORATION: underline
+}
+.SearchStatistics {
+	MARGIN-TOP: 16px; MARGIN-BOTTOM: 16px
+}
+.ModalMask {
+	FILTER: alpha(opacity=3D40); BACKGROUND-COLOR: #333333; opacity: .4
+}
+.Modal {
+	BORDER-RIGHT: #888888 3px solid; BORDER-TOP: #888888 1px solid; =
+BORDER-LEFT: #888888 1px solid; BORDER-BOTTOM: #888888 3px solid; =
+BACKGROUND-COLOR: #eeeeee
+}
+.ModalTitle {
+	BORDER-RIGHT: #cccccc 0px solid; PADDING-RIGHT: 5px; BORDER-TOP: =
+#cccccc 0px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: =
+16px; PADDING-BOTTOM: 7px; OVERFLOW: hidden; BORDER-LEFT: #cccccc 0px =
+solid; CURSOR: move; COLOR: #000000; PADDING-TOP: 5px; BORDER-BOTTOM: =
+#cccccc 1px solid; FONT-FAMILY: Tahoma, Arial, Helvetica; HEIGHT: 18px; =
+BACKGROUND-COLOR: #dddddd; TEXT-ALIGN: left
+}
+.ModalClose {
+	FLOAT: right; BACKGROUND-IMAGE: =
+url(../../../default/images/common/close.gif); OVERFLOW: hidden; WIDTH: =
+33px; CURSOR: pointer; BACKGROUND-REPEAT: no-repeat; HEIGHT: 12px
+}
+.ModalContent {
+	BACKGROUND-COLOR: #ffffff
+}
+.ModalFooter {
+	BORDER-RIGHT: #cccccc 0px solid; PADDING-RIGHT: 2px; BORDER-TOP: =
+#cccccc 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: =
+#cccccc 0px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc 0px solid; =
+BACKGROUND-COLOR: #eeeeee
+}
+.ModalResize {
+	FLOAT: right; BACKGROUND-IMAGE: =
+url(../../../default/images/common/resize.gif); OVERFLOW: hidden; WIDTH: =
+14px; CURSOR: se-resize; BACKGROUND-REPEAT: no-repeat; HEIGHT: 14px
+}
+.BlogSubNotification {
+	FONT-SIZE: 80%; COLOR: #ff0000
+}
+.SubscriptionButton {
+	MARGIN-LEFT: 0px
+}
+.CommonRateControlReadOnly {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; PADDING-TOP: 1px; =
+BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.CommonRateControl {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; CURSOR: pointer; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: =
+#eeeeee
+}
+.CommonRateControlReadOnly IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.CommonRateControl IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.CommonRateControlActive IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+DL {
+=09
+}
+DT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; =
+PADDING-BOTTOM: 0px; MARGIN: 1em 0px 0.3em; PADDING-TOP: 0px
+}
+DD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.smallbox {
+	WIDTH: 80%
+}
+TEXTAREA {
+	WIDTH: 80%; HEIGHT: 100px
+}
+#commentform {
+	DISPLAY: none
+}
+
+------=_NextPart_000_008A_01C93060.A45A3A20
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://weblogs.asp.net/Themes/Blogs/traveler/style/DynamicStyle.aspx?SectionID=482
+
+BODY {
+	BACKGROUND-IMAGE: none; COLOR: #000000; FONT-FAMILY: Arial, Helvetica; =
+BACKGROUND-COLOR: #ffffff
+}
+HTML {
+	BACKGROUND-IMAGE: none; COLOR: #000000; FONT-FAMILY: Arial, Helvetica; =
+BACKGROUND-COLOR: #ffffff
+}
+A:link {
+	COLOR: #3399ff
+}
+A:hover {
+	COLOR: #3399ff
+}
+A:active {
+	COLOR: #3399ff
+}
+A:visited {
+	COLOR: #0066cc
+}
+#header {
+	BACKGROUND-IMAGE: url(/themes/blogs/traveler/images/newyork.jpg)
+}
+#title H1 {
+	FONT-SIZE: 2.5em; COLOR: #996633; FONT-FAMILY: Georgia, serif
+}
+#title H1 A:link {
+	COLOR: #996633
+}
+#title H1 A:visited {
+	COLOR: #996633
+}
+#title H1 A:active {
+	COLOR: #996633
+}
+.pageTitle {
+	FONT-SIZE: 2.4em; COLOR: #c68b4a; FONT-FAMILY: Arial, Helvetica
+}
+#sidebar-a H3 {
+	FONT-SIZE: 2em; COLOR: #c68b4a; FONT-FAMILY: Arial, Helvetica
+}
+#sidebar-b H3 {
+	FONT-SIZE: 2em; COLOR: #c68b4a; FONT-FAMILY: Arial, Helvetica
+}
+#sidebar-a {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica; BACKGROUND-COLOR: =
+#ffffff
+}
+#sidebar-a UL {
+	FONT-SIZE: 1em
+}
+#sidebar-a LI {
+	BORDER-LEFT-COLOR: #ebdaa6; BORDER-BOTTOM-COLOR: #ebdaa6; =
+BORDER-TOP-COLOR: #ebdaa6; BORDER-RIGHT-COLOR: #ebdaa6
+}
+#sidebar-a A:link {
+	COLOR: #3399ff
+}
+#sidebar-a A:visited {
+	COLOR: #0066cc
+}
+#sidebar-a A:active {
+	COLOR: #3399ff
+}
+#sidebar-a A:hover {
+	COLOR: #3399ff
+}
+.Tag1 A:link {
+	COLOR: #0044aa
+}
+.Tag1 A:visited {
+	COLOR: #0044aa
+}
+.Tag1 A:active {
+	COLOR: #0044aa
+}
+.Tag2 A:link {
+	COLOR: #0055bb
+}
+.Tag2 A:visited {
+	COLOR: #0055bb
+}
+.Tag2 A:active {
+	COLOR: #0055bb
+}
+.Tag3 A:link {
+	COLOR: #0066cc
+}
+.Tag3 A:visited {
+	COLOR: #0066cc
+}
+.Tag3 A:active {
+	COLOR: #0066cc
+}
+.Tag4 A:link {
+	COLOR: #1177dd
+}
+.Tag4 A:visited {
+	COLOR: #1177dd
+}
+.Tag4 A:active {
+	COLOR: #1177dd
+}
+.Tag5 A:link {
+	COLOR: #2288ee
+}
+.Tag5 A:visited {
+	COLOR: #2288ee
+}
+.Tag5 A:active {
+	COLOR: #2288ee
+}
+.Tag6 A:link {
+	COLOR: #3399ff
+}
+.Tag6 A:visited {
+	COLOR: #3399ff
+}
+.Tag6 A:active {
+	COLOR: #3399ff
+}
+#wrapper {
+	WIDTH: 859px
+}
+#sidebar-a {
+	WIDTH: 220px
+}
+
+------=_NextPart_000_008A_01C93060.A45A3A20
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://weblogs.asp.net/WebResource.axd?d=J1hksw-hD7hv_ORyTj2qdhHKlC7Oddil8eixZtT8LFu2jE2HPY18SDuMZGMBCOJ6l7dkFeWC7-7HlOpMTdQFThunYDA1Tuos0&t=633307998080000000
+
+=0A=
+var Telligent_Common=3Dnew Object();Telligent_Common._state=3Dnew =
+Array();Telligent_Common.ConvertHsvColorToRgbColor=3Dfunction(hsv)=0A=
+{var h=3Dhsv[0];var s=3Dhsv[1];var v=3Dhsv[2];var r;var g;var =
+b;if(s=3D=3D0)=0A=
+return new Array(v,v,v);var htemp;if(h=3D=3D360)=0A=
+htemp=3D0;else=0A=
+htemp=3Dh;htemp=3Dhtemp/60;var i=3DMath.floor(htemp);var f=3Dhtemp-i;var =
+p=3Dv*(1-s);var q=3Dv*(1-(s*f));var =
+t=3Dv*(1-(s*(1-f)));if(i=3D=3D0){r=3Dv;g=3Dt;b=3Dp;}=0A=
+if(i=3D=3D1){r=3Dq;g=3Dv;b=3Dp;}=0A=
+if(i=3D=3D2){r=3Dp;g=3Dv;b=3Dt;}=0A=
+if(i=3D=3D3){r=3Dp;g=3Dq;b=3Dv;}=0A=
+if(i=3D=3D4){r=3Dt;g=3Dp;b=3Dv;}=0A=
+if(i=3D=3D5){r=3Dv;g=3Dp;b=3Dq;}=0A=
+r=3DMath.round(r);g=3DMath.round(g);b=3DMath.round(b);return new =
+Array(r,g,b);}=0A=
+Telligent_Common.ConvertRgbColorToHsvColor=3Dfunction(rgb)=0A=
+{var r=3Drgb[0];var g=3Drgb[1];var b=3Drgb[2];var h;var s;var =
+v=3DMath.max(Math.max(r,g),b);var min=3DMath.min(Math.min(r,g),b);var =
+delta=3Dv-min;if(v=3D=3D0)=0A=
+s=3D0=0A=
+else=0A=
+s=3Ddelta/v;if(s=3D=3D0)=0A=
+h=3D0;else=0A=
+{if(r=3D=3Dv)=0A=
+h=3D60*(g-b)/delta;else if(g=3D=3Dv)=0A=
+h=3D120+60*(b-r)/delta;else if(b=3D=3Dv)=0A=
+h=3D240+60*(r-g)/delta;}=0A=
+if(h<0)=0A=
+h+=3D360;return new Array(h,s,v);}=0A=
+Telligent_Common.ConvertDecimalToHexadecimal=3Dfunction(d,digits)=0A=
+{var chars=3D"0123456789abcdef";var h=3D'';var mod;while(d>0)=0A=
+{mod=3Dd%16;h=3Dchars.substr(mod,1)+h;d-=3Dmod;d/=3D16;}=0A=
+if(digits)=0A=
+{while(h.length<digits)=0A=
+{h=3D"0"+h;}}=0A=
+return h;}=0A=
+Telligent_Common.ConvertHtmlColorToRgbColor=3Dfunction(html)=0A=
+{html=3Dhtml.replace(/[^0-9a-f]/ig,'');if(html.length=3D=3D3)=0A=
+return new =
+Array(parseInt(html.substr(0,1)+html.substr(0,1),16),parseInt(html.substr=
+(1,1)+html.substr(1,1),16),parseInt(html.substr(2,1)+html.substr(2,1),16)=
+);else if(html.length=3D=3D6)=0A=
+return new =
+Array(parseInt(html.substr(0,2),16),parseInt(html.substr(2,2),16),parseIn=
+t(html.substr(4,2),16));else=0A=
+return new Array(255,255,255);}=0A=
+Telligent_Common.ConvertRgbColorToHtmlColor=3Dfunction(rgbColor)=0A=
+{return"#"+Telligent_Common.ConvertDecimalToHexadecimal(rgbColor[0],2)+Te=
+lligent_Common.ConvertDecimalToHexadecimal(rgbColor[1],2)+Telligent_Commo=
+n.ConvertDecimalToHexadecimal(rgbColor[2],2);}=0A=
+Telligent_Common.GetContrastingHtmlColorForRgbColor=3Dfunction(rgb)=0A=
+{var illuminance=3D(rgb[0]*2)+(rgb[1]*5)+(rgb[2]);if(illuminance>1024)=0A=
+return"#000000";else=0A=
+return"#ffffff";}=0A=
+Telligent_Common.GetElementInfo=3Dfunction(element)=0A=
+{var curleft=3D0;var curtop=3D0;var obj=3Delement;var =
+leftComplete=3Dfalse;var topComplete=3Dfalse;var =
+isIE=3DTelligent_Common.IsIE();while(obj)=0A=
+{if(!leftComplete)=0A=
+curleft+=3Dobj.offsetLeft;if(!topComplete)=0A=
+curtop+=3Dobj.offsetTop;if(isIE&&obj.offsetParent&&obj.offsetParent.style=
+.position=3D=3D'relative')=0A=
+{if(!obj.offsetParent.style.width)=0A=
+{leftComplete=3Dtrue;if((obj.offsetParent.style.top||obj.offsetParent.sty=
+le.bottom))=0A=
+{curtop+=3Dobj.offsetHeight;topComplete=3Dtrue;}}}=0A=
+obj=3Dobj.offsetParent;}=0A=
+var elementInfo=3Dnew =
+Object();elementInfo.Left=3Dcurleft;elementInfo.Top=3Dcurtop;elementInfo.=
+Width=3Delement.offsetWidth;elementInfo.Height=3Delement.offsetHeight;ret=
+urn elementInfo;}=0A=
+Telligent_Common.GetWindowInfo=3Dfunction()=0A=
+{var =
+scrollX=3D0,scrollY=3D0,width=3D0,height=3D0;if(typeof(window.pageXOffset=
+)=3D=3D'number')=0A=
+{scrollX=3Dwindow.pageXOffset;scrollY=3Dwindow.pageYOffset;}=0A=
+else =
+if(document.body&&(document.body.scrollLeft||document.body.scrollTop))=0A=
+{scrollX=3Ddocument.body.scrollLeft;scrollY=3Ddocument.body.scrollTop;}=0A=
+else =
+if(document.documentElement&&(document.documentElement.scrollLeft||docume=
+nt.documentElement.scrollTop))=0A=
+{scrollX=3Ddocument.documentElement.scrollLeft;scrollY=3Ddocument.documen=
+tElement.scrollTop;}=0A=
+if(typeof(window.innerWidth)=3D=3D'number')=0A=
+{width=3Dwindow.innerWidth;height=3Dwindow.innerHeight;}=0A=
+else =
+if(document.documentElement&&(document.documentElement.clientWidth||docum=
+ent.documentElement.clientHeight))=0A=
+{width=3Ddocument.documentElement.clientWidth;height=3Ddocument.documentE=
+lement.clientHeight;}=0A=
+else =
+if(document.body&&(document.body.clientWidth||document.body.clientHeight)=
+)=0A=
+{width=3Ddocument.body.clientWidth;height=3Ddocument.body.clientHeight;}=0A=
+if(document.documentElement&&(document.documentElement.scrollHeight||docu=
+ment.documentElement.offsetHeight))=0A=
+{if(document.documentElement.scrollHeight>document.documentElement.offset=
+Height)=0A=
+{contentWidth=3Ddocument.documentElement.scrollWidth;contentHeight=3Ddocu=
+ment.documentElement.scrollHeight;}=0A=
+else=0A=
+{contentWidth=3Ddocument.documentElement.offsetWidth;contentHeight=3Ddocu=
+ment.documentElement.offsetHeight;}}=0A=
+else =
+if(document.body&&(document.body.scrollHeight||document.body.offsetHeight=
+))=0A=
+{if(document.body.scrollHeight>document.body.offsetHeight)=0A=
+{contentWidth=3Ddocument.body.scrollWidth;contentHeight=3Ddocument.body.s=
+crollHeight;}=0A=
+else=0A=
+{contentWidth=3Ddocument.body.offsetWidth;contentHeight=3Ddocument.body.o=
+ffsetHeight;}}=0A=
+else=0A=
+{contentWidth=3Dwidth;contentHeight=3Dheight;}=0A=
+if(height>contentHeight)=0A=
+height=3DcontentHeight;if(width>contentWidth)=0A=
+width=3DcontentWidth;var rect=3Dnew =
+Object();rect.ScrollX=3DscrollX;rect.ScrollY=3DscrollY;rect.Width=3Dwidth=
+;rect.Height=3Dheight;rect.ContentWidth=3DcontentWidth;rect.ContentHeight=
+=3DcontentHeight;return rect;}=0A=
+Telligent_Common.GetCurrentStyleValue=3Dfunction(element,styleRule,jsStyl=
+eRule,defaultValue)=0A=
+{var value=3D'';try=0A=
+{if(document.defaultView&&document.defaultView.getComputedStyle)=0A=
+value=3Ddocument.defaultView.getComputedStyle(element,"").getPropertyValu=
+e(styleRule);else if(element.currentStyle)=0A=
+value=3Delement.currentStyle[jsStyleRule];}catch(e){}=0A=
+if((value=3D=3D'inherit'||value=3D=3D'transparent')&&element.parentNode!=3D=
+null)=0A=
+return =
+Telligent_Common.GetCurrentStyleValue(element.parentNode,styleRule,jsStyl=
+eRule,defaultValue);else =
+if(value!=3D''&&value!=3Dundefined&&value!=3D'rgba(0, 0, 0, 0)')=0A=
+return value;else=0A=
+return defaultValue;}=0A=
+Telligent_Common.GetStyleOffset=3Dfunction(element)=0A=
+{var result=3Dnew =
+Object();result.Height=3DTelligent_Common.IsNanDefault(parseInt(Telligent=
+_Common.GetCurrentStyleValue(element,'border-top-width','borderTopWidth',=
+'0')),0)+=0A=
+Telligent_Common.IsNanDefault(parseInt(Telligent_Common.GetCurrentStyleVa=
+lue(element,'border-bottom-width','borderBottomWidth','0')),0)+=0A=
+Telligent_Common.IsNanDefault(parseInt(Telligent_Common.GetCurrentStyleVa=
+lue(element,'padding-top','paddingTop','0')),0)+=0A=
+Telligent_Common.IsNanDefault(parseInt(Telligent_Common.GetCurrentStyleVa=
+lue(element,'padding-bottom','paddingBottom','0')),0);result.Width=3DTell=
+igent_Common.IsNanDefault(parseInt(Telligent_Common.GetCurrentStyleValue(=
+element,'border-left-width','borderLeftWidth','0')),0)+=0A=
+Telligent_Common.IsNanDefault(parseInt(Telligent_Common.GetCurrentStyleVa=
+lue(element,'border-right-width','borderRightWidth','0')),0)+=0A=
+Telligent_Common.IsNanDefault(parseInt(Telligent_Common.GetCurrentStyleVa=
+lue(element,'padding-left','paddingLeft','0')),0)+=0A=
+Telligent_Common.IsNanDefault(parseInt(Telligent_Common.GetCurrentStyleVa=
+lue(element,'padding-right','paddingRight','0')),0);return result;}=0A=
+Telligent_Common.IsNanDefault=3Dfunction(value,defaultValue)=0A=
+{if(isNaN(value))=0A=
+return defaultValue;else=0A=
+return value;}=0A=
+Telligent_Common.EscapeForRegExp=3Dfunction(value)=0A=
+{return value.replace(/([\\\(\^\$\*\+\?\{\}\.\)\|\-])/g,'\\$1');}=0A=
+Telligent_Common.GetSelectedHtmlInElement=3Dfunction(element,includeAllCo=
+ntentIfNoSelection,includeAllContentIfInvalidSelection,invalidSelectionMe=
+ssage)=0A=
+{var selectionIsValid=3Dtrue;var content=3Dnull;if(window.getSelection)=0A=
+{var =
+selection=3Dwindow.getSelection();if(selection&&selection.rangeCount>0&&s=
+election.toString().length>0)=0A=
+{selectionIsValid=3Dfalse;var =
+selectedRange=3Dselection.getRangeAt(0);var =
+availableRange=3Ddocument.createRange();availableRange.selectNode(element=
+);if(availableRange.compareBoundaryPoints(Range.START_TO_START,selectedRa=
+nge)<=3D0&&availableRange.compareBoundaryPoints(Range.END_TO_END,selected=
+Range)>=3D0)=0A=
+{var =
+temp=3Ddocument.createElement('div');temp.appendChild(selectedRange.clone=
+Contents());content=3Dtemp.innerHTML;}=0A=
+else if(invalidSelectionMessage)=0A=
+alert(invalidSelectionMessage);}}=0A=
+else if(document.selection)=0A=
+{var range=3Ddocument.selection.createRange();if(range&&range.text)=0A=
+{selectionIsValid=3Dfalse;var =
+parent=3Drange.parentElement();if(parent!=3Dnull&&Telligent_Common.Elemen=
+tContainsElement(element,parent))=0A=
+content=3Drange.htmlText;else if(invalidSelectionMessage)=0A=
+alert(invalidSelectionMessage);}}=0A=
+if(content=3D=3Dnull&&((selectionIsValid&&includeAllContentIfNoSelection)=
+||includeAllContentIfInvalidSelection))=0A=
+content=3Delement.innerHTML;return content;}=0A=
+Telligent_Common.ElementContainsElement=3Dfunction(parent,child)=0A=
+{if(!parent||!child)=0A=
+return false;if(parent=3D=3Dchild)=0A=
+return true;if(parent&&parent.childNodes)=0A=
+{for(var i=3D0;i<parent.childNodes.length;i++)=0A=
+{if(parent.childNodes[i]=3D=3Dchild||Telligent_Common.ElementContainsElem=
+ent(parent.childNodes[i],child))=0A=
+return true;}}=0A=
+return false;}=0A=
+Telligent_Common.GetCurrentCursorIndex=3Dfunction(inputElement)=0A=
+{var =
+index=3D0;if(inputElement.selectionStart||inputElement.selectionStart=3D=3D=
+'0')=0A=
+index=3DinputElement.selectionStart;else if(document.selection)=0A=
+{var originalValue=3DinputElement.value;var =
+range=3Ddocument.selection.createRange();var =
+escapeChar=3DString.fromCharCode(1);range.text=3DescapeChar;index=3Dinput=
+Element.value.indexOf(escapeChar);inputElement.value=3DoriginalValue;}=0A=
+return index;}=0A=
+Telligent_Common._delayedSetCurrentCursorSelection=3Dfunction(stateId)=0A=
+{var =
+state=3DTelligent_Common.GetStateByStateId(stateId,'Telligent_Common_SetC=
+urrentCursorSelection');if(state)=0A=
+{Telligent_Common.SetCurrentCursorSelection(state.InputElement,state.Star=
+tIndex,state.EndIndex,false,state.PersistedValue);Telligent_Common.ClearS=
+tateByStateId(stateId,'Telligent_Common_SetCurrentCursorSelection');}}=0A=
+Telligent_Common.IsSafari=3Dfunction()=0A=
+{return navigator.userAgent.indexOf('Safari')!=3D-1;}=0A=
+Telligent_Common.IsOpera=3Dfunction()=0A=
+{return window.opera!=3Dnull;}=0A=
+Telligent_Common.IsIE=3Dfunction()=0A=
+{return document.getElementsByTagName('body')[0].currentStyle!=3Dnull;}=0A=
+Telligent_Common.CreateSafeFunction=3Dfunction(instance,func)=0A=
+{return function(){return func.apply(instance,arguments);}}=0A=
+Telligent_Common.DisposeContent=3Dfunction(parentElement)=0A=
+{if(parentElement&&parentElement.childNodes&&parentElement.childNodes.len=
+gth>0)=0A=
+{for(var i=3D0;i<parentElement.childNodes.length;i++)=0A=
+{if(parentElement.childNodes[i].dispose)=0A=
+{try=0A=
+{parentElement.childNodes[i].dispose();}=0A=
+catch(e){}}=0A=
+Telligent_Common.DisposeContent(parentElement.childNodes[i]);}}}=0A=
+Telligent_Common.SetCurrentCursorSelection=3Dfunction(inputElement,startI=
+ndex,endIndex,functionKeyWasHandled,persistedValue)=0A=
+{if(Telligent_Common.IsSafari()||Telligent_Common.IsOpera())=0A=
+{if(functionKeyWasHandled)=0A=
+{var =
+state=3DTelligent_Common.GetStateByKey(inputElement,'Telligent_Common_Set=
+CurrentCursorSelection');if(state&&state.CursorTimeout)=0A=
+window.clearTimeout(state.CursorTimeout);state=3Dnew =
+Object();state.InputElement=3DinputElement;state.StartIndex=3DstartIndex;=
+state.EndIndex=3DendIndex;state.PersistedValue=3DpersistedValue;var =
+stateId=3DTelligent_Common.SaveStateByKey(inputElement,'Telligent_Common_=
+SetCurrentCursorSelection',state);state.CursorTimeout=3Dwindow.setTimeout=
+(new =
+Function('Telligent_Common._delayedSetCurrentCursorSelection('+stateId+')=
+;'),9);Telligent_Common.SaveStateByKey(inputElement,'Telligent_Common_Set=
+CurrentCursorSelection',state);return;}=0A=
+else=0A=
+{inputElement.focus();if(persistedValue)=0A=
+inputElement.value=3DpersistedValue;}}=0A=
+try=0A=
+{if(document.selection)=0A=
+{var =
+range=3DinputElement.createTextRange();range.move('character',startIndex)=
+;range.moveEnd('character',endIndex-startIndex);range.select();}=0A=
+else if(inputElement.setSelectionRange)=0A=
+{inputElement.setSelectionRange(startIndex,endIndex);inputElement.focus()=
+;}=0A=
+else =
+if(inputElement.selectionStart||inputElement.selectionStart=3D=3D'0')=0A=
+{inputElement.selectionStart=3DstartIndex;inputElement.selectionEnd=3Dend=
+Index;}}catch(e){}}=0A=
+Telligent_Common.GetStateByStateId=3Dfunction(stateId,processId)=0A=
+{if(Telligent_Common._state.length>stateId&&stateId>=3D0&&Telligent_Commo=
+n._state[stateId]&&Telligent_Common._state[stateId]._stateProcessId=3D=3D=
+processId)=0A=
+return Telligent_Common._state[stateId]._state;else=0A=
+return null;}=0A=
+Telligent_Common.GetStateByKey=3Dfunction(key,processId)=0A=
+{for(var i=3D0;i<Telligent_Common._state.length;i++)=0A=
+{if(Telligent_Common._state[i]&&Telligent_Common._state[i]._stateKey=3D=3D=
+key&&Telligent_Common._state[i]._stateProcessId=3D=3DprocessId)=0A=
+return Telligent_Common._state[i]._state;}=0A=
+return null;}=0A=
+Telligent_Common.SaveStateByStateId=3Dfunction(stateId,processId,state)=0A=
+{if(Telligent_Common._state.length>stateId&&stateId>=3D0&&Telligent_Commo=
+n._state[stateId]&&Telligent_Common._state[stateId]._stateProcessId=3D=3D=
+processId)=0A=
+Telligent_Common._state[stateId]._state=3Dstate;}=0A=
+Telligent_Common.SaveStateByKey=3Dfunction(key,processId,state)=0A=
+{var emptyIndex=3D-1;for(var i=3D0;i<Telligent_Common._state.length;i++)=0A=
+{if(!Telligent_Common._state[i])=0A=
+emptyIndex=3Di;else =
+if(Telligent_Common._state[i]._stateKey=3D=3Dkey&&Telligent_Common._state=
+[i]._stateProcessId=3D=3DprocessId)=0A=
+{Telligent_Common._state[i]._state=3Dstate;return i;}}=0A=
+var stateBucket=3Dnew =
+Object();stateBucket._stateKey=3Dkey;stateBucket._stateProcessId=3Dproces=
+sId;stateBucket._state=3Dstate;if(emptyIndex!=3D-1)=0A=
+{Telligent_Common._state[emptyIndex]=3DstateBucket;return emptyIndex;}=0A=
+else=0A=
+{Telligent_Common._state[Telligent_Common._state.length]=3DstateBucket;re=
+turn Telligent_Common._state.length-1;}}=0A=
+Telligent_Common.ClearStateByStateId=3Dfunction(stateId,processId)=0A=
+{if(Telligent_Common._state.length>stateId&&stateId>=3D0&&Telligent_Commo=
+n._state[stateId]&&Telligent_Common._state[stateId]._stateProcessId=3D=3D=
+processId)=0A=
+Telligent_Common._state[stateId]=3Dnull;}=0A=
+Telligent_Common._hiddenSelects=3Dnew =
+Array();Telligent_Common._elementsHidingSelects=3Dnew =
+Array();Telligent_Common._addHiddenSelect=3Dfunction(elementHidingSelect,=
+selectElement)=0A=
+{var hiddenSelect=3Dnull;var emptyIndex=3D-1;for(var =
+i=3D0;i<Telligent_Common._hiddenSelects.length&&hiddenSelect=3D=3Dnull;i+=
++)=0A=
+{if(Telligent_Common._hiddenSelects[i])=0A=
+{if(Telligent_Common._hiddenSelects[i].SelectElement=3D=3DselectElement)=0A=
+hiddenSelect=3DTelligent_Common._hiddenSelects[i];}=0A=
+else=0A=
+emptyIndex=3Di;}=0A=
+if(hiddenSelect=3D=3Dnull)=0A=
+{hiddenSelect=3Dnew =
+Object();hiddenSelect.SelectElement=3DselectElement;hiddenSelect.Elements=
+HidingSelectsIndeces=3Dnew =
+Array();hiddenSelect.OriginalVisibility=3DselectElement.style.visibility;=
+hiddenSelect.SelectElement.style.visibility=3D'hidden';if(emptyIndex=3D=3D=
+-1)=0A=
+{Telligent_Common._hiddenSelects[Telligent_Common._hiddenSelects.length]=3D=
+hiddenSelect;hiddenSelect.Index=3DTelligent_Common._hiddenSelects.length-=
+1;}=0A=
+else=0A=
+{Telligent_Common._hiddenSelects[emptyIndex]=3DhiddenSelect;hiddenSelect.=
+Index=3DemptyIndex;}}=0A=
+var ignore=3Dfalse;for(var =
+i=3D0;i<hiddenSelect.ElementsHidingSelectsIndeces.length&&!ignore;i++)=0A=
+{if(hiddenSelect.ElementsHidingSelectsIndeces[i]=3D=3DelementHidingSelect=
+.Index)=0A=
+ignore=3Dtrue;}=0A=
+if(!ignore)=0A=
+{elementHidingSelect.HiddenSelectsIndeces[elementHidingSelect.HiddenSelec=
+tsIndeces.length]=3DhiddenSelect.Index;hiddenSelect.ElementsHidingSelects=
+Indeces[hiddenSelect.ElementsHidingSelectsIndeces.length]=3DelementHiding=
+Select.Index;}}=0A=
+Telligent_Common._addElementHidingSelect=3Dfunction(element)=0A=
+{var elementHidingSelect=3Dnull;var emptyIndex=3D-1;for(var =
+i=3D0;i<Telligent_Common._elementsHidingSelects.length&&elementHidingSele=
+ct=3D=3Dnull;i++)=0A=
+{if(Telligent_Common._elementsHidingSelects[i])=0A=
+{if(Telligent_Common._elementsHidingSelects[i].Element=3D=3Delement)=0A=
+elementHidingSelect=3DTelligent_Common._elementsHidingSelects[i];}=0A=
+else=0A=
+emptyIndex=3Di;}=0A=
+if(elementHidingSelect=3D=3Dnull)=0A=
+{elementHidingSelect=3Dnew =
+Object();elementHidingSelect.Element=3Delement;elementHidingSelect.Hidden=
+SelectsIndeces=3Dnew Array();if(emptyIndex=3D=3D-1)=0A=
+{Telligent_Common._elementsHidingSelects[Telligent_Common._elementsHiding=
+Selects.length]=3DelementHidingSelect;elementHidingSelect.Index=3DTellige=
+nt_Common._elementsHidingSelects.length-1;}=0A=
+else=0A=
+{Telligent_Common._elementsHidingSelects[emptyIndex]=3DelementHidingSelec=
+t;elementHidingSelect.Index=3DemptyIndex;}}=0A=
+return elementHidingSelect;}=0A=
+Telligent_Common.HideSelectBoxes=3Dfunction(element,hideAll)=0A=
+{if(element.getClientRects)=0A=
+{var selectBoxes=3Ddocument.getElementsByTagName('select');var =
+elementRect=3Delement.getClientRects()[0];var =
+elementHidingSelect=3Dnull;for(var i=3D0;i<selectBoxes.length;i++)=0A=
+{if(selectBoxes[i].getClientRects)=0A=
+{var rects=3DselectBoxes[i].getClientRects();for(var =
+j=3D0;j<rects.length;j++)=0A=
+{if(hideAll||(rects[j].top<elementRect.bottom&&elementRect.top<rects[j].b=
+ottom&&rects[j].left<elementRect.right&&elementRect.left<rects[j].right))=0A=
+{var inElement=3Dfalse;var =
+selectParent=3DselectBoxes[i].offsetParent;while(selectParent!=3Dnull)=0A=
+{if(selectParent=3D=3Delement)=0A=
+{inElement=3Dtrue;break;}=0A=
+selectParent=3DselectParent.offsetParent;}=0A=
+if(!inElement)=0A=
+{if(elementHidingSelect=3D=3Dnull)=0A=
+elementHidingSelect=3DTelligent_Common._addElementHidingSelect(element);T=
+elligent_Common._addHiddenSelect(elementHidingSelect,selectBoxes[i]);sele=
+ctBoxes[i].style.visibility=3D'hidden';}=0A=
+break;}}}}}}=0A=
+Telligent_Common.ShowSelectBoxes=3Dfunction(element)=0A=
+{var elementHidingSelect=3Dnull;for(var =
+i=3D0;i<Telligent_Common._elementsHidingSelects.length&&elementHidingSele=
+ct=3D=3Dnull;i++)=0A=
+{if(Telligent_Common._elementsHidingSelects[i])=0A=
+{if(Telligent_Common._elementsHidingSelects[i].Element=3D=3Delement)=0A=
+elementHidingSelect=3DTelligent_Common._elementsHidingSelects[i];}}=0A=
+if(elementHidingSelect=3D=3Dnull)=0A=
+return;var hiddenSelect;for(var =
+i=3D0;i<elementHidingSelect.HiddenSelectsIndeces.length;i++)=0A=
+{hiddenSelect=3DTelligent_Common._hiddenSelects[elementHidingSelect.Hidde=
+nSelectsIndeces[i]];if(hiddenSelect)=0A=
+{if(hiddenSelect.ElementsHidingSelectsIndeces.length=3D=3D1)=0A=
+{if(hiddenSelect.SelectElement.style.visibility=3D=3D'hidden')=0A=
+hiddenSelect.SelectElement.style.visibility=3DhiddenSelect.OriginalVisibi=
+lity;Telligent_Common._hiddenSelects[hiddenSelect.Index]=3Dnull;}=0A=
+else=0A=
+{var elementsHidingSelects=3Dnew Array();for(var =
+j=3D0;j<hiddenSelect.ElementsHidingSelectsIndeces.length;j++)=0A=
+{if(hiddenSelect.ElementsHidingSelectsIndeces[j]!=3DelementHidingSelect.I=
+ndex)=0A=
+elementsHidingSelects[elementsHidingSelects.length]=3DhiddenSelect.Elemen=
+tsHidingSelectsIndeces[i];}=0A=
+hiddenSelect.ElementsHidingSelectsIndeces=3DelementsHidingSelects;}}}=0A=
+Telligent_Common._elementsHidingSelects[elementHidingSelect.Index]=3Dnull=
+;};
+------=_NextPart_000_008A_01C93060.A45A3A20
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://weblogs.asp.net/WebResource.axd?d=J1hksw-hD7hv_ORyTj2qdhHKlC7Oddil8eixZtT8LFu2jE2HPY18SDuMZGMBCOJ6l7dkFeWC7-4SIfYTq56Jecj_6aYg8oHA0&t=633307998080000000
+
+=0A=
+Telligent_Modal=3Dnew =
+Object();Telligent_Modal._variableName=3D'Telligent_Modal';Telligent_Moda=
+l.LoadingHtmlUrl=3Dnull;Telligent_Modal.WindowCssClasses=3Dnew =
+Array();Telligent_Modal.WindowTitleCssClasses=3Dnew =
+Array();Telligent_Modal.WindowCloseCssClasses=3Dnew =
+Array();Telligent_Modal.WindowContentCssClasses=3Dnew =
+Array();Telligent_Modal.WindowMaskCssClasses=3Dnew =
+Array();Telligent_Modal.WindowFooterCssClasses=3Dnew =
+Array();Telligent_Modal.WindowResizeCssClasses=3Dnew =
+Array();Telligent_Modal.ZIndex=3D100;Telligent_Modal._isShown=3Dfalse;Tel=
+ligent_Modal._initialized=3Dfalse;Telligent_Modal._modal=3Dnull;Telligent=
+_Modal._modalTitle=3Dnull;Telligent_Modal._modalClose=3Dnull;Telligent_Mo=
+dal._modalAnimationMask=3Dnull;Telligent_Modal._modalMask=3Dnull;Telligen=
+t_Modal._modalIframe=3Dnull;Telligent_Modal._modalResize=3Dnull;Telligent=
+_Modal._modalFooter=3Dnull;Telligent_Modal._modalContent=3Dnull;Telligent=
+_Modal._animationHandle=3Dnull;Telligent_Modal._isOpening=3Dfalse;Tellige=
+nt_Modal._checkForScrollResizeHandle=3Dnull;Telligent_Modal._lastModalInf=
+o=3Dnull;Telligent_Modal._lastWindowInfo=3Dnull;Telligent_Modal._isDraggi=
+ng=3Dfalse;Telligent_Modal._moveModalInfo=3Dnull;Telligent_Modal._resizeM=
+odalInfo=3Dnull;Telligent_Modal._isResizing=3Dfalse;Telligent_Modal.Confi=
+gure=3Dfunction(loadingHtmlUrl,windowCssClasses,windowTitleCssClasses,win=
+dowCloseCssClasses,windowContentCssClasses,windowFooterCssClasses,windowR=
+esizeCssClasses,windowMaskCssClasses,zIndex)=0A=
+{this.LoadingHtmlUrl=3DloadingHtmlUrl;this.WindowCssClasses=3DwindowCssCl=
+asses;this.WindowTitleCssClasses=3DwindowTitleCssClasses;this.WindowClose=
+CssClasses=3DwindowCloseCssClasses;this.WindowContentCssClasses=3DwindowC=
+ontentCssClasses;this.WindowMaskCssClasses=3DwindowMaskCssClasses;this.Wi=
+ndowFooterCssClasses=3DwindowFooterCssClasses;this.WindowResizeCssClasses=
+=3DwindowResizeCssClasses;this.ZIndex=3DzIndex;}=0A=
+Telligent_Modal.IsShown=3Dfunction()=0A=
+{return this._isShown;}=0A=
+Telligent_Modal.Open=3Dfunction(url,width,height,onCloseFunction,x,y,igno=
+reCloseAndAnimation)=0A=
+{if(!ignoreCloseAndAnimation&&this._isShown)=0A=
+this.Close();else if(this._hiddenSelects)=0A=
+Telligent_Common.ShowSelectBoxes(this._modalAnimationMask)=0A=
+if(!this._initialized)=0A=
+this._initialize();try=0A=
+{this._modalTitle.childNodes[1].innerHTML=3Dthis._modalIframe.contentWind=
+ow.document.title;}=0A=
+catch(err)=0A=
+{}=0A=
+if(!ignoreCloseAndAnimation)=0A=
+this._modalIframe.src=3Durl;try=0A=
+{this._modalIframe.contentWindow.opener=3Dwindow;}=0A=
+catch(err)=0A=
+{}=0A=
+this._modalAnimationMask.style.display=3D'none';this._modalMask.style.dis=
+play=3D'none';this._lastWindowInfo=3DTelligent_Common.GetWindowInfo();thi=
+s._modalAnimationMask.style.display=3D'block';if(width>this._lastWindowIn=
+fo.Width)=0A=
+width=3Dthis._lastWindowInfo.Width;this._modalAnimationMask.style.positio=
+n=3D'absolute';this._modalAnimationMask.style.zIndex=3Dthis.ZIndex;this._=
+modalAnimationMask.style.display=3D'block';this._modalAnimationMask.style=
+.visibility=3D'hidden';this._modalAnimationMask.style.overflow=3D'hidden'=
+;this._modalAnimationMask.style.width=3Dwidth+'px';this._modalContent.sty=
+le.width=3Dwidth+'px';this._modal.style.position=3D'absolute';this._modal=
+.style.display=3D'block';this._modal.style.visibility=3D'hidden';this._mo=
+dal.style.left=3D'0px';this._modal.style.top=3D'0px';this._modalMask.styl=
+e.position=3D'absolute';this._modalMask.style.display=3D'block';this._mod=
+alMask.style.zIndex=3Dthis.ZIndex;this._modalMask.style.visibility=3D'vis=
+ible';var =
+modalContentOffset=3DTelligent_Common.GetStyleOffset(this._modalContent);=
+var =
+offset=3D(this._modal.offsetHeight-this._modalContent.offsetHeight)-modal=
+ContentOffset.Height;if(height+offset>this._lastWindowInfo.Height)=0A=
+height=3Dthis._lastWindowInfo.Height-offset;if(width<this._modalResize.of=
+fsetWidth*2)=0A=
+width=3Dthis._modalResize.offsetWidth*2;if(width<this._modalClose.offsetW=
+idth*2)=0A=
+width=3Dthis._modalClose.offsetWidth*2;if(height<this._modalTitle.offsetH=
+eight+this._modalFooter.offsetHeight)=0A=
+height=3Dthis._modalTitle.offsetHeight+this._modalFooter.offsetHeight;thi=
+s._modalIframe.style.height=3Dheight+'px';this._modalContent.style.height=
+=3Dheight+'px';this._modalContent.style.width=3D(width-(this._modal.offse=
+tWidth-this._modalContent.offsetWidth)-modalContentOffset.Width)+'px';thi=
+s._modalAnimationMask.style.width=3Dwidth+'px';this._modalAnimationMask.s=
+tyle.height=3Dthis._modal.offsetHeight+'px';this._modalMask.style.left=3D=
+'0px';this._modalMask.style.top=3D'0px';this._modalMask.style.width=3Dthi=
+s._lastWindowInfo.ContentWidth+'px';this._modalMask.style.height=3Dthis._=
+lastWindowInfo.ContentHeight+'px';this._lastWindowInfo=3DTelligent_Common=
+.GetWindowInfo();var panelWidth=3Dthis._modal.offsetWidth;var =
+panelHeight=3Dthis._modal.offsetHeight;var =
+animatePropertyName,animateTargetValue,animateNextValue;if(typeof(x)=3D=3D=
+'undefined'||isNaN(parseInt(x,10)))=0A=
+x=3D((this._lastWindowInfo.Width-panelWidth)/2)+this._lastWindowInfo.Scro=
+llX;if(x+panelWidth>this._lastWindowInfo.Width+this._lastWindowInfo.Scrol=
+lX)=0A=
+x=3Dthis._lastWindowInfo.Width+this._lastWindowInfo.ScrollX-panelWidth;if=
+(x<this._lastWindowInfo.ScrollX)=0A=
+x=3Dthis._lastWindowInfo.ScrollX;if(typeof(y)=3D=3D'undefined'||isNaN(par=
+seInt(y,10)))=0A=
+y=3D((this._lastWindowInfo.Height-panelHeight)/2)+this._lastWindowInfo.Sc=
+rollY;if(y+panelHeight>this._lastWindowInfo.Height+this._lastWindowInfo.S=
+crollY)=0A=
+y=3Dthis._lastWindowInfo.Height+this._lastWindowInfo.ScrollY-panelHeight;=
+if(y<this._lastWindowInfo.ScrollY)=0A=
+y=3Dthis._lastWindowInfo.ScrollY;this._modalAnimationMask.style.left=3Dx+=
+'px';this._modalAnimationMask.style.top=3Dy+'px';animateTargetValue=3D0;a=
+nimateNextValue=3D-panelHeight;this._modal.style.visibility=3D'visible';t=
+his._modalAnimationMask.style.visibility=3D'visible';this._modalAnimation=
+Mask.style.overflow=3D'hidden';Telligent_Common.HideSelectBoxes(this._mod=
+alAnimationMask,true);this._isOpening=3Dtrue;if(ignoreCloseAndAnimation)=0A=
+this._animationHandle=3Dwindow.setTimeout(new =
+Function(this._variableName+'._animate(0,0,0,0);'),9);else=0A=
+{this._modalIframe.style.display=3D'none';this._animate(0,-panelHeight,pa=
+nelHeight/3,.67);}=0A=
+this._lastModalInfo=3D{Url:this._modalIframe.src,OnCloseFunction:onCloseF=
+unction,X:x,Y:y,Width:parseInt(width,10),Height:parseInt(height,10)};this=
+._isShown=3Dtrue;}=0A=
+Telligent_Modal._checkForScrollResize=3Dfunction()=0A=
+{if(this._checkForScrollResizeHandle)=0A=
+window.clearTimeout(this._checkForScrollResizeHandle);if(this._isShown&&!=
+this._isOpening&&this._lastWindowInfo)=0A=
+{try=0A=
+{this._modalTitle.childNodes[1].innerHTML=3Dthis._modalIframe.contentWind=
+ow.document.title;}=0A=
+catch(err)=0A=
+{}=0A=
+var =
+windowInfo=3DTelligent_Common.GetWindowInfo();if(windowInfo.ScrollX!=3Dth=
+is._lastWindowInfo.ScrollX||windowInfo.ScrollY!=3Dthis._lastWindowInfo.Sc=
+rollY||windowInfo.Width!=3Dthis._lastWindowInfo.Width||windowInfo.Height!=
+=3Dthis._lastWindowInfo.Height)=0A=
+this.Open(null,this._lastModalInfo.Width,this._lastModalInfo.Height,this.=
+_lastModalInfo.OnCloseFunction,this._lastModalInfo.X,this._lastModalInfo.=
+Y,true);else=0A=
+this._checkForScrollResizeHandle=3Dwindow.setTimeout(new =
+Function('window.'+this._variableName+'._checkForScrollResize();'),999);}=
+}=0A=
+Telligent_Modal.Close=3Dfunction(returnValue)=0A=
+{if(this._isShown)=0A=
+{if(!this._initialized)=0A=
+this._initialize();this._modal.style.position=3D'absolute';this._modal.st=
+yle.display=3D'none';this._modalAnimationMask.style.position=3D'absolute'=
+;this._modalAnimationMask.style.display=3D'none';this._modalMask.style.po=
+sition=3D'absolute';this._modalMask.style.display=3D'none';this._modalIfr=
+ame.src=3Dthis.LoadingHtmlUrl;var =
+onCloseFunction=3Dthis._lastModalInfo.OnCloseFunction;this._isShown=3Dfal=
+se;this._lastModalInfo=3Dnull;this._windowInfo=3Dnull;Telligent_Common.Sh=
+owSelectBoxes(this._modalAnimationMask)=0A=
+if(onCloseFunction)=0A=
+onCloseFunction(returnValue);this.Dispose();}}=0A=
+Telligent_Modal.Refresh=3Dfunction()=0A=
+{if(this._animationHandle)=0A=
+window.clearTimeout(this._animationHandle);this.Dispose();if(this._isShow=
+n&&this._lastModalInfo)=0A=
+this.Open(this._lastModalInfo.Url,this._lastModalInfo.Width,this._lastMod=
+alInfo.OnCloseFunction,this._lastModalInfo.Height,this._lastModalInfo.OnC=
+loseFunction,this._lastModalInfo.X,this._lastModalInfo.Y);}=0A=
+Telligent_Modal._initialize=3Dfunction()=0A=
+{this._modalMask=3Ddocument.createElement('div');this._modalMask.style.wi=
+dth=3D'auto';this._modalMask.style.height=3D'auto';this._modalMask.style.=
+position=3D'absolute';this._modalMask.style.display=3D'none';this._modalM=
+ask.dispose=3Dnew Function('Telligent_Modal.Dispose();');var =
+mm=3Dthis._modalMask;if(this.WindowMaskCssClasses.length>0)=0A=
+{mm.className=3Dthis.WindowMaskCssClasses[0];for(var =
+i=3D1;i<this.WindowMaskCssClasses.length;i++)=0A=
+{mm.appendChild(document.createElement('div'));mm=3Dmm.childNodes[0];mm.c=
+lassName=3Dthis.WindowMaskCssClasses[i];mm.style.width=3D'auto';mm.style.=
+height=3D'auto';}}=0A=
+document.body.appendChild(this._modalMask);this._modalAnimationMask=3Ddoc=
+ument.createElement('div');this._modalAnimationMask.style.position=3D'abs=
+olute';this._modalAnimationMask.style.display=3D'none';this._modalAnimati=
+onMask.style.overflow=3D'hidden';this._modal=3Ddocument.createElement('di=
+v');this._modal.style.width=3D'auto';this._modal.style.height=3D'auto';th=
+is._modal.style.position=3D'absolute';this._modal.style.display=3D'none';=
+var m=3Dthis._modal;if(this.WindowCssClasses.length>0)=0A=
+{m.className=3Dthis.WindowCssClasses[0];for(var =
+i=3D1;i<this.WindowCssClasses.length;i++)=0A=
+{m.appendChild(document.createElement('div'));m=3Dm.childNodes[0];m.class=
+Name=3Dthis.WindowCssClasses[i];m.style.width=3D'auto';m.style.height=3D'=
+auto';}}=0A=
+this._modalTitle=3Ddocument.createElement('div');m.appendChild(this._moda=
+lTitle);if(this.WindowTitleCssClasses.length>0)=0A=
+{this._modalTitle.className=3Dthis.WindowTitleCssClasses[0];for(var =
+i=3D1;i<this.WindowTitleCssClasses.length;i++)=0A=
+{this._modalTitle.appendChild(document.createElement('div'));this._modalT=
+itle=3Dthis._modalTitle.childNodes[0];this._modalTitle.className=3Dthis.W=
+indowTitleCssClasses[i];}}=0A=
+this._modalTitle.onmousedown=3Dnew =
+Function('event','window.'+this._variableName+'._startDrag(event); =
+return =
+false;');this._modalClose=3Ddocument.createElement('div');this._modalTitl=
+e.appendChild(this._modalClose);var =
+mc=3Dthis._modalClose;if(this.WindowCloseCssClasses.length>0)=0A=
+{mc.className=3Dthis.WindowCloseCssClasses[0];for(var =
+i=3D1;i<this.WindowCloseCssClasses.length;i++)=0A=
+{mc.appendChild(document.createElement('div'));mc=3Dmc.childNodes[0];mc.c=
+lassName=3Dthis.WindowCloseCssClasses[i];}}=0A=
+this._modalClose.onclick=3Dnew =
+Function('window.'+this._variableName+'.Close();');this._modalTitle.appen=
+dChild(document.createElement('span'));var =
+e=3Ddocument.createElement('div');e.style.clear=3D'both';this._modalTitle=
+.appendChild(e);this._modalContent=3Ddocument.createElement('div');m.appe=
+ndChild(this._modalContent);if(this.WindowContentCssClasses.length>0)=0A=
+{this._modalContent.className=3Dthis.WindowContentCssClasses[0];for(var =
+i=3D1;i<this.WindowContentCssClasses.length;i++)=0A=
+{this._modalContent.appendChild(document.createElement('div'));this._moda=
+lContent=3Dthis._modalContent.childNodes[0];this._modalContent.className=3D=
+this.WindowContentCssClasses[i];}}=0A=
+this._modalIframe=3Ddocument.createElement('iframe');this._modalIframe.sr=
+c=3Dthis.LoadingHtmlUrl;this._modalIframe.width=3D'100%';this._modalIfram=
+e.border=3D'0';this._modalIframe.frameBorder=3D'0';this._modalIframe.styl=
+e.borderLeftWidth=3D'0px';this._modalIframe.style.borderRightWidth=3D'0px=
+';this._modalIframe.style.borderTopWidth=3D'0px';this._modalIframe.style.=
+borderBottomWidth=3D'0px';this._modalContent.appendChild(this._modalIfram=
+e);this._modalFooter=3Ddocument.createElement('div');m.appendChild(this._=
+modalFooter);var =
+mf=3Dthis._modalFooter;if(this.WindowFooterCssClasses.length>0)=0A=
+{mf.className=3Dthis.WindowFooterCssClasses[0];for(var =
+i=3D1;i<this.WindowFooterCssClasses.length;i++)=0A=
+{mf.appendChild(document.createElement('div'));mf=3Dmf.childNodes[0];mf.c=
+lassName=3Dthis.WindowFooterCssClasses[i];}}=0A=
+this._modalResize=3Ddocument.createElement('div');mf.appendChild(this._mo=
+dalResize);var =
+e=3Ddocument.createElement('div');e.style.clear=3D'both';mf.appendChild(e=
+);var mr=3Dthis._modalResize;if(this.WindowResizeCssClasses.length>0)=0A=
+{mr.className=3Dthis.WindowResizeCssClasses[0];for(var =
+i=3D1;i<this.WindowResizeCssClasses.length;i++)=0A=
+{mr.appendChild(document.createElement('div'));mr=3Dmr.childNodes[0];mr.c=
+lassName=3Dthis.WindowResizeCssClasses[i];}}=0A=
+this._modalResize.onmousedown=3Dnew =
+Function('event','window.'+this._variableName+'._startResize(event); =
+return =
+false;');this._modalAnimationMask.appendChild(this._modal);document.body.=
+appendChild(this._modalAnimationMask);this._initialized=3Dtrue;}=0A=
+Telligent_Modal.Dispose=3Dfunction()=0A=
+{if(this._initialized)=0A=
+{if(this._animationHandle)=0A=
+window.clearTimeout(this._animationHandle);this._isShown=3Dfalse;this._is=
+Opening=3Dfalse;if(document&&document.body)=0A=
+{document.body.removeChild(this._modalAnimationMask);document.body.remove=
+Child(this._modalMask);this._modalClose.onclick=3Dnull;this._modalTitle.o=
+nmousedown=3Dnull;this._modalResize.onmousedown=3Dnull;this._modal=3Dnull=
+;this._modalTitle=3Dnull;this._modalClose=3Dnull;this._modalAnimationMask=
+=3Dnull;this._modalMask=3Dnull;this._modalIframe=3Dnull;this._modalResize=
+=3Dnull;this._modalFooter=3Dnull;this._modalContent=3Dnull;}=0A=
+this._initialized=3Dfalse;}}=0A=
+Telligent_Modal._animate=3Dfunction(targetValue,nextValue,step,accelerati=
+on)=0A=
+{if(this._animationHandle)=0A=
+window.clearTimeout(this._animationHandle);if(!this._isOpening)=0A=
+return;var =
+currValue=3DparseInt(this._modal.style.top,10);if((step<0&&currValue<targ=
+etValue)||(step>0&&currValue>targetValue)||Math.abs(step)<1)=0A=
+{this._modal.style.top=3DtargetValue+'px';this._modal.style.position=3D's=
+tatic';this._modalAnimationMask.style.overflow=3D'visible';this._animatio=
+nHandle=3Dnull;if(!this._isResizing&&!this._isDragging)=0A=
+this._modalIframe.style.display=3D'block';this._isOpening=3Dfalse;this._l=
+astWindowInfo=3DTelligent_Common.GetWindowInfo();this._checkForScrollResi=
+zeHandle=3Dwindow.setTimeout(new =
+Function('window.'+this._variableName+'._checkForScrollResize();'),999);}=0A=
+else=0A=
+{this._modal.style.top=3DnextValue+'px';nextValue=3DnextValue+step;if(ste=
+p>0&&nextValue>targetValue)=0A=
+nextValue=3DtargetValue;else if(step<0&&nextValue<targetValue)=0A=
+nextValue=3DtargetValue;step=3Dstep*acceleration;this._animationHandle=3D=
+window.setTimeout(new =
+Function(this._variableName+'._animate('+targetValue+','+nextValue+','+st=
+ep+','+acceleration+');'),19);}}=0A=
+Telligent_Modal._startDrag=3Dfunction(event)=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(!event)=0A=
+event=3Dwindow.event;this._moveModalInfo=3Dnew =
+Object();this._moveModalInfo.StartMouseX=3Devent.pageX?event.pageX:event.=
+screenX;this._moveModalInfo.StartMouseY=3Devent.pageY?event.pageY:event.s=
+creenY;this._moveModalInfo.StartModalX=3Dthis._lastModalInfo.X;this._move=
+ModalInfo.StartModalY=3Dthis._lastModalInfo.Y;this._moveModalInfo.Button=3D=
+event.button;document.onmouseup=3Dnew =
+Function('event','window.'+this._variableName+'._endDrag(event); return =
+false;');document.onmousemove=3Dnew =
+Function('event','window.'+this._variableName+'._drag(event); return =
+false;');this._modalIframe.style.display=3D'none';this._isDragging=3Dtrue=
+;}=0A=
+Telligent_Modal._endDrag=3Dfunction(event)=0A=
+{if(!this._initialized)=0A=
+this._initialize();this._isDragging=3Dfalse;this._moveModalInfo=3Dnull;do=
+cument.onmouseup=3Dnull;document.onmousemove=3Dnull;this._modalIframe.sty=
+le.display=3D'block';}=0A=
+Telligent_Modal._drag=3Dfunction(event)=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(!event)=0A=
+event=3Dwindow.event;if(event.button!=3Dthis._moveModalInfo.Button)=0A=
+{this._endDrag(event);return;}=0A=
+var =
+eventX=3Dtypeof(event.pageX)!=3D'undefined'?event.pageX:event.screenX;var=
+ =
+eventY=3Dtypeof(event.pageY)!=3D'undefined'?event.pageY:event.screenY;var=
+ xChange=3DeventX-this._moveModalInfo.StartMouseX;var =
+yChange=3DeventY-this._moveModalInfo.StartMouseY;this.Open(null,this._las=
+tModalInfo.Width,this._lastModalInfo.Height,this._lastModalInfo.OnCloseFu=
+nction,this._moveModalInfo.StartModalX+xChange,this._moveModalInfo.StartM=
+odalY+yChange,true);}=0A=
+Telligent_Modal._startResize=3Dfunction(event)=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(!event)=0A=
+event=3Dwindow.event;this._resizeModalInfo=3Dnew =
+Object();this._resizeModalInfo.StartMouseX=3Devent.pageX?event.pageX:even=
+t.screenX;this._resizeModalInfo.StartMouseY=3Devent.pageY?event.pageY:eve=
+nt.screenY;this._resizeModalInfo.StartModalWidth=3Dthis._lastModalInfo.Wi=
+dth;this._resizeModalInfo.StartModalHeight=3Dthis._lastModalInfo.Height;t=
+his._resizeModalInfo.Button=3Devent.button;document.onmouseup=3Dnew =
+Function('event','window.'+this._variableName+'._endResize(event); =
+return false;');document.onmousemove=3Dnew =
+Function('event','window.'+this._variableName+'._resize(event); return =
+false;');this._modalIframe.style.display=3D'none';this._isResizing=3Dtrue=
+;}=0A=
+Telligent_Modal._endResize=3Dfunction(event)=0A=
+{if(!this._initialized)=0A=
+this._initialize();this._isResizing=3Dfalse;this._resizeModalInfo=3Dnull;=
+document.onmouseup=3Dnull;document.onmousemove=3Dnull;this._modalIframe.s=
+tyle.display=3D'block';}=0A=
+Telligent_Modal._resize=3Dfunction(event)=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(!event)=0A=
+event=3Dwindow.event;if(event.button!=3Dthis._resizeModalInfo.Button)=0A=
+{this._endResize(event);return;}=0A=
+var =
+eventX=3Dtypeof(event.pageX)!=3D'undefined'?event.pageX:event.screenX;var=
+ =
+eventY=3Dtypeof(event.pageY)!=3D'undefined'?event.pageY:event.screenY;var=
+ xChange=3DeventX-this._resizeModalInfo.StartMouseX;var =
+yChange=3DeventY-this._resizeModalInfo.StartMouseY;this.Open(null,this._r=
+esizeModalInfo.StartModalWidth+xChange,this._resizeModalInfo.StartModalHe=
+ight+yChange,this._lastModalInfo.OnCloseFunction,this._lastModalInfo.X,th=
+is._lastModalInfo.Y,true);};
+------=_NextPart_000_008A_01C93060.A45A3A20
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://weblogs.asp.net/WebResource.axd?d=J1hksw-hD7hv_ORyTj2qdhHKlC7Oddil8eixZtT8LFu2jE2HPY18SDuMZGMBCOJ6l7dkFeWC7-5PVAZynK7g4lylkvdYWgJzsm-QMifpaa01&t=633307998080000000
+
+=0A=
+function =
+Telligent_PopupPanel(varName,cssClass,position,zIndex,onPanelShowFunction=
+,onPanelHideFunction,hideOnDocumentClick,initialContent,onMouseOverFuncti=
+on,onMouseOutFunction)=0A=
+{this._variableName=3DvarName;this.CssClass=3DcssClass;this.Position=3Dpo=
+sition;this.OnPanelShowFunction=3DonPanelShowFunction;this.OnPanelHideFun=
+ction=3DonPanelHideFunction;this.OnMouseOverFunction=3DonMouseOverFunctio=
+n;this.OnMouseOutFunction=3DonMouseOutFunction;this.ZIndex=3DzIndex;this.=
+_isShown=3Dfalse;this._initialized=3Dfalse;this._lastPosition=3Dnull;this=
+._initialContent=3DinitialContent;this._panel=3Dnull;this._panelMask=3Dnu=
+ll;this._animationHandle=3Dnull;this._originalDocumentOnClick=3Dnull;this=
+._isOpening=3Dfalse;this._checkForScrollResizeHandle=3Dnull;this._lastWin=
+dowInfo=3Dnull;this._panelMask=3Ddocument.createElement('div');this._pane=
+lMask.style.position=3D'absolute';this._panelMask.style.display=3D'none';=
+this._panel=3Ddocument.createElement('div');this._panel.style.position=3D=
+'absolute';this._panel.style.display=3D'none';this._panel.className=3Dthi=
+s.CssClass;this._panelMask.appendChild(this._panel);if(hideOnDocumentClic=
+k)=0A=
+{if(document.onclick)=0A=
+this._originalDocumentOnClick=3Ddocument.onclick;document.onclick=3Dnew =
+Function(this._variableName+'._documentOnClick();');}}=0A=
+Telligent_PopupPanel.prototype._onMouseOver=3Dfunction(e)=0A=
+{if(this.OnMouseOverFunction)=0A=
+this.OnMouseOverFunction();}=0A=
+Telligent_PopupPanel.prototype._onMouseOut=3Dfunction(e)=0A=
+{if(this.OnMouseOutFunction)=0A=
+this.OnMouseOutFunction();}=0A=
+Telligent_PopupPanel.prototype.IsShown=3Dfunction()=0A=
+{return this._isShown;}=0A=
+Telligent_PopupPanel.prototype.ShowAtElement=3Dfunction(element,ignoreHid=
+eAndAnimation)=0A=
+{var =
+elementInfo=3DTelligent_Common.GetElementInfo(element);this.Show(elementI=
+nfo.Left,elementInfo.Top,elementInfo.Width,elementInfo.Height,ignoreHideA=
+ndAnimation);}=0A=
+Telligent_PopupPanel.prototype.Show=3Dfunction(x,y,positionWidth,position=
+Height,ignoreHideAndAnimation)=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(!ignoreHideAndAnimation&&this._isShown)=0A=
+this.Hide();else if(this._hiddenSelects)=0A=
+Telligent_Common.ShowSelectBoxes(this._panelMask);this._panelMask.style.p=
+osition=3D'absolute';this._panelMask.style.zIndex=3Dthis.ZIndex;this._pan=
+elMask.style.display=3D'block';this._panelMask.style.visibility=3D'hidden=
+';this._panelMask.style.overflow=3D'visible';this._panel.style.position=3D=
+'absolute';this._panel.style.display=3D'block';this._panel.style.visibili=
+ty=3D'hidden';this._panel.className=3Dthis.CssClass;this._panel.style.lef=
+t=3D'0px';this._panel.style.top=3D'0px';this._panelMask.style.width=3Dthi=
+s._panel.offsetWidth+'px';this._panelMask.style.height=3Dthis._panel.offs=
+etHeight+'px';this._lastWindowInfo=3DTelligent_Common.GetWindowInfo();var=
+ panelWidth=3Dthis._panel.offsetWidth;var =
+panelHeight=3Dthis._panel.offsetHeight;var =
+animatePropertyName,animateTargetValue,animateNextValue;if(this.Position.=
+indexOf('left')>-1||this.Position.indexOf('right')>-1)=0A=
+{if((this.Position.indexOf('right')>-1&&this.Position.indexOf('left')=3D=3D=
+-1)||((this._lastWindowInfo.Width+this._lastWindowInfo.ScrollX)-(x+positi=
+onWidth)>x-this._lastWindowInfo.ScrollX))=0A=
+{this._panelMask.style.left=3D(x+positionWidth)+"px";animatePropertyName=3D=
+'style.left';animateTargetValue=3D0;animateNextValue=3D-panelWidth;}=0A=
+else=0A=
+{this._panelMask.style.left=3D(x-panelWidth)+"px";animatePropertyName=3D'=
+style.left';animateTargetValue=3D0;animateNextValue=3DpanelWidth;}=0A=
+if((this.Position.indexOf('down')>-1&&this.Position.indexOf('up')=3D=3D-1=
+)||((this._lastWindowInfo.Height+this._lastWindowInfo.ScrollY)-(y)>(y+pos=
+itionHeight)-this._lastWindowInfo.ScrollY))=0A=
+{this._panelMask.style.top=3Dy+"px";}=0A=
+else=0A=
+{this._panelMask.style.top=3D(y+positionHeight-panelHeight)+"px";}}=0A=
+else=0A=
+{if((this.Position.indexOf('right')>-1&&this.Position.indexOf('left')=3D=3D=
+-1)||((this._lastWindowInfo.Width+this._lastWindowInfo.ScrollX)-(x)>(x+po=
+sitionWidth)-this._lastWindowInfo.ScrollX))=0A=
+{this._panelMask.style.left=3Dx+"px";}=0A=
+else=0A=
+{this._panelMask.style.left=3D(x+positionWidth-panelWidth)+"px";}=0A=
+if((this.Position.indexOf('down')>-1&&this.Position.indexOf('up')=3D=3D-1=
+)||((this._lastWindowInfo.Height+this._lastWindowInfo.ScrollY)-(y+positio=
+nHeight)>(y-this._lastWindowInfo.ScrollY)))=0A=
+{this._panelMask.style.top=3D(y+positionHeight)+"px";animatePropertyName=3D=
+'style.top';animateTargetValue=3D0;animateNextValue=3D-panelHeight;}=0A=
+else=0A=
+{this._panelMask.style.top=3D(y-panelHeight)+"px";animatePropertyName=3D'=
+style.top';animateTargetValue=3D0;animateNextValue=3DpanelHeight;}}=0A=
+this._panel.style.visibility=3D'visible';this._panelMask.style.visibility=
+=3D'visible';this._panelMask.style.overflow=3D'hidden';Telligent_Common.H=
+ideSelectBoxes(this._panelMask);this._isOpening=3Dtrue;if(ignoreHideAndAn=
+imation)=0A=
+this._animationHandle=3Dwindow.setTimeout(new =
+Function(this._variableName+'._animate(\''+animatePropertyName+'\','+anim=
+ateTargetValue+','+animateTargetValue+',0,0);'),9);else=0A=
+this._animate(animatePropertyName,animateTargetValue,animateNextValue,ani=
+mateNextValue>animateTargetValue?-((animateNextValue-animateTargetValue)/=
+3):((animateTargetValue-animateNextValue)/3),.67);if(!this._isShown)=0A=
+{this._isShown=3Dtrue;this._lastPosition=3D{X:x,Y:y,Width:positionWidth,H=
+eight:positionHeight};if(this.OnPanelShowFunction)=0A=
+this.OnPanelShowFunction();}}=0A=
+Telligent_PopupPanel.prototype._checkForScrollResize=3Dfunction()=0A=
+{if(this._checkForScrollResizeHandle)=0A=
+window.clearTimeout(this._checkForScrollResizeHandle);if(this._isShown&&!=
+this._isOpening&&this._lastWindowInfo)=0A=
+{var =
+windowInfo=3DTelligent_Common.GetWindowInfo();if(windowInfo.Width!=3Dthis=
+._lastWindowInfo.Width||windowInfo.Height!=3Dthis._lastWindowInfo.Height)=0A=
+this.Hide();else=0A=
+this._checkForScrollResizeHandle=3Dwindow.setTimeout(new =
+Function('window.'+this._variableName+'._checkForScrollResize();'),999);}=
+}=0A=
+Telligent_PopupPanel.prototype.Hide=3Dfunction()=0A=
+{if(this._isShown)=0A=
+{if(!this._initialized)=0A=
+this._initialize();this._panel.style.position=3D'absolute';this._panel.st=
+yle.display=3D'none';this._panelMask.style.position=3D'absolute';this._pa=
+nelMask.style.display=3D'none';this._isShown=3Dfalse;this._lastPosition=3D=
+null;Telligent_Common.ShowSelectBoxes(this._panelMask);if(this.OnPanelHid=
+eFunction)=0A=
+this.OnPanelHideFunction();}}=0A=
+Telligent_PopupPanel.prototype.ClearPanelContent=3Dfunction()=0A=
+{while(this._panel.childNodes.length>0)=0A=
+this._panel.removeChild(this._panel.childNodes[0]);}=0A=
+Telligent_PopupPanel.prototype.SetPanelContent=3Dfunction(html)=0A=
+{this.ClearPanelContent();this._panel.innerHTML=3Dhtml;this.Refresh();}=0A=
+Telligent_PopupPanel.prototype.AddNodeToPanel=3Dfunction(node)=0A=
+{this._panel.appendChild(node);this.Refresh();}=0A=
+Telligent_PopupPanel.prototype.RemoveNodeFromPanel=3Dfunction(node)=0A=
+{this._panel.removeChild(node);this.Refresh();}=0A=
+Telligent_PopupPanel.prototype.GetPanelNodes=3Dfunction()=0A=
+{return this._panel.childNodes;}=0A=
+Telligent_PopupPanel.prototype.Refresh=3Dfunction()=0A=
+{if(this._animationHandle)=0A=
+window.clearTimeout(this._animationHandle);if(this._isShown&&this._lastPo=
+sition)=0A=
+this.Show(this._lastPosition.X,this._lastPosition.Y,this._lastPosition.Wi=
+dth,this._lastPosition.Height,true);}=0A=
+Telligent_PopupPanel.prototype._initialize=3Dfunction()=0A=
+{document.body.appendChild(this._panelMask);this._panel.onmouseover=3Dnew=
+ =
+Function(this._variableName+'._onMouseOver();');this._panel.onmouseout=3D=
+new =
+Function(this._variableName+'._onMouseOut();');this._initialized=3Dtrue;i=
+f(this._initialContent)=0A=
+this.SetPanelContent(this._initialContent);}=0A=
+Telligent_PopupPanel.prototype.Dispose=3Dfunction()=0A=
+{if(this._initialized)=0A=
+{this._panel.onmouseover=3Dnull;this._panel.onmouseout=3Dnull;if(document=
+&&document.body)=0A=
+document.body.removeChild(this._panelMask);}}=0A=
+Telligent_PopupPanel.prototype._animate=3Dfunction(propertyName,targetVal=
+ue,nextValue,step,acceleration)=0A=
+{if(this._animationHandle)=0A=
+window.clearTimeout(this._animationHandle);var =
+currValue=3DparseInt(eval('this._panel.'+propertyName),10);if((step<0&&cu=
+rrValue<targetValue)||(step>0&&currValue>targetValue)||Math.abs(step)<1)=0A=
+{eval('this._panel.'+propertyName+' =3D targetValue + =
+\'px\'');this._panel.style.position=3D'static';this._panelMask.style.over=
+flow=3D'visible';this._animationHandle=3Dnull;this._isOpening=3Dfalse;thi=
+s._lastWindowInfo=3DTelligent_Common.GetWindowInfo();this._checkForScroll=
+ResizeHandle=3Dwindow.setTimeout(new =
+Function('window.'+this._variableName+'._checkForScrollResize();'),999);}=0A=
+else=0A=
+{eval('this._panel.'+propertyName+' =3D nextValue + =
+\'px\'');nextValue=3DnextValue+step;if(step>0&&nextValue>targetValue)=0A=
+nextValue=3DtargetValue;else if(step<0&&nextValue<targetValue)=0A=
+nextValue=3DtargetValue;step=3Dstep*acceleration;this._animationHandle=3D=
+window.setTimeout(new =
+Function(this._variableName+'._animate(\''+propertyName+'\','+targetValue=
++','+nextValue+','+step+','+acceleration+');'),19);}}=0A=
+Telligent_PopupPanel.prototype._documentOnClick=3Dfunction()=0A=
+{if(this._isShown&&!this._isOpening)=0A=
+this.Hide();if(this._originalDocumentOnClick)=0A=
+this._originalDocumentOnClick();};
+------=_NextPart_000_008A_01C93060.A45A3A20
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://weblogs.asp.net/WebResource.axd?d=J1hksw-hD7hv_ORyTj2qdhHKlC7Oddil8eixZtT8LFu2jE2HPY18SDuMZGMBCOJ6l7dkFeWC7-4OzNqfh2FvZofa6ymHH65s8SbaOOvrObw1&t=633307998080000000
+
+=0A=
+function =
+Telligent_InlineEditorPanel(varName,containerId,stateId,editorVarName,fit=
+EditorToWindow,onEditFunction,onSaveFunction,onCloseFunction)=0A=
+{this._variableName=3DvarName;this._container=3Ddocument.getElementById(c=
+ontainerId);this._state=3Ddocument.getElementById(stateId);this._editor=3D=
+null;this._editorVariableName=3DeditorVarName;this.OnEditFunction=3DonEdi=
+tFunction;this.OnSaveFunction=3DonSaveFunction;this.OnCloseFunction=3DonC=
+loseFunction;this._isEditing=3Dfalse;this.FitEditorToWindow=3DfitEditorTo=
+Window;this._abandonedContent=3Dnull;if(this._container)=0A=
+this._container.dispose=3Dnew =
+Function(this._variableName+'.Dispose();');if(this._state.value.substr(0,=
+6)=3D=3D'value:')=0A=
+this._container.innerHTML=3DdecodeURIComponent(this._state.value.substr(6=
+));else=0A=
+this._state.value=3D'value:'+encodeURIComponent(this._container.innerHTML=
+);}=0A=
+Telligent_InlineEditorPanel.prototype.IsEditing=3Dfunction()=0A=
+{return this._isEditing;}=0A=
+Telligent_InlineEditorPanel.prototype.Edit=3Dfunction(parameter)=0A=
+{if(!this.IsEditing())=0A=
+{if(!this._editor)=0A=
+this._editor=3Deval(this._editorVariableName);var =
+styleContext=3Dthis._getCurrentStyles();this._editor.FitToWindow=3Dthis.F=
+itEditorToWindow;this._editor._show(this._container);this._editor._setInl=
+ineEditorPanel(this,parameter);if(this._abandonedContent)=0A=
+{this._editor._setContent(this._abandonedContent);this._abandonedContent=3D=
+null;}=0A=
+else=0A=
+this._editor._setContent(this._container.innerHTML);this._editor._setStyl=
+eContext(styleContext);this._editor.Focus();this._isEditing=3Dtrue;if(thi=
+s.OnEditFunction)=0A=
+this.OnEditFunction(this);}}=0A=
+Telligent_InlineEditorPanel.prototype.Save=3Dfunction()=0A=
+{if(this.IsEditing())=0A=
+{this._container.innerHTML=3Dthis._editor._getContent();this._state.value=
+=3D'value:'+encodeURIComponent(this._container.innerHTML);this._editor._h=
+ide();this._isEditing=3Dfalse;if(this.OnSaveFunction)=0A=
+this.OnSaveFunction(this);}}=0A=
+Telligent_InlineEditorPanel.prototype.Close=3Dfunction()=0A=
+{if(this.IsEditing())=0A=
+{this._editor._hide();this._isEditing=3Dfalse;if(this.OnCloseFunction)=0A=
+this.OnCloseFunction(this);}}=0A=
+Telligent_InlineEditorPanel.prototype.Refresh=3Dfunction()=0A=
+{if(this.IsEditing())=0A=
+{this._editor.FitToWindow=3Dthis.FitEditorToWindow;this._editor._show(thi=
+s._container);}}=0A=
+Telligent_InlineEditorPanel.prototype.Dispose=3Dfunction()=0A=
+{this._container=3Dnull;}=0A=
+Telligent_InlineEditorPanel.prototype.GetContent=3Dfunction()=0A=
+{if(this.IsEditing())=0A=
+return this._editor._getContent();else=0A=
+return this._container.innerHTML;}=0A=
+Telligent_InlineEditorPanel.prototype.SetContent=3Dfunction(html)=0A=
+{if(this.IsEditing())=0A=
+this._editor._setContent(html);else=0A=
+{this._abandonedContent=3Dnull;this._container.innerHTML=3Dhtml;this._sta=
+te.value=3D'value:'+encodeURIComponent(html);}}=0A=
+Telligent_InlineEditorPanel.prototype._getCurrentStyles=3Dfunction()=0A=
+{var currentStyle=3Dnew =
+Array();currentStyle[currentStyle.length]=3D["fontSize",Telligent_Common.=
+GetCurrentStyleValue(this._container,'font-size','fontSize','inherit')];c=
+urrentStyle[currentStyle.length]=3D["fontFamily",Telligent_Common.GetCurr=
+entStyleValue(this._container,'font-family','fontFamily','inherit')];curr=
+entStyle[currentStyle.length]=3D["fontWeight",Telligent_Common.GetCurrent=
+StyleValue(this._container,'font-weight','fontWeight','inherit')];current=
+Style[currentStyle.length]=3D["fontStyle",Telligent_Common.GetCurrentStyl=
+eValue(this._container,'font-style','fontStyle','inherit')];currentStyle[=
+currentStyle.length]=3D["color",Telligent_Common.GetCurrentStyleValue(thi=
+s._container,'color','color','inherit')];currentStyle[currentStyle.length=
+]=3D["backgroundColor",Telligent_Common.GetCurrentStyleValue(this._contai=
+ner,'background-color','backgroundColor','inherit')];currentStyle[current=
+Style.length]=3D["textDecoration",Telligent_Common.GetCurrentStyleValue(t=
+his._container,'text-decoration','textDecoration','inherit')];return =
+currentStyle;}=0A=
+function =
+Telligent_DblClickInlineEditorPanel(varName,containerId,stateId,cssClass,=
+hoverCssClass,editingCssClass,toolTip,editor,fitEditorToWindow,onEditFunc=
+tion,onSaveFunction,onCloseFunction,parameter)=0A=
+{this._variableName=3DvarName;this._container=3Ddocument.getElementById(c=
+ontainerId);this._inlineEditorPanel=3Dnew =
+Telligent_InlineEditorPanel(this._variableName+'._inlineEditorPanel',cont=
+ainerId,stateId,editor,fitEditorToWindow,new =
+Function('window.'+this._variableName+'._onEdit();'),new =
+Function('window.'+this._variableName+'._onSave();'),new =
+Function('window.'+this._variableName+'._onClose();'));this.OnEditFunctio=
+n=3DonEditFunction;this.OnSaveFunction=3DonSaveFunction;this.OnCloseFunct=
+ion=3DonCloseFunction;this.ToolTip=3DtoolTip;this.CssClass=3DcssClass;thi=
+s.HoverCssClass=3DhoverCssClass;this.EditingCssClass=3DeditingCssClass;th=
+is.FitEditorToWindow=3DfitEditorToWindow;this.Parameter=3Dparameter;if(th=
+is._container)=0A=
+this._container.dispose=3Dnew =
+Function(this._variableName+'.Dispose();');this._container.title=3Dthis.T=
+oolTip;this._container.ondblclick=3Dnew =
+Function("window."+this._variableName+".Edit(); return =
+false;");this._container.onmouseover=3Dnew =
+Function("window."+this._variableName+"._mouseOver();");this._container.o=
+nmouseout=3Dnew =
+Function("window."+this._variableName+"._mouseOut();");this._container.cl=
+assName=3Dthis.CssClass;}=0A=
+Telligent_DblClickInlineEditorPanel.prototype.Edit=3Dfunction()=0A=
+{this._container.className=3Dthis.CssClass;this._inlineEditorPanel.Edit(t=
+his.Parameter);}=0A=
+Telligent_DblClickInlineEditorPanel.prototype.Dispose=3Dfunction()=0A=
+{this._container=3Dnull;this._inlineEditorPanel.Dispose();}=0A=
+Telligent_DblClickInlineEditorPanel.prototype.Refresh=3Dfunction()=0A=
+{this._inlineEditorPanel.FitEditorToWindow=3Dthis.FitEditorToWindow;this.=
+_inlineEditorPanel.Refresh();if(!this._inlineEditorPanel.IsEditing())=0A=
+this._container.className=3Dthis.CssClass;this._container.title=3Dthis.To=
+olTip;}=0A=
+Telligent_DblClickInlineEditorPanel.prototype.GetInlineEditorPanel=3Dfunc=
+tion()=0A=
+{return this._inlineEditorPanel;}=0A=
+Telligent_DblClickInlineEditorPanel.prototype._mouseOver=3Dfunction()=0A=
+{if(!this._inlineEditorPanel.IsEditing()&&this._container.className=3D=3D=
+this.CssClass)=0A=
+this._container.className=3Dthis.HoverCssClass;}=0A=
+Telligent_DblClickInlineEditorPanel.prototype._mouseOut=3Dfunction()=0A=
+{if(!this._inlineEditorPanel.IsEditing()&&this._container.className=3D=3D=
+this.HoverCssClass)=0A=
+this._container.className=3Dthis.CssClass;}=0A=
+Telligent_DblClickInlineEditorPanel.prototype._onEdit=3Dfunction()=0A=
+{this._container.className=3Dthis.EditingCssClass;if(this.OnEditFunction)=0A=
+this.OnEditFunction(this);}=0A=
+Telligent_DblClickInlineEditorPanel.prototype._onSave=3Dfunction()=0A=
+{this._container.className=3Dthis.CssClass;if(this.OnSaveFunction)=0A=
+this.OnSaveFunction(this);}=0A=
+Telligent_DblClickInlineEditorPanel.prototype._onClose=3Dfunction()=0A=
+{this._container.className=3Dthis.CssClass;if(this.OnCloseFunction)=0A=
+this.OnCloseFunction(this);}=0A=
+function =
+Telligent_InlineEditor(varName,containerId,setInlineEditorPanelFunction,g=
+etContentFunction,setContentFunction,getStyleContextElementFunction,setFo=
+cusFunction,resizeFunction,minimumWidth,minimumHeight)=0A=
+{this._variableName=3DvarName;this._container=3Ddocument.getElementById(c=
+ontainerId);this._inlineEditorPanel=3Dnull;this._getContentFunction=3Dget=
+ContentFunction;this._setContentFunction=3DsetContentFunction;this._getSt=
+yleContextElementFunction=3DgetStyleContextElementFunction;this._setFocus=
+Function=3DsetFocusFunction;this._resizeFunction=3DresizeFunction;this.Mi=
+nimumWidth=3DminimumWidth;this.MinimumHeight=3DminimumHeight;this.FitToWi=
+ndow=3Dfalse;this._initialized=3Dfalse;this._popupPanel=3Dnull;this._igno=
+reClose=3Dfalse;this._setInlineEditorPanelFunction=3DsetInlineEditorPanel=
+Function;}=0A=
+Telligent_InlineEditor.prototype._setContent=3Dfunction(html)=0A=
+{if(!this._initialized)=0A=
+this._initialize();html=3Dthis._trim(html);if(this._setContentFunction)=0A=
+this._setContentFunction(html);}=0A=
+Telligent_InlineEditor.prototype._trim=3Dfunction(text)=0A=
+{return text.replace(/^\s+|\s+$/g,'');}=0A=
+Telligent_InlineEditor.prototype._getContent=3Dfunction()=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(this._getContentFunction)=0A=
+return this._getContentFunction();else=0A=
+return"";}=0A=
+Telligent_InlineEditor.prototype._setInlineEditorPanel=3Dfunction(inlineE=
+ditorPanel,parameter)=0A=
+{this._inlineEditorPanel=3DinlineEditorPanel;this._ignoreClose=3Dfalse;if=
+(this._setInlineEditorPanelFunction)=0A=
+this._setInlineEditorPanelFunction(this._inlineEditorPanel,parameter);}=0A=
+Telligent_InlineEditor.prototype.Focus=3Dfunction()=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(this._setFocusFunction)=0A=
+this._setFocusFunction();}=0A=
+Telligent_InlineEditor.prototype._setStyleContext=3Dfunction(styleArray)=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(!this._getStyleContextElementFunction)=0A=
+return;var element=3Dthis._getStyleContextElementFunction();if(!element)=0A=
+return;for(var i=3D0;i<styleArray.length;i++)=0A=
+{try{eval('element.style.'+styleArray[i][0]+' =3D =
+\''+styleArray[i][1]+'\';');}catch(err){}}}=0A=
+Telligent_InlineEditor.prototype._resize=3Dfunction(width,height)=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(this._resizeFunction)=0A=
+this._resizeFunction(width,height);}=0A=
+Telligent_InlineEditor.prototype.Save=3Dfunction()=0A=
+{if(!this._initialized)=0A=
+this._initialize();this._ignoreClose=3Dtrue;if(this._inlineEditorPanel)=0A=
+{this._inlineEditorPanel.Save();this._inlineEditorPanel._abandonedContent=
+=3Dnull;}}=0A=
+Telligent_InlineEditor.prototype.Close=3Dfunction()=0A=
+{if(!this._initialized)=0A=
+this._initialize();this._ignoreClose=3Dtrue;if(this._inlineEditorPanel)=0A=
+{this._inlineEditorPanel._abandonedContent=3Dnull;this._inlineEditorPanel=
+.Close();}}=0A=
+Telligent_InlineEditor.prototype.IsShown=3Dfunction()=0A=
+{if(!this._initialized)=0A=
+this._initialize();return this._popupPanel.IsShown();}=0A=
+Telligent_InlineEditor.prototype._hide=3Dfunction()=0A=
+{this._ignoreClose=3Dtrue;if(this._popupPanel)=0A=
+this._popupPanel.Hide();}=0A=
+Telligent_InlineEditor.prototype._show=3Dfunction(element)=0A=
+{if(!this._initialized)=0A=
+this._initialize();if(this.IsShown())=0A=
+this._popupPanel.Hide();var =
+elementInfo=3DTelligent_Common.GetElementInfo(element);var =
+windowInfo=3DTelligent_Common.GetWindowInfo();if(this.FitToWindow)=0A=
+{var =
+recalculateElementInfo=3Dfalse;if(elementInfo.Top<windowInfo.ScrollY||ele=
+mentInfo.Top+elementInfo.Height>windowInfo.ScrollY+windowInfo.Height)=0A=
+{if(elementInfo.Height<windowInfo.Height)=0A=
+window.document.documentElement.scrollTop=3DelementInfo.Top-((windowInfo.=
+Height-elementInfo.Height)/2);else=0A=
+window.document.documentElement.scrollTop=3DelementInfo.Top;recalculateEl=
+ementInfo=3Dtrue;}=0A=
+if(elementInfo.Left<windowInfo.ScrollX||elementInfo.Left+elementInfo.Widt=
+h>windowInfo.ScrollX+windowInfo.Width)=0A=
+{if(elementInfo.Width<windowInfo.Width)=0A=
+window.document.documentElement.scrollLeft=3DelementInfo.Left-((windowInf=
+o.Width-elementInfo.Width)/2);else=0A=
+window.document.documentElement.scrollLeft=3DelementInfo.Left;recalculate=
+ElementInfo=3Dtrue;}=0A=
+if(recalculateElementInfo)=0A=
+elementInfo=3DTelligent_Common.GetElementInfo(element);}=0A=
+var width=3DelementInfo.Width;var left=3DelementInfo.Left;var =
+height=3DelementInfo.Height;var =
+top=3DelementInfo.Top;if(this.FitToWindow)=0A=
+{if(width>windowInfo.Width)=0A=
+{width=3DwindowInfo.Width-(windowInfo.Width*.1);left+=3D(windowInfo.Width=
+*.05);}=0A=
+if(height>windowInfo.Height)=0A=
+{height=3DwindowInfo.Height-(windowInfo.Height*.1);top+=3D(windowInfo.Hei=
+ght*.05);}}=0A=
+this._popupPanel.Show(left,top,0,0,true);this._resize((width<this.Minimum=
+Width&&this.MinimumWidth>0?this.MinimumWidth:width),(height<this.MinimumH=
+eight&&this.MinimumHeight>0?this.MinimumHeight:height));this._popupPanel.=
+Refresh();}=0A=
+Telligent_InlineEditor.prototype._initialize=3Dfunction()=0A=
+{if(this._inititalized)=0A=
+return;this._popupPanel=3Dnew =
+Telligent_PopupPanel(this._variableName+'._popupPanel',this.CssClass,'rig=
+htdown',100,null,new =
+Function('window.'+this._variableName+'._popupPanelClosed();'),false,'');=
+this._popupPanel._initialize();this._popupPanel.ClearPanelContent();this.=
+_popupPanel.AddNodeToPanel(this._container);this._container.style.display=
+=3D'block';this._initialized=3Dtrue;}=0A=
+Telligent_InlineEditor.prototype._popupPanelClosed=3Dfunction()=0A=
+{if(!this._ignoreClose)=0A=
+{if(this._inlineEditorPanel)=0A=
+{this._inlineEditorPanel._abandonedContent=3Dthis._getContent();this._inl=
+ineEditorPanel.Close();}}=0A=
+else=0A=
+this._ignoreClose=3Dfalse;};
+------=_NextPart_000_008A_01C93060.A45A3A20--

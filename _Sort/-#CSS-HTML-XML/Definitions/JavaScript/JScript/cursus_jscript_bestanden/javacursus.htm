@@ -1,0 +1,720 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0063)http://home.wanadoo.nl/webdesign.wolterink/java/javacursus.html -->
+<HTML><HEAD>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type><LINK 
+href="javacursus_bestanden/mnustyle.css" rel=stylesheet type=text/css>
+<SCRIPT language=JavaScript type=text/javascript>
+<!--
+setTimeout ("Check()",2000)
+
+function Check(){
+if(top.frames.length==2){
+var FrameNaam = top.frames.item(0).name
+	if (FrameNaam!="mnu"){
+	alert("Sorry deze pagina wordt illegaal bekeken, deze pagina mag alleen worden bekeken vanaf JouwWebpagina.com!")
+	top.location="../index.html"
+	}
+}else {
+alert("Sorry deze pagina wordt illegaal bekeken, deze pagina mag alleen worden bekeken vanaf JouwWebpagina.com!")
+top.location="../index.html"
+}}
+
+if(!navigator.javaEnabled()){
+alert("Jouw browser ondersteunt geen java, het kan ook zijn dat java uitstaat, dat kun je weer aanzetten in het options menu.")
+}
+//--></SCRIPT>
+
+<STYLE>I {
+	BACKGROUND-COLOR: white; FONT-FAMILY: courier; FONT-SIZE: x-small; FONT-STYLE: normal
+}
+</STYLE>
+
+<META content="MSHTML 5.00.3315.2870" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffdd><BR>
+<CENTER>
+<H1>JavaScript cursus</H1><!-- BEGIN HOLLAND BPATH CODE -->
+<CENTER>
+<TABLE border=0 cellPadding=0 cellSpacing=1>
+  <TBODY>
+  <TR>
+    <TD bgColor=#0000ff><APPLET code=Hyper.class 
+      codeBase=http://ads06.bpath.com/java/nl/ height=62 width=470 MAYSCRIPT 
+      ARCHIVE="Hyper.zip"><PARAM NAME="cabbase" VALUE="Hyper.cab"><PARAM NAME="service" VALUE="holland,32"><PARAM NAME="id" VALUE="17586"><PARAM NAME="page" VALUE="0"><PARAM NAME="code" VALUE="Hyper.class"><PARAM NAME="codeBase" VALUE="http://ads06.bpath.com/java/nl/"><PARAM NAME="height" VALUE="62"><PARAM NAME="width" VALUE="470"><PARAM NAME="MAYSCRIPT" VALUE=""><PARAM NAME="ARCHIVE" VALUE="Hyper.zip">
+      <A HREF="http://ads06.bpath.com/url.cfm/ID=17586&Page=0&Ver=32&Pos=" 
+      TARGET="_top"><IMG WIDTH=468 HEIGHT=60 BORDER=1 ISMAP HSPACE=0 VSPACE=0 
+      SRC="http://ads06.bpath.com/gif.cfm?ID=17586&Page=0&Ver=32" ALT="Lid van 
+      het Holland HyperBanner Netwerk"></A></APPLET></TD></TR>
+  <TR>
+    <TD><A 
+      href="http://ads06.bpath.com/barurl.dll/ID=17586&amp;Page=0&amp;Ver=32&amp;barpos=" 
+      target=_top><IMG border=0 height=16 isMap 
+      src="javacursus_bestanden/htmlbar.gif" 
+width=470></A></TD></TR></TBODY></TABLE></CENTER><!-- END HOLLAND BPATH CODE -->
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD>
+      <CENTER>
+      <H3>Deze Snelcursus bevat de volgende onderdelen:</H3><BR><SELECT name=a 
+      onchange="if(a.value!=''){document.location='#'+a.value}" size=18> 
+        <OPTION value=intro>introductie</OPTION> <OPTION value="">-</OPTION> 
+        <OPTION value=var>variabelen</OPTION> <OPTION 
+        value=ope>operatoren</OPTION> <OPTION value=str>strings</OPTION> <OPTION 
+        value=interactie>Interactie</OPTION> <OPTION value="">-</OPTION> <OPTION 
+        value=function>functions</OPTION> <OPTION value=if>if-statement</OPTION> 
+        <OPTION value=while>while-statement</OPTION> <OPTION 
+        value=for>for-statement</OPTION> <OPTION value=arrays>arrays</OPTION> 
+        <OPTION value=object>Objecten</OPTION> <OPTION 
+        value=events>Events</OPTION> <OPTION value=input>&lt;input&gt;</OPTION> 
+        <OPTION value=div>&lt;div&gt;</OPTION> <OPTION value="">-</OPTION> 
+        <OPTION value=slot>slot</OPTION></SELECT> </CENTER><BR>
+      <HR>
+      <BR></TD></TR>
+  <TR>
+    <TD><A name=intro></A>
+      <H3>Introductie</H3><BR>
+      <P>Met javascript kun je heel veel verschillende dingen, je kunt 
+      berekeningen maken, visuele effecten in je site zetten, meer interactie 
+      met de bezoeker etc. Javascript is afgeleid van de programmeertaal C++. 
+      Javascript wordt tussen de script tags gezet:<BR><BR><I>&lt;script 
+      language="javascript"&gt;<BR>&lt;!--<BR><BR>// 
+      --&gt;<BR>&lt;/script&gt;</I><BR><BR>Hiertussen komt de script, de &lt;!-- 
+      //--&gt; zorgt ervoor dat oude browsers die geen script ondersteunen de 
+      script niet op de pagina scrijven, de // voor de laatste --&gt; zorgt 
+      ervoor dat de laatste --&gt; niet als script wordt gezien. Alles op een 
+      regel na // wordt niet als script gezien, alles tussen /* en */ wordt ook 
+      als commentaar gezien, dus niet als script. De script tags kunnen overal 
+      in de pagina voorkomen zolang die maar tussen de HTML-tags staan, het 
+      beste is dat je de script tag tussen de head-tags plaatst.<BR><BR><FONT 
+      color=red>Als we een voorbeeld geven van een script laten we vanaf nu de 
+      script-tags niet zien!</FONT> </P></TD></TR>
+  <TR>
+    <TD><A name=var></A>
+      <H3>Variabelen</H3>
+      <P>Javascript werkt met variabelen, een variabele is bijvoorbeeld een 
+      letter die een waarde voorstelt, bijvoorbeeld (bv) i=6, hier heeft de 
+      variabele i de waarde 6 gekregen. Maar voordat je gebruikt maakt van 
+      variabelen moet je eerst de computer laten zien dat de ee bepaalde letter 
+      een variabele is, bv (dit hieronder hoort tussen de script 
+      tags:<BR><BR><I>var i</I><BR><BR>De <I>var</I> geeft aan dat er een 
+      variabele komt, de computer weet nu dat de variabele i bestaat, je kunt er 
+      nu mee gaan rekenen. In een Variable mag geen spatie voorkomen, dus <I>var 
+      de boom</I> is fout, je kunt dan het beste gebruik maken van hoofdetters 
+      dus <I>var DeBoom</I>. Bij dat toekennen (declareren) kun je de variabele 
+      ook meteen een waarde geven:<BR><BR><I>var i = 966</I><BR><BR>Hier is 
+      variabele i gedeclareert en heeft het de waarde 966, nu kun je meer met i 
+      doen:<BR><BR><I>var i = 966<BR>i = 6 + 94<BR>i = 100 - 6</I><BR><BR>hier 
+      wordt op de eerste regel de variabele i gedeclareert en krijgt de waarde 
+      966, daarna krijgt i de waarde 6 + 94, dus 100, daarna krijgt i de waarde 
+      100 - 6, dus 94. Nog een voorbeeld:<BR><BR><I>var BeginAantal = 60<BR>var 
+      EindAantal = 30<BR>var C = 100/(BeginAantal/Eindaantal) 
+      </I><BR><BR>Hierboven wordt eerst de variabelen BeginAantal met een waarde 
+      van 60 gedeclareert, daarna de variabele EindAantal met een waarde van 30. 
+      Dan wordt de variabele C gedeclareert, De waarde van c is hoeveel 
+      procenten EindAantal van BeginAantal is, de haakjes zorgen ervoor dat 
+      BeginAantal/EindAantal eerst wordt uitgerekent, de / betekent gedeeld 
+      door.<BR><BR>C = 100/(BeginAantal/EindAantal)<BR>C = 100/(60/30)<BR>C = 
+      100/2<BR>C = 50<BR>Hier is EindAantal dus 50 procent van BeginAantal. 
+    </P></TD></TR>
+  <TR>
+    <TD><A name=ope></A>
+      <H3>Operatoren</H3>Operatoren zijn gewoon tekens die berekeningen kunnen 
+      uitvoeren,dus + is een operatoor. Hieronder geef ik een paar operatoren op 
+      een rijtje:<BR><BR>
+      <UL>
+        <LI>+ = plus 
+        <LI>- = min 
+        <LI>/ = gedeeld door 
+        <LI>* = maal 
+        <LI>^ = tot de macht, dus 4 ^ 3 = 4 * 4 * 4 
+        <LI>()= prioriteits haakjes, deze haakjes geven aan wat eerstmoet worden 
+        uitrgerekent </LI></UL>Met deze opereatoren kun je dus heel veel, maar het 
+      is veel belangrijker om de taal C++ goed te kennen. Je kunt bijvoorbeeld 
+      een berekening met de variabele b doen, bijvoorbeeld:<BR><BR><I>var b = 10 
+      b = b+b<BR>b+=b<BR>b*=2<BR></I><BR><BR>Hierboven krijgt b een waarde tien 
+      daarna krijgt b de waarde b+b, dus 10+10=20, dan komt er iets wat je nog 
+      niet kent, b+=b, hier krijgt b de waarde b+b, dit is veel makelijker dan 
+      b=b+b, je kunt dit ook met andere operatoren doen, dus b*=b dit is gelijk 
+      aan b=b*2. nog een voorbeeld:<BR><BR><I>var c = 1<BR>c=c+1<BR>c+=1<BR>c++ 
+      </I><BR><BR>hier gebeurt er steeds hetzelfde met c, eerst krijgt c de 
+      waarde c+1, dus 1+1, c heeft nu dus de waarde 2, dan krijgt zoals ik 
+      hierboven heb uitgelegt c+=1, dus c=c+1, dus c=2+1, c heeft nu e waarde 3, 
+      dan gebeurt er iets wat je nog niet kent: c++, hier gebeurt er hetzelfde 
+      als met c+=1, c krijgt een waarde hoger, c++, hier staat eigenlijk c+=1, c 
+      krijgt nu dus de waarde 4. Je kunt ook c-=1 (dus c=c-1) korter opscrijven, 
+      namelijk: c--. Nu weet je ook waarom die programeertaal C++, heet, eerst 
+      heette die programeertaal C, maar de nieuwe versie heet C++, ééntje hoger 
+      dus.<BR><BR>Zoals je nu de heletijd al gezien heeft gebeurt alles regel 
+      voor regel, maar net zoals bij HTML leest ook C++ (javascript) de spaties 
+      niet, maar C++ leest de regels wel, als je toch een bepaalde berekening op 
+      één regel wilt hebben moet je gebruik maken van het ; teken, dat teken 
+      geeft aan dat er iets nieuws komt, een nieuwe berekening ofzo 
+      iets:<BR><BR><I>var d=8; d++ ; d*=d </I><BR><BR>Dit hierboven is hetzelfde 
+      als:<BR><BR><I>var d=8<BR>d++<BR>d*=d<BR></I><BR></TD></TR>
+  <TR>
+    <TD><A name=str></A>
+      <H3>Strings</H3>
+      <P>Een string is eigenlijk ook een variabele alleen dan bevat het geen 
+      numerieke waarde maar een tekst:<BR><BR><I>var A = "hallo"<BR>var B = 
+      "jan"<BR>var C = A+" "+B </I><BR><BR>Je ziet dat trings niet zo veel 
+      verschillen van numerieke variabelen, je behandelt ze hetzelfde. Je kunt 
+      strings en numerieke variabele (integers) door elkaar 
+      gebruiken:<BR><BR><I>var a = 8<BR>a = "Hoe gaat het, " var b = 
+      "hallo"<BR>var d = 7 var c = a+b+d<BR></I><BR>Hier krijgt a eerst een 
+      numerieke waarde 8, daarna wordt het een string, c krijgt uiteindelijk de 
+      waarde a+b+d, dus "Hoe gaat het, " +"hallo"+d, dus c="Hoe gaat het, 
+      hallo7". je ziet dat de numerieke variabel d een string wordt bij c, je 
+      moet numerieke e strings ook niet te veel doorelkaar halen:<BR><BR><I>var 
+      a=8<BR>var b="8"<BR>var c=a+b<BR></I><BR><BR>Hier krijgt c niet de waarde 
+      8+8=16, nee c krijgt hier de waarde 8+"8"="88", je ziet dus dat een string 
+      geen numerieke waarde kan worden maar andersom kan het wel.<BR></P></TD></TR>
+  <TR>
+    <TD><A name=interactie></A>
+      <H3>Interactie</H3>
+      <P>Met JavaScript, kun je ook de gebruiker/bezoeker van jouw site om 
+      bepaalde dingen vragen, of je kunt de bezoeker informeren. Dat doe je met 
+      een paar dingen:<BR><BR><I>alert("hallo")<BR>var d ="Hallo, hoe gaat 
+      het"<BR>alert(d)<BR>var z = prompt("Hoe heet jij")<BR>alert("hallo 
+      "+z)<BR>confirm("hoe gaat het?")
+      <SCRIPT>
+function doehet(){
+alert("hallo")
+var d ="Hallo, hoe gaat het"
+alert(d)
+var z = prompt("Hoe heet jij")
+alert("hallo "+z)
+confirm("hoe gaat het?")
+}
+</SCRIPT>
+       </I><BR><BR>Als je deze code zou uitvoeren gebeurde er <INPUT onclick=doehet() type=button value=dit><BR>Dus we hebben nu de 
+      volgende operatoren:<BR>
+      <UL>
+        <LI>alert(variabele) = met alert geef je een bericht weer, <A 
+        href="javascript:%20alert('alert')">voorbeeld</A> 
+        <LI>confirm(variabele) = met confirm vraag je oom en bevestiging van de 
+        gebruiker, <A href="javascript:%20confirm('confirm')">voorbeeld</A> 
+        <LI>prompt(variabele) = met prompt vraag je de gebruiker om iets in te 
+        voeren, <A href="javascript:%20prompt('prompt')">voorbeeld</A> </LI></UL>
+      <P></P></TD></TR>
+  <TR>
+    <TD><A name=function></A>
+      <H3>Functies</H3>
+      <P>Een functie is een bepaald gebied (code) die integenstelling tot code 
+      die niet in een functie staan niet met het opstarten van een pagina 
+      gelezen worden. Een functie kun je tevens aanroepen, dit is nu allemaal 
+      een kleinbeetje onduidelijk, maar misschien verheldert een voorbeeld 
+      alles:<BR><BR><I>var x=10<BR><BR>function DezeFunctie() { <BR>x++<BR>} 
+      <BR><BR>DezeFunctie() </I><BR><BR>Hierboven wordt eerst de variabele x 
+      ingelezen, x krijgt hier de waardew 10, dan komt er een functie, maar die 
+      functie wordt niet ingelezen, dan komt er dit: <I>DezeFunctie()</I>, deze 
+      regel roept de functie <I>DezeFunctie</I> aan, in de functie DezeFunctie 
+      wordt er bij x 1 opgetelt (x++). <BR><BR>Een functie is op een bepaalde 
+      manier opgebouwd: <BR><BR>function x(){}<BR><BR>de tekst <I>function 
+      </I>geeft aan dat er een functie volgt, x is de naam van de functie, en de 
+      twee () worden later uitgelegd, er staan ook nog twee accolades {}, de 
+      accolades geven aan wat er moet gebeuren als de functie wordt aangeroepen, 
+      alles tussen de accolades wordt uitgevoerd. Het aanroepen van een functie 
+      zodat die fuctie wordt uitgevoerd is ook heel gemakkelijk: geef gewoon de 
+      naam van de functie plus de (). een functie kan ook werken met variabelen 
+      binnen de functie:<BR><BR><I>function BerekenInhoud(h,b,l) {<BR>var inhoud 
+      = h * b * l<BR>alert("De inhoud van het object 
+      ="+inhoud+"cm3")<BR>}<BR><BR>hh = prompt("geef hier de hoogte in 
+      cm")<BR>bb = prompt("geef hier de breedte in cm") <BR>ll = prompt("geef 
+      hier de lengte in cm") <BR>BerekenInhoud(hh,bb,ll) <BR>
+      <SCRIPT>
+
+function BerekenInhoud(h,b,l) {
+var inhoud = h * b * l
+alert("De inhoud van het object ="+inhoud+"cm3")
+}
+
+function ber(){
+hh = prompt("geef hier de hoogte in cm")
+bb = prompt("geef hier de breedte in cm")
+ll = prompt("geef hier de lengte in cm")
+BerekenInhoud(hh,bb,ll)
+}
+</SCRIPT>
+      </I><BR>Als je de code hierboven zou uitvoeren gebeurt er <INPUT onclick=ber() type=button value=dit>.<BR>Zoals je ziet zijn de () 
+      bij een functie toch wel nuttig, je kunt daar variabele plaatsen: function 
+      naam(var1,var2,var4,var4){}. Je ziet dat de variabelen gescheiden zijn 
+      door een komma. binnen zo'n functie kun je gebruik maken van de 
+      variabelen, bij het aanroepen van een functie moet je die variabelen ook 
+      een waarde geven, dus: naam(4,6,2,"hallo"), de variabelen binnen de 
+      functie krijgen dan de waarde die ze bij het aanroepen hebben gekregen, 
+      dus:<BR><BR><I>var x = "hallo"<BR>laatzien(x)<BR><BR>function 
+      laatzien(tekst) {<BR>alert(tekst)<BR>} </I><BR><BR>als je dit uitvoert 
+      gebeur er <A href="javascript:%20alert('hallo')">dit</A> binnen een 
+      functie kun je weer een andere functie aanroepen maar je kunt niet 
+      dezelfde functie aanroepen, dan loopt de computer vast, want er wordt dan 
+      voor eeuwig door de functie gegaan.<BR><BR>Je kunt binnen een functie ook 
+      gebruik maken van <I>return variabele;</I> voorbeeld:<BR><BR><I>function 
+      maal(x){<BR>var z = x * 2<BR>return z;<BR>}<BR><BR>var GG = (2 * maal(4)) 
+      / maal(8)<BR><BR></I><BR>Bij de functie <I>maal(x)</I> is gebruik gemaakt 
+      van de <I>return</I>, variabele <I>GG</I> krijgt hier de waarde <I>(2 * 
+      maal(4)) / maal(8)</I>, het onbekende hieraan is de <I>maal(4)</I> en de 
+      <I>maal(8)</I>, het zijn eigenlijk niks anders dan twee dingen die een 
+      functie aanroepen. bv <I>maal(4)</I> roept de functie <I>maal(x)</I> aan. 
+      x krijgt hier de waarde 4, dan krijgt binnen de functie z de waarde x * 2, 
+      dus 4 * 2, z is dus gelijk aan 8, door <I>return z</I> krijgt het 
+      aanroepen zelf de waarde z, dus de waarde 8. <I>2 * maal(4)</I> is dus 
+      gelijk aan <I>2 * z</I> omdat z voor de return staat. <I>2 * maal(4) = 2 * 
+      8</I> omdat z hier de waarde 8 krijgt door de functie maal(x), dus <I>GG = 
+      (2 * maal(4)) / maal(8)</I> = <I>GG = (2 * 8) / 16</I> = <I>GG = 16 / 
+      16</I> = <I>GG = 1</I>. Hopenlijk is het een kleinbeetje duidlijk. 
+  </P></TD></TR>
+  <TR>
+    <TD><A name=if></A>
+      <H3>if-statement</H3>
+      <P>Je krijgt nu te maken met iets nieuws te maken, namelijk de 
+      if-statement (if is engels voor als). Met de if-statement kun je nagaan of 
+      iets waar is, ofdat iets niet waar is:<BR><BR><I>var d=8<BR><BR>if (d==8) 
+      alert("waar") else alert("niet waar")<BR><BR></I>Hier staat 
+      eigenlijk:<BR><BR>d is gelijk aan 8, als d gelijk aan 8 is dan 
+      alert("waar") als dat niet zo is dan alert("niet waar"), meer hoef ik er 
+      eigenlijk niet over te zeggen, je kunt de if-statement wel makkelijker 
+      maken met accolades, dus:<BR><BR>if (dit) {<BR>dandit<BR>} else 
+      {<BR>andersdit<BR>}<BR></P><BR><BR>NB, je hoeft niet altijd de else te 
+      gebruiken, if(){} is dus voldoende.<BR>Om volledig gebruik te kunne maken 
+      van de if-statement moet je nog een paar operatoren kennen:<BR>
+      <UL>
+        <LI>== , met == geef je een variabele geen waarde maar kijk je alleen of 
+        iets zo is, als je bijvoorveeld dit deed : var d=8; 
+        if(d=9){alert("klopt")} dan krijgt d eerst de waarde 8, daarna krijgt d 
+        de waarde 9, hier moet je dus gebruik maken van ==. 
+        <LI>!= , != betekent <I>is ongelijk aan</I>, dus niet gelijk aan 
+        <LI>&gt;; , groter dan 
+        <LI>&lt; , kleiner dan 
+        <LI>&gt;= , groter dan of gelijk aan. 
+        <LI>&lt;= , kleiner dan of gelijk aan. 
+        <LI>&amp;&amp; , &amp;&amp; betekent <I>en</I>, &amp;&amp; betekent niet 
+        plus!, &amp;&amp; komt bijvoorbeeld voor bij de if-statement: if(4&gt;2 
+        &amp;&amp; 2&gt;1){alert("klopt")}, hier staat dus eigenlijk, als 4 
+        groter is dan 2 <I></I>2 groter dan 1 dan alert("klopt"). 
+        <LI>|| , || betekent <I>of</I>, || komt bijvoorbeeld voor bij de 
+        if-statement: if(4&gt;2 || 2&gt;1){alert("klopt")}, hier staat dus 
+        eigenlijk, als 4 groter is dan 2 <I>of</I> 2 groter dan 1 dan 
+        alert("klopt"). </LI></UL>Als je dit allemaal kunt kun je veel meer met de 
+      if-statement:<BR><BR><I>var d = prompt('hoe heet u?')<BR><BR>if 
+      (d=='beatrix' || d=='Beatrix' || d=='Mevr 
+      Beatrix'){<BR>&nbsp;&nbsp;&nbsp;var z = confirm('bent u koningin 
+      beatrix?')<BR>&nbsp;&nbsp;&nbsp;if (z) alert('Goedendag koningin');<BR>} 
+      </I><BR><BR>Het is eigenlijk heel gemakkelijk, maak maar een zinnetje van 
+      wat hierboven staat, dus:<BR><BR>als d gelijk aan beatrix is of... 
+      enz<BR><BR>Er is ook een verkorterde versie van het if-statement, 
+      namelijk:<BR><BR><I>expressie1 ? expressie2 : expressie3;</I> <BR><BR>dit 
+      is gelijk aan:<BR><BR><I>if (expressie1){<BR>expressie2<BR>} else 
+      {<BR>expressie3<BR>}<BR></I><BR>Voorbeeld:<BR><BR><I><I>var a = 
+      prompt('geef hier een waarde voor a')<BR><BR>a &gt; 0 ? alert('a is groter 
+      dan 0') : alert('a is kleiner dan of gelijk aan 0');<BR></I><BR></I></TD></TR>
+  <TR>
+    <TD><A name=while></A>
+      <H3>While-statement</H3>
+      <P>Met de while-statement kun je bepaalde stukken javascript heraaldelijk 
+      uitvoeren, de opbouw van de while-statement is: <I>while (dit){dat}. 
+      Waarbij dat net zo vaak wordt herhaald als dit=true is, 
+      voorbeeld</I>:<BR><BR><I>var i=0<BR><BR>while (i&lt;10){<BR>alert('i = 
+      '+i)<BR>i++ <BR>} </I><BR><BR>Hier krijgt eerst i de waarde 0, dan komt de 
+      while-statement, er staat eigemlijk: <I>wanneer i kleiner is dan 10 dan { 
+      alert('i = '+i) i plus 1</I>. Hierbij wordt de stuk code tussen accolades 
+      net zo vaak uitgevoerd zolang i&lt;10 waar is, als er geen i++ tussen de 
+      accolades zou staan dan zou je oneindig vaak alert('i = '+i) krijgen. Een 
+      voorbeeld van de functie hierboven heb je <INPUT onclick=jaja() type=button value=hier>.
+      <SCRIPT>
+function jaja(){
+var i=0
+while (i<10){
+alert('i = '+i)
+i++}}
+</SCRIPT>
+       <BR><BR>Je kunt binnen een lus (dus While/For-statement) ook gebruik 
+      maken van de <I>break;</I>, de <I>beark;</I> zorgt ervoor dat er meteen 
+      uit de lus wordt gestapt, vb:<BR><BR><I>var i = 0<BR>while 
+      (i&lt;10){<BR>alert (i)<BR>if (i==5) break;<BR>i++<BR>}<BR></I><BR>Als je 
+      dit hierboven uitvoert zie je steeds een berichte tevoorschijn met een 
+      getal, eerst 1,dan 2 dan 3dan 4 en op het eind 5. De <I>break;</I> wordt 
+      uitgevoerd als i==5 is. </P></TD></TR>
+  <TR>
+    <TD><A name=for></A>
+      <H3>for-statement</H3>
+      <P>Het for-statement verschilt niet zo veel van het while-statement: 
+      <BR><BR><I>var i=0<BR><BR>while (i&lt;10){<BR>alert('i = '+i)<BR>i++ <BR>} 
+      </I><BR><BR>is hetzelfde als:<BR><BR><I>for(i=0;i&lt;10;i++){<BR>alert('i 
+      = '+i)<BR>} </I><BR><BR>Bij het for-statement moet je tussen de haakjes 
+      dus eerst een variabele declareren, daarna waaraan het for-statement aan 
+      moet voldoen om uitgevoerd te worden, en dan wat er met de variabele 
+      gebeurd (in dit geval i++), i is hier dus gewoon een teller die aangeeft 
+      hoe vaak de code tussen de accolades moet worden uitgevoerd.<BR><BR>Ik 
+      geef nu alvast een operator die alleen voor javascript geld en niet voor 
+      c++, namelijk : <I>document.write(variabele)</I>. met document.write(x) 
+      kun je html-code in je pagina schrijven, voorbeeld: <BR><BR><I>function 
+      MaakTabel(){<BR>var tabel = "&lt;table&gt;"<BR>var eindtabel = 
+      "&lt;/table&gt;"<BR>var tr = "&lt;tr&gt;"<BR>var eindtr = 
+      "&lt;/tr&gt;"<BR>var td = "&lt;td&gt;"<BR>var eindtd= 
+      "&lt;/td&gt;"<BR><BR>var totaal = tabel<BR><BR>alert("er wordt nu een 
+      tabel gemaakt met rekensommen")<BR><BR>for(i=0;i&lt;11;i++){<BR>var 
+      uitkomst = i * (10 - 
+      i)<BR>totaal+=tr+td+(i)+eindtd+td+"maal"+eindtd+td+(10-i)+eindtd+td+"="+eindtd+td+uitkomst+eindtd+eindtr<BR>}<BR>totaal+=eindtabel<BR>document.write(totaal)<BR>}
+      <SCRIPT>
+function MaakTabel(){
+var tabel = "<table>"
+var eindtabel = "</table>"
+var tr = "<tr>"
+var eindtr = "</tr>"
+var td = "<td>"
+var eindtd= "</td>"
+
+var totaal = tabel
+
+alert("er wordt nu een tabel gemaakt met rekensommen")
+
+for(i=0;i<11;i++){
+var uitkomst = i * (10 - i)
+totaal+=tr+td+(i)+eindtd+td+"maal"+eindtd+td+(10-i)+eindtd+td+"="+eindtd+td+uitkomst+eindtd+eindtr
+}
+totaal+=eindtabel
+document.write(totaal)
+}
+</SCRIPT>
+       </I><BR><BR>Als je deze functie uitvoert krijg je een tabel waarbij een 
+      paar rekensommen zijn gemaakt: <INPUT onclick=MaakTabel() type=button value="Roep functie MaakTabel() aan">. 
+      PS, als een document.write(x) operator meteen bij het laden van de pagina 
+      wordt uitgevoerd dan komt de x op de plek waar de document.write ui is 
+      gevoerd, als je een document.write aanroept, dus vanuit een functie dan 
+      wordt eerst de document helemaal leeggelhaald en dan pas wordt de 
+      document.write uitgevoerd (dus je bij het tabel hierboven hebt gezien ). 
+      </P></TD></TR>
+  <TR>
+    <TD><A name=arrays></A>
+      <H3>Arrays</H3>
+      <P>Met een array kun je een reeks variabelen in een variabele stoppen, 
+      voorbeeld:<BR><BR><I>var A = new Array ("a", "b", "c", "d", 
+      "e")<BR><BR>alert(A[1])<BR>alert(A[2])<BR>alert(A[2*2]<BR></I><BR>Hierboven 
+      wordt eerst een array gemaakt genaamd <I>A</I>, een array wordt gemaakt 
+      d.m.v <I>new Array</I>, tussen de haakjes wordt aangegeven welke waarde de 
+      array krijgt, op 1 staat "a" op 2 "b", op 5 "e", zo zie je dat een array 
+      dus heel veel waarde kan hebben, om bijvoorbeeld de "a" in array A in een 
+      berichtje te voorschijn wilt laten komen moet je dat zo doen: 
+      <I>alert(A[1])</I>, je geeft dus de plaats aan d.m.v 
+      <I>naamarray[plaats]</I>.<BR><BR>Als ik nu een array op de plaats 6 
+      genaamd "f" erbij wilt plaatsen moet ik alleen dit aangeven: <I>A[6] = 
+      "f"</I>. <BR><BR>Je kunt ook bijvoorbeeld A[1] dus "a" veranderen in 
+      "Letter A", dat doe je zo: <I>A[1] = "Letter A"</I>. Je ziet dt ik aleen 
+      string heb gebruikt in de array, maar je kunt ook numerieke waarde 
+      gebruiken, dus: <I>A[34] = 44 * 6 / 33</I>. Meer hoef ik eigenlijk niet te 
+      zeggen over een array. </P></TD></TR>
+  <TR>
+    <TD><A name=object></A>
+      <H3>Objecten</H3>
+      <P>Je kunt bij javascript gebruik maken van objecten, je kunt bijvoorbeeld 
+      de achtergrondkleur (bgcolor) van jouw pagina veranderen, de 
+      achtergrondkleur wordt aangegeven met <I>window.document.bgcolor</I>, 
+      window geeft aan dat het om het scherm gaat waar de pagina in wordt 
+      uitgevoert, document geeft aan dat het om het document zelf gaat en 
+      bgcolor geeft aan dat het om de achtergrondkleur van de pagina gaat, 
+      meestal wordt window weggelaten, omdat de <I>document.bgcolor</I> 
+      voldoende is voor de browser om het te definieren. voorbeeld: 
+      <BR><I>function veranderbgcolor (){<BR>document.write ("u ziet nu de 
+      achtergrondkleur van kleur veranderen")<BR>document.bgcolor="red"<BR>alert 
+      ("groen") <BR>Document.bgColor = "green" <BR>alert ("geel") 
+      <BR>Document.bgColor = "yellow" <BR>alert ("zwart") <BR>Document.bgColor = 
+      "000000" <BR>alert ("grijs") <BR>Document.bgColor = "cccccc" <BR>alert 
+      ("normaal")<BR>Document.bgColor = "ffffdd" }
+      <SCRIPT language=vbscript>
+
+sub dit()
+document.write ("u ziet nu de achtergrondkleur van kleur veranderen")
+document.bgcolor="red"
+alert ("groen")
+document.bgcolor = "green"
+alert ("geel")
+document.bgcolor = "yellow"
+alert ("zwart")
+document.bgcolor = "000000"
+alert ("grijs")
+document.bgcolor = "cccccc"
+alert ("normaal")
+document.bgcolor = "ffffdd"
+end sub
+
+</SCRIPT>
+       </I><BR><BR>Als je dit hierboven uitvoert gebeurd er <INPUT onclick=dit() type=button value=dit> <BR>Zo zijn er nog meer 
+      objecten: (wat tussen haakjes staat hoef je niet te gebruiken (a).b = b 
+      )<BR><BR>
+      <UL>
+        <LI><I>window.status</I> // de waarde voor de tekst in de statusbar <INPUT onclick="window.status='Hallo, dit is de status bar';alert('kijk eens in de status-bar ...')" type=button value=voorbeeld> 
+
+        <LI><I>window.defaultstatus</I> // ongeveer hetzelfde als window.status 
+        (ik weet het verschil zelf niet) 
+        <LI><I>(window.)document.linkcolor</I> // geeft de kleur van een link 
+        weer (&lt;a&gt;), je kunt de kleuren ook zelf veranderen (dus 
+        document.linkcolor = "red" gebruiken) 
+        <LI><I>(window.)document.alinkcolor</I> // geeft de kleuren van de 
+        active link weer (de laatst geklikte link) 
+        <LI><I>(window.)document.vlinkcolor</I> // geeft de kleuren van de 
+        visited links weer 
+        <LI><I>window.document.location</I> // geeft de locatie van de document 
+        weer (bv, http://www.jantje.com/jansen/pietje.html) 
+        <LI><I>(window.)document.title</I> // geeft de &lt;title&gt; van een 
+        document weer 
+        <LI><I>navigator.appCodeName</I> // geeft codenaam van de browser weer <INPUT onclick="alert('navigator.appCodeName = '+navigator.appCodeName)" type=button value=voorbeeld> 
+
+        <LI><I>navigator.appName</I> // geeft naam van de browser weer <INPUT onclick="alert('navigator.appName = '+navigator.appName)" type=button value=voorbeeld> 
+
+        <LI><I>navigator.appVersion</I> // geeft versie van de browser weer <INPUT onclick="alert('navigator.appVersion = '+navigator.appVersion)" type=button value=voorbeeld> 
+
+        <LI><I>navigator.userAgent</I> // geeft userAgent (meestal appCodename + 
+        appVersion) van de browser weer <INPUT onclick="alert('navigator.userAgent = '+navigator.userAgent)" type=button value=voorbeeld> 
+
+        <LI><I>navigator.javaEnabled</I> // dit is een Boolean (een variabele 
+        die alleen ja of nee kan bezitten / 1 of 0), geeft aan of java is 
+        aaangeschakeld bij de browser <INPUT onclick="if(navigator.JavaEnabled){alert('navigator.JavaEnabled=1')} else { alert('navigator.JavaEnabled=0')}" type=button value=voorbeeld> 
+
+        <P><BR>Het is ook mogelijk op bepaalde dingen uit te voeren, 
+        bijvoorbeeld het document herladen, of een nieuw document openen: 
+        </P><BR>
+        <LI><I>window.close()</I> // sluit het document 
+        <LI><I>window.open ("url", "naam", "location=1, toolbar=1, 
+        directories=1, status=1, menubar=1, scrollbars=1, resizable=1, 
+        fullscreen=1, channelmode=1")</I> // met window.open kun je een nieuwe 
+        window openen, je geeft tussen de haakje eerst de url van de pagia die 
+        in de window moet komen aan, dan de naam die later kan worden gebruikt 
+        als object, (je kunt dus vanuit de pagina die een bepaalde window heeft 
+        gemaakt die als name <I>jan</I> had <I>jan.document.bgcolor</I> 
+        gebruiken), als laatste geef je aan hoe de window eruit moet komen te 
+        zien, 1 is ja 0 is nee (hopenlijk mijn voorbeeld duidelijk) <INPUT onclick="deze = window.open ('','','location=0, toolbar=0, status=1, menubar=0'); deze.document.write('<center>Hallo, dit is een nieuw venster, als je nu naast de knop waar je net op hebt geklikt klikt, dan zul je zien dat er wat aan deze window verandert</center>')" type=button value=knop1><INPUT onclick="zz = confirm('je kunt pas op deze knop drukken als je al op knop 2 hebt gedrukt, heb je dat al gedaan?'); if(zz) {deze.window.focus(); deze.document.write('<center><br><b>Hier ben ik weer</b><br>Zie je, dit is hetzelfde window, alleen nu met een andere tekst, en er staats iets in de status-balk</center>'); deze.window.status='Hallo, hier ben ik weer.'}" type=button value=knop2> 
+
+        <LI><I>(window.)prompt() / (window.)alert() / (window.)confirm()</I> // 
+        deze ken je al, ze komen eigenlijk van window af 
+        <LI><I>(window.)location.reload()</I> // door location.reload() wordt de 
+        pagina ververst,hij wordt gewoon opnieuw geladen. 
+        <LI><I>(window.)location.replace("url")</I> // hierdoor kun je het 
+        document laten vervangen door een ander document, de url van die 
+        document moet tussen de haakjes achteraan komen. 
+        <LI><I>(window.)setTimeout("dit",tijd)</I> // de setTimeout() is iets 
+        heel speciaals, hierdoor kun je een soort vn wekker zetten, bv: 
+        <I>setTimeout ("alert('hallo')", 3000)</I> hier wordt 
+        <I>alert('hallo')</I> na 3000 miliseconden (3 sec) uitgevoerd. 
+      </LI></UL><BR>Hieronder nog een voorbeeld van de <I>setTimeout</I>: 
+      <BR><BR><I>function wekker(){<BR>var tijd = prompt("Geef hier aan na 
+      hoeveel miliseconden de wekker af moet gaan")<BR>setTimeout ("alert('de 
+      wekker is afgegaan')",tijd)<BR>}<BR>
+      <SCRIPT>
+function wekker(){
+var tijd = prompt("Geef hier aan na hoeveel miliseconden de wekker af moet gaan")
+setTimeout ("alert('de wekker is afgegaan')",tijd)
+}
+</SCRIPT>
+      </I><BR>Als we nu <I>wekker()</I> uitvoeren gebeurt er <INPUT onclick=wekker() type=button value=dit><BR><BR>Je kunt elke tag ook 
+      een id geven bijvoorbeeld: <BR><BR><I>&lt;font 
+      id=jan&gt;hallo&lt;/font&gt;</I> <BR><BR>Nu kunt je met behulp van 
+      javascript bijvoorbeeld de kleur van <I>hallo</I> 
+      veranderen:<BR><BR><I>jan.color = "red"</I> <BR><BR>Hier wordt <I>jan</I> 
+      gebruikt omdat dat de id is van de tekst <I>hallo</I>, soms wordt i.p.v. 
+      id ook wel name gebruikt (is bij elke tag anders, maar meestal moet je id 
+      gebruiken):<BR><BR><I>&lt;font name=jan&gt;hallo&lt;/font&gt;</I> 
+      <BR><BR>Maar dit is bij elke tag verschillend. m.b.v. de <I>id</I> kun je 
+      veel meer met <I>hallo</I>: <BR><BR><I>jan.color = "red"<BR>jan.face = 
+      "arial"<BR>jan.title = "hallo"<BR></I><BR>Zoals je ziet, staan <I>color, 
+      face en title</I> allemaal in de font-tag:<BR>zie <A 
+      href="http://home.wanadoo.nl/webdesign.wolterink/html/tags.html#font" 
+      target=main>html/tags-font</A>.<BR>Bij elke tag kun je gebruik maken van 
+      de <I>name</I> of <I>id</I> maar de subdefinities (dus face color enz) 
+      zijn bij elke tag verschillend. Ik ga ze niet allemaal geven omdat je, als 
+      je HTML kent, de subdefinities ook allemaal wel kent, ik geef wel 1 
+      voorbeeld: <I>&lt;font id=f 
+      size=5font&gt;tekst&lt;/font&gt;<BR><BR>&lt;script 
+      language=JavaScript&gt;<BR>function Font() 
+      {<BR>f.color='red'<BR>f.size=8<BR>}<BR>&lt;/script&gt; <BR></I><BR>Als je 
+      hierboven de functie <I>Font()</I> uitvoert dan verandert er iets met de 
+      tekst tussen de font-tags, hieronder zie je de tekst tussen de font 
+      tags:<BR><BR><FONT id=f size=5>tekst</FONT><BR>
+      <SCRIPT>
+function Tabel() {
+f.color='red'
+f.size=8
+}
+</SCRIPT>
+<INPUT onclick=Tabel() type=button value="Voer functie Font() uit."> 
+      <BR><BR>Hopenlijk is dit nu duidelijk, je kunt alles niet in één keer 
+      leren: oefenen baart kunst. 
+      <P></P></TD></TR>
+  <TR>
+    <TD><A name=events></A>
+      <H3>Events</H3>
+      <P>Een event is een gebeurtenis als je bijvoorbeeld met de muis beweegt 
+      dan heet zo'n event <I>onmousemove</I>, events kun je ongeveer in elke tag 
+      gebruiken:<BR><BR><I>&lt;b 
+      onmousemove="alert('Hallo!')"&gt;Hallo&lt;/b&gt; </I><BR><BR>dit hierboven 
+      ziet er zo uit: <BR><BR><B onmousemove="alert('Hallo!')">Hallo</B> 
+      <BR><BR>Ga er eens met de cursor van de muis overheen, als het goed is zie 
+      je dan een berichtje verschijnen, zo zijn er nog veel meer events:<BR><BR>
+      <UL>
+        <LI><I>onmousemove</I> // als de muis erover heen gaat 
+        <LI><I>onmouseover</I> // als de muis binnen het gebied komt (tussen de 
+        desbetreffende tags) <B 
+        onmouseover="alert('je bent met de muis over voorbeeld gegaan')">voorbeeld</B> 
+
+        <LI><I>onmouseout</I> // als de muis het gebied verlaat <B 
+        onmouseout="alert('Je hebt het gebied verlaten')">voorbeeld</B> 
+        <LI><I>onclick</I> // als er wordt geklikt (met de muis) op het 
+        desbetreffende gebied <B 
+        onclick="alert('Je hebt hier geklikt')">voorbeeld</B> 
+        <LI><I>ondblclick</I> // als er met de muis dubbel wordt geklikt 
+        (doubleclick) op het desbetreffende gebied <B 
+        ondblclick="alert('Je hebt hier dubbelgeklikt')">voorbeeld</B> 
+        <LI><I>onmousedown</I> // als een muisknop in wordt gehouden op het 
+        desbetreffende gebied 
+        <DIV id=ada 
+        onmousedown="ada.innerHTML='<b>je houdt de muisknop nu in</b>'" 
+        onmouseup="ada.innerHTML='<b>je hebt de muisknop nu weer losgelaten</b>'"><B>voorbeeld</B></DIV>
+        <LI><I>onmouseup</I> // als een muisknop wordt losgelaten op het 
+        desbetreffende gebied (zit in het voorbeeld van <I>onmousedown</I> 
+        verwerkt) 
+        <LI><I>ondragstart</I> // wanneer de desbetreffende tekst wordt 
+        weggesleept (dus wanneer je de tekst selecteerd en dan de muis inhoud en 
+        dan, terwijl je de muis inhoud, de muis van het desbetreffende gebied 
+        verplaatst (ook wel slepen genoemd)) 
+        <DIV id=aada ondragstart="aada.innerHTML='<b>goedzo</b>'"><B>sleep deze 
+        tekst weg</B></DIV>
+        <LI><I>onselectstart</I> // wanneer de desbetreffende tekst wordt 
+        geselecteerd 
+        <DIV id=aaada 
+        onselectstart="aaada.innerHTML='<b>goedzo</b>'"><B>selecteer deze 
+        tekst</B></DIV><BR>Er zijn ook nog speciale events alleen voor de body 
+        tag: <BR><BR>
+        <LI><I>onload</I> // als de pagina wordt geladen 
+        <LI><I>onunload</I> // als de pagina wordt afgesloten 
+        <LI><I>onfocus</I> // als de pagina de focus krijgt, d.w.z. dat er op de 
+        pagina wordt geklikt wanneer het venster niet actief is (als je meerdere 
+        vensters in Windows open hebt staan kun je niet tegelijk met elk venster 
+        werken (je kunt dus niet tegelijk PaintBrush gebruiken en Word 
+        gebruiken, als je bijvoorbeeld Word gebruikt en daarna op Painbrush 
+        klikt (die al geopend was op de achtergrond) dan krijgt paintbrush de 
+        <I>focus</I>)) hopenlijk is het duidelijk. 
+        <LI><I>onblur</I> // als de pagina de focus niet meer bezit (dus als er 
+        niet meer gewerkt wordt binnen de pagina). </LI></UL>
+      <P></P></TD></TR>
+  <TR>
+    <TD><A name=input></A>
+      <H3>&lt;input&gt;</H3>
+      <P>De input-tag is een hele leuke tag, met deze tag kun je buttons, 
+      textboxes, radioboxes, checkboxes en passwordboxes op jouw pagina zetten: 
+      <BR><BR><INPUT type=button value=button><BR><INPUT 
+      value=textbox><BR><INPUT type=radio>Radiobox<BR><INPUT 
+      type=checkbox>Checkbox<BR><INPUT type=password 
+      value=passwordbox>Password<BR><BR><BR><I>&lt;input type="" size="" 
+      value="" title="" checked event&gt;</I> <BR>Dit hierboven is een input-tag 
+      met de meest gebruikte subdefinities: 
+      <UL>
+        <LI><I>type</I> // type geeft aan wat voor soort het moet zijn, waarden: 
+        button, text, radio, checkbox, password. 
+        <LI><I>size</I> // geeft de grootte weer 
+        <LI><I>value</I> // geeft de waarde van de input weer (de tekst in de 
+        button is gewoon de value, zo ook bij de text bij de textbox, en bij 
+        password, maar bij radiobox en checkbox zie je niks visueels als je 
+        value gebruikt.) 
+        <LI><I>title</I> // tooltip (ik hoop dat je deze nog wel kent) 
+        <LI><I>checked</I> // checked staat altijd opzich (dus zonder ="") en 
+        kan alleen gebruikt worden bij radio en checkbox 
+        <LI><I>event</I> // met event bedoel ik gewoon alle events (dus 
+        onmousemove onclick enzo) </LI></UL><BR>Met de input Tag kun je nu extra 
+      leuke dingen doen, bv: <BR><BR><I>&lt;input type=button id=X 
+      onclick="alert('hallo')" onmousemove="X.value='ja hier'" 
+      onmouseout="X.value='Klik hier!'" value="klik hier"&gt; </I><BR><BR>Dit 
+      hierboven komt er zo uit te zien: <BR><BR><INPUT id=X onclick="alert('hallo')" onmousemove="X.value='ja hier'" onmouseout="X.value='Klik hier!'" type=button value="klik hier"> 
+      <BR>
+      <P></P></TD></TR>
+  <TR>
+    <TD><A name=div></A>
+      <H3>&lt;div&gt;</H3>
+      <P>Met de div-tag kun je (in Internet Explorer 4 of hoger) iets heel 
+      speciaals doen, namelijk gebruik maken van de <I>innerHTML</I>, bv: 
+      <I><BR><BR>&lt;div id=TEL&gt;De div tag&lt;/div&gt;<BR><BR>&lt;script 
+      language=JavaScript&gt; var i=1<BR>var ja=1<BR>function 
+      Tel(){<BR><BR>if(ja==1){<BR>i++<BR>if(i==10) ja=0;<BR>} else 
+      {<BR>i--<BR>if(i==1) ja=1;<BR>}<BR>&lt;/script&gt; <BR><BR>TEL.innerHTML = 
+      "&lt;b&gt;"+i+"&lt;/b&gt;"<BR>setTimeout ("kleur()", 500)<BR>}<BR><BR>
+      <SCRIPT language=JavaScript>
+var i=1
+var ja=1
+
+function Tel(){
+
+if(ja==1){
+i++
+if(i==10) ja=0;
+} else {
+i--
+if(i==1) ja=1;
+}
+
+TEL.innerHTML = "<b>"+i+"</b>"
+setTimeout ("Tel()", 500)
+}
+</SCRIPT>
+      </I>Als we dit hierboven uitvoeren gebeurt er dit: <BR><INPUT onclick=Tel() type=button value="start Tel()"><BR>
+      <DIV id=TEL>de div tag</DIV><BR><BR>De functie van hierboven kunnen we 
+      iets aanpassen om een veel mooier effect te krijgen: <BR><I>&lt;div 
+      id="Deze"&gt;div tag&lt;/div&gt; <BR><BR>&lt;script 
+      language=JavaScript&gt;<BR>var i=1<BR>var ja=1<BR>var color = new Array 
+      ("111100", "222200", "333300", "444400", "565600", "686800", "808000", 
+      "909000", "AAAA00", "DDDD00")<BR>var tekst = "Hallo 
+      allemaal"<BR><BR>function Kleur(){<BR><BR>if(ja==1){<BR>i++<BR>if(i==10) 
+      ja=0;<BR>} else {<BR>i--<BR>if(i==1) ja=1;<BR>}<BR><BR>Deze.innerHTML = 
+      "&lt;b&gt;&lt;font 
+      color="+color[i-1]+"&gt;"+tekst+"&lt;/font&gt;&lt;/b&gt;"<BR>setTimeout 
+      ("Kleur()", 500)<BR>}<BR>&lt;script&gt;<BR><BR>
+      <SCRIPT language=JavaScript>
+var i=1
+var ja=1
+var color = new Array ("111100","222200","333300","444400","565600","686800","808000","909000","AAAA00","DDDD00")
+var tekst = "Hallo allemaal"
+
+
+function Kleur(){
+
+if(ja==1){
+i++
+if(i==10) ja=0;
+} else {
+i--
+if(i==1) ja=1;
+}
+
+Deze.innerHTML = "<b><font color="+color[i-1]+">"+tekst+"</font></b>"
+setTimeout ("Kleur()", 500)
+}
+</SCRIPT>
+      </I>Als we de functie <I>Kleur()</I> nu aanroepen gebeurt er <INPUT onclick=Kleur() type=button value=dit><BR>
+      <DIV id=Deze>div tag</DIV><BR><BR>Zo zie je hoe gemakkelijk de div-tag 
+      is.<BR><BR>NB, de innerHTML is onderdeel van DHTML (Dynamic HTML), de 
+      innerHTML kan bij veel meer tags gebruikt worden maar bij sommige doet hij 
+      het niet, daarom kun je beter de div-tag gebruiken (de div-tag wordt 
+      oorspronkelijk gebruikt om een paragraaf aan te geven) <B>De innerHTML 
+      werkt alleen bij Internet Explorer 4 of hoger!</B>. 
+      <P></P></TD></TR>
+  <TR>
+    <TD><A name=slot></A>
+      <H3>Tot Slot</H3>
+      <P>Hopenlijk is JavaScipt nu iets duidelijker voor jouw geworden, je kunt 
+      mij altijd iets vragen (zie contact) over JavaScript. <BR><BR>NB, als je 
+      een fout vindt in deze pagina mail het me even. (dan kan ik die fout 
+      verbeteren) <BR></P></TD></TR></TBODY></TABLE><BR>
+<H2>JouwWebpagina<FONT color=red>.com</FONT></H2><BR></CENTER>
+<CENTER>
+<SCRIPT language=JavaScript type=text/javascript>
+<!--
+d=document;
+d.write("<img src=\"http://nl.nedstatbasic.net");
+d.write("/cgi-bin/referstat.gif?");
+d.write("name=JavaScriptCursus&refer=");
+d.write(escape(top.document.referrer));
+d.write("\" border=0 width=0 height=0 align=\"right\">");
+// -->
+</SCRIPT>
+<!-- Start of NedStat Basic code --><A 
+href="http://nl.nedstatbasic.net/cgi-bin/viewstat?name=JavaScriptCursus"><IMG 
+alt="Statestieken voor JavaScript Cursus" border=0 height=12 
+src="javacursus_bestanden/nedstat.gif" style="FILTER: alpha(style=3)" width=12 
+nosave></A> </CENTER></BODY></HTML>

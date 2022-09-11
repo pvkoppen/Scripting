@@ -1,0 +1,497 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0070)http://support.microsoft.com/search/preview.aspx?scid=kb;en-us;Q187942 -->
+<HTML><HEAD><TITLE>PRB: Catastrophic Error Occurs Referencing ADO Recordset</TITLE><!-- (c) 2001, Microsoft Corporation. All Rights Reserved --><!-- ASM: GSS, Version=3.1.5.2, Culture=neutral, PublicKeyToken=null FW: 1.0.3705.0 --><!-- REGC: ISO-8859-1 DEFRC: iso-8859-1 RESG: 6/20/2002 2:56:22 AM RESX: 6/20/2002 2:59:22 AM -->
+<META 
+content="Microsoft, product, support, software, hardware, FAQ, FAQs, KB, Knowledge, Base, search, downloads, chat, help, training, phone, troubleshooters, newsgroups" 
+name=Keywords>
+<META 
+content="Microsoft Global Product Support Site, featuring access to a searchable Knowledgebase, Software and Hardware FAQs (Frequently Asked Questions), Online Training, Webcasts, Downloads, HTML Newsgroup views, Telephone Support Information, Online Support Requests and Personalization, Online Assistance, Remote Administration, Hot Issues, Support Center" 
+name=Description>
+<SCRIPT 
+language=Javascript>var g_gssCookieDomain = "support.microsoft.com";
+</SCRIPT>
+
+<SCRIPT language=Javascript 
+src="Error Referencing ADO Recordset_bestanden/gssmethods.js"></SCRIPT>
+
+<SCRIPT event=onLoad() for=window>setcookieval("Params", "SD=GN");</SCRIPT>
+<LINK href="Error Referencing ADO Recordset_bestanden/style-msie4.css" 
+rel=stylesheet type=text/css></LINK>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<META content="MSHTML 5.00.3315.2870" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE border=0 cellPadding=0 cellSpacing=0 height="100%" width="100%">
+  <TBODY>
+  <TR>
+    <TD height=60>
+      <DIV id=tbspacer style="DISPLAY: none"><IMG height=60 
+      src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" width=1></DIV>
+      <DIV id=tbdownlevel>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD bgColor=#003399 rowSpan=2><A 
+            href="http://support.microsoft.com/default.aspx" target=_top><IMG 
+            alt="Microsoft Home" border=0 height=60 hspace=0 
+            src="Error Referencing ADO Recordset_bestanden/banner.gif" 
+            width=300></A></TD>
+          <TD align=right bgColor=#003399 height=20 vAlign=top width="100%">
+            <TABLE border=0 cellPadding=0 cellSpacing=0>
+              <TBODY>
+              <TR>
+                <TD><IMG alt="" border=0 height=20 
+                  src="Error Referencing ADO Recordset_bestanden/curve_003399.gif" 
+                  width=18></TD>
+                <TD bgColor=#000000 height=20 vAlign=center><FONT 
+                  color=#ffffff face="Verdana, Arial" size=1>&nbsp;&nbsp;<A 
+                  class=bartext 
+                  href="http://support.microsoft.com/isapi/gomscom.asp?target=/catalog/default.asp?subid=22" 
+                  target=_top><FONT color=#ffffff> All 
+                  Products</FONT></A>&nbsp;&nbsp; |&nbsp;&nbsp;<A class=bartext 
+                  href="http://www.microsoft.com/support" target=_top><FONT 
+                  color=#ffffff> Support</FONT></A>&nbsp;&nbsp; |&nbsp;&nbsp;<A 
+                  class=bartext 
+                  href="http://support.microsoft.com/isapi/gosearch.asp?target=/us/default.asp" 
+                  target=_top><FONT color=#ffffff> Search</FONT></A>&nbsp;&nbsp; 
+                  |&nbsp;&nbsp;<A class=bartext 
+                  href="http://support.microsoft.com/isapi/gomscom.asp?target=/" 
+                  target=_top><FONT color=#ffffff> Microsoft.com 
+                  Guide</FONT></A>&nbsp;&nbsp; </FONT></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD align=right bgColor=#3366cc height=40><A 
+            href="http://www.microsoft.com/"><IMG alt="Microsoft.com Home Page" 
+            border=0 hspace=0 
+            src="Error Referencing ADO Recordset_bestanden/mslogo_3366CC.gif"></A></TD></TR></TBODY></TABLE></DIV>
+    <TD></TD>
+  <TR>
+    <TD>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=bannerborder-top><IMG height=1 
+            src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+          width=1></TD>
+          <TD class=bannerborder-top><IMG height=1 
+            src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+          width=1></TD></TR>
+        <TR>
+          <TD class=barblack>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 class=funcmenutbl 
+            height=18>
+              <TBODY>
+              <TR>
+                <TD class=buttonleft noWrap 
+                onclick="top.location.href='/default.aspx'" 
+                onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' 
+                onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";'><A 
+                  class=bartext href="http://support.microsoft.com/default.aspx" 
+                  title="Return to support home page">&nbsp;&nbsp;Home&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=buttonleft noWrap 
+                onclick="top.location.href='/default.aspx?scid=fh;EN-US;kbinfo'" 
+                onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' 
+                onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";'><A 
+                  class=bartext 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;kbinfo" 
+                  title="Search the Knowledge Base">&nbsp;&nbsp;Search&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=buttonleft noWrap 
+                onclick="top.location.href='/default.aspx?scid=/faqs/default.aspx'" 
+                onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' 
+                onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";'><A 
+                  class=bartext 
+                  href="http://support.microsoft.com/default.aspx?scid=/faqs/default.aspx" 
+                  title="View frequently asked questions">&nbsp;&nbsp;FAQs&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=buttonleft noWrap 
+                onclick="top.location.href='/default.aspx?scid=fh;EN-US;downloadover'" 
+                onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' 
+                onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";'><A 
+                  class=bartext 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;downloadover" 
+                  title="Software updates and service packs">&nbsp;&nbsp;Downloads&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=buttonleft noWrap 
+                onclick="top.location.href='/newsgroups/default.aspx'" 
+                onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' 
+                onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";'><A 
+                  class=bartext 
+                  href="http://support.microsoft.com/newsgroups/default.aspx" 
+                  title="Community support forums">&nbsp;&nbsp;Newsgroups&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=buttonleft noWrap 
+                onclick="top.location.href='/default.aspx?scid=http://customerservice.support.microsoft.com'" 
+                onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' 
+                onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";'><A 
+                  class=bartext 
+                  href="http://support.microsoft.com/default.aspx?scid=http://customerservice.support.microsoft.com" 
+                  title="Customer Service Center">&nbsp;&nbsp;Customer 
+                  Service&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=buttonleft noWrap 
+                onclick="top.location.href='/default.aspx?scid=fh;en-us;cntactms'" 
+                onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' 
+                onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";'><A 
+                  class=bartext 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;en-us;cntactms" 
+                  title="Provide feedback to Microsoft">&nbsp;&nbsp;Contact 
+                  Us&nbsp;&nbsp;</A></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+                  width=1></TD></TR></TBODY></TABLE></TD>
+          <TD align=right class=barblack>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 class=funcmenutbl>
+              <TBODY>
+              <TR>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=buttonright 
+                onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' 
+                onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";'>
+                  <TABLE border=0 cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD onclick="">&nbsp;&nbsp;</TD>
+                      <TD><A class=buttontext 
+                        href="mailto:?body=http://support.microsoft.com/search/preview.aspx?scid=kb;en-us;Q187942" 
+                        onclick="" 
+                        title="Send the contents of this page to a Friend">Send&nbsp;<IMG 
+                        align=absMiddle border=0 hspace=0 
+                        src="Error Referencing ADO Recordset_bestanden/send_icon.gif"></A>&nbsp;&nbsp;</TD></TR></TBODY></TABLE></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=buttonright 
+                onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' 
+                onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";'>
+                  <TABLE border=0 cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD 
+                      onclick="if(document.getElementById) PrintContents(); else window.print(); event.cancelBubble=true; return false;">&nbsp;&nbsp;</TD>
+                      <TD><A class=buttontext 
+                        href="Error Referencing ADO Recordset_bestanden/search" 
+                        onclick="if(document.getElementById) PrintContents(); else window.print(); event.cancelBubble=true; return false;" 
+                        title="Print the contents of this page">Print&nbsp;<IMG 
+                        align=absMiddle border=0 hspace=0 
+                        src="Error Referencing ADO Recordset_bestanden/print_icon.gif"></A>&nbsp;&nbsp;</TD></TR></TBODY></TABLE></TD>
+                <TD class=bannerborder width=1><IMG height=1 
+                  src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+                  width=1></TD>
+                <TD class=buttonright 
+                onmouseout='this.style.backgroundColor = "";this.style.cursor="default";' 
+                onmouseover='this.style.backgroundColor = "#3366CC";this.style.cursor="hand";'>
+                  <TABLE border=0 cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD onclick="">&nbsp;&nbsp;</TD>
+                      <TD><A class=buttontext 
+                        href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;gsshelp" 
+                        onclick="" 
+                        title="View information on how to use this site effectively">Help&nbsp;<IMG 
+                        align=absMiddle border=0 hspace=0 
+                        src="Error Referencing ADO Recordset_bestanden/help_icon.gif"></A>&nbsp;&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><IFRAME 
+            height=10 id=printframe name=printframe 
+            src="Error Referencing ADO Recordset_bestanden/Blank.htm" 
+            style="DISPLAY: none; LEFT: 0px; POSITION: absolute; TOP: 0px; VISIBILITY: hidden" 
+            width=10></IFRAME></TD></TR>
+        <TR>
+          <TD class=bannerborder><IMG height=1 
+            src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+          width=1></TD>
+          <TD class=bannerborder><IMG height=1 
+            src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+          width=1></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD align=middle height="100%" vAlign=top width="100%"><NOLEFTNAV 
+      xmlns:user="urn:user-scripts" xmlns:msxsl="urn:schemas-microsoft-com:xslt" 
+      xmlns:kbns="urn:schemas-microsoft-com/PSS/KBXML">
+      <TABLE border=0 cellPadding=5 cellSpacing=0 width="95%">
+        <TBODY>
+        <TR>
+          <TD vAlign=top><FONT face="Verdana, Arial, Helvetica" size=2><!-- - - - - - - - - - - PAGE TEXT BEGINS BELOW HERE - - - - - - - - - - --><BR>
+            <H3>PRB: Catastrophic Error Occurs Referencing ADO Recordset 
+            <SPAN>(Q187942)</SPAN></H3>
+            <HR>
+            The information in this article applies to:<BR><BR>
+            <UL style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+              <LI style="PADDING-BOTTOM: 2px; PADDING-TOP: 0px">ActiveX Data 
+              Objects (ADO), versions 2.0 , 2.1 SP2 , 2.5 , 2.6 , 2.7 </LI></UL>
+            <UL style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+              <LI style="PADDING-BOTTOM: 2px; PADDING-TOP: 0px">Microsoft OLE DB 
+              Provider for SQL Server, version 7.01 </LI></UL><BR>
+            <HR>
+            <BR>
+            <H3>SYMPTOMS</H3>
+            <P>Any operation following a rollback or a commit transaction on a 
+            recordset opened as a serverside cursor, triggers one the following 
+            errors, depending on the provider and operating system: 
+            <BLOCKQUOTE>
+              <DIV class=kberrormessage>Run-time error '-2147418113' 
+              Catastrophic failure </DIV></BLOCKQUOTE>
+            <BLOCKQUOTE>-or- </BLOCKQUOTE>
+            <BLOCKQUOTE>
+              <DIV class=kberrormessage>Run-time error '-2147418113' Unexpected 
+              failure </DIV></BLOCKQUOTE>Using ADO 2.6 and later, the error is 
+            Run-time error '-2147418113(8000ffff)': ITransaction::Commit or 
+            ITransaction::Abort was called, and the object is in a zombie state. 
+
+            <P></P><BR>
+            <H3>CAUSE</H3>
+            <P>Preserving cursors, or in other words, not closing them, is not 
+            the SQL Server or ANSI SQL default. The OLE DB specification does 
+            not specify a default value for these properties because, this 
+            behavior can change from provider to provider. <BR><BR>The Cursor 
+            Engine, however, does preserve cursors. </P><BR>
+            <H3>RESOLUTION</H3>
+            <P>Use <B>adUseClient </B>or set the following RecordSet properties 
+            to preserve the cursor: 
+            <BLOCKQUOTE><PRE class=kbpre>rs.Properties("Preserve On Commit") = True
+rs.Properties("Preserve On Abort") = True</PRE></BLOCKQUOTE>There 
+            are three requirements to have these two properties, or any other 
+            preset properties, take effect on a recordset. The three 
+            requirements are: <BR><BR>
+            <UL>
+              <LI>The properties need to be set prior to opening the recordset. 
+              <BR><BR>
+              <LI>Use the Open method to open the recordset. The Connection and 
+              Command Execute method opens a default Recordset, with all 
+              properties preset. <BR><BR>
+              <LI>The OLE DB provider must support preserving cursors. The OLE 
+              DB Provider for SQL Server supports preserving cursors on Commit 
+              and Abort. <BR><BR></LI></UL>If you use <B>adOpenForwardOnly </B>as 
+            a cursor type and <B>adLockReadOnly </B>as a lock type, setting 
+            "Preserve on Commit" to True will not have any effect. You will need 
+            to call <B>Recordset.Requery() </B>after you commit the transaction 
+            if any further work needs to be done on the Recordset. 
+            <P></P><BR>
+            <H3>STATUS</H3>
+            <P>This behavior is by design. </P><BR>
+            <H3>MORE INFORMATION</H3>
+            <P>
+            <H3>Steps to Reproduce Behavior </H3>
+            <OL>
+              <LI>Start Visual Basic. <BR><BR>
+              <LI>Add a reference to the Microsoft ActiveX Data Objects Library. 
+              <BR><BR>
+              <LI>Add the following code to the default form in the project: 
+              <BR><BR><PRE class=kbcode>   Dim cn As New ADODB.Connection
+   Dim rst As New ADODB.Recordset
+
+   cn.Open "provider=SQLOLEDB;data source=&lt;server&gt;;initial " _
+   &amp; "catalog=pubs;user id=&lt;user id&gt;;password=&lt;password&gt;"
+   ' error handling for non-existent Test1 table
+   On Error Resume Next
+   cn.Execute "drop table Test1"
+   On Error GoTo 0
+   cn.Execute "create table Test1(id int primary key, num int)"
+
+   For i = 1 To 10
+      cn.Execute "insert into Test1 values(" &amp; i &amp; ", " &amp; i &amp; ")"
+   Next i
+
+   Set rst.ActiveConnection = cn
+   'Set these properties to True to prevent error.
+   'rst.Properties("Preserve On Commit") = True
+   'rst.Properties("Preserve On Abort") = True
+
+   cn.BeginTrans
+   rst.Open "select * from Test1", , adOpenStatic, adLockOptimistic
+   Debug.Print rst(0)
+   cn.RollbackTrans
+   ' If the preserve properties are not set, the following fails
+   Debug.Print rst(0)</PRE></LI></OL>
+            <P></P>
+            <HR>
+
+            <TABLE border=0 cellPadding=3 cellSpacing=1 width="95%">
+              <TBODY>
+              <TR>
+                <TD align=right vAlign=top width="10%" N0WRAP="1"><FONT size=1 
+                  NAME="Verdana, Arial, Helvetica"><B>Published</B></FONT></TD>
+                <TD><FONT size=1 NAME="Verdana, Arial, Helvetica">Jun 22 1998 
+                  7:51AM </FONT></TD>
+                <TD align=right noWrap vAlign=top width="10%"><FONT size=1 
+                  NAME="Verdana, Arial, Helvetica"><B>Issue Type</B></FONT></TD>
+                <TD><FONT size=1 NAME="Verdana, Arial, Helvetica">kbprb 
+                </FONT></TD></TR>
+              <TR>
+                <TD align=right noWrap vAlign=top width="10%"><FONT size=1 
+                  NAME="Verdana, Arial, Helvetica"><B>Last Modifed</B></FONT></TD>
+                <TD><FONT size=1 NAME="Verdana, Arial, Helvetica">Nov 26 2001 
+                  11:56PM </FONT></TD>
+                <TD align=right noWrap vAlign=top width="10%"><FONT size=1 
+                  NAME="Verdana, Arial, Helvetica"><B>Additional Query 
+                  Words</B></FONT></TD>
+                <TD><FONT size=1 
+NAME="Verdana, Arial, Helvetica"></FONT></TD></TR>
+              <TR>
+                <TD align=right vAlign=top width="10%" HOWRAP="1"><FONT size=1 
+                  NAME="Verdana, Arial, Helvetica"><B>Keywords</B></FONT></TD>
+                <TD colSpan=3><FONT size=1 
+                  NAME="Verdana, Arial, Helvetica">kbADO200 kbDatabase kbOLEDB 
+                  kbProvider kbSQLServ kbVBp kbGrpDSVBDB kbGrpDSMDAC kbDSupport 
+                  kbADO210sp2 kbADO250 kbADO260 kbmdac270 kbado270 
+              </FONT></TD></TR></TBODY></TABLE>
+            <HR>
+
+            <H3>COMMENTS?</H3>
+            <CENTER>
+            <FORM action=/support/contentvoting/voting_idc.asp method=post 
+            name=VOTED onsubmit="return votingsubmit();">
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width="95%">
+              <TBODY>
+              <TR>
+                <TD colSpan=2 vAlign=top><INPUT name=KBID type=hidden 
+                  value=187942></INPUT><INPUT name=PROD type=hidden 
+                  value=adobj></INPUT><INPUT name=KBAREA type=hidden 
+                  value="Support; KB;adobj"></INPUT><INPUT name=SRV type=hidden 
+                  value=support.microsoft.com></INPUT><INPUT name=QS type=hidden 
+                  value=scid=kb;en-us;Q187942></INPUT><INPUT name=URL 
+                  type=hidden value=/default.aspx></INPUT><INPUT name=VOTE 
+                  type=hidden value=1></INPUT>
+                  <P>If you would like to briefly comment on this article, you 
+                  can enter your remarks in the space below (up to 255 
+                  characters).</P><TEXTAREA cols=40 id=COMMENTS name=COMMENTS rows=5 style="FONT-SIZE: x-small; FONT-STYLE: normal; FONT-VARIANT: normal; FONT-WEIGHT: normal; LINE-HEIGHT: normal; WIDTH: 90%" wrap=virtual></TEXTAREA>
+                  <SCRIPT language=JavaScript>
+				function votingsubmit()
+				{
+					if(document.VOTED.COMMENTS.value.length == 0) {
+						alert("Please enter your remarks in the space provided.");
+						return false;
+					}
+					if(document.VOTED.COMMENTS.value.length > 255){
+						alert("Your comment has exceeded the 255 character limit.\nPlease reduce the number of characters in your comment.");
+						document.forms[0].COMMENTS.focus();
+						return false;}
+					else{
+					VOTED.submit();
+					return true;}
+				}
+				</SCRIPT>
+                  <BR></TD></TR>
+              <TR>
+                <TD align=right noWrap><A 
+                  href="http://support.microsoft.com/search/preview.aspx?scid=kb;en-us;Q187942#" 
+                  onclick="votingsubmit();return false;"><B>Submit 
+                  Comments</B></A></TD>
+                <TD align=left width="10%"><INPUT align=absMiddle alt=Submit 
+                  border=0 hspace=12 
+                  src="Error Referencing ADO Recordset_bestanden/goright.gif" 
+                  type=image></TD></TR></TBODY></TABLE></FORM></CENTER><!-- - - - - - - - - - - - PAGE TEXT ENDS ABOVE HERE - - - - - - - - - - - --></FONT><BR></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD bgColor=#003399 colSpan=3 vAlign=top>
+      <TABLE border=0 cellPadding=6 cellSpacing=0 height=40 width="100%">
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 class=ftrmenutbl>
+              <TBODY>
+              <TR>
+                <TD><A class=buttontext 
+                  href="mailto:?body=http://support.microsoft.com/search/preview.aspx?scid=kb;en-us;Q187942" 
+                  onclick="" target=_top 
+                  title="Send the contents of this page to a Friend">Send&nbsp;<IMG 
+                  align=absMiddle border=0 hspace=0 
+                  src="Error Referencing ADO Recordset_bestanden/send_icon.gif"><IMG 
+                  border=0 height=1 
+                  src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+                  width=4></A></TD>
+                <TD vAlign=top><FONT class=buttontext>|</FONT>&nbsp;</TD>
+                <TD><A class=buttontext 
+                  href="Error Referencing ADO Recordset_bestanden/search" 
+                  onclick="if(document.getElementById) PrintContents(); else window.print(); event.cancelBubble=true; return false;" 
+                  target=_top 
+                  title="Print the contents of this page">Print&nbsp;<IMG 
+                  align=absMiddle border=0 hspace=0 
+                  src="Error Referencing ADO Recordset_bestanden/print_icon.gif"><IMG 
+                  border=0 height=1 
+                  src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+                  width=4></A></TD>
+                <TD vAlign=top><FONT class=buttontext>|</FONT>&nbsp;</TD>
+                <TD><A class=buttontext 
+                  href="http://support.microsoft.com/default.aspx?scid=fh;EN-US;gsshelp" 
+                  onclick="" target=_top 
+                  title="View information on how to use this site effectively">Help&nbsp;<IMG 
+                  align=absMiddle border=0 hspace=0 
+                  src="Error Referencing ADO Recordset_bestanden/help_icon.gif"><IMG 
+                  border=0 height=1 
+                  src="Error Referencing ADO Recordset_bestanden/1ptrans.gif" 
+                  width=4></A></TD>
+              <TR></TR></TBODY></TABLE><FONT class=cpyrigthtxt>&nbsp;© 2002 
+            Microsoft Corporation. All rights reserved.&nbsp;&nbsp;<A 
+            class=cpyrigthtxt 
+            href="http://support.microsoft.com/default.aspx?scid=/support/misc/cpyright.asp" 
+            target=_top>Terms of use</A>&nbsp;&nbsp;<A class=cpyrigthtxt 
+            href="http://support.microsoft.com/default.aspx?scid=/w3c/privacy.htm" 
+            target=_top>Privacy statement</A>&nbsp;&nbsp;<A class=cpyrigthtxt 
+            href="http://support.microsoft.com/default.aspx?scid=%2fisapi%2fgomscom.asp%3ftarget%3d%2fenable%2fdefault.htm" 
+            target=_top>Accessibility</A>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<SCRIPT language=javascript 
+src="Error Referencing ADO Recordset_bestanden/toolbar.js"></SCRIPT>
+
+<SCRIPT language=javascript 
+src="Error Referencing ADO Recordset_bestanden/global.js"></SCRIPT>
+
+<SCRIPT language=javascript>
+<!--
+var ToolBar_Supported = ToolBar_Supported;
+if(ToolBar_Supported != null && ToolBar_Supported == true){
+	Frame_Supported = false;
+	setToolbarBGColor("#3366CC");
+	setICPBanner("/library/images/support/EN-US/banner.gif","/default.aspx","Return to Support home page");
+	setMSBanner("mslogo_3366CC.gif","/isapi/gomscom.asp?target=/","Microsoft.com Home Page")
+}
+//--></SCRIPT>
+
+<DIV id=TBContainer 
+style="HEIGHT: 60px; LEFT: 0px; POSITION: absolute; TOP: 0px; WIDTH: 100%">
+<SCRIPT language=JavaScript>
+<!--
+var ToolBar_Supported = ToolBar_Supported;	
+if (ToolBar_Supported != null && ToolBar_Supported == true)
+{
+	HTMLStr = HTMLStr.replace(/\/library\/toolbar\/images\/curve.gif/g, "/library/images/support/curve_003399.gif")
+	drawToolbar();
+	if(document.getElementById) {
+		var el = document.getElementById('tbdownlevel');
+		if(el != null && typeof(el) != "undefined") {
+			el.style.display = 'none';
+			document.getElementById('tbspacer').style.display = '';
+		}
+	}
+	else if(document.all){
+		document.all.tbspacer.style.display = '';
+		document.all.tbdownlevel.style.display = 'none';
+	}
+}
+//-->
+</SCRIPT>
+</DIV>
+<SCRIPT language=JavaScript>
+<!--
+function surveypop(){
+gss_handlesurvey("/survey/survey.asp?ID=sw;en;kb&LN=EN-US&SD=GN&KB=Q187942&purl=kb;en-us;Q187942","3","90","directories=0,height=480,location=1,resizable=1,scrollbars=1,status=0,toolbar=0,width=640");
+}
+window.onunload = surveypop;
+// -->
+</SCRIPT>
+<!-- SurveyTrigger "kbsurvey" evaluated FeatureName "KB" --><IMG name=metrixgif 
+src="Error Referencing ADO Recordset_bestanden/search" style="DISPLAY: none">
+<SCRIPT language=Javascript>var sUrl = "http://c.microsoft.com/trans_pixel.asp?TYPE=SSPV&SOURCE=SUPPORT&URI=/gn/EN-US/kb_en-us_Q187942&R=";</SCRIPT>
+
+<SCRIPT event=onLoad() for=window>gss_fixMetrixUrl();</SCRIPT>
+ </BODY></HTML>

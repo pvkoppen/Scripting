@@ -1,0 +1,4 @@
+TN_Prime Health Group - Avenue Medical.pfx,PF9232,\\AVESERVER\MT32\BestPractice\
+TN_Te Aroha Medcare Ltd.pfx,YP3164,\\TAMMT01.TOL.local\MT32$\bestpractice\
+TN_Southcare Hawera Medical.pfx,QV8411,\\SCTS01.SCMT.local\MT32\BestPractice\
+TN_Ruanui Health Centre.pfx,AQ6616,\\TS01.ruanui.local\MT32\BestPractice\

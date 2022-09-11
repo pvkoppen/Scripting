@@ -1,0 +1,1829 @@
+
+<!--BEGIN HEADER-->
+<html>
+<head>
+ <title>Microsoft ASP.NET QuickStarts Tutorial</title>
+ <link rel="stylesheet" href="/quickstart/include/qsstyle.css">
+</head>
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" >
+<table class="outer" cellpadding=0 cellspacing=0>
+<tr>
+<span>
+     <td class="toc" valign="top" width="210">
+       
+<table>
+  <tr>
+    <td nowrap style="padding-right:15">
+      <div class="toc" style="font-size:8pt;color:darkred;">
+
+        <div style="padding:0,0,4,0"><b>Getting Started</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/default.aspx">Introduction</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/whatisaspx.aspx">What is ASP.NET?</a><br>
+        &nbsp; <a class="outer" target="_top" href="/QuickStart/howto/default.aspx?url=/quickstart/howto/doc/languages.aspx">Language Support</a><br><p>
+
+        <div style="padding:0,0,4,0"><b>ASP.NET Web Forms</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/webformsintro.aspx">Introducing Web Forms</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/webserverctrls.aspx">Working with Server Controls</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/webtemplates.aspx">Applying Styles to Controls</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/webvalidation.aspx">Server Control Form Validation</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/webpagelets.aspx">Web Forms User Controls</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/webdatabinding.aspx">Data Binding Server Controls</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/webdataaccess.aspx">Server-Side Data Access</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/webdatalist.aspx">Data Access and Customization</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/businessobjs.aspx">Working with Business Objects</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/webctrlauthoring.aspx">Authoring Custom Controls</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/webcontrolsref.aspx">Web Forms Controls Reference</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/webformssyntaxref.aspx">Web Forms Syntax Reference</a><p>
+
+        <div style="padding:0,0,4,0"><b>ASP.NET Web Services</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/webservicesintro.aspx">Introducing Web Services</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/writingservices.aspx">Writing a Simple Web Service</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/webservicetypes.aspx">Web Service Type Marshalling</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/servicesanddata.aspx">Using Data in Web Services</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/servicesandobjs.aspx">Using Objects and Intrinsics</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/wsbehavior.aspx">The WebService Behavior</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/htmlscraping.aspx">HTML Pattern Matching</a><p>
+
+        <div style="padding:0,0,4,0"><b>ASP.NET Web Applications</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/applications.aspx">Application Overview</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/globalasax.aspx">Using the Global.asax File</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/stateoverview.aspx">Managing Application State</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/httphandlers.aspx">HttpHandlers and Factories</a><p>
+
+        <div style="padding:0,0,4,0"><b>Cache Services</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/cachingoverview.aspx">Caching Overview</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/outputcaching.aspx">Page Output Caching</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/fragmentcaching.aspx">Page Fragment Caching</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/datacaching.aspx">Page Data Caching</a><p>
+
+        <div style="padding:0,0,4,0"><b>Configuration</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/configoverview.aspx">Configuration Overview</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/configformat.aspx">Configuration File Format</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/configretrieve.aspx">Retrieving Configuration</a><p>
+
+        <div style="padding:0,0,4,0"><b>Deployment</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/deployment.aspx">Deploying Applications</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/procmodel.aspx">Using the Process Model</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/handlingerrs.aspx">Handling Errors</a><p>
+
+        <div style="padding:0,0,4,0"><b>Security</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/securityoverview.aspx">Security Overview</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/authandauth.aspx">Authentication & Authorization</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/windowsauth.aspx">Windows-based Authentication</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/formsauth.aspx">Forms-based Authentication</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/authorization.aspx">Authorizing Users and Roles</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/impersonation.aspx">User Account Impersonation</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/secureservices.aspx">Security and WebServices</a><p>
+
+        <div style="padding:0,0,4,0"><b>Localization</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/internationalization.aspx">Internationalization Overview</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/cultureencoding.aspx">Setting Culture and Encoding</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/localizingapps.aspx">Localizing ASP.NET Applications</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/resourcefiles.aspx">Working with Resource Files</a><p>
+
+        <div style="padding:0,0,4,0"><b>Tracing</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/tracingoverview.aspx">Tracing Overview</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/tracelogpage.aspx">Trace Logging to Page Output</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/tracelogapp.aspx">Application-level Trace Logging</a><p>
+
+        <div style="padding:0,0,4,0"><b>Debugging</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/debugcomsdk.aspx">The SDK Debugger</a><p>
+
+        <div style="padding:0,0,4,0"><b>Performance</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/perfoverview.aspx">Performance Overview</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/perftuning.aspx">Performance Tuning Tips</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/perfmeasure.aspx">Measuring Performance</a><p>
+
+        <div style="padding:0,0,4,0"><b>ASP to ASP.NET Migration</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/migrationoverview.aspx">Migration Overview</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/syntaxandsemantics.aspx">Syntax and Semantics</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/languagecompat.aspx">Language Compatibility</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/cominterop.aspx">COM Interoperability</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/mtstransactions.aspx">Transactions</a><p>
+
+        <div style="padding:0,0,4,0"><b>Sample Applications</b><br></div>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/portalapp.aspx">A Personalized Portal</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/ecommerceapp.aspx">An E-Commerce Storefront</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/classbrowser.aspx">A Class Browser Application</a><br>
+        &nbsp; <a class="outer" href="/quickstart/aspplus/doc/ibuyspy.aspx">IBuySpy.com</a><p>
+      </div>
+      <p>
+
+        &nbsp; 
+<style>
+span.GetURLButton {
+  font-weight: bold;
+  font-size: 8pt;
+  color: darkred;
+}
+</style>
+<a style="color:darkred" href="/QuickStart/aspplus/default.aspx?url=/quickstart/aspplus/doc/webdataaccess.aspx" target="_top">
+  <i>Get URL for this page</i>
+</a><p>
+
+    </td>
+  </tr>
+</table>
+     </td>
+ </span>
+<td valign="top">
+<div class="body">
+<!--END HEADER-->
+
+<h4>Server-Side Data Access</h4>
+<p>
+
+<div class="indent" style="font-family:Verdana; font-size:8pt;">
+    <b> <img align="middle" src="/quickstart/images/bullet.gif">&nbsp;&nbsp;</b><a class="toc2" href="#serverdata">Introduction to Server-Side Data</a><br>
+    <b> <img align="middle" src="/quickstart/images/bullet.gif">&nbsp;&nbsp;</b><a class="toc2" href="#adoplus">Connections, Commands, and DataSets</a><br>
+    <b> <img align="middle" src="/quickstart/images/bullet.gif">&nbsp;&nbsp;</b><a class="toc2" href="#sqldata">Accessing SQL-based Data</a><br>
+    <b> <img align="middle" src="/quickstart/images/bullet.gif">&nbsp;&nbsp;</b><a class="toc2" href="#select">Binding SQL Data to a DataGrid</a><br>
+    <b> <img align="middle" src="/quickstart/images/bullet.gif">&nbsp;&nbsp;</b><a class="toc2" href="#param">Performing a Parameterized Select</a><br>
+    <b> <img align="middle" src="/quickstart/images/bullet.gif">&nbsp;&nbsp;</b><a class="toc2" href="#insert">Inserting Data in a SQL Database</a><br>
+    <b> <img align="middle" src="/quickstart/images/bullet.gif">&nbsp;&nbsp;</b><a class="toc2" href="#update">Updating Data in a SQL Database</a><br>
+    <b> <img align="middle" src="/quickstart/images/bullet.gif">&nbsp;&nbsp;</b><a class="toc2" href="#delete">Deleting Data in a SQL Database</a><br>
+    <b> <img align="middle" src="/quickstart/images/bullet.gif">&nbsp;&nbsp;</b><a class="toc2" href="#sort">Sorting Data from a SQL Database</a><br>
+    <b> <img align="middle" src="/quickstart/images/bullet.gif">&nbsp;&nbsp;</b><a class="toc2" href="#masterdetail">Working with Master-Detail Relationships</a><br>
+    <b> <img align="middle" src="/quickstart/images/bullet.gif">&nbsp;&nbsp;</b><a class="toc2" href="#storedprocs">Writing and Using Stored Procedures</a><br>
+    <b> <img align="middle" src="/quickstart/images/bullet.gif">&nbsp;&nbsp;</b><a class="toc2" href="#xmldata">Accessing XML-based Data</a><br>
+    <b> <img align="middle" src="/quickstart/images/bullet.gif">&nbsp;&nbsp;</b><a class="toc2" href="#summary">Section Summary</a><br>
+</div>
+<p>
+<hr>
+
+<!--BEGIN SECTION-->
+<a name="serverdata">
+<span class="subhead">Introduction to Server-Side Data</span>
+
+<p>
+Data access is the heart of any real-world application, and ASP.NET provides a rich
+set of controls that are well-integrated with the managed data access APIs
+provided in the common language runtime.  This section walks through several
+iterations of a sample that uses the ASP.NET <b>DataGrid</b> control to bind to the results
+of SQL queries and XML data files.  This section assumes some familiarity with
+database fundamentals and the SQL query language.</p>
+
+<p>
+Server-side data access is unique in that Web pages are basically stateless, which
+presents some difficult challenges when trying to perform transactions such as
+inserting or updating records from a set of data retrieved from a database. As
+you'll see in this section, the <b>DataGrid</b> control can help manage these challenges,
+allowing you to concentrate more on your application logic and less on the details
+of state management and event handling.</p>
+
+<!--BEGIN SECTION-->
+<br>
+<a name="adoplus">
+<br>
+<span class="subhead">Connections, Commands, and Datasets</span>
+<p>
+The common language runtime provides a complete set of managed data access APIs for
+data-intensive application development.  These APIs help to abstract the data and
+present it in a consistent way regardless of its actual source (SQL Server,
+OLEDB, XML, and so on). There are essentially three objects you will work with most
+often: connections, commands, and datasets.</p>
+
+<ul>
+<li>A connection represents a physical connection to some data store, such
+  as SQL Server or an XML file.
+<li>A command represents a directive to retrieve from (select) or
+  manipulate (insert, update, delete) the data store.
+<li>A dataset represents the actual data an application works with. Note
+  that datasets are always disconnected from their source connection and data
+  model and can be modified independently. However, changes to a dataset can be
+  easily reconciled with the originating data model.
+</ul>
+
+<p>For a more detailed walkthrough of the managed data access solution in the common language runtime, please read the <a href="/quickstart/aspplus/doc/adoplusoverview.aspx">
+ADO.NET Overview</a> section of this tutorial.
+
+<!--BEGIN SECTION-->
+<br>
+<a name="sqldata">
+<br>
+<span class="subhead">Accessing SQL-based Data</span>
+<p>
+
+An application typically needs to perform one or more select, insert, update, or delete queries to a SQL database.  The following table shows an example of each of
+these queries.
+<p>
+
+<table class="table2" width="80%" cellpadding=3>
+<tr>
+<th width="150">
+Query
+</th>
+<th>
+Example
+</th>
+</tr>
+<tr>
+<td>
+<b>Simple Select</b>
+</td>
+<td>
+SELECT * from Employees WHERE FirstName = 'Bradley';
+</td>
+</tr>
+<tr>
+<td>
+<b>Join Select</b>
+</td>
+<td>
+SELECT * from Employees E, Managers M WHERE E.FirstName = M.FirstName;
+</td>
+</tr>
+<tr>
+<td>
+<b>Insert</b>
+</td>
+<td>
+INSERT into Employees VALUES ('123-45-6789','Bradley','Millington','Program Manager');
+</td>
+</tr>
+<tr>
+<td>
+<b>Update</b>
+</td>
+<td>
+UPDATE Employees SET Title = 'Development Lead' WHERE FirstName = 'Bradley';
+</td>
+</tr>
+<tr>
+<td>
+<b>Delete</b>
+</td>
+<td>
+DELETE from Employees WHERE Productivity < 10;
+</td>
+</tr>
+
+</table>
+<p>
+To give your page access to the classes you will need to perform SQL data access, you must import the <b>System.Data</b> and
+<b>System.Data.SqlClient</b> namespaces into your page.
+<p>
+
+<div class="code"><pre>
+&lt;%@ Import Namespace="System.Data" %&gt;
+&lt;%@ Import Namespace="System.Data.SqlClient" %&gt;
+</pre></div>
+
+<p>
+To perform a select query to a SQL database, you create a <b>SqlConnection</b> to the database passing the connection string, and then
+construct a <b>SqlDataAdapter</b> object that contains your query statement.  To populate a <b>DataSet</b> object with the results from the query,
+you call the command's <b>Fill</b> method.
+<p>
+
+<p>  <script language="JavaScript">
+    function doClick(index, numTabs, id) {
+        document.all("tab" + id, index).className = "tab";
+        for (var i=1; i < numTabs; i++) {
+            document.all("tab" + id, (index + i) % numTabs).className = "backtab";
+        }
+        document.all("code" + id, index).style.display = "";
+        for (var j=1; j < numTabs; j++) {
+          document.all("code" + id, (index + j) % numTabs).style.display = "none";
+        }
+    }
+  </script>
+
+  <style>
+    td.code {
+      padding:0,10,0,10;
+      border-style:solid;
+      border-width:1;
+      border-bottom:0;
+      border-top:0;
+      border-right:0;
+      border-color:cccccc;
+      background-color:ffffee
+    }
+    td.tab {
+      text-align:center;
+      font:8pt verdana;
+      width:15%;
+      padding:3,3,3,3;
+      border-style:solid;
+      border-width:1;
+      border-right:0;
+      border-color:black;
+      background-color:eeeeee;
+      cursor:hand
+    }
+    td.backtab {
+      text-align:center;
+      font: 8pt verdana;
+      width:15%;
+      padding:3,3,3,3;
+      border-style:solid;
+      border-width:1;
+      border-right:0;
+      border-color:black;
+      background-color:cccccc;
+      cursor:hand
+    }
+    td.space {
+      width:55%;
+      font: 8pt verdana;
+      padding:0,0,0,0;
+      border-style:solid;
+      border-bottom:0;
+      border-right:0;
+      border-width:1;
+      border-color:cccccc;
+      border-left-color:black;
+      background-color:white
+    }
+  </style>
+    <table cellpadding=0 cellspacing=0 width="95%">
+      <tr>
+        <td class="code" colspan="4">
+<pre id="code_ctl1" style="display:none">
+
+SqlConnection myConnection = new SqlConnection("server=(local)\NetSDK;database=pubs;Trusted_Connection=yes");
+SqlDataAdapter myCommand = new SqlDataAdapter("select * from Authors", myConnection);
+
+DataSet ds = new DataSet();
+myCommand.Fill(ds, "Authors");
+</pre>
+<pre id="code_ctl1" style="display:">
+
+Dim myConnection As New SqlConnection("server=(local)\NetSDK;database=pubs;Trusted_Connection=yes")
+Dim myCommand As New SqlDataAdapter("select * from Authors", myConnection)
+
+Dim ds As New DataSet()
+myCommand.Fill(ds, "Authors")
+</pre>
+<pre id="code_ctl1" style="display:none">
+
+var myConnection:SqlConnection = new SqlConnection("server=(local)\NetSDK;database=pubs;Trusted_Connection=yes");
+var myCommand:SqlDataAdapter = new SqlDataAdapter("select * from Authors", myConnection);
+
+var ds:DataSet = new DataSet();
+myCommand.Fill(ds, "Authors");
+</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="backtab" id="tab_ctl1" onclick="doClick(0, 3, '_ctl1')">
+          <b>C#</b>
+        </td>
+        <td class="tab" id="tab_ctl1" onclick="doClick(1, 3, '_ctl1')">
+          <b>VB</b>
+        </td>
+        <td class="backtab" id="tab_ctl1" onclick="doClick(2, 3, '_ctl1')">
+          <b>JScript</b>
+        </td>
+        <td class="space">&nbsp;</td>
+      </tr>
+    </table>
+
+<p>
+
+As mentioned earlier in this section, the benefit of using a dataset is that it gives you a
+disconnected view of the database.  You can operate on a dataset in your application, and then
+reconcile your changes with the actual database later.  For long-running applications this is
+often the best approach. For Web applications, you are usually performing short
+operations with each request (commonly to simply display the data). You often don't need to
+hold a <b>DataSet</b> object over a series of several requests.  For situations like these, you can use a
+<b>SqlDataReader</b>.
+<p>
+A <b>SqlDataReader</b> provides a forward-only, read-only pointer over data retrieved from a
+SQL database. 
+To use a <b>SqlDataReader</b>, you declare a <b>SqlCommand</b> instead of a <b>SqlDataAdapter</b>.
+The <b>SqlCommand</b> exposes an <b>ExecuteReader</b> method that returns a <b>SqlDataReader</b>.  
+Note also that you must explicitly open and close the <b>SqlConnection</b> when you
+use a <b>SqlCommand</b>.  After a call to <b>ExecuteReader</b>, the <b>SqlDataReader</b> can be bound to 
+an ASP.NET server control, as you'll see in the next section.
+
+
+<p>    <table cellpadding=0 cellspacing=0 width="95%">
+      <tr>
+        <td class="code" colspan="4">
+<pre id="code_ctl2" style="display:none">
+
+SqlConnection myConnection = new SqlConnection("server=(local)\NetSDK;database=pubs;Trusted_Connection=yes");
+SqlCommand myCommand = new SqlCommand("select * from Authors", myConnection);
+
+myConnection.Open();
+
+
+SqlDataReader dr = myCommand.ExecuteReader();
+
+...
+
+myConnection.Close();
+</pre>
+<pre id="code_ctl2" style="display:">
+
+Dim myConnection As SqlConnection = New SqlConnection("server=(local)\NetSDK;database=pubs;Trusted_Connection=yes")
+Dim myCommand As SqlCommand = New SqlCommand("select * from Authors", myConnection)
+
+myConnection.Open()
+
+
+Dim dr As SqlDataReader = myCommand.ExecuteReader()
+
+...
+
+myConnection.Close()
+</pre>
+<pre id="code_ctl2" style="display:none">
+
+var myConnection:SqlConnection = new SqlConnection("server=(local)\NetSDK;database=pubs;Trusted_Connection=yes");
+var myCommand:SqlCommand = new SqlCommand("select * from Authors", myConnection);
+
+myConnection.Open();
+
+var dr : SqlDataReader;
+dr = myCommand.ExecuteReader();
+
+...
+
+myConnection.Close();
+</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="backtab" id="tab_ctl2" onclick="doClick(0, 3, '_ctl2')">
+          <b>C#</b>
+        </td>
+        <td class="tab" id="tab_ctl2" onclick="doClick(1, 3, '_ctl2')">
+          <b>VB</b>
+        </td>
+        <td class="backtab" id="tab_ctl2" onclick="doClick(2, 3, '_ctl2')">
+          <b>JScript</b>
+        </td>
+        <td class="space">&nbsp;</td>
+      </tr>
+    </table>
+
+<p>
+
+
+When performing commands that do not require data to be returned, such as inserts, updates, and deletes,
+you also use a <b>SqlCommand</b>.  The command is issued by calling an <b>ExecuteNonQuery</b>
+method, which returns the number of rows affected.  Note that the connection must be explicitly opened when you use the
+<b>SqlCommand</b>; the <b>SqlDataAdapter</b> automatically handles opening the connection for you.
+<p>
+
+<p>    <table cellpadding=0 cellspacing=0 width="95%">
+      <tr>
+        <td class="code" colspan="4">
+<pre id="code_ctl3" style="display:none">
+
+SqlConnection myConnection = new SqlConnection("server=(local)\NetSDK;database=pubs;Trusted_Connection=yes");
+SqlCommand myCommand = new SqlCommand(
+                   "UPDATE Authors SET phone='(800) 555-5555' WHERE au_id = '123-45-6789'",
+                    myConnection);
+
+myCommand.Connection.Open();
+myCommand.ExecuteNonQuery();
+myCommand.Connection.Close();
+</pre>
+<pre id="code_ctl3" style="display:">
+
+Dim myConnection As New SqlConnection("server=(local)\NetSDK;database=pubs;Trusted_Connection=yes")
+Dim myCommand As New SqlCommand( _
+                   "UPDATE Authors SET phone='(800) 555-5555' WHERE au_id = '123-45-6789'",  _
+                    myConnection)
+
+myCommand.Connection.Open()
+myCommand.ExecuteNonQuery()
+myCommand.Connection.Close()
+</pre>
+<pre id="code_ctl3" style="display:none">
+
+var myConnection:SqlConnection = new SqlConnection("server=(local)\NetSDK;database=pubs;Trusted_Connection=yes");
+var myCommand:SqlCommand = new SqlCommand(
+                   "UPDATE Authors SET phone='(800) 555-5555' WHERE au_id = '123-45-6789'",
+                    myConnection);
+
+myCommand.Connection.Open();
+myCommand.ExecuteNonQuery();
+myCommand.Connection.Close();
+</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="backtab" id="tab_ctl3" onclick="doClick(0, 3, '_ctl3')">
+          <b>C#</b>
+        </td>
+        <td class="tab" id="tab_ctl3" onclick="doClick(1, 3, '_ctl3')">
+          <b>VB</b>
+        </td>
+        <td class="backtab" id="tab_ctl3" onclick="doClick(2, 3, '_ctl3')">
+          <b>JScript</b>
+        </td>
+        <td class="space">&nbsp;</td>
+      </tr>
+    </table>
+<p>
+
+<p>
+<b>Important:   </b> Always remember to close the connection to the data model before the page finishes executing.  If you do
+not close the connection, you might inadvertently exhaust the connection limit while waiting for the page instances to be
+handled by garbage collection.
+
+<!--BEGIN SECTION-->
+<br>
+<a name="select">
+<br>
+<span class="subhead">Binding SQL Data to a DataGrid</span>
+<p>
+The following sample shows a simple select query bound to a <b>DataGrid</b> control.  The <b>DataGrid</b> renders a
+table containing the SQL data.
+
+<p>
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid1.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid1.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid1.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid1.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid1.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl32__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=692&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<p>
+
+Like the <b>DropDownList</b> shown in the Data Binding section, the <b>DataGrid</b> control supports a
+<b>DataSource</b> property that takes an <b>IEnumerable</b> or <b>ICollection</b>, as well as a <b>DataSet</b>.
+You can use a <b>DataSet</b> by assigning the <b>DefaultView</b> property of a table contained in
+the <b>DataSet</b> to the name of the table you wish to use within the <b>DataSet</b>.  The <b>DefaultView</b> property
+represents the current state of a table within a <b>DataSet</b>, including any changes which have
+been made by application code (row deletions or value changes, for example).  After setting
+the <b>DataSource</b> property, you call <code>DataBind()</code> to populate the control.
+
+<p>
+    <table cellpadding=0 cellspacing=0 width="95%">
+      <tr>
+        <td class="code" colspan="4">
+<pre id="code_ctl5" style="display:none">
+
+MyDataGrid.DataSource=ds.Tables["Authors"].DefaultView;
+MyDataGrid.DataBind();
+</pre>
+<pre id="code_ctl5" style="display:">
+
+MyDataGrid.DataSource=ds.Tables("Authors").DefaultView
+MyDataGrid.DataBind()
+</pre>
+<pre id="code_ctl5" style="display:none">
+
+MyDataGrid.DataSource=ds.Tables["Authors"].DefaultView;
+MyDataGrid.DataBind();
+</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="backtab" id="tab_ctl5" onclick="doClick(0, 3, '_ctl5')">
+          <b>C#</b>
+        </td>
+        <td class="tab" id="tab_ctl5" onclick="doClick(1, 3, '_ctl5')">
+          <b>VB</b>
+        </td>
+        <td class="backtab" id="tab_ctl5" onclick="doClick(2, 3, '_ctl5')">
+          <b>JScript</b>
+        </td>
+        <td class="space">&nbsp;</td>
+      </tr>
+    </table>
+
+
+<p>
+An alternative syntax is to specify both a <b>DataSource</b> and a <b>DataMember</b>.  In this case, ASP.NET
+automatically gets the <b>DefaultView</b> for you.
+
+<p>
+    <table cellpadding=0 cellspacing=0 width="95%">
+      <tr>
+        <td class="code" colspan="4">
+<pre id="code_ctl6" style="display:none">
+
+MyDataGrid.DataSource=ds;
+MyDataGrid.DataMember="Authors";
+MyDataGrid.DataBind();
+</pre>
+<pre id="code_ctl6" style="display:">
+
+MyDataGrid.DataSource=ds
+MyDataGrid.DataMember="Authors"
+MyDataGrid.DataBind()
+</pre>
+<pre id="code_ctl6" style="display:none">
+
+MyDataGrid.DataSource=ds;
+MyDataGrid.DataMember="Authors";
+MyDataGrid.DataBind();
+</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="backtab" id="tab_ctl6" onclick="doClick(0, 3, '_ctl6')">
+          <b>C#</b>
+        </td>
+        <td class="tab" id="tab_ctl6" onclick="doClick(1, 3, '_ctl6')">
+          <b>VB</b>
+        </td>
+        <td class="backtab" id="tab_ctl6" onclick="doClick(2, 3, '_ctl6')">
+          <b>JScript</b>
+        </td>
+        <td class="space">&nbsp;</td>
+      </tr>
+    </table>
+
+
+
+<p>
+You can also bind directly to a <b>SqlDataReader</b>.  In this case you are only displaying data, so the
+forward-only nature of the <b>SqlDataReader</b> is perfectly suited to this scenario, and you benefit from
+the performance boost that <b>SqlDataReader</b> provides.
+
+
+<p>
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid1.1.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid1.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid1.1.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid1.1.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid1.1.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl33__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=693&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<p>
+<b>Note:</b>   For the remainder of this section, only the <b>DataSet</b> model of data access is shown; however, any
+of these samples could be re-written to take advantage of <b>SQLDataReader</b> as well.
+
+<!--BEGIN SECTION-->
+<br>
+<a name="param">
+<br>
+<span class="subhead">Performing a Parameterized Select</span>
+<p>
+
+You can also perform a parameterized select using the <b>SqlDataAdapter</b> object.  The following sample shows how you can modify the
+data selected using the value posted from a select <b>HtmlControl</b>.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid2.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid2.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid2.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid2.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid2.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl34__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=694&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<p>
+The <b>SqlDataAdapter</b> maintains a <b>Parameters</b> collection that can be used to replace variable identifiers
+(denoted by an "@" in front of the name) with values.  You add a new <b>SqlParameter</b> to this collection that specifies the
+name, type, and size of the parameter, and then set its <b>Value</b> property to the value of the select.
+<p>
+
+<p>    <table cellpadding=0 cellspacing=0 width="95%">
+      <tr>
+        <td class="code" colspan="4">
+<pre id="code_ctl9" style="display:none">
+
+myCommand.SelectCommand.Parameters.Add(new SqlParameter("@State", SqlDbType.NVarChar, 2));
+myCommand.SelectCommand.Parameters["@State"].Value = MySelect.Value;
+</pre>
+<pre id="code_ctl9" style="display:">
+
+myCommand.SelectCommand.Parameters.Add(New SqlParameter("@State", SqlDbType.NVarChar, 2))
+myCommand.SelectCommand.Parameters("@State").Value = MySelect.Value
+</pre>
+<pre id="code_ctl9" style="display:none">
+
+myCommand.SelectCommand.Parameters.Add(new SqlParameter("@State", SqlDbType.NVarChar, 2));
+myCommand.SelectCommand.Parameters("@State").Value = MySelect.Value;
+</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="backtab" id="tab_ctl9" onclick="doClick(0, 3, '_ctl9')">
+          <b>C#</b>
+        </td>
+        <td class="tab" id="tab_ctl9" onclick="doClick(1, 3, '_ctl9')">
+          <b>VB</b>
+        </td>
+        <td class="backtab" id="tab_ctl9" onclick="doClick(2, 3, '_ctl9')">
+          <b>JScript</b>
+        </td>
+        <td class="space">&nbsp;</td>
+      </tr>
+    </table>
+<p>
+
+<p>
+<b>Important: </b>   Note that the <b>DataGrid</b>'s <b>EnableViewState</b> property has been set to <b>false</b>. If the data will be populated in each request,
+there is no benefit to having the <b>DataGrid</b> store state information to be sent through a round trip with form posts. Because the <b>DataGrid</b> stores all
+of its data when maintaining state, it is important to turn it off when appropriate to improve the performance of your pages.
+<p>
+
+DataGrid2.aspx statically populates the values of the select box, but this will not work well if those values ever change in the
+database.  Because the select <b>HtmlControl</b> also supports an <b>IEnumerable DataSource</b> property, you can use a select query to dynamically
+populate the select box instead, which guarantees that the database and user interface are always in sync.  The following sample demonstrates this process.
+
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid3.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid3.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid3.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid3.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid3.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl35__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=695&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+
+<!--BEGIN SECTION-->
+<br>
+<a name="insert">
+<br>
+<span class="subhead">Inserting Data in a SQL Database</span>
+<p>
+
+To insert a row into the database, you can add a simple input form to the page, and execute an insert command in the form submit
+event handler.  Just as in the previous two samples, you use the command object's Parameters collection to populate the
+command's values.  Note that you also check to make sure the required values are not null before attempting to insert into the
+database.  This prevents an accidental violation of the database's field constraints.  You also execute the insert command inside of
+a try/catch block, just in case the primary key for inserted row already exists.
+
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid4.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid4.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid4.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid4.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid4.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl36__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=831&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<p>
+Instead of explicitly checking the input values, you could have just as easily used the validator controls provided with ASP.NET.  The following 
+sample shows how to do that.  Note that using the RegEx Validator provides the additional benefit of checking the format for the author
+ID, zip code, and phone number fields.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid5.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid5.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid5.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid5.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid5.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl37__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=834&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<!--BEGIN SECTION-->
+<br>
+<a name="update">
+<br>
+<span class="subhead">Updating Data in a SQL Database</span>
+<p>
+Updating a database can often be tricky in Web applications.  The <b>DataGrid</b> control provides some built-in support for this scenario that
+makes updates easier.  To allow rows to be edited, the <b>DataGrid</b> supports an integer <b>EditItemIndex</b> property, which indicates which row
+of the grid should be editable.  When this property is set, the <b>DataGrid</b> renders the row at that index as text input boxes instead of
+simple labels.  A value of -1 (the default) indicates that no rows are editable.  The page can enclose the <b>DataGrid</b> in a server-side form and
+get access to the edited data through the <b>DataGrid</b>'s object model.
+<p>
+To figure out which row should be editable, you need a way to accept some input from the user about which row they would like to edit.
+The <b>DataGrid</b> can contain an <b>EditCommandColumn</b> that renders links for firing three special events: <b>EditCommand</b>,
+<b>UpdateCommand</b>, and <b>CancelCommand</b>.  The <b>EditCommandColumn</b> is declaratively added to the <b>DataGrid</b>'s Columns
+collection, as shown in the following example.
+
+<div class="code"><pre>
+&lt;ASP:DataGrid id="MyDataGrid" runat="server"
+  ...
+  OnEditCommand="MyDataGrid_Edit"
+  OnCancelCommand="MyDataGrid_Cancel"
+  OnUpdateCommand="MyDataGrid_Update"
+  DataKeyField="au_id"
+&gt;
+
+  &lt;Columns&gt;
+    &lt;asp:EditCommandColumn EditText="Edit" CancelText="Cancel" UpdateText="Update" /&gt;
+  &lt;/Columns&gt;
+
+&lt;/ASP:DataGrid&gt;
+</pre></div>
+
+On the <b>DataGrid</b> tag itself, you wire event handlers to each of the commands fired from the <b>EditCommandColumn</b>.
+The <b>DataGridCommandEventArgs</b> argument of these handlers gives you direct access to the index selected by
+the client, which you use to set the <b>DataGrid</b>'s <b>EditItemIndex</b>.  Note that you need to re-bind the <b>DataGrid</b> for the change
+to take effect, as shown in the following example.
+<p>
+
+<p>    <table cellpadding=0 cellspacing=0 width="95%">
+      <tr>
+        <td class="code" colspan="4">
+<pre id="code_ctl13" style="display:none">
+
+public void MyDataGrid_Edit(Object sender, DataGridCommandEventArgs E) {
+    MyDataGrid.EditItemIndex = (int)E.Item.ItemIndex;
+    BindGrid();
+}
+</pre>
+<pre id="code_ctl13" style="display:">
+
+Public Sub MyDataGrid_Edit(sender As Object, E As DataGridCommandEventArgs)
+    MyDataGrid.EditItemIndex = E.Item.ItemIndex
+    BindGrid()
+End Sub
+</pre>
+<pre id="code_ctl13" style="display:none">
+
+public function MyDataGrid_Edit(sender:Object, E:DataGridCommandEventArgs) : void {
+    MyDataGrid.EditItemIndex = int(E.Item.ItemIndex);
+    BindGrid();
+}
+</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="backtab" id="tab_ctl13" onclick="doClick(0, 3, '_ctl13')">
+          <b>C#</b>
+        </td>
+        <td class="tab" id="tab_ctl13" onclick="doClick(1, 3, '_ctl13')">
+          <b>VB</b>
+        </td>
+        <td class="backtab" id="tab_ctl13" onclick="doClick(2, 3, '_ctl13')">
+          <b>JScript</b>
+        </td>
+        <td class="space">&nbsp;</td>
+      </tr>
+    </table>
+<p>
+
+<p>
+When a row of the <b>DataGrid</b> is being edited, the <b>EditCommandColumn</b> renders the <b>Update</b> and <b>Cancel</b> links.  If the client selects <b>Cancel</b>,
+you simply set the <b>EditItemIndex</b> back to -1.  If the client selects <b>Update</b>, however, you need to execute your update command to the
+database.  Performing an update query requires that you know the primary key in the database for the row you wish to update.  To
+support this, the <b>DataGrid</b> exposes a <b>DataKeyField</b> property that you can set to the field name for the primary key.  In the
+event handler wired to the <b>UpdateCommand</b>, you can retrieve the key name from the <b>DataGrid</b>'s DataKeys collection.  You
+index into this collection using the <b>ItemIndex</b> of the event, as shown in the following example.
+<p>
+
+<p>    <table cellpadding=0 cellspacing=0 width="95%">
+      <tr>
+        <td class="code" colspan="4">
+<pre id="code_ctl14" style="display:none">
+
+myCommand.Parameters["@Id"].Value = MyDataGrid.DataKeys[(int)E.Item.ItemIndex];
+</pre>
+<pre id="code_ctl14" style="display:">
+
+myCommand.Parameters("@Id").Value = MyDataGrid.DataKeys(CType(E.Item.ItemIndex, Integer))
+</pre>
+<pre id="code_ctl14" style="display:none">
+
+myCommand.Parameters["@Id"].Value = MyDataGrid.DataKeys[int(E.Item.ItemIndex)];
+</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="backtab" id="tab_ctl14" onclick="doClick(0, 3, '_ctl14')">
+          <b>C#</b>
+        </td>
+        <td class="tab" id="tab_ctl14" onclick="doClick(1, 3, '_ctl14')">
+          <b>VB</b>
+        </td>
+        <td class="backtab" id="tab_ctl14" onclick="doClick(2, 3, '_ctl14')">
+          <b>JScript</b>
+        </td>
+        <td class="space">&nbsp;</td>
+      </tr>
+    </table>
+<p>
+
+<p>
+At the end of the Update event handler, you set the <b>EditItemIndex</b> back to -1.  The following sample demonstrates this code in action.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid6.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid6.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid6.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid6.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid6.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl38__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=836&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<p>
+One problem with the preceding example is that the primary key field (au_id) also renders as a text input box when a row is editable.
+You don't want the client to change this value, because you need it to determine which row to update in the database.  Fortunately, you can
+disable this column from rendering as a text box by specifying exactly what each column looks like for the editable row.  You do this
+by defining each row in the <b>DataGrid</b>'s Columns collection, using the <b>BoundColumn</b> control to assign data fields with each
+column.  Using this technique gives you complete control over the order of the columns, as well as their <b>ReadOnly</b> properties.  For the
+au_id column you set the <b>ReadOnly</b> property to <b>true</b>.  When a row is in edit mode, this column will continue to render as a Label. The following sample demonstrates this technique.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid7.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid7.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid7.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid7.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid7.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl39__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=838&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<p>
+<b>BoundColumn</b> controls aren't the only controls you can set in the <b>DataGrid</b>'s Columns collection.  You can also specify a <b>TemplateColumn</b>,
+which gives you complete control over the contents of the column.  The template is just arbitrary content; you can render anything
+you like, including server controls, inside the <b>DataGrid</b>'s columns.  The following sample demonstrates using the <b>TemplateColumn</b> control to
+render the "State" column as a drop-down list and the "Contract" column as a check box HtmlControl.  The ASP.NET data binding syntax
+is used to output the data field value within the template.  Note that there is a bit of tricky logic to make the drop-down list and
+check box reflect the state of the data inside the row.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid8.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid8.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid8.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid8.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid8.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl40__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=840&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<p>
+Just as you can place a drop-down list or check box HtmlControl in a <b>TemplateColumn</b>, you can also place other controls there.  The following 
+sample adds <b>Validator</b> controls to the columns to check the client input before attempting to perform the update.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid9.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid9.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid9.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid9.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid9.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl41__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=830&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<!--BEGIN SECTION-->
+<br>
+<a name="delete">
+<br>
+<span class="subhead">Deleting Data in a SQL Database</span>
+<p>
+Deleting from a database is very similar to an update or insert command, but you still need a way to determine the particular row of
+the grid to delete.  Another control that can be added to the <b>DataGrid</b>'s Columns collection is the <b>ButtonColumn</b> control, which
+simply renders a button control.  <b>ButtonColumn</b> supports a <b>CommandName</b> property that can be set to <b>Delete</b>.  On the <b>DataGrid</b>,
+you wire an event handler to the <b>DeleteCommand</b>, where you perform the delete operation.  Again, you use the DataKeys collection
+to determine the row selected by the client. The following sample demonstrates this process.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid10.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid10.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid10.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid10.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid10.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl42__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=832&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+
+<!--BEGIN SECTION-->
+<br>
+<a name="sort">
+<br>
+<span class="subhead">Sorting Data from a SQL Database</span>
+<p>
+A common requirement for any grid is the ability to sort the data it contains.  While the <b>DataGrid</b> control doesn't explicitly sort its
+data for you, it does provide a way to call an event handler when the user clicks a column header, which you can use to
+sort the data.  When the <b>DataGrid</b>'s <b>AllowSorting</b> property is set to <b>true</b>, it renders hyperlinks for the column headers that
+fire a <b>Sort</b> command back to the grid.  You set the <b>OnSortCommand</b> property of the <b>DataGrid</b> to the handler you want to
+call when the user clicks a column link.  The name of the column is passed as a <b>SortExpression</b> property on the
+<b>DataGridSortCommandEventArgs</b> argument, which you can use to set the <b>Sort</b> property of the
+<b>DataView</b> bound to the grid. The following example demonstrates this process.<p>
+
+<p>    <table cellpadding=0 cellspacing=0 width="95%">
+      <tr>
+        <td class="code" colspan="4">
+<pre id="code_ctl20" style="display:none">
+
+&lt;script&gt;
+    protected void MyDataGrid_Sort(Object Src, DataGridSortCommandEventArgs E) {
+        ...
+        DataView Source = ds.Tables["Authors"].DefaultView;
+        Source.Sort = E.SortExpression;
+        MyDataGrid.DataBind();
+    }
+&lt;/script&gt;
+
+&lt;form runat="server"&gt;
+    &lt;ASP:DataGrid id="MyDataGrid" OnSortCommand="MyDataGrid_Sort" AllowSorting="true" runat="server" /&gt;
+&lt;/form&gt;
+</pre>
+<pre id="code_ctl20" style="display:">
+
+&lt;script&gt;
+    Protected Sub MyDataGrid_Sort(Src As Object, E As DataGridSortCommandEventArgs)
+        ...
+        DataView Source = ds.Tables("Authors").DefaultView
+        Source.Sort = E.SortExpression
+        MyDataGrid.DataBind()
+    End Sub
+&lt;/script&gt;
+
+&lt;form runat="server"&gt;
+    &lt;ASP:DataGrid id="MyDataGrid" OnSortCommand="MyDataGrid_Sort" AllowSorting="true" runat="server" /&gt;
+&lt;/form&gt;
+</pre>
+<pre id="code_ctl20" style="display:none">
+
+&lt;script&gt;
+    protected function MyDataGrid_Sort(Src:Object, E:DataGridSortCommandEventArgs) : void {
+        ...
+        var Source:DataView = ds.Tables["Authors"].DefaultView;
+        Source.Sort = E.SortExpression;
+        MyDataGrid.DataBind();
+    }
+&lt;/script&gt;
+
+&lt;form runat="server"&gt;
+    &lt;ASP:DataGrid id="MyDataGrid" OnSortCommand="MyDataGrid_Sort" AllowSorting="true" runat="server" /&gt;
+&lt;/form&gt;
+</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="backtab" id="tab_ctl20" onclick="doClick(0, 3, '_ctl20')">
+          <b>C#</b>
+        </td>
+        <td class="tab" id="tab_ctl20" onclick="doClick(1, 3, '_ctl20')">
+          <b>VB</b>
+        </td>
+        <td class="backtab" id="tab_ctl20" onclick="doClick(2, 3, '_ctl20')">
+          <b>JScript</b>
+        </td>
+        <td class="space">&nbsp;</td>
+      </tr>
+    </table>
+<p>
+
+<p>
+The following sample shows this code in action.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid11.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid11.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid11.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid11.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid11.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl43__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=835&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<p>
+When using <b>BoundColumn</b> controls, you can explicitly set the <b>SortExpression</b> property for each column, as demonstrated in the following sample.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid12.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid12.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid12.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid12.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid12.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl44__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=837&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+
+<!--BEGIN SECTION-->
+<br>
+<a name="masterdetail">
+<br>
+<span class="subhead">Working with Master-Detail Relationships</span>
+<p>
+
+Often your data model will contain relationships that cannot be represented using just a single grid.  A very common Web-based interface
+is one in which a row of data can be selected that navigates the client to a "details" page, which displays detailed information about
+the selected row.  To accomplish this using the <b>DataGrid</b>, you can add a <b>HyperLinkColumn</b> to the Columns collection, which
+specifies the details page to which the client will navigate when the link is clicked.  You use the format string syntax to substitute a field
+value in this link, which is passed as a querystring argument. The following example demonstrates this process.
+
+<p>
+
+<div class="code"><pre>
+    &lt;ASP:DataGrid id="MyDataGrid" runat="server"&gt;
+
+      &lt;Columns&gt;
+          &lt;asp:HyperLinkColumn
+            DataNavigateUrlField="au_id"
+            DataNavigateUrlFormatString="datagrid13_details.aspx?id={0}"
+            Text="Get Details"
+          /&gt;
+      &lt;/Columns&gt;
+
+    &lt;/ASP:DataGrid&gt;
+</pre></div>
+
+<p>
+On the details page, you retrieve the querystring argument and perform a join select to obtain details from the database.  The following sample demonstrates this scenario.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid13.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid13.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid13.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid13.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid13.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl45__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=839&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+
+<!--BEGIN SECTION-->
+<br>
+<a name="storedprocs">
+<br>
+<span class="subhead">Writing and Using Stored Procedures</span>
+<p>
+In general, performing ad hoc queries comes at the expense of performance.  Using stored procedures can reduce the cost of
+performing heavy database operations in an application.  A stored procedure is easy to create, and can even be done using a
+SQL statement.  The following code example creates a stored procedure that simply returns a table.
+
+<p>
+<div class="code"><pre>
+CREATE Procedure GetAuthors AS
+    SELECT * FROM Authors
+    return
+GO
+</pre></div>
+<p>
+
+You can create stored procedures that accept parameters as well.  For example:
+
+<p>
+<div class="code"><pre>
+CREATE Procedure LoadPersonalizationSettings (@UserId varchar(50)) AS
+    SELECT * FROM Personalization WHERE UserID=@UserId
+    return
+GO
+</pre></div>
+<p>
+
+Using a stored procedure from an ASP.NET page is just an extension of what you've learned so far about the <b>SqlCommand</b> object.  The
+<b>CommandText</b> is just the name of the stored procedure instead of the ad hoc query text.  You indicate to the <b>SqlCommand</b> that the
+<b>CommandText</b> is a stored procedure by setting the <b>CommandType</b> property.
+
+<p>    <table cellpadding=0 cellspacing=0 width="95%">
+      <tr>
+        <td class="code" colspan="4">
+<pre id="code_ctl24" style="display:none">
+
+myCommand.SelectCommand.CommandType = CommandType.StoredProcedure;
+</pre>
+<pre id="code_ctl24" style="display:">
+
+myCommand.SelectCommand.CommandType = CommandType.StoredProcedure
+</pre>
+<pre id="code_ctl24" style="display:none">
+
+myCommand.SelectCommand.CommandType = CommandType.StoredProcedure;
+</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="backtab" id="tab_ctl24" onclick="doClick(0, 3, '_ctl24')">
+          <b>C#</b>
+        </td>
+        <td class="tab" id="tab_ctl24" onclick="doClick(1, 3, '_ctl24')">
+          <b>VB</b>
+        </td>
+        <td class="backtab" id="tab_ctl24" onclick="doClick(2, 3, '_ctl24')">
+          <b>JScript</b>
+        </td>
+        <td class="space">&nbsp;</td>
+      </tr>
+    </table>
+<p>
+
+<p>
+The following sample demonstrates a call to a stored procedure to fill the <b>DataSet</b>.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid14.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid14.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid14.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid14.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid14.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl46__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=841&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<p>
+Parameters to stored procedures are passed just as they are for ad hoc queries, as shown in the following samples.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid15.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid15.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid15.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid15.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid15.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl47__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=842&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid16.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid16.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid16.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid16.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid16.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl48__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=843&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+
+<!--BEGIN SECTION-->
+<br>
+<a name="xmldata">
+<br>
+<span class="subhead">Accessing XML-based Data</span>
+<p>
+At the beginning of this section it was mentioned that the <b>DataSet</b> was designed to abstract data in a way that is independent of
+the actual data source.  You can see this by changing the focus of your samples from SQL to XML.  The <b>DataSet</b> supports a
+<b>ReadXml</b> method that takes a <b>FileStream</b> object as its parameter.  The file you read in this case must contain both a schema
+and the data you wish to read.  The <b>DataSet</b> expects data to be in the form, as shown in the following example.
+
+<p>
+<div class="code"><pre>
+&lt;DocumentElement&gt;
+    &lt;TableName&gt;
+        &lt;ColumnName1&gt;column value&lt;/ColumnName1&gt;
+        &lt;ColumnName2&gt;column value&lt;/ColumnName2&gt;
+        &lt;ColumnName3&gt;column value&lt;/ColumnName3&gt;
+        &lt;ColumnName4&gt;column value&lt;/ColumnName4&gt;
+    &lt;/TableName&gt;
+    &lt;TableName&gt;
+        &lt;ColumnName1&gt;column value&lt;/ColumnName1&gt;
+        &lt;ColumnName2&gt;column value&lt;/ColumnName2&gt;
+        &lt;ColumnName3&gt;column value&lt;/ColumnName3&gt;
+        &lt;ColumnName4&gt;column value&lt;/ColumnName4&gt;
+    &lt;/TableName&gt;
+&lt;/DocumentElement&gt;
+</pre></div>
+<p>
+Each <b>TableName</b> section corresponds to a single row in the table.  The following sample shows reading schema
+and data from an XML file using the <b>ReadXml</b> method of the <b>DataSet</b>.  Note that after the data is read into the <b>DataSet</b>
+it is indistinguishable from SQL data -- the <b>DataGrid</b> binds to it just the same, as shown in the following sample.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid17.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid17.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid17.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid17.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid17.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl49__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=844&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<p>
+You can also read the data and schema separately, using the <b>ReadXmlData</b> and <b>ReadXmlSchema</b> methods
+of the <b>DataSet</b>, as shown in the following sample.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid18.aspx">
+        <img border="1" src="/quickstart/aspplus/images/datagrid18.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB DataGrid18.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/datagrid18.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/datagrid18.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl50__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=845&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+<p>
+Just as the <b>DataSet</b> supports reader methods for XML data, it also supports writing the data.  The following sample implements a tool for
+selecting data from SQL and writing the result as XML data or schema text.
+<p>
+
+<span>
+
+
+<table border="0">
+  <tr>
+    <td width="25">&nbsp;</td>
+    <td style="font: 8pt tahoma"><nobr>
+      
+
+        <a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/xmlgen.aspx">
+        <img border="1" src="/quickstart/aspplus/images/xmlgen.gif"><br>
+        </a>
+        <table><tr><td class="caption">VB XMLGen.aspx</tr></td></table><br>
+
+        
+          [<a target="_blank" href="/quickstart/aspplus/samples/webforms/data/VB/xmlgen.aspx">Run Sample</a>] |
+          [<a target="_blank" href="/quickstart/util/srcview.aspx?path=/quickstart/aspplus/samples/webforms/data/xmlgen.src">View Source</a>]
+        
+    </nobr></td>
+	<td valign=top>
+            <span id="_ctl51__ctl0_LanguageExtentionsLabel"></span>
+            LateBreaking Samples:
+                    <li>
+                        <a href='/quickstart/latebreaking/default.aspx?url=/quickstart/latebreaking/quickstartinfo.aspx?id=833&lang=VJS' target="_top">
+                            J#
+                        </a>
+                    </li>
+                
+	</td>
+  </tr>
+</table>
+  </span>
+
+
+<!--BEGIN SECTION-->
+<a name="endofsection">
+
+<h4><a name="summary">Section Summary</a></h4>
+<ol>
+<li>The common language runtime's managed data access APIs abstract data and present it in a consistent way regardless of its actual source (SQL Server, OLEDB, XML, and so on).
+<li>To give your page access to the classes you will need to perform SQL data access, you must import the <b>System.Data</b> and <b>System.Data.SqlClient</b> namespaces into your page.
+<li>Populating a dataset from a SQL query involves creating a <b>SqlConnection</b>, associating a <b>SqlDataAdapter</b> object with the connection that contains your query statement, and filling the dataset from the command.
+<li>The <b>DataGrid</b> control supports a <b>DataSource</b> property that takes an <b>IEnumerable</b> (or <b>ICollection</b>) type. You can set this to the result of a SQL query by assigning the <b>DataSet</b>'s <b>DefaultView</b> property, which is of type <b>DataView</b>.
+<li>The <b>SqlDataAdapter</b> maintains a Parameters collection that can be used to replace variable identifiers (denoted by an "@" in front of the name) with values.
+<li>When performing commands that do not require data to be returned, such as inserts, updates, and deletes, you use a <b>SqlCommand</b> instead of the <b>SqlDataAdapter</b>. The command is issued by calling an <b>ExecuteNonQuery</b> method, which returns the number of rows affected.
+<li>The <b>SqlConnection</b> must be explicitly opened when you use the <b>SqlCommand</b> (the <b>SqlDataAdapter</b> automatically handles opening the connection for you). Always remember to close the <b>SqlConnection</b> to the data model before the page finishes executing. If you do not close the connection, you migh inadvertantly exhaust the connection limit while waiting for the page instances to be released to garbage collection.
+<li>To allow rows to be edited, the <b>DataGrid</b> supports an integer <b>EditItemIndex</b> property, which indicates which row of the grid should be editable. When this property is set, the <b>DataGrid</b> renders the row at that index as text input boxes instead of simple labels.
+<li>The <b>DataGrid</b> exposes a <b>DataKeyField</b> property that you can set to the field name for the primary key. In the event handler wired to the <b>UpdateCommand</b>, you can retrieve the key name from the <b>DataGrid</b>'s DataKeys collection.
+<li>Using <b>BoundColumn</b> controls in the <b>DataGrid</b> gives you complete control over the order of the columns, as well as their <b>ReadOnly</b> properties.
+<li>Using <b>TemplateColumn</b> controls in the <b>DataGrid</b> gives you complete control over the contents of the column.
+<li>The <b>ButtonColumn</b> control can be used to simply render a button control in each row for that column, which can be associated with an event.
+<li>A <b>HyperLinkColumn</b> can be added to the <b>DataGrid</b>'s Columns collection, which supports navigating to another page when the link is clicked.
+<li>When the <b>DataGrid</b>'s <b>AllowSorting</b> property is set to <b>true</b>, it renders hyperlinks for the column headers that fire a <b>Sort</b> command back to the grid. You set the <b>OnSortCommand</b> property of the <b>DataGrid</b> to the handler you want to call when the user clicks a column link.
+<li>The <b>DataSet</b> supports <b>ReadXml</b>, <b>ReadXmlData</b>, and <b>ReadXmlSchema</b> methods that take a <b>FileStream</b> as a parameter, which can be used to populate a <b>DataSet</b> from an XML file.
+<li>Using stored procedures can reduce the cost of performing heavy database operations in an application.
+</ol>
+<p>
+
+<!--END FOOTER-->
+<p>
+<hr>
+<center>
+Copyright 2002 Microsoft Corporation. All rights reserved.
+</center>
+<p>
+</div>
+</td>
+</tr>
+</table>
+</BODY>
+</html>
+<!--END FOOTER-->

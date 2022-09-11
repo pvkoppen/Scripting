@@ -1,0 +1,54 @@
+{ 
+var google_ads = new Array(); 
+var google_ad; 
+var google_radlinks = new Array(); 
+var google_radlink; 
+var google_info = new Object(); 
+google_ad = new Object(); 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.url = "http://pagead2.googlesyndication.com/pagead/iclk?sa=l&amp;ai=Bps4bMGDzQcjrPJ2kQtTg-IMHv4uMAe-SxgPAjbcBwIxkEAEYASDh5psCKARA4BNIpTmqARBvc3RnX3NvdXJjZWZvcmdlsgEPc291cmNlZm9yZ2UubmV0yAEB2gEraHR0cDovL3NvdXJjZWZvcmdlLm5ldC9wcm9qZWN0cy9lZ3JvdXB3YXJlLw&amp;num=1&amp;adurl=http://www.adminitrack.com&amp;client=ca-ostg_js"; 
+google_ad.visible_url = "www.adminitrack.com"; 
+google_ad.line1 = "Online Bug Tracking Tool"; 
+google_ad.line2 = "bug tracking at adminitrack.com"; 
+google_ad.line3 = "no-risk 30-day trial now available"; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 2; 
+google_ad.type = "text"; 
+google_ad.url = "http://pagead2.googlesyndication.com/pagead/iclk?adurl=http://www.fastbugtrack.com/%3Fsource%3Dgc6&amp;sa=l&amp;ai=BvgnfMGDzQcjrPJ2kQtTg-IMH8P_MBpXMpwPAjbcBwO0aEAIYAiDh5psCKARA4BNIiDmgAZebtP8DqgEQb3N0Z19zb3VyY2Vmb3JnZbIBD3NvdXJjZWZvcmdlLm5ldMgBAdoBK2h0dHA6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvZWdyb3Vwd2FyZS8&amp;num=2&amp;client=ca-ostg_js"; 
+google_ad.visible_url = "www.fastbugtrack.com/"; 
+google_ad.line1 = "Need to Track Bugs Now?"; 
+google_ad.line2 = "Web-based Software"; 
+google_ad.line3 = "Install and Configure in 5 minutes"; 
+google_ad.regionname = ""; 
+google_ads[1] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 3; 
+google_ad.type = "text"; 
+google_ad.url = "http://pagead2.googlesyndication.com/pagead/iclk?sa=l&amp;ai=BrikCMGDzQcjrPJ2kQtTg-IMH_Nu-BfiGuAnAjbcBgMQTEAMYAyDh5psCKARA4BNIhDmqARBvc3RnX3NvdXJjZWZvcmdlsgEPc291cmNlZm9yZ2UubmV0yAEB2gEraHR0cDovL3NvdXJjZWZvcmdlLm5ldC9wcm9qZWN0cy9lZ3JvdXB3YXJlLw&amp;num=3&amp;adurl=http://www.elementool.com/cgi-bin/joinPage/referral.asp%3Freferralcode%3DggleAdCont1&amp;client=ca-ostg_js"; 
+google_ad.visible_url = "www.elementool.com"; 
+google_ad.line1 = "Elementool Bug Tracking"; 
+google_ad.line2 = "Easy to use. No software required."; 
+google_ad.line3 = "Web based. Offers free option"; 
+google_ad.regionname = ""; 
+google_ads[2] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 4; 
+google_ad.type = "text"; 
+google_ad.url = "http://pagead2.googlesyndication.com/pagead/iclk?adurl=http://www.maasit.com/pages/5/&amp;sa=l&amp;ai=BejceMGDzQcjrPJ2kQtTg-IMHoaP0Bvfr0pQBwI23AbDbBhAEGAQg4eabAigEQOATSI05oAHTsIT_A6oBEG9zdGdfc291cmNlZm9yZ2WyAQ9zb3VyY2Vmb3JnZS5uZXTIAQHaAStodHRwOi8vc291cmNlZm9yZ2UubmV0L3Byb2plY3RzL2Vncm91cHdhcmUv&amp;num=4&amp;client=ca-ostg_js"; 
+google_ad.visible_url = "www.maasit.com"; 
+google_ad.line1 = "Bug Tracking software"; 
+google_ad.line2 = "PR Tracker 5.2, 30 days free use"; 
+google_ad.line3 = "Buy at 15% Discount from MAASIT"; 
+google_ad.regionname = ""; 
+google_ads[3] = google_ad; 
+google_info.feedback_url = "http://pagead2.googlesyndication.com/pagead/userfeedback?url=http://sourceforge.net/projects/egroupware/&amp;hl=en&amp;adU=www.adminitrack.com&amp;adT=Online+Bug+Tracking+Tool&amp;adU=www.fastbugtrack.com/&amp;adT=Need+to+Track+Bugs+Now%3F&amp;adU=www.elementool.com&amp;adT=Elementool+Bug+Tracking&amp;adU=www.maasit.com&amp;adT=Bug+Tracking+software&amp;done=1"; 
+if (window.google_ad_request_done) { 
+google_ad_request_done(google_ads); 
+} 
+if (window.google_radlink_request_done) { 
+google_radlink_request_done(google_radlinks); 
+} 
+}

@@ -1,0 +1,17 @@
+-- vCenter Duplicate Datastore with PowerCLI
+-------------------------------------------------------
+#Connect to vCenter
+connect-viserver 172.31.16.91
+#Copy all Datastore's from the default host (mxnznpy92) to: mxnznpy93
+foreach ($datastore in (Get-vmhost mxnznpy92.methanex.com | Get-Datastore | where {$_.Type -eq "nfs" -and $_.Accessible -eq "true"})){
+  New-Datastore -vmhost mxnznpy93.methanex.com -Nfs -Name $datastore.Name -Path $datastore.RemotePath -NfsHost $datastore.RemoteHost
+} 
+#Copy all Datastore's from the default host (mxnznpy92) to: mxnznpy93
+foreach ($datastore in (Get-vmhost mxnznpy92.methanex.com | Get-Datastore | where {$_.Type -eq "nfs" -and $_.Accessible -eq "true"})){
+  New-Datastore -vmhost mxnznpy94.methanex.com -Nfs -Name $datastore.Name -Path $datastore.RemotePath -NfsHost $datastore.RemoteHost
+} 
+#Copy all Datastore's from the default host (mxnznpy92) to: mxnznpy93
+foreach ($datastore in (Get-vmhost mxnznpy92.methanex.com | Get-Datastore | where {$_.Type -eq "nfs" -and $_.Accessible -eq "true"})){
+  New-Datastore -vmhost mxnznpy95.methanex.com -Nfs -Name $datastore.Name -Path $datastore.RemotePath -NfsHost $datastore.RemoteHost
+} 
+

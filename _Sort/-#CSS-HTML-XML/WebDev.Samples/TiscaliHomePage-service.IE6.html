@@ -1,0 +1,373 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0042)http://www.tiscali.nl/helpdesk/default.asp -->
+<HTML><HEAD><TITLE>Tiscali Helpdesk</TITLE><LINK 
+href="TiscaliHomePage-service.IE6_bestanden/layout.css" type=text/css 
+rel=stylesheet><LINK href="TiscaliHomePage-service.IE6_bestanden/colors.css" 
+type=text/css rel=stylesheet>
+<SCRIPT language=JavaScript 
+src="TiscaliHomePage-service.IE6_bestanden/functions.js"></SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="TiscaliHomePage-service.IE6_bestanden/popupHandler.js" 
+type=text/javascript></SCRIPT>
+<LINK href="/gfx/4/favicon.ico" rel="SHORTCUT ICON">
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<SCRIPT language=JavaScript1.2 
+src="TiscaliHomePage-service.IE6_bestanden/functions-11-3-2002.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript1.2 
+src="TiscaliHomePage-service.IE6_bestanden/makeads.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript1.2 
+src="TiscaliHomePage-service.IE6_bestanden/usenewads.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR></HEAD>
+<BODY onresize=TisMoveAds() leftMargin=0 topMargin=5 
+onload=TisMoveAds();setScreen(); marginheight="5">
+<CENTER><IFRAME style="MARGIN-BOTTOM: 18px; WIDTH: 776px; HEIGHT: 110px" 
+marginWidth=0 marginHeight=0 
+src="TiscaliHomePage-service.IE6_bestanden/toolbar.htm" frameBorder=0 
+scrolling=no></IFRAME>
+<SCRIPT type=text/javascript>
+function getPageCoords (element) {
+  var coords = {x: 0, y: 0};
+  while (element) {
+    coords.x += element.offsetLeft;
+    coords.y += element.offsetTop;
+    element = element.offsetParent;
+  }
+  return coords;
+}
+
+var hideTimer = null;
+
+function StopTimer() {
+  if (hideTimer) {clearTimeout(hideTimer)}
+}
+
+function showVoorbeeld(inEvent,  inElement, inPhrase){
+  StopTimer();
+  inEvent = inEvent || window.event;
+  inElement = inElement || this;
+  var voorbeeld = document.getElementById("voorbeeldwaarschuwing");
+  if (!voorbeeld) {
+    var voorbeeld = document.createElement("div");
+    voorbeeld.id = "voorbeeldwaarschuwing";
+    voorbeeld.className = "voorbeeld";
+    voorbeeld.style.position = "absolute";
+    voorbeeld.style.width = "250px";
+    voorbeeld.onmouseover = StopTimer;
+    document.body.appendChild(voorbeeld);
+    voorbeeld.innerHTML = "<img src='/gfx/4/helpdesk/rasterw.gif' width=230 height=35>"
+  }
+  extrax = (inElement.width - 230)/2
+  extray = (inElement.height - 35)/2
+  with (getPageCoords(inElement)) {
+    voorbeeld.style.left = (x+extrax) + "px";
+    voorbeeld.style.top = (y+extray) + "px";
+  }
+  voorbeeld.style.visibility = "visible";
+}
+
+function hideVoorbeeld() {
+  hideTimer=setTimeout("document.getElementById('voorbeeldwaarschuwing').style.visibility = 'hidden'",25)
+}
+
+lastshown = ''
+
+function HideUnhide(id) {
+  if (lastshown!='') {
+    document.getElementById(lastshown).style.display='none'
+  }
+  if (lastshown==id) { lastshown='' }
+  else {
+   with (document.getElementById(id)) {
+    if (style.display=='none') {
+	  style.display=''
+	} else {
+	  style.display='none'
+	}
+   }
+   lastshown = id
+  }
+}
+
+function BuildImThings() {
+  var ims = document.getElementsByTagName("img");
+  for (var i=0; i < ims.length; i++){
+    if ((ims[i].width > 230) && (ims[i].height > 35)){
+      ims[i].onmouseover = showVoorbeeld;
+      ims[i].onmouseout = hideVoorbeeld;
+    }
+  }
+}
+
+function ExtraOnload(eventHandler) {
+  if (window.onload) {
+    window.onload = new Function(
+      window.onload.toString().replace(/[\r\n]/g, '').replace(/\s+$|^\s+/g, '').replace(/^function\s*\w+\s*\(\w*\)\s*\{\s*(.*)\s*\}$/,'$1\n' + eventHandler)
+    );
+  } else {
+    window.onload = new Function(eventHandler);
+  }
+}
+
+var mailafriendWindow = null;
+
+function OpenMailWindow(nodeid)
+{
+  if (mailafriendWindow != null) {
+	mailafriendWindow.close();
+	mailafriendWindow = null;
+  }
+  preferences = "left=50,top=50,toolbar=no,width=680,height=250,resizable=no,scrollbars=no";
+  mailafriendWindow = window.open("mailhandleiding.asp?id="+nodeid,"mailafriendWindow",preferences);
+}
+
+function setScreen(){
+    hasright = document.getElementById('container-RIGHT')
+    if (hasright) { mwid=468 } else { mwid=622 }
+	if(navigator.platform.indexOf('Mac')!=-1 && navigator.appName.indexOf('Explorer')!=-1){
+	
+	var html='<table class="container" border="1" cellpadding="0" cellspacing="0"><tr><td width="144" height="100%" bgcolor="#6785AA" valign="top">';
+	html+=document.getElementById('container-LEFT').innerHTML+'</td><td width="'+mwid+'" height="100%" bgcolor="#CCDFF0" valign="top">';
+	html+=document.getElementById('container-CENTER').innerHTML+'</td>';
+	if (hasright) {
+	  html+='<td width="144" height="100%" bgcolor="#E6EFF7" valign="top">'+document.getElementById('container-RIGHT').innerHTML+'</td>'
+	}
+	html+='</tr></table>';
+	document.getElementById('container').outerHTML=html;
+	}
+	
+	var HH=document.body.scrollHeight;
+	document.getElementById('container-LEFT').style.height=HH+'px';
+	document.getElementById('container-CENTER').style.height=HH+'px';
+	if (hasright) {
+  	  document.getElementById('container-RIGHT').style.height=HH+'px';
+    }
+}
+
+</SCRIPT>
+
+<DIV class="container helpdesk">
+<DIV class=chan>
+<DIV class=container-LEFT id=container-LEFT>
+<DIV class=nav>
+<DIV class=title><SPAN class="link white">Administratief</SPAN></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=3308">Tarieven</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1543">Financiële 
+informatie</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1545">ADSL 
+Orderstatus</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1547">Datalimiet</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1549">Omzetten</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1550">Verhuizen</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1548">Opzeggen</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1551">Annuleren</A></DIV>
+<DIV class=title><SPAN class="link white">Verbinding</SPAN></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1526">ADSL</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1527">Inbellen</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1628">Mobiel</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1530">Wereldwijd</A></DIV>
+<DIV class=title><SPAN class="link white">Communicatie</SPAN></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1531">E-mail</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=2657">Telefonie</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1532">News</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1533">XOIP</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1534">SMS</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1535">ByPhone</A></DIV>
+<DIV class=title><SPAN class="link white">World Wide Web</SPAN></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1536">Surfen</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1537">Eigen 
+Website</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1538">Domeinnaam</A></DIV>
+<DIV class=title><SPAN class="link white">Veiligheid</SPAN></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1539">AntiSpam</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=2656">AntiVirus</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=2999">Misbruik</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1540">Norton Internet 
+Security</A></DIV>
+<DIV class=title><SPAN class="link white">Downloaden</SPAN></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1541">Tucows</A></DIV>
+<DIV class=item><A class=link 
+href="http://www.tiscali.nl/helpdesk/service.asp?id=1542">Tiscali 
+Music</A></DIV></DIV></DIV>
+<DIV class=container-CENTER id=container-CENTER>
+<DIV class=centerpart>
+<DIV style="FLOAT: left; WIDTH: 468px; HEIGHT: 33px"><IMG height=33 
+src="TiscaliHomePage-service.IE6_bestanden/helpdesk.gif" width=468></DIV></DIV>
+<DIV class=centerpart>
+<DIV style="FLOAT: left">
+<DIV class=boxRound468 
+style="BACKGROUND: url(/gfx/4/box/468LINE_top.gif) #c3c6db"></DIV>
+<DIV style="WIDTH: 468px; BACKGROUND-COLOR: #c3c6db">
+<DIV class=boxBack468 style="BACKGROUND-COLOR: #ffffff">
+<DIV class=searchbox>
+<DIV class=text>Zoeken binnen Helpdesk:</DIV>
+<FORM action=zoek.asp method=get><INPUT type=hidden value=1 name=pageno> 
+<DIV style="FLOAT: left"><INPUT class=textfieldwhiteback 
+style="WIDTH: 200px; MARGIN-RIGHT: 10px" name=question></DIV>
+<DIV style="FLOAT: left"><INPUT type=image 
+src="TiscaliHomePage-service.IE6_bestanden/zoeken.gif" 
+value=Submit></DIV></FORM></DIV></DIV></DIV>
+<DIV class=boxRound468 
+style="BACKGROUND: url(/gfx/4/box/468LINE_bottom.gif) #c3c6db"></DIV></DIV></DIV>
+<DIV class=centerpart>
+<DIV style="FLOAT: left; WIDTH: 229px">
+<DIV class=mededelingen>
+<DIV class=Title21B style="WIDTH: 229px">Mededelingen</DIV>
+<DIV class=mtitle style="WIDTH: 229px">Welkom op de Tiscali online 
+helpdesk</DIV>
+<DIV class=mededeling>Via deze online helpdesk kunt u op een eenvoudige manier 
+zoeken naar oplossingen voor uw technische problemen en administratieve vragen. 
+<BR>Naast uitgebreide handleidingen kunt u ook gebruik maken van de veel 
+gestelde vragen.<BR>Via het navigatiemenu aan de linkerzijde van de website 
+vindt u gemakkelijk het onderwerp of ondersteuningsgebied waar u naar op zoek 
+bent. U kunt het gewenste onderwerp ook zoeken via de ingebouwde zoekfunctie. 
+Hiermee doorzoekt u met 1 druk op de knop de gehele online helpdesk op de door u 
+ingegeven zoekterm(en).<BR><BR><BR><B>Onderhoud en 
+werkzaamheden</B><BR><BR>Tiscali houdt u graag op de hoogte van de actuele 
+onderhoudswerkzaamheden. Op deze manier kunt u gemakkelijk zelf bekijken of 
+eventuele onderbrekingen in uw ADSL-verbinding het gevolg zijn van deze 
+werkzaamheden. Ook kunt u bekijken of er in de nabije toekomst werkzaamheden 
+gepland staan. Kijk voor een volledig overzicht bij de mededelingen. 
+<P></P></DIV>
+<DIV class=space5x229></DIV>
+<DIV class=arrowlink style="MARGIN-TOP: -15px"><A 
+href="http://www.tiscali.nl/helpdesk/mededelingen.asp">Alle 
+mededelingen</A></DIV>
+<DIV class=Title15B style="MARGIN-TOP: 25px; WIDTH: 229px">Teletekst</DIV>
+<DIV class=mededeling>Ook op teletekstpagina 770 van uw regionale omroep vindt u 
+de actuele mededelingen.</DIV></DIV></DIV>
+<DIV style="FLOAT: right; WIDTH: 229px">
+<DIV style="WIDTH: 229px">
+<DIV class=boxRound229 
+style="BACKGROUND: url(/gfx/4/box/229FULL_top.gif) #edeef4"></DIV>
+<DIV style="WIDTH: 229px; BACKGROUND-COLOR: #edeef4">
+<DIV class=boxBack229>
+<DIV class=faqbox>
+<DIV class=Title13B>Veel gestelde vragen</DIV>
+<DIV style="FLOAT: left">Het antwoord op veelvoorkomende helpdeskvragen, 
+onderverdeeld per dienst.</DIV>
+<DIV style="FONT-SIZE: 1px; FLOAT: left; WIDTH: 200px; HEIGHT: 10px"></DIV>
+<DIV class=arrowlink style="FLOAT: left"><A 
+href="http://www.tiscali.nl/helpdesk/faq.asp">Alle veelgestelde 
+vragen</A></DIV></DIV></DIV></DIV>
+<DIV class=boxRound229 
+style="BACKGROUND: url(/gfx/4/box/229FULL_bottom.gif) #edeef4"></DIV></DIV>
+<DIV style="FONT-SIZE: 1px; WIDTH: 229px; HEIGHT: 10px"></DIV>
+<DIV style="WIDTH: 229px" ?>
+<DIV class=boxRound229 
+style="BACKGROUND: url(/gfx/4/box/229LINE_top.gif) #c3c6db"></DIV>
+<DIV style="WIDTH: 229px; BACKGROUND-COLOR: #c3c6db">
+<DIV class=boxBack229 style="BACKGROUND-COLOR: #ffffff">
+<DIV class=handleidingbox>
+<DIV class=Title13B>Handleidingen</DIV>
+<DIV style="FLOAT: left">Stap-voor-stap instructies voor het instellen van</DIV>
+<DIV style="FONT-SIZE: 1px; FLOAT: left; WIDTH: 200px; HEIGHT: 10px"></DIV>
+<DIV class=item>
+<DIV class=ball>•</DIV><A 
+href="http://www.tiscali.nl/helpdesk/handleidingen.asp?id=1916">Inbellen</A></DIV>
+<DIV class=item>
+<DIV class=ball>•</DIV><A 
+href="http://www.tiscali.nl/helpdesk/handleidingen.asp?id=1917">ADSL</A></DIV>
+<DIV class=item>
+<DIV class=ball>•</DIV><A 
+href="http://www.tiscali.nl/helpdesk/handleidingen.asp?id=1918">E-mail</A></DIV>
+<DIV style="FONT-SIZE: 1px; FLOAT: left; WIDTH: 200px; HEIGHT: 10px"></DIV>
+<DIV class=arrowlink style="FLOAT: left"><A 
+href="http://www.tiscali.nl/helpdesk/handleidingen.asp">Alle 
+handleidingen:</A></DIV></DIV></DIV></DIV>
+<DIV class=boxRound229 
+style="BACKGROUND: url(/gfx/4/box/229LINE_bottom.gif) #c3c6db"></DIV></DIV>
+<DIV style="FONT-SIZE: 1px; FLOAT: right; WIDTH: 229px; HEIGHT: 10px"></DIV>
+<DIV style="FLOAT: left; WIDTH: 229px">
+<DIV class=boxRound229 
+style="BACKGROUND: url(/gfx/4/box/229FULL_top.gif) #edeef4"></DIV>
+<DIV style="WIDTH: 229px; BACKGROUND-COLOR: #edeef4">
+<DIV class=boxBack229>
+<DIV class=mijnabo>
+<DIV class=Title13B>Mijn abonnement</DIV>
+<DIV style="FLOAT: left">Uw abonnementsgegevens controleren en wijzigen</DIV>
+<DIV style="FONT-SIZE: 1px; FLOAT: left; WIDTH: 200px; HEIGHT: 10px"></DIV>
+<DIV class=item>
+<DIV class=ball>•</DIV><A 
+href="http://www.tiscali.nl/content/clicks/clickout.asp?id=117">Facturen 
+inzien</A></DIV>
+<DIV class=item>
+<DIV class=ball>•</DIV><A 
+href="http://www.tiscali.nl/content/clicks/clickout.asp?id=116">Mailaliassen 
+aanmaken</A></DIV>
+<DIV class=item>
+<DIV class=ball>•</DIV><A 
+href="http://www.tiscali.nl/content/clicks/clickout.asp?id=115">Extra e-mailbox 
+aanmaken</A></DIV>
+<DIV class=item>
+<DIV class=ball>•</DIV><A 
+href="http://www.tiscali.nl/content/clicks/clickout.asp?id=113">Wachtwoord 
+wijzigen</A></DIV>
+<DIV class=item>
+<DIV class=ball>•</DIV><A 
+href="http://www.tiscali.nl/content/clicks/clickout.asp?id=114">Homepage 
+activeren</A></DIV>
+<DIV style="FONT-SIZE: 1px; FLOAT: left; WIDTH: 200px; HEIGHT: 10px"></DIV>
+<DIV class=arrowlink style="FLOAT: left"><A 
+href="http://www.tiscali.nl/helpdesk/mijnabonnement.asp">Alle 
+abonnementsgegevens</A></DIV></DIV></DIV></DIV>
+<DIV class=boxRound229 
+style="BACKGROUND: url(/gfx/4/box/229FULL_bottom.gif) #edeef4"></DIV></DIV></DIV></DIV></DIV>
+<DIV class=container-RIGHT id=container-RIGHT>
+<DIV style="FLOAT: right"><!-- xxx --></DIV></DIV></DIV></DIV><!-- Begin Sitestat4 code -->
+<SCRIPT language=JavaScript1.1 type=text/javascript>
+<!--
+function sitestat(ns_l){ns_l+="&amp;ns__t="+(new Date()).getTime();ns_pixelUrl=ns_l;
+ns_0=document.referrer;
+ns_0=(ns_0.lastIndexOf("/")==ns_0.length-1)?ns_0.substring(ns_0.lastIndexOf("/"),0):ns_0;
+if(ns_0.length>0)ns_l+="&amp;ns_referrer="+escape(ns_0);
+if(document.images){ns_1=new Image();ns_1.src=ns_l;}else
+document.write('<img src="'+ns_l+'" width="1" height="1" alt="">');}
+if(document.cookie.indexOf('ns_Cfilter')!=-1)
+sitestat("http://nl.sitestat.com/tiscali/tiscali/s?default&amp;ns_channel=portal");
+//-->
+</SCRIPT>
+<!-- End Sitestat4 code --><!-- begin Tiscali teller -->
+<SCRIPT language=JavaScript 
+src="TiscaliHomePage-service.IE6_bestanden/17.htm"></SCRIPT>
+<NOSCRIPT><IMG src=""></NOSCRIPT><!-- einde Tiscali teller --><IFRAME 
+style="WIDTH: 776px; HEIGHT: 50px" marginWidth=0 marginHeight=0 
+src="TiscaliHomePage-service.IE6_bestanden/footer_2LEV.htm" frameBorder=0 
+scrolling=no></IFRAME> </CENTER><!-- BENCHMARKS
+0 sec. voor LeesEnVerwerk TrinID
+0 sec. na LeesEnVerwerk TrinID
+0 sec. vlak na include bottom-4.stm
+
+--></BODY></HTML>

@@ -1,0 +1,706 @@
+body {text-align:center;margin: 10px auto 10px auto;background-color:#FFF;width:776px;}
+body#banner {width:916px;}
+body#nobanner {width:776px;}
+#bannersize {width:916px;float:none;}
+#nobannersize {width:776px;}
+
+
+/* body {text-align:center;margin: 10px auto 10px auto;width:776px;background-color:#FFF;} */
+body,a,b,div,input,select,td, textarea {font-size:11px; font-family:arial, helvetica, sans-serif;}
+select {height:18px;}
+b {font-weight:bold;}
+a {color:#0750d9;text-decoration:none;font-weight:bold;}
+a:hover {text-decoration:underline;}
+img	{border:0px;}
+form {padding:0px; margin:0px}
+p,div {padding:0px;margin:0px;}
+.textfield {float:left;border-top:1px solid #404040;border-left:1px solid #404040;border-bottom:1px solid #FFF;border-right:1px solid #FFF;padding-left:4px;}
+.textfieldwhiteback {float:left;border-top:1px solid #404040;border-left:1px solid #404040;border-bottom:1px solid #E4E1DC;border-right:1px solid #E4E1DC;padding-left:4px;}
+
+.Title13B {font-size:13px;display:block;}
+.title15B {font-size:15px;display:block;}
+.title17B {font-size:17px;display:block;}
+.title19B {font-size:19px;display:block;}
+.Title21B {font-size:21px;display:block;}
+.Title13B, .Title15B, .Title17B, .Title19B, .Title21B {font-weight:bold;float:left;margin-bottom:5px;}
+.boxBack144	.Title13B, .boxBack144 .Title15B {width:116px;}
+.boxBack150 .Title13B, .boxBack150 .Title15B {width:122px;}
+.boxBack229 .Title13B, .boxBack229 .Title15B {width:199px;}
+.boxBack309 .Title13B, .boxBack309 .Title15B {width:281px;}
+.boxBack468 .Title13B, .boxBack468 .Title13B {width:440px;}
+
+.arrowLink {float:left;width:100%; background: url(/gfx/4/gizmos/arrow_double_link.gif) no-repeat left top;padding-left:12px;}
+.centerpart {width:468px;float:left;margin-bottom:10px;}
+.centerpart-noright {width:622px;float:left;margin-bottom:10px;}
+.spacer10H {float:left;display:block;width:10px;height:1px;background-color:#FFFFFF;}
+.spacer10V {width:144px;height:10px;background-color:#FFFFFF;font-size:1px;}
+.Dot8x8 {float:left;background: url(/gfx/4/gizmos/dot_home8x8.gif);height:8px;width:8px;margin:3px 7px 0px 0px;font-size:1px;}
+
+.ul {float:left;line-height:14px;}
+.disc {padding-left:11px;background:left url(/Gfx/4/icons/article/bullet.gif) no-repeat;background-position:0px 5px;margin-bottom:6px;}
+.dash {padding-left:10px;background:left url(/Gfx/4/icons/article/dash.gif) no-repeat;background-position:0px 7px;margin-bottom:4px}
+.noth {margin-bottom:6px}
+
+/* TABLEFAKE IN DIVS */
+.container {width:776px;height:100%;text-align:left;}
+.container-LEFT {width:144px;float:left;height:100%;}
+.container-CENTER {width:468px;margin: 0px 10px 0px 10px;float:left;height:100%;}
+.container-RIGHT {width:144px;height:100%;float:left;}
+
+.noRight .container-CENTER {width:622px;margin: 0px 0px 0px 10px;float:left;height:100%;}
+.noLeft .container-CENTER {width:776px;float:left;height:100%;}
+
+/* NAV ALGEMEEN */
+.nav {width:144px;} /* height:18px is verhuisd naar de regel hieronder, om banner lokatie te verbeteren (mozilla menu-item is pixel kleiner geworden */
+.nav .title, .nav .item {height:18px;width:144px;border-bottom:1px solid #FFF;}
+.nav .title .link, .nav .title .linkless, .nav .item .link {margin-left: 7px;padding-top:3px;margin-bottom:4px;display:block;line-height:12px}
+.nav .title .white {color:#FFF;font-weight:bold;}
+
+/* HOME (OOK ENTE HOME) */
+.enteHPMainTsr, .HPMainTsr {margin-top:-3px;height:166px;width:309px;}
+.enteHPMainTsr .container, .HPMainTsr .container {float:left;width:150px;height:116px;margin:-3px 0px 0px 9px;}
+.enteHPMainTsr .container .text, .HPMainTsr .container .text {height:98px;overflow:hidden;}
+.enteHPTsrOnly, .HPTsrOnly {float:left;width:309px;}
+.enteHPTsrOnly .ball, .HPTsrOnly .ball {float:left;width:12px;height:18px;font-size:13px;font-family:Verdana, Arial;}
+.enteHPTsrOnly a, .HPTsrOnly a {float:left;width:297px;height:18px;font-size:13px;overflow:hidden;}
+.HPTsr {width:309px;height:73px;float:left;margin: 9px 0px 9px 0px;}
+.HPTsr .image {width:97px;height:73px;float:left;margin-right:7px;overflow:hidden;}
+.HPTsr .title {width:205px;height:20px;float:left;margin-top:-2px;overflow:hidden;}
+.HPTsr .text {width:205px;height:55px;float:left;overflow:hidden;}
+
+/* OLD
+.HPADSLcheck {float:left;width:309px;background-color:#F4F4F4;height:91px;}
+.HPADSLcheck .title1 {float:left;width:159px;margin-top:0px;}
+.HPADSLcheck .title2 {float:left;width:120px;margin-top:0px;color:#AAA;font-size:10px;}
+.HPADSLcheck .container {float:left;width:283px;margin-top:10px;height:18px;}
+.HPADSLcheck .radio {float:left;width:283px;margin-top: 5px;height:18px;}
+*/
+
+.HPADSLcheck {float:left;width:309px;background-color:#F4F4F4;height:91px;}
+.HPADSLcheck DIV {float:left;}
+.HPADSLcheck .title1 {width:159px;margin-top:0px;}
+.HPADSLcheck .title2 {width:120px;margin-top:0px;color:#2B2B2B;font-size:10px;}
+.HPADSLcheck .container {width:283px;margin-top:6px;height:18px;}
+.HPADSLcheck .radio {width:283px;margin-top:2px;height:20px;}
+.HPADSLcheck .bottomOption {width:309px;height:23px;border-top:1px solid #FFF;padding-top:1px;background-color:#EAEAEA;}
+.HPADSLcheck .bottomOption .text {height:18px;margin-top:3px;margin-left:5px;}
+
+
+
+.HPtitle {float:left;width:101px;height:14px;font-weight:bold;background-color:#FFFFFF;text-transform: uppercase;}
+.HPlink {float:left;height:13px;margin-top:5px;width:113px;overflow:hidden;}
+.HPWeerVerkeer {margin:-3px 0px -2px 0px;width:137px;text-align:center;color:#D00;float:left}
+.HPprodSpace {float:left;height:100px;width:304px}
+.HPprod {width:144px;float:left;height:43px;}
+.HPprod .links {display:block;margin-left:25px;height:18px}
+.HPprodDom {width:289px;height:46px;float:left;padding-left:13px;}
+.HPdiensten {width:130px;height:43px;float:left;overflow:hidden;}
+.HR309 {float:left;height:5px;width:309px;border-bottom:1px solid #F4F4F4;font-size:1px;margin-bottom:5px;}
+
+/* OVER TISCALI */
+.overtiscali p {margin-bottom:18px;}
+
+.vacatures {float:left;width:468px;background-color:#F4F4F4;border:1px solid #D6D6D6;}
+.vacatures .spacer {float:left;height:18px;width:438px;}
+.vacatures .subtitle {float:left;font-weight:bold;font-style:italic;height:24px;width:440px;}
+
+.contact .spacer, .contact I, .contact .info {float:left;width:440px;}
+.contact .info .column {float:left;width:215px;}
+.contact .spacer {height:25px;}
+.contact .title {width:440px;background-color: #EDECEC;height:22px;padding-top:2px;font-size:13px;display:block;float:left;font-weight:bold;margin-bottom:3px;}
+
+/* MAIN TEASER */
+.Mainteaser .image {float:left;width:159px;height:114px;}
+.Mainteaser .container {float:right;width:309px;height:100px;margin-top:-2px;}
+.Mainteaser .container .title {font-size:16px;font-weight:bold;} /*line-height:auto verwijderd*/
+.Mainteaser .container .text {line-height:13px;margin:4px 0px 4px 0px;}
+.Mainteaser .fotovideo {float:right;width:309px;height:40px;}
+.Mainteaser .link {margin-top:2px;font-weight:bold;}
+
+/* BOX NORMAL */
+.boxNormal144 {width:144px;}
+.boxNormal150 {width:150px;}
+.boxNormal229 {width:229px;}
+.boxNormal309 {width:309px;}
+.boxNormal468 {width:468px;}
+
+.boxNormalBack144 {width:114px;}
+.boxNormalBack150 {width:128px;}
+.boxNormalBack229 {width:201px;}
+.boxNormalBack309 {width:281px;}
+.boxNormalBack468 {width:440px;}
+.boxNormalBack144, .boxNormalBack150, .boxNormalBack229, .boxNormalBack309, .boxNormalBack144, .boxNormalBack468 {margin:13px;}
+
+/* BOX NORMAL CONTENT */
+/* >>>>>>>>>> LET OP: Als je content voor een nieuwe BOXNORMAL aanmaakt altijd in het rijtje hieronder opnemen om de margins te zetten!!! ////////*/
+.teaserListPics, .teaserOranje, .teaserSport {padding-left:13px;padding-right:13px;padding-top:10px;padding-bottom:15px;}
+.teaserListPics .title {font-size:15px;width:203px;font-weight:bold;margin-bottom:-3px;}
+.teaserListPics .teaser {width:203px;height:36px;overflow:hidden;text-align:left;margin-top:13px;}
+.teaserListPics .teaser	.image {float:left;width:54px;height:36px;}
+.teaserListPics .teaser	.text {float:left;width:142px;height:36px;line-height:12px;margin-top:-1px;}
+	
+.teaserOranje, .teaserSport {height:128px;overflow:hidden;padding-top:15px;}
+.teaserOranje .teaser, .teaserSport .teaser {height:95px;overflow:hidden;margin-bottom:18px;}
+.teaserOranje .text, .teaserSport .text	{float:left;line-height:14px;}
+
+/* >>>>>>>>>> BOX ROUND <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.boxRound144 {width:144px;}
+.boxRound150 {width:150px;}
+.boxRound229 {width:229px;}
+.boxRound304 {width:304px;}
+.boxRound309 {width:309px;}
+.boxRound468 {width:468px;}
+.boxRound622 {width:622px;}
+.boxRound144, .boxRound150, .boxRound229, .boxRound304, .boxRound309, .boxRound468, .boxRound622 {height:10px;display:block;font-size:1px;}
+
+.boxBack144	{width:142px;}
+.boxBack150	{width:148px;}
+.boxBack229	{width:227px;}
+.boxBack304	{width:302px;}
+.boxBack309	{width:307px;}
+.boxBack468	{width:466px;}
+.boxBack622	{width:620px;}
+.boxBack144, .boxBack150, .boxBack229, .boxBack304, .boxBack309, .boxBack144, .boxBack468, .boxBack622 {margin-left:1px;}
+
+
+/* BOX ROUND CONTENT */
+/* >>>>>>>>>> LET OP: Als je content voor een nieuwe BOXROUND aanmaakt altijd in het rijtje hieronder opnemen om de margins te zetten!!! */
+.subchan .teaseronly, .chan .teaseronly, .subchan .teaserWeer, .teaserVideo, .teaserVerkeer, .teaserPoll, .teaserSubchan, .teaserVirus, .teaserReviews, .teaserSitevandedag, .teaserDownloads, .teaserColumns, .teaserGames, .teaserDownloadSmall, .teaserWeekendmilj, .teaserSpelReview, .teaserGsmGame, .walliecontent, .teaserMovies, .teaserMobiel-1, .teaserGSMweb, .teaserKleurenlogos, .teaserGSMgames, .teaserOverig, .teaserSportSectie, .teaserSportart, .teaserMusicClub, .teaserAlgRight, .teaserRightWeer, .HPleft, .teaserOpsporing, .RightLinkList, .finanindeces, .datingbox, .horoscoop, .marktplaats, .contact, .route, .padding  {margin-left:13px;margin-right:13px;}
+
+.subchan .teaserOnly, .chan .teaserOnly {height:112px;width:277px;overflow:hidden;font-weight:bold;line-height:18px;} /****** LET OP: WIDTH is alleen toegevoegd om MAC ie5.0 en 5.2 bug te ondervangen, anders overbodig ******/
+/* .subchan .teaserOnly {height:110px;width:307px;overflow:hidden;font-weight:bold;line-height:18px;margin-top:-3px;} *** subchan teaseronlyblok zonder border ***/
+.teaserOnly .teaser	{text-align:left;}
+
+.teaser150Los {height:86px;margin-left:13px;margin-right:13px;}
+.teaser150Los .content {line-height:12px;height:50px;width:122px;float:left;overflow:hidden;margin-bottom:1px;}
+
+.RightLinklist .text {width:115px;overflow:hidden;margin-bottom:7px;line-height:12px;}
+
+/*bottomlinks*/
+.box {float:left;height:40px;text-align:center;background-color:#ECEAF4;}
+.w150 {width:150px;}
+.w144 {width:144px;}
+.spacertop {float:left;height:8px;font-size:1px;}
+.spacerleft {float:left;width:13px;height:24px;}
+.linkbox {float:left;height:24px;text-align:center;overflow:hidden;}
+.w122 {width:122px;}
+.w116 {width:116px;}
+
+/*opsporing*/
+.teaserOpsporing {width:116px;height:260px;}
+.teaserOpsporing .image {float:left;margin: 5px 0px 5px 0px;height:88px;width:116px;overflow:hidden;}
+.teaserOpsporing .text {float:left;height:70px;width:116px;overflow:hidden;}
+
+.archOpsporing {width:468px;line-height:17px;float:left;}
+.archOpsporing .item{width:468px;height:17px;overflow:hidden;}
+
+.artOpsporing {float:left;display:block;margin-bottom:18px;width:468px;float:left;}
+.artOpsporing img {margin:0px 7px 7px 0px;float:left;}
+.artOpsporing .subtitle {font-size: 13px;font-weight:bold;margin-bottom:5px;}
+
+/*nieuws*/
+.teaserWeer {height:86px;}
+.teaserWeer .item {width:58px;height:47px;}
+.teaserWeer .subtitle {width:52px;height:13px;}
+.teaserWeer .degrees {float:left;width:16px;height:25px;margin:8px 0px 0px 4px;float:left;}
+
+.teaserRightWeer {width:116px;height:265px;}
+.teaserRightWeer .item {width:50px;margin-bottom:5px;}
+.teaserRightWeer .itemtitle {margin-bottom:-1px;}
+.teaserRightWeer .itemimg {margin-right:2px;vertical-align: middle;}
+
+.teaserVideo {width:120px;height:112px;}
+.teaserVideo .image	{float:left;width:53px;height:48px;margin-top:1px;overflow:hidden;}
+.teaserVideo .text {text-align:left;width:120px;height:75px;float:left;line-height:14px;overflow:hidden;}
+.teaserVideo .view {float:left;width:120px;font-weight:bold;margin-top:2px;}
+
+.teaserSubchan {width:199px;} /* >>>>>> LET OP: WIDTH + HEIGHT zijn alleen toegevoegd om MAC ie5.0 en 5.2 bug te ondervangen, anders overbodig <<<<< */
+.teaserSubchan p {height:14px;}
+.teaserSubchan .teaser {height:93px;overflow:hidden;}
+.teaserSubchan .text {float:left;line-height:14px;}
+
+.teaserVerkeer {height:81px;}
+.teaserVerkeer .text .static {float:left;width:68px;height:27px;color:#000000;}
+.teaserVerkeer .text .dynamic {float:right;width:45px;height:27px;color:#CC0000;}
+.teaserVerkeer .view {float:left;line-height:13px;height:24px;margin-top:11px;}
+
+.teaserPoll	{width:117px;height:300px;}
+.teaserPoll .title {font-weight:bold;margin-bottom:10px;}
+.teaserPoll .answer {float:left;margin-bottom:6px;}
+.teaserPoll .answer .radio {float:left;height:20px;width:19px;margin:-1px 3px 0px -5px;}
+.teaserPoll .answer .text {float:right;height:auto;width:96px;}
+
+.teaserVirus {width:120px;height:86px;}
+.teaserVirus img {width:40px;height:33px;float:left;margin-right:5px;}
+.teaserVirus .title	{width:75px;height:33px;font-size:13px;font-weight:bold;line-height:13px;float:left;}
+.teaserVirus .text {float:left;height:14px;width:120px;margin-bottom:4px;margin-top:6px;}
+
+/*internet*/
+.teaserReviews {height:214px;}
+.teaserReviews .review {width:280px;height:22px;float:left;}
+.teaserReviews .review .partOne {float:left;height:15px;font-size:15px;font-weight:bold;margin-right:3px;}
+.teaserReviews .review .partTwo {float:left;height:15px;font-size:13px;font-style:italic;margin-top:1px;}
+.teaserReviews .title {float:left;height:19px;}
+.teaserReviews .text {float:left;height:40px;width:280px;line-height:14px;margin-top:-2px;overflow:hidden;}
+.teaserReviews .links {float:left;height:14px;margin-top:4px;}
+.teaserReviews .spacer {float:left;height:15px;width:280px;}
+
+.teaserSitevandedag	{height:214px;width:123px;}
+.teaserSitevandedag .site .partOne {float:left;height:15px;font-size:15px;font-weight:bold;margin-right:3px;}
+.teaserSitevandedag .site .partTwo {float:left;height:15px;font-size:13px;font-style:italic;margin-top:1px;}
+.teaserSitevandedag img	{float:left;width:122px;height:93px;margin: 8px 0px 8px 0px}
+.teaserSitevandedag .container {float:left;width:123px;height:61px;overflow: hidden}
+.teaserSitevandedag .container .text {float:left;width:123px;height:39px}
+.teaserSitevandedag .links {float:left;width:123px;height:14px;margin-top:10px;}
+
+.teaserDownloads {width:116px;height:395px;}
+.teaserDownloads .item {float:left;width:116px;margin-top:12px;}
+.teaserDownloads .item a {margin-bottom:5px;}
+.teaserDownloads .tucows {background: #FFFFFF url(/gfx/4/actueel/cmult/tucows.gif);width:116px;height:54px;float:left;margin-top:12px;}
+.teaserDownloads .tucows .content {width:50px;height:54px;margin-left:64px;padding-top:21px;}
+
+.teaserColumns {width:116px;height:269px;}
+.teaserColumns .item {float:left;width:116px;margin-top:10px;}
+.teaserColumns .item a {margin-bottom:5px;}
+
+.teaserAntivirus {height:114px;margin-left:3px;margin-right:13px;}
+.teaserAntivirus img {float:left;width:72px;height:114px;}
+.teaserAntivirus .content {float:right;}
+.teaserAntivirus .content .text	{width:123px;}
+.teaserAntivirus .content .text a {float:left;width:123px;height:25px;position:relative;top:5px;}
+
+/*mobiel*/
+.teaserMobiel-1, .teaserGSMweb, .teasermaakkleurenlogo {height:122px;}
+
+.teaserMobiel-1 .text b {display:block;margin-bottom:5px;}
+.teaserMobiel-1 .text a {display:block;}
+
+.teasermaakkleurenlogo {width:148px;background:url(/gfx/4/diensten/cmobi/create_logo.jpg) #FFF no-repeat;background-position:11px 2px;}
+.teasermaakkleurenlogo a {margin: -2px 13px 0px 13px;display:block;}
+
+.teaserGSMweb b, .teaserGSMweb .text, teaserGSMweb .logo, .teaserGSMweb .links {display:block;float:left;}
+.teaserGSMweb b {margin-bottom:3px;width:70px;}
+.teaserGSMweb img {float:left;width:29px;height:70px;margin:4px 9px 0px 0px;}
+.teaserGSMweb .links {margin-bottom:12px;}
+.teaserGSMweb .text {height:50px;width:83px;margin-top:7px;}
+.teaserGSMweb .logo{font-size:12px;font-weight:bold;}
+
+.topten {float:left;text-align:left;width:150px;}
+.topten .small-header {float:right;margin-bottom:7px;height:14px;}
+.topten .small-header b {font-size:11px;text-align:left;font-weight:normal;}
+.topten .small-header img {vertical-align:bottom;}
+.topten .textbox {float:left;}
+.topten .row {float:left;width:150px;height:15px;margin-bottom:2px;overflow:hidden;}
+.topten .row .rank, .topten .row .rank:active, .topten .row .rank:link, .topten .row .rank:visited {float:left;width:15px;margin-right:5px;padding-left:1px;height:15px;background:url(/gfx/4/diensten/cmobi/number_bck.gif) #E9E9E9 no-repeat left;text-align:center;color:#000;}
+.topten .row .rank:hover {background:url(/gfx/4/diensten/cmobi/number_bck.gif) #0750D9 no-repeat left;text-align:center;color:#FFF;text-decoration:none;}
+
+.search-box {float:left;width:309px;height:45px;background-color:#F4F4F4; margin-top:12px;}
+.search-box .textfield {margin:13px 6px 0px 13px; width:155px;}
+.search-box .image {float:right;margin-top:12px;margin-right:12px;}
+
+.sms-left {float:left;width:215px;text-align:left;}
+.sms-left .sms-arrows {width:107px;height:51px;float:left;margin-top:10px;}
+.sms-left .sms-arrows .arrow {float:left;width:107px;height:15px;font-weight:normal;background: url(/gfx/4/diensten/cmobi/arrow.gif)  no-repeat left;padding-left:20px;margin-bottom:2px;}
+.sms-right {float:right;width:137px;text-align:left;}
+
+.teaserKleurenlogos {width:116px;height:293px;}
+.teaserKleurenlogos .left {float:left;margin-top:10px}
+.teaserKleurenlogos .right {float:right;margin-top:10px}
+.teaserKleurenlogos .small {width:116px;height:118px}
+
+.logos {float:left;text-align:left;width:129px;height:160px;padding-left:8px;}
+.logos .subheader {float:left;margin-bottom:8px;height:20px;}
+.logos .row {float:left;width:129px;height:16px;margin-bottom:4px;}
+.logos .row .rank2 {float:left;width:15px;margin-right:5px;height:15px;background:url(/gfx/4/diensten/cmobi/number_grnbck.gif) #EAF7E2 no-repeat left;text-align:center;}
+
+.teaserGSMgames {height:122px;}
+
+/*games*/
+.teaserGsmGame {width:116px;height:130px;}
+.teaserGsmGame img {float:left;margin-top:5px;margin-bottom:5px;}
+
+.teaserSpelReview {width:116px;height:250px;}
+.teaserSpelReview .item	{float:left;width:116px;margin-top:8px;}
+.teaserSpelReview .item a {float:left;margin-bottom:4px;}
+
+.teaserWeekendmilj {height:265px;}
+.teaserWeekendmilj img {float:left;margin-top:10px;margin-bottom:17px;}
+
+.teaserDownloadSmall {width:120px;height:86px;}
+.teaserDownloadSmall .title {height:19px;font-size:13px;font-weight:bold;float:left;}
+.teaserDownloadSmall .item a {float:left;width:120px;line-height:17px;}
+
+.teaserGames {height:182px;}
+.teaserGames .title	{font-size:15px;width:120px;font-weight:bold;margin-bottom:-3px;}
+.teaserGames .teaser {width:120px;height:36px;overflow:hidden;text-align:left;margin-top:13px;}
+.teaserGames .teaser .image {width:39px;height:36px;float:left;}
+.teaserGames .teaser .text {font-size:13px;width:72px;height:36px;float:right;line-height:12px;}
+
+/*finance*/
+.finanindeces {height:565px;}
+.finanindeces .indece {float:left;margin-left:2px;margin-bottom:20px;}
+
+/*photovote*/
+.photocontainer {float:left;width:309px;background-color:#FCEBF2;height:640px;}
+.photocontainer .spacing {margin: 15px 0px 13px 13px;}
+.photocontainer .spacing .vote {margin-left:-10px;width:305px;height:41px;}
+.photocontainer .spacing .photo {width:283px;overflow:hidden;margin-bottom:12px;}
+.photocontainer .spacing .attend {float:left;width:283;background: url(/gfx/4/gizmos/arrow_double_link.gif) no-repeat left top;padding-left:12px;}
+.tabselect {float:right;width:159px;background-color:#FCEBF2;height:47px;border-bottom:1px solid #FFFFFF;}
+.tabunselect {display:block;float:right;width:150px;background-color:#F0F0F0;height:47px;margin-right:4px;border-bottom:1px solid #FFFFFF;}
+.tabtitle {margin: 8px 0px 0px 18px;font-size:13px;display:block;height:15px;width:120px;font-weight:bold;overflow:hidden;}
+.tabsubtitle {margin-left:18px;height:13px;width:120px;overflow:hidden;}
+.rightspace {float:left;width:150px;height:10px;margin-left:8px;}
+.loginlink {float:left;background: url(/gfx/4/gizmos/arrow_double_link.gif) no-repeat left top;padding-left:12px;}
+
+/*showbiz OLD*/
+.teaserMovies {height:100px;}
+.teaserMovies .teaser {width:200px;height:95px;overflow:hidden;text-align:left;padding-top:4px;}
+.teaserMovies .teaser .title {font-size:13px;width:109px;font-weight:bold;margin-bottom:3px;}
+.teaserMovies .teaser .image {width:81px;height:75px;float:left;}
+.teaserMovies .teaser .text	{overflow:hidden;height:75px;width:109px;float:right;margin-left:10px;}
+
+.teaserAlg {width:460px;height:80px;float:left;}
+.teaserAlg .image {width:50px;overflow:hidden;float:left;}
+.teaserAlg .text {width:400px;float:right;margin-bottom:10px;}
+
+.teaserMusicClub {height:285px;}
+.teaserMusicClub  img {float:left;margin-top:10px;}
+.teaserMusicClub input{margin:0px 0px 5px 0px; width:116px;}
+
+.teaserAlgRight {height:92px;}
+.teaserAlgRight .image {float:left;width:48px;height:45px;margin-top:1px;}
+.teaserAlgRight .text {text-align:left;width:62px;height:50px;float:right;line-height:12px;margin-left:6px;overflow:hidden;}
+
+/*showbiz NEW*/
+.film {width:122px;height:234px}
+.film DIV {float:left;}
+.film .spacer {width:122px;height:4px;font-size:1px;}
+.film .image {width:47px;height:36px;margin-right:7px;margin-bottom:13px;}
+.film .title {width:68px;height:36px;font-size:15px;font-weight:bold;margin-bottom:13px;}
+.film .content {width:122px;height:155px;border-top:1px solid #000;border-bottom:1px solid #000;margin-bottom:10px;}
+.filmTitle {font-size:12px;font-weight:bold;width:122px;height:30px;line-height:14px;overflow:hidden;}
+.filmChannel {color:#6E6E6E;width:122px;height:12px;overflow:hidden;}
+.film .Line {font-size:1px;width:122px;height:5px;border-bottom:1px solid #C5C5C5;margin-bottom:3px;}
+
+.topmovies {width:116px;height:234px}
+.topmovies DIV {float:left}
+.topmovies .item {width:116px;height:36px;overflow:hidden;}
+.topmovies .spacer {width:116px;height:4px;font-size:1px;}
+.topmovies .number {width:15px;height:28px;font-weight:bold;text-align:right;margin-right:3px;}
+.topmovies .text {width:93px;height:26px;overflow:hidden;}
+
+/*dating*/
+.datingbox {height:290px;}
+.datingbox .text, .datingbox .pulldown {float:left;height:17px;margin-bottom:8px;}
+.datingbox .text {width:60px}
+.datingbox .pulldown {width:56px;text-align:right}
+.datingbox .image {float:left;width:122px;height:93px;}
+.datingbox .link  {float:left;width:122px;height:27px;overflow:hidden}
+
+.horoscoop {height:290px;}
+.horoscoop .title {float:left;height:18px;width:253px;display:block;margin-bottom:7px;}
+.horoscoop .teaser {float:left;height:106px;width:280px}
+.horoscoop .teasertitle {display:block;font-size:13px;float:left;height:22px;width:145px;}
+.horoscoop .teaserimage {float:right;height:93px;width:122px;}
+.horoscoop .teasertext {float:left;height:71px;width:145px;overflow:hidden;}
+.horoscoop .links {width:122px;height:110px;line-height:16px;font-size:13px;}
+
+
+/*reizen*/
+.reizensearch {height:234px}
+.reizensearch div {float:left;}
+.reizensearch .row {width:281px;height:27px;}
+.reizensearch .row .first {width:78px;}
+.reizensearch .row .second {width:153px;}
+.reizensearch .row .third {width:50px;text-align:right;}
+
+.reizen .standard div {float:left;overflow:hidden;}
+.reizen .standard {height:234px;}
+.reizen .standard .image {height:93px;margin-bottom:7px;}
+.reizen .standard .w144 {width:116px;}
+.reizen .standard .w150 {width:122px;}
+.reizen .standard .title {height:32px;margin-bottom:6px;}
+.reizen .standard .textH71 {height:71px;margin-bottom:6px;}
+.reizen .standard .textH84 {height:84px;}
+.reizen .standard .more {height:15px;}
+
+.lastminute {height:35px}
+.lastminute .city {height:17px;margin-left:4px;margin-top:2px;}
+.lastminute .price {height:13px;margin-left:4px;}
+
+.vacanceselect {width:133px;height:202px;}
+.vacanceselect .pulldowntitle {width:133px;height:14px;}
+.vacanceselect select {width:133px;height:18px;margin-bottom:8px;}
+.vacanceselect select:focus {background-color:#FFE0B4;}
+
+.reizenDatum {float:left;width:19px;height:19px;text-align:center;}
+.reizenDatum .Dag {float:left;width:19px;height:19px;color:#FFF;text-align:center;margin-top:2px;}
+.reizenDatum .item {float:left;width:19px;height:19px;margin-top:2px;}
+.reizenDatum .item:hover {float:left;background-color:#FFE0B4;text-decoration:none;}
+
+.reizen .eindbestemming {width:360px;height:400px;background-color:#E6EFF7}
+.reizen .eindbestemming DIV {float:left;}
+
+.vakantiepartners {height:119px;}
+.vakantiepartners div {float:left;}
+
+
+/* sport */
+.teaserADSL {width:144px;height:231px;}
+
+.teaserOverig {height:351px;}
+.teaserOverig .item {width:200px;float:left;height:73px;overflow:hidden;}
+.teaserOverig a {display:block;margin-bottom:3px;line-height:13px;}
+.teaserOverig .spacer {float:left;width:200px;height:10px;font-size:1px;}
+
+/* euro2004 */
+.galerycenter {width:120px;height:86px;}
+.galerycenter .image {float:left;width:48px;height:36px;margin-top:3px;}
+.galerycenter .text {margin-top:3px;text-align:left;width:65px;height:45px;float:right;line-height:12px;margin-left:3px;overflow:hidden;}
+
+.backgrteaser {width:122px;height:86px;background: url(/gfx/4/actueel/euro2004/radiojback.gif);}
+.backgrteaser .text {float:right;line-height:12px;width:70px;height:51px;overflow:hidden;}
+
+.euroblok {width:229px;float:left;height:90px;background: url(/gfx/4/actueel/euro2004/229x90_mindgame.gif);}
+.euroblok .topper {float:left;height:65px;width:190px;}
+.euroblok .speellink {margin-left:13px;width:190px;}
+
+.teaserschema {height:69px;margin-left:13px;margin-right:13px;}
+.teaserschema .text {float:left;width:199px;overflow:hidden;}
+
+.europoule {height:385px;}
+.europoule .group {float:left;height:90px;width:115px;}
+.europoule .group .title {float:left;height:15px;width:115px;margin-bottom:1px;}
+.europoule .group .country {float:left;height:15px;width:80px;margin-bottom:3px;overflow:hidden;}
+.europoule .group .flag {float:left;height:15px;width:21px;margin-bottom:3px;overflow:hidden;}
+
+/* actueel-cspor-includes-content-deal-l-b */
+.teaserTennis {height:80px;width:144px;}
+/* actueel-cspor-includes-content-deal-l-b-2 */
+.teaserShop {height:62px;text-align:center;}
+.teaserShop .text {padding-top:25px;}
+
+.teaserSportSectie {height:68px;}
+.teaserSportSectie .image {float:left;height:41px;width:45px;}
+.teaserSportSectie .text {float:left;width:61px;height:41px;overflow:hidden;line-height:12px;margin-left:8px;}
+
+.teaserSportart {height:65px;}
+
+/* wallie */
+.walliecontent .titleimg {width:110px;height:19px;float:left}
+.walliecontent .text {font-size:11px;text-align:left}
+
+/* printarticle */
+.printart {width:600px;}
+.printart .header {background-color:#FFFFFF;width:600px;height:39px;text-align:left;}
+.printart .image {float:right;margin: 0px 0px 10px 20px;}
+.printart p {margin-bottom:20px;}
+
+/* photogalery */
+.photogal {width:468px;height:540px;}
+.photogal .image {overflow:hidden; width:440px;}
+.photogal .header {background-color:#FFFFFF;height:39px;text-align:left;}
+
+/* ARTICLE */
+.articleleft {width:229px;float:left;margin-top:-3px;}
+.articleleft p {margin:0px 0px 20px 0px;font-weight:normal;}
+
+/* article zonder right */
+.articleFULL {width:468px;float:left;margin-top:-3px;}
+.articleFULL p {margin:0px 0px 20px 0px;font-weight:normal;}
+
+.articletop .title {font-size:20px;font-weight:bold;margin:24px 0px 24px 0px;}
+.articletop .date {width:468px;height:20px;font-size:12px;margin-bottom:24px;}
+
+.articleright {width:229px;float:right;}
+
+.articleright .image {width:229px;height:175px;float:right;overflow:hidden;}
+.articleright .imagetext {width:229px;height:27px;float:right;font-size:10px;line-height:11px;margin-bottom:5px;}
+
+.articleright .printandmail	{width:229px;height:28px;background-color:#EDECEC;float:right;}
+.articleright .printandmail .item {float:left;font-weight:bold;margin-top:-4px;}
+.articleright .printandmail .item .link {float:left;margin-left:5px;}
+.articleright .printandmail .item .icon	{float:left;}
+
+.articleright .additional {font-size:17px;font-weight:bold;width:229px;height:18px;float:right;margin-top:15px;}
+
+.articleright .videophoto {float:right;width:229px;height:70px;background-color:#FFFFFF;}
+.articleright .videophoto .spacer {float:left;width:9px;height:10px;}
+.articleright .videophoto .item	{float:left;width:110px;height:56px;margin-top:11px;text-align:left;}
+.articleright .videophoto .item .title {float:left;width:110px;height:20px;font-weight:bold;font-size:14px;}
+.articleright .videophoto .item .image {float:left;width:54px;height:36px;}
+.articleright .videophoto .item .link {float:right;width:56px;height:36px;overflow:hidden;line-height:12px;}
+
+.articleright .related {width:229px;float:right;margin-bottom:2px;margin-top:10px;}
+.articleright .related .title {width:229px;height:20px;float:right;font-weight:bold;font-size:15px;background-color:#FFFFFF;margin-top:5px;}
+.articleright .related .greyborder {border-bottom:1px solid #EDEBEC;}
+.articleright .related .teaser {width:229px;height:45px;float:right;margin-top:7px;}
+.articleright .related .teaser .image {float:left;width:54px;height:36px;}
+.articleright .related .teaser .link {float:left;width:175px;height:36px;overflow:hidden;line-height:12px;}
+
+.articleright .more	{width:229px;height:100%;background-color:#EDECEC;float:left;}
+.articleright .more .links {margin:10px 13px 0px 13px;}
+.articleright .more .links .title {font-size:13px;font-weight:bold;margin-bottom:9px;}
+.articleright .more .links .link {padding-left:13px;line-height:12px;text-align:left; margin:0px 11px 13px 0px;background: url(/gfx/4/gizmos/arrow_double_link10.gif) no-repeat top left}
+.articleright .more .links .link a {margin-bottom:30px;}
+
+
+
+.SMSContainer			{float: left; width: 370px; margin-left: 0px;}
+.SMSDefaultWhite			{float: left; width: 370px; background-color: #FFFFFF; margin-bottom: 3px; font-size: 13px;}
+.SMSDefaultLightGreen		{float: left; width: 370px; background-color: #EAF7E2; margin-bottom: 3px; font-size: 13px;}
+.SMSDefaultLightGrey		{float: left; width: 370px; background-color: #EDECEC; margin-bottom: 3px; font-size: 13px;}
+.SMSDefaultGreen			{float: left; width: 370px; background-color: #D4EEC5; margin-bottom: 3px; font-size: 13px;}
+.SMSForm				{margin: 0px; padding: 0px; border: 0px;}
+
+.SMSSpacingSmall			{float: left; height: 14px; width: 360px; font-size: 10px;}
+.SMSSpacingBig			{float: left; height: 20px; width: 360px; font-size: 10px;}
+.SMSPageHeader			{float: left; height: 23px; width: 370px; font-size: 15px; font-weight: bold; border-bottom: solid 1px #000;}
+.SMSBlockTitle			{float: left; height: 20px; width: 370px; font-size: 13px; font-weight: bold;}
+
+.SMSContentRow			{float: left; height: 18px; width: 370px; padding: 4px 4px 4px 8px; font-size: 13px;}
+.SMSContentCounterColumn	{float: left; width: 10px; margin-right: 5px; font-weight: bold;}
+.SMSContentNameColumn		{float: left; width: 150px; font-size: 13px;}
+.SMSContentNameColumn A 	{color:#0750d9;text-decoration:none;font-weight:bold; font-size: 13px;}
+.SMSContentNumberColumn		{float: left; width: 100px; font-size: 13px;}
+.SMSButtonRight			{float: right; height: 18px; width: 85px;}
+
+.SMSContentRow DIV,
+.SMSContentRow INPUT,
+.SMSDefaultWhite P		{font-size: 13px;}
+
+/*INPUT					{height: 18px;}*/
+.SMSContentBlock			{float: left; width: 370px; padding: 4px 4px 4px 13px; font-size: 13px;}
+
+/* >>>>>>>>>>>>> SERVICECENTRE <<<<<<<<<<<<<<< */
+
+/* PRODUCTSTART */
+.mededelingen {float:left;width:229px;}
+.mededelingen .mtitle {font-size:15px;display:block;font-weight:bold;float:left;}
+.mededelingen .mtitle:first-line {font-size:11px;display:block;float:left;text-decoration:none;font-weight:bold;}
+.mededelingen .mededeling {float:left;width:229px;overflow:hidden;margin-bottom:20px;}
+.faqbox {height:90px;margin-left:13px;margin-right:13px;}
+.handleidingbox {height:135px;width:200px;margin-left:13px;margin-right:13px;}
+.handleidingbox .ball {float:left;width:12px;height:15px;font-size:13px;font-family:Verdana, Arial;}
+.handleidingbox .item {float:left;width:200px;}
+.mijnabo {height:160px;margin-left:13px;margin-right:13px;}
+.mijnabo .ball {float:left;width:12px;height:15px;font-size:13px;font-family:Verdana, Arial;}
+.mijnabo .item {float:left;width:200px;}
+
+/* FREQUENTLY ASKED QUESTIONS */
+.faqfoldbox {float:left;width:468px;margin-bottom:10px;}
+.faqfoldbox .questionbar {background-color:#D4EEC5;padding: 5px 8px 5px 8px;}
+.faqfoldbox .questionbar .qspacing {width:452px;}
+.faqfoldbox .answerbar {float:left;width:468px;background-color:#EAF7E2;}
+.faqfoldbox .answerbar .aspacing {width:432px;margin: 5px 18px 5px 18px;overflow:hidden;}
+.morefaq {float:left;width:468px;margin-top:10px;margin-bottom:13px;}
+.specify {width:468px;margin-top:10px;margin-bottom:13px;}
+.specify .text {float:left;width:468px;height:18px;}
+.specify .dropdown {float:left;width:150px;}
+.specify .spacer {float:left;display:block;width:10px;height:1px;}
+
+.space5x229 {float:left;font-size:1px;width:229px;height:5px;background-color:#FFFFFF;}
+.space10x229 {float:left;font-size:1px;width:229px;height:10px;background-color:#FFFFFF;}
+.space1x468 {float:left;font-size:1px;width:468px;height:1px;background-color:#FFFFFF;}
+.space3x468 {float:left;font-size:1px;width:468px;height:3px;background-color:#FFFFFF;}
+.space10x468 {float:left;font-size:1px;width:468px;height:10px;background-color:#FFFFFF;}
+.space1x622 {float:left;font-size:1px;width:622px;height:1px;background-color:#FFFFFF;}
+.space3x622 {float:left;font-size:1px;width:622px;height:3px;background-color:#FFFFFF;}
+
+.remainsubj {width:468px;float:left;margin-bottom:10px;}
+.remainsubj .subjcontain {width:150px;float:left;}
+.remainsubj .subjcontain .subjitem {width:150px;float:left;height:16px;}
+.remainsubj .subjcontain .subjitem .ball {float:left;width:12px;font-size:13px;font-family:Verdana, Arial;}
+
+/* PRODUCT */
+.468tekst {float:left;width:468px;}
+.468tekst .text {float:left;width:468px;margin-bottom:5px;}
+.468tekst .item {width:468px;float:left;height:16px;}
+.468tekst .item .ball {float:left;width:12px;font-size:13px;font-family:Verdana, Arial;}
+
+.468tekst {float:left;width:468px;}
+.468tekst .text {float:left;width:468px;margin-bottom:5px;}
+
+.aboinstel {margin-left:13px;margin-right:13px;height:140px;}
+.aboinstel .item {width:200px;float:left;height:18px;}
+.aboinstel .ball {float:left;width:10px;font-size:13px;font-family:Verdana, Arial;}
+.aboinstel .fillin {float:left;width:200px;height:18px;}
+
+.overigeond {margin-left:13px;margin-right:13px;height:140px;}
+
+/* SEARCHRESULTS */
+
+.sresultmanual {float:left;width:468px;margin-bottom:10px;}
+.sresultmanual .mainlink {float:left;height:16px;width:468px;}
+.sresultmanual .mainlink .ball {float:left;width:12px;font-size:13px;font-family:Verdana, Arial;}
+.sresultmanual .subtxt {width:456px;margin-left:12px;}
+.searchr {float:left;width:234px;height:16px;}
+.searchr .item {float:left;height:16px;}
+.searchr .ball {float:left;width:12px;font-size:13px;font-family:Verdana, Arial;}
+
+/* MANUAL */
+
+.manual {float:left;width:622px;margin-bottom:21px}
+.manual .number {float:left;width:35px;font-weight:bold;margin-bottom:8px;font-size:25px;overflow:hidden;}
+.manual .text {float:right;width:585px;overflow:hidden;}
+.manual .image {float:right;width:585px;overflow:hidden;margin-top:10px;}
+
+.endquestion {float:left;width:622px;margin-bottom:21px;}
+.endquestion .mainquest {background-color:#D4EEC5;padding: 5px 8px 5px 8px;}
+.endquestion .mainquest .fakelinkout {color:#0750d9;text-decoration:none;font-weight:bold;cursor:pointer;cursor:hand;}
+.endquestion .mainquest .fakelinkover {color:#0750d9;text-decoration:underline;font-weight:bold;cursor:pointer;cursor:hand;}
+.endquestion .subquestbar {float:left;width:622px;background-color:#D4EEC5;}
+.endquestion .subquestbar .subquest {width:586px;margin: 5px 18px 5px 18px;font-weight:bold;}
+.endquestion .subanswerbar {float:left;width:622px;background-color:#EAF7E2;}
+.endquestion .subanswerbar .subanswer {width:574px;margin: 5px 18px 5px 30px;font-weight:bold;}
+
+.optionbox {height:36px;margin-left:13px;margin-right:13px;}
+.optionbox .title {float:left;width:375px;font-weight:bold;width:200px;margin-bottom:3px;}
+.optionbox .icon {float:left;margin-right:5px;}
+.optionbox .text {float:left;margin-right:50px;}
+
+
+/* PROBLEEMOPLOSSER */
+
+.problemsolve {float:left;width:468px;}
+.problemsolve .item {width:468px;margin-bottom:5px;}
+.problemsolve .item .suggest {width:468px;}
+.problemsolve .item .suggest {width:468px;}
+.problemsolve .item .explain {width:468px;padding-left:12px;}
+
+/* MIJN ABONNEMENT */
+
+.mijnabotext {float:left;width:468px;margin-bottom:3px;}
+.mijnaboitem {float:left;width:468px;}
+.mijnaboitem .ball {float:left;width:12px;font-size:13px;font-family:Verdana, Arial;}
+
+
+/* CONTACT */
+
+.firstinfo {float:left;width:468px;margin-bottom:8px;}
+.firstinfo .title {float:left;width:468px;}
+.firstinfo .text {float:left;width:468px;}
+
+.contactfold {float:left;width:468px;margin-bottom:10px;}
+.contactfold .question {float:left;width:468px;background-color:#D4EEC5;height:29px;}
+.contactfold .question .spacing1 {float:left;width:230px;margin-left:5px;margin-top:8px;}
+.contactfold .question .spacing2 {float:left;width:160px;margin-top:5px;}
+.contactfold .naw {float:left;width:468px;background-color:#EAF7E2;height:29px;}
+.contactfold .naw .spacing1 {float:left;width:230px;margin-left:5px;margin-top:8px;}
+.contactfold .naw .spacing2 {float:left;width:160px;margin-top:5px;}
+.contactfold .descript {float:left;width:468px;background-color:#EAF7E2;height:76px;}
+.contactfold .descript .spacing1 {float:left;width:230px;margin-left:5px;margin-top:8px;}
+.contactfold .descript .spacing2 {float:left;width:160px;margin-top:5px;}
+
+/* RIGHT */
+
+/* .quickhelp {width:116px;margin-left:13px;margin-right:13px;height:260px;} */
+.quickhelp {width:116px;margin-left:13px;margin-right:13px;}
+.quickhelp .item {width:116px;float:left;margin-bottom:8px;overflow:hidden;font-weight:bold;}
+.quickhelp .subtext {width:116px;float:left;margin-top:-8px;margin-bottom:5px;overflow:hidden;}
+
+/* SEARCH */
+
+.searchbox {height:20px;margin-left:13px;margin-right:13px;}
+.searchbox .text {font-size:13px;float:left;margin-right:10px;font-weight:bold;}

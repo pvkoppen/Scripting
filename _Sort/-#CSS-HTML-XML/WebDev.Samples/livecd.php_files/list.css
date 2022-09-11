@@ -1,0 +1,9 @@
+#a { color : #000000; ; text-decoration: none}
+#a:hover {  color: blue; text-decoration: underline}
+/*th,td,p {  font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000}*/
+th,td,p,font,h1 {  font-family: Arial, Helvetica, sans-serif}
+.title {  font-size: 12px; font-weight: bold}
+.headline {  font-size: 12px; font-weight: bold}
+.quote {  color: #CCCCCC}
+tr:hover, tr.over tr { background-color: #DDDDDD; }
+tr { background-color: #FFFFFF; }

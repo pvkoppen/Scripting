@@ -1,0 +1,139 @@
+<HTML>
+<HEAD>
+<TITLE> VON '98 Manuals </TITLE>
+
+<SCRIPT LANGUAGE = "JavaScript">
+<!-- Hides script from non-compatible browsers
+
+
+       browserName = navigator.appName;
+       browserVer = parseInt(navigator.appVersion);
+            /*   if (top.frames.length > 1) {
+                        top.location="menu.html";
+                        } */
+
+               if (browserName == "Netscape" && browserVer >= 3) version ="n3";
+               else {version = "n2"};
+               if (navigator.appVersion.substring(0,3) == '4.0') {version="n3"};
+               if (version == "n3") {
+
+             
+               nav1on = new Image;
+               nav1on.src = "images/btn1_lit.gif";
+
+             
+               nav1off = new Image;
+               nav1off.src = "images/btn1.gif";
+
+               nav2on = new Image;
+               nav2on.src = "images/btn2_lit.gif";
+
+               nav2off = new Image;
+               nav2off.src = "images/btn2.gif";
+
+
+               nav3on = new Image;
+               nav3on.src = "images/btn3_lit.gif";
+
+             
+               nav3off = new Image;
+               nav3off.src = "images/btn3.gif";
+
+               nav4on = new Image;
+               nav4on.src = "images/btn4_lit.gif";
+
+               nav4off = new Image;
+               nav4off.src = "images/btn4.gif";
+
+               nav5on = new Image;
+               nav5on.src = "images/btn5_lit.gif";
+
+              nav5off = new Image;
+               nav5off.src = "images/btn5.gif";
+
+              nav6on = new Image;
+               nav6on.src = "images/btn6_lit.gif";
+
+               nav6off = new Image;
+               nav6off.src = "images/btn6.gif";
+
+               nav7on = new Image;
+               nav7on.src = "images/btn7_lit.gif";
+
+               nav7off = new Image;
+               nav7off.src = "images/btn7.gif";
+
+               nav8on = new Image;
+               nav8on.src = "images/btn8_lit.gif";
+
+              nav8off = new Image;
+               nav8off.src = "images/btn8.gif";
+
+               nav9on = new Image;
+               nav9on.src = "images/btn9_lit.gif";
+
+               nav9off = new Image;
+               nav9off.src = "images/btn9.gif";
+
+             nav10on = new Image;
+             nav10on.src = "images/btn10_lit.gif";
+
+             nav10off = new Image;
+             nav10off.src = "images/btn10.gif";
+
+            
+
+             }
+
+
+
+       function img_act(imgName) {
+
+               if (version == "n3") {
+
+               imgOn = eval(imgName + "on.src");
+
+               document [imgName].src = imgOn;
+
+               }
+
+       }
+
+
+
+       function img_inact(imgName) {
+
+               if (version == "n3") {
+
+               imgOff = eval(imgName + "off.src");
+
+               document [imgName].src = imgOff;
+
+               }
+
+       }
+
+// End hide script -->
+</script>
+
+</HEAD>
+<body background="images/bg_sidebar.gif"  onLoad="parent.frames[2].location.href='speakers.html'">
+
+
+<a href="spk_critical.html" target="mainview"  onmouseover = "img_act('nav1')" onmouseout = "img_inact('nav1')"><img src="images/btn1.gif" width=113 height=20 border=0 name=nav1></a>
+<a href="tips.html" target="mainview"  onmouseover = "img_act('nav2')" onmouseout = "img_inact('nav2')"><img src="images/btn2.gif" width=113 height=31 border=0 name=nav2></a>
+<a href="spk_mat_req.html" target="mainview"  onmouseover = "img_act('nav9')" onmouseout = "img_inact('nav9')"><img src="images/btn9.gif" target="mainview" width=113 height=35 border=0 name=nav9></a>
+<a href="spk_ben.html" target="mainview"  onmouseover = "img_act('nav3')" onmouseout = "img_inact('nav3')"><img src="images/btn3.gif" width=113 height=21 border=0 name=nav3></a>
+<a href="registration.html" target="mainview"  onmouseover = "img_act('nav4')" onmouseout = "img_inact('nav4')"><img src="images/btn4.gif" width=113 height=33 border=0 name=nav4></a>
+<a href="prog_sched.html" target="mainview"  onmouseover = "img_act('nav5')" onmouseout = "img_inact('nav5')"><img src="images/btn5.gif" width=113 height=30 border=0 name=nav5></a>
+<a href="fairmont.html" target="mainview"  onmouseover = "img_act('nav6')" onmouseout = "img_inact('nav6')"><img src="images/btn6.gif" width=113 height=33 border=0 name=nav6></a>
+<a href="av_form_spk.html" target="mainview"  onmouseover = "img_act('nav7')" onmouseout = "img_inact('nav7')"><img src="images/btn7.gif" width=113 height=23 border=0 name=nav7></a>
+<a href="mapframe.html" target="mainview"  onmouseover = "img_act('nav8')" onmouseout = "img_inact('nav8')"><img src="images/btn8.gif" width=113 height=24 border=0 name=nav8></a>
+
+
+
+
+
+
+</BODY>
+</HTML>

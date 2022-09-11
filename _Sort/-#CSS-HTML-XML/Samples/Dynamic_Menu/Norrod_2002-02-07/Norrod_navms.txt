@@ -1,0 +1,133 @@
+<!--tup & manno @remarcle.nl -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+<HEAD><TITLE>Norrod computers</TITLE>
+<script language="JavaScript">
+// manno aka kathy coding //
+
+var blnLoaded = false
+
+function loadcheck(){
+	blnLoaded = true;
+}
+
+function loaded(){
+	aNum=top.overzicht.bottom;
+	if(isNaN(aNum)!=true){
+		go=true;
+		blnLoaded = true;
+	}
+	else{
+		topper = window.setTimeout('loaded()', 500);
+	}
+}
+
+function lyrobj(nme, hOr, ur, over){
+	this.name=nme;
+	this.target=4;
+	this.origin=hOr;
+	this.onn=false;
+	this.url=ur;
+	this.menuroll=over;
+	this.tO = null;
+}
+
+function rollon(lyr){
+	if(lyr.onn!=true){
+		document.all[lyr.name].all["ind"].src=lyr.menuroll
+	}
+}
+
+function rolloff(lyr){
+	if(lyr.onn!=true){
+		document.all[lyr.name].all["ind"].src="images/stil.gif"
+	}
+}
+
+function lyrclick(lyr){
+	if((blnLoaded!=true) && (lyr.name=="loss" || lyr.name=="syst" || lyr.name=="note")){
+		//alert("pagina is nog niet geladen");
+	}
+	else{
+		turnmeoff();
+		turnmeon(lyr);
+	}
+}
+
+function turnmeon(lyr){
+	addendum = "time=" + new Date().getSeconds();		// blasted cache!!
+	if(lyr.name!="loss" && lyr.name!="system" && lyr.name!="note"){
+		parent.overzicht.hidesys();
+		parent.overzicht.hidegroups();
+		parent.overzicht.hidenote();
+	}
+	if(lyr.name=="loss"){
+		parent.overzicht.hidesys();
+		parent.overzicht.installgroups();
+		parent.overzicht.hidenote();
+	}
+	if(lyr.name=="syst"){
+		parent.overzicht.installsys();
+		parent.overzicht.hidegroups();
+		parent.overzicht.hidenote();
+	}
+	if(lyr.name=="note"){
+		parent.overzicht.hidesys();
+		parent.overzicht.hidegroups();
+		parent.overzicht.installnote();
+	}
+	lyr.onn=true;
+	document.all[lyr.name].all["ind"].src="images/loop.gif";
+	top.data.location=lyr.url + "?" + addendum;
+}
+
+function turnmeoff(){
+	arr = new Array(losse, system, note, price, cont, realhelp, mail, news);
+	for(obj in arr){
+		if(arr[obj].onn){
+			arr[obj].onn=false;
+			document.all[arr[obj].name].all["ind"].src="images/stil.gif";
+		}
+	}
+}
+
+losse = new lyrobj("loss", 20, "leegtop.html", "images/loop.gif");
+system = new lyrobj("syst", 155, "leegtop.html", "images/loop.gif");
+note = new lyrobj("note", 240, "leegtop.html", "images/loop.gif");
+price = new lyrobj("plat", 340, "prijslijst.asp", "images/loop.gif");
+cont = new lyrobj("help", 460, "contact.html", "images/loop.gif");
+realhelp = new lyrobj("realhelp", 550, "help.html", "images/loop.gif");
+mail = new lyrobj("mailing", 610, "mailinglist.asp", "images/loop.gif");
+news = new lyrobj("news", 710, "nieuws.asp", "images/loop.gif");
+
+x = new Image()
+x.src = "images/loop.gif"
+
+</script>
+<style type="text/css">
+<!--
+.textjes { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; line-height: 10px; color: #000000; text-decoration: none }
+td { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; line-height: 12px; color: #000000; text-decoration: none }
+a {  text-decoration: none; color: #000099}
+-->
+</style>
+</HEAD>
+<BODY bgcolor="#FFFFFF" background="images/backnav.gif" onLoad="loaded()">
+<div id="loss" style="position:absolute; width:160px; height:22px; z-index:1; left: 20px; top: 3px"><a href="JAVASCRIPT:lyrclick(losse);" onMouseover="rollon(losse)" onMouseout="rolloff(losse)"><img src="images/stil.gif" width="15" height="15" border="0" name="ind"><img src="images/naam_loss_000.gif" width="123" height="15" border="0" name="naam"></a><br><img src="images/legegif.gif" width="1" height="3"></div>
+<div id="syst" style="position:absolute; width:160px; height:22px; z-index:1; left: 155px; top: 3px"><a href="JAVASCRIPT:lyrclick(system);" onMouseover="rollon(system)" onMouseout="rolloff(system)"><img src="images/stil.gif" width="15" height="15" border="0" name="ind"><img src="images/naam_syst_000.gif" width="123" height="15" border="0" name="naam"></a><br><img src="images/legegif.gif" width="1" height="3"></div>
+<div id="note" style="position:absolute; width:160px; height:22px; z-index:1; left: 240px; top: 3px"><a href="JAVASCRIPT:lyrclick(note);" onMouseover="rollon(note)" onMouseout="rolloff(note)"><img src="images/stil.gif" width="15" height="15" border="0" name="ind"><img src="images/naam_note_000.gif" width="123" height="15" border="0" name="naam"></a><br><img src="images/legegif.gif" width="1" height="3"></div>
+<div id="plat" style="position:absolute; width:160px; height:22px; z-index:1; left: 340px; top: 3px"><a href="JAVASCRIPT:lyrclick(price);" onMouseover="rollon(price)" onMouseout="rolloff(price)"><img src="images/stil.gif" width="15" height="15" border="0" name="ind"><img src="images/naam_plat_000.gif" width="123" height="15" border="0" name="naam"></a><br>
+  <img src="images/legegif.gif" width="1" height="3"></div>
+<div id="help" style="position:absolute; width:160px; height:22px; z-index:1; left: 460px; top: 3px"><a href="JAVASCRIPT:lyrclick(cont);" onMouseover="rollon(cont)" onMouseout="rolloff(cont)"><img src="images/stil.gif" width="15" height="15" border="0" name="ind"><img src="images/naam_help_000.gif" width="123" height="15" border="0" name="naam"></a><br>
+  <img src="images/legegif.gif" width="1" height="3"></div>
+<div id="realhelp" style="position:absolute; width:160px; height:22px; z-index:1; left: 550px; top: 3px"><a href="JAVASCRIPT:lyrclick(realhelp);" onMouseover="rollon(realhelp)" onMouseout="rolloff(realhelp)"><img src="images/stil.gif" width="15" height="15" border="0" name="ind"><img src="images/naam_realhelp_000.gif" width="123" height="15" border="0" name="naam"></a><br>
+  <img src="images/legegif.gif" width="1" height="3"></div>
+<div id="mailing" style="position:absolute; width:160px; height:22px; z-index:1; left: 610px; top: 3px"><a href="JAVASCRIPT:lyrclick(mail);" onMouseover="rollon(mail)" onMouseout="rolloff(mail)"><img src="images/stil.gif" width="15" height="15" border="0" name="ind"><img src="images/but-mailing.gif" width="123" height="15" border="0" name="naam"></a><br>
+  <img src="images/legegif.gif" width="1" height="3"></div>
+<div id="news" style="position:absolute; width:160px; height:22px; z-index:1; left: 710px; top: 3px"><a href="JAVASCRIPT:lyrclick(news);" onMouseover="rollon(news)" onMouseout="rolloff(news)"><img src="images/stil.gif" width="15" height="15" border="0" name="ind"><img src="images/but-nieuws.gif" width="123" height="15" border="0" name="naam"></a><br>
+  <img src="images/legegif.gif" width="1" height="3"></div>
+
+
+</BODY>
+</HTML>

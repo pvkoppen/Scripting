@@ -1,0 +1,3 @@
+[Commands]
+.\cpqbfile.exe
+.\CPQclean.cmd

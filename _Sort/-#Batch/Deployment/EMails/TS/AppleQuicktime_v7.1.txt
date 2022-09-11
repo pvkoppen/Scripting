@@ -1,0 +1,16 @@
+Hello Administrator(s),
+----------------------------------------------------------------
+
+This Software Install Can not be automated: CuteWriter v2.6.
+Please perform the following activities manually:
+- Logon to the new Terminal Sever using an Administrator account.
+- Run the CutePDF Install from: \\TOLDS01\eXpress\_usr.lib\Scripts\TS\CutePDFWriter_v2.6-Manual.cmd
+  - Click OK and Yes a number of times to complete the installation.
+  - Close the CutePDF Readme html file.
+- Wait for the command-line box to disappear and the terminal server install will continue.
+
+----------------------------------------------------------------
+Altiris Automated Build Process.
+
+This is a generated email message, do not reply to this message.
+

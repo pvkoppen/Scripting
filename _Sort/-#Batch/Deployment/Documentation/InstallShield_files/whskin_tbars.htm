@@ -1,0 +1,263 @@
+<html><head><title>WebHelp Navigation Toolbar</title>
+
+
+
+<meta name="generator" content="RoboHelp by eHelp Corporation   www.ehelp.com">
+<meta name="description" content="WebHelp 5.50">
+<style>
+<!--
+body {margin:0;}
+-->
+</style>
+<script language="javascript" src="InstallShield_files/whver.js"></script>
+<script language="javascript1.2" src="InstallShield_files/whutils.js"></script>
+<script language="javascript1.2" src="InstallShield_files/whmsg.js"></script>
+<script language="javascript1.2" src="whskin_tbars_data/whproxy.js"></script>
+<script language="javascript1.2" src="whskin_tbars_data/whmozemu.js"></script>
+<script language="javascript1.2" src="whskin_tbars_data/whtbar.js"></script>
+
+<script language="JavaScript1.2">
+<!--
+var URL_FEEDBACK_PART1 = "http://www.installshield.com/feedback/docfeedback.asp?category=prod&first_sub_cat=";
+var URL_FEEDBACK_PART2 = "&second_sub_cat=9&version=";
+var URL_FEEDBACK_PART3 = "&form_url=";
+
+function FeedMe2() {
+    var s = new String(parent.frames[1].bsscright.location.href);
+    var lIndex = s.lastIndexOf("/");
+    var sFile = s.substr(lIndex + 1);
+    
+var productName = parent.frames[1].bsscright.HELPNETPRODUCTCAT;
+// var productName = "6"
+
+var productVersion = parent.frames[1].bsscright.HELPNETPRODUCTVER;
+
+// var productVersion = "8.0"
+
+    var sURL = (URL_FEEDBACK_PART1 + productName + URL_FEEDBACK_PART2 + productVersion + URL_FEEDBACK_PART3);
+    sURL += sFile;
+    
+    window.open(sURL, "", "left=0, top=0, width=800, height=600, scrollbars=yes");
+    
+    return false;
+}
+function SendLink() {
+	var domain = parent.frames[1].bsscright.location.protocol + "//" + parent.frames[1].bsscright.location.hostname;
+	var middle = "/Robo/BIN/Robo.dll?tpc=";
+	var path = parent.frames[1].bsscright.location.pathname;
+
+	var complete = domain + middle + path;
+
+	var HTML = "<A ID='MailLink' syle='display:none' HREF='mailto:address@domain.com?Subject=" + complete + "&body=The link in the subject line is to a topic in InstallShield HelpNet.'>Click here</A>";
+
+	document.body.insertAdjacentHTML("beforeEnd" ,HTML);
+	document.all["MailLink"].click();
+	document.all["MailLink"].outerHTML = "";
+	
+    return false;
+}
+function PrintMe() {
+   parent.frames[1].bsscright.focus();
+   window.print();
+   return false;
+}
+function AddMe() {
+	var domain = parent.frames[1].bsscright.location.protocol + "//" + parent.frames[1].bsscright.location.hostname;
+	var middle = "/Robo/BIN/Robo.dll?tpc=";
+	var path = parent.frames[1].bsscright.location.pathname;
+
+	var complete = domain + middle + path;
+	window.external.AddFavorite(complete, parent.frames[1].bsscright.document.title);
+	
+	return false;
+}
+function TakeMeHome() {
+   parent.location='http://helpnet.installshield.com'
+   return false;
+}
+
+//-->
+</script>
+<style type="text/css">
+<!--
+.clsBtnNormal {
+padding:5px;
+cursor:hand;
+font-family:Arial;
+font-size:xx-small;
+color:#003063;}
+.clsNoBNormal {
+padding-left:2px;padding-right:2px;
+cursor:hand;
+font-family:Arial;
+font-size:xx-small;
+color:#003063;}
+.clsNotBtn {
+padding:5px;
+font-family:Arial;
+font-size:xx-small;
+color:#003063;}
+.clsBtnUp{
+padding:4px;
+border-bottom:#808080 1px solid;
+border-left:#FFFAFA 1px solid;
+border-right:#808080 1px solid;
+border-top:#FFFAFA 1px solid;
+cursor:hand;font-family:Arial;
+font-size:xx-small;
+color:#003063;}
+.clsNoBUp{
+padding-left:2px;padding-right:2px;
+cursor:hand;font-family:Arial;
+font-size:xx-small;
+color:#003063;}
+.clsBtnDown{
+padding:4px;
+border-bottom:#FFFAFA 1px solid;
+border-left:#808080 1px solid;
+border-right:#FFFAFA 1px solid;
+border-top:#808080 1px solid;
+color:#003063;
+cursor:hand;
+font-family:Arial;
+font-size:xx-small;}
+.clsNoBDown{
+padding-left:2px;padding-right:2px;
+cursor:hand;font-family:Arial;
+font-size:xx-small;
+color:#003063;}
+.btnseltoc{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:white;}.btntoc{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:#003063;}.btnselidx{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:white;}.btnidx{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:#003063;}.btnselfts{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:white;}.btnfts{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:#003063;}.btnselglo{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:white;}.btnglo{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:#003063;}.btnselsearchform{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:white;}.btnsearchform{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:#003063;}.btnselbanner{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:white;}.btnbanner{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:#003063;}.btnselcustom13384{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:white;}.btncustom13384{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:#003063;}.btnselcustom22538{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:white;}.btncustom22538{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:#003063;}.btnselcustom10525{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:white;}.btncustom10525{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:#003063;}.btnselcustom5379{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:white;}.btncustom5379{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:#003063;}.btnselcustom22332{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:white;}.btncustom22332{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:#003063;}.btnselblankblock{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:white;}.btnblankblock{font-family:Verdana;font-size:8pt;font-style:normal;font-weight:normal;text-decoration:none;color:#003063;}.btntoc{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#666666;}
+.btnseltoc{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#ffff80;}
+.btnidx{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#666666;}
+.btnselidx{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#ffff80;}
+.btnfts{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#666666;}
+.btnselfts{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#ffff80;}
+.btnglo{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#666666;}
+.btnselglo{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#ffff80;}
+.btnwebsearch{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#666666;}
+.btnselwebsearch{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#ffff80;}
+.btnsearchform{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#666666;}
+.inputsearchform {font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:black;}
+.btncustom13384{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#666666;}
+.btnselcustom13384{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#ffff80;}
+.btncustom22538{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#666666;}
+.btnselcustom22538{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#ffff80;}
+.btncustom10525{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#666666;}
+.btnselcustom10525{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#ffff80;}
+.btncustom5379{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#666666;}
+.btnselcustom5379{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#ffff80;}
+.btncustom22332{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#666666;}
+.btnselcustom22332{font-family:Tahoma;font-size:8pt;font-style:Normal;font-weight:Bold;text-decoration:none;color:#ffff80;}
+.clsToolbarBackground{
+margin:2px;}
+-->
+ body {
+border-top:black 1px solid;}
+-->
+</style></head><body scroll="no" bgcolor="#bcc0ca" marginheight="0" marginwidth="0">
+<script language="javascript1.2">
+<!--
+if (window.gbWhTBar)
+{
+	setButtonFont("toc","Tahoma","8pt","#666666","Normal","Bold","none");
+setButtonFont("toc","Tahoma","8pt","#ffff80","Normal","Bold","none", true);
+setButtonFont("idx","Tahoma","8pt","#666666","Normal","Bold","none");
+setButtonFont("idx","Tahoma","8pt","#ffff80","Normal","Bold","none", true);
+setButtonFont("fts","Tahoma","8pt","#666666","Normal","Bold","none");
+setButtonFont("fts","Tahoma","8pt","#ffff80","Normal","Bold","none", true);
+setButtonFont("glo","Tahoma","8pt","#666666","Normal","Bold","none");
+setButtonFont("glo","Tahoma","8pt","#ffff80","Normal","Bold","none", true);
+setButtonFont("websearch","Tahoma","8pt","#666666","Normal","Bold","none");
+setButtonFont("websearch","Tahoma","8pt","#ffff80","Normal","Bold","none", true);
+setButtonFont("searchform","Tahoma","8pt","#666666","Normal","Bold","none");
+setButtonFont("searchform","","","","","","", true);
+setButtonFont("banner","","","","","","");
+setButtonFont("banner","","","","","","", true);
+setButtonFont("custom13384","Tahoma","8pt","#666666","Normal","Bold","none");
+setButtonFont("custom13384","Tahoma","8pt","#ffff80","Normal","Bold","none", true);
+setButtonFont("custom22538","Tahoma","8pt","#666666","Normal","Bold","none");
+setButtonFont("custom22538","Tahoma","8pt","#ffff80","Normal","Bold","none", true);
+setButtonFont("custom10525","Tahoma","8pt","#666666","Normal","Bold","none");
+setButtonFont("custom10525","Tahoma","8pt","#ffff80","Normal","Bold","none", true);
+setButtonFont("custom5379","Tahoma","8pt","#666666","Normal","Bold","none");
+setButtonFont("custom5379","Tahoma","8pt","#ffff80","Normal","Bold","none", true);
+setButtonFont("custom22332","Tahoma","8pt","#666666","Normal","Bold","none");
+setButtonFont("custom22332","Tahoma","8pt","#ffff80","Normal","Bold","none", true);
+
+	gsIToc = "wht_toc_n.gif";
+	gsITocS = "wht_toc_h.gif";
+	gsIIndex = "wht_idx_n.gif";
+	gsIIndexS = "wht_idx_h.gif";
+	gsISearch = "wht_fts_n.gif";
+	gsISearchS = "wht_fts_h.gif";
+	gsIGlossary = "wht_glo_n.gif";
+	gsIGlossaryS = "wht_glo_h.gif";
+	gsIWebSearch = "wht_ws.gif";
+	gsIWebSearchD = "wht_ws_g.gif";
+	gsIBanner = "wht_logo1.gif";
+	gsIGo = "wht_go.gif";
+	setBackgroundcolor("#bcc0ca");
+	
+	setAlignment("left");
+	setGoImage("gotoolbar.gif");
+	setSearchFormTitle("Ask a Question:");
+	if (!gsBgImage)
+	{
+	setButtonBgColor("toc", gsBgColor);
+	setButtonBgColor("idx", gsBgColor);
+	setButtonBgColor("fts", gsBgColor);
+	setButtonBgColor("glo", gsBgColor);
+	setButtonBgColor("toc", gsTBSelectedBgColor, true);
+	setButtonBgColor("idx", gsTBSelectedBgColor, true);
+	setButtonBgColor("fts", gsTBSelectedBgColor, true);
+	setButtonBgColor("glo", gsTBSelectedBgColor, true);
+	setButtonBgColor("toc","#bcc0ca");
+setButtonBgColor("idx","#bcc0ca");
+setButtonBgColor("fts","#bcc0ca");
+setButtonBgColor("glo","#bcc0ca");
+setButtonBgColor("websearch","#bcc0ca");
+setButtonBgColor("searchform","");
+setButtonBgColor("banner","");
+setButtonBgColor("custom13384","#bcc0ca");
+setButtonBgColor("custom22538","#bcc0ca");
+setButtonBgColor("custom10525","#bcc0ca");
+setButtonBgColor("custom5379","#bcc0ca");
+setButtonBgColor("custom22332","#bcc0ca");
+
+	}
+	setButtonBgColor("toc","#2874c7", true);
+setButtonBgColor("idx","#2874c7", true);
+setButtonBgColor("fts","#2874c7", true);
+setButtonBgColor("glo","#2874c7", true);
+setButtonBgColor("websearch","#2874c7", true);
+setButtonBgColor("searchform","", true);
+setButtonBgColor("banner","", true);
+setButtonBgColor("custom13384","#2874c7", true);
+setButtonBgColor("custom22538","#2874c7", true);
+setButtonBgColor("custom10525","#2874c7", true);
+setButtonBgColor("custom5379","#2874c7", true);
+setButtonBgColor("custom22332","#2874c7", true);
+
+	addButton("toc",BTN_TEXT|BTN_IMG,"","","","","",0,0,"contentstoolbar.gif","contentsdowntoolbar.gif","","contentsdowntoolbar.gif","","");
+addButton("idx",BTN_TEXT|BTN_IMG,"","","","","",0,0,"indextoolbar.gif","indexdowntoolbar.gif","","indexdowntoolbar.gif","","");
+addButton("fts",BTN_TEXT|BTN_IMG,"","","","","",0,0,"searchtoolbar.gif","searchdowntoolbar.gif","","searchdowntoolbar.gif","","");
+addButton("glo",BTN_TEXT|BTN_IMG,"","","","","",0,0,"glossarytoolbar.gif","glossarydowntoolbar.gif","","glossarydowntoolbar.gif","","");
+addButton("searchform",BTN_TEXT,"","","","","",0,0,"","","","","","");
+addButton("banner",BTN_IMG,"","","","","",0,0,"mvsn_logo_about.jpg","","","","","");
+addButton("custom13384",BTN_TEXT|BTN_IMG,"Send Feedback","","FeedMe2();","","",0,0,"feedbacktoolbar.gif","feedbackdowntoolbar.gif","","feedbackdowntoolbar.gif","","");
+addButton("custom22538",BTN_TEXT|BTN_IMG,"Email Link","","SendLink();","","",0,0,"sendlinktoolbar.gif","sendlinkdowntoolbar.gif","","sendlinkdowntoolbar.gif","","");
+addButton("custom10525",BTN_TEXT|BTN_IMG,"Print Topic","","PrintMe();","","",0,0,"printtopictoolbar.gif","printtopicdowntoolbar.gif","","printtopicdowntoolbar.gif","","");
+addButton("custom5379",BTN_TEXT|BTN_IMG,"Add to Favorites","","AddMe();","","",0,0,"addtofavoritestoolbar.gif","addtofavoritesdowntoolbar.gif","","addtofavoritesdowntoolbar.gif","","");
+addButton("custom22332",BTN_TEXT|BTN_IMG,"Home","","TakeMeHome();","","",0,0,"hometoolbar.gif","homedowntoolbar.gif","","homedowntoolbar.gif","","");
+
+	addButton("blankblock");
+	writeStyle(false);
+	ReSortToolbarButtons();
+	writeToolBar();
+}
+else
+	document.location.reload();
+//-->
+</script>
+<table class="clsToolbarBackground" border="0" cellpadding="0" cellspacing="0" height="40" width="1020"><tbody><tr><td class="clsNoBDown" state="down" onclick="onBtnClick(event);return false;" onmousedown="onBtnMouseDown(event, 0);" onmouseup="onBtnMouseUp(event, 0);" onmouseover="onBtnMouseOver(event, 0);" onmouseout="onBtnMouseOut(event, 0);" align="center" nowrap="nowrap" valign="middle"><a title="Contents" id="btntoc" class="btntoc" href="javascript:void(0);" onclick="showToc();return false;"><img alt="Contents" src="whskin_tbars_data/contentsdowntoolbar.gif" align="absmiddle" border="0"></a></td><td class="clsNoBNormal" state="up" onclick="onBtnClick(event);return false;" onmousedown="onBtnMouseDown(event, 1);" onmouseup="onBtnMouseUp(event, 1);" onmouseover="onBtnMouseOver(event, 1);" onmouseout="onBtnMouseOut(event, 1);" align="center" nowrap="nowrap" valign="middle"><a title="Index" id="btnidx" class="btnidx" href="javascript:void(0);" onclick="showIndex();return false;"><img alt="Index" src="whskin_tbars_data/indextoolbar.gif" align="absmiddle" border="0"></a></td><td class="clsNoBNormal" state="up" onclick="onBtnClick(event);return false;" onmousedown="onBtnMouseDown(event, 2);" onmouseup="onBtnMouseUp(event, 2);" onmouseover="onBtnMouseOver(event, 2);" onmouseout="onBtnMouseOut(event, 2);" align="center" nowrap="nowrap" valign="middle"><a title="Search" id="btnfts" class="btnfts" href="javascript:void(0);" onclick="showFts();return false;"><img alt="Search" src="whskin_tbars_data/searchtoolbar.gif" align="absmiddle" border="0"></a></td><td class="clsNoBNormal" state="up" onclick="onBtnClick(event);return false;" onmousedown="onBtnMouseDown(event, 3);" onmouseup="onBtnMouseUp(event, 3);" onmouseover="onBtnMouseOver(event, 3);" onmouseout="onBtnMouseOut(event, 3);" align="center" nowrap="nowrap" valign="middle"><a title="Glossary" id="btnglo" class="btnglo" href="javascript:void(0);" onclick="showGlossary();return false;"><img alt="Glossary" src="whskin_tbars_data/glossarytoolbar.gif" align="absmiddle" border="0"></a></td><td class="clsNoBNormal" onclick="onBtnClick(event);return false;" onmousedown="onBtnMouseDown(event, 10);" onmouseup="onBtnMouseUp(event, 10);" onmouseover="onBtnMouseOver(event, 10);" onmouseout="onBtnMouseOut(event, 10);" align="center" nowrap="nowrap" valign="middle"><a id="btncustom22332" class="btncustom22332" href="javascript:void(0);" onclick="cusOnClick(4);return false;" onmouseover="cusOnMouseOver(4);" title="Home"><img alt="Home" src="whskin_tbars_data/hometoolbar.gif" align="absmiddle" border="0"></a></td><td class="clsNoBNormal" onclick="onBtnClick(event);return false;" onmousedown="onBtnMouseDown(event, 8);" onmouseup="onBtnMouseUp(event, 8);" onmouseover="onBtnMouseOver(event, 8);" onmouseout="onBtnMouseOut(event, 8);" align="center" nowrap="nowrap" valign="middle"><a id="btncustom10525" class="btncustom10525" href="javascript:void(0);" onclick="cusOnClick(2);return false;" onmouseover="cusOnMouseOver(2);" title="Print Topic"><img alt="Print Topic" src="whskin_tbars_data/printtopictoolbar.gif" align="absmiddle" border="0"></a></td><td class="clsNoBNormal" onclick="onBtnClick(event);return false;" onmousedown="onBtnMouseDown(event, 7);" onmouseup="onBtnMouseUp(event, 7);" onmouseover="onBtnMouseOver(event, 7);" onmouseout="onBtnMouseOut(event, 7);" align="center" nowrap="nowrap" valign="middle"><a id="btncustom22538" class="btncustom22538" href="javascript:void(0);" onclick="cusOnClick(1);return false;" onmouseover="cusOnMouseOver(1);" title="Email Link"><img alt="Email Link" src="whskin_tbars_data/sendlinktoolbar.gif" align="absmiddle" border="0"></a></td><td class="clsNoBNormal" onclick="onBtnClick(event);return false;" onmousedown="onBtnMouseDown(event, 9);" onmouseup="onBtnMouseUp(event, 9);" onmouseover="onBtnMouseOver(event, 9);" onmouseout="onBtnMouseOut(event, 9);" align="center" nowrap="nowrap" valign="middle"><a id="btncustom5379" class="btncustom5379" href="javascript:void(0);" onclick="cusOnClick(3);return false;" onmouseover="cusOnMouseOver(3);" title="Add to Favorites"><img alt="Add to Favorites" src="whskin_tbars_data/addtofavoritestoolbar.gif" align="absmiddle" border="0"></a></td><td class="clsNoBNormal" onclick="onBtnClick(event);return false;" onmousedown="onBtnMouseDown(event, 6);" onmouseup="onBtnMouseUp(event, 6);" onmouseover="onBtnMouseOver(event, 6);" onmouseout="onBtnMouseOut(event, 6);" align="center" nowrap="nowrap" valign="middle"><a id="btncustom13384" class="btncustom13384" href="javascript:void(0);" onclick="cusOnClick(0);return false;" onmouseover="cusOnMouseOver(0);" title="Send Feedback"><img alt="Send Feedback" src="whskin_tbars_data/feedbacktoolbar.gif" align="absmiddle" border="0"></a></td><td width="100%"></td><td align="center" nowrap="nowrap" valign="middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="showBanner();return false;"><img alt="About Macrovision HelpNet" src="whskin_tbars_data/mvsn_logo_about.jpg" align="absmiddle" border="0"></a></td></tr></tbody></table>
+</body></html>

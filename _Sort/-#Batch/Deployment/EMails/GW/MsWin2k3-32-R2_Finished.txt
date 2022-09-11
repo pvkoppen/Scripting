@@ -1,0 +1,24 @@
+Hello Administrator(s),
+----------------------------------------------------------------
+
+Altiris has just finished the (re)build of a server with:
+- OS           = Windows Server 2003 Standard/Enterprise 32 R2.
+- Hardware     = HP Proliant.
+- Specific Task= Gateway
+- ...
+
+Please check or Configure the following services:
+- McAfee AntiVirus
+- Symanted Backup Exec
+- APC PowerChute Network Shutdown (Requires Java!)
+- ...
+
+Any required Post Build activities can now be performed.
+- Logon with an administator account to check the Gateway server setup.
+- ...
+
+----------------------------------------------------------------
+Altiris Automated Build Process.
+
+This is a generated email message, do not reply to this message.
+

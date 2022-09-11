@@ -1,0 +1,677 @@
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic" 
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Archive In" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\AA55C8DA-7BE2-4EA4-AD99-BAB37FC598DC
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  41 00 41 00 35 00 35 00  43 00 38 00 44 00 41 00  A.A.5.5.C.8.D.A.
+0080:  2d 00 37 00 42 00 45 00  32 00 2d 00 34 00 45 00  -.7.B.E.2.-.4.E.
+0090:  41 00 34 00 2d 00 41 00  44 00 39 00 39 00 2d 00  A.4.-.A.D.9.9.-.
+00a0:  42 00 41 00 42 00 33 00  37 00 46 00 43 00 35 00  B.A.B.3.7.F.C.5.
+00b0:  39 00 38 00 44 00 43 00  00 00 00 00              9.8.D.C.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Archive Out" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\A11F07EA-7569-4596-9BC5-B4A25D428BAE
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  41 00 31 00 31 00 46 00  30 00 37 00 45 00 41 00  A.1.1.F.0.7.E.A.
+0080:  2d 00 37 00 35 00 36 00  39 00 2d 00 34 00 35 00  -.7.5.6.9.-.4.5.
+0090:  39 00 36 00 2d 00 39 00  42 00 43 00 35 00 2d 00  9.6.-.9.B.C.5.-.
+00a0:  42 00 34 00 41 00 32 00  35 00 44 00 34 00 32 00  B.4.A.2.5.D.4.2.
+00b0:  38 00 42 00 41 00 45 00  00 00 00 00              8.B.A.E.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Encrypted" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\298D738E-7577-4A91-9E6F-03ED0C817F16
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  32 00 39 00 38 00 44 00  37 00 33 00 38 00 45 00  2.9.8.D.7.3.8.E.
+0080:  2d 00 37 00 35 00 37 00  37 00 2d 00 34 00 41 00  -.7.5.7.7.-.4.A.
+0090:  39 00 31 00 2d 00 39 00  45 00 36 00 46 00 2d 00  9.1.-.9.E.6.F.-.
+00a0:  30 00 33 00 45 00 44 00  30 00 43 00 38 00 31 00  0.3.E.D.0.C.8.1.
+00b0:  37 00 46 00 31 00 36 00  00 00 00 00              7.F.1.6.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Executables" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\874AE4BA-F735-4067-AC91-DC3453AFC685
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  38 00 37 00 34 00 41 00  45 00 34 00 42 00 41 00  8.7.4.A.E.4.B.A.
+0080:  2d 00 46 00 37 00 33 00  35 00 2d 00 34 00 30 00  -.F.7.3.5.-.4.0.
+0090:  36 00 37 00 2d 00 41 00  43 00 39 00 31 00 2d 00  6.7.-.A.C.9.1.-.
+00a0:  44 00 43 00 33 00 34 00  35 00 33 00 41 00 46 00  D.C.3.4.5.3.A.F.
+00b0:  43 00 36 00 38 00 35 00  00 00 00 00              C.6.8.5.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Images" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\C004A276-EAEB-4251-ADEC-494FAF0CB713
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  43 00 30 00 30 00 34 00  41 00 32 00 37 00 36 00  C.0.0.4.A.2.7.6.
+0080:  2d 00 45 00 41 00 45 00  42 00 2d 00 34 00 32 00  -.E.A.E.B.-.4.2.
+0090:  35 00 31 00 2d 00 41 00  44 00 45 00 43 00 2d 00  5.1.-.A.D.E.C.-.
+00a0:  34 00 39 00 34 00 46 00  41 00 46 00 30 00 43 00  4.9.4.F.A.F.0.C.
+00b0:  42 00 37 00 31 00 33 00  00 00 00 00              B.7.1.3.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Junk" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\2A3E6EFE-38D6-438D-84B0-BE4AB2B7EFAD
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  32 00 41 00 33 00 45 00  36 00 45 00 46 00 45 00  2.A.3.E.6.E.F.E.
+0080:  2d 00 33 00 38 00 44 00  36 00 2d 00 34 00 33 00  -.3.8.D.6.-.4.3.
+0090:  38 00 44 00 2d 00 38 00  34 00 42 00 30 00 2d 00  8.D.-.8.4.B.0.-.
+00a0:  42 00 45 00 34 00 41 00  42 00 32 00 42 00 37 00  B.E.4.A.B.2.B.7.
+00b0:  45 00 46 00 41 00 44 00  00 00 00 00              E.F.A.D.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Language" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\6F1422E1-CDB6-4669-ACC7-794CC0669663
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  36 00 46 00 31 00 34 00  32 00 32 00 45 00 31 00  6.F.1.4.2.2.E.1.
+0080:  2d 00 43 00 44 00 42 00  36 00 2d 00 34 00 36 00  -.C.D.B.6.-.4.6.
+0090:  36 00 39 00 2d 00 41 00  43 00 43 00 37 00 2d 00  6.9.-.A.C.C.7.-.
+00a0:  37 00 39 00 34 00 43 00  43 00 30 00 36 00 36 00  7.9.4.C.C.0.6.6.
+00b0:  39 00 36 00 36 00 33 00  00 00 00 00              9.6.6.3.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\MM2006 Awaiting Challenge - Response" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\5B4A111B-D1E9-4709-B214-E23B748413E3
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  35 00 42 00 34 00 41 00  31 00 31 00 31 00 42 00  5.B.4.A.1.1.1.B.
+0080:  2d 00 44 00 31 00 45 00  39 00 2d 00 34 00 37 00  -.D.1.E.9.-.4.7.
+0090:  30 00 39 00 2d 00 42 00  32 00 31 00 34 00 2d 00  0.9.-.B.2.1.4.-.
+00a0:  45 00 32 00 33 00 42 00  37 00 34 00 38 00 34 00  E.2.3.B.7.4.8.4.
+00b0:  31 00 33 00 45 00 33 00  00 00 00 00              1.3.E.3.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\MM2006 Policy Breaches - SEC" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\82847CA7-82EE-4A2E-89F7-600D6E07B9B8
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  38 00 32 00 38 00 34 00  37 00 43 00 41 00 37 00  8.2.8.4.7.C.A.7.
+0080:  2d 00 38 00 32 00 45 00  45 00 2d 00 34 00 41 00  -.8.2.E.E.-.4.A.
+0090:  32 00 45 00 2d 00 38 00  39 00 46 00 37 00 2d 00  2.E.-.8.9.F.7.-.
+00a0:  36 00 30 00 30 00 44 00  36 00 45 00 30 00 37 00  6.0.0.D.6.E.0.7.
+00b0:  42 00 39 00 42 00 38 00  00 00 00 00              B.9.B.8.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\MM2006 Policy Breaches - SOX" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\9077319A-F81C-4821-A3E4-C7FD12BC9E9C
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  39 00 30 00 37 00 37 00  33 00 31 00 39 00 41 00  9.0.7.7.3.1.9.A.
+0080:  2d 00 46 00 38 00 31 00  43 00 2d 00 34 00 38 00  -.F.8.1.C.-.4.8.
+0090:  32 00 31 00 2d 00 41 00  33 00 45 00 34 00 2d 00  2.1.-.A.3.E.4.-.
+00a0:  43 00 37 00 46 00 44 00  31 00 32 00 42 00 43 00  C.7.F.D.1.2.B.C.
+00b0:  39 00 45 00 39 00 43 00  00 00 00 00              9.E.9.C.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Oversize" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\821EF706-6C63-4F56-8E4C-2E5D18F4FAFA
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  38 00 32 00 31 00 45 00  46 00 37 00 30 00 36 00  8.2.1.E.F.7.0.6.
+0080:  2d 00 36 00 43 00 36 00  33 00 2d 00 34 00 46 00  -.6.C.6.3.-.4.F.
+0090:  35 00 36 00 2d 00 38 00  45 00 34 00 43 00 2d 00  5.6.-.8.E.4.C.-.
+00a0:  32 00 45 00 35 00 44 00  31 00 38 00 46 00 34 00  2.E.5.D.1.8.F.4.
+00b0:  46 00 41 00 46 00 41 00  00 00 00 00              F.A.F.A.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Parked Emails" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\FF0B20E5-0E97-41E1-A689-2AC86FF79075
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  46 00 46 00 30 00 42 00  32 00 30 00 45 00 35 00  F.F.0.B.2.0.E.5.
+0080:  2d 00 30 00 45 00 39 00  37 00 2d 00 34 00 31 00  -.0.E.9.7.-.4.1.
+0090:  45 00 31 00 2d 00 41 00  36 00 38 00 39 00 2d 00  E.1.-.A.6.8.9.-.
+00a0:  32 00 41 00 43 00 38 00  36 00 46 00 46 00 37 00  2.A.C.8.6.F.F.7.
+00b0:  39 00 30 00 37 00 35 00  00 00 00 00              9.0.7.5.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Parked Illegal Helpdesk emails" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\B8C56341-2824-4326-8610-EF0F392B46DF
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  42 00 38 00 43 00 35 00  36 00 33 00 34 00 31 00  B.8.C.5.6.3.4.1.
+0080:  2d 00 32 00 38 00 32 00  34 00 2d 00 34 00 33 00  -.2.8.2.4.-.4.3.
+0090:  32 00 36 00 2d 00 38 00  36 00 31 00 30 00 2d 00  2.6.-.8.6.1.0.-.
+00a0:  45 00 46 00 30 00 46 00  33 00 39 00 32 00 42 00  E.F.0.F.3.9.2.B.
+00b0:  34 00 36 00 44 00 46 00  00 00 00 00              4.6.D.F.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Parked Large Files" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\350EC7AE-54FF-4106-903C-79871A72E6BC
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  33 00 35 00 30 00 45 00  43 00 37 00 41 00 45 00  3.5.0.E.C.7.A.E.
+0080:  2d 00 35 00 34 00 46 00  46 00 2d 00 34 00 31 00  -.5.4.F.F.-.4.1.
+0090:  30 00 36 00 2d 00 39 00  30 00 33 00 43 00 2d 00  0.6.-.9.0.3.C.-.
+00a0:  37 00 39 00 38 00 37 00  31 00 41 00 37 00 32 00  7.9.8.7.1.A.7.2.
+00b0:  45 00 36 00 42 00 43 00  00 00 00 00              E.6.B.C.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Questionable Content" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\09008D44-6B99-45E9-8B30-0A63231E2BC4
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  30 00 39 00 30 00 30 00  38 00 44 00 34 00 34 00  0.9.0.0.8.D.4.4.
+0080:  2d 00 36 00 42 00 39 00  39 00 2d 00 34 00 35 00  -.6.B.9.9.-.4.5.
+0090:  45 00 39 00 2d 00 38 00  42 00 33 00 30 00 2d 00  E.9.-.8.B.3.0.-.
+00a0:  30 00 41 00 36 00 33 00  32 00 33 00 31 00 45 00  0.A.6.3.2.3.1.E.
+00b0:  32 00 42 00 43 00 34 00  00 00 00 00              2.B.C.4.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Spam - Blacklisted" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\29221A54-B29B-47B5-979D-36705CAAE1CB
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  32 00 39 00 32 00 32 00  31 00 41 00 35 00 34 00  2.9.2.2.1.A.5.4.
+0080:  2d 00 42 00 32 00 39 00  42 00 2d 00 34 00 37 00  -.B.2.9.B.-.4.7.
+0090:  42 00 35 00 2d 00 39 00  37 00 39 00 44 00 2d 00  B.5.-.9.7.9.D.-.
+00a0:  33 00 36 00 37 00 30 00  35 00 43 00 41 00 41 00  3.6.7.0.5.C.A.A.
+00b0:  45 00 31 00 43 00 42 00  00 00 00 00              E.1.C.B.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Spam - Country Censor" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\6FE7E4AB-E87D-4360-AF6E-5663E4090468
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  36 00 46 00 45 00 37 00  45 00 34 00 41 00 42 00  6.F.E.7.E.4.A.B.
+0080:  2d 00 45 00 38 00 37 00  44 00 2d 00 34 00 33 00  -.E.8.7.D.-.4.3.
+0090:  36 00 30 00 2d 00 41 00  46 00 36 00 45 00 2d 00  6.0.-.A.F.6.E.-.
+00a0:  35 00 36 00 36 00 33 00  45 00 34 00 30 00 39 00  5.6.6.3.E.4.0.9.
+00b0:  30 00 34 00 36 00 38 00  00 00 00 00              0.4.6.8.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Spam - Explicit" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\AA858AD8-80BC-447D-912D-17115A333443
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  41 00 41 00 38 00 35 00  38 00 41 00 44 00 38 00  A.A.8.5.8.A.D.8.
+0080:  2d 00 38 00 30 00 42 00  43 00 2d 00 34 00 34 00  -.8.0.B.C.-.4.4.
+0090:  37 00 44 00 2d 00 39 00  31 00 32 00 44 00 2d 00  7.D.-.9.1.2.D.-.
+00a0:  31 00 37 00 31 00 31 00  35 00 41 00 33 00 33 00  1.7.1.1.5.A.3.3.
+00b0:  33 00 34 00 34 00 33 00  00 00 00 00              3.4.4.3.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Spam - Phish" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\4DBF79F5-10AC-453D-B45D-38EE5679DF10
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  34 00 44 00 42 00 46 00  37 00 39 00 46 00 35 00  4.D.B.F.7.9.F.5.
+0080:  2d 00 31 00 30 00 41 00  43 00 2d 00 34 00 35 00  -.1.0.A.C.-.4.5.
+0090:  33 00 44 00 2d 00 42 00  34 00 35 00 44 00 2d 00  3.D.-.B.4.5.D.-.
+00a0:  33 00 38 00 45 00 45 00  35 00 36 00 37 00 39 00  3.8.E.E.5.6.7.9.
+00b0:  44 00 46 00 31 00 30 00  00 00 00 00              D.F.1.0.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Spam - Pornographic" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\F9D0F15C-9632-4657-9889-237E6752C2A8
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  46 00 39 00 44 00 30 00  46 00 31 00 35 00 43 00  F.9.D.0.F.1.5.C.
+0080:  2d 00 39 00 36 00 33 00  32 00 2d 00 34 00 36 00  -.9.6.3.2.-.4.6.
+0090:  35 00 37 00 2d 00 39 00  38 00 38 00 39 00 2d 00  5.7.-.9.8.8.9.-.
+00a0:  32 00 33 00 37 00 45 00  36 00 37 00 35 00 32 00  2.3.7.E.6.7.5.2.
+00b0:  43 00 32 00 41 00 38 00  00 00 00 00              C.2.A.8.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Spam - Suspect" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\3EFF33E4-22C3-41EA-98D7-74E3BB6357FD
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  33 00 45 00 46 00 46 00  33 00 33 00 45 00 34 00  3.E.F.F.3.3.E.4.
+0080:  2d 00 32 00 32 00 43 00  33 00 2d 00 34 00 31 00  -.2.2.C.3.-.4.1.
+0090:  45 00 41 00 2d 00 39 00  38 00 44 00 37 00 2d 00  E.A.-.9.8.D.7.-.
+00a0:  37 00 34 00 45 00 33 00  42 00 42 00 36 00 33 00  7.4.E.3.B.B.6.3.
+00b0:  35 00 37 00 46 00 44 00  00 00 00 00              5.7.F.D.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Spam - Zero Day" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\D177D6D4-5672-4057-8B74-FA8ADCB68776
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  44 00 31 00 37 00 37 00  44 00 36 00 44 00 34 00  D.1.7.7.D.6.D.4.
+0080:  2d 00 35 00 36 00 37 00  32 00 2d 00 34 00 30 00  -.5.6.7.2.-.4.0.
+0090:  35 00 37 00 2d 00 38 00  42 00 37 00 34 00 2d 00  5.7.-.8.B.7.4.-.
+00a0:  46 00 41 00 38 00 41 00  44 00 43 00 42 00 36 00  F.A.8.A.D.C.B.6.
+00b0:  38 00 37 00 37 00 36 00  00 00 00 00              8.7.7.6.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Spoofed" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\1AE86AF4-44FC-411D-95E5-20B8F3D0D55E
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  31 00 41 00 45 00 38 00  36 00 41 00 46 00 34 00  1.A.E.8.6.A.F.4.
+0080:  2d 00 34 00 34 00 46 00  43 00 2d 00 34 00 31 00  -.4.4.F.C.-.4.1.
+0090:  31 00 44 00 2d 00 39 00  35 00 45 00 35 00 2d 00  1.D.-.9.5.E.5.-.
+00a0:  32 00 30 00 42 00 38 00  46 00 33 00 44 00 30 00  2.0.B.8.F.3.D.0.
+00b0:  44 00 35 00 35 00 45 00  00 00 00 00              D.5.5.E.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Suspect" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\ED86938B-A2C4-4260-A4AB-D80BF8CE9C72
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  45 00 44 00 38 00 36 00  39 00 33 00 38 00 42 00  E.D.8.6.9.3.8.B.
+0080:  2d 00 41 00 32 00 43 00  34 00 2d 00 34 00 32 00  -.A.2.C.4.-.4.2.
+0090:  36 00 30 00 2d 00 41 00  34 00 41 00 42 00 2d 00  6.0.-.A.4.A.B.-.
+00a0:  44 00 38 00 30 00 42 00  46 00 38 00 43 00 45 00  D.8.0.B.F.8.C.E.
+00b0:  39 00 43 00 37 00 32 00  00 00 00 00              9.C.7.2.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Unknown Attachments" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\9A978764-CC8C-46F3-892A-D9E663246046
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  39 00 41 00 39 00 37 00  38 00 37 00 36 00 34 00  9.A.9.7.8.7.6.4.
+0080:  2d 00 43 00 43 00 38 00  43 00 2d 00 34 00 36 00  -.C.C.8.C.-.4.6.
+0090:  46 00 33 00 2d 00 38 00  39 00 32 00 41 00 2d 00  F.3.-.8.9.2.A.-.
+00a0:  44 00 39 00 45 00 36 00  36 00 33 00 32 00 34 00  D.9.E.6.6.3.2.4.
+00b0:  36 00 30 00 34 00 36 00  00 00 00 00              6.0.4.6.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Video and Sound" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\B0CD505E-8A44-434B-8194-E65976CDB4D9
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  42 00 30 00 43 00 44 00  35 00 30 00 35 00 45 00  B.0.C.D.5.0.5.E.
+0080:  2d 00 38 00 41 00 34 00  34 00 2d 00 34 00 33 00  -.8.A.4.4.-.4.3.
+0090:  34 00 42 00 2d 00 38 00  31 00 39 00 34 00 2d 00  4.B.-.8.1.9.4.-.
+00a0:  45 00 36 00 35 00 39 00  37 00 36 00 43 00 44 00  E.6.5.9.7.6.C.D.
+00b0:  42 00 34 00 44 00 39 00  00 00 00 00              B.4.D.9.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\Symbolic\Virus" 
+Reparse Tag Value : 0xa0000003
+Tag value: Microsoft
+Tag value: Name Surrogate
+Tag value: Mount Point
+Substitue Name offset: 0
+Substitue Name length: 176
+Print Name offset:     178
+Print Name Length:     0
+Substitute Name:       \??\D:\Program Files\Marshal\MailMarshal\Quarantine\C9A5C59E-AA24-472B-9B39-A374354F0D05
+
+Reparse Data Length: 0x000000bc
+Reparse Data:
+0000:  00 00 b0 00 b2 00 00 00  5c 00 3f 00 3f 00 5c 00  ........\.?.?.\.
+0010:  44 00 3a 00 5c 00 50 00  72 00 6f 00 67 00 72 00  D.:.\.P.r.o.g.r.
+0020:  61 00 6d 00 20 00 46 00  69 00 6c 00 65 00 73 00  a.m. .F.i.l.e.s.
+0030:  5c 00 4d 00 61 00 72 00  73 00 68 00 61 00 6c 00  \.M.a.r.s.h.a.l.
+0040:  5c 00 4d 00 61 00 69 00  6c 00 4d 00 61 00 72 00  \.M.a.i.l.M.a.r.
+0050:  73 00 68 00 61 00 6c 00  5c 00 51 00 75 00 61 00  s.h.a.l.\.Q.u.a.
+0060:  72 00 61 00 6e 00 74 00  69 00 6e 00 65 00 5c 00  r.a.n.t.i.n.e.\.
+0070:  43 00 39 00 41 00 35 00  43 00 35 00 39 00 45 00  C.9.A.5.C.5.9.E.
+0080:  2d 00 41 00 41 00 32 00  34 00 2d 00 34 00 37 00  -.A.A.2.4.-.4.7.
+0090:  32 00 42 00 2d 00 39 00  42 00 33 00 39 00 2d 00  2.B.-.9.B.3.9.-.
+00a0:  41 00 33 00 37 00 34 00  33 00 35 00 34 00 46 00  A.3.7.4.3.5.4.F.
+00b0:  30 00 44 00 30 00 35 00  00 00 00 00              0.D.0.5.....
+-- Folder:"f:\Program Files\Marshal\MailMarshal\Quarantine\ValidFingerPrints" 

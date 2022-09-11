@@ -1,0 +1,539 @@
+<HTML>
+<HEAD>
+<!--Header Area-->
+<TITLE>Sample Chapter from Microsoft® ADO.NET (Core Reference) by David Sceppa</TITLE>
+<META name="description" content="Discover how to access, sort, and manipulate data in Web-enabled enterprise applications with this book. It gives you expert guidance and insider tips about how to write, test, and debug database code with the tools in Microsoft Visual Studio&reg; .NET.">
+<META name="keywords" content="Microsoft® ADO.NET (Core Reference), David Sceppa, Visual Studio, DV-MPE Reference Libraries, May 15 2002 , Microsoft Press, Computer books, software, learning, training">
+<META name="ms.locale" content="en-us">
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/main.css"  type="text/css">
+
+<!--End Header Area-->
+<!-- Start: ToolBar V2.0-->
+<script language="JavaScript" src="/library/toolbar/toolbar.js"></script>
+<script language="JavaScript" src="/library/toolbar/en-us/global.js"></script>
+<script language="JavaScript" src="/mspress/global/local.js"></script>
+<link rel="stylesheet" href="/mspress/global/css/main.css"  type="text/css"> 
+<STYLE media=print>
+	TD#leftnav {display:none}
+	DIV#idToolbar {display:none}
+	DIV#idRow1 {display:none}
+	DIV#idICPBanner {display:none}
+	DIV#idMSMenuCurve {display:none}
+	DIV#idMSMenuPane {display:none}
+	DIV#idRow2 {display:none}
+	DIV#idADSBanner {display:none}
+	DIV#idMSCBanner {display:none}
+	DIV#idRow3 {display:none}
+	DIV#idICPMenuPane {display:none}	
+	DIV#TBDownLevelDiv {display:none}
+</STYLE>
+</head>
+<body bgcolor="#ffffff" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" text="#000000" alink="#660033" link="#003399" vlink="#6699cc"><a name="top"></a>
+
+<script language="JavaScript">
+<!--// Default Search Text Clear
+
+function clearField(field) {
+		field.value = "";
+} 
+
+//-->
+</script>
+<!-- Start: ToolBar for down-level browsers-->
+<div id="TBDownLevelDiv">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#3366cc">
+<tr>
+	<td valign="top" height="60" rowspan="2" width=100%><a href="/mspress/" target="_top"><img src="/mspress/images/banner.gif" width="250" height="60" alt="microsoft press home" border="0"></a></td>
+	<td valign="top" height="20" align="right"><img src="/library/toolbar/images/curve.gif" width="18" height="20" alt="" border="0"></td>
+	<td bgcolor="#000000" height="20" valign="middle" align="right" nowrap colspan="2">
+		<font color="#ffffff" face="verdana, arial" size=1 class="NSTB">
+			&nbsp;&nbsp;<a style="color:#ffffff;text-decoration:none;" href="/isapi/gomscom.asp?target=/products/" target="_top"><font color="#ffffff">All Products</font></a>&nbsp;&nbsp;<font color="#ffffff">|</font>
+			&nbsp;&nbsp;<a style="color:#ffffff;text-decoration:none;" href="/isapi/gomscom.asp?target=/support/" target="_top"><font color="#ffffff">Support</font></a>&nbsp;&nbsp;<font color="#ffffff">|</font>
+			&nbsp;&nbsp;<a style="color:#ffffff;text-decoration:none;" href="/isapi/gosearch.asp?target=/" target="_top"><font color="#ffffff">Search</font></a>&nbsp;&nbsp;<font color="#ffffff">|</font>
+			&nbsp;&nbsp;<a style="color:#ffffff;text-decoration:none;" href="/isapi/gomscom.asp?target=/" target="_top"><font color="#ffffff">microsoft.com Home</font></a>&nbsp;&nbsp;
+		</font></td>
+</tr>
+<tr>
+	<td valign="top" height="40" width="19"><img src="/mspress/images/1pxt.gif" width="19" height="40" alt="" border="0"></td>
+	<td valign="top"  bgcolor="#3366cc" height="40" align="right" nowrap colspan="2" width=0>&nbsp;</td>
+</tr>
+<tr>
+	<!-- Start: Local menus -->
+	<td bgcolor="#3366CC" height="20" valign="middle" nowrap colspan="4">
+		<font color="#ffffff" face="verdana, arial, helvetica" size="1" class="NSTB"><b>
+			&nbsp;&nbsp;<a style="color:#ffffff;text-decoration:none;" href="/mspress/" target="_top"><font color="#ffffff">Microsoft Press Home</font></a>&nbsp;&nbsp;<font color="#ffffff">|</font>
+			&nbsp;&nbsp;<a style="color:#ffffff;text-decoration:none;" href="/mspress/register/" target="_top"><font color="#ffffff">Register Books</font></a>&nbsp;&nbsp;<font color="#ffffff">|</font>
+			&nbsp;&nbsp;<a style="color:#ffffff;text-decoration:none;" href="/mspress/siteindex/" target="_top"><font color="#ffffff">Site Index</font></a>&nbsp;&nbsp;<font color="#ffffff">|</font>
+			&nbsp;&nbsp;<a style='color:#ffffff;text-decoration:none;' href='/mspress/findabook/list/subject.asp' target='_top'><font color="#ffffff">All Books</font></a>&nbsp;&nbsp;<font color="#ffffff">|</font>
+		</b></font></td>
+	<!-- End: Local menus -->
+</tr>
+</table>
+</div>
+<!-- End: ToolBar For down-level browsers-->
+<script language="JavaScript">
+<!--// Hide from old browsers
+
+var ToolBar_Supported = ToolBar_Supported;
+if (ToolBar_Supported != null && ToolBar_Supported == true)
+{
+	TBDownLevelDiv.style.display ='none';
+
+	// To change current page ICP banner, pass the appropriate values to the 
+	// function: setICPBanner (BannerGif, BannerUrl, BannerAltStr).
+	// For example,
+	//setICPBanner("/mspress/library/homepage/images/bnr_all.gif","","microsoft.com Home");
+
+	drawToolbar();
+
+	// To highlight current menu button, pass the appropriate values to the 
+	// function: setICPMenuColor(MenuIDStr, bgColor, fontColor, mouseoverColor).
+	// For example,
+	// setICPMenuColor("HomeMenu", "blue", "", "");
+}
+
+//-->
+</script>
+<!-- End: ToolBar V2.0-->
+<!-- End: ToolBar V2.0-->
+
+<!-- Flyout ClickTrax 1.5 script starts here -->
+<script language="JavaScript" src="/library/include/ctredir.js"></script>
+<script language="JavaScript">
+<!-- Hide from old browsers
+
+
+var imagenumber = 4 ;
+var randomnumber = Math.random() ;
+var rand1 = Math.round( (imagenumber-1) * randomnumber) + 1 ;
+images = new Array
+images[1] = "/mspress/images/touts/tout_W2003launch.gif"
+images[2] = "/mspress/images/touts/tout_VSlaunch.jpg"
+images[3] = "/mspress/images/touts/tout_TechEd03.jpg"
+images[4] = "/mspress/fastersmarter/quiz/images/152x140mspressquiz2.gif"
+var image = images[rand1]
+
+links = new Array
+links[1] = "http://www.microsoft2003launch.com/W21"
+links[2] = "http://www.microsoft2003launch.com/W21"
+links[3] = "http://go.microsoft.com/fwlink/?LinkId=13017"
+links[4] = "http://www.microsoft.com/mspress/fastersmarter/quiz"
+var link = links[rand1]
+
+alts = new Array
+alts[1] = "Attend a free Windows Server 2003 launch event"
+alts[2] = "Visual Studio .NET 2003 FREE Launch Event"
+alts[3] = "Microsoft TechEd 2003"
+alts[4] = "Quiz Yourself.  Cool Prizes."
+var alt = alts[rand1]
+// -- End Hiding Here -->
+</script>
+<!-- Flyout ClickTrax 1.5 script ends -->
+<!--  OVERALL TABLE  -->
+<table cellpadding=0 cellspacing=0 border=0 width=100%>
+        <TR><TD BGCOLOR="#FFFFFF"><IMG SRC="/mspress/images/1pxt.gif" WIDTH="100%" HEIGHT="1" /></TD></TR>
+	<tr>	
+		<td valign=top rowspan=3 id="leftnav" menudata="/mspress/global/menu.xml" style="background-color:#f1f1f1;border-right:1pt solid #999999">  
+<!-- SEARCH TABLE -->			
+			<table class=flyoutmenu cellspacing=0 cellpadding=0 width="180" style="background-color:#1478EB;border-bottom:1pt solid #999999; border-right:1pt solid #999999" border=0>
+				<tr>
+				<td rowspan=4 width=0 valign=top><img src="/mspress/images/1pxt.gif" width=8 height=5 border=0></td>
+				<td align=left width="25%" valign=middle><img src="/mspress/images/1pxt.gif" width=1 height=9 border=0><br></td>
+				</tr>
+				<TR>
+					<td align=left width="100%" valign=middle>	
+						<table border="0" cellspacing="0" cellpadding="0" border=0>
+							<tr>
+								<form action="http://search.microsoft.com/us/products/mspress/default.asp" method="get" name="SearchForm">
+								<td><input type="text" name="SearchString" style="width:130px" size="12" onFocus="clearField(this)" VALUE="Find a Title"></td>
+								<td>&nbsp;<input type="submit" STYLE="font-weight:normal;font-size:10px;" VALUE="Go"></td>
+								</form>
+							</tr>
+						</table>
+					</td>
+				</TR>
+				<tr>
+				<td colspan=1 align=left valign=top nowrap>
+					<font size=1><img src="/mspress/images/1pxt.gif" width=146 height=4 border=0><br>					
+					<a class=menuhead2 style="color:white" href="http://search.microsoft.com/us/products/mspress/default.asp">
+						<b>Advanced Search</b></A></font></td>
+				</tr>	
+				<tr>
+				<td align=left width="25%" valign=middle><img src="/mspress/images/1pxt.gif" width=148 height=5 border=0></td>
+				</tr>
+			</table>			
+<!--  LEFT NAV  -->					
+			<table class=flyoutmenu width="180" menudata="/mspress/global/menu.xml">
+				<tr>
+					<td>						
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+   <tr><td class="flyoutLink"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S2_Node1" LinkArea="Flyout" href="/mspress/howtobuy/"><img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>How to Buy</a></td></tr></table>
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="ww"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S2_Node2" LinkArea="Flyout" href="/mspress/worldwide/"><img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Worldwide Sites</a></td></tr></table>						
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+							<tr><td class="flyoutLink" handle="nr"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S2_Node3" LinkArea="Flyout" href="/mspress/hop/">
+							<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>New Releases</a>
+							</td></tr></table>
+							<table width=100% cellpadding="0" cellspacing="0" border="0">
+							<tr><td class="flyoutLink" handle="nr"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S2_Node4" LinkArea="Flyout" href="/mspress/support/">
+							<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Support: Book & CD</a>
+							</td></tr></table>
+							
+					</td>
+				</tr>				
+			</table>
+			<table class=flyoutmenu width="180" menudata="/mspress/global/menu.xml">
+				<tr>
+					<td>
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+   <tr><td class="flyoutHeading"><img src="/mspress/images/1pxt.gif" width=5 height=1 border=0>Hot topics:</td></tr></table>
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S6_Node1" LinkArea="Flyout" href="/mspress/windows/windowsserver2003/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Windows Server 2003</a></td></tr></table>
+<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S6_Node2" LinkArea="Flyout" href="/mspress/vstudio.net/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Visual Studio<br>&nbsp; .NET 2003</a></td></tr></table>		
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S6_Node3" LinkArea="Flyout" href="/mspress/certification/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Updated Certifications</a></td></tr></table>
+					</td>
+				</tr>				
+			</table>	
+			<table class=flyoutmenu width="180" menudata="/mspress/global/menu.xml">
+				<tr>
+					<td>
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+   <tr><td class="flyoutHeading"><img src="/mspress/images/1pxt.gif" width=5 height=1 border=0>Books about:</td></tr></table>
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="net"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S3_Node1" LinkArea="Flyout" href="/mspress/net/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>.NET</a></td></tr></table>
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="win"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S3_Node2" LinkArea="Flyout" href="/mspress/windows/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Windows</a></td></tr></table>
+		<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="off"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S3_Node3" LinkArea="Flyout" href="/mspress/Office/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Office</a></td></tr></table>
+		<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="svr"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S3_Node4" LinkArea="Flyout" href="/mspress/servers/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Servers</a></td></tr></table>
+		<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="dt"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S3_Node5" LinkArea="Flyout" href="/mspress/devtools/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Developer Tools</a></td></tr></table>
+<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="bl"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S3_Node6" LinkArea="Flyout" href="/mspress/findabook/list/title.asp">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Book List</a></td></tr></table>
+					</td>
+				</tr>				
+			</table>
+			<table class=flyoutmenu width="180" menudata="/mspress/global/menu.xml">
+				<tr>
+					<td>
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+   <tr><td class="flyoutHeading"><img src="/mspress/images/1pxt.gif" width=5 height=1 border=0>Books for:</td></tr></table>
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="cert"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S4_Node1" LinkArea="Flyout" href="/mspress/certification/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Certification</a></td></tr></table>
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="it"><a href="/mspress/it/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>IT Professionals</a></td></tr></table>
+		<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="dev"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S4_Node2" LinkArea="Flyout" href="/mspress/developer/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Developers</a></td></tr></table>
+		<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="ho"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S4_Node3" LinkArea="Flyout" href="/mspress/Home_Office/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Home & Office Users</a></td></tr></table>
+		<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="ed"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S4_Node4" LinkArea="Flyout" href="/mspress/education/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Educators</a></td></tr></table>
+		<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="sb"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S4_Node5" LinkArea="Flyout" href="/mspress/smallbiz/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Small Businesses</a></td></tr></table>
+					</td>
+				</tr>				
+			</table>
+			<table class=flyoutmenu width="180" menudata="/mspress/global/menu.xml">
+				<tr>
+					<td>
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+   <tr><td class="flyoutHeading"><img src="/mspress/images/1pxt.gif" width=5 height=1 border=0>Products for:</td></tr></table>
+						<table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td class="flyoutLink" handle="bus"><a onclick="javascript:trackInfo(this);" LinkID="Flyout_S5_Node1" LinkArea="Flyout" href="/mspress/business/">
+		<img src="/mspress/images/1pxt.gif" width=7 height=1 border=0>Interactive Training</a>
+</td></tr></table>
+					</td>
+				</tr>				
+			</table>
+			
+			<table>
+				<tr>
+					<td>
+						<table width=100% cellpadding="0" cellspacing="10" border="0">
+   <tr><td class="flyoutHeading"></td></tr></table>
+</td></tr></table><table width=100% cellpadding="0" cellspacing="0" border="0">
+    <tr><td><img src="/mspress/images/1pxt.gif" width=10 height=1 border=0>
+
+<script language="JavaScript">
+<!-- Hide this script from old browsers --
+document.write('<a onclick="javascript:trackInfo(this);" LinkID="Flyout_S6_Node1" LinkArea="Flyout" href="' + link + '"><IMG SRC="' + image + '" alt="' + alt +'" border="0"></a>')
+// -- End Hiding Here -->
+</script>
+<br><br><br>
+</td></tr></table>
+					
+		</td>
+<!--END LEFT NAV-->
+<!--PIXEL LINE-->		
+		<td rowspan=3 valign=top><img src="/mspress/images/1pxt.gif" width=15 height=1 border=0></td>
+		<td align=left valign=top width="100%"><img src="/mspress/images/1pxt.gif" width=1 height=20 border=0>
+<!--StartMainInc-->
+<img src="/mspress/images/1pxt.gif" width="1" height="10" border="0" /><br />
+<a name="top"></a>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+&nbsp;<tr>
+<td colspan="2">
+<img src="/mspress/images/1pxt.gif" width="538" height="1" border="0" /></td>
+</tr>
+</tr>
+<!--Now we render the top portion, with general book info etc..., and the right nav-->
+<tr>
+<td valign="top" colspan="2">
+<font face="Verdana,Arial,Helvetica" size="3" color="#003366"><b>Microsoft® ADO.NET (Core Reference)</b></font>
+</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="top" align="left" width="100%">
+<img src="/mspress/images/1pxt.gif" width="1" height="2" border="0" />
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="top" rowspan="8" width="130">
+<a href="/mspress/books/5354.asp"><img alt="" border="0" height="130" width="130" src="/MSPress/books/imgt/5354.gif" alt="Microsoft® ADO.NET (Core Reference)" /></a>
+</td>
+<td valign="top" rowspan="8" width="5"><img src="/mspress/images/1pxt.gif" width="5" height="1" border="0" /></td>
+<td valign="top" align="left" width="65"><font face="Verdana,Arial,Helvetica" size="1">Author</font></td>
+<td valign="top" rowspan="8" width="5"><img src="/mspress/images/1pxt.gif" width="5" height="1" border="0" /></td>
+<td valign="top" align="left" width="100%"><font face="Verdana,Arial,Helvetica" size="1">David Sceppa</font></td>
+<td valign="top" rowspan="8" width="5"><img src="/mspress/images/1pxt.gif" width="5" height="1" border="0" /></td>
+</tr>
+<tr>
+<td valign="top" align="left" width="65"><font face="Verdana,Arial,Helvetica" size="1">Pages</font></td>
+<td valign="top" align="left" width="100%"><font face="Verdana,Arial,Helvetica" size="1">736</font></td>
+</tr>
+<tr>
+<td valign="top" align="left" width="65"><font face="Verdana,Arial,Helvetica" size="1">Disk</font></td>
+<td valign="top" align="left" width="100%"><font face="Verdana,Arial,Helvetica" size="1">
+1 CD
+</font></td>
+</tr>
+<tr>
+<td valign="top" align="left" width="65"><font face="Verdana,Arial,Helvetica" size="1">Level</font></td>
+<td valign="top" align="left" width="100%">
+<font face="Verdana,Arial,Helvetica" size="1">All Levels</font>
+</td>
+</tr>
+<tr>
+<td valign="top" align="left" width="65"><font face="Verdana,Arial,Helvetica" size="1">Published</font></td>
+<td valign="top" align="left" width="100%"><font face="Verdana,Arial,Helvetica" size="1">05/15/2002</font></td>
+</tr>
+<tr>
+<td valign="top" align="left" width="65"><font face="Verdana,Arial,Helvetica" size="1">ISBN</font></td>
+<td valign="top" align="left" width="100%"><font face="Verdana,Arial,Helvetica" size="1">0-7356-1423-7</font></td>
+</tr>
+<tr>
+<td valign="top" align="left" width="65"><font face="Verdana,Arial,Helvetica" size="1">Price</font></td>
+<td valign="top" align="left" width="50%">
+<font face="Verdana,Arial,Helvetica" size="1"><strike style="color:red">$59.99</strike><br />
+<font color="#ff3300">To see this book's discounted price, select a reseller below.</font></font></td>
+</tr>
+<tr>
+<td valign="top" align="left" width="65"><img src="/mspress/images/1pxt.gif" width="1" height="1" border="0" /></td>
+<td valign="top" align="left" width="100%"><img src="/mspress/images/1pxt.gif" width="162" height="1" border="0" /></td>
+</tr>
+</table>
+</td>
+<td valign="top" align="right" width="162">
+<img src="/mspress/images/1pxt.gif" width="1" height="2" border="0" />
+<table border="0" cellspacing="0" cellpadding="0" width="150" align="right">
+<tr><td valign="top" class="rhNavHead" bgcolor="#0099ff" height="20" colspan="4">
+<img src="/mspress/images/1pxt.gif" width="5" height="3" /><br />
+<img src="/mspress/images/1pxt.gif" width="5" height="1" />
+<b>More Information</b>
+<img src="/mspress/images/1pxt.gif" width="5" height="3" />
+</td></tr>
+<tr>
+<td valign="top" bgcolor="#999999" width="1"><img src="/mspress/images/1pxt.gif" width="1" height="1" border="0" /></td>
+<td valign="top" width="100%">
+<font face="Verdana,Arial,Helvetica" size="1">
+<img src="/mspress/images/1pxt.gif" width="1" height="6" border="0" /><br />
+<img src="/mspress/images/1pxt.gif" width="1" height="15" border="0" />
+<a class="bookmark" href="/MSPress/books/5354.asp#AboutTheBook">
+About the Book
+</a><br />
+<img src="/mspress/images/1pxt.gif" width="1" height="11" border="0" />
+<a class="bookmark" href="/mspress/books/toc/5354.asp#TableOfContents">Table of Contents</a><br>
+<img src="/mspress/images/1pxt.gif" width="1" height="11" border="0" />
+<a class="bookmark" href="/mspress/books/sampchap/5354.asp#SampleChapter">Sample Chapter</a><br>
+<img src="/mspress/images/1pxt.gif" width="1" height="11" border="0">
+<a class="bookmark" href="/mspress/books/index/5354.asp#Index">Index</a><br>
+<img src="/mspress/images/1pxt.gif" width="1" height="11" border="0">
+<a class="bookmark" href="/mspress/books/companion/5354.asp#Companion Content">Companion Content</a><br>
+<img src="/mspress/images/1pxt.gif" width="1" height="11" border="0">
+<a class="bookmark" href="/mspress/findabook/list/series_RH.asp">Related Series</a><br>
+<img src="/mspress/images/1pxt.gif" width="1" height="11" border="0" />
+<a class="bookmark" href="/mspress/books/5354.asp#RelatedBooks">Related Books</a><br />
+
+<img src="/mspress/images/1pxt.gif" width="1" height="11" border="0" />
+<a class="bookmark" href="/MSPress/books/authors/auth5354.asp">
+
+									About the Author</a><br /><p></p>
+<img src="/mspress/images/1pxt.gif" width="1" height="11" border="0" />
+<a class="bookmark" href="/mspress/support/">Support: Book & CD</a>
+<img src="/mspress/images/1pxt.gif" width="1" height="11" border="0" /><br />
+<img src="/mspress/images/1pxt.gif" width="1" height="11" border="0" />
+<br />
+<img src="/mspress/images/1pxt.gif" width="1" height="11" border="0" />
+<a class="bookmark" href="/mspress/books/reviews/5354.asp">Read All Reviews</a><br />
+
+<img src="/mspress/images/1pxt.gif" width="1" height="11" border="0" />
+<a class="bookmark" href="/MSPress/books/reviews/default.asp?id=5354&isbn=0-7356-1423-7">
+
+                								Write A Review</a><br />
+<img src="/mspress/images/1pxt.gif" width="1" height="8" border="0" />
+</font>
+</td>
+<td valign="top" bgcolor="#999999" width="1"><img src="/mspress/images/1pxt.gif" width="1" height="1" border="0" /></td>
+</tr>
+<tr>
+<td valign="top" bgcolor="#999999" height="1" colspan="4"><img src="/mspress/images/1pwhite.gif" width="1" height="1" border="0" align="right" hspace="0" />
+<img src="/mspress/images/1pwhite.gif" width="1" height="1" border="0" /></td>
+</tr>
+</table>
+</td>
+<td width="16"><img src="/mspress/images/1pxt.gif" width="16" height="1" border="0" /></td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+<table>
+<tr>
+<td><a href="http://www.quantumbk.com"><img border="0" width="112" height="21" alt="Add to Cart" src="/mspress/images/addtocartquantum.gif"></img></a></td>
+<td><a href="http://www.readmedoc.com/mspress/default.asp"><img border="0" width="112" height="21" alt="Add to Cart" src="/mspress/images/addtocartreadme.gif"></img></a></td>
+<td><a href="http://www.camelot.ca/dynamic/vitrine/en-mspress.html?words=0-7356-1423-7"><img border="0" width="112" height="21" alt="Add to Cart" src="/mspress/images/addtocartcamelot.gif"></img></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!--EndMainInc-->
+
+<P><FONT size=1>&nbsp;</FONT>
+
+<!--Body Area-->
+<a name="SampleChapter"></a><hr size="1" noshade>
+<h2 class="chapter">Chapter 10: Submitting Updates to Your Database&nbsp;<I>continued</I></h2>
+<hr size="1" noshade>
+<P>
+<H3><A NAME="108"></A>Using ADO.NET <I>DataAdapter</I> Objects to Submit Updates</H3>
+Chapter 5 focused on using the <I>DataAdapter</I> to store the results of queries into <I>DataTables</I>, but that’s really only half the functionality of the <I>DataAdapter</I>. The object is also designed to submit pending changes to your <I>DataSet</I>.<P>
+You have the following three choices when it comes to generating the updating logic that your <I>DataAdapter</I> objects use to submit changes to your database:<P>
+<P><UL>
+<LI>Use code to manually configure your <I>DataAdapter</I> objects.</LI><P>
+<LI>Use a <I>CommandBuilder</I> at run time.</LI><P>
+<LI>Use the Data Adapter Configuration Wizard at design time.</LI><P>
+</UL><P>
+Each of these methods has benefits and drawbacks. In the following sections, I will explain both in great detail.<P>
+<H3><I><A NAME="110"></A>Manually Configuring Your <I>DataAdapter</I> Objects</I></H3>
+The <I>DataAdapter </I>object exposes four properties that contain <I>Command </I>objects. You’ve already learned that the <I>SelectCommand </I>property contains the <I>Command </I>that the <I>DataAdapter </I>uses to fill your <I>DataTable</I>. The other three properties&#151;<I>UpdateCommand</I>, <I>InsertCommand</I>, and <I>DeleteCommand&#151;</I>contain the <I>Command </I>objects that the <I>DataAdapter </I>uses to submit pending changes.<P>
+This architecture represents a major change from the ADO object model. There is no magical &quot;black box&quot; technology involved. You control how the <I>DataAdapter </I>submits pending changes because you supply the <I>Command </I>objects that the <I>DataAdapter </I>uses.<P>
+The <I>DataAdapter </I>object’s <I>Update </I>method is very flexible. You can supply a <I>DataSet</I>, a <I>DataSet </I>and a table name, a <I>DataTable</I>, or an array of <I>DataRow </I>objects. Regardless of how you call the <I>DataAdapter </I>object’s <I>Update </I>method, the <I>DataAdapter </I>will attempt to submit the pending changes through the appropriate <I>Command</I>. All the work we performed earlier in the <I>SubmitChangesByHand </I>procedure can be accomplished using a single call to the <I>DataAdapter </I>object’s <I>Update </I>method.<P>
+<H3><I><A NAME="112"></A>Introducing Bound Parameters</I></H3>
+The <I>SubmitChangesByHand </I>procedure that we created was not terribly complex. The procedure also didn’t do much work. Instead, it delegated the nasty work to one of three functions: <I>SubmitUpdate</I>, <I>SubmitInsert</I>, or <I>SubmitDelete</I>. These functions populate the values for the parameters in the appropriate query based on the contents of the modified row.<P>
+We’ll use the same parameterized queries to submit pending changes using a <I>DataAdapter</I>.<P>
+<PRE class="code">UPDATE&nbsp;[Order&nbsp;Details]&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;SET&nbsp;OrderID&nbsp;=&nbsp;?,&nbsp;ProductID&nbsp;=&nbsp;?,&nbsp;Quantity&nbsp;=&nbsp;?,&nbsp;UnitP rice&nbsp;=&nbsp;?&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;WHERE&nbsp;OrderID&nbsp;=&nbsp;?&nbsp;&nbsp;AND&nbsp;ProductID&nbsp;=&nbsp;?&nbsp;AND&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;?&nbsp;AND&nbsp;UnitPrice&nbsp;=&nbsp;?<BR>&nbsp;<br>INSERT&nbsp;INTO&nbsp;[Order&nbsp;Details]&nbsp;(OrderID,&nbsp;ProductID,&nbsp;Quanti ty,&nbsp;UnitPrice)<BR>&nbsp;&nbsp;&nbsp;&nbsp;VALUES&nbsp;(?,&nbsp;?,&nbsp;?,&nbsp;?)<BR>&nbsp;<br>DELETE&nbsp;FROM&nbsp;[Order&nbsp;Details]<BR>&nbsp;&nbsp;&nbsp;&nbsp;WHERE&nbsp;OrderID&nbsp;=&nbsp;?&nbsp;AND&nbsp;ProductID&nbsp;=&nbsp;?&nbsp;AND&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;?&nbsp;AND&nbsp;UnitPrice&nbsp;=&nbsp;?</PRE><P>
+However, when we add <I>Parameter </I>objects to the <I>DataAdapter </I>object’s <I>Command </I>objects, we’ll use two properties of the ADO.NET <I>Parameter </I>object that are designed specifically for updates using the <I>DataAdapter</I>: <I>SourceColumn </I>and <I>SourceVersion</I>.<P>
+These properties basically bind a <I>Parameter </I>to a <I>DataColumn </I>in your <I>DataTable</I>. The <I>DataAdapter </I>uses these properties to determine how to populate the <I>Parameter </I>object’s <I>Value </I>property before executing the query, similar to how we accomplished this task in the <I>SubmitUpdate</I>, <I>SubmitInsert</I>, and <I>SubmitDelete </I>functions. Figure 10-2 better illustrates this behavior.<P>
+<A HREF="5354/0735614237-02.gif" target="_blank"><P><IMG SRC="/mspress/images/imagelink.gif" width=36 height=29 border=0 alt="Click to view graphic"></A><BR>Click to view graphic<P>
+<B>Figure 10-2  </B><I>Binding </I>Parameter<I> objects to </I>DataColumn<I> objects.</I><P>
+The following code snippet creates our parameterized <I>Command </I>objects but sets the <I>SourceColumn </I>and <I>SourceVersion </I>properties of the <I>Parameter </I>objects. The default value for the <I>SourceVersion </I>property is <I>DataRowVersion.Current</I>, so we need to set the property only if we want to bind the <I>Parameter </I>objects to the original values in the desired column.<P>
+<B>Visual Basic .NET</B><P>
+<PRE class="code">Private&nbsp;Function&nbsp;CreateDataAdapterUpdateCommand()&nbsp;As&nbsp;Ol eDbCommand<BR>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;strSQL&nbsp;As&nbsp;String<BR>&nbsp;&nbsp;&nbsp;&nbsp;strSQL&nbsp;= &quot;UPDATE&nbsp;[Order&nbsp;Details] &quot; &amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;SET&nbsp;OrderID&nbsp;=&nbsp;?,&nbsp;ProductID&nbsp;=&nbsp;?, &quot; &amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;?,&nbsp;UnitPrice&nbsp;=&nbsp;? &quot; &amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;&nbsp;&nbsp;&nbsp;WHERE&nbsp;OrderID&nbsp;=&nbsp;?&nbsp;&nbsp;AND&nbsp;ProductID&nbsp;=&nbsp;?&nbsp;AND&quot;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;?&nbsp;AND&nbsp;UnitPrice&nbsp;=&nbsp;?&quot;<BR>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;cmd&nbsp;As&nbsp;New&nbsp;OleDbCommand(strSQL,&nbsp;cn)<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;pc&nbsp;As&nbsp;OleDbParameterCollection&nbsp;=&nbsp;cmd.Parameters<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;OrderID_New&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;OrderID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;ProductID_New&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;ProductID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;Quantity_New&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0,&quot;Quantity&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;UnitPrice_New&quot;,&nbsp;OleDbType.Currency,&nbsp;0,&quot;UnitPrice&quot;)<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;param&nbsp;As&nbsp;OleDbParameter<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;OrderID_Orig&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;OrderID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;ProductID_Orig&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;ProductID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;Quantity_Orig&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0,&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Quantity&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;UnitPrice_Orig&quot;,&nbsp;OleDbType.Currency,&nbsp;0,&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;UnitPrice&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Return&nbsp;cmd<BR>End&nbsp;Function<BR>&nbsp;<br>Private&nbsp;Function&nbsp;CreateDataAdapterInsertCommand()&nbsp;As&nbsp;OleDbCommand<BR>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;strSQL&nbsp;As&nbsp;String<BR>&nbsp;&nbsp;&nbsp;&nbsp;strSQL&nbsp;=&quot;INSERT&nbsp;INTO&nbsp;[Order&nbsp;Details]&quot;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;(OrderID,&nbsp;ProductID,&nbsp;Quantity,&nbsp;UnitPrice) &quot; &amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;VALUES&nbsp;(?,&nbsp;?,&nbsp;?,&nbsp;?)&quot;<BR>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;cmd&nbsp;As&nbsp;New&nbsp;OleDbCommand(strSQL,&nbsp;cn)<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;pc&nbsp;As&nbsp;OleDbParameterCollection&nbsp;=&nbsp;cmd.Parameters<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;OrderID&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;OrderID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;ProductID&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;ProductID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;Quantity&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0,&quot;Quantity&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;UnitPrice&quot;,&nbsp;OleDbType.Currency,&nbsp;0,&quot;UnitPrice&quot;)<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Return&nbsp;cmd<BR>End&nbsp;Function<BR>&nbsp;<br>Private&nbsp;Function&nbsp;CreateDataAdapterDeleteCommand()&nbsp;As&nbsp;Ol eDbCommand<BR>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;strSQL&nbsp;As&nbsp;String<BR>&nbsp;&nbsp;&nbsp;&nbsp;strSQL&nbsp;= &quot;DELETE&nbsp;FROM&nbsp;[Order&nbsp;Details] &quot; &amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;WHERE&nbsp;OrderID&nbsp;=&nbsp;?&nbsp;AND&nbsp;ProductID&nbsp;=&nbsp;?&nbsp;AND &quot; &amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;?&nbsp;AND&nbsp;UnitPrice&nbsp;=&nbsp;?&quot;<BR>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;cmd&nbsp;As&nbsp;New&nbsp;OleDbCommand(strSQL,&nbsp;cn)<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;pc&nbsp;As&nbsp;OleDbParameterCollection&nbsp;=&nbsp;cmd.Parameters<BR>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;param&nbsp;As&nbsp;OleDbParameter<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;OrderID&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;OrderID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;ProductID&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;ProductID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;Quantity&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0, &quot;Quantity&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;UnitPrice&quot;,&nbsp;OleDbType.Currency,&nbsp;0,&quot;UnitPrice&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Return&nbsp;cmd<BR>End&nbsp;Function</PRE><P>
+<B>Visual C# .NET</B><P>
+<PRE class="code">static&nbsp;OleDbCommand&nbsp;CreateDataAdapterUpdateCommand()<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;strSQL;<BR>&nbsp;&nbsp;&nbsp;&nbsp;strSQL&nbsp;= &quot;UPDATE&nbsp;[Order&nbsp;Details] &quot; &amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;SET&nbsp;OrderID&nbsp;=&nbsp;?,&nbsp;ProductID&nbsp;=&nbsp;?, &quot; +<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;?,&nbsp;UnitPrice&nbsp;=&nbsp;? &quot; +<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;WHERE&nbsp;OrderID&nbsp;=&nbsp;?&nbsp;AND&nbsp;ProductID&nbsp;=&nbsp;?&nbsp;AND &quot; +<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;?&nbsp;AND&nbsp;UnitPrice&nbsp;=&nbsp;?&quot;;<BR>&nbsp;&nbsp;&nbsp;&nbsp;OleDbCommand&nbsp;cmd&nbsp;=&nbsp;new&nbsp;OleDbCommand(strSQL,&nbsp;cn);<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;OleDbParameterCollection&nbsp;pc&nbsp;=&nbsp;cmd.Parameters;<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;OrderID_New&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;OrderID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;ProductID_New&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;ProductID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;Quantity_New&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0,&quot;Quantity&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;UnitPrice_New&quot;,&nbsp;OleDbType.Currency,&nbsp;0,&quot;UnitPrice&quot;);<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;OleDbParameter&nbsp;param;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;OrderID_Orig&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;OrderID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;ProductID_Orig&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;ProductID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;Quantity_Orig&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Quantity&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;UnitPrice_Orig&quot;,&nbsp;OleDbType.Currency,&nbsp;0,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;UnitPrice&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;cmd;<BR>}&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;<br>static&nbsp;OleDbCommand&nbsp;CreateDataAdapterInsertCommand()<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;strSQL;<BR>&nbsp;&nbsp;&nbsp;&nbsp;strSQL&nbsp;=&quot;INSERT&nbsp;INTO&nbsp;[Order&nbsp;Details]&quot;+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;&nbsp;&nbsp;&nbsp;(OrderID,&nbsp;ProductID,&nbsp;Quantity,&nbsp;UnitPrice) &quot; +<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;VALUES&nbsp;(?,&nbsp;?,&nbsp;?,&nbsp;?)&quot;;<BR>&nbsp;&nbsp;&nbsp;&nbsp;OleDbCommand&nbsp;cmd&nbsp;=&nbsp;new&nbsp;OleDbCommand(strSQL,&nbsp;cn);<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;OleDbParameterCollection&nbsp;pc&nbsp;=&nbsp;cmd.Parameters;<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;OrderID&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;OrderID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;ProductID&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;ProductID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;Quantity&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0,&quot;Quantity&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;UnitPrice&quot;,&nbsp;OleDbType.Currency,&nbsp;0,&quot;UnitPrice&quot;);<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;cmd;<BR>}&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;<br>static&nbsp;OleDbCommand&nbsp;CreateDataAdapterDeleteCommand()<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;strSQL;<BR>&nbsp;&nbsp;&nbsp;&nbsp;strSQL&nbsp;=&quot;DELETE&nbsp;FROM&nbsp;[Order&nbsp;Details] &quot; +<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;WHERE&nbsp;OrderID&nbsp;=&nbsp;?&nbsp;AND&nbsp;ProductID&nbsp;=&nbsp;?&nbsp;AND&quot;+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;?&nbsp;AND&nbsp;UnitPrice&nbsp;=&nbsp;?&quot;;<BR>&nbsp;&nbsp;&nbsp;&nbsp;OleDbCommand&nbsp;cmd&nbsp;=&nbsp;new&nbsp;OleDbCommand(strSQL,&nbsp;cn);<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;OleDbParameter&nbsp;param;<BR>&nbsp;&nbsp;&nbsp;&nbsp;OleDbParameterCollection&nbsp;pc&nbsp;=&nbsp;cmd.Parameters;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;OrderID&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;OrderID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;ProductID&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;ProductID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;Quantity&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0,&quot;Quantity&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;UnitPrice&quot;,&nbsp;OleDbType.Currency,&nbsp;0,&quot;UnitPrice&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;cmd;<BR>}&nbsp;&nbsp;&nbsp;&nbsp;</PRE><P>
+We can now replace the <I>SubmitChangesByHand</I>, <I>SubmitUpdate</I>, <I>SubmitInsert</I>, and <I>SubmitDelete </I>procedures with the following code:<P>
+<B>Visual Basic .NET</B><P>
+<PRE class="code">Private&nbsp;Sub&nbsp;SubmitChangesViaDataAdapter()<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.UpdateCommand&nbsp;=&nbsp;CreateDataAdapterUpdateCommand()<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.InsertCommand&nbsp;=&nbsp;CreateDataAdapterInsertCommand()<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.DeleteCommand&nbsp;=&nbsp;CreateDataAdapterDeleteCommand()<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.Update(tbl)<BR>End&nbsp;Sub</PRE><P>
+<B>Visual C# .NET</B><P>
+<PRE class="code">static&nbsp;void&nbsp;SubmitChangesViaDataAdapter()<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.UpdateCommand&nbsp;=&nbsp;CreateDataAdapterUpdateCommand() ;<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.InsertCommand&nbsp;=&nbsp;CreateDataAdapterInsertCommand() ;<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.DeleteCommand&nbsp;=&nbsp;CreateDataAdapterDeleteCommand() ;<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.Update(tbl);<BR>}</PRE><P>
+<H3><I><A NAME="114"></A>Using Stored Procedures to Submit Updates</I></H3>
+A common complaint of developers who used ADO to retrieve data from their databases was that they couldn’t use the <I>Recordset </I>object’s <I>UpdateBatch </I>method to submit updates using stored procedures.<P>
+Earlier, I mentioned that the <I>DataAdapter </I>lets you define your own updating logic. The previous code snippets showed how you can build your own <I>Command </I>objects that the <I>DataAdapter </I>can then use to submit pending changes. We can use similar code to submit updates using stored procedures.<P>
+First we need to define stored procedures in the Northwind database that can modify, insert, and delete rows from the Order Details table. You can paste and then execute the following code in SQL Query Analyzer to create the stored procedures that we’re going to call in our code. If you don’t have access to SQL Query Analyzer because you have only MSDE installed, you can call a procedure named <I>CreateSprocs </I>(which appears in a later code snippet) to create the desired stored procedures.<P>
+<PRE class="code">USE&nbsp;Northwind<BR>&nbsp;<br>GO<BR>&nbsp;<br>CREATE&nbsp;PROCEDURE&nbsp;spUpdateDetail<BR>&nbsp;&nbsp;&nbsp;&nbsp;(@OrderID_New&nbsp;int,&nbsp;@ProductID_New&nbsp;int,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Quantity_New&nbsp;smallint,&nbsp;@UnitPrice_New&nbsp;money,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@OrderID_Orig&nbsp;int,&nbsp;@ProductID_Orig&nbsp;int,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Quantity_Orig&nbsp;smallint,&nbsp;@UnitPrice_Orig&nbsp;money)&nbsp;<BR>AS&nbsp;<BR>UPDATE&nbsp;[Order&nbsp;Details]<BR>&nbsp;&nbsp;&nbsp;&nbsp;SET&nbsp;OrderID&nbsp;=&nbsp;@OrderID_New,&nbsp;ProductID&nbsp;=&nbsp;@ProductID_ New,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;@Quantity_New,&nbsp;UnitPrice&nbsp;=&nbsp;@UnitPric e_New&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;WHERE&nbsp;OrderID&nbsp;=&nbsp;@OrderID_Orig&nbsp;AND&nbsp;ProductID&nbsp;=&nbsp;@Prod uctID_Orig&nbsp;AND<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;@Quantity_Orig&nbsp;AND&nbsp;UnitPrice&nbsp;=&nbsp;@Un itPrice_Orig<BR>&nbsp;<br>GO<BR>&nbsp;<br>CREATE&nbsp;PROCEDURE&nbsp;spInsertDetail&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;(@OrderID&nbsp;int,&nbsp;@ProductID&nbsp;int,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Quantity&nbsp;smallint,&nbsp;@UnitPrice&nbsp;money)&nbsp;<BR>AS&nbsp;<BR>INSERT&nbsp;INTO&nbsp;[Order&nbsp;Details]&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;(OrderID,&nbsp;ProductID,&nbsp;Quantity,&nbsp;UnitPrice)<BR>&nbsp;&nbsp;&nbsp;&nbsp;VALUES&nbsp;(@OrderID,&nbsp;@ProductID,&nbsp;@Quantity,&nbsp;@UnitPrice )<BR>&nbsp;<br>GO<BR>&nbsp;<br>CREATE&nbsp;PROCEDURE&nbsp;spDeleteDetail<BR>&nbsp;&nbsp;&nbsp;&nbsp;(@OrderID&nbsp;int,&nbsp;@ProductID&nbsp;int,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Quantity&nbsp;smallint,&nbsp;@UnitPrice&nbsp;money)&nbsp;<BR>AS&nbsp;<BR>DELETE&nbsp;FROM&nbsp;[Order&nbsp;Details]&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;WHERE&nbsp;OrderID&nbsp;=&nbsp;@OrderID&nbsp;AND&nbsp;ProductID&nbsp;=&nbsp;@ProductID &nbsp;AND&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;@Quantity&nbsp;AND&nbsp;UnitPrice&nbsp;=&nbsp;@UnitPri ce</PRE><P>
+Now that we have stored procedures that we can call to submit changes to the Order Details table, we can write <I>Command </I>objects to call those stored procedures automatically when we call the <I>DataAdapter </I>object’s <I>Update </I>method.<P>
+The following code snippet contains functions that create <I>Command </I>objects that contain calls to the stored procedures I just described. It also contains a procedure you can call to create those stored procedures in your database. All that’s left to do to submit updates using stored procedures is to wire up our new <I>Command </I>objects to the <I>DataAdapter</I>, which we can do in the <I>SubmitChangesViaStoredProcedures </I>procedure.<P>
+<B>Visual Basic .NET</B><P>
+<PRE class="code">Private&nbsp;Sub&nbsp;SubmitChangesViaStoredProcedures()<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.UpdateCommand&nbsp;=&nbsp;CreateUpdateViaSPCommand()<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.InsertCommand&nbsp;=&nbsp;CreateInsertViaSPCommand()<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.DeleteCommand&nbsp;=&nbsp;CreateDeleteViaSPCommand()<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.Update(tbl)<BR>End&nbsp;Sub<BR>&nbsp;<br>Private&nbsp;Function&nbsp;CreateUpdateViaSPCommand()&nbsp;As&nbsp;OleDbCommand<BR>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;cmd&nbsp;As&nbsp;New&nbsp;OleDbCommand(&quot;spUpdateDetail&quot;,&nbsp;cn)<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandType&nbsp;=&nbsp;CommandType.StoredProcedure<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;pc&nbsp;As&nbsp;OleDbParameterCollection&nbsp;=&nbsp;cmd.Parameters<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;OrderID_New&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;OrderID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;ProductID_New&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;ProductID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;Quantity_New&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0,&quot;Quantity&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;UnitPrice_New&quot;,&nbsp;OleDbType.Currency,&nbsp;0,&quot;UnitPrice&quot;)<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;param&nbsp;As&nbsp;OleDbParameter<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;OrderID_Orig&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;OrderID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;ProductID_Orig&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;ProductID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;Quantity_Orig&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0,&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Quantity&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;UnitPrice_Orig&quot;,&nbsp;OleDbType.Currency,&nbsp;0,&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;UnitPrice&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Return&nbsp;cmd<BR>End&nbsp;Function<BR>&nbsp;<br>Private&nbsp;Function&nbsp;CreateInsertViaSPCommand()&nbsp;As&nbsp;OleDbCommand<BR>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;cmd&nbsp;As&nbsp;New&nbsp;OleDbCommand(&quot;spInsertDetail&quot;,&nbsp;cn)<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandType&nbsp;=&nbsp;CommandType.StoredProcedure<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;pc&nbsp;As&nbsp;OleDbParameterCollection&nbsp;=&nbsp;cmd.Parameters<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;OrderID&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;OrderID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;ProductID&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;ProductID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;Quantity&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0,&quot;Quantity&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;UnitPrice&quot;,&nbsp;OleDbType.Currency,&nbsp;0,&quot;UnitPrice&quot;)<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Return&nbsp;cmd<BR>End&nbsp;Function<BR>&nbsp;<br>Private&nbsp;Function&nbsp;CreateDeleteViaSPCommand()&nbsp;As&nbsp;OleDbCommand<BR>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;cmd&nbsp;As&nbsp;New&nbsp;OleDbCommand(&quot;spDeleteDetail&quot;,&nbsp;cn)<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandType&nbsp;=&nbsp;CommandType.StoredProcedure<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;pc&nbsp;As&nbsp;OleDbParameterCollection&nbsp;=&nbsp;cmd.Parameters<BR>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;param&nbsp;As&nbsp;OleDbParameter<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;OrderID&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;OrderID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;ProductID&quot;,&nbsp;OleDbType.Integer,&nbsp;0,&quot;ProductID&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;Quantity&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0,&quot;Quantity&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;UnitPrice&quot;,&nbsp;OleDbType.Currency,&nbsp;0,&quot;UnitPrice&quot;)<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Return&nbsp;cmd<BR>End&nbsp;Function<BR>&nbsp;<br>Private&nbsp;Sub&nbsp;CreateSprocs()<BR>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;cmd&nbsp;As&nbsp;OleDbCommand&nbsp;=&nbsp;cn.CreateCommand<BR>&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;strSQL&nbsp;As&nbsp;String<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;strSQL&nbsp;=&quot;CREATE&nbsp;PROCEDURE&nbsp;spUpdateDetail&quot;&amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;(@OrderID_New&nbsp;int,&nbsp;@ProductID_New&nbsp;int, &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;@Quantity_New&nbsp;smallint, &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;@UnitPrice_New&nbsp;money, &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;@OrderID_Orig&nbsp;int, &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;@ProductID_Orig&nbsp;int, &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;@Quantity_Orig&nbsp;smallint, &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;@UnitPrice_Orig&nbsp;money) &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;AS &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;UPDATE&nbsp;[Order&nbsp;Details] &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;SET&nbsp;OrderID&nbsp;=&nbsp;@OrderID_New, &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ProductID&nbsp;=&nbsp;@ProductID_New, &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;@Quantity_New, &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UnitPrice&nbsp;=&nbsp;@UnitPrice_New &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;WHERE&nbsp;OrderID&nbsp;=&nbsp;@OrderID_Orig&nbsp;AND &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ProductID&nbsp;=&nbsp;@ProductID_Orig&nbsp;AND&quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;@Quantity_Orig&nbsp;AND&quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UnitPrice&nbsp;=&nbsp;@UnitPrice_Orig&quot;<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandText&nbsp;=&nbsp;strSQL<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.ExecuteNonQuery()<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;strSQL&nbsp;= &quot;CREATE&nbsp;PROCEDURE&nbsp;spInsertDetail &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;(@OrderID&nbsp;int,&nbsp;@ProductID&nbsp;int, &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;@Quantity&nbsp;smallint,&nbsp;@UnitPrice&nbsp;money) &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;AS &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;INSERT&nbsp;INTO&nbsp;[Order&nbsp;Details] &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;(OrderID,&nbsp;ProductID,&nbsp;Quantity,&nbsp;UnitPrice) &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;VALUES&nbsp;(@OrderID,&nbsp;@ProductID,&nbsp;@Quantity,&nbsp;@UnitPrice) &quot;<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandText&nbsp;=&nbsp;strSQL<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.ExecuteNonQuery()<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;strSQL&nbsp;= &quot;CREATE&nbsp;PROCEDURE&nbsp;spDeleteDetail &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;(@OrderID&nbsp;int,&nbsp;@ProductID&nbsp;int, &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;@Quantity&nbsp;smallint,&nbsp;@UnitPrice&nbsp;money) &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;AS &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;DELETE&nbsp;FROM&nbsp;[Order&nbsp;Details] &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;WHERE&nbsp;OrderID&nbsp;=&nbsp;@OrderID&nbsp;AND &quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ProductID&nbsp;=&nbsp;@ProductID&nbsp;AND&quot; &amp;&nbsp;vbCrLf&nbsp;&amp;&nbsp;_<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;@Quantity&nbsp;AND&nbsp;UnitPrice&nbsp;=&nbsp;@UnitPrice&quot;<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandText&nbsp;=&nbsp;strSQL<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.ExecuteNonQuery()<BR>End&nbsp;Sub</PRE><P>
+<B>Visual C# .NET</B><P>
+<PRE class="code">static&nbsp;void&nbsp;SubmitChangesViaStoredProcedures()<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.UpdateCommand&nbsp;=&nbsp;CreateUpdateViaSPCommand();<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.InsertCommand&nbsp;=&nbsp;CreateInsertViaSPCommand();<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.DeleteCommand&nbsp;=&nbsp;CreateDeleteViaSPCommand();<BR>&nbsp;&nbsp;&nbsp;&nbsp;da.Update(tbl);<BR>}<BR>&nbsp;<br>static&nbsp;OleDbCommand&nbsp;CreateUpdateViaSPCommand()<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;OleDbCommand&nbsp;cmd&nbsp;=&nbsp;new&nbsp;OleDbCommand(&quot;spUpdateDetail &quot;,&nbsp;cn);<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandType&nbsp;=&nbsp;CommandType.StoredProcedure;<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;OleDbParameterCollection&nbsp;pc&nbsp;=&nbsp;cmd.Parameters;<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;OrderID_New&quot;,&nbsp;OleDbType.Integer,&nbsp;0, &quot;OrderID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;ProductID_New&quot;,&nbsp;OleDbType.Integer,&nbsp;0, &quot;ProductID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;Quantity_New&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0, &quot;Quantity&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;UnitPrice_New&quot;,&nbsp;OleDbType.Currency,&nbsp;0, &quot;UnitPrice&quot;);<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;OleDbParameter&nbsp;param;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;OrderID_Orig&quot;,&nbsp;OleDbType.Integer,&nbsp;0 , &quot;OrderID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;ProductID_Orig&quot;,&nbsp;OleDbType.Integer, &nbsp;0, &quot;ProductID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;Quantity_Orig&quot;,&nbsp;OleDbType.SmallInt, &nbsp;0, &quot;Quantity&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;UnitPrice_Orig&quot;,&nbsp;OleDbType.Currency ,&nbsp;0, &quot;UnitPrice&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;cmd;<BR>}&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;<br>static&nbsp;OleDbCommand&nbsp;CreateInsertViaSPCommand()<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;OleDbCommand&nbsp;cmd&nbsp;=&nbsp;new&nbsp;OleDbCommand(&quot;spInsertDetail &quot;,&nbsp;cn);<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandType&nbsp;=&nbsp;CommandType.StoredProcedure;<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;OleDbParameterCollection&nbsp;pc&nbsp;=&nbsp;cmd.Parameters;<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;OrderID&quot;,&nbsp;OleDbType.Integer,&nbsp;0, &quot;OrderID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;ProductID&quot;,&nbsp;OleDbType.Integer,&nbsp;0, &quot;ProductID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;Quantity&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0, &quot;Quantity&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;pc.Add(&quot;UnitPrice&quot;,&nbsp;OleDbType.Currency,&nbsp;0, &quot;UnitPrice&quot;);<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;cmd;<BR>}&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;<br>static&nbsp;OleDbCommand&nbsp;CreateDeleteViaSPCommand()<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;OleDbCommand&nbsp;cmd&nbsp;=&nbsp;new&nbsp;OleDbCommand(&quot;spDeleteDetail &quot;,&nbsp;cn);<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandType&nbsp;=&nbsp;CommandType.StoredProcedure;<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;OleDbParameterCollection&nbsp;pc&nbsp;=&nbsp;cmd.Parameters;<BR>&nbsp;&nbsp;&nbsp;&nbsp;OleDbParameter&nbsp;param;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;OrderID&quot;,&nbsp;OleDbType.Integer,&nbsp;0, &quot;OrderID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;ProductID&quot;,&nbsp;OleDbType.Integer,&nbsp;0, &quot;ProductID&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;Quantity&quot;,&nbsp;OleDbType.SmallInt,&nbsp;0, &quot;Quantity&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;&nbsp;&nbsp;&nbsp;param&nbsp;=&nbsp;pc.Add(&quot;UnitPrice&quot;,&nbsp;OleDbType.Currency,&nbsp;0, &quot;UnitPrice&quot;);<BR>&nbsp;&nbsp;&nbsp;&nbsp;param.SourceVersion&nbsp;=&nbsp;DataRowVersion.Original;<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;cmd;<BR>}&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;<br>static&nbsp;void&nbsp;CreateSprocs()<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;OleDbCommand&nbsp;cmd&nbsp;=&nbsp;cn.CreateCommand();<BR>&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;strSQL;<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;strSQL&nbsp;= &quot;CREATE&nbsp;PROCEDURE&nbsp;spUpdateDetail&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;(@OrderID_New&nbsp;int,&nbsp;@ProductID_New&nbsp;int,&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;@Quantity_New&nbsp;smallint,&nbsp;@UnitPrice_New&nbsp;money,&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;@OrderID_Orig&nbsp;int,&nbsp;@ProductID_Orig&nbsp;int,&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;@Quantity_Orig&nbsp;smallint,&nbsp;@UnitPrice_Orig&nbsp;money)&nbsp;\n\ r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;AS&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;UPDATE&nbsp;[Order&nbsp;Details]&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;SET&nbsp;OrderID&nbsp;=&nbsp;@OrderID_New,&nbsp;\n\r&quot; +<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ProductID&nbsp;=&nbsp;@ProductID_New,&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;@Quantity_New,&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UnitPrice&nbsp;=&nbsp;@UnitPrice_New&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;WHERE&nbsp;OrderID&nbsp;=&nbsp;@OrderID_Orig&nbsp;AND&nbsp;\n\r&quot; +<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ProductID&nbsp;=&nbsp;@ProductID_Orig&nbsp;AND&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;@Quantity_Orig&nbsp;AND&nbsp;\n\r&quot; +<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UnitPrice&nbsp;=&nbsp;@UnitPrice_Orig&quot;;<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandText&nbsp;=&nbsp;strSQL;<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.ExecuteNonQuery();<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;strSQL&nbsp;= &quot;CREATE&nbsp;PROCEDURE&nbsp;spInsertDetail&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;(@OrderID&nbsp;int,&nbsp;@ProductID&nbsp;int,&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;@Quantity&nbsp;smallint,&nbsp;@UnitPrice&nbsp;money)&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;AS&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;INSERT&nbsp;INTO&nbsp;[Order&nbsp;Details]&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;(OrderID,&nbsp;ProductID,&nbsp;Quantity,&nbsp;UnitPrice)&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;VALUES&nbsp;(@OrderID,&nbsp;@ProductID,&nbsp;@Quantity,&nbsp;@UnitPrice) &quot;;<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandText&nbsp;=&nbsp;strSQL;<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.ExecuteNonQuery();<BR>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;strSQL&nbsp;= &quot;CREATE&nbsp;PROCEDURE&nbsp;spDeleteDetail&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;(@OrderID&nbsp;int,&nbsp;@ProductID&nbsp;int,&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;@Quantity&nbsp;smallint,&nbsp;@UnitPrice&nbsp;money)&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;AS&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;DELETE&nbsp;FROM&nbsp;[Order&nbsp;Details]&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;WHERE&nbsp;OrderID&nbsp;=&nbsp;@OrderID&nbsp;AND&nbsp;\n\r&quot; +<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ProductID&nbsp;=&nbsp;@ProductID&nbsp;AND&nbsp;\n\r&quot; +&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity&nbsp;=&nbsp;@Quantity&nbsp;AND&nbsp;UnitPrice&nbsp;=&nbsp;@UnitPrice&quot;;<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.CommandText&nbsp;=&nbsp;strSQL;<BR>&nbsp;&nbsp;&nbsp;&nbsp;cmd.ExecuteNonQuery();<BR>}</PRE><P>
+<P>
+<H3><I><A NAME="116"></A>Supplying Your Own Updating Logic</I></H3>
+Now let’s look at the benefits and drawbacks of supplying your own updating logic in code.<P>
+<B>Benefits</B><P>
+The two biggest benefits of supplying your own updating logic are control and performance. The ADO.NET <I>DataAdapter </I>offers you more control over your updating logic than any previous Microsoft data access technology. You’re no longer restricted to submitting updates directly against tables; you can finally leverage your stored procedures in a RAD way.<P>
+Plus, because you’re not relying on the data access technology to determine the origin of your data, you can treat any result set as updateable. With the ADO cursor engine, if the cursor engine cannot gather the metadata necessary to submit changes back to your database, there is no way for you to supply that information programmatically. With ADO.NET, you can fill your <I>DataSet </I>with the results of a stored procedure call, a query against a temporary table, or the union of multiple queries&#151;or fill it in any other way you see fit&#151;and still be able to submit changes to your database.<P>
+Supplying updating logic in your code improves the performance of your application. The code snippet that used the ADO cursor engine to submit updates contained fewer lines of code, but it required the ADO cursor engine to query the database for the source table name, source column names, and primary key information for the source table. Querying database system tables for metadata and then using that metadata to generate updating logic takes more time than simply loading it from local code.<P>
+<B>Drawbacks</B><P>
+The drawbacks of supplying your own updating logic mirror the benefits of the ADO cursor engine’s approach. First, it takes a lot more code to supply your own updating logic. Take a quick peek back, and compare how much code it took to submit updates using an ADO.NET <I>DataAdapter </I>with the ADO cursor engine’s approach. Writing that code is time consuming and rather tedious.<P>
+The other drawback is that many developers are not comfortable writing their own updating logic. They would rather not have to ponder such questions as: Do I need to delimit the table name in the query? What type of parameter markers should I use? Which columns should appear in the WHERE clause of the <I>CommandText </I>for the <I>UpdateCommand </I>and <I>DeleteCommand</I>? What is the appropriate setting for the <I>OleDbType </I>property for a parameter that contains a date/time value?<P>
+Thankfully, there are more RAD ways to generate your updating logic, as I’ll explain in the upcoming sections.<P>
+<P><HR><P>
+<CENTER>  
+<A HREF="5354b.asp">Previous</A>
+&nbsp;&nbsp;|&nbsp;&nbsp;<A HREF="5354.asp">Table of Contents</A>
+&nbsp;&nbsp;|&nbsp;&nbsp;
+<A HREF="5354d.asp">Next</A>
+</CENTER>
+<P><hr><p> 
+<!--End Body Area-->
+
+<BR>
+<font size="1">Last Updated: April 24, 2002</font>
+
+<!--StartBottomInc-->
+<br />
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr><td valign="middle" align="left" width="100%"><font face="verdana,arial,helvetica" size="1"><a class="bookmark" href="#top"><b>Top of Page</b></a></font></td></tr>
+</table>
+<!--EndBottomInc-->
+
+<BR>
+		</td>		
+	</tr>
+			</table>
+		</td>
+	</tr>
+		<tr>
+		<td>
+			<table bgcolor="#1478EB" border=0 cellpadding=0 cellspacing=0 width="100%" class="footer">								
+				<tr>					
+					<td colspan="2" width="100%" align="left" style="color:white"><img src="/mspress/images/1pxt.gif" width=10 height=5><br>
+					<img src="/mspress/images/1pxt.gif" width=10 height=1><a style="color:white" href="http://register.microsoft.com/contactus30/contactus.asp?domain=mspress"><b>Contact Us</b></a>&nbsp;&nbsp;&nbsp;<a style="color:white" href="/mspress/newsletter/"><b>Free Newsletter</b></a></td>
+				</tr>
+				<tr>
+					<td colspan="2" width="50%" align="left"><br><img src="/mspress/images/1pxt.gif" width=10 height=1><font color=white><b>Important!</b> Microsoft Press Online can accept orders from and ship orders to customers in Canada and the 50 United States<BR><img src="/mspress/images/1pxt.gif" width=10 height=1>and Washington, D.C., only.  For purchases outside North America, contact the
+<a style="color:white" href="/mspress/worldwide/">Microsoft Press Worldwide sites</a>.</font>
+</td>
+				</tr>
+				<tr>
+					<td width="100%" colspan=3><br><img src="/mspress/images/1pxt.gif" width=10 height=1><font color=white>&#169;2003 Microsoft Corporation. All rights reserved. <img src="/mspress/images/1pxt.gif" width=10 height=1><a style="text-decoration:underline;color:white" href="/mspress/legal/tnc.asp" target=out>Terms of Use</a><img src="/mspress/images/1pxt.gif" width=10 height=1>|<img src="/mspress/images/1pxt.gif" width=10 height=1><a style="text-decoration:underline;color:white" href="/info/privacy.htm" target=out>Privacy Statement</a><img src="/mspress/images/1pxt.gif" width=10 height=1>|<img src="/mspress/images/1pxt.gif" width=10 height=1><a style="text-decoration:underline;color:white" href="/enable/">Accessibility</a><br>
+<img src="/mspress/images/1pxt.gif" width=10 height=5></font></td>
+				</tr>
+</table>	
+
+
+</Body>
+</HTML>
+
+

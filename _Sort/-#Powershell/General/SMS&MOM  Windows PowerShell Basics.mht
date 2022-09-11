@@ -1,0 +1,3718 @@
+From: "Saved by Windows Internet Explorer 7"
+Subject: SMS&MOM : Windows PowerShell Basics
+Date: Fri, 17 Oct 2008 14:12:41 +1300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_00D3_01C93062.6AFC2ED0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18049
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_00D3_01C93062.6AFC2ED0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/smsandmom/archive/2008/05/15/windows-powershell-basics.aspx
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML lang=3Den xml:lang=3D"en" =
+xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><TITLE>SMS&MOM : Windows =
+PowerShell Basics</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8">
+<META content=3DGuide,PowerShell name=3Dkeywords>
+<META=20
+content=3D"Overview Everyone should be aware by now that Windows =
+PowerShell is the latest scripting environment for managing and =
+maintaining Windows servers, workstations and applications. This cube =
+note provides a brief introduction to PowerShell resources and"=20
+name=3Ddescription>
+<META content=3D"MSHTML 6.00.6001.18099" name=3DGENERATOR><LINK=20
+href=3D"http://blogs.technet.com/smsandmom/pingback.aspx" =
+rel=3Dpingback><LINK=20
+media=3Dscreen=20
+href=3D"http://blogs.technet.com/Themes/Blogs/paperclip/style/style.css" =
+
+type=3Dtext/css rel=3Dstylesheet><LINK media=3Dprint=20
+href=3D"http://blogs.technet.com/Themes/Blogs/paperclip/style/print.css" =
+
+type=3Dtext/css rel=3Dstylesheet><LINK media=3Dscreen=20
+href=3D"http://blogs.technet.com/Themes/Blogs/paperclip/style/winter.css"=
+=20
+type=3Dtext/css rel=3Dstylesheet><LINK media=3Dscreen=20
+href=3D"http://blogs.technet.com/smsandmom/customcss.ashx" =
+type=3Dtext/css=20
+rel=3Dstylesheet><LINK href=3D"/favicon.ico" type=3Dimage/ico=20
+rel=3D"shortcut icon"><LINK title=3D"SMS&amp;MOM (RSS 2.0)"=20
+href=3D"http://blogs.technet.com/smsandmom/rss.xml" =
+type=3Dapplication/rss+xml=20
+rel=3Dalternate><LINK title=3D"SMS&amp;MOM (Atom 1.0)"=20
+href=3D"http://blogs.technet.com/smsandmom/atom.xml" =
+type=3Dapplication/atom+xml=20
+rel=3Dalternate><LINK title=3D"Windows PowerShell Basics Comment RSS =
+(RSS 2.0)"=20
+href=3D"http://blogs.technet.com/smsandmom/commentrss.aspx?PostID=3D30559=
+27"=20
+type=3Dapplication/rss+xml rel=3Dalternate>
+<SCRIPT =
+src=3D"http://blogs.technet.com/Utility/global.js?Version=3D2.1.61025.2" =
+
+type=3Dtext/javascript></SCRIPT>
+
+<META content=3D_SMSandMOM_ name=3DWT.sp>
+<META content=3D_Platforms_ name=3DWT.sp_cluster>
+<META content=3D_cts_ name=3DWT.sp_group></HEAD>
+<BODY>
+<FORM id=3DaspnetForm name=3DaspnetForm=20
+action=3D/smsandmom/archive/2008/05/15/windows-powershell-basics.aspx =
+method=3Dpost>
+<DIV><INPUT id=3D__EVENTTARGET type=3Dhidden name=3D__EVENTTARGET> =
+<INPUT=20
+id=3D__EVENTARGUMENT type=3Dhidden name=3D__EVENTARGUMENT> <INPUT =
+id=3D__VIEWSTATE=20
+type=3Dhidden=20
+value=3D/wEPDwUKLTMyNjg0MDc1MWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tle=
+V9fFgEFHmN0bDAwJF8kY3RsMDAkXyR3cyRfJFNlYXJjaEJveF0RlpzcH1+/MkXXJXQs3Ibd4G=
+gM=20
+name=3D__VIEWSTATE> </DIV>
+<SCRIPT type=3Dtext/javascript>
+//<![CDATA[
+var theForm =3D document.forms['aspnetForm'];
+if (!theForm) {
+    theForm =3D document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() !=3D false)) {
+        theForm.__EVENTTARGET.value =3D eventTarget;
+        theForm.__EVENTARGUMENT.value =3D eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</SCRIPT>
+
+<DIV id=3Dmasthead>
+<DIV id=3DuserArea>
+<DIV id=3Dwelcome align=3Dright>Welcome to TechNet Blogs <A=20
+id=3Dctl00___ctl00___duw1_ac1___Login=20
+href=3D"http://blogs.technet.com/login.aspx?ReturnUrl=3D%2fsmsandmom%2far=
+chive%2f2008%2f05%2f15%2fwindows-powershell-basics.aspx">Sign=20
+in</A> | <A id=3Dctl00___ctl00___duw1_ac1___Register=20
+href=3D"http://blogs.technet.com/user/CreateUser.aspx?ReturnUrl=3D/smsand=
+mom/archive/2008/05/15/windows-powershell-basics.aspx">Join</A>=20
+| <A id=3Dctl00___ctl00___duw1_Faq1=20
+href=3D"http://blogs.technet.com/languages/en-US/docs/faq.aspx">Help</A> =
+</DIV>
+<DIV id=3DSearchSideBar>
+<DIV id=3DSearch align=3Dright>
+<TABLE cellSpacing=3D0 cellPadding=3D0 border=3D0>
+  <TBODY>
+  <TR>
+    <TD><INPUT class=3DsearchBox id=3Dctl00___ctl00___ws___SearchBox=20
+      =
+onkeydown=3DKeyDownHandlerctl00___ctl00___ws___SearchButton(event);=20
+      name=3Dctl00$_$ctl00$_$ws$_$SearchBox> </TD>
+    <TD><SPAN class=3DSearchButtonOuter><A class=3DSearchButton=20
+      id=3Dctl00___ctl00___ws___SearchButton=20
+      =
+href=3D"javascript:__doPostBack('ctl00$_$ctl00$_$ws$_$SearchButton','')">=
+Search</A></SPAN>=20
+    </TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+<DIV id=3Dtitle>
+<H1><A class=3Dheadermaintitle id=3Dctl00___ctl00___bt___BlogTitle=20
+href=3D"http://blogs.technet.com/smsandmom/default.aspx">SMS&amp;MOM</A><=
+/H1>
+<DIV></DIV></DIV></DIV>
+<DIV id=3Dnav>
+<DIV id=3Dnavbar>
+<UL>
+  <LI><A id=3Dctl00___ctl00___Homelink1=20
+  href=3D"http://blogs.technet.com/smsandmom/default.aspx">Home</A> =
+</LI>
+  <LI><A id=3Dctl00___ctl00___Contactlink1=20
+  href=3D"http://blogs.technet.com/smsandmom/contact.aspx">Email</A> =
+</LI>
+  <LI><A id=3Dctl00___ctl00___rss=20
+  href=3D"http://blogs.technet.com/smsandmom/rss.xml">RSS 2.0</A> </LI>
+  <LI><A id=3Dctl00___ctl00___atom=20
+  href=3D"http://blogs.technet.com/smsandmom/atom.xml">Atom 1.0</A>=20
+</LI></UL></DIV></DIV>
+<DIV id=3Dcontent>
+<DIV id=3Dleftmenu>
+<DIV id=3DTasksSideBar></DIV>
+<DIV id=3DRecentPostsSideBar>
+<H3>Recent Posts</H3>
+<UL>
+  <LI><A id=3Dctl00___ctl00___bs___rp___PostList_ctl01_Link=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/10/16/supported-c=
+onfigurations-for-using-wsus-to-distribute-forefront-client-security-defi=
+nition-updates-within-sccm-2007.aspx">Supported=20
+  configurations for using WSUS to distribute Forefront Client Security=20
+  Definition updates within</A>=20
+  <LI><A id=3Dctl00___ctl00___bs___rp___PostList_ctl02_Link=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/10/16/desktop-vir=
+tualization-configmgr-2007-r2-and-microsoft-enterprise-desktop-virtualiza=
+tion-med-v.aspx">Desktop=20
+  Virtualization: ConfigMgr 2007 R2 and Microsoft Enterprise Desktop=20
+  Virtualization (MED-V)</A>=20
+  <LI><A id=3Dctl00___ctl00___bs___rp___PostList_ctl03_Link=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/10/15/want-to-sta=
+y-current-on-all-the-new-kb-articles-here-s-how.aspx">Want=20
+  to stay current on all the new KB articles? Here's how</A>=20
+  <LI><A id=3Dctl00___ctl00___bs___rp___PostList_ctl04_Link=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/10/15/configmgr-2=
+007-unable-to-pxe-boot-using-the-unknown-computer-support-feature-in-r2.a=
+spx">ConfigMgr=20
+  2007: Unable to PXE Boot using the Unknown Computer Support feature in =
+R2</A>=20
+  <LI><A id=3Dctl00___ctl00___bs___rp___PostList_ctl05_Link=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/10/14/opsmgr-2007=
+-custom-alert-view-with-rules-and-monitors-does-not-work-as-expected.aspx=
+">OpsMgr=20
+  2007: Custom alert view with Rules and Monitors does not work as =
+expected</A>=20
+  </LI></UL></DIV>
+<DIV id=3DTagSideBar>
+<H3>Tags</H3>
+<UL class=3DSidebarTagCloud>
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/ACS/default.aspx"=
+=20
+  rel=3Dtag>ACS</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/advanced+client+i=
+nstallation/default.aspx"=20
+  rel=3Dtag>advanced client installation</A>=20
+  <LI class=3DTag4><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Agent/default.asp=
+x"=20
+  rel=3Dtag>Agent</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Alert/default.asp=
+x"=20
+  rel=3Dtag>Alert</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Application+Virtu=
+alization/default.aspx"=20
+  rel=3Dtag>Application Virtualization</A>=20
+  <LI class=3DTag2><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Asset+Intelligenc=
+e/default.aspx"=20
+  rel=3Dtag>Asset Intelligence</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Audit+Collection+=
+Services/default.aspx"=20
+  rel=3Dtag>Audit Collection Services</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Audit+Reporting/d=
+efault.aspx"=20
+  rel=3Dtag>Audit Reporting</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Authoring/default=
+.aspx"=20
+  rel=3Dtag>Authoring</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Authoring+Console=
+/default.aspx"=20
+  rel=3Dtag>Authoring Console</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/BDD/default.aspx"=
+=20
+  rel=3Dtag>BDD</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Beta/default.aspx=
+"=20
+  rel=3Dtag>Beta</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/BizTalk/default.a=
+spx"=20
+  rel=3Dtag>BizTalk</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Catalog/default.a=
+spx"=20
+  rel=3Dtag>Catalog</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Client/default.as=
+px"=20
+  rel=3Dtag>Client</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Cluster/default.a=
+spx"=20
+  rel=3Dtag>Cluster</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Collection/defaul=
+t.aspx"=20
+  rel=3Dtag>Collection</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/ConfigMgr/default=
+.aspx"=20
+  rel=3Dtag>ConfigMgr</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Configuration+Pac=
+k/default.aspx"=20
+  rel=3Dtag>Configuration Pack</A>=20
+  <LI class=3DTag4><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Data+Protection+M=
+anager/default.aspx"=20
+  rel=3Dtag>Data Protection Manager</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Database/default.=
+aspx"=20
+  rel=3Dtag>Database</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Daylight+Saving+T=
+ime/default.aspx"=20
+  rel=3Dtag>Daylight Saving Time</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/DCM/default.aspx"=
+=20
+  rel=3Dtag>DCM</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Distribution+Poin=
+t/default.aspx"=20
+  rel=3Dtag>Distribution Point</A>=20
+  <LI class=3DTag2><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Documentation/def=
+ault.aspx"=20
+  rel=3Dtag>Documentation</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/DPM/default.aspx"=
+=20
+  rel=3Dtag>DPM</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/DST/default.aspx"=
+=20
+  rel=3Dtag>DST</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/DSUW/default.aspx=
+"=20
+  rel=3Dtag>DSUW</A>=20
+  <LI class=3DTag2><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Evaluation/defaul=
+t.aspx"=20
+  rel=3Dtag>Evaluation</A>=20
+  <LI class=3DTag4><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Forums/default.as=
+px"=20
+  rel=3Dtag>Forums</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Guide/default.asp=
+x"=20
+  rel=3Dtag>Guide</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Health+Service/de=
+fault.aspx"=20
+  rel=3Dtag>Health Service</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Hotfix/default.as=
+px"=20
+  rel=3Dtag>Hotfix</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Inventory/default=
+.aspx"=20
+  rel=3Dtag>Inventory</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/KB+Article/defaul=
+t.aspx"=20
+  rel=3Dtag>KB Article</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Management+Pack/d=
+efault.aspx"=20
+  rel=3Dtag>Management Pack</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/MDT/default.aspx"=
+=20
+  rel=3Dtag>MDT</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/MEDV/default.aspx=
+"=20
+  rel=3Dtag>MEDV</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Mobile+Device+Man=
+ager/default.aspx"=20
+  rel=3Dtag>Mobile Device Manager</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/MOM/default.aspx"=
+=20
+  rel=3Dtag>MOM</A>=20
+  <LI class=3DTag2><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Monitor/default.a=
+spx"=20
+  rel=3Dtag>Monitor</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Native+Mode/defau=
+lt.aspx"=20
+  rel=3Dtag>Native Mode</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/OpsMgr/default.as=
+px"=20
+  rel=3Dtag>OpsMgr</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/OSD/default.aspx"=
+=20
+  rel=3Dtag>OSD</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Patch/default.asp=
+x"=20
+  rel=3Dtag>Patch</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/PowerShell/defaul=
+t.aspx"=20
+  rel=3Dtag>PowerShell</A>=20
+  <LI class=3DTag4><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/PXE/default.aspx"=
+=20
+  rel=3Dtag>PXE</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Query/default.asp=
+x"=20
+  rel=3Dtag>Query</A>=20
+  <LI class=3DTag4><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/R2/default.aspx" =
+
+  rel=3Dtag>R2</A>=20
+  <LI class=3DTag2><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Report/default.as=
+px"=20
+  rel=3Dtag>Report</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/RMS/default.aspx"=
+=20
+  rel=3Dtag>RMS</A>=20
+  <LI class=3DTag4><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Rule/default.aspx=
+"=20
+  rel=3Dtag>Rule</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/SCE/default.aspx"=
+=20
+  rel=3Dtag>SCE</A>=20
+  <LI class=3DTag2><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Script/default.as=
+px"=20
+  rel=3Dtag>Script</A>=20
+  <LI class=3DTag4><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/SCVMM/default.asp=
+x"=20
+  rel=3Dtag>SCVMM</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/SDK/default.aspx"=
+=20
+  rel=3Dtag>SDK</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Security/default.=
+aspx"=20
+  rel=3Dtag>Security</A>=20
+  <LI class=3DTag4><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Security+Update/d=
+efault.aspx"=20
+  rel=3Dtag>Security Update</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/SMS+/default.aspx=
+"=20
+  rel=3Dtag>SMS </A>
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/SoftGrid/default.=
+aspx"=20
+  rel=3Dtag>SoftGrid</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Solution+Accelera=
+tor/default.aspx"=20
+  rel=3Dtag>Solution Accelerator</A>=20
+  <LI class=3DTag2><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/SP1/default.aspx"=
+=20
+  rel=3Dtag>SP1</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/SQL/default.aspx"=
+=20
+  rel=3Dtag>SQL</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/SuperFlow/default=
+.aspx"=20
+  rel=3Dtag>SuperFlow</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Task+Sequence/def=
+ault.aspx"=20
+  rel=3Dtag>Task Sequence</A>=20
+  <LI class=3DTag4><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Tool/default.aspx=
+"=20
+  rel=3Dtag>Tool</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Troubleshoot/defa=
+ult.aspx"=20
+  rel=3Dtag>Troubleshoot</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Update/default.as=
+px"=20
+  rel=3Dtag>Update</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Video/default.asp=
+x"=20
+  rel=3Dtag>Video</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Virtual+Lab/defau=
+lt.aspx"=20
+  rel=3Dtag>Virtual Lab</A>=20
+  <LI class=3DTag2><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Virtual+Machine+M=
+anager/default.aspx"=20
+  rel=3Dtag>Virtual Machine Manager</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Vista/default.asp=
+x"=20
+  rel=3Dtag>Vista</A>=20
+  <LI class=3DTag6><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/WDS/default.aspx"=
+=20
+  rel=3Dtag>WDS</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Webcast/default.a=
+spx"=20
+  rel=3Dtag>Webcast</A>=20
+  <LI class=3DTag3><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Whitepaper/defaul=
+t.aspx"=20
+  rel=3Dtag>Whitepaper</A>=20
+  <LI class=3DTag4><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Win2K8/default.as=
+px"=20
+  rel=3Dtag>Win2K8</A>=20
+  <LI class=3DTag5><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/WoL/default.aspx"=
+=20
+  rel=3Dtag>WoL</A>=20
+  <LI class=3DTag2><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Workflow/default.=
+aspx"=20
+  rel=3Dtag>Workflow</A>=20
+  <LI class=3DTag1><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/WSUS/default.aspx=
+"=20
+  rel=3Dtag>WSUS</A> </LI></UL></DIV>
+<DIV id=3DNewsSideBar>
+<DIV id=3DNewsSidebar>
+<H3>News</H3>
+<UL>
+  <LI><A id=3DclustrMapsLink=20
+  =
+href=3D"http://www4.clustrmaps.com/counter/maps.php?url=3Dhttp://blogs.te=
+chnet.com/smsandmom/"><IMG=20
+  id=3DclustrMapsImg title=3D"Locations of visitors to this page"=20
+  style=3D"BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; =
+BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px"=20
+  alt=3D"Locations of visitors to this page"=20
+  onerror=3D"this.onerror=3Dnull; =
+this.src=3D'http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; =
+document.getElementById('clustrMapsLink').href=3D'http://www2.clustrmaps.=
+com';"=20
+  =
+src=3D"http://www4.clustrmaps.com/counter/index2.php?url=3Dhttp://blogs.t=
+echnet.com/smsandmom/">=20
+  </A></LI></UL></DIV></DIV>
+<DIV id=3DLinkSideBar>
+<H3>Associated Team blogs</H3>
+<UL>
+  <LI><A =
+id=3Dctl00___ctl00___bs___lcl___Categories_ctl00_Links_ctl01_Link=20
+  href=3D"http://blogs.technet.com/askds" rel=3Dco-worker>Directory =
+Services</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs___lcl___Categories_ctl00_Links_ctl02_Link=20
+  href=3D"http://blogs.technet.com/networking" =
+rel=3Dco-worker>Networking</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs___lcl___Categories_ctl00_Links_ctl03_Link=20
+  href=3D"http://blogs.technet.com/askperf" rel=3Dco-worker>Windows =
+Performance</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs___lcl___Categories_ctl00_Links_ctl04_Link=20
+  href=3D"http://blogs.technet.com/askcore" rel=3Dco-worker>Windows =
+Setup</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs___lcl___Categories_ctl00_Links_ctl05_Link=20
+  href=3D"http://blogs.technet.com/softgrid" =
+rel=3Dco-worker>SoftGrid</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs___lcl___Categories_ctl00_Links_ctl06_Link=20
+  href=3D"http://blogs.technet.com/ntdebugging" =
+rel=3Dco-worker>Escalation=20
+  Services</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs___lcl___Categories_ctl00_Links_ctl07_Link=20
+  href=3D"http://blogs.technet.com/latam" rel=3Dco-worker>Latin America =
+Support</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs___lcl___Categories_ctl00_Links_ctl08_Link=20
+  href=3D"http://blogs.msdn.com/windowsvistanow/default.aspx"=20
+  rel=3Dco-worker>Windows Vista Blog</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs___lcl___Categories_ctl00_Links_ctl09_Link=20
+  href=3D"http://blogs.technet.com/wsus/" rel=3Dco-worker>WSUS Team =
+Blog</A>=20
+  <LI><A =
+id=3Dctl00___ctl00___bs___lcl___Categories_ctl00_Links_ctl10_Link=20
+  href=3D"http://blogs.technet.com/sus/" rel=3Dme>A really cool WSUS =
+support=20
+  blog</A> </LI></UL></DIV>
+<DIV id=3DArchiveSideBar>
+<H3>Archives</H3>
+<UL>
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/10.aspx">October =
+
+  2008 (18)</A>=20
+  <LI><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/09.aspx">Septembe=
+r 2008=20
+  (21)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/08.aspx">August=20
+  2008 (27)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/07.aspx">July=20
+  2008 (24)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/06.aspx">June=20
+  2008 (17)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/05.aspx">May =
+2008=20
+  (27)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/04.aspx">April=20
+  2008 (17)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/03.aspx">March=20
+  2008 (22)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/02.aspx">February=
+=20
+  2008 (21)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/01.aspx">January =
+
+  2008 (27)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2007/12.aspx">December=
+=20
+  2007 (26)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2007/11.aspx">November=
+=20
+  2007 (50)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2007/10.aspx">October =
+
+  2007 (25)</A>=20
+  <LI><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/2007/09.aspx">Septembe=
+r 2007=20
+  (25)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2007/08.aspx">August=20
+  2007 (13)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2007/06.aspx">June=20
+  2007 (2)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2007/05.aspx">May =
+2007=20
+  (8)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2007/02.aspx">February=
+=20
+  2007 (2)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2007/01.aspx">January =
+
+  2007 (1)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2006/12.aspx">December=
+=20
+  2006 (2)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2006/11.aspx">November=
+=20
+  2006 (4)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2006/10.aspx">October =
+
+  2006 (3)</A>=20
+  <LI><A=20
+  =
+href=3D"http://blogs.technet.com/smsandmom/archive/2006/09.aspx">Septembe=
+r 2006=20
+  (2)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2006/08.aspx">August=20
+  2006 (7)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2006/07.aspx">July=20
+  2006 (4)</A>=20
+  <LI><A =
+href=3D"http://blogs.technet.com/smsandmom/archive/2006/06.aspx">June=20
+  2006 (4)</A> </LI></UL></DIV></DIV>
+<DIV id=3Dmain>
+<DIV class=3Dpost>
+<H5 class=3D"posthead pageTitle">Windows PowerShell Basics </H5>
+<P><B>Overview</B></P>
+<P>Everyone should be aware by now that Windows PowerShell is the latest =
+
+scripting environment for managing and maintaining Windows servers, =
+workstations=20
+and applications. This cube note provides a brief introduction to =
+PowerShell=20
+resources and a few commands to get started with.</P>
+<P><B>Where to get Windows PowerShell</B></P>
+<P>If you have Windows Server 2008, you can enable Windows PowerShell as =
+an=20
+additional feature. For Windows XP, Windows Vista or Windows Server 2003 =
+you can=20
+download it <A=20
+href=3D"http://www.microsoft.com/windowsserver2003/technologies/managemen=
+t/powershell/download.mspx">here</A>.=20
+The documentation pack for Windows PowerShell is available <A=20
+href=3D"http://www.microsoft.com/downloads/details.aspx?FamilyId=3DB4720B=
+00-9A66-430F-BD56-EC48BFCA154F&amp;displaylang=3Den">here</A>.</P>
+<P><B>Providers</B></P>
+<P>PowerShell providers allow the scripting environment to access the =
+APIs of=20
+various components through a common interface, much like WMI providers =
+do. A=20
+listing of the currently loaded providers can be found using the=20
+<B>get-PSProvider</B> command. The resource exposed by PowerShell =
+providers can=20
+be accessed like a virtual drive. The <B>get-PSDrive</B> command will =
+list the=20
+currently available drives. You can navigate to the drive with the <B>cd =
+
+<I>&lt;drive&gt;</I>:</B> command (be sure to use the <B>:</B> at the =
+end). You=20
+can list the contents of the current virtual drive path with the =
+<B>dir</B>=20
+command.</P>
+<P>Additional documentation about providers can be found with the =
+command=20
+<B>help about_Provider</B>. Type <B>help about_path_syntax</B> for more=20
+information about the navigating PowerShell drives.</P>
+<P><B>Cmdlets</B></P>
+<P>PowerShell commands, called cmdlets, are written in a =
+<I>verb-object</I>=20
+format. A list of the currently available commands can be found by =
+typing the=20
+cmdlet: <B>get-command</B>. In addition to the default cmdlets, =
+additional=20
+cmdlets can be added when a new provider is loaded. Custom cmdlets can =
+be=20
+written and loaded as part of the user's personal profile.</P>
+<P>Type <B>help &lt;any cmdlet name here&gt;</B> to get a description of =
+the=20
+cmdlet and the available parameters. You can also type <B>help =
+&lt;cmdlet=20
+name&gt; -full</B> to get detailed documentation about the cmdlet.</P>
+<P><B>Aliases</B></P>
+<P>The alias functionality in PowerShell allows users to avoid typing =
+long=20
+cmdlets names for commonly used commands. A list of the default aliases =
+can be=20
+found by typing <B>get-alias</B>. New, custom aliases can be written =
+using the=20
+<B>new-alias</B> cmdlet</P>
+<P><B>Pipelining</B></P>
+<P>The output of most cmdlets is an array of objects that can be piped =
+as the=20
+input of a second cmdlet. The | symbol is required to separate cmdlet=20
+expressions. The two most common cmdlets that output is piped to are the =
+
+<B>Where-Object</B> (alias <B>where</B>) and<B> Sort-Object</B> (alias=20
+<B>sort</B>).</P>
+<P>The <B>Sort</B> cmdlet takes an object's properties as parameters. If =
+a=20
+collection of objects is piped to the <B>sort</B> cmdlet, the output can =
+be=20
+sorted by one or more properties</P>
+<P>Sort Cmdlet Example (try this yourself and note the differences)</P>
+<P>=C2=B7 <B>Get-Service</B></P>
+<P>=C2=B7 <B>Get-Service | sort status</B></P>
+<P>=C2=B7 <B>Get-Service | sort status, name</B></P>
+<P><STRONG>Where Cmdlet Example</STRONG></P>
+<P>The <B>Where</B> cmdlet will filter the output of the preceding =
+cmdlet. It=20
+does not remove objects from the collection, but reduces the number of =
+objects=20
+displayed. The syntax to filter the <B>Get-Service</B> cmdlet to display =
+only=20
+running services would look like this:</P>
+<P><B>Get-Service | Where-object {$_.status -like "running"}</B></P>
+<P>The parameters for the <B>where-object</B> cmdlet is a code block =
+contained=20
+by curly braces <B>{}</B>.</P>
+<P>The <B>$_</B> variable is a special built-in variable representing =
+the=20
+collection of objects piped from the previous cmdlet.</P>
+<P>The<B> .status</B> property of the piped objects is what we will be =
+filtering=20
+on.</P>
+<P><B>-like</B> is the comparison operator we are using.</P>
+<P><B>"Running"</B> is the value we are using to filter the =
+<B>.status</B>=20
+property.</P>
+<P>In my next post we will explore variables, regular expressions, =
+comparison=20
+operators and formatting output. The following example will explore code =
+blocks=20
+and advanced topics.</P>
+<P><B><U>Explore on your own:</U></B></P>
+<P>=C2=B7 Install or enable PowerShell.</P>
+<P>=C2=B7 Run the <B>get-PSProvider</B> cmdlet and the =
+<B>get-PSDrive</B> cmdlet to=20
+see what is currently available.</P>
+<P>=C2=B7 Use the <B>dir</B> and <B>CD</B> commands to navigate the =
+PSDrives on your=20
+workstation.</P>
+<P>=C2=B7 Type <B>get-command</B> to view the cmdlets currently =
+available. Now type=20
+<B>get-command new-*</B> to just view the cmdlets starting with New. How =
+is this=20
+different from <B>get-command new*</B>.</P>
+<P>=C2=B7 Type <B>help get-WMIObject -full</B>. Observe the available =
+parameters and=20
+usage examples. Practice using the cmdlet to explore the some common =
+classes=20
+obtained by hardware inventory in SMS.</P>
+<P>=C2=B7 What cmdlets are the following aliases for: <B>dir, CD, help, =
+where,=20
+sort</B>?</P>
+<P>=C2=B7 Pipe the results of the <B>get-alias</B> cmdlet to the =
+<B>sort-object</B>=20
+cmdlet to sort by definition. Observe the various aliases for=20
+<B>get-childitem</B> and <B>remove-item</B>. Now pipe <B>get-alias</B> =
+to the=20
+<B>where-object</B> cmdlet to filter by definitions ending with the =
+string=20
+<B>-object</B> and then pipe that to the <B>sort-object</B> cmdlet.</P>
+<P><B>Additional PowerShell resources</B></P>
+<P>=C2=B7 <A=20
+href=3D"http://www.microsoft.com/windowsserver2003/technologies/managemen=
+t/powershell/default.mspx">Windows=20
+Powershell home page</A></P>
+<P>=C2=B7 <A=20
+href=3D"http://www.microsoft.com/technet/scriptcenter/hubs/msh.mspx">Scri=
+pting=20
+with Windows Powershell</A></P>
+<P>=C2=B7 <A=20
+href=3D"http://www.microsoft.com/technet/scriptcenter/scripts/msh/default=
+.mspx?mfr=3Dtrue">Sample=20
+Powershell Scripts for managing servers and applications</A></P>
+<P><STRONG>Richard Pesenko | Support Escalation Engineer</STRONG></P>
+<DIV class=3Dpostfoot><SPAN class=3Dem>Posted:</SPAN> Thursday, May 15, =
+2008 11:55=20
+PM by <A id=3Dctl00___ctl00___ctl02___Entry___AuthorLink=20
+href=3D"http://blogs.technet.com/user/Profile.aspx?UserID=3D13909">jchorn=
+be</A>=20
+<DIV><SPAN =
+id=3Dctl00___ctl00___ctl02___Entry___InlineTagEditorPanel>Filed under:=20
+<A =
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/Guide/default.asp=
+x"=20
+rel=3Dtag>Guide</A>, <A=20
+href=3D"http://blogs.technet.com/smsandmom/archive/tags/PowerShell/defaul=
+t.aspx"=20
+rel=3Dtag>PowerShell</A></SPAN><INPUT=20
+id=3Dctl00___ctl00___ctl02___Entry___InlineTagEditorPanel_State =
+type=3Dhidden=20
+value=3Dnochange=20
+name=3Dctl00$_$ctl00$_$ctl02$_$Entry$_$InlineTagEditorPanel></DIV></DIV><=
+/DIV>
+<DIV id=3Dcomments>
+<H2>Comments </H2>
+<DIV class=3DCommentArea>
+<H4 class=3DCommentTitle><A=20
+id=3Dctl00___ctl00___ctl02___Comments___Comments_ctl00_NameLink =
+title=3DTrackBack=20
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/06/04/windows-pow=
+ershell-basics-part-2.aspx"=20
+rel=3Dnofollow>SMS&amp;MOM</A> said: <IMG class=3DCommentArrow=20
+src=3D"http://blogs.technet.com/Themes/Blogs/paperclip/images/spacer.gif"=
+=20
+align=3DabsBottom> </H4>
+<DIV class=3DCommentText>
+<DIV class=3DCommentText2>
+<DIV class=3DCommentText3>
+<P>Overview: In the previous lesson , we looked at use of the =
+Where-Object=20
+cmdlet.&amp;#160; The example we</P></DIV></DIV></DIV>
+<DIV class=3DCommentFooter><A=20
+id=3Dctl00___ctl00___ctl02___Comments___Comments_ctl00_PermaLink =
+title=3Dpermalink=20
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/05/15/windows-pow=
+ershell-basics.aspx#3066204">#</A>=20
+June 4, 2008 6:50 PM </DIV></DIV>
+<DIV class=3DCommentArea>
+<H4 class=3DCommentTitle><A=20
+id=3Dctl00___ctl00___ctl02___Comments___Comments_ctl01_NameLink =
+title=3DTrackBack=20
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/06/19/windows-pow=
+ershell-basics-part-3.aspx"=20
+rel=3Dnofollow>SMS&amp;MOM</A> said: <IMG class=3DCommentArrow=20
+src=3D"http://blogs.technet.com/Themes/Blogs/paperclip/images/spacer.gif"=
+=20
+align=3DabsBottom> </H4>
+<DIV class=3DCommentText>
+<DIV class=3DCommentText2>
+<DIV class=3DCommentText3>
+<P>Overview In lesson 1 and lesson 2 we looked at the Where-Object=20
+cmdlet.&amp;#160; The example we looked at</P></DIV></DIV></DIV>
+<DIV class=3DCommentFooter><A=20
+id=3Dctl00___ctl00___ctl02___Comments___Comments_ctl01_PermaLink =
+title=3Dpermalink=20
+href=3D"http://blogs.technet.com/smsandmom/archive/2008/05/15/windows-pow=
+ershell-basics.aspx#3074353">#</A>=20
+June 19, 2008 8:33 AM </DIV></DIV></DIV><EM>Anonymous comments are =
+disabled</EM>=20
+</DIV>
+<DIV id=3Dfooter>
+<DIV>
+<P>=C2=A9 2008 Microsoft Corporation. All rights reserved. <A=20
+href=3D"http://www.microsoft.com/info/cpyright.mspx">Terms of Use</A>=20
+&nbsp;|&nbsp; <A=20
+href=3D"http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.msp=
+x">Trademarks</A>=20
+&nbsp;|&nbsp; <A =
+href=3D"http://privacy.microsoft.com/en-us/default.aspx">Privacy=20
+Statement</A> </P></DIV></DIV></DIV>
+<SCRIPT language=3Djavascript type=3Dtext/javascript>=0A=
+<!--=0A=
+function KeyDownHandlerctl00___ctl00___ws___SearchButton(event)=0A=
+{=0A=
+	if (event.keyCode =3D=3D 13)=0A=
+	{=0A=
+		event.returnValue =3D false;=0A=
+		event.cancel =3D true;=0A=
+     __doPostBack('ctl00$_$ctl00$_$ws$_$SearchButton','')	}=0A=
+}=0A=
+=0A=
+//-->=0A=
+</SCRIPT>
+<!--
+<rdf:RDF xmlns:rdf=3D"http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc=3D"http://purl.org/dc/elements/1.1/"=0A=
+xmlns:trackback=3D"http://madskills.com/public/xml/rss/module/trackback/"=
+>
+<rdf:Description
+rdf:about=3D"http://blogs.technet.com/smsandmom/archive/2008/05/15/window=
+s-powershell-basics.aspx"
+dc:identifier=3D"http://blogs.technet.com/smsandmom/archive/2008/05/15/wi=
+ndows-powershell-basics.aspx"
+dc:title=3D"Windows PowerShell Basics"
+trackback:ping=3D"http://blogs.technet.com/smsandmom/trackback.aspx?PostI=
+D=3D3055927" />
+</rdf:RDF>
+--></FORM><!-- WT MT Inline v.2.0 -->
+<SCRIPT type=3Dtext/javascript>
+var gTrackEvents=3D0;
+var gDomain=3D"m.webtrends.com";
+var gDcsId=3D"dcs8zd2bz00000w0adote0s3l_1d8j";
+var gFpc=3D"WT_FPC";
+if(document.cookie.indexOf(gFpc+"=3D")=3D=3D-1){document.write("<SCR"+"IP=
+T TYPE=3D'text/javascript' =
+SRC=3D'"+"http"+(window.location.protocol.indexOf('https:')=3D=3D0?'s':''=
+)+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/SCR"+"IPT>");}
+</SCRIPT>
+
+<SCRIPT src=3D"http://blogs.technet.com/wt.js" =
+type=3Dtext/javascript></SCRIPT>
+<NOSCRIPT><IMG id=3DDCSIMG height=3D1 alt=3D""=20
+src=3D"http://m.webtrends.com/dcs8zd2bz00000w0adote0s3l_1d8j/njs.gif?dcsu=
+ri=3D/nojavascript&amp;WT.js=3DNo"=20
+width=3D1 border=3D0> </NOSCRIPT><IMG height=3D0 alt=3D"Page view =
+tracker"=20
+src=3D"http://c.microsoft.com/trans_pixel.aspx?TYPE=3DPV&amp;r=3Dhttp%3a%=
+2f%2fblogs.technet.com%2fsmsandmom%2farchive%2f2008%2f06%2f04%2fwindows-p=
+owershell-basics-part-2.aspx"=20
+width=3D0> </BODY></HTML>
+
+------=_NextPart_000_00D3_01C93062.6AFC2ED0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://www4.clustrmaps.com/counter/index2.php?url=http://blogs.technet.com/smsandmom/
+
+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
+M9s8z2zzP//Z
+
+------=_NextPart_000_00D3_01C93062.6AFC2ED0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://blogs.technet.com/Themes/Blogs/paperclip/images/spacer.gif
+
+R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+
+------=_NextPart_000_00D3_01C93062.6AFC2ED0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://m.webtrends.com/dcs8zd2bz00000w0adote0s3l_1d8j/njs.gif?dcsuri=/nojavascript&WT.js=No
+
+R0lGODlhAQABAJH/AP///wAAAP///wAAACH/C0FET0JFOklSMS4wAt7tACH5BAEAAAIALAAAAAAB
+AAEAAAICVAEAOw==
+
+------=_NextPart_000_00D3_01C93062.6AFC2ED0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://c.microsoft.com/trans_pixel.aspx?TYPE=PV&r=http%3a%2f%2fblogs.technet.com%2fsmsandmom%2farchive%2f2008%2f06%2f04%2fwindows-powershell-basics-part-2.aspx
+
+R0lGODlhAQABAIAAAP8zzAAAACH5BAEAAAAALAAAAAABAAEAQAIChFEAOwA=
+
+------=_NextPart_000_00D3_01C93062.6AFC2ED0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/Themes/Blogs/paperclip/style/style.css
+
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.8em; =
+PADDING-BOTTOM: 20px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: =
+Tahoma, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #5a543a
+}
+A:visited {
+	COLOR: #006ff7
+}
+A:active {
+	COLOR: #006ff7
+}
+A:link {
+	COLOR: #006ff7
+}
+.post {
+	MARGIN: 0px 0px 20px
+}
+.posthead {
+	BORDER-RIGHT: #dfdfdf 0px dotted; BORDER-TOP: #dfdfdf 0px dotted; =
+FONT-WEIGHT: normal; FONT-SIZE: 1.5em; PADDING-BOTTOM: 6px; MARGIN: 0px =
+0px 10px; BORDER-LEFT: #dfdfdf 0px dotted; COLOR: #529e00; =
+BORDER-BOTTOM: #dfdfdf 1px dotted
+}
+.posthead A:link {
+	COLOR: #529e00; TEXT-DECORATION: none
+}
+.posthead A:visited {
+	COLOR: #529e00; TEXT-DECORATION: none
+}
+.posthead A:active {
+	COLOR: #529e00; TEXT-DECORATION: none
+}
+.posthead A:hover {
+	COLOR: #529e00; TEXT-DECORATION: underline
+}
+.postfoot {
+	BORDER-RIGHT: #dfdfdf 0px dotted; BORDER-TOP: #dfdfdf 1px dotted; =
+MARGIN-TOP: 10px; PADDING-BOTTOM: 6px; BORDER-LEFT: #dfdfdf 0px dotted; =
+COLOR: #868686; PADDING-TOP: 6px; BORDER-BOTTOM: #dfdfdf 1px dotted
+}
+.postfoot .em {
+	COLOR: #000000
+}
+.pageTitle {
+	MARGIN-TOP: 0px; FONT-WEIGHT: bold; FONT-SIZE: 1.8em; MARGIN-BOTTOM: =
+20px; COLOR: #529e00
+}
+#leftmenu {
+	PADDING-LEFT: 16px; FLOAT: left; OVERFLOW: hidden; WIDTH: 200px
+}
+#leftmenu H3 {
+	BORDER-RIGHT: 0px dotted; PADDING-RIGHT: 0px; BORDER-TOP: 0px dotted; =
+PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 1.1em; PADDING-BOTTOM: =
+6px; MARGIN: 0px 0px 6px; BORDER-LEFT: 0px dotted; PADDING-TOP: 0px; =
+BORDER-BOTTOM: #dfdfdf 1px dotted
+}
+#leftmenu UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.9em; =
+PADDING-BOTTOM: 0px; MARGIN: 0px 0px 20px; PADDING-TOP: 0px; =
+LIST-STYLE-TYPE: none
+}
+#leftmenu UL LI {
+	MARGIN-TOP: 6px; FONT-WEIGHT: bold; MARGIN-BOTTOM: 6px; COLOR: #a99238
+}
+#leftmenu UL A:link {
+	COLOR: #a99238; TEXT-DECORATION: none
+}
+#leftmenu UL A:visited {
+	COLOR: #a99238; TEXT-DECORATION: none
+}
+#leftmenu UL A:active {
+	COLOR: #a99238; TEXT-DECORATION: none
+}
+#leftmenu UL A:hover {
+	COLOR: #a99238; TEXT-DECORATION: underline
+}
+#main {
+	PADDING-RIGHT: 12px; PADDING-LEFT: 20px; OVERFLOW: hidden; WIDTH: 534px
+}
+#footer {
+	CLEAR: both; PADDING-LEFT: 16px; MARGIN: 0px; TEXT-ALIGN: left
+}
+#quicklinks {
+	PADDING-TOP: 10px
+}
+INPUT.text {
+	WIDTH: 300px
+}
+TEXTAREA {
+	WIDTH: 300px; HEIGHT: 200px
+}
+#relatedlinks UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; =
+MARGIN-LEFT: 10px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+FIELDSET {
+	PADDING-RIGHT: 20px; MARGIN-TOP: 16px; PADDING-LEFT: 20px; =
+PADDING-BOTTOM: 20px; PADDING-TOP: 0px
+}
+LEGEND {
+	FONT-WEIGHT: bold; COLOR: #7cc10b
+}
+FIELDSET TEXTAREA {
+	WIDTH: 450px
+}
+FIELDSET .smallbox {
+	WIDTH: 450px
+}
+#comments H2 {
+	MARGIN-TOP: 16px; FONT-SIZE: 1em; COLOR: #7cc10b
+}
+.CommentArea {
+	MARGIN: 8px 0px
+}
+.CommentAreaOwner {
+	MARGIN: 8px 0px
+}
+.CommentAreaOwner .CommentText3 {
+	BACKGROUND-COLOR: #f3f3f3
+}
+.CommentTitle {
+	FONT-WEIGHT: normal; FONT-SIZE: 1em; MARGIN-BOTTOM: 6px
+}
+.CommentAreaOwner .CommentTitle {
+	FONT-WEIGHT: bold
+}
+.CommentArrow {
+	BACKGROUND-IMAGE: url(../images/summer-comment-arrow.gif); =
+MARGIN-BOTTOM: -7px; WIDTH: 14px; BACKGROUND-REPEAT: no-repeat; HEIGHT: =
+14px
+}
+.CommentText {
+	BACKGROUND-POSITION: left bottom; BACKGROUND-IMAGE: =
+url(../images/comment-shadow.gif); PADDING-BOTTOM: 3px; =
+BACKGROUND-REPEAT: repeat-x
+}
+.CommentText2 {
+	BORDER-RIGHT: #bcbcbc 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: =
+#bcbcbc 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: =
+#bcbcbc 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #bcbcbc 1px solid
+}
+.CommentText3 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 0.9em; =
+PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+.CommentFooter {
+	MARGIN-TOP: 4px; PADDING-LEFT: 16px; FONT-SIZE: 0.7em; COLOR: #999999
+}
+#news {
+	MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px
+}
+.copyright {
+	FONT-SIZE: 0.65em; FONT-STYLE: italic; TEXT-ALIGN: center
+}
+.CommonRateControlReadOnly {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; PADDING-TOP: 1px; =
+BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.CommonRateControl {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; CURSOR: pointer; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: =
+#eeeeee
+}
+.CommonRateControlActive {
+	BORDER-RIGHT: #cc9933 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#cc9933 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #cc9933 1px solid; CURSOR: pointer; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #cc9933 1px solid; BACKGROUND-COLOR: =
+#ffcc66
+}
+.CommonRateControlReadOnly {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; PADDING-TOP: 1px; =
+BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.CommonRateControl {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; CURSOR: pointer; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: =
+#eeeeee
+}
+.CommonRateControlActive {
+	BORDER-RIGHT: #cc9933 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#cc9933 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #cc9933 1px solid; CURSOR: pointer; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #cc9933 1px solid; BACKGROUND-COLOR: =
+#ffcc66
+}
+.CommonRateControlReadOnly IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.CommonRateControl IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.CommonRateControlActive IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#content {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 6px; =
+MARGIN-LEFT: auto; OVERFLOW: hidden; WIDTH: 792px; MARGIN-RIGHT: auto; =
+PADDING-TOP: 32px; BACKGROUND-COLOR: #ffffff
+}
+#masthead {
+	MARGIN-TOP: 8px; BACKGROUND: url(../images/summer-title.jpg) #ffffff; =
+MARGIN-LEFT: auto; OVERFLOW: hidden; WIDTH: 804px; MARGIN-RIGHT: auto; =
+HEIGHT: 221px
+}
+#masthead UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; COLOR: #333; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#masthead UL LI {
+	DISPLAY: inline
+}
+#masthead UL LI A {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px; TEXT-DECORATION: none
+}
+#masthead A:link {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+#masthead A:visited {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+#masthead A:active {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+#masthead A:hover {
+	COLOR: #00f; TEXT-DECORATION: none
+}
+#userArea {
+	PADDING-RIGHT: 6px; MARGIN-TOP: 16px; FLOAT: right
+}
+#welcome {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; FONT-SIZE: 0.7em; =
+PADDING-BOTTOM: 6px; MARGIN: 0px; COLOR: #ffffff; PADDING-TOP: 4px; =
+BACKGROUND-COLOR: #000000; TEXT-ALIGN: center
+}
+#welcome A:link {
+	FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+#welcome A:visited {
+	FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+#welcome A:active {
+	FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+#welcome A:hover {
+	FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+#Search {
+	PADDING-RIGHT: 4px; MARGIN-TOP: 4px
+}
+#Search .searchBox {
+	BORDER-RIGHT: #000 1px solid; BORDER-TOP: #000 1px solid; FONT-SIZE: =
+0.9em; BORDER-LEFT: #000 1px solid; WIDTH: 100px; BORDER-BOTTOM: #000 =
+1px solid
+}
+.SearchButtonOuter {
+	BACKGROUND-POSITION: left top; DISPLAY: inline-block; PADDING-LEFT: =
+4px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-IMAGE: =
+url(../images/summer-search-left.gif); MARGIN-LEFT: 4px; =
+BACKGROUND-REPEAT: no-repeat; TEXT-ALIGN: left; FONT-VARIANT: small-caps
+}
+.SearchButton {
+	PADDING-RIGHT: 9px; BACKGROUND-POSITION: right top; DISPLAY: =
+inline-block; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 12px; =
+BACKGROUND-IMAGE: url(../images/summer-search-right.gif); =
+PADDING-BOTTOM: 4px; COLOR: #ffffff; PADDING-TOP: 3px; =
+BACKGROUND-REPEAT: no-repeat; TEXT-ALIGN: left; FONT-VARIANT: =
+small-caps; TEXT-DECORATION: none
+}
+#Search A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#Search A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#Search A:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#Search A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#title {
+	FONT-SIZE: 11px; LEFT: 63px; OVERFLOW: hidden; WIDTH: 151px; POSITION: =
+relative; TOP: 76px; HEIGHT: 74px; TEXT-ALIGN: center
+}
+#title H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 14px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; COLOR: #735c35; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+#title A:link {
+	COLOR: #735c35
+}
+#title A:visited {
+	COLOR: #735c35
+}
+#title A:active {
+	COLOR: #735c35
+}
+#title A:hover {
+	COLOR: #735c35
+}
+#nav {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 0px; =
+MARGIN-LEFT: auto; OVERFLOW: hidden; WIDTH: 792px; MARGIN-RIGHT: auto; =
+PADDING-TOP: 0px; HEIGHT: 35px; BACKGROUND-COLOR: #ffffff
+}
+#navbar {
+	BACKGROUND: url(../images/summer-nav-background.jpg) #666666 repeat-x; =
+HEIGHT: 35px
+}
+#navbar UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#navbar LI {
+	BACKGROUND-POSITION: 4px 13px; PADDING-LEFT: 18px; FONT-WEIGHT: bold; =
+FONT-SIZE: 12px; FLOAT: left; BACKGROUND-IMAGE: =
+url(../images/summer-nav-bul.gif); MARGIN-LEFT: 8px; TEXT-TRANSFORM: =
+uppercase; MARGIN-RIGHT: 8px; PADDING-TOP: 9px; BACKGROUND-REPEAT: =
+no-repeat
+}
+#navbar A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#navbar A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#navbar A:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+#navbar A:hover {
+	TEXT-DECORATION: underline
+}
+.TagCloud {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 16px; MARGIN: =
+16px 0px; COLOR: #999999; LINE-HEIGHT: 180%; PADDING-TOP: 16px; =
+LIST-STYLE-TYPE: none; BACKGROUND-COLOR: #f7f7f7
+}
+.SidebarTagCloud {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 80%; PADDING-BOTTOM: =
+0px; MARGIN: 0px; LINE-HEIGHT: 200%; PADDING-TOP: 0px; LIST-STYLE-TYPE: =
+none
+}
+.Tag1 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag2 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag3 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag4 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag5 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag6 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag1 A:link {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%; COLOR: #001fa7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag1 A:visited {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%; COLOR: #001fa7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag1 A:active {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%; COLOR: #001fa7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag2 A:link {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%; COLOR: #002fb7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag2 A:visited {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%; COLOR: #002fb7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag2 A:active {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%; COLOR: #002fb7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag3 A:link {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%; COLOR: #003fc7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag3 A:visited {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%; COLOR: #003fc7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag3 A:active {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%; COLOR: #003fc7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag4 A:link {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%; COLOR: #004fd7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag4 A:visited {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%; COLOR: #004fd7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag4 A:active {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%; COLOR: #004fd7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag5 A:link {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%; COLOR: #005fe7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag5 A:visited {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%; COLOR: #005fe7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag5 A:active {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%; COLOR: #005fe7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag6 A:link {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%; COLOR: #006ff7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag6 A:visited {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%; COLOR: #006ff7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag6 A:active {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%; COLOR: #006ff7; MARGIN-RIGHT: 6px; =
+TEXT-DECORATION: none
+}
+.Tag1 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag2 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag3 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag4 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag5 A:hover {
+	TEXT-DECORATION: underline
+}
+.Tag6 A:hover {
+	TEXT-DECORATION: underline
+}
+.InlineTagEditor {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: =
+#999999 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; BORDER-LEFT: =
+#999999 1px solid; PADDING-TOP: 4px; BORDER-BOTTOM: #999999 1px solid; =
+BACKGROUND-COLOR: #f3f3f3
+}
+.TextButton {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: =
+#cccccc 1px solid; DISPLAY: inline-block; PADDING-LEFT: 4px; =
+FONT-WEIGHT: bold; FONT-SIZE: 80%; PADDING-BOTTOM: 4px; MARGIN: 1px; =
+BORDER-LEFT: #cccccc 1px solid; COLOR: #333333; PADDING-TOP: 4px; =
+BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: Tahoma, Arial, Helvetica; =
+WHITE-SPACE: nowrap; BACKGROUND-COLOR: #eeeeee
+}
+.TextButton:link {
+	COLOR: #333333; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none
+}
+.TextButton:visited {
+	COLOR: #333333; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none
+}
+.TextButton:active {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.TextButton:hover {
+	COLOR: #333333; BACKGROUND-COLOR: #dddddd; TEXT-DECORATION: underline
+}
+.ModalMask {
+	FILTER: alpha(opacity=3D40); BACKGROUND-COLOR: #333333; opacity: .4
+}
+.Modal {
+	BORDER-RIGHT: #888888 3px solid; BORDER-TOP: #888888 1px solid; =
+BORDER-LEFT: #888888 1px solid; BORDER-BOTTOM: #888888 3px solid; =
+BACKGROUND-COLOR: #eeeeee
+}
+.ModalTitle {
+	BORDER-RIGHT: #cccccc 0px solid; PADDING-RIGHT: 5px; BORDER-TOP: =
+#cccccc 0px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: =
+16px; PADDING-BOTTOM: 7px; OVERFLOW: hidden; BORDER-LEFT: #cccccc 0px =
+solid; CURSOR: move; COLOR: #000000; PADDING-TOP: 5px; BORDER-BOTTOM: =
+#cccccc 1px solid; FONT-FAMILY: Tahoma, Arial, Helvetica; HEIGHT: 18px; =
+BACKGROUND-COLOR: #dddddd; TEXT-ALIGN: left
+}
+.ModalClose {
+	FLOAT: right; BACKGROUND-IMAGE: =
+url(../../../default/images/common/close.gif); OVERFLOW: hidden; WIDTH: =
+33px; CURSOR: pointer; BACKGROUND-REPEAT: no-repeat; HEIGHT: 12px
+}
+.ModalContent {
+	BACKGROUND-COLOR: #ffffff
+}
+.ModalFooter {
+	BORDER-RIGHT: #cccccc 0px solid; PADDING-RIGHT: 2px; BORDER-TOP: =
+#cccccc 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: =
+#cccccc 0px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc 0px solid; =
+BACKGROUND-COLOR: #eeeeee
+}
+.ModalResize {
+	FLOAT: right; BACKGROUND-IMAGE: =
+url(../../../default/images/common/resize.gif); OVERFLOW: hidden; WIDTH: =
+14px; CURSOR: se-resize; BACKGROUND-REPEAT: no-repeat; HEIGHT: 14px
+}
+
+------=_NextPart_000_00D3_01C93062.6AFC2ED0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/Themes/Blogs/paperclip/style/print.css
+
+BODY {
+	FONT-SIZE: 0.8em; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, =
+sans-serif
+}
+A:visited {
+	COLOR: #000000
+}
+A:active {
+	COLOR: #000000
+}
+A:link {
+	COLOR: #000000
+}
+.post {
+	MARGIN: 0px 0px 20px
+}
+.posthead {
+	BORDER-RIGHT: #dfdfdf 0px dotted; BORDER-TOP: #dfdfdf 0px dotted; =
+FONT-WEIGHT: normal; FONT-SIZE: 1.5em; PADDING-BOTTOM: 6px; MARGIN: 0px =
+0px 10px; BORDER-LEFT: #dfdfdf 0px dotted; COLOR: #000000; =
+BORDER-BOTTOM: #dfdfdf 1px dotted
+}
+.posthead A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.posthead A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.posthead A:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.posthead A:hover {
+	COLOR: #529e00; TEXT-DECORATION: underline
+}
+.postfoot {
+	BORDER-RIGHT: #dfdfdf 0px dotted; BORDER-TOP: #dfdfdf 1px dotted; =
+MARGIN-TOP: 10px; PADDING-BOTTOM: 6px; BORDER-LEFT: #dfdfdf 0px dotted; =
+COLOR: #000000; PADDING-TOP: 6px; BORDER-BOTTOM: #dfdfdf 1px dotted
+}
+.postfoot .em {
+	COLOR: #000000
+}
+.pageTitle {
+	MARGIN-TOP: 0px; FONT-WEIGHT: bold; FONT-SIZE: 1.8em; MARGIN-BOTTOM: =
+20px; COLOR: #000000
+}
+#leftmenu {
+	DISPLAY: none
+}
+#main {
+=09
+}
+#footer {
+	CLEAR: both; MARGIN: 0px; TEXT-ALIGN: left
+}
+#quicklinks {
+	PADDING-TOP: 10px
+}
+INPUT.text {
+	WIDTH: 300px
+}
+TEXTAREA {
+	WIDTH: 300px; HEIGHT: 200px
+}
+#relatedlinks UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; =
+MARGIN-LEFT: 10px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+FIELDSET {
+	PADDING-RIGHT: 20px; MARGIN-TOP: 16px; PADDING-LEFT: 20px; =
+PADDING-BOTTOM: 20px; PADDING-TOP: 0px
+}
+LEGEND {
+	FONT-WEIGHT: bold; COLOR: #000000
+}
+FIELDSET TEXTAREA {
+	WIDTH: 450px
+}
+FIELDSET .smallbox {
+	WIDTH: 450px
+}
+#comments H2 {
+	MARGIN-TOP: 16px; FONT-SIZE: 1em; COLOR: #000000
+}
+.CommentArea {
+	MARGIN: 8px 0px
+}
+.CommentTitle {
+	FONT-WEIGHT: normal; FONT-SIZE: 1em; MARGIN-BOTTOM: 6px
+}
+.CommentArrow {
+	BACKGROUND-IMAGE: url(../images/summer-comment-arrow.gif); =
+MARGIN-BOTTOM: -7px; WIDTH: 14px; BACKGROUND-REPEAT: no-repeat; HEIGHT: =
+14px
+}
+.CommentText {
+	BACKGROUND-POSITION: left bottom; BACKGROUND-IMAGE: =
+url(../images/comment-shadow.gif); PADDING-BOTTOM: 3px; =
+BACKGROUND-REPEAT: repeat-x
+}
+.CommentText2 {
+	BORDER-RIGHT: #bcbcbc 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: =
+#bcbcbc 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: =
+#bcbcbc 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #bcbcbc 1px solid
+}
+.CommentText3 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 0.8em; =
+PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+.CommentFooter {
+	MARGIN-TOP: 4px; PADDING-LEFT: 16px; FONT-SIZE: 0.7em; COLOR: #000000
+}
+#news {
+	MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px
+}
+.copyright {
+	FONT-SIZE: 0.65em; FONT-STYLE: italic; TEXT-ALIGN: center
+}
+.CommonRateControlReadOnly {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; PADDING-TOP: 1px; =
+BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.CommonRateControl {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; CURSOR: pointer; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: =
+#eeeeee
+}
+.CommonRateControlActive {
+	BORDER-RIGHT: #cc9933 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#cc9933 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #cc9933 1px solid; CURSOR: pointer; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #cc9933 1px solid; BACKGROUND-COLOR: =
+#ffcc66
+}
+.CommonRateControlReadOnly {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; PADDING-TOP: 1px; =
+BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.CommonRateControl {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#999999 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #999999 1px solid; CURSOR: pointer; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: =
+#eeeeee
+}
+.CommonRateControlActive {
+	BORDER-RIGHT: #cc9933 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: =
+#cc9933 1px solid; DISPLAY: inline-block; PADDING-LEFT: 1px; =
+PADDING-BOTTOM: 1px; BORDER-LEFT: #cc9933 1px solid; CURSOR: pointer; =
+PADDING-TOP: 1px; BORDER-BOTTOM: #cc9933 1px solid; BACKGROUND-COLOR: =
+#ffcc66
+}
+.CommonRateControlReadOnly IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.CommonRateControl IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.CommonRateControlActive IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#content {
+=09
+}
+#masthead {
+=09
+}
+#masthead UL {
+	DISPLAY: none
+}
+#userArea {
+	DISPLAY: none
+}
+#title {
+=09
+}
+#title H1 {
+=09
+}
+#nav {
+	DISPLAY: none
+}
+.TagCloud {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 16px; MARGIN: =
+16px 0px; PADDING-TOP: 16px; LIST-STYLE-TYPE: none; BACKGROUND-COLOR: =
+#f7f7f7
+}
+.SidebarTagCloud {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 80%; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.Tag1 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag2 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag3 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag4 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag5 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag6 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.Tag1 A:link {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%
+}
+.Tag1 A:visited {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%
+}
+.Tag1 A:active {
+	FONT-WEIGHT: 900; FONT-SIZE: 160%
+}
+.Tag2 A:link {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%
+}
+.Tag2 A:visited {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%
+}
+.Tag2 A:active {
+	FONT-WEIGHT: 800; FONT-SIZE: 145%
+}
+.Tag3 A:link {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%
+}
+.Tag3 A:visited {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%
+}
+.Tag3 A:active {
+	FONT-WEIGHT: 600; FONT-SIZE: 130%
+}
+.Tag4 A:link {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%
+}
+.Tag4 A:visited {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%
+}
+.Tag4 A:active {
+	FONT-WEIGHT: 500; FONT-SIZE: 120%
+}
+.Tag5 A:link {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%
+}
+.Tag5 A:visited {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%
+}
+.Tag5 A:active {
+	FONT-WEIGHT: 300; FONT-SIZE: 110%
+}
+.Tag6 A:link {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%
+}
+.Tag6 A:visited {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%
+}
+.Tag6 A:active {
+	FONT-WEIGHT: 200; FONT-SIZE: 100%
+}
+
+------=_NextPart_000_00D3_01C93062.6AFC2ED0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/Themes/Blogs/paperclip/style/winter.css
+
+BODY {
+	BACKGROUND-COLOR: #132733
+}
+A:visited {
+	COLOR: #0065e2
+}
+A:active {
+	COLOR: #0065e2
+}
+A:link {
+	COLOR: #0065e2
+}
+.posthead {
+	BORDER-LEFT-COLOR: #dfdfdf; BORDER-BOTTOM-COLOR: #dfdfdf; COLOR: =
+#006ff7; BORDER-TOP-COLOR: #dfdfdf; BORDER-RIGHT-COLOR: #dfdfdf
+}
+.posthead A:link {
+	COLOR: #006ff7
+}
+.posthead A:visited {
+	COLOR: #006ff7
+}
+.posthead A:active {
+	COLOR: #006ff7
+}
+.posthead A:hover {
+	COLOR: #006ff7
+}
+.postfoot {
+	BORDER-LEFT-COLOR: #dfdfdf; BORDER-BOTTOM-COLOR: #dfdfdf; COLOR: =
+#868686; BORDER-TOP-COLOR: #dfdfdf; BORDER-RIGHT-COLOR: #dfdfdf
+}
+.postfoot .em {
+	COLOR: #000000
+}
+.pageTitle {
+	COLOR: #006ff7
+}
+#leftmenu H3 {
+	BORDER-BOTTOM-COLOR: #dfdfdf
+}
+#leftmenu UL LI {
+	COLOR: #7c95b3
+}
+#leftmenu UL A:link {
+	COLOR: #7c95b3
+}
+#leftmenu UL A:visited {
+	COLOR: #7c95b3
+}
+#leftmenu UL A:active {
+	COLOR: #7c95b3
+}
+#leftmenu UL A:hover {
+	COLOR: #7c95b3
+}
+LEGEND {
+	COLOR: #666666
+}
+#comments H2 {
+	COLOR: #666666
+}
+.CommentArrow {
+	BACKGROUND-IMAGE: url(../images/winter-comment-arrow.gif); =
+MARGIN-BOTTOM: -7px; WIDTH: 14px; HEIGHT: 14px
+}
+.CommentText2 {
+	BORDER-RIGHT: #bcbcbc 1px solid; BORDER-TOP: #bcbcbc 1px solid; =
+BORDER-LEFT: #bcbcbc 1px solid; BORDER-BOTTOM: #bcbcbc 1px solid
+}
+.CommentText3 {
+=09
+}
+.CommentFooter {
+	COLOR: #999999
+}
+#content {
+	BACKGROUND-COLOR: #ffffff
+}
+#masthead {
+	BACKGROUND: url(../images/winter-title.jpg) #ffffff
+}
+#welcome {
+	COLOR: #ffffff; BACKGROUND-COLOR: #000000
+}
+#welcome A:link {
+	COLOR: #ffffff
+}
+#welcome A:visited {
+	COLOR: #ffffff
+}
+#welcome A:active {
+	COLOR: #ffffff
+}
+#welcome A:hover {
+	COLOR: #ffffff
+}
+.SearchButtonOuter {
+	BACKGROUND-IMAGE: url(../images/winter-search-left.gif)
+}
+.SearchButton {
+	BACKGROUND-IMAGE: url(../images/winter-search-right.gif); COLOR: =
+#ffffff
+}
+#Search A:link {
+	COLOR: #ffffff
+}
+#Search A:visited {
+	COLOR: #ffffff
+}
+#Search A:active {
+	COLOR: #ffffff
+}
+#Search A:hover {
+	COLOR: #ffffff
+}
+#title H1 {
+	COLOR: #000000
+}
+#title A:link {
+	COLOR: #000000
+}
+#title A:visited {
+	COLOR: #000000
+}
+#title A:active {
+	COLOR: #000000
+}
+#title A:hover {
+	COLOR: #000000
+}
+#nav {
+	BACKGROUND-COLOR: #ffffff
+}
+#navbar {
+	BACKGROUND: url(../images/winter-nav-background.jpg) #666666 repeat-x
+}
+#navbar LI {
+	BACKGROUND-IMAGE: url(../images/winter-nav-bul.gif)
+}
+#navbar A:link {
+	COLOR: #ffffff
+}
+#navbar A:visited {
+	COLOR: #ffffff
+}
+#navbar A:active {
+	COLOR: #ffffff
+}
+.TagCloud {
+	COLOR: #999999; BACKGROUND-COLOR: #f7f7f7
+}
+.Tag1 A:link {
+	COLOR: #001592
+}
+.Tag1 A:visited {
+	COLOR: #001592
+}
+.Tag1 A:active {
+	COLOR: #001592
+}
+.Tag2 A:link {
+	COLOR: #0025a2
+}
+.Tag2 A:visited {
+	COLOR: #0025a2
+}
+.Tag2 A:active {
+	COLOR: #0025a2
+}
+.Tag3 A:link {
+	COLOR: #0035b2
+}
+.Tag3 A:visited {
+	COLOR: #0035b2
+}
+.Tag3 A:active {
+	COLOR: #0035b2
+}
+.Tag4 A:link {
+	COLOR: #0045c2
+}
+.Tag4 A:visited {
+	COLOR: #0045c2
+}
+.Tag4 A:active {
+	COLOR: #0045c2
+}
+.Tag5 A:link {
+	COLOR: #0055d2
+}
+.Tag5 A:visited {
+	COLOR: #0055d2
+}
+.Tag5 A:active {
+	COLOR: #0055d2
+}
+.Tag6 A:link {
+	COLOR: #0065e2
+}
+.Tag6 A:visited {
+	COLOR: #0065e2
+}
+.Tag6 A:active {
+	COLOR: #0065e2
+}
+
+------=_NextPart_000_00D3_01C93062.6AFC2ED0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/smsandmom/customcss.ashx
+
+#masthead {
+	MARGIN-TOP: 8px; BACKGROUND: =
+url(/photos/softgrid/images/3131914/original.aspx) #ffffff; MARGIN-LEFT: =
+auto; OVERFLOW: hidden; WIDTH: 804px; MARGIN-RIGHT: auto; HEIGHT: 221px
+}
+.headermaintitle {
+	DISPLAY: none
+}
+
+------=_NextPart_000_00D3_01C93062.6AFC2ED0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/Utility/global.js?Version=2.1.61025.2
+
+  /*******/
+
+  var IE4 =3D document.all;
+  var NS6 =3D document.getElementById && !document.all;
+  var disappearDelay =3D 500; // miliseconds
+     =20
+  function DynamicHide (node, e) {
+    if ((IE4 && !node.contains(e.toElement)) ||
+        (NS6 && e.currentTarget !=3D e.relatedTarget && !NS6_Contains( =
+e.currentTarget, e.relatedTarget )))=20
+    {
+      InitTimer( node );
+    }=20
+  } =20
+ =20
+  function HideObject (nodeID) {   =20
+    var node =3D document.getElementById( nodeID );
+   =20
+    if (typeof node !=3D "undefined") {
+      if (IE4 || NS6) {
+        node.style.visibility =3D "hidden";
+        node.style.display =3D 'none';
+      }
+    }
+  }
+ =20
+  function ReleaseTimer (node) {   =20
+    if (typeof node !=3D "undefined") {
+      if (typeof node.HideTimer !=3D "undefined") {
+        clearTimeout( node.HideTimer );
+      }
+    }
+  }
+ =20
+  function InitTimer (node) {
+    if (typeof node !=3D "undefined") {
+      var callBack =3D 'HideObject( "' + node.getAttribute( 'id' ) + '" =
+)';     =20
+      node.HideTimer =3D setTimeout( callBack, disappearDelay );
+    }
+  }
+   =20
+  function NS6_Contains (a, b) {
+    while (b.parentNode) {
+      if ((b =3D b.parentNode) =3D=3D a)
+        return true;
+    }
+   =20
+    return false;
+  }
+       =20
+  /*******/
+  =20
+  function ToggleSendToFriend() {
+    sendToFriendForm =3D document.getElementById('SendToFriendForm');
+    sendToFriendButton =3D =
+document.getElementById('SendToFriendButton');
+
+    if (sendToFriendForm.style.visibility =3D=3D "hidden") {
+      sendToFriendForm.style.visibility =3D "visible";
+      sendToFriendForm.style.display =3D 'block';
+    } else {
+      sendToFriendForm.style.visibility =3D "hidden";
+      sendToFriendForm.style.display =3D 'none';
+    }
+
+    //sendToFriendForm.style.left =3D getposOffset(sendToFriendButton, =
+"left") - sendToFriendForm.offsetWidth + sendToFriendButton.offsetWidth;
+    sendToFriendForm.style.left =3D getposOffset(sendToFriendButton, =
+"left") - (sendToFriendForm.offsetWidth / 2) + =
+(sendToFriendButton.offsetWidth / 2);
+    sendToFriendForm.style.top =3D getposOffset(sendToFriendButton, =
+"top") + sendToFriendButton.offsetHeight;
+  }
+ =20
+  function ToggleAddComment() {
+    commentMenu =3D document.getElementById('CommentMenu');
+    commentButton =3D document.getElementById('CommentButton');
+
+    commentMenu.style.left =3D getposOffset(commentButton, "left");
+    commentMenu.style.top =3D getposOffset(commentButton, "top") + =
+commentButton.offsetHeight;
+
+    if (commentMenu.style.visibility =3D=3D "hidden") {
+      commentMenu.style.visibility =3D "visible";
+      commentMenu.style.display =3D 'block';
+    } else {
+      commentMenu.style.visibility =3D "hidden";
+      commentMenu.style.display =3D 'none';
+    }
+  }
+ =20
+  function ToggleGalleryThumbnail(pictureID) {
+    largeThumbDiv =3D document.getElementById('SecondaryThumbDiv' + =
+pictureID);
+    smallThumb =3D document.getElementById('SmallThumb' + pictureID);
+
+    if (largeThumbDiv.className =3D=3D "secondaryThumbnailHidden") {
+      largeThumbDiv.className =3D "secondaryThumbnailPopup";
+      largeThumbDiv.style.left =3D getposOffset(smallThumb, "left") - =
+((largeThumbDiv.offsetWidth - smallThumb.offsetWidth) / 2) + "px";
+      largeThumbDiv.style.top =3D getposOffset(smallThumb, "top")  - =
+((largeThumbDiv.offsetHeight - smallThumb.offsetHeight) / 2) + "px";
+      setTimeout(function() { largeThumbDiv.style.visibility =3D =
+"visible"; }, 5);
+    } else {
+	  largeThumbDiv.className =3D "secondaryThumbnailHidden";
+    }
+  }
+ =20
+  function ToggleRateMenu() {
+    rateMenu =3D document.getElementById('RateMenu');
+    rateButton =3D document.getElementById('RateButton');
+   =20
+    rateMenu.style.left =3D getposOffset(rateButton, "left");
+    rateMenu.style.top =3D getposOffset(rateButton, "top") + =
+rateButton.offsetHeight;
+
+    if (rateMenu.style.visibility =3D=3D "hidden") {
+      rateMenu.style.visibility =3D "visible";
+      rateMenu.style.display =3D 'block';
+    } else {
+      rateMenu.style.visibility =3D "hidden";
+      rateMenu.style.display =3D 'none';
+    }
+   =20
+    // Init autohide
+    if (window.event) {
+      event.cancelBubble =3D true;
+    }
+   =20
+    ReleaseTimer( rateMenu );
+  }
+ =20
+  function ToggleRatePostMenu(control) {
+	rateButton =3D control.parentNode;
+	rateMenu =3D rateButton.nextSibling.nextSibling;
+
+	if ((rateButton.id !=3D "RateButton") || (rateMenu.id !=3D "RateMenu"))
+		return;
+
+    rateMenu.style.left =3D getposOffset(rateButton, "left");
+    rateMenu.style.top =3D getposOffset(rateButton, "top") + =
+rateButton.offsetHeight;
+
+    if (rateMenu.style.visibility =3D=3D "hidden") {
+      rateMenu.style.visibility =3D "visible";
+      rateMenu.style.display =3D 'block';
+    } else {
+      rateMenu.style.visibility =3D "hidden";
+      rateMenu.style.display =3D 'none';
+    }
+   =20
+    // Init autohide
+    if (window.event) {
+      event.cancelBubble =3D true;
+    }
+   =20
+    ReleaseTimer( rateMenu );
+  }
+
+  function ToggleSearchMenu() {
+    searchMenu =3D document.getElementById('SearchMenu');
+    searchButton =3D document.getElementById('SearchButton');
+
+    searchMenu.style.left =3D getposOffset(searchButton, "left");
+    searchMenu.style.top =3D getposOffset(searchButton, "top") + =
+searchButton.offsetHeight;
+
+    if (searchMenu.style.visibility =3D=3D "hidden") {
+      searchMenu.style.visibility =3D "visible";
+      searchMenu.style.display =3D 'block';
+    } else {
+      searchMenu.style.visibility =3D "hidden";
+      searchMenu.style.display =3D 'none';
+    }
+  }
+
+function getposOffset(what, offsettype){
+  var totaloffset=3D(offsettype=3D=3D"left")? what.offsetLeft : =
+what.offsetTop;
+  var parentEl=3Dwhat.offsetParent;
+  while (parentEl!=3Dnull){
+    totaloffset=3D(offsettype=3D=3D"left")? =
+totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+    parentEl=3DparentEl.offsetParent;
+  }
+  return totaloffset;
+}
+
+function ToggleMenuOnOff (menuName) {
+    var menu =3D document.getElementById(menuName);
+
+    if (menu.style.display =3D=3D 'none') {
+      menu.style.display =3D 'block';
+    } else {
+      menu.style.display =3D 'none';
+    }
+
+}
+
+function OpenWindow (target) {=20
+  window.open(target, "_Child", =
+"toolbar=3Dno,scrollbars=3Dyes,resizable=3Dyes,width=3D400,height=3D400")=
+;=20
+}
+
+function OpenPostWindow (target) {=20
+  window.open(target, "_Child", =
+"resizable=3Dyes,width=3D500,height=3D700");=20
+}
+
+/*
+Keep the user's cookie alive
+*/
+
+function MakeKeepAliveRequest()
+{
+	if (!KeepAliveUrl)
+		return;
+
+	if (KeepAliveTimer !=3D null)
+		window.clearTimeout(KeepAliveTimer);
+
+	var x =3D null;
+	if (typeof XMLHttpRequest !=3D "undefined")=20
+	{
+		x =3D new XMLHttpRequest();
+	}=20
+	else=20
+	{
+		try=20
+		{
+			x =3D new ActiveXObject("Msxml2.XMLHTTP");
+		}=20
+		catch (e)=20
+		{
+			try=20
+			{
+				x =3D new ActiveXObject("Microsoft.XMLHTTP");
+			}=20
+			catch (e)=20
+			{
+			}
+		}
+	}
+=09
+	try
+	{
+		// don't do this asynchronously
+		x.open("GET", KeepAliveUrl, false, "", "");
+		x.send(null);
+	}
+	catch (e)
+	{
+	}
+=09
+	KeepAliveTimer =3D window.setTimeout(MakeKeepAliveRequest, 599999);
+}
+
+function DetermineKeepAliveUrl()
+{
+	var scripts =3D document.getElementsByTagName("SCRIPT");
+	var i;
+	var url;
+=09
+	for (i =3D 0; i < scripts.length; i++)
+	{
+		url =3D scripts[i].src.toLowerCase();
+		if (url.indexOf('utility/global.js') !=3D -1)
+			return url.replace('utility/global.js', 'utility/keepalive.aspx');
+	}
+=09
+	return null;
+}
+
+var KeepAliveUrl =3D DetermineKeepAliveUrl();
+var KeepAliveTimer =3D window.setTimeout(MakeKeepAliveRequest, 599999);
+
+function ShowEditBlock(block) {
+	block.className =3D "CommonContentPartBorderOn";
+}
+function HideEditBlock(block) {
+	block.className =3D "CommonContentPartBorderOff";
+}
+
+function getCookie(sName) {
+	var cookie =3D "" + document.cookie;
+	var start =3D cookie.indexOf(sName);
+	if (cookie =3D=3D "" || start =3D=3D -1)=20
+		return "";
+	var end =3D cookie.indexOf(';',start);
+	if (end =3D=3D -1)
+		end =3D cookie.length;
+	return unescape(cookie.substring(start+sName.length + 1,end));
+}
+function setCookie(sName, value) {
+	document.cookie =3D sName + "=3D" + escape(value) + ";path=3D/;";
+}
+function setCookieForever(sName, value) {
+	document.cookie =3D sName + "=3D" + escape(value) + =
+";path=3D/;expires=3DFri, 1 Jan 2010 00:00:00 GMT;";
+}
+
+function inLineEditOn(control)
+{
+    control.className =3D "CommonInlineEditOn";
+}
+
+function inLineEditOff(control)
+{
+    control.className =3D "CommonInlineEditOff";
+}
+
+//Ajax Start
+
+function Ajax_GetXMLHttpRequest() {
+	if (window.XMLHttpRequest) {
+		return new XMLHttpRequest();
+	} else {
+		if (window.Ajax_XMLHttpRequestProgID) {
+			return new ActiveXObject(window.Ajax_XMLHttpRequestProgID);
+		} else {
+			var progIDs =3D ["Msxml2.XMLHTTP.5.0", "Msxml2.XMLHTTP.4.0", =
+"MSXML2.XMLHTTP.3.0", "MSXML2.XMLHTTP", "Microsoft.XMLHTTP"];
+			for (var i =3D 0; i < progIDs.length; ++i) {
+				var progID =3D progIDs[i];
+				try {
+					var x =3D new ActiveXObject(progID);
+					window.Ajax_XMLHttpRequestProgID =3D progID;
+					return x;
+				} catch (e) {
+				}
+			}
+		}
+	}
+	return null;
+}
+function Ajax_CallBack(type, id, method, args, clientCallBack, =
+debugRequestText, debugResponseText, debugErrors, =
+includeControlValuesWithCallBack, url) {
+=09
+	if (!url)
+	{
+		url =3D window.location.href;
+		url =3D url.replace(/\#.*$/, '');
+		if (url.indexOf('?') > -1)
+			url +=3D "&Ajax_CallBack=3Dtrue";
+		else
+		{
+			if (url.substr(url.length - 1, 1) =3D=3D "/")
+				url +=3D "default.aspx";
+			=09
+			url +=3D "?Ajax_CallBack=3Dtrue";
+		}
+	}
+
+	var x =3D Ajax_GetXMLHttpRequest();
+	var result =3D null;
+	if (!x) {
+		result =3D { "value":null, "error": "NOXMLHTTP"};
+		if (debugErrors) {
+			alert("error: " + result.error);
+		}
+		if (clientCallBack) {
+			clientCallBack(result);
+		}
+		return result;
+	}
+
+	x.open("POST", url, clientCallBack ? true : false);
+	x.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; =
+charset=3Dutf-8");
+	if (clientCallBack) {
+		x.onreadystatechange =3D function() {
+			var result =3D null;
+	=09
+			if (x.readyState !=3D 4) {
+				return;
+			}
+		=09
+			if (debugResponseText) {
+				alert(x.responseText);
+			}
+		=09
+			try
+			{
+				var result =3D eval("(" + x.responseText + ")");
+				if (debugErrors && result.error) {
+					alert("error: " + result.error);
+				}
+			}
+			catch (err)
+			{
+				if (window.confirm('The following error occured while processing an =
+AJAX request: ' + err.message + '\n\nWould you like to see the =
+response?'))
+				{
+					var w =3D window.open();
+					w.document.open('text/plain');
+					w.document.write(x.responseText);
+					w.document.close();
+				}
+			=09
+				result =3D new Object();
+				result.error =3D 'An AJAX error occured.  The response is invalid.';
+			}
+		=09
+			clientCallBack(result);		=09
+		}
+	}
+	var encodedData =3D "Ajax_CallBackType=3D" + type;
+	if (id) {
+		encodedData +=3D "&Ajax_CallBackID=3D" + id.split("$").join(":");
+	}
+	encodedData +=3D "&Ajax_CallBackMethod=3D" + method;
+	if (args) {
+		for (var i in args) {
+			encodedData +=3D "&Ajax_CallBackArgument" + i + "=3D" + =
+encodeURIComponent(args[i]);
+		}
+	}
+	if (includeControlValuesWithCallBack && document.forms.length > 0) {
+		var form =3D document.forms[0];
+		for (var i =3D 0; i < form.length; ++i) {
+			var element =3D form.elements[i];
+			if (element.name) {
+				var elementValue =3D null;
+				if (element.nodeName =3D=3D "INPUT") {
+					var inputType =3D element.getAttribute("TYPE").toUpperCase();
+					if (inputType =3D=3D "TEXT" || inputType =3D=3D "PASSWORD" || =
+inputType =3D=3D "HIDDEN") {
+						elementValue =3D element.value;
+					} else if (inputType =3D=3D "CHECKBOX" || inputType =3D=3D "RADIO") =
+{
+						if (element.checked) {
+							elementValue =3D element.value;
+						}
+					}
+				} else if (element.nodeName =3D=3D "SELECT") {
+					elementValue =3D element.value;
+				} else if (element.nodeName =3D=3D "TEXTAREA") {
+					elementValue =3D element.value;
+				}
+				if (elementValue) {
+					encodedData +=3D "&" + element.name + "=3D" + =
+encodeURIComponent(elementValue);
+				}
+			}
+		}
+	}
+	if (debugRequestText) {
+		alert(encodedData);
+	}
+	x.send(encodedData);
+	if (!clientCallBack) {
+		if (debugResponseText) {
+			alert(x.responseText);
+		}
+		result =3D eval("(" + x.responseText + ")");
+		if (debugErrors && result.error) {
+			alert("error: " + result.error);
+		}
+	}
+	delete x;
+	return result;
+}
+
+//Ajax End
+
+//Element Items Borrowed From Prototype
+
+function $() {
+  var elements =3D new Array();
+
+  for (var i =3D 0; i < arguments.length; i++) {
+    var element =3D arguments[i];
+    if (typeof element =3D=3D 'string')
+      element =3D document.getElementById(element);
+
+    if (arguments.length =3D=3D 1)=20
+      return element;
+
+    elements.push(element);
+  }
+
+  return elements;
+}
+
+
+var Element =3D {
+ =20
+  toggle: function() {
+    for (var i =3D 0; i < arguments.length; i++) {
+      var element =3D $(arguments[i]);
+      element.style.display =3D=20
+        (element.style.display =3D=3D 'none' ? '' : 'none');
+    }
+  },
+
+  hide: function() {
+    for (var i =3D 0; i < arguments.length; i++) {
+      var element =3D $(arguments[i]);
+      element.style.display =3D 'none';
+    }
+  },
+
+  show: function() {
+    for (var i =3D 0; i < arguments.length; i++) {
+      var element =3D $(arguments[i]);
+      element.style.display =3D '';
+    }
+  },
+
+  remove: function(element) {
+    element =3D $(element);
+    element.parentNode.removeChild(element);
+  },
+  =20
+  getHeight: function(element) {
+    element =3D $(element);
+    return element.offsetHeight;=20
+  }
+}
+
+
+//End Element Items
+
+------=_NextPart_000_00D3_01C93062.6AFC2ED0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://blogs.technet.com/wt.js
+
+//Tag Version: MNP 2.2-no dcsAdSearch/2008-10-01
+//This tag has been modified to remove the dcsAdSearch function.
+var gTagVer =3D "MNP 2.2b/2008-10-01";
+var gService =3D true;
+var gTimeZone =3D -8;
+function dcsCookie(){
+	if (typeof(dcsOther)=3D=3D"function"){
+		dcsOther();
+	}
+	else if (typeof(dcsPlugin)=3D=3D"function"){
+		dcsPlugin();
+	}
+	else if (typeof(dcsFPC)=3D=3D"function"){
+		dcsFPC(gTimeZone);
+	}
+}
+function dcsGetCookie(name){
+	var pos=3Ddocument.cookie.indexOf(name+"=3D");
+	if (pos!=3D-1){
+		var start=3Dpos+name.length+1;
+		var end=3Ddocument.cookie.indexOf(";",start);
+		if (end=3D=3D-1){
+			end=3Ddocument.cookie.length;
+		}
+		return unescape(document.cookie.substring(start,end));
+	}
+	return null;
+}
+function dcsGetCrumb(name,crumb){
+	var aCookie=3DdcsGetCookie(name).split(":");
+	for (var i=3D0;i<aCookie.length;i++){
+		var aCrumb=3DaCookie[i].split("=3D");
+		if (crumb=3D=3DaCrumb[0]){
+			return aCrumb[1];
+		}
+	}
+	return null;
+}
+function dcsGetIdCrumb(name,crumb){
+	var cookie=3DdcsGetCookie(name);
+	var id=3Dcookie.substring(0,cookie.indexOf(":lv=3D"));
+	var aCrumb=3Did.split("=3D");
+	for (var i=3D0;i<aCrumb.length;i++){
+		if (crumb=3D=3DaCrumb[0]){
+			return aCrumb[1];
+		}
+	}
+	return null;
+}
+function dcsFPC(offset){
+	if (typeof(offset)=3D=3D"undefined"){
+		return;
+	}
+	if (document.cookie.indexOf("WTLOPTOUT=3D")!=3D-1){
+		return;
+	}
+	var name=3DgFpc;
+	var dCur=3Dnew Date();
+	var adj=3D(dCur.getTimezoneOffset()*60000)+(offset*3600000);
+	dCur.setTime(dCur.getTime()+adj);
+	var dExp=3Dnew Date(dCur.getTime()+315360000000);
+	var dSes=3Dnew Date(dCur.getTime());
+	if (document.cookie.indexOf(name+"=3D")=3D=3D-1){
+		if ((typeof(gWtId)!=3D"undefined")&&(gWtId!=3D"")){
+			WT.co_f=3DgWtId;
+		}
+		else if ((typeof(gTempWtId)!=3D"undefined")&&(gTempWtId!=3D"")){
+			WT.co_f=3DgTempWtId;
+			WT.vt_f=3D"1";
+		}
+		else{
+			WT.co_f=3D"2";
+			var cur=3DdCur.getTime().toString();
+			for (var i=3D2;i<=3D(32-cur.length);i++){
+				WT.co_f+=3DMath.floor(Math.random()*16.0).toString(16);
+			}
+			WT.co_f+=3Dcur;
+			WT.vt_f=3D"1";
+		}
+		if (typeof(gWtAccountRollup)=3D=3D"undefined"){
+			WT.vt_f_a=3D"1";
+		}
+		WT.vt_f_s=3D"1";
+		WT.vt_f_d=3D"1";
+		WT.vt_f_tlh=3DWT.vt_f_tlv=3D"0";
+	}
+	else{
+		var id=3DdcsGetIdCrumb(name,"id");
+		var lv=3DparseInt(dcsGetCrumb(name,"lv"));
+		var ss=3DparseInt(dcsGetCrumb(name,"ss"));
+		if ((id=3D=3Dnull)||(id=3D=3D"null")||isNaN(lv)||isNaN(ss)){
+			return;
+		}
+		WT.co_f=3Did;
+		var dLst=3Dnew Date(lv);
+		WT.vt_f_tlh=3DMath.floor((dLst.getTime()-adj)/1000);
+		dSes.setTime(ss);
+		if =
+((dCur.getTime()>(dLst.getTime()+1800000))||(dCur.getTime()>(dSes.getTime=
+()+28800000))){
+			WT.vt_f_tlv=3DMath.floor((dSes.getTime()-adj)/1000);
+			dSes.setTime(dCur.getTime());
+			WT.vt_f_s=3D"1";
+		}
+		if =
+((dCur.getDay()!=3DdLst.getDay())||(dCur.getMonth()!=3DdLst.getMonth())||=
+(dCur.getYear()!=3DdLst.getYear())){
+			WT.vt_f_d=3D"1";
+		}
+	}
+	WT.co_f=3Descape(WT.co_f);
+	WT.vt_sid=3DWT.co_f+"."+(dSes.getTime()-adj);
+	var expiry=3D"; expires=3D"+dExp.toGMTString();
+	=
+document.cookie=3Dname+"=3D"+"id=3D"+WT.co_f+":lv=3D"+dCur.getTime().toSt=
+ring()+":ss=3D"+dSes.getTime().toString()+expiry+"; =
+path=3D/"+(((typeof(gFpcDom)!=3D"undefined")&&(gFpcDom!=3D""))?("; =
+domain=3D"+gFpcDom):(""));
+	if (document.cookie.indexOf(name+"=3D")=3D=3D-1){
+		=
+WT.co_f=3DWT.vt_sid=3DWT.vt_f_s=3DWT.vt_f_d=3DWT.vt_f_tlh=3DWT.vt_f_tlv=3D=
+"";
+		WT.vt_f=3DWT.vt_f_a=3D"2";
+	}
+}
+
+var gFpcDom=3D".microsoft.com";
+
+function dcsEvt(evt,tag){
+	var e=3Devt.target||evt.srcElement;
+	while (e.tagName&&(e.tagName!=3Dtag)){
+		e=3De.parentElement||e.parentNode;
+	}
+	return e;
+}
+function dcsBind(event,func){
+	if ((typeof(window[func])=3D=3D"function")&&document.body){
+		if (document.body.addEventListener){
+			document.body.addEventListener(event, window[func], true);
+		}
+		else if(document.body.attachEvent){
+			document.body.attachEvent("on"+event, window[func]);
+		}
+	}
+}
+function dcsET(){
+	var =
+e=3D(navigator.appVersion.indexOf("MSIE")!=3D-1)?"click":"mousedown";
+	dcsBind(e,"dcsDownload");
+	dcsBind(e,"dcsFormButton");
+	dcsBind("keypress","dcsFormButton");
+	dcsBind(e,"dcsImageMap");
+}
+function dcsMultiTrack(){
+	if (arguments.length%2=3D=3D0){
+		for (var i=3D0;i<arguments.length;i+=3D2){
+			if (arguments[i].indexOf('WT.')=3D=3D0){
+				WT[arguments[i].substring(3)]=3Darguments[i+1];
+			}
+			else if (arguments[i].indexOf('DCS.')=3D=3D0){
+				DCS[arguments[i].substring(4)]=3Darguments[i+1];
+			}
+			else if (arguments[i].indexOf('DCSext.')=3D=3D0){
+				DCSext[arguments[i].substring(7)]=3Darguments[i+1];
+			}
+		}
+		var dCurrent=3Dnew Date();
+		DCS.dcsdat=3DdCurrent.getTime();
+		dcsTag();
+	}
+}
+function dcsSetVar(){
+	if =
+((arguments.length%2=3D=3D0)&&(navigator.appVersion.indexOf("MSIE")!=3D-1=
+)){
+		for (var i=3D0;i<arguments.length;i+=3D2){
+			if (arguments[i].indexOf('WT.')=3D=3D0){
+				if (dcsSetVarValidate(arguments[i])){
+					WT["setvar_"+arguments[i].substring(3)]=3Darguments[i+1];
+				}
+				else{WT[arguments[i].substring(3)]=3Darguments[i+1];}
+			}
+			else if (arguments[i].indexOf('DCS.')=3D=3D0){
+				if (dcsSetVarValidate(arguments[i])){
+					DCS["setvar_"+arguments[i].substring(4)]=3Darguments[i+1];
+				}
+				else{DCS[arguments[i].substring(4)]=3Darguments[i+1];}
+
+			}
+			else if (arguments[i].indexOf('DCSext.')=3D=3D0){
+				if (dcsSetVarValidate(arguments[i])){
+					DCSext["setvar_"+arguments[i].substring(7)]=3Darguments[i+1];
+				}
+				else{DCSext[arguments[i].substring(7)]=3Darguments[i+1];}
+			}
+		}
+    }
+}
+function dcsSetVarValidate(validate){
+	var wtParamList =3D "DCS.dcssip,DCS.dcsuri,DCS.dcsqry,WT.ti,WT.mc_id";
+	wtParamList =3D wtParamList.split(",");
+	for(var i=3D0;i<wtParamList.length;i++){
+		if(wtParamList[i]=3D=3Dvalidate){
+			return 1;
+		}
+	}
+	return 0;
+}
+function dcsSetVarCap(e){
+	var gCap =3D e.onclick.toString();
+	var gStart =3D =
+gCap.substring(gCap.indexOf("dcsSetVar(")+10,gCap.length);
+  	var gEnd =3D =
+gStart.substring(0,gStart.indexOf(");")).replace(/\s"/gi,"").replace(/"/g=
+i,"");
+  	var gSplit =3D gEnd.split(",");
+  	if (gSplit.length!=3D-1){
+		for (var i=3D0;i<gSplit.length;i+=3D2){
+    		if (gSplit[i].indexOf('WT.')=3D=3D0){
+				if (dcsSetVarValidate(gSplit[i])){
+					WT["setvar_"+gSplit[i].substring(3)]=3DgSplit[i+1];
+				}
+				else{WT[gSplit[i].substring(3)]=3DgSplit[i+1];}
+			}
+			else if (gSplit[i].indexOf('DCS.')=3D=3D0){
+				if (dcsSetVarValidate(gSplit[i])){
+					DCS["setvar_"+gSplit[i].substring(4)]=3DgSplit[i+1];
+				}
+				else{DCS[gSplit[i].substring(4)]=3DgSplit[i+1];}
+
+			}
+			else if (gSplit[i].indexOf('DCSext.')=3D=3D0){
+				if (dcsSetVarValidate(gSplit[i])){
+					DCSext["setvar_"+gSplit[i].substring(7)]=3DgSplit[i+1];
+				}
+				else{DCSext[gSplit[i].substring(7)]=3DgSplit[i+1];}
+			}
+		}
+  	}
+}
+function dcsDownload(evt){
+	evt=3Devt||(window.event||"");
+	if (evt){
+		var e=3DdcsEvt(evt,"A");
+		var f=3DdcsEvt(evt,"IMG");
+		if(e){
+			if =
+(e.hostname&&e.href&&e.protocol&&(e.protocol.indexOf("http")!=3D-1)){
+				dcsNavigation(e);
+				=
+if((navigator.appVersion.indexOf("MSIE")=3D=3D-1)&&(e.onclick)){dcsSetVar=
+Cap(e);}
+       			var =
+gPath=3De.pathname?((e.pathname.indexOf("/")!=3D0)?"/"+e.pathname:e.pathn=
+ame):"/";
+       			var gPath=3DDCS.setvar_dcsuri||gPath;
+       			var gHost=3DDCS.setvar_dcssip||e.hostname;
+       			var gQry=3DDCS.setvar_dcsqry||e.search||"";
+				if(f.alt){gTitle=3Df.alt;}
+				=
+else{if(document.all){gTitle=3De.innerText||e.innerHTML||"";}else{gTitle=3D=
+e.text||e.innerHTML||"";}}
+				gTitle=3DWT.setvar_ti||gTitle;
+				WT.mc_id=3DWT.setvar_mc_id||"";
+				=
+WT.sp=3DWT.ad=3DDCS.setvar_dcsuri=3DDCS.setvar_dcssip=3DDCS.setvar_dcsqry=
+=3DWT.setvar_ti=3D"";
+				=
+dcsMultiTrack("DCS.dcssip",gHost,"DCS.dcsuri",gPath,"DCS.dcsqry",gQry,"WT=
+.ti","Link:"+gTitle,"WT.dl","1","WT.sp","","WT.ad","");
+				=
+DCS.dcssip=3DDCS.dcsuri=3DDCS.dcsqry=3DWT.ti=3DWT.dl=3DgTitle=3DgPath=3Dg=
+Qry=3DgHost=3D"";
+			}
+		}
+	}
+}
+function dcsNavigation(wtnode){
+	try{
+	var wtCount=3D0;
+	while(wtCount!=3D1){
+		if(wtnode.parentNode.tagName!=3D"DIV"){
+			wtnode=3Dwtnode.parentNode;
+		}
+		if(wtnode.parentNode.tagName=3D=3D"DIV"){
+			=
+if((wtnode.parentNode.getAttribute('id'))||(wtnode.parentNode.className))=
+{
+				DCSext.wtNavigation =3D =
+wtnode.parentNode.getAttribute("id")||wtnode.parentNode.className;
+				wtCount=3D1;
+			}
+			else{
+				wtnode=3Dwtnode.parentNode;
+			}
+		}
+	}}
+	catch(error){}
+}
+function dcsImageMap(evt){
+	evt=3Devt||(window.event||"");
+	if (evt){
+		var e=3DdcsEvt(evt,"AREA");
+		if(e){
+			if =
+(e.hostname&&e.href&&e.protocol&&(e.protocol.indexOf("http")!=3D-1)){
+				dcsNavigation(e);
+				=
+if((navigator.appVersion.indexOf("MSIE")=3D=3D-1)&&(e.onclick)){dcsSetVar=
+Cap(e);}
+				var =
+gPath=3De.pathname?((e.pathname.indexOf("/")!=3D0)?"/"+e.pathname:e.pathn=
+ame):"/";
+       			var gHost=3DDCS.setvar_dcssip||e.hostname;
+       			var gQry=3DDCS.setvar_dcsqry||e.search||"";
+				=
+dcsMultiTrack("DCS.dcssip",gHost,"DCS.dcsuri",gPath,"DCS.dcsqry",gQry,"WT=
+.ti","Link:Image Map","WT.dl","1","WT.sp","","WT.ad","");
+				=
+DCS.dcssip=3DDCS.dcsuri=3DDCS.dcsqry=3DWT.ti=3DWT.dl=3DgPath=3DgHost=3DgQ=
+ry=3D"";
+			}
+		}
+	}
+}
+function dcsFormButton(evt){
+	evt=3Devt||(window.event||"");
+	if (evt){
+		var e=3DdcsEvt(evt,"INPUT");
+		var type=3De.type||"";
+		if =
+(type&&((type=3D=3D"submit")||(type=3D=3D"image")||(type=3D=3D"button")||=
+(type=3D=3D"reset"))||((type=3D=3D"text")&&((evt.which||evt.keyCode)=3D=3D=
+13))){
+			var gUri=3DgTitle=3DgMethod=3Dqry=3D"";
+			if(e.form){
+				if((WT.z_collect_form_data =3D=3D e.form.name) || =
+(WT.z_collect_form_data =3D=3D e.form.className) || =
+(WT.z_collect_form_data =3D=3D 'all')){
+					var elems=3De.form.elements;
+					for (var i=3D0;i<elems.length;i++){
+						var etype=3Delems[i].type;
+						if (etype=3D=3D"text"){
+							=
+qry+=3D((qry=3D=3D"")?"":"&")+escape(elems[i].name)+"=3D"+escape(elems[i]=
+.value);
+						}
+					}
+				}
+				gUri=3De.form.action||window.location.pathname;
+				gTitle=3De.form.id||e.form.className||e.form.name||"Unknown";
+				gMethod=3De.form.method||"Unknown";
+			}
+			else{
+				gUri=3Dwindow.location.pathname;
+				gTitle=3De.name||e.id||"Unknown";
+				gMethod=3D"Input";
+			}
+			=
+if((gUri!=3D"")&&(gTitle!=3D"")&&(gMethod!=3D"")&&(evt.keyCode!=3D9)){
+				=
+dcsMultiTrack("DCS.dcsuri",gUri,"DCS.dcsqry",qry,"WT.ti","FormButton:"+gT=
+itle,"WT.dl","2","WT.fm",gMethod,"WT.ad","","WT.mc_id","","WT.sp","");
+			}
+			=
+DCS.dcsuri=3DDCS.dcsqry=3Dqry=3DWT.ti=3DWT.dl=3DWT.fm=3DgUri=3DgTitle=3Dg=
+Method=3D"";
+		}
+	}
+}
+function dcsNvr(){
+	if (document.cookie.indexOf("WTLOPTOUT=3D")!=3D-1){
+		return;
+	}
+	var cur=3Dnew Date();
+	var exp=3Dnew Date(cur.getTime()+315360000000);
+	var cfields=3D{name:"WT_NVR",value:"",expiry:"; =
+expires=3D"+exp.toGMTString(),path:"; path=3D/",domain:"; =
+domain=3D"+window.location.hostname};
+	var cdata=3DdcsNvrRead(cfields.name);
+	var isnew=3DdcsNvrProcess(cdata);
+	if (isnew||dcsNvrFind(cfields.name,",")){
+		var c=3DdcsNvrCompose(cdata,cfields);
+		for (var i=3D0;i<c.length;i++){
+			document.cookie=3Dc[i];
+		}
+	}
+	if (isnew){
+		var val=3D(document.cookie.indexOf(cfields.name+"=3D")!=3D-1)?"1":"2";
+		for (var i=3D0;i<cdata.length;i++){
+			if (cdata[i][1]){
+				WT["vt_nvr"+(i+1)]=3Dval;
+			}
+		}
+	}
+}
+
+function dcsNvrRead(name){
+	var data=3Dnew Array();
+	var num=3D0;
+	var re=3D/,/g;
+	var value=3DdcsNvrGetCookie(name);
+	while(value){
+		var levels=3Dvalue.split(":");
+		for (var i=3D0;i<levels.length;i++){
+			var crumbs=3Dlevels[i].split("=3D");
+			var level=3DparseInt(crumbs[0]);
+			var paths=3Dcrumbs[1].replace(re,"|").split("|");
+			if (typeof(data[level])!=3D"object"){
+				data[level]=3Dnew Array(paths,false);
+			}
+			else{
+				data[level][0]=3Ddata[level][0].concat(paths);
+			}
+		}
+		num++;
+		value=3DdcsNvrGetCookie(name+num);
+	}
+	return data;
+}
+
+function dcsNvrFind(name,tofind){
+	var found=3Dfalse;
+	var num=3D0;
+	var value=3DdcsNvrGetCookie(name);
+	while(value){
+		if (value.indexOf(tofind)!=3D-1){
+			found=3Dtrue;
+			break;
+		}
+		num++;
+		value=3DdcsNvrGetCookie(name+num);
+	}
+	return found;
+}
+
+function dcsNvrGetCookie(name){
+	var pos=3Ddocument.cookie.indexOf(name+"=3D");
+	if (pos!=3D-1){
+		var start=3Dpos+name.length+1;
+		var end=3Ddocument.cookie.indexOf(";",start);
+		if (end=3D=3D-1){
+			end=3Ddocument.cookie.length;
+		}
+		return document.cookie.substring(start,end);
+	}
+	return null;
+}
+
+function dcsNvrProcess(data){
+	var newv=3Dfalse;
+	var maxlevel=3D3;
+	var curlevel=3D0;
+	var splitp=3Dnew Array();
+	var p=3Dwindow.location.pathname;
+	var =
+curpath=3Dp.substring(p.indexOf("/")+1,p.lastIndexOf("/")).toLowerCase();=
+
+	var badchars=3D{"%09":/\t/g,"%20":/ /g,"%2C":/,/g,"%3B":/;/g};
+	var tmp=3Dnew String(curpath);
+	for (var ch in badchars){
+		tmp=3Dtmp.replace(badchars[ch],ch);
+	}
+	curpath=3Dtmp;
+
+	if (curpath.length>1){
+		splitp=3Dcurpath.split("/",maxlevel);
+		curlevel=3Dsplitp.length;
+		curpath=3Dsplitp.join("/");
+	}
+	if (data.length>0){
+		var found=3Dfalse;
+		if (data.length>curlevel){
+			for (var i=3D0;i<data[curlevel][0].length;i++){
+				if (data[curlevel][0][i]=3D=3Dcurpath){
+					found=3Dtrue;
+					break;
+				}
+			}
+			if (!found){
+				data[curlevel][0][data[curlevel][0].length]=3Dcurpath;
+				data[curlevel][1]=3Dtrue;
+				newv=3Dtrue;
+			}
+		}
+		else{
+			for (var i=3D0;i<(curlevel+1);i++){
+				if (typeof(data[i])!=3D"object"){
+					data[i]=3Dnew =
+Array([(i=3D=3D0)?"/":splitp.slice(0,i).join("/")],true);
+				}
+			}
+			newv=3Dtrue;
+		}
+	}
+	else{
+		for (var i=3D0;i<(curlevel+1);i++){
+			data[i]=3Dnew =
+Array([(i=3D=3D0)?"/":splitp.slice(0,i).join("/")],true);
+		}
+		newv=3Dtrue;
+	}
+	return newv;
+}
+
+function dcsNvrCompose(data,fields){
+	var cookies=3Dnew Array();
+	var paths=3Dnew Array();
+	var num=3D0;
+	var maxnum=3D10;
+	var maxval=3D4000;
+	var maxed=3Dfalse;
+	for (var i=3D0;(i<data.length)&&!maxed;i++){
+		paths=3Ddata[i][0];
+		var newpath=3Di+"=3D";
+		for (var j=3D0;(j<paths.length)&&!maxed;j++){
+			newpath+=3D((j=3D=3D0)?"":"|")+paths[j];
+			if =
+(((fields.name+num).length+fields.value.length+newpath.length+1)<=3Dmaxva=
+l){
+				if ((fields.value.length>0)&&(j=3D=3D0)){
+					fields.value+=3D":";
+				}
+				fields.value+=3Dnewpath;
+			}
+			else if (fields.value.length>0){
+				=
+cookies[num]=3Dfields.name+(num||"")+"=3D"+fields.value+fields.expiry+fie=
+lds.path+fields.domain;
+				fields.value=3Di+"=3D"+paths[j];
+				if ((++num)>(maxnum-1)){
+					maxed=3Dtrue;
+				}
+			}
+			newpath=3D"";
+		}
+	}
+	if (!maxed){
+		=
+cookies[num]=3Dfields.name+(num||"")+"=3D"+fields.value+fields.expiry+fie=
+lds.path+fields.domain;
+	}
+	return cookies;
+}
+function dcsAdv(){
+	if ((typeof(gTrackEvents)!=3D"undefined")&&gTrackEvents){
+		WT.wtsv=3D1;
+		if(typeof(WT.sp)!=3D"undefined"){WT.sv_sp=3DWT.sp;}
+		dcsFunc("dcsET");
+	}
+	dcsFunc("dcsCookie");
+	dcsFunc("dcsNvr");
+	DCSext.wtEvtSrc=3DDCS.dcssip+DCS.dcsuri;
+}
+
+var gImages=3Dnew Array;
+var gIndex=3D0;
+var DCS=3Dnew Object();
+var WT=3Dnew Object();
+var DCSext=3Dnew Object();
+var gQP=3Dnew Array();
+var gI18n=3Dfalse;
+if (window.RegExp){
+	var RE=3D{"%09":/\t/g,"%20":/ =
+/g,"%23":/\#/g,"%26":/\&/g,"%2B":/\+/g,"%3F":/\?/g,"%5C":/\\/g};
+	var I18NRE=3D{"%25":/\%/g};
+}
+
+function dcsVar(){
+	var dCurrent=3Dnew Date();
+	WT.tz=3DdCurrent.getTimezoneOffset()/60*-1;
+	if (WT.tz=3D=3D0){
+		WT.tz=3D"0";
+	}
+	WT.bh=3DdCurrent.getHours();
+	=
+WT.ul=3Dnavigator.appName=3D=3D"Netscape"?navigator.language:navigator.us=
+erLanguage;
+	if (typeof(screen)=3D=3D"object"){
+		=
+WT.cd=3Dnavigator.appName=3D=3D"Netscape"?screen.pixelDepth:screen.colorD=
+epth;
+		WT.sr=3Dscreen.width+"x"+screen.height;
+	}
+	if (typeof(navigator.javaEnabled())=3D=3D"boolean"){
+		WT.jo=3Dnavigator.javaEnabled()?"Yes":"No";
+	}
+	if (document.title){
+		=
+WT.ti=3DgI18n?dcsEscape(dcsEncode(document.title),I18NRE):document.title;=
+
+	}
+	WT.js=3D"Yes";
+	WT.jv=3DdcsJV();
+	if (document.body&&document.body.addBehavior){
+		document.body.addBehavior("#default#clientCaps");
+		if (document.body.connectionType){
+			WT.ct=3Ddocument.body.connectionType;
+		}
+		document.body.addBehavior("#default#homePage");
+		WT.hp=3Ddocument.body.isHomePage(location.href)?"1":"0";
+	}
+	if (parseInt(navigator.appVersion)>3){
+		if ((navigator.appName=3D=3D"Microsoft Internet =
+Explorer")&&document.body){
+			WT.bs=3Ddocument.body.offsetWidth+"x"+document.body.offsetHeight;
+		}
+		else if (navigator.appName=3D=3D"Netscape"){
+			WT.bs=3Dwindow.innerWidth+"x"+window.innerHeight;
+		}
+	}
+	WT.fi=3D"No";
+	WT.fv=3D(function(){
+		var i,flash;
+		if (window.ActiveXObject){
+			for(i=3D10;i>0;i--){
+				try{
+					flash=3Dnew ActiveXObject("ShockwaveFlash.ShockwaveFlash."+i);
+					WT.fi=3D"Yes";
+					return i+".0";
+				}
+				catch(e){
+				}
+			}
+		}
+		else if (navigator.plugins&&navigator.plugins.length){
+			for (i=3D0;i<navigator.plugins.length;i++){
+				if (navigator.plugins[i].name.indexOf('Shockwave Flash')!=3D-1){
+					WT.fi=3D"Yes";
+					return navigator.plugins[i].description.split(" ")[2];
+				}
+			}
+		}
+		return "";
+	})();
+	WT.sli=3D(function(){
+    try{
+    	if(navigator.userAgent.indexOf('MSIE')!=3D-1){
+    		var wtsli =3D new ActiveXObject('AgControl.AgControl');
+      	if(wtsli){return "Installed";}
+      }
+      else{
+				if (navigator.plugins["Silverlight Plug-In"]){
+        	return "Installed";
+        }
+      }
+ 		}
+    catch(e){}
+    return "Not Installed";
+	})();
+	WT.slv=3D(function(){
+		var i,j,slv;
+    if =
+((typeof(Silverlight)=3D=3D"object")&&(typeof(Silverlight.isInstalled)=3D=
+=3D"function")){
+			for(j=3D9;j>=3D0;j--){
+				for(i=3D3;i>0;i--){
+					slv=3Di+"."+j;
+					if (Silverlight.isInstalled(slv)){
+						return slv;
+					}
+				}
+			}
+		}
+		return "Version Unavailable";
+	})();
+	if (gI18n){
+		WT.em=3D(typeof(encodeURIComponent)=3D=3D"function")?"uri":"esc";
+		if (typeof(document.defaultCharset)=3D=3D"string"){
+			WT.le=3Ddocument.defaultCharset;
+		}
+		else if (typeof(document.characterSet)=3D=3D"string"){
+			WT.le=3Ddocument.characterSet;
+		}
+	}
+	WT.dl=3D"0";
+	WT.dcsvid=3DdcsGetCookie("MC1");
+	DCS.dcsdat=3DdCurrent.getTime();
+	DCS.dcssip=3Dwindow.location.hostname;
+	DCS.dcsuri=3Dwindow.location.pathname;
+	var gDirLevels =3D 5;
+	var gFpath =3D =
+window.location.pathname.substring(window.location.pathname.indexOf('/')+=
+1,window.location.pathname.lastIndexOf('/')+1).toLowerCase();
+	if(gFpath=3D=3D''){gFpath=3D"/";}
+	else{
+		var gSplit=3DgFpath.split("/");
+		gFpath=3D"";
+		for(var i=3D1;i<gSplit.length&&i<=3DgDirLevels;i++){
+			gFpath+=3D"/";
+			for(var b=3D0;b<i;b++){
+					gFpath+=3DgSplit[b]+"/";
+			}
+			if(i!=3DgDirLevels&&i!=3DgSplit.length-1){
+				gFpath+=3D";";
+			}
+		}
+	}
+	DCSext.wtDrillDir=3DgFpath;
+	if (window.location.search){
+		DCS.dcsqry=3Dwindow.location.search;
+		if (gQP.length>0){
+			for (var i=3D0;i<gQP.length;i++){
+				var pos=3DDCS.dcsqry.indexOf(gQP[i]);
+				if (pos!=3D-1){
+					var front=3DDCS.dcsqry.substring(0,pos);
+					var =
+end=3DDCS.dcsqry.substring(pos+gQP[i].length,DCS.dcsqry.length);
+					DCS.dcsqry=3Dfront+end;
+				}
+			}
+		}
+	}
+	if =
+((window.document.referrer!=3D"")&&(window.document.referrer!=3D"-")){
+		if (!(navigator.appName=3D=3D"Microsoft Internet =
+Explorer"&&parseInt(navigator.appVersion)<4)){
+			DCS.dcsref=3DgI18n?dcsEscape(window.document.referrer, =
+I18NRE):window.document.referrer;
+		}
+	}
+}
+function dcsA(N,V){
+	return "&"+N+"=3D"+dcsEscape(V, RE);
+}
+function dcsEscape(S, REL){
+	if (typeof(REL)!=3D"undefined"){
+		var retStr =3D new String(S);
+		for (R in REL){
+			retStr =3D retStr.replace(REL[R],R);
+		}
+		return retStr;
+	}
+	else{
+		return escape(S);
+	}
+}
+function dcsEncode(S){
+	return =
+(typeof(encodeURIComponent)=3D=3D"function")?encodeURIComponent(S):escape=
+(S);
+}
+function dcsCreateImage(dcsSrc){
+	if (document.images){
+		gImages[gIndex]=3Dnew Image;
+		gImages[gIndex].src=3DdcsSrc;
+		gIndex++;
+	}
+	else{
+		document.write('<IMG ALT=3D"" BORDER=3D"0" NAME=3D"DCSIMG" WIDTH=3D"1" =
+HEIGHT=3D"1" SRC=3D"'+dcsSrc+'">');
+	}
+}
+function dcsMeta(){
+	var elems;
+	if (document.all){
+		elems=3Ddocument.all.tags("meta");
+	}
+	else if (document.documentElement){
+		elems=3Ddocument.getElementsByTagName("meta");
+	}
+	if (typeof(elems)!=3D"undefined"){
+		for (var i=3D1;i<=3Delems.length;i++){
+			var meta=3Delems.item(i-1);
+			if (meta.name){
+				if (meta.name.indexOf('WT.')=3D=3D0){
+					=
+WT[meta.name.substring(3)]=3D(gI18n&&(meta.name.indexOf('WT.ti')=3D=3D0))=
+?dcsEscape(dcsEncode(meta.content),I18NRE):meta.content;
+				}
+				else if (meta.name.indexOf('DCSext.')=3D=3D0){
+					DCSext[meta.name.substring(7)]=3Dmeta.content;
+				}
+				else if (meta.name.indexOf('DCS.')=3D=3D0){
+					=
+DCS[meta.name.substring(4)]=3D(gI18n&&(meta.name.indexOf('DCS.dcsref')=3D=
+=3D0))?dcsEscape(meta.content,I18NRE):meta.content;
+				}
+			}
+		}
+	}
+}
+function dcsTag(){
+	if (document.cookie.indexOf("WTLOPTOUT=3D")!=3D-1){
+		return;
+	}
+	var =
+P=3D"http"+(window.location.protocol.indexOf('https:')=3D=3D0?'s':'')+":/=
+/"+gDomain+(gDcsId=3D=3D""?'':'/'+gDcsId)+"/dcs.gif?";
+	for (N in DCS){
+		if (DCS[N]) {
+			P+=3DdcsA(N,DCS[N]);
+		}
+	}
+	for (N in WT){
+		if (WT[N]) {
+			P+=3DdcsA("WT."+N,WT[N]);
+		}
+	}
+	for (N in DCSext){
+		if (DCSext[N]) {
+			P+=3DdcsA(N,DCSext[N]);
+		}
+	}
+	if (P.length>2048&&navigator.userAgent.indexOf('MSIE')>=3D0){
+		P=3DP.substring(0,2040)+"&WT.tu=3D1";
+	}
+	dcsCreateImage(P);
+}
+function dcsJV(){
+	var agt=3Dnavigator.userAgent.toLowerCase();
+	var major=3DparseInt(navigator.appVersion);
+	var mac=3D(agt.indexOf("mac")!=3D-1);
+	var =
+nn=3D((agt.indexOf("mozilla")!=3D-1)&&(agt.indexOf("compatible")=3D=3D-1)=
+);
+	var nn4=3D(nn&&(major=3D=3D4));
+	var nn6up=3D(nn&&(major>=3D5));
+	var ie=3D((agt.indexOf("msie")!=3D-1)&&(agt.indexOf("opera")=3D=3D-1));
+	var ie4=3D(ie&&(major=3D=3D4)&&(agt.indexOf("msie 4")!=3D-1));
+	var ie5up=3D(ie&&!ie4);
+	var op=3D(agt.indexOf("opera")!=3D-1);
+	var op5=3D(agt.indexOf("opera 5")!=3D-1||agt.indexOf("opera/5")!=3D-1);
+	var op6=3D(agt.indexOf("opera 6")!=3D-1||agt.indexOf("opera/6")!=3D-1);
+	var op7up=3D(op&&!op5&&!op6);
+	var jv=3D"1.1";
+	if (nn6up||op7up){
+		jv=3D"1.5";
+	}
+	else if ((mac&&ie5up)||op6){
+		jv=3D"1.4";
+	}
+	else if (ie5up||nn4||op5){
+		jv=3D"1.3";
+	}
+	else if (ie4){
+		jv=3D"1.2";
+	}
+	return jv;
+}
+function dcsFunc(func){
+	if (typeof(window[func])=3D=3D"function"){
+		window[func]();
+	}
+}
+function dcsDebug()
+{
+	var wtVars=3D"\nTag Version =3D "+gTagVer+"\nDomain =3D =
+"+gDomain+"\nDCSId =3D "+gDcsId;
+	for(N in DCS){wtVars+=3D"\nDCS."+N+" =3D "+DCS[N];}
+	for(N in WT){wtVars+=3D"\nWT."+N+" =3D "+WT[N];}
+	for(N in DCSext){wtVars+=3D"\nDCSext."+N+" =3D "+DCSext[N];}
+	alert(wtVars);
+}
+if(typeof(wtMnpDisabled)=3D=3D"undefined"||!wtMnpDisabled){
+   dcsVar();
+   dcsMeta();
+   dcsFunc("dcsAdv");
+   dcsTag();
+}
+------=_NextPart_000_00D3_01C93062.6AFC2ED0--

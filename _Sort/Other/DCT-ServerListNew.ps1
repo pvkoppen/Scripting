@@ -1,0 +1,1 @@
+Get-ADComputer -filter * -Properties Description,OperatingSystem | sort name | select Name,OperatingSystem,Description | Export-Csv -path D:\Admin\Scripts\Health\serverlist-new.csv

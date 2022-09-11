@@ -1,0 +1,28 @@
+BODY          {font-family:Helvetica,Arial,sans-serif; background-color:white; color:black; text-align:justify}
+TD            {font-family:Helvetica,Arial,sans-serif}
+.clean        {font-family:Helvetica,Arial,sans-serif}
+.tip          {font-family:Helvetica,Arial,sans-serif; position:absolute; left:0px; top:0px; visibility:hidden; z-index:20}
+TD.tiptd      {border-bottom:1px solid #333366; border-top:1px solid #DDDDEE; border-left:1px solid #DDDDEE; border-right:1px solid #333366; padding:2px; font-family:Helvetica,Arial,sans-serif}
+A:link        {font-family:Helvetica,Arial,sans-serif; color:#6060ff; text-decoration:none; font-weight:bold}
+A:visited     {font-family:Helvetica,Arial,sans-serif; color:#6060a0; text-decoration:none; font-weight:bold}
+A:active      {font-family:Helvetica,Arial,sans-serif; color:#6060f0; text-decoration:none; font-weight:bold}
+A:hover       {font-family:Helvetica,Arial,sans-serif; background-color:#DDEEFF; color:#6060f0; text-decoration:none; font-weight:bold}
+SPAN.nav      {font-family:Helvetica,Arial,sans-serif; color:#000000; text-decoration:none; font-size:small; font-weight:bold}
+SPAN.subnav   {font-family:Helvetica,Arial,sans-serif; color:#000000; text-decoration:none; font-size:x-small; font-weight:bold}
+A.nav:link    {font-family:Helvetica,Arial,sans-serif; color:#4040ff; text-decoration:none; font-size:small; font-weight:normal}
+A.nav:visited {font-family:Helvetica,Arial,sans-serif; color:#4040a0; text-decoration:none; font-size:small; font-weight:normal}
+A.nav:active  {font-family:Helvetica,Arial,sans-serif; color:#4040f0; text-decoration:none; font-size:small; font-weight:normal}
+A.subnav:link    {font-family:Helvetica,Arial,sans-serif; color:#4040ff; text-decoration:none; font-size:x-small; font-weight:normal}
+A.subnav:visited {font-family:Helvetica,Arial,sans-serif; color:#4040a0; text-decoration:none; font-size:x-small; font-weight:normal}
+A.subnav:active  {font-family:Helvetica,Arial,sans-serif; color:#4040f0; text-decoration:none; font-size:x-small; font-weight:normal}
+TABLE.nav     {padding:0px; font-family:Helvetica,Arial,sans-serif; text-decoration:none; font-weight:normal}
+TABLE.subnav  {padding:0px; font-family:Helvetica,Arial,sans-serif; text-decoration:none; font-size:small; font-weight:normal}
+TH.nav        {border-bottom:1px solid #333366; border-top:1px solid #DDDDEE; border-left:1px solid #DDDDEE; border-right:1px solid #333366; padding:0px; font-family:Helvetica,Arial,sans-serif; text-decoration:none; font-weight:normal}
+TH.hnav       {border-bottom:1px solid #CCCCCC; border-top:1px solid #DDDDEE; border-left:1px solid #DDDDEE; border-right:1px solid #333366; padding:0px; font-family:Helvetica,Arial,sans-serif; text-decoration:none; font-weight:normal}
+TH.subnav     {border-bottom:1px solid #333366; border-top:1px solid #DDDDDD; border-left:1px solid #DDDDEE; border-right:1px solid #333366; padding:0px; font-family:Helvetica,Arial,sans-serif; text-decoration:none; font-size:small; font-weight:normal}
+TD.nav        {border-bottom:1px solid #333366; border-top:1px solid #DDDDEE; border-left:1px solid #DDDDEE; border-right:1px solid #333366; padding:0px; font-family:Helvetica,Arial,sans-serif; text-decoration:none; font-weight:normal}
+TD.hnav       {border-bottom:1px solid #EEEEEE; border-top:1px solid #DDDDEE; border-left:1px solid #DDDDEE; border-right:1px solid #333366; padding:0px; font-family:Helvetica,Arial,sans-serif; text-decoration:none; font-weight:normal}
+TD.subnav     {border-bottom:1px solid #333366; border-top:1px solid #EEEEEE; border-left:1px solid #DDDDEE; border-right:1px solid #333366; padding:0px; font-family:Helvetica,Arial,sans-serif; text-decoration:none; font-size:small; font-weight:normal}
+SPAN.ptt      {font-family:Helvetica,Arial,sans-serif; font-size:small; font-weight:bold; color:white; text-align:center}
+SPAN.pst      {font-family:Helvetica,Arial,sans-serif; font-size:small; font-weight:normal; color:black; text-align:left}
+UL.pst        {font-family:Helvetica,Arial,sans-serif; font-size:small; font-weight:normal; color:black; text-align:left}

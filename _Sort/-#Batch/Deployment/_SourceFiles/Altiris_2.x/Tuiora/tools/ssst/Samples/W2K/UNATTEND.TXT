@@ -1,0 +1,90 @@
+[Data]
+	AutoPartition=1
+	MsDosInitiated="0"
+	UnattendedInstall="Yes"
+
+[Display]
+	AutoConfirm=1
+	BitsPerPel=16
+	ConfigureAtLogon=0
+	VRefresh=60
+	Xresolution=800
+	Yresolution=600
+
+[GuiRunOnce]
+	"C:\guicmd.exe"
+
+[MassStorageDrivers]
+	"Adaptec Ultra160 Family Manager Set"=OEM
+	"Smart Array 5300 Controller"=OEM
+	"Smart Array 5i, 532, 5312 Controllers"=OEM
+	"Smart Array 6i, 641, 642, 6400 EM, 6400 Controllers"=OEM
+	"Compaq Smart Array Controllers"=OEM
+	"Integrated Ultra ATA-100 Dual Channel Controller (Windows 2000)"=OEM
+	"Integrated Ultra ATA-100 IDE RAID Controller (Windows 2000)"=OEM
+	"LSI Logic Ultra320 1020/1030 Driver (Windows 2000)"=OEM
+	"CSB-6 Ultra ATA-100 IDE RAID Controller (Windows 2000)"=OEM
+	"Symbios Logic C8100 PCI SCSI Host Adapter"=RETAIL
+	"Symbios Logic C896 PCI SCSI Host Adapter"=RETAIL
+	"Symbios Logic C8xx PCI SCSI Host Adapter"=RETAIL
+	"IDE CD-ROM (ATAPI 1.2)/PCI IDE Controller"=RETAIL
+
+[NetOptionalComponents]
+	SNMP=1
+
+[Networking]
+	InstallDefaultComponents=Yes
+
+[OEM_Ads]
+	Logo=Compaq.bmp
+
+[OEMBootFiles]
+	ADPU160M.SYS
+	CPQARRY2.SYS
+	CPQCISSM.SYS
+	MegaIDE.sys
+	LSICSB6.SYS
+	SYMMPI.sys
+	TXTSETUP.OEM
+
+[Identification]
+	JoinWorkgroup=Workgroup
+
+[Unattended]
+	DriverSigningPolicy=Ignore
+	NtUpgrade=No
+	OemFilesPath=C:
+	OemPnPDriversPath=drivers\net
+	OemPreinstall=Yes
+	OemSkipEula=Yes
+	OverwriteOemFilesOnUpgrade=No
+	TargetPath=\WINNT
+	UnattendMode=DefaultHide
+	Win9xUpgrade=No
+	ExtendOemPartition=1
+	FileSystem=ConvertNTFS
+
+[GuiUnattended]
+	AdminPassword=password
+	AutoLogon=Yes
+	AutoLogonCount=1
+	OEMSkipRegional=1
+	OemSkipWelcome=1
+	TimeZone=20
+
+[LicenseFilePrintData]
+	AutoMode=PerServer
+	AutoUsers=16
+
+[UserData]
+	FullName="HP"
+	OrgName="HP"
+	ComputerName=DL320
+	ProductID=XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+
+[RegionalSettings]
+	Language=00000409
+	LanguageGroup=1
+[Proxy]
+	Proxy_Enable=0
+	Use_Same_Proxy=0
