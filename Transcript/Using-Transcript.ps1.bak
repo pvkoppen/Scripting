@@ -1,11 +1,10 @@
 ﻿<#
-# Author  : PvKoppen - TussockLine
+# Author  : PvKoppen
 # Date    : 10/05/2021
 # Modified: 06/09/2021
 # Version : 1.0b
 #>
 
-#StartTranscript
 Write-Host "[INFO] $ScriptShortName: Start Transcript Logs"
 $KeepDays        = 21
 $DaysAgo         = (Get-Date).AddDays(-$KeepDays)
@@ -22,8 +21,6 @@ Start-Transcript -Path "$(Join-Path -Path $ScriptPath -ChildPath $ScriptShortNam
 #Variables
 
 #CalculatedValues
-
-#Create Folders
 
 #Functions
 
