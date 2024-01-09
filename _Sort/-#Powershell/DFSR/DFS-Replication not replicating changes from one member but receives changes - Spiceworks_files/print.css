@@ -1,0 +1,461 @@
+/* General */
+
+html{
+  margin:0;
+  padding:0;
+}
+body{
+  background:#fff;
+  color:#000;
+  font-family:"Times New Roman",Times,serif;
+  font-size:10pt;
+  margin:0;
+  padding:0;
+  position:static;
+  border:none;
+  float:none;
+  overflow:visible;
+}
+
+h3{
+  font-size:120%;
+}
+a{
+  text-decoration:none;
+}
+a.print, p.print_link{
+  display:none;
+}
+
+/* Tables */
+thead{
+  display:table-header-group;
+}
+tbody{
+  display:table-row-group;
+}
+tr {
+  page-break-after:auto;
+}
+
+/* general app styles */
+#container{
+  width:auto;
+  background:transparent;
+  border:none;
+  margin:0;
+  padding:0;
+  width:auto;
+  position:static;
+}
+#header form, #header p, #header ul{
+  display:none;
+}
+#header div.logo{
+  height:auto;
+  float:none;
+  position:static;
+  margin-bottom:10px;
+}
+#header div.logo a img{
+  border:none;
+}
+#header div.no_login_message,
+#header div.no_login_actions{
+  display:none;
+}
+
+a#current_spicemeter{
+  display:none;
+}
+#navigation, #footer, #status_bar{
+  display:none;
+}
+#content_wrapper{
+  position:static;
+  width:auto;
+  background:transparent;
+  border:none;
+}
+#content_wrapper #sidebar{
+  display:none;
+}
+#content{
+  padding:0;
+  margin:0;
+  width:auto;
+  position:static;
+  float:none;
+}
+#content_inner{
+  border:none!important;
+  float:none;
+  position:static;
+  display:block;
+}
+#application_messaging{
+  display:none;
+}
+#main-toolbar {
+  display: none;
+}
+#sponsored_block {
+  display: none;
+}
+#header_nav {
+  display: none;
+}
+
+/* Mixed results */
+ul.mixed_results li{
+  font-size:10pt;
+}
+
+/* Page metadata */
+div.action_bar{
+  display:none;
+}
+div.search_box{
+  display:none;
+}
+p.page_actions{
+  display:none;
+}
+div.image_header{
+  background:transparent!important;
+  padding-left:0;
+}
+div.tags{
+  display:none!important;
+}
+div.pages{
+  display:none!important;
+}
+
+/* Topics */
+#topic {
+  position:relative;
+}
+#topic div.post{
+  clear:none;
+}
+#topic div.summary_image_header{
+  float:none;
+  position:static;
+}
+#topic h2 span.title{
+  font-size:8pt;
+}
+#topic h2 span.actions,
+#topic div.answer_badge{
+  display:none;
+}
+#topic div.avatar div.author_stats,
+#topic div.avatar div.admin_post_actions{
+  display:none;
+}
+#topic div.post_content div.post_body blockquote{
+  border:1px solid #888;
+  padding:1em;
+  margin:0;
+}
+#topic div.ranking,
+#topic p.report_abuse,
+#topic p.topic_subscriptions{
+  display:none;
+}
+#topic div.replies_wrap h2.box_header{
+  border:none;
+  margin:1em 0;
+  font-size:12pt;
+  background:transparent;
+}
+#topic div.first_post_info{
+  display:none;
+}
+a.back_to_top{
+  display:none;
+}
+.no-print-view
+{
+  display: none;
+}
+
+#topic,
+#topic div.replies_wrap,
+#topic div.post{
+  overflow:visible;
+}
+
+/* Forums */
+div.forum,
+div.forum div.section_wrap,
+div.forum div.section_wrap div.content {
+  overflow: visible;
+}
+div.forum div.content {
+  padding: 0;
+}
+div.forum div.menu {
+  display: none;
+}
+div.forum div.topic_list_header p.last_post,
+div.forum ul.topic_list li div.last_post {
+  width: 120px;
+}
+div.forum ul.topic_list li div.last_post img {
+  display: none;
+}
+div.forum ul.topic_list li div.last_post p {
+  padding-left: 0;
+}
+div.forum ul.topic_list li div.title {
+  width: 430px;
+}
+div.forum ul.topic_list li div.title p.subject a {
+  font-weight: bold;
+}
+div.forum div.bordered_section div.content {
+  border: 0;
+}
+
+/* How-tos */
+div.how_tos div.ranking,
+div.how_tos div.summary_image_header div.content img.avatar,
+div.how_tos div.publish_article,
+div.how_tos div.steps h2.box_header,
+div.how_tos .actions,
+div.how_tos div.steps table th p,
+div.how_tos div.steps table td.screenshot span.empty_picture,
+div.how_tos div.steps div.add_step,
+div#bottom_section.how_tos,
+div.how_tos div.summary_image_header img,
+div.how_tos div.content_block,
+div.how_tos div.publish_article {
+  display: none;
+}
+div.how_tos div.bordered_section div.content {
+  border: 0;
+}
+div.how_tos,
+div.how_tos div.steps,
+div.how_tos div.steps div.content{
+  overflow: visible;
+}
+div.how_tos div.summary_image_header h1,
+div.how_tos div.summary_image_header div.content {
+  padding-left: 0;
+}
+div.how_tos div.steps div.content,
+div.how_tos div.steps table {
+  width: 98%;
+}
+div.how_tos div.steps table td.step_content {
+  width: auto;
+  padding-bottom: 25px;
+}
+div.how_tos div.steps h3 {
+  font-size: 1em;
+}
+div.how_tos div.steps div.extra_notes {
+  width: 75%;
+}
+div.how_tos div.steps a {
+  color:#2080ad;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+/* Product compare table */
+div.compare_services div.summary_image_header div.print {
+  display: none;
+}
+
+/* Biz Case */
+#biz_case_edit .for_print {
+  display: block;
+}
+#biz_case_edit .no_print {
+  display: none;
+}
+#biz_case_edit #biz_case_inner {
+  border: 0;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-box-shadow: 0;
+  box-shadow: 0;
+}
+
+#biz_case_edit .biz_case_content {
+  border-top: 1px solid black;
+}
+
+#biz_case_edit #overview .content{
+  color: #565656;
+}
+
+#biz_case_edit #overview .title{
+  color: #FF5D23;
+}
+
+/* Quotes */
+body.vendor_quote, body.quote_list {
+  font-size: 0.55em;
+}
+body.quote .details_list img{
+  display:none;
+}
+body.quote .print_vendor_entry{
+  margin: 10px 0 10px 20px;
+}
+body.quote .print_vendor_entry .print_vendor_name_draft{
+  font-weight:bold;
+}
+body.user_quote {
+  font-size: 0.9em;
+}
+body.quote a {
+  display: none;
+}
+body.quote .for_print {
+  display: block;
+}
+body.quote .no_print {
+  display: none;
+}
+body.quote #header {
+  display: none;
+}
+body.quote .navbar, body.quote .navbar-bg, body.quote .sui-footer {
+  display: none;
+}
+body.quote .sw_logo {
+  float: right;
+}
+body.quote .print_section {
+  text-decoration: underline;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+body.quote .print_title {
+  border-bottom: 1px solid #000;
+  margin: 0 0 10px;
+  padding: 10px 0 0 0;
+  font-size: 1.4em;
+}
+body.quote .secondary-title {
+  text-decoration: underline;
+  margin: 5px 0 5px 10px;
+}
+body.quote .details_list {
+  margin-left: 20px;
+}
+body.vendor_quote .payment {
+  clear: both;
+  padding-top: 10px;
+}
+body.vendor_quote .vendor .vendor_title {
+  display: none;
+}
+body.vendor_quote .vendor li {
+  display: none;
+}
+body.vendor_quote .vendor li.account_number {
+  display: block;
+}
+body.quote .billing .secondary, body.quote .shipping {
+  float: left;
+}
+body.quote .shipping {
+  margin-left: 150px;
+}
+body.quote #bid_items_container {
+  clear: both;
+  padding-top: 15px;
+}
+body.quote #product_table th {
+  border-bottom: 1px solid #000;
+  font-size: 1.2em;
+  padding: 2px 5px;
+}
+body.quote #product_table td {
+  padding: 3px 5px;
+  vertical-align: top;
+}
+body.quote table tr th.item_name, body.quote table tr td.item_name {
+  width: 500px;
+}
+body.quote #product_table .item_name, body.quote #product_table .item_delete {
+  padding: 3px 0;
+}
+body.quote #product_table .item_delete {
+  width: 1px;
+}
+body.quote table tr th.item_part_number, body.quote table tr td.item_part_number {
+  width: 50px;
+}
+body.quote table tr th.item_image, body.quote table tr td.item_image {
+  width: 1px;
+}
+body.quote table tr .item_price{
+  border-right: 0;
+  text-align: right;
+  width: 110px;
+}
+body.quote table tr th.item_quantity {
+  width: 58px;
+}
+body.quote #quote_sub_total {
+  border-top: 1px solid #000;
+}
+body.quote #product_table .quote_total .left_box, body.quote #product_table .quote_total .right_box {
+  border-top: 1px solid #000;
+}
+body.quote .comment {
+  clear: both;
+  margin-top: 15px;
+}
+body.quote .comment .comment_time {
+  float: left;
+  font-style: italic;
+  margin-right: 15px;
+}
+body.quote .comment .avatar {
+  display: none;
+}
+body.quote .comment .comment_text {
+  margin-left: 20px;
+}
+
+/* Quote List */
+body.quote_list #quote_list {
+  border-bottom: 1px solid #000;
+  margin: 20px auto 0;
+}
+body.quote_list #quote_list th{
+  padding: 2px 10px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+body.quote_list #quote_list td{
+  text-align:left;
+  padding: 2px 10px;
+}
+body.quote_list #quote_list .quote_id{
+  width:50px;
+  text-align:center;
+  border-left: 1px solid #000;
+}
+body.quote_list #quote_list .count{
+  width:100px;
+  text-align:center;
+}
+body.quote_list #quote_list .status{
+  width:120px;
+}
+body.quote_list #quote_list .total{
+  width:100px;
+  border-right: 1px solid #000;
+}

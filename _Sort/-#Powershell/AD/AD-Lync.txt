@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------------------
+Lync:
+get-aduser -filter {name -like 'Peter v*'} -searchbase "ou=tol,dc=tol,dc=local" | foreach {get-csuser $_.name } | select-Object displayname, samaccountname, identity, EnterpriseVoiceEnabled, RemoteCallControlTelephonyEnabled, AudioVideoDisabled,sipaddress, lineuri,lineserveruri | set-csuser -RemoteCallControlTelephonyEnabled $true
+---------------------------------------------------------------------------------------
+AD Users without a manager.
+get-aduser -filter {(name -like '*') -and (EmployeeID -notlike '*')} -searchbase "ou=tol,dc=tol,dc=local" -properties manager,Employeeid | where {-not ($_.manager -like '*local') } | sort| ft name
+---------------------------------------------------------------------------------------
+Telephone number: PI - (Work DDI, or When Empty: DeptPhone, or when Empty: LocationPhone, or when Empty: Organisation Phone)
+Home: PI - Work Telephone (Extension)
+IP Phone: PI - Work Telephone (Extension)
+Pager: NA
+Mobile: PI - Work Mobile
+Fax: PI - (DeptFax, Or when Empty: LocationFax, Or when empty: Organisation Fax)
+---------------------------------------------------------------------------------------

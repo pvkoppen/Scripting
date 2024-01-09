@@ -53,9 +53,9 @@
    
 [UserData]
    ComputerName=*
-   FullName="Pre-installed"
-   OrgName="Tuiora LTD"
-   ProductKey="WHRR9-66RM6-4H8T3-YHGG8-62QHM"
+   FullName="Staples Rodway"
+   OrgName="Staples Rodway"
+   ProductKey="HQWX9-P2GH7-Q9FYB-8G8P8-M9TBB"
 
 [Proxy]
    Proxy_Enable=0
@@ -139,7 +139,7 @@
    SimpTCP=1
 
 ;[SNMP]
-;   Community_Name=""
+;   Community_Name="STDC"
 ;   Accept_CommunityName=public:Read_Only
 ;   Accept_CommunityName=GrandpaS1mps0n:Read_Write
 ;   Traps=localhost

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/ -->
+<html lang="en"><!--<![endif]--><!--
+	generated in 0.328 seconds
+	54224 bytes batcached for 300 seconds
+--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Updating AD Telephone Numbers based on LineURI | Lync Freak</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="stylesheet" type="text/css" media="all" href="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/style.css">
+<link rel="pingback" href="http://blog.lyncfreak.com/xmlrpc.php">
+		<script src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/quant.js" async="" type="text/javascript"></script><script src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/remote-login.php" type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel="alternate" type="application/rss+xml" title="Lync Freak » Feed" href="http://blog.lyncfreak.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Lync Freak » Comments Feed" href="http://blog.lyncfreak.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Lync Freak » Updating AD Telephone Numbers based on LineURI Comments Feed" href="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel="stylesheet" id="all-css-0" href="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/saved_resource" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/saved_resource(1)"></script>
+<link rel="stylesheet" id="all-css-0" href="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/style(1).css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://lyncfreak.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://lyncfreak.wordpress.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Lync Scripting Part 2: Enterprise Voice Enable Users" href="http://blog.lyncfreak.com/2011/12/04/lync-scripting-part-2-enterprise-voice-enable-users/">
+<link rel="next" title="XP clients unable to connect to Exchange 2013 Outlook Anywhere" href="http://blog.lyncfreak.com/2013/10/07/xp-clients-unable-to-connect-to-exchange-2013-outlook-anywhere/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/Updating AD Telephone Numbers based on LineURI   Lync Freak.htm">
+<link rel="shortlink" href="http://wp.me/p1Trsf-19">
+<link rel="alternate" type="application/json+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=json&url=http%3A%2F%2Fblog.lyncfreak.com%2F2012%2F07%2F31%2Fupdating-ad-telephone-numbers-based-on-lineuri%2F&for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="http://public-api.wordpress.com/oembed/1.0/?format=xml&url=http%3A%2F%2Fblog.lyncfreak.com%2F2012%2F07%2F31%2Fupdating-ad-telephone-numbers-based-on-lineuri%2F&for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Updating AD Telephone Numbers based on LineURI">
+<meta property="og:url" content="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/">
+<meta property="og:description" content="I had a situation come up the other day during a Lync Voice installation.  The users LineURI in Lync was correct, but the Telephone number field in AD had been poorly maintained in both inconsisten...">
+<meta property="og:site_name" content="Lync Freak">
+<meta property="og:image" content="http://wordpress.com/i/blank.jpg?m=1383295312g">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:card" content="summary">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+<link rel="shortcut icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1311975824g" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1311975824g" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="http://s0.wp.com/i/webclip.png?m=1355642671g">
+<link rel="openid.server" href="http://lyncfreak.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="http://lyncfreak.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="http://blog.lyncfreak.com/osd.xml" title="Lync Freak">
+<link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com">
+<meta name="application-name" content="Lync Freak"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Just another Lync Blog"><meta name="msapplication-task" content="name=Subscribe;action-uri=http://blog.lyncfreak.com/feed/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="title" content="Updating AD Telephone Numbers based on LineURI | Lync Freak on WordPress.com">
+<meta name="description" content="I had a situation come up the other day during a Lync Voice installation.  The users LineURI in Lync was correct, but the Telephone number field in AD had been poorly maintained in both inconsistent formats and incorrect numbers.  I ended up writing a couple lines of PowerShell that they could use to update the…">
+
+<script type="text/javascript" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/google_service.js">
+</script>
+<script type="text/javascript">
+if ( typeof GS_googleAddAdSenseService == 'function' ) { GS_googleAddAdSenseService("ca-pub-3443918307802676"); }
+if ( typeof GS_googleEnableAllServices == 'function' ) { GS_googleEnableAllServices() };
+</script><script src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/google_ads.js"></script><script type="text/javascript">
+if ( typeof GA_googleAddSlot == 'function' ) { GA_googleAddSlot("ca-pub-3443918307802676", "wpcom_below_post"); }
+</script>
+<script type="text/javascript">
+if ( typeof GA_googleFetchAds == 'function' ) { GA_googleFetchAds(); }
+</script>
+
+<script type="text/javascript">
+var wpcom_ads = { bid: 27989915, pt: 'permalink', wa: 0, as: 0, domain: 'blog.lyncfreak.com', url: 'http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/', gid: '', };
+</script>
+<style id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'none']);
+	_gaq.push(['_setAllowLinker', true]);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/ga.js"></script>
+<script type="text/javascript" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/osd.js"></script><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/services.css"><script type="text/javascript" async="" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/saved_resource(2)"></script></head>
+
+<body class="single single-post postid-71 single-format-standard mp6 single-author highlander-enabled highlander-light" style="">
+<div id="wrapper" class="hfeed">
+	<div id="header">
+		<div id="masthead">
+			<div id="branding" role="banner">
+								<div id="site-title">
+					<span>
+						<a href="http://blog.lyncfreak.com/" title="Lync Freak" rel="home" sl-processed="1">Lync Freak</a>
+					</span>
+				</div>
+				<div id="site-description">Just another Lync Blog</div>
+
+										<a class="home-link" href="http://blog.lyncfreak.com/" title="Lync Freak" rel="home" sl-processed="1">
+							<img src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/cherryblossoms.jpg" width="940" height="198" alt="">
+						</a>
+								</div><!-- #branding -->
+
+			<div id="access" role="navigation">
+			  				<div class="skip-link screen-reader-text"><a href="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/#content" title="Skip to content" sl-processed="1">Skip to content</a></div>
+								<div class="menu"><ul><li><a href="http://blog.lyncfreak.com/" sl-processed="1">Home</a></li><li class="page_item page-item-47"><a href="http://blog.lyncfreak.com/about-2/" sl-processed="1">About</a></li></ul></div>
+			</div><!-- #access -->
+		</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">
+
+		<div id="container">
+			<div id="content" role="main">
+
+			
+
+				<div id="nav-above" class="navigation">
+					<div class="nav-previous"><a href="http://blog.lyncfreak.com/2011/12/04/lync-scripting-part-2-enterprise-voice-enable-users/" rel="prev" sl-processed="1"><span class="meta-nav">←</span> Lync Scripting Part 2: Enterprise Voice Enable&nbsp;Users</a></div>
+					<div class="nav-next"><a href="http://blog.lyncfreak.com/2013/10/07/xp-clients-unable-to-connect-to-exchange-2013-outlook-anywhere/" rel="next" sl-processed="1">XP clients unable to connect to Exchange 2013 Outlook&nbsp;Anywhere <span class="meta-nav">→</span></a></div>
+				</div><!-- #nav-above -->
+
+				<div id="post-71" class="post-71 post type-post status-publish format-standard hentry category-enterprise-voice category-lync category-scripts tag-ad tag-enterprise-voice tag-lync tag-phone-numbers tag-scripts">
+											<h2 class="entry-title"><a href="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/Updating AD Telephone Numbers based on LineURI   Lync Freak.htm" rel="bookmark" sl-processed="1">Updating AD Telephone Numbers based on&nbsp;LineURI</a></h2>					
+					<div class="entry-meta">
+													<span class="meta-prep meta-prep-author">Posted on</span> <a href="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/Updating AD Telephone Numbers based on LineURI   Lync Freak.htm" title="5:36 PM" rel="bookmark" sl-processed="1"><span class="entry-date">July 31, 2012</span></a>							<span class="by-author"><span class="sep">by</span> <span class="author vcard"><a class="url fn n" href="http://blog.lyncfreak.com/author/lyncfreak/" title="View all posts by Shawn Kirkpatrick" rel="author" sl-processed="1">Shawn Kirkpatrick</a></span> </span>											</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+						<p>I had a situation come up the other day during a Lync Voice installation.&nbsp; The users LineURI in Lync was correct, but the Telephone number field in AD had been poorly maintained in both inconsistent formats and incorrect numbers.&nbsp; I ended up writing a couple lines of PowerShell that they could use to update the Telephone field based on the LineURI, that they could then either run at intervals or put into a scheduled task.</p>
+<p><span id="more-71"></span></p>
+<p>First we need to import both the Active Directory Module and the Lync PowerShell Module.&nbsp; This way we can pull the LineURI from Lync and pass it to the AD PowerShell command.</p>
+<blockquote><p>Import-Module ActiveDirectory</p>
+<p>Import-Module Lync</p></blockquote>
+<p>Then we want to build the base command.&nbsp; A Get-CsUser command with the appropriate filter will ensure that only Enterprise Voice users are returned.&nbsp; The list of users is piped into a foreach loop to perform actions on each one individually.</p>
+<blockquote><p>Get-CsUser -filter {EnterpriseVoiceEnabled -eq $true} | foreach {</p></blockquote>
+<p>Now inside of the loop we will pull out the information we need into variables.&nbsp; This is mainly to avoid confusion of using the pipe input variable $_ later in the loop.&nbsp; We also place a semicolon<strong>&nbsp;;</strong>&nbsp;at the end of each line for clarity since it is inside the foreach loop.<strong>&nbsp;</strong></p>
+<blockquote><p>$id = $_.DistinguishedName&nbsp;;</p>
+<p>$LineURI = $_.LineURI;</p></blockquote>
+<p>Then comes the heart of what we are trying to do.&nbsp; This next command takes the LineURI property from Lync, and using the regex command -replace, reformats it into the standard North America number format of 1 (234) 567-8901.&nbsp; It is important to note here that single quotes <strong>‘ </strong>must be used, otherwise PowerShell will&nbsp;see the $1 and so on as global variables instead of regex replace variables.</p>
+<blockquote><p>$tel = $LineURI -replace ‘tel:(\+1)([2-9]\d{2})([2-9]\d{2})(\d{4});ext=\d{4}’,'$1 ($2) $3-$4;</p></blockquote>
+<p>Finally the Set-ADUser Active Directory Module command is used to place the newly formatted telephone number into AD for that user.&nbsp; The end of the loop is then reached.</p>
+<blockquote><p>Set-ADUser $id -OfficePhone $tel;</p>
+<p>}</p></blockquote>
+<p>This can be used as a one time clean up, or with a&nbsp; little more error checking and testing it can be run as part of a daily scheduled task.</p>
+
+<div class="wpa" style="position: relative; width:300px; text-align: center; padding: 0; margin: 10px auto; overflow: hidden; clear: both;">
+<a style="position: absolute; text-align: left; display: block; font: 9px/1 sans-serif; text-decoration: underline;" href="http://en.wordpress.com/about-these-ads/" rel="nofollow" sl-processed="1">About these ads</a>
+<script type="text/javascript">
+		var wpcom_adclk_hovering = false;
+		var wpcom_adclk_recorded = false;
+		var wpcom_adclk_theme = "Twenty Ten";
+		var wpcom_adclk_slot = "wpcom_below_post";
+		var wpcom_adclk_network = ( typeof wpcom_adclk_network === "undefined" ) ? "" : wpcom_adclk_network ;
+
+		jQuery(document).ready( function() {
+			function wpcom_adclk_hover_yes() { wpcom_adclk_hovering = true; }
+			function wpcom_adclk_hover_no() { wpcom_adclk_hovering = false; }
+			jQuery(".wpa").click(wpcom_adclk_click);
+			jQuery(".wpa iframe").hover( wpcom_adclk_hover_yes, wpcom_adclk_hover_no );
+			jQuery(".wpa object").hover( wpcom_adclk_hover_yes, wpcom_adclk_hover_no );
+
+			jQuery(window).blur( function() {
+				if ( wpcom_adclk_hovering ) { wpcom_adclk_click(); }
+			});
+		});
+
+		function wpcom_adclk_impression() {
+			var stat_gif = document.location.protocol + "//stats.wordpress.com/g.gif?v=wpcom-no-pv";
+			stat_gif += "&x_ads_imp_theme=" + wpcom_adclk_theme;
+			stat_gif += "&x_ads_imp_placement="+wpcom_adclk_slot;
+			stat_gif += "&x_ads_imp_network=" + wpcom_adclk_network;
+			stat_gif += "&x_ads_imp_theme_network="+wpcom_adclk_theme+"_"+wpcom_adclk_network;
+			new Image().src = stat_gif + "&baba=" + Math.random();
+			return true;
+		}
+
+		function wpcom_adclk_click() {
+			if (wpcom_adclk_recorded) { return true; } // no double counting
+			var stat_gif = document.location.protocol + "//stats.wordpress.com/g.gif?v=wpcom-no-pv";
+			stat_gif += "&x_ads_click_theme=" + wpcom_adclk_theme;
+			stat_gif += "&x_ads_click_placement="+wpcom_adclk_slot;
+			stat_gif += "&x_ads_click_network=" + wpcom_adclk_network;
+			stat_gif += "&x_ads_click_theme_network="+wpcom_adclk_theme+"_"+wpcom_adclk_network;
+
+			new Image().src = stat_gif + "&baba=" + Math.random();
+			wpcom_adclk_recorded = true;
+			var now=new Date(); var end=now.getTime()+250;
+			while(true){now=new Date();if(now.getTime()>end){break;}}
+			return true;
+		}
+	
+if ( typeof GA_googleAddAttr == 'function' ) {
+GA_googleAddAttr("AdOpt", "1");
+GA_googleAddAttr("Origin", "extsearch");
+GA_googleAddAttr("LangId", "1");
+GA_googleAddAttr("Domain", "blog.lyncfreak.com");
+GA_googleAddAttr("BlogId", "27989915");
+GA_googleAddAttr("PageURL", "http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/");
+GA_googleAddAttr("Autotag", "technology");
+GA_googleAddAttr("Tag", "enterprise-voice");
+GA_googleAddAttr("Tag", "lync");
+GA_googleAddAttr("Tag", "scripts");
+GA_googleAddAttr("Tag", "ad");
+GA_googleAddAttr("Tag", "enterprise-voice");
+GA_googleAddAttr("Tag", "lync");
+GA_googleAddAttr("Tag", "phone-numbers");
+GA_googleAddAttr("Tag", "scripts");
+GA_googleAddAttr("theme_bg", "ffffff");
+GA_googleAddAttr("theme_text", "333333");
+GA_googleAddAttr("theme_link", "0066cc");
+GA_googleAddAttr("theme_border", "cccccc");
+GA_googleAddAttr("theme_url", "ff4b33");
+GA_googleAddAdSensePageAttr("google_page_url", "http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/");
+GA_googleFillSlot("wpcom_below_post");
+}
+</script><script src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/ads"></script><div id="google_ads_div_wpcom_below_post_ad_wrapper">
+<div id="google_ads_div_wpcom_below_post_ad_container" style="display:inline-block;"><script type="text/javascript"><!-- 
+e9 = new Object(); 
+e9.size = "300x250";    e9.addBlockingCategories="Adult,Political,Flashing,dieting,Survey,Alcohol,Religious,Warning,Dating,Suggestive,Audio,full-engagement-video,Gambling,Tobacco,Pop-under,Full-page,overlay,Sweepstakes,Violence,Pop-up";
+//--></script> 
+<script type="text/javascript" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/tags.js"></script><script type="text/javascript" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/displayAd.js"></script><div align="center"><script type="text/javascript" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/j.ad"></script><script language="javascript">
+//Required variables.
+	var tf_clickTag  = 'http://a.tribalfusion.com/h.click/aDmQwvUAYTRqY4PsFmQWUw1HrwV6MM4sY30bvZaTAip26M9PmbK2WUn0tMLptio4PvP4cv8Vcr9WGFhRPFuUdQQWFrS3risUqbsTTrlQEvFSGQLQFZatPH39VcM22FyxmtZaMYTqu3WbESGbH4AJZcptEyTHQ80b7kYUUe1TANSFJHUUMPWHv1mrfmRbvN1HYHmv8Tws/http://free.marineaquariumfree.com/index.jhtml?spu=true&partner=0Dxdm012&sub_id=$SID$';
+	var tf_flashfile = 'http://cdnx.tribalfusion.com/media/3804686/marinAqua_300_sasha';
+	var tf_imagefile = 'http://cdnx.tribalfusion.com/media/3804686/MarineAqua.jpg';
+	var tf_width     = 300;
+	var tf_height    = 250;
+//Optional variables.
+	var tf_bgcolor = '#ffffff';
+	var tf_use_flash_wrapper = false;
+	var tf_wmode     = 'opaque';
+	var tf_salign     = 'lt';
+	var tf_allowScriptAccess     = 'sameDomain';
+	var tf_extraFlashVars     = '';
+//Autogenerated code. Please do not change.
+	var tf_id        = '1327898175';
+	var tf_loaderFlash     = 'http://cdnx.tribalfusion.com/media/common/flash/frame3';
+	var tf_button    = 'http://cdnx.tribalfusion.com/media/common/flash/button4.swf';
+	var tf_click     = 'http://a.tribalfusion.com/h.click/aDmQwvUAYTRqY4PsFmQWUw1HrwV6MM4sY30bvZaTAip26M9PmbK2WUn0tMLptio4PvP4cv8Vcr9WGFhRPFuUdQQWFrS3risUqbsTTrlQEvFSGQLQFZatPH39VcM22FyxmtZaMYTqu3WbESGbH4AJZcptEyTHQ80b7kYUUe1TANSFJHUUMPWHv1mrfmRbvN1HYHmv8Tws/';
+	var tf_state        = 'Auckland';
+	var tf_city        = 'Auckland';
+	var tf_zipcode        = '';
+	var tf_gender        = '';
+	var tf_location        = 'http://cdnx.tribalfusion.com/media/3804686/';
+</script>
+<script language="javascript" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/flashv15.js"></script><embed width="300" height="250" src="http://cdnx.tribalfusion.com/media/3804686/marinAqua_300_sasha.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" play="true" loop="true" scale="showall" wmode="opaque" devicefont="false" bgcolor="#ffffff" name="TFclick1327898175" menu="false" allowfullscreen="false" allowscriptaccess="sameDomain" salign="lt" flashvars="clickTag=http%3A//a.tribalfusion.com/h.click/aDmQwvUAYTRqY4PsFmQWUw1HrwV6MM4sY30bvZaTAip26M9PmbK2WUn0tMLptio4PvP4cv8Vcr9WGFhRPFuUdQQWFrS3risUqbsTTrlQEvFSGQLQFZatPH39VcM22FyxmtZaMYTqu3WbESGbH4AJZcptEyTHQ80b7kYUUe1TANSFJHUUMPWHv1mrfmRbvN1HYHmv8Tws/http%3A//free.marineaquariumfree.com/index.jhtml%3Fspu%3Dtrue%26partner%3D0Dxdm012%26sub_id%3D%24SID%24&amp;clickTAG=http%3A//a.tribalfusion.com/h.click/aDmQwvUAYTRqY4PsFmQWUw1HrwV6MM4sY30bvZaTAip26M9PmbK2WUn0tMLptio4PvP4cv8Vcr9WGFhRPFuUdQQWFrS3risUqbsTTrlQEvFSGQLQFZatPH39VcM22FyxmtZaMYTqu3WbESGbH4AJZcptEyTHQ80b7kYUUe1TANSFJHUUMPWHv1mrfmRbvN1HYHmv8Tws/http%3A//free.marineaquariumfree.com/index.jhtml%3Fspu%3Dtrue%26partner%3D0Dxdm012%26sub_id%3D%24SID%24&amp;clicktag=http%3A//a.tribalfusion.com/h.click/aDmQwvUAYTRqY4PsFmQWUw1HrwV6MM4sY30bvZaTAip26M9PmbK2WUn0tMLptio4PvP4cv8Vcr9WGFhRPFuUdQQWFrS3risUqbsTTrlQEvFSGQLQFZatPH39VcM22FyxmtZaMYTqu3WbESGbH4AJZcptEyTHQ80b7kYUUe1TANSFJHUUMPWHv1mrfmRbvN1HYHmv8Tws/http%3A//free.marineaquariumfree.com/index.jhtml%3Fspu%3Dtrue%26partner%3D0Dxdm012%26sub_id%3D%24SID%24&amp;tf_flash=http://cdnx.tribalfusion.com/media/3804686/marinAqua_300_sasha.swf&amp;tf_button=http://cdnx.tribalfusion.com/media/common/flash/button4.swf&amp;tf_state=Auckland&amp;tf_city=Auckland&amp;tf_zipcode=&amp;tf_gender=&amp;tf_location=http://cdnx.tribalfusion.com/media/3804686/&amp;tf_id=1327898175&amp;" type="application/x-shockwave-flash"> 
+<noscript>
+	&lt;A HREF='http://a.tribalfusion.com/h.click/aDmQwvUAYTRqY4PsFmQWUw1HrwV6MM4sY30bvZaTAip26M9PmbK2WUn0tMLptio4PvP4cv8Vcr9WGFhRPFuUdQQWFrS3risUqbsTTrlQEvFSGQLQFZatPH39VcM22FyxmtZaMYTqu3WbESGbH4AJZcptEyTHQ80b7kYUUe1TANSFJHUUMPWHv1mrfmRbvN1HYHmv8Tws/http://free.marineaquariumfree.com/index.jhtml?spu=true&amp;partner=0Dxdm012&amp;sub_id=$SID$' TARGET='_blank'&gt;
+	&lt;IMG SRC='http://cdnx.tribalfusion.com/media/3804686/MarineAqua.jpg' WIDTH=300 HEIGHT=250 ALT='Click Here!' BORDER=0&gt;&lt;/A&gt;
+</noscript>
+<iframe src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/adTag.htm" width="0" height="0" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe><iframe src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/adTag(1).htm" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" width="0" height="0"></iframe></div>
+
+
+
+</div>
+</div>
+
+</div>
+<style type="text/css">
+div.wpa>div { margin-top: 1em; } #google_ads_div_wpcom_below_post_adsafe_ad_container { display: block !important; }
+</style>
+<script type="text/javascript">
+jQuery( window ).load( function() {
+    if ( jQuery(".wpa script[src*='shareth.ru']").length > 0 || jQuery(".wpa iframe[src*='boomvideo.tv']").length > 0 || jQuery(".wpa iframe[src*='viewablemedia.net']").length > 0 || jQuery(".wpa .sharethrough-placement").length > 0 ) {
+        jQuery( '.wpa' ).css( 'width', '400px' );
+    }
+setTimeout(function(){if(typeof GS_googleAddAdSenseService !== 'function'){new Image().src=document.location.protocol+"//stats.wordpress.com/g.gif?v=wpcom-no-pv&x_noads=adblock&baba="+Math.random()}},100);
+} );
+</script>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/?share=twitter&nb=1" title="Click to share on Twitter" id="sharing-twitter-71" sl-processed="1"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/?share=facebook&nb=1" title="Share on Facebook" id="sharing-facebook-71" sl-processed="1"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-27989915-71-52cb798711853" data-src="//widgets.wp.com/likes/#blog_id=27989915&amp;post_id=71&amp;origin=lyncfreak.wordpress.com&amp;obj_id=27989915-71-52cb798711853" data-name="like-post-frame-27989915-71-52cb798711853"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-27989915-71-52cb798711853" height="55px" width="100%" frameborder="0" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/saved_resource.htm" style="display: inline;"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div></div>											</div><!-- .entry-content -->
+
+					<div id="entry-author-info">
+						<div id="author-avatar">
+							<img alt="" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/37ba2cc4f5bf612823f5dfb95fed0fb8" class="avatar avatar-60 grav-hashed grav-hijack" height="60" width="60" id="grav-37ba2cc4f5bf612823f5dfb95fed0fb8-0">						</div><!-- #author-avatar -->
+						<div id="author-description">
+							<h2>About Shawn Kirkpatrick</h2>
+							I am currently the lead Lync consultant for an IT Services company in the Midwest region of the United States. My primary role is to design and consult on full Lync Enterprise Voice implementations, Lync/CUCM integrations, as well as Lync and legacy PBX integrations via voice gateways. I also provide training for other Lync consultants, designers and implementation engineers on my team; as well as backup consulting on AD, Exchange and System Center products.
+ 
+I currently hold a number of Microsoft Certifications, including MCM:Lync Server 2010.							<div id="author-link">
+								<a href="http://blog.lyncfreak.com/author/lyncfreak/" rel="author" sl-processed="1">
+									View all posts by Shawn Kirkpatrick <span class="meta-nav">→</span>								</a>
+							</div><!-- #author-link	-->
+						</div><!-- #author-description -->
+					</div><!-- #entry-author-info -->
+
+					<div class="entry-utility">
+												This entry was posted in <a href="http://blog.lyncfreak.com/category/lync/enterprise-voice/" title="View all posts in Enterprise Voice" rel="category tag" sl-processed="1">Enterprise Voice</a>, <a href="http://blog.lyncfreak.com/category/lync/" title="View all posts in Lync" rel="category tag" sl-processed="1">Lync</a>, <a href="http://blog.lyncfreak.com/category/scripts/" title="View all posts in Scripts" rel="category tag" sl-processed="1">Scripts</a> and tagged <a href="http://blog.lyncfreak.com/tag/ad/" rel="tag" sl-processed="1">AD</a>, <a href="http://blog.lyncfreak.com/tag/enterprise-voice/" rel="tag" sl-processed="1">Enterprise Voice</a>, <a href="http://blog.lyncfreak.com/tag/lync/" rel="tag" sl-processed="1">Lync</a>, <a href="http://blog.lyncfreak.com/tag/phone-numbers/" rel="tag" sl-processed="1">Phone Numbers</a>, <a href="http://blog.lyncfreak.com/tag/scripts/" rel="tag" sl-processed="1">Scripts</a>. Bookmark the <a href="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/Updating AD Telephone Numbers based on LineURI   Lync Freak.htm" title="Permalink to Updating AD Telephone Numbers based on LineURI" rel="bookmark" sl-processed="1">permalink</a>.											</div><!-- .entry-utility -->
+				</div><!-- #post-## -->
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous"><a href="http://blog.lyncfreak.com/2011/12/04/lync-scripting-part-2-enterprise-voice-enable-users/" rel="prev" sl-processed="1"><span class="meta-nav">←</span> Lync Scripting Part 2: Enterprise Voice Enable&nbsp;Users</a></div>
+					<div class="nav-next"><a href="http://blog.lyncfreak.com/2013/10/07/xp-clients-unable-to-connect-to-exchange-2013-outlook-anywhere/" rel="next" sl-processed="1">XP clients unable to connect to Exchange 2013 Outlook&nbsp;Anywhere <span class="meta-nav">→</span></a></div>
+				</div><!-- #nav-below -->
+
+				
+			<div id="comments">
+
+
+
+								<div id="respond" class="comment-respond js">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/#respond" style="display:none;" sl-processed="1">Cancel reply</a></small></h3>
+									<form action="http://blog.lyncfreak.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																										
+
+
+												<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="7567d317f8"><input type="hidden" name="_wp_http_referer" value="/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/">
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea title="Enter your comment here..." placeholder="Enter your comment here..." style="height: 44px; resize: none; overflow-y: hidden; position: absolute; top: 0px; left: -9999px; width: 618px; line-height: 24px; text-decoration: none; letter-spacing: 0px;" tabindex="-1" aria-hidden="true"></textarea><textarea id="comment" name="comment" title="Enter your comment here..." placeholder="Enter your comment here..." style="height: 44px; resize: none; overflow-y: hidden;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/#comment-form-guest" id="postas-guest" title="Guest" sl-processed="1">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com" sl-processed="1">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter" sl-processed="1">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook" sl-processed="1">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/saved_resource(6).htm" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank" sl-processed="1">				<img src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/ad516503a11cd5ca435acc9bb6523536" alt="Gravatar" width="25" class="no-grav">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value=""></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/wplogo.png" alt="WordPress.com Logo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );" sl-processed="1">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/#" onclick="javascript:HighlanderComments.switchAccount();return false;" sl-processed="1">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/ad516503a11cd5ca435acc9bb6523536" alt="Twitter picture" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );" sl-processed="1">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/#" onclick="javascript:HighlanderComments.switchAccount();return false;" sl-processed="1">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/ad516503a11cd5ca435acc9bb6523536" alt="Facebook photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );" sl-processed="1">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/#" onclick="javascript:HighlanderComments.switchAccount();return false;" sl-processed="1">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/ad516503a11cd5ca435acc9bb6523536" alt="Google+ photo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="">
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'googleplus' );" sl-processed="1">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/#" onclick="javascript:HighlanderComments.switchAccount();return false;" sl-processed="1">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();" sl-processed="1">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+	
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of follow-up comments via email.</label></p></div>
+
+												<p class="form-submit" style="display: none;">
+							<input name="submit" type="submit" id="comment-submit" value="Post Comment">
+							<input type="hidden" name="comment_post_ID" value="71" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+						
+<input type="hidden" name="genseq" value="1389066631">
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="d519bc8868"></p><script type="text/javascript" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/form.js"></script>
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="1389066548675"></p>					</form>
+							</div><!-- #respond -->
+			<div style="clear: both"></div>
+</div><!-- #comments -->
+
+
+			</div><!-- #content -->
+		</div><!-- #container -->
+
+
+		<div id="primary" class="widget-area" role="complementary">
+						<ul class="xoxo">
+
+		<li id="recent-posts-3" class="widget-container widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://blog.lyncfreak.com/2013/10/07/xp-clients-unable-to-connect-to-exchange-2013-outlook-anywhere/" sl-processed="1">XP clients unable to connect to Exchange 2013 Outlook&nbsp;Anywhere</a>
+						</li>
+					<li>
+				<a href="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/Updating AD Telephone Numbers based on LineURI   Lync Freak.htm" sl-processed="1">Updating AD Telephone Numbers based on&nbsp;LineURI</a>
+						</li>
+					<li>
+				<a href="http://blog.lyncfreak.com/2011/12/04/lync-scripting-part-2-enterprise-voice-enable-users/" sl-processed="1">Lync Scripting Part 2: Enterprise Voice Enable&nbsp;Users</a>
+						</li>
+					<li>
+				<a href="http://blog.lyncfreak.com/2011/11/02/lync-web-scheduler-without-exchange/" sl-processed="1">Lync Web Scheduler without&nbsp;Exchange</a>
+						</li>
+					<li>
+				<a href="http://blog.lyncfreak.com/2011/10/19/lync-web-scheduler-only-works-with-assigned-pool-names/" sl-processed="1">Lync Web Scheduler only works with assigned pool&nbsp;names</a>
+						</li>
+				</ul>
+		</li><li id="linkcat-277" class="widget-container widget_links"><h3 class="widget-title">Misc</h3>
+	<ul class="xoxo blogroll">
+<li><a href="http://en.support.wordpress.com/" sl-processed="1">Get Support</a></li>
+
+	</ul>
+</li>
+<li id="linkcat-267894" class="widget-container widget_links"><h3 class="widget-title">Technet</h3>
+	<ul class="xoxo blogroll">
+<li><a href="http://blogs.technet.com/b/nexthop/" sl-processed="1">NextHop: Microsoft Lync Server Documentation Hub</a></li>
+
+	</ul>
+</li>
+<li id="meta-2" class="widget-container widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+			<li><a href="http://wordpress.com/signup/?ref=wplogin" sl-processed="1">Register</a></li>			<li><a href="http://lyncfreak.wordpress.com/wp-login.php" sl-processed="1">Log in</a></li>
+			<li><a href="http://blog.lyncfreak.com/feed/" title="Syndicate this site using RSS 2.0" sl-processed="1">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://blog.lyncfreak.com/comments/feed/" title="The latest comments to all posts in RSS" sl-processed="1">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.com/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform." sl-processed="1">WordPress.com</a></li>						</ul>
+</li><li id="categories-3" class="widget-container widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-5214904"><a href="http://blog.lyncfreak.com/category/lync/enterprise-voice/" title="View all posts filed under Enterprise Voice" sl-processed="1">Enterprise Voice</a> (1)
+</li>
+	<li class="cat-item cat-item-84949301"><a href="http://blog.lyncfreak.com/category/exchange-2013/" title="View all posts filed under Exchange 2013" sl-processed="1">Exchange 2013</a> (1)
+</li>
+	<li class="cat-item cat-item-7903103"><a href="http://blog.lyncfreak.com/category/lync/" title="View all posts filed under Lync" sl-processed="1">Lync</a> (6)
+</li>
+	<li class="cat-item cat-item-4493"><a href="http://blog.lyncfreak.com/category/scripts/" title="View all posts filed under Scripts" sl-processed="1">Scripts</a> (1)
+</li>
+		</ul>
+</li>			</ul>
+		</div><!-- #primary .widget-area -->
+
+	</div><!-- #main -->
+
+	<div id="footer" role="contentinfo">
+		<div id="colophon">
+
+
+
+			<div id="site-info">
+				<a href="http://blog.lyncfreak.com/" title="Lync Freak" rel="home" sl-processed="1">
+					Lync Freak				</a>
+			</div><!-- #site-info -->
+
+			<div id="site-generator">
+				<a href="http://theme.wordpress.com/themes/twentyten/" title="Learn more about this theme" sl-processed="1">The Twenty Ten Theme</a>.				<a href="http://wordpress.com/?ref=footer" rel="generator" sl-processed="1">Blog at WordPress.com</a>.
+			</div><!-- #site-generator -->
+
+		</div><!-- #colophon -->
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+
+<script type="text/javascript">
+var _qevents = _qevents || [], wpcomQuantcastData = {"qacct":"p-18-mFEk4J448M","labels":"language.en,type.wpcom,posttag.ad,posttag.enterprise-voice,posttag.lync,posttag.phone-numbers,posttag.scripts,as"};
+function wpcomQuantcastPixel( labels, options ) {
+	var i, defaults = wpcomQuantcastData, data = { event: 'ajax' };
+
+	labels  = labels  || '';
+	options = options || {};
+
+	if ( typeof labels != 'string' )
+		options = labels;
+
+	for ( i in defaults ) {
+		data[i] = defaults[i];
+	}
+
+	for ( i in options ) {
+		data[i] = options[i];
+	}
+
+	if ( data.labels ) {
+		data.labels += ',' + labels;
+	} else {
+		data.labels = labels;
+	}
+
+	_qevents.push( data );
+};
+(function() {var elem = document.createElement('script');elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem, scpt);  })();
+_qevents.push( wpcomQuantcastData );
+</script>
+<noscript>&lt;div style="display: none;"&gt;&lt;img src="//pixel.quantserve.com/pixel/p-18-mFEk4J448M.gif?labels=language.en%2Ctype.wpcom%2Cposttag.ad%2Cposttag.enterprise-voice%2Cposttag.lync%2Cposttag.phone-numbers%2Cposttag.scripts%2Cas" height="1" width="1" alt="" /&gt;&lt;/div&gt;</noscript>
+
+<script type="text/javascript" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/wpgroho.js"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-37ba2cc4f5bf612823f5dfb95fed0fb8">
+	</div>
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"http:\/\/lyncfreak.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"http:\/\/lyncfreak.wordpress.com\/wp-login.php?action=logout&_wpnonce=4886b25374","homeURL":"http:\/\/blog.lyncfreak.com\/","postID":"71","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/saved_resource(3)"></script>
+
+	<div id="bit" class="loggedout-follow-normal" style="bottom: -214px;">
+		<a class="bsub" href="javascript:void(0)" sl-processed="1"><span id="bsub-text">Follow</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Follow “Lync Freak”</label></h3>
+
+			<form action="https://subscribe.wordpress.com/" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Get every new post delivered to your Inbox.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+			
+			<p><input type="email" name="email" value="Enter your email address" onfocus="this.value=(this.value==&quot;Enter your email address&quot;) ? &quot;&quot; : this.value;" onblur="this.value=(this.value==&quot;&quot;) ? &quot;Enter email address&quot; : this.value;" id="loggedout-follow-field"></p>
+
+			<input type="hidden" name="action" value="subscribe">
+			<input type="hidden" name="blog_id" value="27989915">
+			<input type="hidden" name="source" value="http://blog.lyncfreak.com/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/">
+			<input type="hidden" name="sub-type" value="loggedout-follow">
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="c011b6cc0d"><input type="hidden" name="_wp_http_referer" value="/2012/07/31/updating-ad-telephone-numbers-based-on-lineuri/">
+			<p id="bsub-subscribe-button"><input type="submit" value="Sign me up"></p>
+			</form>
+					<div id="bsub-credit"><a href="http://wordpress.com/signup/?ref=lof" sl-processed="1">Powered by WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+	<script type="text/javascript">
+	var skimlinks_pub_id = "725X584219"
+	var skimlinks_sitename = "lyncfreak.wordpress.com";
+	</script>
+	<script type="text/javascript" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/725X1342.skimlinks.js"></script>
+	<script type="text/javascript">
+		WPCOM_sharing_counts = {"http:\/\/blog.lyncfreak.com\/2012\/07\/31\/updating-ad-telephone-numbers-based-on-lineuri\/":71}	</script>
+		<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<iframe src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/master.htm" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+		<div id="likes-other-gravatars"><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script type="text/javascript">
+		//<![CDATA[
+			var jetpackLikesWidgetQueue = [];
+			var jetpackLikesWidgetBatch = [];
+			var jetpackLikesMasterReady = false;
+
+			function JetpackLikespostMessage( message, target ) {
+				if ( "string" === typeof message ){
+					try{
+						message = JSON.parse( message );
+					}
+					catch(e) {
+						return;
+					}
+				}
+
+				pm( {
+					target: target,
+					type: 'likesMessage',
+					data: message,
+					origin: '*'
+				} );
+			}
+
+			function JetpackLikesBatchHandler() {
+				var requests = [];
+				jQuery( 'div.jetpack-likes-widget-unloaded' ).each( function( i ) {
+					if ( jetpackLikesWidgetBatch.indexOf( this.id ) > -1 )
+						return;
+					jetpackLikesWidgetBatch.push( this.id );
+					var regex = /like-(post|comment)-wrapper-(\d+)-(\d+)-(\w+)/;
+					var match = regex.exec( this.id );
+					if ( ! match || match.length != 5 )
+						return;
+
+					var info = {
+						blog_id: match[2],
+						width:   this.width
+					};
+
+					if ( 'post' == match[1] ) {
+						info.post_id = match[3];
+					} else if ( 'comment' == match[1] ) {
+						info.comment_id = match[3];
+					}
+
+					info.obj_id = match[4];
+
+					requests.push( info );
+				});
+
+				if ( requests.length > 0 ) {
+					JetpackLikespostMessage( { event: 'initialBatch', requests: requests }, window.frames['likes-master'] );
+				}
+			}
+
+			function JetpackLikesMessageListener( event ) {
+				if ( "undefined" == typeof event.event )
+					return;
+
+				if ( 'masterReady' == event.event ) {
+					jQuery( document ).ready( function() {
+						jetpackLikesMasterReady = true;
+
+						var stylesData = {
+								event: 'injectStyles'
+						};
+
+						if ( jQuery( 'iframe.admin-bar-likes-widget' ).length > 0 ) {
+							JetpackLikespostMessage( { event: 'adminBarEnabled' }, window.frames[ 'likes-master' ] );
+
+							stylesData.adminBarStyles = {
+								background: jQuery( '#wpadminbar .quicklinks li#wp-admin-bar-wpl-like > a' ).css( 'background' ),
+								isRtl: ( 'rtl' == jQuery( '#wpadminbar' ).css( 'direction' ) )
+							};
+						}
+
+						if ( !window.addEventListener )
+							jQuery( '#wp-admin-bar-admin-bar-likes-widget' ).hide();
+
+						stylesData.textStyles = {
+							color: jQuery( '.sd-text-color').css( 'color' ),
+							fontFamily: jQuery( '.sd-text-color' ).css( 'font-family' ),
+							fontSize: jQuery( '.sd-text-color' ).css( 'font-size' ),
+							direction: jQuery( '.sd-text-color' ).css( 'direction' ),
+							fontWeight: jQuery( '.sd-text-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-text-color' ).css( 'font-style' ),
+							textDecoration: jQuery( '.sd-text-color' ).css('text-decoration')
+						};
+
+						stylesData.linkStyles = {
+							color: jQuery( '.sd-link-color' ).css('color'),
+							fontFamily: jQuery( '.sd-link-color' ).css('font-family'),
+							fontSize: jQuery( '.sd-link-color' ).css('font-size'),
+							textDecoration: jQuery( '.sd-link-color' ).css('text-decoration'),
+							fontWeight: jQuery( '.sd-link-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-link-color' ).css( 'font-style' )
+						};
+
+						JetpackLikespostMessage( stylesData, window.frames[ 'likes-master' ] );
+
+						JetpackLikesBatchHandler();
+
+						jQuery( document ).on( 'inview', 'div.jetpack-likes-widget-unloaded', function() {
+							jetpackLikesWidgetQueue.push( this.id );
+						});
+					});
+				}
+
+				if ( 'showLikeWidget' == event.event ) {
+					jQuery( '#' + event.id + ' .post-likes-widget-placeholder'  ).fadeOut( 'fast', function() {
+						jQuery( '#' + event.id + ' .post-likes-widget' ).fadeIn( 'fast', function() {
+							JetpackLikespostMessage( { event: 'likeWidgetDisplayed', blog_id: event.blog_id, post_id: event.post_id, obj_id: event.obj_id }, window.frames['likes-master'] );
+						});
+					});
+				}
+
+				if ( 'showOtherGravatars' == event.event ) {
+					var $container = jQuery( '#likes-other-gravatars' );
+					var $list = $container.find( 'ul' );
+
+					$container.hide();
+					$list.html( '' );
+
+					$container.find( '.likes-text span' ).text( event.total );
+
+					jQuery.each( event.likers, function( i, liker ) {
+						$list.append( '<li class="' + liker.css_class + '"><a href="' + liker.profile_URL + '" class="wpl-liker" rel="nofollow" target="_parent"><img src="' + liker.avatar_URL + '" alt="' + liker.name + '" width="30" height="30" style="padding-right: 3px;" /></a></li>');
+					} );
+
+					var offset = jQuery( "[name='" + event.parent + "']" ).offset();
+
+					$container.css( 'left', offset.left + event.position.left - 10 + 'px' );
+					$container.css( 'top', offset.top + event.position.top - 33 + 'px' );
+
+					var rowLength = Math.floor( event.width / 37 );
+					var height = ( Math.ceil( event.likers.length / rowLength ) * 37 ) + 13;
+					if ( height > 204 ) {
+						height = 204;
+					}
+
+					$container.css( 'height', height + 'px' );
+					$container.css( 'width', rowLength * 37 - 7 + 'px' );
+
+					$list.css( 'width', rowLength * 37 + 'px' );
+
+					$container.fadeIn( 'slow' );
+
+					var scrollbarWidth = $list[0].offsetWidth - $list[0].clientWidth;
+					if ( scrollbarWidth > 0 ) {
+						$container.width( $container.width() + scrollbarWidth );
+						$list.width( $list.width() + scrollbarWidth );
+					}
+				}
+			}
+
+			pm.bind( 'likesMessage', function(e) { JetpackLikesMessageListener(e); } );
+
+			jQuery( document ).click( function( e ) {
+				var $container = jQuery( '#likes-other-gravatars' );
+
+				if ( $container.has( e.target ).length === 0 ) {
+					$container.fadeOut( 'slow' );
+				}
+			});
+
+			function JetpackLikesWidgetQueueHandler() {
+				var wrapperID;
+				if ( ! jetpackLikesMasterReady ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				if ( jetpackLikesWidgetQueue.length > 0 ) {
+					// We may have a widget that needs creating now
+					var found = false;
+					while( jetpackLikesWidgetQueue.length > 0 ) {
+						// Grab the first member of the queue that isn't already loading.
+						wrapperID = jetpackLikesWidgetQueue.splice( 0, 1 )[0];
+						if ( jQuery( '#' + wrapperID ).hasClass( 'jetpack-likes-widget-unloaded' ) ) {
+							found = true;
+							break;
+						}
+					}
+					if ( ! found ) {
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				} else if ( jQuery( 'div.jetpack-likes-widget-unloaded' ).length > 0 ) {
+					// Grab any unloaded widgets for a batch request
+					JetpackLikesBatchHandler();
+
+					// Get the next unloaded widget
+					wrapperID = jQuery( 'div.jetpack-likes-widget-unloaded' ).first()[0].id;
+					if ( ! wrapperID ) {
+						// Everything is currently loaded
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				}
+
+				if ( 'undefined' === typeof wrapperID ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				var $wrapper = jQuery( '#' + wrapperID );
+				$wrapper.find( 'iframe' ).remove();
+
+				if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='22px' width='68px' frameBorder='0' scrolling='no' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				} else {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='55px' width='100%' frameBorder='0' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				}
+
+				$wrapper.removeClass( 'jetpack-likes-widget-unloaded' ).addClass( 'jetpack-likes-widget-loading' );
+
+				$wrapper.find( 'iframe' ).load( function( e ) {
+					var $iframe = jQuery( e.target );
+					$wrapper.removeClass( 'jetpack-likes-widget-loading' ).addClass( 'jetpack-likes-widget-loaded' );
+
+					JetpackLikespostMessage( { event: 'loadLikeWidget', name: $iframe.attr( 'name' ), width: $iframe.width() }, window.frames[ 'likes-master' ] );
+
+					if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+						$wrapper.find( 'iframe' ).Jetpack( 'resizeable' );
+					}
+				});
+				setTimeout( JetpackLikesWidgetQueueHandler, 250 );
+			}
+			JetpackLikesWidgetQueueHandler();
+		//]]>
+		</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var recaptcha_options = {"lang":"en"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/saved_resource(4)"></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/w.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({'blog':'27989915','v':'wpcom','tz':'-6','user_id':'0','post':'71','subd':'lyncfreak'});
+ex_go({'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdWtpP0NsWnVkPS9sL0ViLndld3BiSGhIP3kvLj1XdFlhNHB3aUJiTXBXc0dXfk94S1hOLFJdb2VsZHFCR3Y2WVYvZXhmdj0rQnI/Mjc4aEIlUV0yTTIyOTRPP0pVdEt5RnRQNXBBV1FSPTlpZzhjW1YmdEQlWkk3M0tJZ2x2OG9oMFl8NjZLfmNXTlQyODNrTzhfNmJMXVZEUCt6eHZCfkpjVVd6TGhkd1lWVDJveV9SSWlSeXB2aG1NYnZnbEJPOWRaZVRWU2pXPWJ6ckF3NHdbR1QrVFctZW5LWG4/VkVJMHpqL0JHUFMrTj0tW3YmdVVHckk0fGJUb2ZZWno3cUM='});
+addLoadEvent(function(){linktracker_init('27989915',71);});
+	</script><img id="wpstats" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/g.gif" alt=""><img id="wpstats2" src="./Updating AD Telephone Numbers based on LineURI   Lync Freak_files/g(1).gif" alt="" style="display:none">
+<noscript>&lt;img src="http://stats.wordpress.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /&gt;</noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//stats.wordpress.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+<iframe id="google_osd_static_frame_6861096511129" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body></html>

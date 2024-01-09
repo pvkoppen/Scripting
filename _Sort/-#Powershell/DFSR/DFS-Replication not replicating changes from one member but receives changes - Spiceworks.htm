@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<!-- saved from url=(0121)http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes -->
+<html lang="en" class=" no-ie community js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script async="" type="text/javascript" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/gekko.js"></script><script src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/137556562.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+  var gekko = gekko || {};
+  gekko.cmd = gekko.cmd || [];
+  (function() {
+    var gekkoScript = document.createElement('script');
+    gekkoScript.async = true;
+    gekkoScript.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gekkoScript.src = (useSSL ? 'https:' : 'http:') + '//gekko.spiceworks.com/gekko.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gekkoScript, node);
+  })();
+
+//]]>
+</script><script async="true" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/sec.js"></script>
+
+<meta charset="utf-8">
+<meta name="author" content="Spiceworks, Inc.">
+<meta content="I&amp;#39;m a bit confused with this one. We have 3 servers in a DFS setup, all of which come from different IP ranges ac... | 4 replies | Microsoft Windows Server" name="description">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="revision" content="c38877df">
+  <meta property="og:title" content="DFS-Replication not replicating changes from one member but receives changes">
+  <meta property="og:site_name" content="The Spiceworks Community">
+  <meta property="og:image" content="//static.spiceworks.com/images/groups/0000/1302/icon_big.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@Spiceworks">
+  <meta name="twitter:title" content="DFS-Replication not replicating changes from one member but receives changes">
+  <meta name="twitter:description" content="
+	Hello,
+
+	
+	I&amp;#39;m a bit confused with this one. We have 3 servers in a DFS setup, all of which come from different IP ranges across an MPLS connection. Server ED and Serv...">
+  <meta name="twitter:image:src" content="//static.spiceworks.com/images/groups/0000/1302/icon_big.png"> 
+
+
+
+<link href="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/DFS-Replication not replicating changes from one member but receives changes - Spiceworks.htm" rel="canonical">
+
+<title>DFS-Replication not replicating changes from one member but receives changes - Spiceworks</title>
+
+<link rel="search" type="application/opensearchdescription+xml" href="http://community.spiceworks.com/opensearch_desc.xml" title="Spiceworks Community">
+
+<link href="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/sui-87d5bceaac2a09ef6a263a66b0b01781.css" media="all" rel="stylesheet" type="text/css">
+<link href="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/layout-482041fdcf1ab34bcf781ade97124ad6.css" media="all" rel="stylesheet" type="text/css">
+<link href="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/application-7f20ef25107b2794a66f8fefe210d40a.css" media="all" rel="stylesheet" type="text/css">
+<link href="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/extras-4ada2e5d2a42afcfd2362426833e6359.css" media="all" rel="stylesheet" type="text/css">
+<link href="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/join-14b619136c817d7db23c57ef5b555639.css" media="all" rel="stylesheet" type="text/css">
+
+
+
+  <link href="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/rich_text_editor-e98d97f6673ba0d52bc6baaa52c8d358.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/join-14b619136c817d7db23c57ef5b555639.css" media="screen" rel="stylesheet" type="text/css">
+
+<!--[if IE 8]>
+  <link href="//static.spiceworks.com/assets/ie8-31a3ec981c62b8eb24ef82965a321188.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link href="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/print-22a13a3661867cedbf4a1bcdcdd8fd29.css" media="print" rel="stylesheet" type="text/css">
+
+
+
+
+<script src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/prototype-027c2e87fed395824a21e06ae22d0a85.js" type="text/javascript"></script>
+<script src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/sui-application-86e8928b951229cb7856937ce605aa63.js" type="text/javascript"></script>
+<script src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/application-397cebe51a1de1f62829c047edac3d5e.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+Application.runMode = "production";
+CurrentUser.permissionClass = "guest";
+//]]>
+</script>
+
+<!--[if lte IE 6]>
+  <script type="text/javascript">
+//<![CDATA[
+Browser.IE6 = true;
+//]]>
+</script>
+<![endif]-->
+<!--[if IE 7]>
+  <script type="text/javascript">
+//<![CDATA[
+Browser.IE7 = true;
+//]]>
+</script>
+<![endif]-->
+<!--[if IE 8]>
+  <script type="text/javascript">
+//<![CDATA[
+Browser.IE8 = true;
+//]]>
+</script>
+<![endif]-->
+  <script type="text/javascript">
+//<![CDATA[
+User.post_ids_with_votes = [];
+Topic.needs_answer = false;
+Topic.best_answer = null;
+Topic.helpful_posts = [];
+Topic.needs_helpful = true;
+Topic.locked = false;
+UserPermissions.group_admin = false;
+UserPermissions.can_downspice = false;
+UserPermissions.author = false;
+UserPermissions.moderator = false;
+Topic.groupName = "Microsoft Windows Server";
+Topic.channelName = "Windows";
+Topic.searchEngineTerms = "[]";
+Topic.spice_count = 3;
+Topic.hotness = 4652.261418352212;
+//]]>
+</script>
+  
+
+
+
+<script type="text/javascript" async="true" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/client.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+  if (typeof(gekko) != 'undefined') {
+    gekko.cmd.push(function() {
+        gekko.defineSlot('gsidebar', 1500, 300, 'side', {
+            
+            
+            
+             'hide_feed': false,
+             'hide_sponsorship': true,
+             'hide_bottom_ad': false,
+             'sticky': true,
+            
+            content: [{
+         divId: 'slotContentu56ge',
+         optional: false,
+         relativePlacement: 'middle',
+         fixedDimension: false,
+         value: function(existing) { 
+            if (existing) {
+              return existing;
+            }
+            var elem = document.getElementById('sidebar_middle_content'),
+                p = elem.parentNode; 
+            if (p) {
+              p.removeChild(elem);
+            }
+
+            return elem.outerHTML;
+           }, 
+         height: 500,
+         width: 300,
+         sticky: false
+       },
+{
+         divId: 'slotContent8gy0d',
+         optional: false,
+         relativePlacement: 'bottom',
+         fixedDimension: false,
+         value: function(existing) { 
+            if (existing) {
+              return existing;
+            }
+            var elem = document.getElementById('join-login-box'),
+                p = elem.parentNode; 
+            if (p) {
+              p.removeChild(elem);
+            }
+
+            return elem.outerHTML;
+           }, 
+         height: 150,
+         width: 300,
+         sticky: function() { if (!jQuery.browser.msie) {
+  return {
+    selector: '#sidebar .join-login-box',
+    options: { fixedHeaderHeight: '395' }
+  }
+} else {
+  return {
+    selector: '#sidebar .join-login-box',
+    options: { fixedHeaderHeight: '125' }
+  }
+}
+ }
+       }]
+        });
+        gekko.defineSlot('exlba', 250, (screen.width) ? parseInt(screen.width, 10) : 1090, 'exlba', {
+            
+            
+            
+            
+        });
+        gekko.setTargeting('cg', '200' ).setTargeting('ct', '252067' );
+      gekko.enableServices();
+    });
+  }
+
+//]]>
+</script>
+  <link href="http://community.spiceworks.com/feed/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes.rss" rel="alternate" title="Replies to &quot;DFS-Replication not replicating changes from one member but receives changes&quot;" type="application/rss+xml">
+
+<link href="http://community.spiceworks.com/feed/global.rss" rel="alternate" title="Spiceworks Community Global Feed" type="application/rss+xml">
+
+
+  <script type="text/javascript" charset="utf-8">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-314222-5']);
+    if(!(typeof GoogleAnalytics == 'undefined')){
+        GoogleAnalytics.setGroup("windows:microsoft-windows-server");
+      
+      GoogleAnalytics.setUserType("guest");
+      
+      
+
+    }
+      _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+    })();
+
+  </script><script type="text/javascript" async="" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/ga.js"></script>
+
+<!-- BEGIN MARKETO -->
+      <script type="text/javascript">
+        jQuery.ajax({
+          //url: document.location.protocol + '//munchkin.marketo.net/munchkin.js',
+          url: '//static.spiceworks.com/assets/marketo-munchkin-50838b927e3df49e673d63e4de1a38a6.js', // see #36903
+          dataType: 'script',
+          cache: true,
+          success: function() {
+            Munchkin.init('989-NIR-811', {cookieAnon: false});
+
+          }
+        });
+      </script>
+<!-- END MARKETO -->
+
+
+  <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script><script type="text/javascript" async="" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/gpt.js"></script><script type="text/javascript" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/ckeditor_config-dd02ab6c53e528fd77f62a4f00c97a33.js"></script><script async="" type="text/javascript" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/pubads_impl_32.js"></script><img width="1" height="1" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/gekko-widebar.gif"><script type="text/javascript" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/skin.js"></script><link rel="stylesheet" type="text/css" href="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/editor.css"><script type="text/javascript" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/en.js"></script><script type="text/javascript" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/plugin.js"></script><script type="text/javascript" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/plugin(1).js"></script><script type="text/javascript" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/default.js"></script><script type="text/javascript" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/osd.js"></script><img width="1" height="1" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/gekko-widebar(1).gif"></head>
+  <body class=" base sui-spiceworks no_login sui-opt-in topic no_breadcrumbs super-header-layout no_ads ">
+    <img alt="Spiceworks, Inc. -- It&#39;s everything IT." class="swlogo brand inactive print" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/print_logo.png">
+<div class="ie_no_print">
+  <nav class="navbar sui-opt-in ie_no_print" style="left: 0px;">
+  <div class="navsections" style="background-position: -1736.5px -77px;">
+      <div class="nav-fill left"></div><section class="primary">
+        <a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="menu-link"><img alt="Menu" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/menu_high_res.png"></a>
+        <a href="http://community.spiceworks.com/" class="brand inactive screen" title="Home"><img alt="Spiceworks, Inc. -- It&#39;s everything IT." class="swlogo" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/masthead_logo.png"></a>
+        <div id="main-nav-items" class="nav-items">
+          <a href="http://community.spiceworks.com/" class="nav-item selected community" data-nav="community">Community</a>
+<a href="http://www.spiceworks.com/free-pc-network-inventory-software/" class="nav-item inventory_unauthenticated" data-nav="inventory_unauthenticated">Inventory</a>
+<a href="http://www.spiceworks.com/free-help-desk-software/" class="nav-item helpdesk_unauthenticated" data-nav="helpdesk_unauthenticated">Help Desk</a>
+<a href="http://community.spiceworks.com/quotes" class="nav-item purchasing_unauthenticated" data-nav="purchasing_unauthenticated">Purchasing</a>
+        </div>
+      </section>
+      <section class="secondary"><span class="searchbox">
+          <span class="search" data-nav="search">
+            <a href="javascript:void(0);" class="search inactive" data-nav="search"></a>
+            <div class="navmenu" data-nav="search">
+              <form accept-charset="UTF-8" action="http://community.spiceworks.com/search" class="nav-page-search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓" class="hidden"></div><div class="nav-search-content" id="nav_search"><input class="nav-search-field init text" data-event-enabled="false" id="nav_search_ipt" name="query" placeholder="" type="text"><button class="sui-bttn-primary sui-bttn " data-button-type="submit" data-primary="true" type="submit">Search</button></div></form>
+            </div>
+          </span>
+        </span><span class="notifiersbox">
+            <!--
+            --><a href="http://community.spiceworks.com/messages/inbox" class="messages inactive"><small count="0">0</small></a><!--
+            --><a href="http://community.spiceworks.com/quotes" class="cart inactive"><small count="0">0</small></a>
+          </span><span class="userbox">
+          <a class="user" href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="JoinAndLogin.showLogin(); GoogleAnalytics.trackEvent(&quot;Join&quot;, &quot;weeble login button&quot;);; return false;"><img alt="Avatar_user" class="avatar-small" height="24" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/avatar_user.png" style="height:24px; width:24px;" width="24"><img alt="Log In" class="mobile-weeble" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/weeble_high_res.png"><span class="usernav-link">Login</span></a>
+        </span>
+      </section><div class="nav-fill right"></div>
+  </div>
+  <!-- flyout containers -->
+  <div class="navmenu-container">
+    <div class="user-navmenu navmenu" style="display:none;">
+      <div class="navmenu-contents" data-nav="notifications">notifications</div>
+      <div class="navmenu-contents" data-nav="messages">messages</div>
+      <div class="navmenu-contents" data-nav="cart">cart</div>
+      <div class="navmenu-contents" data-nav="account">  <a href="http://community.spiceworks.com/logout">Logout</a>
+  <a href="http://community.spiceworks.com/profile/show/myprofile" class="my_profile">My Profile</a>
+  
+  <a href="http://community.spiceworks.com/profile/edit_profile" class="account_settings">Account Settings</a>
+  <a href="http://community.spiceworks.com/support" class="help">Help</a>
+</div>
+    </div>
+    <div class="main-navmenu navmenu" style="display:none;">
+      <div class="navmenu-contents" data-nav="community"><div class="navmenu-column">
+  <h4>Categories</h4>
+  <div class="subsubmenu-items">
+    <a href="http://community.spiceworks.com/networking">Networking</a>
+    <a href="http://community.spiceworks.com/windows">Windows</a>
+    <a href="http://community.spiceworks.com/virtualization">Virtualization</a>
+    <a href="http://community.spiceworks.com/security">Security</a>
+    <a href="http://community.spiceworks.com/hardware">Hardware</a>
+    <a href="http://community.spiceworks.com/storage">Storage &amp; Backup</a>
+    <a href="http://community.spiceworks.com/mobile">Mobile</a>  
+    <a href="http://community.spiceworks.com/cloud">Cloud</a>  
+    <a href="http://community.spiceworks.com/launch/see_all" class="sui-seemore">See All</a>
+  </div>
+</div>
+<div class="navmenu-column">
+  <h4>Resources</h4>
+  <div class="subsubmenu-items">
+    <a href="http://community.spiceworks.com/how_to">How-Tos</a>
+    <a href="http://community.spiceworks.com/scripts">Script Center</a>
+    <a href="http://community.spiceworks.com/product">Ratings &amp; Reviews</a>
+    <a href="http://community.spiceworks.com/resources">Whitepapers</a>
+    <a href="http://community.spiceworks.com/service-providers">IT Service Providers</a>
+    <a href="http://community.spiceworks.com/pages">Vendor Pages</a>  
+    <a href="http://community.spiceworks.com/tv">Videos</a>
+    <a href="http://community.spiceworks.com/careers/jobs">Jobs</a>
+  </div>
+</div>
+<div class="navmenu-column">
+  <h4>Spiceworks</h4>
+  <div class="subsubmenu-items">
+    <a href="http://community.spiceworks.com/support">Support</a>
+    <a href="http://community.spiceworks.com/university">University</a>
+    <a href="http://community.spiceworks.com/extensions">Extensions Center</a>
+    <a href="http://community.spiceworks.com/spicecorps">SpiceCorps</a>
+    <a href="http://community.spiceworks.com/forum/3">Blog</a>
+  </div>
+</div>
+<div class="navmenu-column navmenu_rich_content">
+  <h4>Join the Conversation</h4>
+  <p>Have questions? Ask the 2+ million IT pros &amp; vendor partners in Spiceworks. Want to share your tech know-how? Chime in with answers &amp; earn points.</p>
+  <p><a href="http://community.spiceworks.com/topic/new" class="sui-bttn" from="navbar">Ask a Question</a> 
+      &nbsp;
+     <a href="http://community.spiceworks.com/forum/unanswered" class="sui-bttn">Answer Questions</a>
+  </p>
+</div>
+</div><div class="navmenu-contents" data-nav="inventory_unauthenticated"><div class="navmenu-column navmenu-promo-column">
+  <iframe src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/inventory_summary.htm" class="navmenu-promo-contents" id="nav_promo_inventory_frame" frameborder="0" scrolling="no"></iframe>
+</div>
+<div class="navmenu-column">
+  <h4>Resources</h4>
+  <div class="subsubmenu-items">
+    <a href="http://community.spiceworks.com/how_to">How-Tos</a>
+    <a href="http://community.spiceworks.com/resources">Whitepapers</a>
+    <a href="http://community.spiceworks.com/scripts">Script Center</a>
+    <a href="http://community.spiceworks.com/extensions">Extensions Center</a>
+    <a href="http://community.spiceworks.com/support">Help</a>   
+  </div>
+</div>
+</div><div class="navmenu-contents" data-nav="helpdesk_unauthenticated"><div class="navmenu-column navmenu-promo-column">
+  <iframe src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/helpdesk_summary.htm" class="navmenu-promo-contents" id="nav_promo_helpdesk_frame" frameborder="0" scrolling="no"></iframe>
+</div>
+<div class="navmenu-column">
+  <h4>Resources</h4>  
+  <div class="subsubmenu-items">
+    <a href="http://community.spiceworks.com/best-practices/general">Best Practices</a>
+    <a href="http://community.spiceworks.com/plugin">Plugins</a>  
+    <a href="http://community.spiceworks.com/support">Help</a>   
+  </div>
+</div>
+</div><div class="navmenu-contents" data-nav="purchasing_unauthenticated"><div class="navmenu-column navmenu-main-column">
+  
+  <a href="http://community.spiceworks.com/product?source=CNLO#!"><h4>Find Products</h4></a>
+  <a href="http://community.spiceworks.com/purchasing/shopping_list"><h4>Compare Prices</h4></a>
+
+</div>
+<div class="navmenu-column">
+  <h4>Order History</h4>
+  <div class="subsubmenu-items">
+    
+      <a class="quotes hr" href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="SPICEWORKS.community.quotes.createRFQ(&#39;/api/quotes&#39;, &#39;quote list&#39;);; return false;" rel="nofollow" title="Start a new quote">Request a Quote</a>
+  </div>
+</div>
+<!-- <div class="navmenu-column navmenu-promo-column">
+  Spiceworks promo here
+</div> -->
+<div class="navmenu-column">
+  <h4>Resources</h4>
+  <div class="subsubmenu-items">
+    <a href="http://community.spiceworks.com/reviews">Ratings &amp; Reviews</a>
+    <a href="http://community.spiceworks.com/pages">Vendor Pages</a>
+    <a href="http://community.spiceworks.com/support">Help</a>
+  </div>
+</div>
+
+</div>
+    </div>
+  </div>
+</nav>
+</div>
+
+    <div id="container" class="sui-fluid-container">
+        <div id="exlba" class="exlba">
+          
+        <script>
+          if (typeof (gekko) != 'undefined') {
+            gekko.cmd.push(function() { gekko.display('exlba');});
+          }
+        </script>
+      
+        </div>
+      <div class="sui-body-shadow">
+        
+        <div class="sui-body">
+          
+          <section class="sui-page-contents">
+            <a id="page_top"></a>
+            <div id="content_wrapper">
+
+              <div id="messaging_container">
+                
+<div class="sui-opt-in">
+  <div class="message-panel message-panel-info" id="application_messaging" style="display: none;">
+    <script type="text/javascript">
+//<![CDATA[
+
+//]]>
+</script>
+<ol></ol></div></div>
+<script type="text/javascript">
+//<![CDATA[
+Messaging.initialize();
+//]]>
+</script>
+
+              </div><span style="clear:both;"></span>
+              
+
+
+                <div class="super-header">
+    <div class="title-bar">
+      <div class="breadcrumbs">
+        <a href="http://community.spiceworks.com/">Home</a> » <a href="http://community.spiceworks.com/windows">Windows</a>
+      </div>
+    </div>
+  </div>
+    
+
+
+                  <div class="hide_a_sidebar">
+                        
+  <div id="sidebar" class="sui-opt-in">
+    
+
+
+        
+    
+<div id="gsidebar">
+  <script>
+    gekko.cmd.push(function() { gekko.display('gsidebar'); });
+  </script>
+<div id="gsidebar-gsb-primary" style="width: 300px; height: 250px; margin-bottom: 5px;"><div id="google_ads_iframe_/8951970/primary_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8951970/primary_0" name="google_ads_iframe_/8951970/primary_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div><iframe id="google_ads_iframe_/8951970/primary_0__hidden__" name="google_ads_iframe_/8951970/primary_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;"></iframe></div><div id="slotContentu56ge-container"><div id="slotContentu56ge" style="width: 300px;"><div id="sidebar_middle_content">
+      <div id="side_bar_content" class="mtl">
+        <!-- For testing caching of this fragment: rendered at 2013-12-15 17:42:47 -0600, cached with key &quot;shared/sidebar_content/feed/IntheCommunity//true/6963389/6963326/6963283/6963212/6963156&quot; -->
+<div class="sui-section section-updated mbm" id="side_bar_feed" style="margin-top: 30px; margin-bottom: 30px; border-bottom: 1px solid #dfdfdf;">
+    <div class="sui-section-head" style="background: transparent; font-weight: normal; font-size: 14px; color: #515151;">
+      <span class="sui-section-head-more"></span>
+      <span class="sui-section-header" style="font-weight: normal; font-size: 14px; color: #515151;">IN THE COMMUNITY</span>
+    </div>
+    <div class="sui-section-body">
+              <div class="feed-item media bordered pvs" style="font-size: 12px; padding-top: 5px; padding-bottom: 10px;" data-for="group">
+                <div class="img small">
+                  <a href="http://community.spiceworks.com/windows/windows-7"><img alt="" class="avatar" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/sidebar_box_homepremium_upgrd_small.png" title=""></a>
+                </div>
+                <div class="bd no-word-break">
+                  <div class="sui-feed-head">
+                    <a href="http://community.spiceworks.com/topic/421154-best-practice-for-moving-a-windows-install-to-a-ssd-w-o-reinstalling">Best practice for moving a windows install to a SSD w/o reinstalling</a>
+                  </div>
+                  <div class="sui-meta">
+                     in <a href="http://community.spiceworks.com/windows/windows-7" data-popup-url="/group/353/popup">Windows 7</a>
+                  </div>
+                </div>
+              </div>
+              <div class="feed-item media bordered pvs" style="font-size: 12px; padding-top: 5px; padding-bottom: 10px;" data-for="group">
+                <div class="img small">
+                  <a href="http://community.spiceworks.com/email/microsoft-exchange"><img alt="" class="avatar" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/MSExchange_small.jpg" title=""></a>
+                </div>
+                <div class="bd no-word-break">
+                  <div class="sui-feed-head">
+                    <a href="http://community.spiceworks.com/topic/421152-moving-mailboxes-from-company-a-to-company-b">Moving mailboxes from company A to Company B</a>
+                  </div>
+                  <div class="sui-meta">
+                     in <a href="http://community.spiceworks.com/email/microsoft-exchange" data-popup-url="/group/23/popup">Microsoft Exchange</a>
+                  </div>
+                </div>
+              </div>
+              <div class="feed-item media bordered pvs" style="font-size: 12px; padding-top: 5px; padding-bottom: 10px;" data-for="group">
+                <div class="img small">
+                  <a href="http://community.spiceworks.com/hardware/printers-copiers-scanners-faxes"><img alt="" class="avatar" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/printer_small.png" title=""></a>
+                </div>
+                <div class="bd no-word-break">
+                  <div class="sui-feed-head">
+                    <a href="http://community.spiceworks.com/topic/421147-replace-printer-toners-monthly-quarterly-or-annually">Replace printer toners monthly, quarterly or annually?  </a>
+                  </div>
+                  <div class="sui-meta">
+                     in <a href="http://community.spiceworks.com/hardware/printers-copiers-scanners-faxes" data-popup-url="/group/371/popup">Printers, Copiers, Scanners &amp; Faxes</a>
+                  </div>
+                </div>
+              </div>
+              <div class="feed-item media bordered pvs" style="font-size: 12px; padding-top: 5px; padding-bottom: 10px;" data-for="group">
+                <div class="img small">
+                  <a href="http://community.spiceworks.com/storage/general"><img alt="" class="avatar" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/storage_small.jpg" title=""></a>
+                </div>
+                <div class="bd no-word-break">
+                  <div class="sui-feed-head">
+                    <a href="http://community.spiceworks.com/topic/421139-hp-prolaint-ml-370-g4-raid-configuration-down-and-os">HP Prolaint ML 370 G4 RAID configuration down and OS</a>
+                  </div>
+                  <div class="sui-meta">
+                     in <a href="http://community.spiceworks.com/storage/general" data-popup-url="/group/192/popup">Storage</a>
+                  </div>
+                </div>
+              </div>
+              <div class="feed-item media bordered pvs" style="font-size: 12px; padding-top: 5px; padding-bottom: 10px;" data-for="group">
+                <div class="img small">
+                  <a href="http://community.spiceworks.com/storage/general"><img alt="" class="avatar" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/storage_small.jpg" title=""></a>
+                </div>
+                <div class="bd no-word-break">
+                  <div class="sui-feed-head">
+                    <a href="http://community.spiceworks.com/topic/421135-one-raid-10-instead-of-two-raid1-desaster-recovery">One Raid 10 instead of two RAID1 - desaster recovery = ?</a>
+                  </div>
+                  <div class="sui-meta">
+                     in <a href="http://community.spiceworks.com/storage/general" data-popup-url="/group/192/popup">Storage</a>
+                  </div>
+                </div>
+              </div>
+    </div>
+  </div>
+
+<script type="text/javascript">
+//<![CDATA[
+new Ajax.Request('http://community.spiceworks.com/sidebar_content/feed', {asynchronous:true, evalScripts:true, method:'get'})
+//]]>
+</script>
+
+      </div>
+        <h3>In this Discussion</h3>
+
+      
+  <div class="whos_here">
+      <a href="http://community.spiceworks.com/profile/show/RSymmons" class="whos_here_user" rel="tooltip" title="" data-original-title="RSymmons"><img alt="Avatar_user" class="avatar-small" height="33" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/avatar_user.png" style="height:33px; width:33px;" width="33"></a>
+      <a href="http://community.spiceworks.com/profile/show/molan" class="whos_here_user" rel="tooltip" title="" data-original-title="molan"><img alt="Mini_magick.990.53271_medium" class="avatar-small" height="33" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/mini_magick.990.53271_medium.jpg" style="height:33px; width:33px;" width="33"></a>
+      <a href="http://community.spiceworks.com/profile/show/Sean%20Hetrick" class="whos_here_user" rel="tooltip" title="" data-original-title="Sean Hetrick"><img alt="Mini_magick.3294.28357_medium" class="avatar-small" height="33" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/mini_magick.3294.28357_medium.jpg" style="height:33px; width:33px;" width="33"></a>
+  </div>
+
+
+      <div id="tagged-subjects">
+  <script type="text/javascript">
+    taggingAssetId = 252067;
+    taggingAssetPath = 'topic';
+    taggingProducts = true;
+    taggedProducts = [];
+    taggingType = '';
+    narrow = false;
+    removeText = true;
+    inTable = false;
+  </script>
+
+
+</div>
+
+
+      
+      
+
+    </div></div></div><div id="gsidebar-gsb-secondary" style="width: 300px; height: 250px; margin-bottom: 5px; top: 125px; left: 851.5px; position: fixed; z-index: 999;"><div id="google_ads_iframe_/8951970/secondary_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8951970/secondary_0" name="google_ads_iframe_/8951970/secondary_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div></div><div id="gsidebar-gsb-secondary_placeholder" style="width: 300px; height: 250px; margin-bottom: 5px; visibility: hidden; display: block;">abcd</div><div id="slotContent8gy0d-container"><div id="slotContent8gy0d" style="width: 300px;"><div id="join-login-box" class="join-login-box" style="width: 270px; top: 395px; left: 851.5px; position: fixed; z-index: 999;">
+          <h3>Stay on top of everything IT</h3>
+          <label>Join 2 million IT pros on Spiceworks</label>
+          
+<div class="social-register">
+  <h4>Connect with</h4>
+
+  <a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="Login.showSocialSiteLogin(&#39;facebook&#39;, &#39;/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes&#39;); return false;">
+    <img alt="Login with Facebook" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/facebook_thin-b5f8bf0ef36f92c28a85d31f511ae1af.png"></a>
+  <a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="Login.showSocialSiteLogin(&#39;linkedin&#39;, &#39;/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes&#39;); return false;">
+    <img alt="Login with LinkedIn" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/linkedin_thin-ebcc040abc7d8495f302f589b7f8e001.png"></a>
+</div>
+
+          Or <a href="http://community.spiceworks.com/join" data-modal-name="join" data-target="#" data-toggle="modal">Sign up</a> with your email address
+        </div><div id="join-login-box_placeholder" class="join-login-box" style="width: 270px; height: 111px; visibility: hidden; display: block;">abcd</div></div></div></div>
+
+  </div>
+
+
+                  </div>
+
+                <div id="content">
+    <div id="primary" class="frameless">
+      
+
+
+
+<script type="text/javascript">
+jQuery(function(){
+
+  Topic.configureActions();
+  Topic.originalPostActions( jQuery('#entry-1571428') );
+  TopicAndPostSpice.initialize();
+
+  jQuery('.topic-header').SUIstickybox({ stickyClass: 'stickied', width:'1090px' });
+
+  Topic.scrollToPostInUrlHash();
+});
+</script>
+
+
+<div class="overlay" id="topic_overlay"></div>
+
+<script>
+  
+  jQuery(document).ready(function($) {
+  
+    $('#root_post_actions').on('ajax:success', 'a.vendor_page_share', function(event, data){
+  
+      $('#share_status_modal div.modal_content').html(data.message);
+  
+      $('#share_status_modal').modal('show');
+  
+    })
+  
+  });
+  
+</script>
+
+<div class="modal hide sui-opt-in" data-backdrop="true" data-isdraggable="false" data-keyboard="true" id="share_status_modal"><div class="modal-header"> <button class="close" data-dismiss="modal">×</button>  <h3>Topic Successfully Shared</h3></div><div class="modal-body">
+  <div class="modal_content">
+  </div>
+</div></div>
+<div id="spam_report_dialog"></div>
+
+
+
+
+
+<div id="topic" class="full_width guest-viewing">
+
+  <div class="message-panel message-panel-info join-promotion">
+    <h3><strong>Join the Community!</strong> Creating your account only takes a few minutes.</h3>
+  <a href="http://community.spiceworks.com/join" class="sui-bttn" data-modal-name="join" data-target="#" data-toggle="modal" onclick="GoogleAnalytics.trackEvent(&#39;Join&#39;,&#39;JoinNowButton&#39;,&#39;IT-Pro Clicked&#39;)">Join Now</a>
+</div>
+
+  
+
+  
+
+  <div id="root_post" class="generic">
+  
+<div class="media topic-header sui-opt-in stickied" style="top: 40px; left: 111.5px; position: fixed; z-index: 999;">
+    <a class="topic-suggestion" href="http://community.spiceworks.com/topic/280619-dfs-replication-not-working?source=recommended">
+      <i class="icon-right icon-light "></i>
+      <label>NEXT</label>
+      <span>DFS Replication not working</span>
+    </a>
+  <div class="sui-spicebttn-wrap"><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-bttn sui-spicebttn topic-spicebutton" data-dir="true" data-spiceable-class="Topic" data-spiceable-id="252067" data-spicecount="3" data-toggle="spicebttn" id="topic252067_spicebutton" onclick="return false;" rel="tooltip" title="" data-original-title="Spice this!"><i class="icon-spiceup  "></i><span class="sui-spicelink-count">3</span></a><div class="sui-spicebttn-menu"><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-spicebttn-down" data-dir="false" onclick="return false;">Spice Down</a></div></div>
+  <div class="img big prs">
+    <div class="avatar" data-popup-url="/profile/popup/RSymmons?redirect=/topic/post/1571428&amp;from_url=http%3A%2F%2Fcommunity.spiceworks.com%2Ftopic%2F252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes%3Fescape%3Dfalse&amp;from_meta=question" data-author-id="2427236" data-align-to-activator="right" style="z-index: 1;">
+
+  <div class="avatar-wrapper">
+    <a href="http://community.spiceworks.com/profile/show/RSymmons" class="post_avatar"><img alt="" class="avatar" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/avatar_user-59fe8f865205415d293d360c9fd7a319.png"></a>
+  </div>
+
+  <div class="rank_title align-center"><a href="http://community.spiceworks.com/points" title="Pimiento"><span class="pimiento">Pimiento</span></a></div>
+
+  <div class="admin-only"></div>
+</div>
+
+<div class="avatar_overlay" style="display:none">
+  <div class="content"></div>
+</div>
+
+  </div>
+  <div class="bd">
+    <h1><a href="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/DFS-Replication not replicating changes from one member but receives changes - Spiceworks.htm">DFS-Replication not replicating changes from one member but receives changes</a></h1>
+<div class="mts">
+
+  <span class="author"><a href="http://community.spiceworks.com/profile/show/RSymmons" class="user profile_link" data-author-id="2427236" data-popup-url="/profile/popup/RSymmons?redirect=/topic/post/1571428&amp;from_url=http%3A%2F%2Fcommunity.spiceworks.com%2Ftopic%2F252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes%3Fescape%3Dfalse&amp;from_meta=question">RSymmons</a></span>
+  <span class="date">
+    <span data-js-postprocess="timestamp" datetime="Sun, 19 Aug 2012 07:24:42 +0000" title="Aug 19, 2012 at  7:24 UTC">Aug 19, 2012 at 7:24 PM</span>
+  </span>
+  <span class="mlm mrm">|</span>
+  <span class="light-links forum-list">
+    <a href="http://community.spiceworks.com/windows/microsoft-windows-server">Microsoft Windows Server</a>
+  </span>
+</div>
+
+
+  </div>
+</div><div class="media topic-header sui-opt-in" id="undefined_placeholder" style="width: 715px; height: 88px; visibility: hidden; display: block;">abcd</div>
+
+<div class="original-post sui-opt-in " id="entry-1571428" data-user-name="RSymmons">
+    <div class="post_body light-links">
+      <p>
+	Hello,</p>
+<p>
+	<br>
+	I'm a bit confused with this one. We have 3 servers in a DFS setup, all of which come from different IP ranges across an MPLS connection. Server ED and Server COL seem to be working just fine and replicate changes between the two sites. Server WAT seems to pick up changes just fine, but doesn't send its own changes to the other two servers. I've noticed that WAT's data seems to be a bit out dated and the usual algorithm was used to determine which file was the more up-to-date and this has been running for roughly 4 days now. The last DFS event on WAT was confirmation of deleting the staging files which were above the high watermark.</p>
+<p>
+	<br>
+	Am I being a bit hasty and expecting DFS/R to work before finishing the algorithm stuff or should this be working as expected now considering the WAT server is picking up DFS changes on the other two servers? Any help would be greatly appreciated!</p>
+<p>
+	 </p>
+<p>
+	Thanks,</p>
+<p>
+	Rob</p>
+
+
+    </div>
+
+  <div class="root-post-footer">
+    
+
+    <div id="root_post_actions">
+      <div class="sui-bttn-toolbar "><div class="sui-bttn-group "><a class="sui-bttn" href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="TopicReply.showForm(1571428); return false;">Reply</a>
+<a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-bttn" onclick="JoinAndLogin.showJoin(); return false;">Subscribe</a></div>
+<div class="sui-bttn-group  sui-dropdown"><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-dropdown-toggle sui-bttn " data-toggle="dropdown" onclick="return false;">Share <span class="caret"></span></a><ul class="sui-dropdown-menu"><li><a href="http://twitter.com/intent/tweet?text=DFS-Replication%20not%20replicating%20changes%20from%20one%20member%20but%20receives%20changes%20http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes" target="blank"><span class="ptl"><img alt="Twitter" class="mrs" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/twitter-6678329c8d8483d6bad05b4d0da7064d.png" style="vertical-align:text-bottom;">Twitter</span></a></li>
+<li><a href="http://www.facebook.com/sharer.php?u=http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes&t=DFS-Replication%20not%20replicating%20changes%20from%20one%20member%20but%20receives%20changes" target="blank"><span><img alt="Facebook" class="mrs" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/facebook-c29e435b9304755f98c5f7189f93a262.png" style="vertical-align:text-bottom;">Facebook</span></a></li>
+<li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes&title=DFS-Replication%20not%20replicating%20changes%20from%20one%20member%20but%20receives%20changes" target="blank"><span><img alt="Linkedin" class="mrs" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/linkedin-93408fa641f2dcd657bbf7b551719e1c.png" style="vertical-align:text-bottom;">LinkedIn</span></a></li>
+<li><a href="http://www.reddit.com/submit?url=http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes&title=DFS-Replication%20not%20replicating%20changes%20from%20one%20member%20but%20receives%20changes" target="blank"><span><img alt="Reddit" class="mrs" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/reddit-0cf3530b386c836f38fc17036056481a.png" style="vertical-align:text-bottom;">Reddit</span></a></li>
+<li><a href="https://plus.google.com/share?url=http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes&title=DFS-Replication%20not%20replicating%20changes%20from%20one%20member%20but%20receives%20changes" target="blank"><span><img alt="Googleplus" class="mrs" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/googleplus-7818bd0bb7145ee495fcd652f9c92400.png" style="vertical-align:text-bottom;">Google+</span></a></li>
+<li><a href="mailto:?subject=Spiceworks%20Community:%20DFS-Replication%20not%20replicating%20changes%20from%20one%20member%20but%20receives%20changes&body=I%20wanted%20to%20share%20this%20page%20from%20the%20Spiceworks%20IT%20Community%20with%20you:%0D%0Ahttp://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes"><span class="pbl"><img alt="Email" class="mrs" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/email-fbc2b20f14ca32469e5b37c741bdbebe.png" style="vertical-align:text-bottom;">Email</span></a></li></ul></div>
+<div class="sui-bttn-group  sui-dropdown"><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-dropdown-toggle sui-bttn " data-toggle="dropdown" onclick="return false;"> <span class="caret"></span></a><ul class="sui-dropdown-menu"><li><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="Topic.showTopicActivity(252067); return false;">Topic Activity</a></li>
+<li><a href="http://community.spiceworks.com/topic/print/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes">Print</a></li>
+<li><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="Topic.showTranslate(252067); return false;">Translate</a></li></ul></div></div>
+    </div>
+
+    <div id="delete_1571428" class="post_delete_form" style="display: none;"></div>
+  </div>
+
+</div>
+
+</div>
+
+
+  <div class="shadow-line ">&nbsp;</div>
+
+  <div class="replies_wrap sui-opt-in">
+
+    
+
+    
+
+        <h2>4 Replies</h2>
+      
+
+
+
+      <div class="posts-wrapper">
+        <div id="entry-1571484" class="post  " data-permalink="/topic/post/1571484" data-id="1571484" data-user-name="Sean Hetrick">
+
+  <div class="avatar" data-popup-url="/profile/popup/Sean Hetrick?redirect=/topic/post/1571484&amp;from_url=http%3A%2F%2Fcommunity.spiceworks.com%2Ftopic%2F252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes%3Fescape%3Dfalse&amp;from_meta=post" data-author-id="1086611" data-align-to-activator="right">
+
+  <div class="avatar-wrapper">
+    <a href="http://community.spiceworks.com/profile/show/Sean%20Hetrick" class="post_avatar"><img alt="" class="avatar" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/mini_magick.3294.28357_big.jpg"></a>
+  </div>
+
+  <div class="rank_title align-center"><a href="http://community.spiceworks.com/points" title="Jalapeno"><span class="jalapeno">Jalapeno</span></a></div>
+
+  <div class="admin-only"></div>
+</div>
+
+<div class="avatar_overlay" style="display:none">
+  <div class="content"></div>
+</div>
+
+
+  <div class="post_content">
+
+      <div class="fright topic-answer">
+      </div>
+    <h5>
+      <span class="author"><a href="http://community.spiceworks.com/profile/show/Sean%20Hetrick" class="user profile_link" data-author-id="1086611" data-popup-url="/profile/popup/Sean Hetrick?redirect=/topic/post/1571484&amp;from_url=http%3A%2F%2Fcommunity.spiceworks.com%2Ftopic%2F252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes%3Fescape%3Dfalse&amp;from_meta=post">Sean Hetrick</a></span>
+      <span class="date"><a href="http://community.spiceworks.com/topic/post/1571484"><span class="baby-text" data-js-postprocess="timestamp" datetime="Sun, 19 Aug 2012 11:03:30 +0000" title="Permalink">Aug 19, 2012 at 11:03 PM</span></a></span>
+    </h5>
+    
+
+    <div class="post_body light-links">
+      <p>
+	I have a remote site with a very slow WAN link and have over the past few years have had a similar problem on-and-off.  When I use the DFS GUI tools to check the status of replication the results usually aren’t as helpful as I would like.  What seems to be a more reliable way to check replication status is by using the command-line tool, “dfsrdiag”.  I don’t know how you’re monitoring replication; maybe you’re using this already.</p>
+<p>
+	I tried a number of solutions I found on the Internet, even to the point of deleting the replication group, deleting the staging files, and then recreating the replication group, but nothing helped.  What I eventually found to be the only solution that worked consistently in my environment was to stop the replication service on the effected servers, wait 5-10 minutes, start the service on the problem server (in your case WAT), wait a few minutes, starting another server in the replication group, wait, and continue until the replication service was running on all the servers again.  I use dfsrdiag before and after to monitor the success of this process.  Imagine my surprise when such a simple solution solved my problem!</p>
+<p>
+	For my slow WAN link, and with the large files we typically work with, it took something like 20-30 minutes before the results from dfsrdiag changed, so I had to learn to be very patient.  Basically what I was looking for was the number of staged files to get smaller.  Interestingly after the first time I did this my problems stopped, and haven’t come back.  It took almost 2 days for the problem server to catch up, but I’ve been good ever since.</p>
+<p>
+	I’ve since written a PowerShell script that monitors all of my replication groups and gives me a red-light or green-light for each depending on their status.  If I get a red-light I troubleshoot further, if not I move on the next chore.  It has made my life much easier … just got to love PowerShell.</p>
+
+
+    </div>
+
+    <div class="actions post-actions light-links">
+      <div class="sui-spicebttn-wrap"><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-spicebttn sui-spicelink" data-dir="true" data-spiceable-class="Post" data-spiceable-id="1571484" data-spicecount="0" data-toggle="spicebttn" id="post1571484_spicelink" onclick="return false;" rel="tooltip" title="" data-original-title="Spice this!"><i class="icon-spiceup_small  " style="display: none;"></i><span class="sui-spicelink-text">Spice</span></a><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-spicelink-count" onclick="return false" rel="tooltip" title="See who spiced this" data-original-title="See who spiced this"></a></div>
+      <span class="vote_action_divider"><strong>·</strong></span>
+      <span class="reply"><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="TopicReply.showForm(1571484)">Reply</a></span>
+      <span class="manage-actions-holder">
+        <div class="sui-dropdown"></div>
+      </span>
+      <span class="report">
+        <strong>·</strong>
+        <a href="http://community.spiceworks.com/spam_reports/new?item_id=1571484&item_type=Post" data-method="post" data-remote="true" rel="tooltip nofollow" title="" data-original-title="Report Post"><i class="icon-topicflag  "></i></a>
+      </span>
+      <span class="admin-only"></span>
+    </div>
+
+    <div id="delete_1571484" class="post_delete_form" style="display: none;"></div>
+
+  </div>
+
+</div>
+<div id="entry-1571485" class="post  " data-permalink="/topic/post/1571485" data-id="1571485" data-user-name="molan">
+
+  <div class="avatar" data-popup-url="/profile/popup/molan?redirect=/topic/post/1571485&amp;from_url=http%3A%2F%2Fcommunity.spiceworks.com%2Ftopic%2F252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes%3Fescape%3Dfalse&amp;from_meta=post" data-author-id="1530589" data-align-to-activator="right">
+
+  <div class="avatar-wrapper">
+    <a href="http://community.spiceworks.com/profile/show/molan" class="post_avatar"><img alt="" class="avatar" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/mini_magick.990.53271_big.jpg"></a>
+  </div>
+
+  <div class="rank_title align-center"><a href="http://community.spiceworks.com/points" title="Habanero"><span class="habanero">Habanero</span></a></div>
+
+  <div class="admin-only"></div>
+</div>
+
+<div class="avatar_overlay" style="display:none">
+  <div class="content"></div>
+</div>
+
+
+  <div class="post_content">
+
+      <div class="fright topic-answer">
+      </div>
+    <h5>
+      <span class="author"><a href="http://community.spiceworks.com/profile/show/molan" class="superuser profile_link" data-author-id="1530589" data-popup-url="/profile/popup/molan?redirect=/topic/post/1571485&amp;from_url=http%3A%2F%2Fcommunity.spiceworks.com%2Ftopic%2F252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes%3Fescape%3Dfalse&amp;from_meta=post">molan</a></span>
+      <span class="date"><a href="http://community.spiceworks.com/topic/post/1571485"><span class="baby-text" data-js-postprocess="timestamp" datetime="Sun, 19 Aug 2012 11:04:00 +0000" title="Permalink">Aug 19, 2012 at 11:04 PM</span></a></span>
+    </h5>
+    
+
+    <div class="post_body light-links">
+      <p>
+	go into the DFS management console and  make sure the links are enabled for that server in question. it is possible the link has been disabled in one direction allowing it to receive updates but not send them.</p>
+<p>
+	also check the event logs on that machine for DFS related errors</p>
+
+
+    </div>
+
+    <div class="actions post-actions light-links">
+      <div class="sui-spicebttn-wrap"><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-spicebttn sui-spicelink" data-dir="true" data-spiceable-class="Post" data-spiceable-id="1571485" data-spicecount="1" data-toggle="spicebttn" id="post1571485_spicelink" onclick="return false;" rel="tooltip" title="" data-original-title="Spice this!"><i class="icon-spiceup_small  "></i><span class="sui-spicelink-text">Spice</span></a><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-spicelink-count" onclick="return false" rel="tooltip" title="See who spiced this" data-original-title="See who spiced this">(1)</a></div>
+      <span class="vote_action_divider"><strong>·</strong></span>
+      <span class="reply"><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="TopicReply.showForm(1571485)">Reply</a></span>
+      <span class="manage-actions-holder">
+        <div class="sui-dropdown"></div>
+      </span>
+      <span class="report">
+        <strong>·</strong>
+        <a href="http://community.spiceworks.com/spam_reports/new?item_id=1571485&item_type=Post" data-method="post" data-remote="true" rel="tooltip nofollow" title="" data-original-title="Report Post"><i class="icon-topicflag  "></i></a>
+      </span>
+      <span class="admin-only"></span>
+    </div>
+
+    <div id="delete_1571485" class="post_delete_form" style="display: none;"></div>
+
+  </div>
+
+</div>
+<div id="entry-1571499" class="post  " data-permalink="/topic/post/1571499" data-id="1571499" data-user-name="RSymmons">
+
+  <div class="avatar" data-popup-url="/profile/popup/RSymmons?redirect=/topic/post/1571499&amp;from_url=http%3A%2F%2Fcommunity.spiceworks.com%2Ftopic%2F252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes%3Fescape%3Dfalse&amp;from_meta=post" data-author-id="2427236" data-align-to-activator="right">
+
+  <div class="avatar-wrapper">
+    <a href="http://community.spiceworks.com/profile/show/RSymmons" class="post_avatar"><img alt="" class="avatar" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/avatar_user-59fe8f865205415d293d360c9fd7a319.png"></a>
+  </div>
+
+  <div class="rank_title align-center"><a href="http://community.spiceworks.com/points" title="Pimiento"><span class="pimiento">Pimiento</span></a></div>
+
+  <div class="admin-only"></div>
+</div>
+
+<div class="avatar_overlay" style="display:none">
+  <div class="content"></div>
+</div>
+
+
+  <div class="post_content">
+
+      <div class="fright topic-answer">
+      </div>
+    <h5>
+      <span class="author"><a href="http://community.spiceworks.com/profile/show/RSymmons" class="user profile_link" data-author-id="2427236" data-popup-url="/profile/popup/RSymmons?redirect=/topic/post/1571499&amp;from_url=http%3A%2F%2Fcommunity.spiceworks.com%2Ftopic%2F252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes%3Fescape%3Dfalse&amp;from_meta=post">RSymmons</a></span>
+      <span class="date"><a href="http://community.spiceworks.com/topic/post/1571499"><span class="baby-text" data-js-postprocess="timestamp" datetime="Sun, 19 Aug 2012 11:48:50 +0000" title="Permalink">Aug 19, 2012 at 11:48 PM</span></a></span>
+    </h5>
+    
+
+    <div class="post_body light-links">
+      <p>
+	Thanks for the response guys.</p>
+<p>
+	I seemed to have fixed it and DFSR is working in both directions. I did a few things but I reckon it was due to the firewall service being enabled on the server (even though it was turned off under control panel) and adding an exception for RPC (port 135) as per <a href="http://support.microsoft.com/kb/832017">http://support.microsoft.com/kb/832017</a>. It's amazing just how quickly it started working again. Sean, your powershell script sounds quite interesting! Any chance of nabbing it?</p>
+<p>
+	Have either of you had experience with using the Microsoft DFS replication monitoring pack for SCOM I hear it's pretty decent?</p>
+<p>
+	 </p>
+<p>
+	Thanks again,</p>
+<p>
+	Rob</p>
+
+
+    </div>
+
+    <div class="actions post-actions light-links">
+      <div class="sui-spicebttn-wrap"><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-spicebttn sui-spicelink" data-dir="true" data-spiceable-class="Post" data-spiceable-id="1571499" data-spicecount="0" data-toggle="spicebttn" id="post1571499_spicelink" onclick="return false;" rel="tooltip" title="" data-original-title="Spice this!"><i class="icon-spiceup_small  " style="display: none;"></i><span class="sui-spicelink-text">Spice</span></a><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-spicelink-count" onclick="return false" rel="tooltip" title="See who spiced this" data-original-title="See who spiced this"></a></div>
+      <span class="vote_action_divider"><strong>·</strong></span>
+      <span class="reply"><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="TopicReply.showForm(1571499)">Reply</a></span>
+      <span class="manage-actions-holder">
+        <div class="sui-dropdown"></div>
+      </span>
+      <span class="report">
+        <strong>·</strong>
+        <a href="http://community.spiceworks.com/spam_reports/new?item_id=1571499&item_type=Post" data-method="post" data-remote="true" rel="tooltip nofollow" title="" data-original-title="Report Post"><i class="icon-topicflag  "></i></a>
+      </span>
+      <span class="admin-only"></span>
+    </div>
+
+    <div id="delete_1571499" class="post_delete_form" style="display: none;"></div>
+
+  </div>
+
+</div>
+<div id="entry-1572551" class="post  " data-permalink="/topic/post/1572551" data-id="1572551" data-user-name="Sean Hetrick">
+
+  <div class="avatar" data-popup-url="/profile/popup/Sean Hetrick?redirect=/topic/post/1572551&amp;from_url=http%3A%2F%2Fcommunity.spiceworks.com%2Ftopic%2F252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes%3Fescape%3Dfalse%26page%3D1&amp;from_meta=post" data-author-id="1086611" data-align-to-activator="right">
+
+  <div class="avatar-wrapper">
+    <a href="http://community.spiceworks.com/profile/show/Sean%20Hetrick" class="post_avatar"><img alt="" class="avatar" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/mini_magick.3294.28357_big.jpg"></a>
+  </div>
+
+  <div class="rank_title align-center"><a href="http://community.spiceworks.com/points" title="Jalapeno"><span class="jalapeno">Jalapeno</span></a></div>
+
+  <div class="admin-only"></div>
+</div>
+
+<div class="avatar_overlay" style="display:none">
+  <div class="content"></div>
+</div>
+
+
+  <div class="post_content">
+
+      <div class="fright topic-answer">
+      </div>
+    <h5>
+      <span class="author"><a href="http://community.spiceworks.com/profile/show/Sean%20Hetrick" class="user profile_link" data-author-id="1086611" data-popup-url="/profile/popup/Sean Hetrick?redirect=/topic/post/1572551&amp;from_url=http%3A%2F%2Fcommunity.spiceworks.com%2Ftopic%2F252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes%3Fescape%3Dfalse%26page%3D1&amp;from_meta=post">Sean Hetrick</a></span>
+      <span class="date"><a href="http://community.spiceworks.com/topic/post/1572551"><span class="baby-text" data-js-postprocess="timestamp" datetime="Mon, 20 Aug 2012 09:42:12 +0000" title="Permalink">Aug 20, 2012 at 9:42 PM</span></a></span>
+    </h5>
+    
+
+    <div class="post_body light-links">
+      <p>
+	Here's the (sanitized) PowerShell script I use.  I stripped out most of our replication groups because it's just the same thing over and over with different parameters, but I think the two I left should give you the idea.</p>
+
+<div class="post_attachment mtm mbm post_attachment_generic" id="post_attachment_108251">
+  <div class="thin well generic-attachment mbm">
+  <div class="remove-actions generic-remove fright no-print-view" style="display: none">
+      <a href="http://community.spiceworks.com/post_attachments/108251" class="icon-btn remove" data-confirm="Are you sure you want to permanently remove this attachment?" data-method="delete" rel="nofollow"></a>
+  </div>
+
+    <a href="http://community.spiceworks.com/attachments/post/0010/8251/DFSReplicationCheck.ps1" class="post_attachment_icon"><img alt="DFSReplicationCheck.ps1" class="post_attachment_thumbnail" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/attachment-d564240a997f74f87f7f01723fb4a6c9.png"></a>
+
+  <span class="filename">
+    <a href="http://community.spiceworks.com/attachments/post/0010/8251/DFSReplicationCheck.ps1">DFSReplicationCheck.ps1</a> <span class="filesize">(3.12 KB)</span>
+  </span>
+</div>
+
+</div>
+
+
+    </div>
+
+    <div class="actions post-actions light-links">
+      <div class="sui-spicebttn-wrap"><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-spicebttn sui-spicelink" data-dir="true" data-spiceable-class="Post" data-spiceable-id="1572551" data-spicecount="0" data-toggle="spicebttn" id="post1572551_spicelink" onclick="return false;" rel="tooltip" title="" data-original-title="Spice this!"><i class="icon-spiceup_small  " style="display: none;"></i><span class="sui-spicelink-text">Spice</span></a><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-spicelink-count" onclick="return false" rel="tooltip" title="See who spiced this" data-original-title="See who spiced this"></a></div>
+      <span class="vote_action_divider"><strong>·</strong></span>
+      <span class="reply"><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="TopicReply.showForm(1572551)">Reply</a></span>
+      <span class="manage-actions-holder">
+        <div class="sui-dropdown"></div>
+      </span>
+      <span class="report">
+        <strong>·</strong>
+        <a href="http://community.spiceworks.com/spam_reports/new?item_id=1572551&item_type=Post" data-method="post" data-remote="true" rel="tooltip nofollow" title="" data-original-title="Report Post"><i class="icon-topicflag  "></i></a>
+      </span>
+      <span class="admin-only"></span>
+    </div>
+
+    <div id="delete_1572551" class="post_delete_form" style="display: none;"></div>
+
+  </div>
+
+</div>
+
+      </div>
+      
+
+
+
+
+    <div class="posts-bottom-bumper clearfix-both"></div>
+
+    
+
+        
+<div class="section_wrap" id="postform">
+
+    <div class="sub-call-to-action mbm">
+      <p>This discussion has been inactive for over a year.</p>
+<p>You may get a better answer to your question by starting a <a href="http://community.spiceworks.com/topic/new?forum_id=210">new discussion</a>.</p>
+    </div>
+
+  <form accept-charset="UTF-8" action="http://community.spiceworks.com/posts" class="post_form" enctype="multipart/form-data" id="new_post" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓" class="hidden"></div>
+  <input id="post_parent_id" name="post[parent_id]" type="hidden" value="1571428" class="hidden">
+  <input id="post_topic_id" name="post[topic_id]" type="hidden" value="252067" class="hidden">
+  <input id="tags" name="tags" type="hidden" class="hidden">
+  
+  
+
+
+
+
+  <div class="post_body">
+    <p class="message">
+      <span class="post_text_wrapper guest">
+        <textarea class="text" cols="40" id="post_text" name="post[text]" rows="20" wrap="virtual" style="visibility: hidden; display: none;"></textarea><span id="cke_post_text" class="cke_skin_spiceworks cke_1 cke_editor_post_text" dir="ltr" title="" lang="en" tabindex="0" role="application" aria-labelledby="cke_post_text_arialbl"><span id="cke_post_text_arialbl" class="cke_voice_label">Rich Text Editor</span><span class="cke_browser_webkit" role="presentation"><span class="cke_wrapper cke_ltr" role="presentation"><table class="cke_editor" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr role="presentation"><td id="cke_top_post_text" class="cke_top" role="presentation"><div class="cke_toolbox" role="group" aria-labelledby="cke_4" onmousedown="return false;"><span id="cke_4" class="cke_voice_label">Editor toolbars</span><span id="cke_5" class="cke_toolbar" role="toolbar"><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><span class="cke_button"><a id="cke_6" class="cke_off cke_button_bold" "="" href="javascript:void('Bold')" title="Bold" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_6_label" onkeydown="return CKEDITOR.tools.callFunction(1, event);" onfocus="return CKEDITOR.tools.callFunction(2, event);" onclick="CKEDITOR.tools.callFunction(3, this); return false;"><span class="cke_icon">&nbsp;</span><span id="cke_6_label" class="cke_label">Bold</span></a></span><span class="cke_button"><a id="cke_7" class="cke_off cke_button_italic" "="" href="javascript:void('Italic')" title="Italic" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_7_label" onkeydown="return CKEDITOR.tools.callFunction(4, event);" onfocus="return CKEDITOR.tools.callFunction(5, event);" onclick="CKEDITOR.tools.callFunction(6, this); return false;"><span class="cke_icon">&nbsp;</span><span id="cke_7_label" class="cke_label">Italic</span></a></span><span class="cke_separator" role="separator"></span><span class="cke_button"><a id="cke_8" class="cke_off cke_button_numberedlist" "="" href="javascript:void('Insert/Remove Numbered List')" title="Insert/Remove Numbered List" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_8_label" onkeydown="return CKEDITOR.tools.callFunction(7, event);" onfocus="return CKEDITOR.tools.callFunction(8, event);" onclick="CKEDITOR.tools.callFunction(9, this); return false;"><span class="cke_icon">&nbsp;</span><span id="cke_8_label" class="cke_label">Insert/Remove Numbered List</span></a></span><span class="cke_button"><a id="cke_9" class="cke_off cke_button_bulletedlist" "="" href="javascript:void('Insert/Remove Bulleted List')" title="Insert/Remove Bulleted List" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_9_label" onkeydown="return CKEDITOR.tools.callFunction(10, event);" onfocus="return CKEDITOR.tools.callFunction(11, event);" onclick="CKEDITOR.tools.callFunction(12, this); return false;"><span class="cke_icon">&nbsp;</span><span id="cke_9_label" class="cke_label">Insert/Remove Bulleted List</span></a></span><span class="cke_separator" role="separator"></span><span class="cke_button"><a id="cke_10" class="cke_off cke_button_link" "="" href="javascript:void('Link')" title="Link" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_10_label" onkeydown="return CKEDITOR.tools.callFunction(13, event);" onfocus="return CKEDITOR.tools.callFunction(14, event);" onclick="CKEDITOR.tools.callFunction(15, this); return false;"><span class="cke_icon">&nbsp;</span><span id="cke_10_label" class="cke_label">Link</span></a></span><span class="cke_button"><a id="cke_11" class="cke_button_unlink cke_disabled" "="" href="javascript:void('Unlink')" title="Unlink" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_11_label" onkeydown="return CKEDITOR.tools.callFunction(16, event);" onfocus="return CKEDITOR.tools.callFunction(17, event);" onclick="CKEDITOR.tools.callFunction(18, this); return false;" aria-disabled="true"><span class="cke_icon">&nbsp;</span><span id="cke_11_label" class="cke_label">Unlink</span></a></span><span class="cke_separator" role="separator"></span><span class="cke_button"><a id="cke_12" class="cke_button_undo cke_disabled" "="" href="javascript:void('Undo')" title="Undo" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_12_label" onkeydown="return CKEDITOR.tools.callFunction(19, event);" onfocus="return CKEDITOR.tools.callFunction(20, event);" onclick="CKEDITOR.tools.callFunction(21, this); return false;" aria-disabled="true"><span class="cke_icon">&nbsp;</span><span id="cke_12_label" class="cke_label">Undo</span></a></span><span class="cke_button"><a id="cke_13" class="cke_button_redo cke_disabled" "="" href="javascript:void('Redo')" title="Redo" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_13_label" onkeydown="return CKEDITOR.tools.callFunction(22, event);" onfocus="return CKEDITOR.tools.callFunction(23, event);" onclick="CKEDITOR.tools.callFunction(24, this); return false;" aria-disabled="true"><span class="cke_icon">&nbsp;</span><span id="cke_13_label" class="cke_label">Redo</span></a></span><span class="cke_button"><a id="cke_14" class="cke_off cke_button_pre" "="" href="javascript:void('pre')" title="pre" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_14_label" onkeydown="return CKEDITOR.tools.callFunction(25, event);" onfocus="return CKEDITOR.tools.callFunction(26, event);" onclick="CKEDITOR.tools.callFunction(27, this); return false;"><span class="cke_icon" style="background-image:url(http://community.spiceworks.com/assets/ckeditor_3.6.5/plugins/pre/bt_pre.png?t=C9A85WF);background-position:0 0px;">&nbsp;</span><span id="cke_14_label" class="cke_label">pre</span></a></span><span class="cke_button"><a id="cke_15" class="cke_off cke_button_codetagDialog" "="" href="javascript:void('Insert Code')" title="Insert Code" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_15_label" onkeydown="return CKEDITOR.tools.callFunction(28, event);" onfocus="return CKEDITOR.tools.callFunction(29, event);" onclick="CKEDITOR.tools.callFunction(30, this); return false;"><span class="cke_icon" style="background-image:url(http://community.spiceworks.com/assets/ckeditor_3.6.5/plugins/codetag/images/icon.png?t=C9A85WF);background-position:0 0px;">&nbsp;</span><span id="cke_15_label" class="cke_label">Insert Code</span></a></span></span><span class="cke_toolbar_end"></span></span></div></td></tr><tr role="presentation"><td id="cke_contents_post_text" class="cke_contents" style="height: 200px;" role="presentation"><span id="cke_19" class="cke_voice_label">Press ALT 0 for help</span><iframe style="width: 713px; height: 100%;" frameborder="0" aria-describedby="cke_19" title="Rich text editor, post_text" src="" tabindex="-1" allowtransparency="true"></iframe></td></tr><tr style="display:none" role="presentation"><td id="cke_bottom_post_text" class="cke_bottom" role="presentation"></td></tr></tbody></table><style>.cke_skin_spiceworks{visibility:hidden;}</style></span></span></span>
+        <script type="text/javascript">
+//<![CDATA[
+RichTextEditor.replaceTextarea("post_text", "basic", {"ck_config":"//static.spiceworks.com/assets/ckeditor_config-dd02ab6c53e528fd77f62a4f00c97a33.js","ck_stylesheet":"//static.spiceworks.com/assets/rich_text_editor-e98d97f6673ba0d52bc6baaa52c8d358.css","basic":false});
+//]]>
+</script>
+      </span>
+    </p>
+      <p class="error" style="display:none"></p>
+  </div>
+
+
+  <div class="pbs">
+
+      <p class="fright">
+        
+        <a class="sui-bttn" href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" id="cancel_attachment_button" onclick="PostAttachment.cancel(); return false; return false;" style="display:none">Cancel</a>
+      </p>
+      <p class="fright quote_original_post light-links pts" style="display: block;">
+        <input id="original_post_id" name="original_post_id" type="hidden" value="1571428" class="hidden">
+        <img alt="Loading.." id="quote_original_post_indicator" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/ajax_busy-96d19e6b2f93905af43fffd61eca79c4.gif" style="display:none">
+        <a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" id="quote_original_post_button" onclick="NewTopic.quote_original_post(); return false; return false;" use_cdn="true">Quote Post</a>
+      </p>
+    <p class="subscribe postform-choice">
+      <input id="enable_notify" name="enable_notify" type="hidden" value="f" class="hidden">
+      <input id="enable_notify" name="enable_notify" type="checkbox" value="t" class="checkbox">
+      <label for="enable_notify">Email me when someone responds</label>
+    </p>
+
+        <p class="post_join_group postform-choice">
+          <input id="join_group" name="join_group" type="hidden" value="f" class="hidden">
+          <input checked="checked" id="join_group" name="join_group" type="checkbox" value="t" class="checkbox">
+          <label for="join_group">Join me to this group</label>
+        </p>
+
+  </div>
+  <div id="attachment_wrap" style="display:none">
+  <div class="attachment">
+    <label for="post_attachment_attached_file">Attachment:</label>
+                <input class="text file" id="post_attachment_attached_file" name="post_attachment[attached_file]" type="file">
+    <div class="error"></div>
+  </div>
+  <input id="include_attachment" name="include_attachment" type="hidden" value="false" class="hidden">
+</div>
+
+  
+  <p class="error" id="post_attachment_error" style="display:none"></p>
+
+
+  <div class="form-actions">
+    <button class="sui-bttn-primary sui-bttn " data-button-type="submit" data-primary="true" id="post_form_submit" onclick="Topic.allowPrompt = false;" type="submit">Submit</button>
+
+
+</div>
+</form>
+<script type="text/javascript">
+  CKEDITOR.on('instanceReady', function() {
+    Topic.allowPrompt = true;
+    Topic.checkLeaving();
+  });
+</script>
+
+
+  <script type="text/javascript">
+//<![CDATA[
+jQuery('#new_post').submit( function(event) { event.preventDefault(); Topic.setupGuestState('DFS-Replication not replicating changes from one member but receives changes'); return false; });
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+Topic.ckeditorCheck()
+//]]>
+</script>
+
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+$("postform").down("form").observe("submit", function(){
+  try{
+    Form.Element.disable("post_form_submit");
+  } catch(err) {  }
+})
+//]]>
+</script>
+
+  </div>
+
+  <div class="sui-opt-in">
+
+
+    <div id="topic_252067_tags" class="tags">
+      <p id="tag_display">
+  <label><a href="http://community.spiceworks.com/tag/popular">Tags:</a></label>
+  <span id="tag_list_display"><a href="http://community.spiceworks.com/tag/show/windows%202003">windows 2003</a></span>
+</p>
+
+
+<script type="text/javascript">
+//<![CDATA[
+tag_editor.init("windows 2003");
+tag_editor.loaded_all = false;
+//]]>
+</script>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+  
+
+
+      <div class="modal hide fade" data-backdrop="true" data-isdraggable="false" data-keyboard="true" id="photo-join-modal" style="display: none;">
+  <div class="modal-body">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-close_gray  icon-24"></i></button>
+    <div class="modal-content">
+      <h1>Connect with the world's IT pros</h1>
+      <h2>Spiceworks is where IT pros and vendors talk shop, research products and discuss bacon (seriously).</h2>
+
+      <div class="social-register">
+        <h4>Sign up using</h4>
+      
+        <a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="Login.showSocialSiteLogin(&#39;facebook&#39;, &#39;/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes&#39;); return false;">
+          <img alt="Login with Facebook" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/facebook_thin-b5f8bf0ef36f92c28a85d31f511ae1af.png"></a>
+        <a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="Login.showSocialSiteLogin(&#39;linkedin&#39;, &#39;/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes&#39;); return false;">
+          <img alt="Login with LinkedIn" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/linkedin_thin-ebcc040abc7d8495f302f589b7f8e001.png"></a>
+      </div>
+
+      <div class="or-divider">
+        <div>OR</div>
+      </div>
+
+      <form accept-charset="UTF-8" action="http://community.spiceworks.com/join/register" class="form-horizontal register-form" id="new_registration" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓" class="hidden"></div>
+
+        <input id="registration_referer" name="registration[referer]" type="hidden" value="/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes" class="hidden">
+
+        <input type="hidden" name="registration[first_name]" value="First Name Placeholder" class="hidden">
+        <input type="hidden" name="registration[last_name]" value="Last Name Placeholder" class="hidden">
+
+        <div class="control-group email">
+          <div class="controls">
+            <input type="email" name="registration[email]" placeholder="name@company.com" class="email">
+            <button class="sui-bttn-primary sui-bttn " data-button-type="submit" data-primary="true" type="submit">Join - It's Free</button>
+          </div>
+        </div>
+
+        <div class="control-group"><div class="controls"><label class="checkbox" for="registration_terms"><input name="registration[terms]" type="hidden" value="0" class="hidden"><input name="registration[terms]" type="checkbox" value="1" class="checkbox"> I agree to the <a href="http://www.spiceworks.com/terms/" target="_blank">Terms of Use</a>.</label></div></div>
+</form>    </div>
+  </div>
+
+  <div class="modal-footer footer-actions">
+    Already have an account? <a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-bttn" onclick="jQuery(&#39;#photo-join-modal&#39;).modal(&#39;hide&#39;); JoinAndLogin.showLogin(); return false;">Login</a>
+  </div>
+</div>
+
+      <script type="text/javascript">
+        jQuery(function($) { Join.showPhotoModal( false ); });
+      </script>
+
+
+    </div>
+  </div><!-- /#content -->
+
+              <div class="clearfix-left"></div>
+            </div><!-- /#content_wrapper -->
+          </section>
+          <div class="clearfix-both"></div>
+        </div>
+      </div>
+
+      <footer class="sui-footer sui-opt-in">
+
+
+  <div class="sui-custom-footer">
+      <div class="custom-footer-wrapper">
+  <div class="section first">
+    <div class="link-section">
+<div class="header-link"><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="JoinAndLogin.showJoin(); return false;">Ask a Question</a></div>
+<div class="title"><a href="http://community.spiceworks.com/windows">Windows</a></div>
+<div class="clearfix-both"></div>
+<ul><li><a href="http://community.spiceworks.com/how_to/channel/1">How-tos</a></li>
+<li><a href="http://community.spiceworks.com/scripts/channel/1">Scripts</a></li>
+<li><a href="http://community.spiceworks.com/spice_list/channel/1">SpiceLists</a></li>
+<li><a href="http://community.spiceworks.com/resources/channel/1">Resources</a></li></ul>
+</div>
+  </div>
+
+  <div class="section">
+      <img alt="" class="avatar" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/topic_vendors-db8c0e99b405a993d09e4785c910cdb3.png">
+      <div class="title mbs">
+        Vendors are here to help!
+      </div>
+      <div class="content">
+        <p>Connect with the technical experts from 1,000+ vendors directly in the community.</p>
+        <p><a href="http://community.spiceworks.com/pages">Find a product expert</a></p>
+      </div>
+  </div>
+
+  <div class="section">
+    <img alt="" class="avatar" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/app_preview-9fafac88dc2f8034494be953acaf572b.png">
+    <div class="title mbm">
+      Free IT Management Software
+    </div>
+    <div class="content">
+      <p>Use Spiceworks for everything from network management to running your help desk.</p>
+      <div id="app-feature-links">
+  <p><a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="jQuery(&#39;#app-feature-links .flyout&#39;).show(); return false;">App Features</a></p>
+  <div class="flyout" style="display: none;">
+    <div class="link-contents">
+      <ul class="left">
+        <li><h3 class="inventory"><span>Inventory</span></h3></li>
+        <li><a href="http://www.spiceworks.com/free-mobile-device-management-mdm-software/">Mobile Device Management</a></li>
+        <li><a href="http://www.spiceworks.com/free-pc-network-inventory-software/">Network Inventory</a></li>
+        <li><a href="http://www.spiceworks.com/free-asset-management-software/">IT Asset Management</a></li>
+        <li><a href="http://www.spiceworks.com/free-software-inventory-audit-tool/">IT Audit Software</a></li>
+        <li><a href="http://www.spiceworks.com/free-warranty-review-tracking-software/">Warranty Tracking</a></li>
+        <li><a href="http://www.spiceworks.com/free-virtual-server-discovery-tool/">Virtualization Management</a></li>
+
+        <li><h3 class="help_desk"><span>Help Desk</span></h3></li>
+        <li><a href="http://www.spiceworks.com/free-help-desk-software/">Help Desk Software</a></li>
+        <li><a href="http://www.spiceworks.com/free-hosted-email-support/">Hosted Email Support</a></li>
+        <li><a href="http://www.spiceworks.com/free-active-directory-management-software/">Active Directory Management</a></li>
+        <li><a href="http://www.spiceworks.com/free-purchasing-management-software/">IT Purchasing Management</a></li>
+        <li><a href="http://www.spiceworks.com/free-request-for-quotation-rfq-tool/">Request for Quote (RFQ) Tool</a></li>
+        <li><a href="http://www.spiceworks.com/free-help-desk-iphone-app/">Help Desk iPhone App</a></li>
+        <li><a href="http://www.spiceworks.com/free-help-desk-android-app/">Help Desk Android App</a></li>
+      </ul>
+      <ul class="right">
+        <li><h3 class="monitor"><span>Monitoring</span></h3></li>
+        <li><a href="http://www.spiceworks.com/free-network-monitoring-management-software/">Network Monitoring</a></li>
+        <li><a href="http://www.spiceworks.com/free-pc-power-management-tool/">Green IT Software</a></li>
+        <li><a href="http://www.spiceworks.com/free-snmp-network-management-software/">SNMP Network Management</a></li>
+        <li><a href="http://www.spiceworks.com/free-sql-server-monitoring-tool/">SQL Server Monitoring</a></li>
+        <li><a href="http://www.spiceworks.com/free-cloud-computing-management-tools/">Cloud Computing Management</a></li>
+        <li><a href="http://www.spiceworks.com/free-ups-power-management-software/">UPS Power Management</a></li>
+
+        <li><h3 class="utilities"><span>Utilities</span></h3></li>
+        <li><a href="http://www.spiceworks.com/free-tftp-server-for-network-configuration-management/">TFTP Server</a></li>
+        <li><a href="http://www.spiceworks.com/free-change-management-software/">Change Management</a></li>
+        <li><a href="http://www.spiceworks.com/free-network-mapping-software/">Network Mapping</a></li>
+        <li><a href="http://www.spiceworks.com/free-network-troubleshooting-tool/">Network Troubleshooting</a></li>
+        <li><a href="http://www.spiceworks.com/free-managed-service-platform-software/">MSP Software</a></li>
+        <li><a href="http://www.spiceworks.com/free-it-community-network/">IT Community</a></li>
+      </ul>
+    </div>
+    <div class="handle" onclick="jQuery(&#39;#app-feature-links .flyout&#39;).hide()">Close This</div>
+  </div>
+</div>
+<script type="text/javascript">
+jQuery(function() {
+  jQuery("body").click(function(e) {
+    if( jQuery("#app-feature-links .handle:visible").length > 0 ) {
+      if (jQuery(e.target).parents("#app-feature-links").length < 1) {
+        jQuery("#app-feature-links .flyout").hide();
+      }
+    }
+  });
+});
+</script>
+
+    </div>
+  </div>
+
+  <div class="clearfix-both"></div>
+</div>
+
+
+  </div>
+  <hr>
+  <section class="sui-footer-left">
+    <span class="sui-copyright">© Copyright 2006-2013 Spiceworks Inc.</span>
+  </section>
+  <section class="sui-footer-right">
+    <span class="sui-link-group">
+      <a class="sui-translate" href="http://www.spiceworks.com/about/">About</a>
+      <a class="sui-translate" href="http://www.spiceworks.com/marketing/">Advertising</a>
+      <a class="sui-translate" href="http://www.spiceworks.com/privacy/">Privacy</a>
+      <a class="sui-translate" href="http://www.spiceworks.com/terms/">Terms</a>
+      <a class="sui-translate" href="http://community.spiceworks.com/support">Help</a>
+    </span>
+  </section>
+</footer>
+
+    </div>
+    <script type="text/javascript">
+<!--
+// Account ID : 373551
+// Website URL: http://community.spiceworks.com
+// Copyright (C) 2002-2007 OneStat.com All Rights Reserved
+function OneStat_Pageview()
+{
+  try {
+    var d=document;
+    var sid="373551";
+    var CONTENTSECTION="";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('https:')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(osp_URL!=d.URL) p+="&ol="+escape(d.URL);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+    }
+    d.write('<im'+'g id="ONESTAT_TAG" border="0" width="1" height="1" src="'+p+'" />');
+  } catch (e) {
+    /* the call to parent==self is failing when the page is loaded in a non-community frame. See https://redmine.spice.spiceworks.com/issues/25758 */
+  }
+}
+
+OneStat_Pageview();
+//-->
+</script><img id="ONESTAT_TAG" border="0" width="1" height="1" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/stat.aspx">
+<noscript>&lt;img border="0" width="1" height="1" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;amp;sid=373551&amp;amp;js=No&amp;amp;" alt="OneStat.com Web Analytics" /&gt;</noscript>
+
+<div id="darkbox_advisor_overlay" class="darkbox" style="display:none"></div>
+<div id="lightbox_advisor_overlay" class="lightbox" style="display:none">
+  <div id="advisor_overlay" class="content">
+    <a class="close" href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="Flyover.hide(this); return false;; return false;">close</a>
+    <h2></h2>
+    <div class="content_container">
+    </div>
+  </div>
+</div>
+
+  <div id="join-login-modal">
+<div class="modal hide modal-inline join-login-box join-mode sui-opt-in  ">
+  <div class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3 class="join-header">
+      Join 2 million IT pros like you    </h3>
+    <h3 class="login-header">
+      <span>Log in to Spiceworks</span>
+      <span class="password-reset-header hide">Reset community password</span>
+    </h3>
+  </div>
+
+  <div class="modal-body join-body">
+    <div class="message-panel message-panel-info message" style="display:none;">
+      <!-- Filled in by JS calls for e.g. "guest state" -->
+</div>
+      
+<div class="social-register">
+  <h4>Connect with</h4>
+
+  <a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="Login.showSocialSiteLogin(&#39;facebook&#39;, &#39;/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes&#39;); return false;">
+    <img alt="Login with Facebook" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/facebook_thin-b5f8bf0ef36f92c28a85d31f511ae1af.png"></a>
+  <a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" onclick="Login.showSocialSiteLogin(&#39;linkedin&#39;, &#39;/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes&#39;); return false;">
+    <img alt="Login with LinkedIn" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/linkedin_thin-ebcc040abc7d8495f302f589b7f8e001.png"></a>
+</div>
+
+      <div class="or-divider"><div>Or</div></div>
+      <h4 class="sign-up-header">Sign up with your email address</h4>
+      
+<form accept-charset="UTF-8" action="http://community.spiceworks.com/join/register" class="form-horizontal register-form" data-remote-json="true" id="new_registration" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓" class="hidden"></div>
+
+  <input id="registration_referer" name="registration[referer]" type="hidden" value="/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes" class="hidden">
+
+  <div class="sui-alert no-controls generic-error  "></div>
+
+  <div class="control-group"><label class="control-label" for="registration_first_name">First Name</label><div class="controls"><input id="registration_first_name" name="registration[first_name]" size="30" type="text" class="text"></div></div>
+  <div class="control-group"><label class="control-label" for="registration_last_name">Last Name</label><div class="controls"><input id="registration_last_name" name="registration[last_name]" size="30" type="text" class="text"></div></div>
+  <div class="control-group"><label class="control-label" for="registration_email">Email</label><div class="controls"><input id="registration_email" name="registration[email]" size="30" type="email" class="email"></div></div>
+  <div class="control-group"><div class="controls"><label class="checkbox" for="registration_terms"><input name="registration[terms]" type="hidden" value="0" class="hidden"><input name="registration[terms]" type="checkbox" value="1" class="checkbox"> I agree to the <a href="http://www.spiceworks.com/terms/" target="_blank">Terms of Use</a>.</label></div></div>
+
+  <div class="control-group form-actions blue-permission-granted">
+    <button class="sui-bttn-primary sui-bttn " data-button-type="submit" data-primary="true" type="submit">Join Now</button>
+</div>
+</form>
+
+    
+<form accept-charset="UTF-8" action="https://community.spiceworks.com/login/login" class="form-horizontal login-form" data-alternate-action="/login/reset" id="new_login" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓" class="hidden"></div>
+
+    
+    
+    
+    
+    
+
+  
+  <input id="login_referer" name="login[referer]" type="hidden" value="/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes" class="hidden">
+
+  <div class="sui-alert no-controls generic-error  ">
+    
+</div>
+  <div class="control-group"><label class="control-label" for="login_email">Email</label><div class="controls"><input id="login_email" name="login[email]" size="30" type="email" value="" class="email"></div></div>
+  <div class="control-group"><label class="control-label" for="login_password">Password</label><div class="controls"><input id="login_password" name="login[password]" size="30" type="password" class="password"></div></div>
+
+  <div class="control-group form-actions ">
+    <button class="sui-bttn-primary sui-bttn " data-button-type="submit" data-primary="true" type="submit">Log In</button>
+    <button class="sui-bttn-primary sui-bttn password-reset-submit hide" data-button-type="submit" data-primary="true" type="submit">Reset Password</button>
+    <a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="sui-bttn hide password-reset-cancel" data-toggle="password_reset">Cancel</a>
+</div>
+  <div class="control-group "><label class="control-label"></label><div class="controls">
+    <a href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#" class="password-reset-link" data-toggle="password_reset">Forgot your password?</a>
+    <div class="desktop-password-reset hide">
+      Need to recover your <a href="http://community.spiceworks.com/help/Resetting_Your_Password_Outside_The_Spiceworks_Desktop">Spiceworks IT Desktop password</a>?
+    </div>
+</div></div>
+</form>
+  </div>
+
+  <div class="modal-footer footer-actions">
+    <div class="login-toggle">
+      <a href="http://community.spiceworks.com/login">Sign in if you already have an account</a>
+    </div>
+    <div class="join-toggle">
+      Not a member? <a href="http://community.spiceworks.com/join">Join the community</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+
+
+
+<!-- Google Code for Spiceworks Remarketed Ads (30 Days) -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1065803588;
+var google_conversion_label = "i0XnCIjo2gEQxL6b_AM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/conversion.js">
+</script><iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="13" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/saved_resource.htm" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no">&lt;img height="1" width="1" border="0" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1065803588/?frame=0&amp;random=1387151762754&amp;cv=7&amp;fst=1387151762754&amp;num=1&amp;fmt=1&amp;label=i0XnCIjo2gEQxL6b_AM&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=994&amp;u_aw=1280&amp;u_cd=32&amp;u_his=2&amp;u_tz=780&amp;u_java=true&amp;u_nplug=20&amp;u_nmime=97&amp;frm=0&amp;url=http%3A//community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes&amp;ref=https%3A//www.google.co.nz/" /&gt;</iframe>
+<noscript>
+&lt;div style="display:inline;"&gt;
+&lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1065803588/?value=0&amp;amp;label=i0XnCIjo2gEQxL6b_AM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+&lt;/div&gt;
+</noscript>
+
+    
+    <!--  -->
+  <script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-5.newrelic.com","16b4f0abc5","343931","cwkKR0BeVF5SFh8QWUAPBxxBWVdF",0,375,new Date().getTime(),"","","","",""]);</script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+  !function($) {
+    $(function() {
+      $.extend(User, {
+      });
+      $.extend(UserPermissions, {
+        moderator: false,
+        admin: false
+      });
+      $(document).trigger("bootstrap");
+    });
+  }(jQuery);
+
+//]]>
+</script>
+<div id="overlay" style="display: none;"></div><div id="lightbox" style="display: none;"><div id="outerImageContainer" style="width: 250px; height: 250px;"><div id="imageContainer"><img id="lightboxImage"><div id="hoverNav"><a id="prevLink" href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#"></a><a id="nextLink" href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#"></a></div><div id="loading"><a id="loadingLink" href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#"><img src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/loading-329cf294d8d48d231cf9e07fd60e3ae6.gif"></a></div></div></div><div id="imageDataContainer"><div id="imageData"><div id="imageDetails"><span id="caption"></span><span id="numberDisplay"></span></div><div id="bottomNav"><a id="bottomNavClose" href="http://community.spiceworks.com/topic/252067-dfs-replication-not-replicating-changes-from-one-member-but-receives-changes#"><img src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/closelabel-05a28e38fe9755501dff6be09b0249e4.gif"></a></div></div></div></div><div class="growl-container sui-opt-in"></div><script type="text/javascript" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/nr-100.js"></script><script type="text/javascript" src="./DFS-Replication not replicating changes from one member but receives changes - Spiceworks_files/16b4f0abc5"></script><iframe id="google_osd_static_frame_7878961155656" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe><iframe id="gekko_t" src="about:blank" style="height: 1px; width: 1px; border: none;"></iframe></body></html>

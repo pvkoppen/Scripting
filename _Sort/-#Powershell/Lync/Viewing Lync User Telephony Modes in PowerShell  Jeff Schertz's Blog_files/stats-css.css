@@ -1,0 +1,24 @@
+.wp-pagenavi a {
+	margin: 2px; padding: 2px 4px; border: 1px solid rgb(0, 102, 204); color: rgb(0, 102, 204); text-decoration: none; background-color: rgb(255, 255, 255);
+}
+.wp-pagenavi a:link {
+	margin: 2px; padding: 2px 4px; border: 1px solid rgb(0, 102, 204); color: rgb(0, 102, 204); text-decoration: none; background-color: rgb(255, 255, 255);
+}
+.wp-pagenavi a:visited {
+	margin: 2px; padding: 2px 4px; border: 1px solid rgb(0, 102, 204); color: rgb(0, 102, 204); text-decoration: none; background-color: rgb(255, 255, 255);
+}
+.wp-pagenavi a:hover {
+	border: 1px solid rgb(0, 0, 0); color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);
+}
+.wp-pagenavi a:active {
+	margin: 2px; padding: 2px 4px; border: 1px solid rgb(0, 102, 204); color: rgb(0, 102, 204); text-decoration: none; background-color: rgb(255, 255, 255);
+}
+.wp-pagenavi span.pages {
+	margin: 2px; padding: 2px 4px; border: 1px solid rgb(0, 0, 0); color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);
+}
+.wp-pagenavi span.current {
+	margin: 2px; padding: 2px 4px; border: 1px solid rgb(0, 0, 0); color: rgb(0, 0, 0); font-weight: bold; background-color: rgb(255, 255, 255);
+}
+.wp-pagenavi span.extend {
+	margin: 2px; padding: 2px 4px; border: 1px solid rgb(0, 0, 0); color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);
+}

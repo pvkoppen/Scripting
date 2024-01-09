@@ -1,0 +1,99 @@
+#megabladeContainer {
+	background: rgb(66, 66, 66); left: 0px; top: 0px; width: 100%; height: 20px; text-align: center; color: rgb(255, 255, 255); line-height: 1.2; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; position: absolute; z-index: 2000; min-width: 987px;
+}
+#megabladeContainer ul {
+	background: 0px; margin: 0px; padding: 0px; line-height: normal;
+}
+#megabladeContainer li {
+	background: 0px; margin: 0px; padding: 0px; line-height: normal;
+}
+#megabladeContainer .menuContainerLayout ul {
+	padding-bottom: 1px;
+}
+#megabladeContainer li {
+	list-style: none;
+}
+#megabladeContainer a:focus {
+	outline: 0px;
+}
+#megabladeContainer .bladeItemMenuContainer a:hover {
+	text-decoration: underline;
+}
+#megabladeContainer .bladeItemMenuContainer a:focus {
+	text-decoration: underline;
+}
+#megabladeContainer .Logo a:focus {
+	text-decoration: underline;
+}
+#megabladeContainer #megabladeContainerCenter {
+	margin: 0px auto; padding: 0px 0px 0px 5px; width: 980px; _padding: 0 0 0 11px;
+}
+#megabladeContainer #megabladeItems {
+	margin: 0px; height: 20px; line-height: 1.3; font-size: 11px;
+}
+#megabladeContainer #megabladeItems .Logo {
+	background: 0px; margin: 0px 14px 0px 0px; padding: 3px 0px 0px; height: 17px; float: left;
+}
+#megabladeContainer .bladeItem {
+	list-style: none; padding: 3px 14px 4px; height: 13px; float: left; cursor: pointer;
+}
+#megabladeContainer a {
+	color: rgb(255, 255, 255); font-weight: normal; text-decoration: none;
+}
+#megabladeContainer a:hover {
+	color: rgb(255, 255, 255); font-weight: normal; text-decoration: none;
+}
+#megabladeContainer a:link {
+	color: rgb(255, 255, 255); font-weight: normal; text-decoration: none;
+}
+#megabladeContainer a:active {
+	color: rgb(255, 255, 255); font-weight: normal; text-decoration: none;
+}
+#megabladeContainer a:visited {
+	color: rgb(255, 255, 255); font-weight: normal; text-decoration: none;
+}
+#megabladeContainer .bladeItemActive {
+	background: rgb(102, 102, 102);
+}
+#megabladeContainer .bladeItemExpanded {
+	background: rgb(102, 102, 102);
+}
+#megabladeContainer .bladeItemMenuContainer {
+	background: rgb(102, 102, 102); text-align: left; overflow: hidden; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 5px; border-bottom-style: solid; position: absolute; _margin: 0 0 0 11px;
+}
+#megabladeContainer .bladeItemMenu {
+	padding: 0px 40px 40px; width: 904px; overflow: hidden; min-height: 265px; _width: 980px;
+}
+#megabladeContainer .bladeItemMenu ul {
+	width: 176px; overflow: hidden; padding-right: 20px; float: left;
+}
+#megabladeContainer .bladeItemMenu li {
+	margin: 0px; padding: 15px 0px 0px; line-height: 1.5; _line-height: 1.25;
+}
+#megabladeContainer .bladeItemMenu li a {
+	margin: 0px; padding: 0px; font-size: 90%; display: block; _display: inline;
+}
+#megabladeContainer .bladeItemMenu a img {
+	border: 0px currentColor;
+}
+#megabladeContainer .bladeItemMenu h5 {
+	font: 100 165%/normal "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; margin: 0px; color: rgb(255, 255, 255); white-space: nowrap; min-height: 30px; font-size-adjust: none; font-stretch: normal;
+}
+#megabladeContainer .bladeItem .caret {
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAADBJREFUGFdj+P//vwAQvwdiZGDAAAJAEQMk0QSwIAwAJRKAeD6KIFQXpgRWo3BZDgCRkFcr/VArCwAAAABJRU5ErkJggg==") no-repeat 0px 0px; margin: 0px 0px 2px 4px; width: 6px; height: 3px; font-size: 3px; display: inline-block; _background: url(/Areas/Sto/Content/Images/carets.png) 0 0 no-repeat;
+}
+*:first-child + html #megabladeContainer .bladeItem .caret {
+	background: url("/Areas/Sto/Content/Images/carets.png") no-repeat 0px 0px;
+}
+#megabladeContainer .bladeItem .caretActive.caret {
+	background-position: 0px -3px;
+}
+#megabladeContainer .menuContainerLayout {
+	margin: 0px 25px 0px 0px; padding: 13px 0px 0px; width: 196px; float: left;
+}
+#megabladeContainer .menuContainerLayoutSplashGuard {
+	margin: 50px 29px 0px -25px; width: 1px; height: 200px; border-left-color: rgb(153, 153, 153); border-left-width: 1px; border-left-style: solid; float: left;
+}
+#megabladeContainer {
+	display: none;
+}

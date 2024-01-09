@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/64ca24e2b65172d46e2f0549bdcb2bc3-737edbba1993a0b69388ec67796ce481-RequestReducedSty.css" rel="Stylesheet" type="text/css"><script type="text/javascript" async="" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/ms2_blogs.js"></script><script type="text/javascript" async="" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/ms2_blogs.js"></script><script src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/cb=gapi.loaded_1" async=""></script><script src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/plusone.js" gapi_processed="true"></script><script src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/jquery-1.7.1.min.js" type="text/javascript" language="javascript"></script><link rel="shortcut icon" type="image/ico" href="http://blogs.technet.com/Themes/favicon.ico"><meta name="robots" content="index,follow"><meta name="description" content="Scripts, how-to articles, and other goodies explaining how you can use Windows PowerShell to manage Microsoft Lync Server 2010."><meta name="keywords" content="Microsoft Lync, Lync PowerShell, Microsoft Communications Server, Office Communications Server, OCS, Windows PowerShell, communications server, unified communications, PowerShell"><meta name="GENERATOR" content="7.x Production"><link rel="pingback" href="http://blogs.technet.com/b/csps/pingback.aspx">
+<link rel="alternate" type="application/rss+xml" title="Site Home (RSS 2.0)" href="http://blogs.technet.com/rss.aspx">
+<link rel="alternate" type="application/rss+xml" title="Lync PowerShell (RSS 2.0)" href="http://blogs.technet.com/b/nexthop/rss.aspx">
+<link rel="alternate" type="application/rss+xml" title="Lync PowerShell - All Comments (RSS 2.0)" href="http://blogs.technet.com/b/csps/rsscomments.aspx">
+<link rel="alternate" type="application/rss+xml" title="Active Directory Phone Numbers and Line URIs: Together at Last! - Comments for this post (RSS 2.0)" href="http://blogs.technet.com/b/csps/rsscomments.aspx?WeblogPostID=3384219">
+
+                    <script src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/1220a7cbf4c2839c6138cdb892f4d2a5-9ebbacc21adc19297214b71092198a40-RequestReducedScri.js" type="text/javascript"></script><script type="text/javascript">
+// <![CDATA[
+try { jQuery.extend(jQuery.validator.messages,{required:'This field is required.',remote:'Please fix this field.',date:'Please enter a valid date.',dateISO:'Please enter a valid date (ISO).',number:'Please enter a valid number.',digits:'Please enter only digits.',creditcard:'Please enter a valid credit card number.',equalTo:'Please enter the same value again.',accept:'Please enter a value with a valid extension.',maxlength:jQuery.validator.format('Please enter no more than {0} characters.'),minlength:jQuery.validator.format('Please enter at least {0} characters.'),rangelength:jQuery.validator.format('Please enter a value between {0} and {1} characters long.'),range:jQuery.validator.format('Please enter a value between {0} and {1}.'),max:jQuery.validator.format('Please enter a value less than or equal to {0}.'),min:jQuery.validator.format('Please enter a value greater than or equal to {0}.')}); } catch(e) { };
+// ]]>
+</script><script src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/f4c4a71b10e4910bd883bac5225ea256-dddcf23ade9949a8933da50a974cc177-RequestReducedScri.js" type="text/javascript"></script><script type="text/javascript">
+// <![CDATA[
+try { jQuery.telligent.evolution.site.configure({baseUrl:'\/',monthNames:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],dayNames:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],authorizationCookieName:'AuthorizationCookie',defaultErrorMessage:'An error occurred.  Please try again or contact your administrator.',defaultMultiErrorMessagePrefix:'The following errors occurred:  ',silverlightFileUploadEnabled:true});
+jQuery.extend($.fn.evolutionUserFileTextBox.defaults,{removeText:'Remove',selectText:'Select\/Upload...',noFileText:'No File Selected'});
+jQuery.telligent.evolution.navigationConfirmation.configure({message:'==============================\r\nUnless you save before leaving this page, you will lose any changes you have made.\r\n=============================='});
+jQuery.telligent.evolution.validation.registerExtensions({passwordInvalidMessage:'Password contains invalid chars ...',passwordRegex:'^.*$',emailInvalidMessage:'Your email address is invalid.',emailRegex:'^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$',usernameInvalidMessage:'Your sign in name does not meet the requirements for this site.',usernameRegex:'^[a-zA-Z0-9_\\- @\\.]+$',emailsInvalidMessage:'One or more emails is invalid',urlInvalidMessage:'URL not in correct format',urlRegex:'^((http|https|mailto|mms):|\/|#|~\/)'});
+jQuery.extend(jQuery.fn.evolutionLike.defaults,{likeText:'Like',unlikeText:'Unlike',modalTitleText:'People who like this',modalShowMoreText:'Show More',whoLikesOtherText:'<a href=\"{user_profile_url}\" class=\"internal-link view-user-profile\">{user_display_name}<\/a> likes this',whoLikesOtherTwoText:'<a href=\"{user_profile_url}\" class=\"internal-link view-user-profile\">{user_display_name}<\/a> and <span class=\"who-likes\">1 other<\/span> like this',whoLikesOtherMultipleText:'<a href=\"{user_profile_url}\" class=\"internal-link view-user-profile\">{user_display_name}<\/a> and <span class=\"who-likes\">{count} others<\/span> like this',whoLikesAccessingText:'You like this',whoLikesAccessingTwoText:'You and <span class=\"who-likes\">1 other<\/span> like this',whoLikesAccessingMultipleText:'You and <span class=\"who-likes\">{count} others<\/span> like this'});
+jQuery.extend(jQuery.fn.evolutionInlineTagEditor.defaults,{editButtonText:'Edit tags',selectTagsText:'Select tags',saveTagsText:'Save',cancelText:'Cancel'});
+jQuery.extend(jQuery.fn.evolutionStarRating.defaults,{titles:['Terrible','Poor','Fair','Average','Good','Excellent'],ratingMessageFormat:'Average rating: {rating} out of {count} ratings.'});
+jQuery.extend(jQuery.fn.evolutionModerate.defaults,{moderateLinkText:'moderate',reportLinkText:'Flag as spam\/abuse',reportedLinkText:'Flagged as spam\/abuse',reportedNotificationMessageText:'{NAME}\'s post has been flagged. <strong>Thank you for your feedback.<\/strong>'});
+} catch(e) { };
+// ]]>
+</script> <script src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/loader.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript">
+(function($){
+$.telligent.evolution.ui.components['forumreplystory-parent']  = {
+	add: function(elm, options) {
+        var elm = $(elm), parent = null;
+		elm.bind('click', function(e){
+            e.preventDefault();
+			parent = parent || $('#' + elm.data('parent'));
+            if(parent.is(':visible')) {
+                parent.stop().slideUp(150);
+                elm.html('View original post');
+            } else {
+                parent.stop().slideDown(150);
+                elm.html('Hide original post');
+            }
+		});
+	}
+};
+}(jQuery));
+</script><script type="text/javascript">
+(function($){
+$.telligent.evolution.ui.components['wikipagestory-revisions']  = {
+	add: function(elm, options) {
+        var elm = $(elm), revisions;
+		elm.bind('click', function(e){
+			revisions = revisions || $('#' + elm.data('revisions'));
+            e.preventDefault();
+            if(revisions.is(':visible')) {
+                revisions.stop().slideUp(150);
+                elm.html('Show revision history');
+            } else {
+                revisions.stop().slideDown(150);
+                elm.html('Hide revision history');
+            }
+		});
+	}
+};
+}(jQuery));
+</script><script type="text/javascript">(function($){ $.telligent.evolution.media.defaults.endpoint = 'http://blogs.technet.com/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.FileViewerEndpoint%2C%20Telligent.Evolution.Api%2C%20Version%3D7.1.10.35145%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull'; }(jQuery));</script><script type="text/javascript">(function($){ $.telligent.evolution.preview.defaults.endpoint = 'http://blogs.technet.com/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.WebPreviewEndpoint%2C%20Telligent.Evolution.Api%2C%20Version%3D7.1.10.35145%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull'; }(jQuery));</script><script type="text/javascript">(function($){ $.telligent.evolution.language.defaults.dateEndpoint = 'http://blogs.technet.com/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.DateFormattingEndpoint%2C%20Telligent.Evolution.Api%2C%20Version%3D7.1.10.35145%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull'; }(jQuery));</script>
+                  
+          <link type="text/css" rel="stylesheet" href="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/dynamic-style.aspx" media="screen,print">
+        <meta name="msvalidate.01" content="B717AD6FC29D3A844832AF011B5F9E4C">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blogs.technet.com/b/csps/rsd.ashx">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" title="WLWManifest" href="http://blogs.technet.com/b/csps/wlwmanifest.ashx">
+<title>
+	Active Directory Phone Numbers and Line URIs: Together at Last! - Lync PowerShell - Site Home - TechNet Blogs
+</title><!--[if lt IE 9]><script>document.createElement('header');document.createElement('nav');document.createElement('section');document.createElement('article');document.createElement('aside');document.createElement('footer');document.createElement('hgroup');</script><![endif]--><script type="text/javascript" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/jquery.tmpl.min.js"></script><link href="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/usercard.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/widgets.js"></script></head>
+	<body spellcheck="true">
+		<form name="aspnetForm" method="post" action="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs.htm" id="aspnetForm" novalidate="novalidate"><div data-chameleon-template="megablade">    
+        
+
+    <div id="megabladeContainer" xmlns="http://www.w3.org/1999/xhtml">
+        <div id="megabladeContainerCenter">
+            <ul id="megabladeItems">
+                <li class="Logo"><a href="http://technet.microsoft.com/" title="TechNet">TechNet</a></li>
+                        <li data-value="hh326172" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">Products</a><span class="caret"></span></li>
+                        <li data-value="hh880860" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">IT Resources</a><span class="caret"></span></li>
+                        <li data-value="hh371326" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">Downloads</a><span class="caret"></span></li>
+                        <li data-value="jj837158" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">Training</a><span class="caret"></span></li>
+                        <li data-value="hh371327" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">Support</a><span class="caret"></span></li>
+            </ul>
+            <div class="bladeItemMenuContainer">
+                    <div data-value="hh326172" class="bladeItemMenu" style="display: none;">
+                        <div class="menuContainerLayout">
+  <h5>Products</h5>
+  <ul>
+    <li>
+      <a href="http://technet.microsoft.com/windows">Windows</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/windowsserver">Windows Server</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/systemcenter">System Center</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/ie">Internet Explorer</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="http://technet.microsoft.com/office">Office</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/office365">Office 365</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/exchange">Exchange Server</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="http://technet.microsoft.com/sql">SQL Server</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/sharepoint">SharePoint Products</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/lync">Lync</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/en-us/bb421517.aspx?wt.svl=more_centers_link">See all products »</a>
+    </li>
+  </ul>
+</div>
+                    </div>
+                    <div data-value="hh880860" class="bladeItemMenu" style="display: none;">
+                        <div class="menuContainerLayout">
+  <h5>Resources</h5>
+  <ul>
+    <li>
+      <a href="https://curah.microsoft.com/" title="Curah!">Curah! curation service</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200157772">Evaluation Center</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/bb291022">Learning Resources</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/en-us/dn440144">Microsoft Tech Companion App</a>
+    </li>
+    <li>
+      <a href="https://www.technicalcommunity.com/" title="Microsoft Technical Communities">Microsoft Technical Communities</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200157774">Microsoft Virtual Academy</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/scriptcenter">Script Center</a>
+    </li>
+    <li>
+      <a href="http://blogs.technet.com/serverandtools">Server and Tools Blogs</a>
+    </li>
+    <li>
+      <a href="http://blogs.technet.com/">TechNet Blogs</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="http://technet.microsoft.com/cc543196">TechNet Flash Newsletter</a>
+    </li>
+    <li>
+      <a href="http://gallery.technet.microsoft.com/">TechNet Gallery</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/library/default.aspx">TechNet Library</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/magazine">TechNet Magazine</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/subscriptions">TechNet Subscriptions</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/video">TechNet Video</a>
+    </li>
+    <li>
+      <a href="http://social.technet.microsoft.com/wiki">TechNet Wiki</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/sysinternals">Windows Sysinternals</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/virtuallabs">Virtual Labs</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Solutions</h5>
+  <ul>
+    <li>
+      <a href="http://technet.microsoft.com/network">Networking</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/cloud/private-cloud">Cloud and Datacenter</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/security">Security</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/virtualization">Virtualization</a>
+    </li>
+  </ul>
+</div>
+                    </div>
+                    <div data-value="hh371326" class="bladeItemMenu" style="display: none;">
+                        <div class="menuContainerLayout">
+  <h5>Updates</h5>
+  <ul>
+    <li>
+      <a href="http://support.microsoft.com/default.aspx?id=fh;en-us;sp&fr=0&sd=gn&ln=en-us&ct=sd&se=nona">Service Packs</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/security/bulletin">Security Bulletins</a>
+    </li>
+    <li>
+      <a href="http://fe1.update.microsoft.com/microsoftupdate/v6/vistadefault.aspx?ln=en-US">Microsoft Update</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Trials</h5>
+  <ul>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200229291">Windows Server 2012 R2</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200229349">System Center 2012 R2</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200156426">Microsoft SQL Server 2012 SP1</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/en-us/evalcenter/hh699156">Windows 8.1 Enterprise</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200157775" title="See all trials">See all trials »</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Related Sites</h5>
+  <ul>
+    <li>
+      <a href="http://www.microsoft.com/downloads/search.aspx">Microsoft Download Center</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200157776">TechNet Evaluation Center</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/download/driver.aspx?q=driver">Drivers</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/download/compatibility.aspx?q=compatibility">Compatability &amp; Converters</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/sysinternals">Windows Sysinternals</a>
+    </li>
+    <li>
+      <a href="http://gallery.technet.microsoft.com/">TechNet Gallery</a>
+    </li>
+  </ul>
+</div>
+                    </div>
+                    <div data-value="jj837158" class="bladeItemMenu" style="display: none;">
+                        <div class="menuContainerLayout">
+  <h5>Training</h5>
+  <ul>
+    <li>
+      <a href="http://learning.microsoft.com/Manager/BrowseCatalog.aspx?browse=PT">Training Catalog</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/classlocator.aspx">Class Locator</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200155695">Microsoft Virtual Academy</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200155696">Free Windows Server 2012 courses</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200155697" title="Free Windows 8 courses">Free Windows 8 courses</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/training/sql-server.aspx">SQL Server training</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/training/format-online.aspx">e-Learning overview</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Certifications</h5>
+  <ul>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/certification/cert-overview.aspx">Certification overview</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/windows-certification.aspx" title="MCSA: Windows 8 ">MCSA: Windows 8</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/certification/cert-windowsserver.aspx">Windows Server Certification (MCSE)</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/certification/cert-private-cloud.aspx">Private Cloud Certification (MCSE)</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/certification/cert-sql-server.aspx">SQL Server Certification (MCSE)</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Other resources</h5>
+  <ul>
+    <li>
+      <a href="http://www.technetevents.com/">TechNet Events</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/offers/secondshot.aspx">Second shot for certification</a>
+    </li>
+    <li>
+      <a href="http://borntolearn.mslearn.net/btl/b/default.aspx">Born To Learn blog</a>
+    </li>
+    <li>
+      <a href="https://www.technicalcommunity.com/Map.aspx" title="Microsoft Technical Communities">Find technical communities in your area</a>
+    </li>
+  </ul>
+</div>
+                    </div>
+                    <div data-value="hh371327" class="bladeItemMenu" style="display: none;">
+                        <div class="menuContainerLayout">
+  <h5>Support by product</h5>
+  <ul>
+    <li>
+      <a href="http://support.microsoft.com/ph/730">Exchange Server</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/13029">Forefront Server</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/815">Forefront Edge Security</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/14783/sl">Forefront Server Security</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/807">Internet Explorer</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/8753">Office</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/935/en-us">SharePoint</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="http://support.microsoft.com/ph/1044">SQL Server</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/16340/en-us">System Center</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/1163">Windows Server</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/1173">Windows XP</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/11732">Windows Vista</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/14019">Windows 7</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/find-solutions/windows/windows-8/">Windows 8</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Other support links</h5>
+  <ul>
+    <li>
+      <a href="https://premier.microsoft.com/">Microsoft Premier Online</a>
+    </li>
+    <li>
+      <a href="http://fixitcenter.support.microsoft.com/Portal">Microsoft Fix It Center</a>
+    </li>
+    <li>
+      <a href="http://social.technet.microsoft.com/Forums/en-us/categories/">TechNet Forums</a>
+    </li>
+    <li>
+      <a href="http://social.msdn.microsoft.com/Forums/en-US/categories/">MSDN Forums</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/en-us/security/bulletin">Security Bulletins &amp; Advisories</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/common/international.aspx">International support solutions</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/select/default.aspx?target=assistance">Log a support ticket</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/technet/support/ee/ee_advanced.aspx">Look up event IDs and error codes</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Not an IT pro?</h5>
+  <ul>
+    <li>
+      <a href="http://support.microsoft.com/">Microsoft Customer Support</a>
+    </li>
+    <li>
+      <a href="http://answers.microsoft.com/en-us">Microsoft Community Forums</a>
+    </li>
+  </ul>
+</div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+<script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+/*<![CDATA[*/
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "http://i.technet.microsoft.com", 
+	"js": "http://i2.technet.microsoft.com", 
+	"css": "http://i3.technet.microsoft.com"
+});
+/**/
+/*]]>*/
+</script><script type="text/javascript" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/Utilities.js" xmlns="http://www.w3.org/1999/xhtml"></script><script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+/*<![CDATA[*/
+var omnitureTracking = true;
+/*]]>*/
+</script><script type="text/javascript" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/megablade.1.js" xmlns="http://www.w3.org/1999/xhtml"></script></div>
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTM1MjQyMzYwMmRkZBUiXSFIVaD+v7Bq1RNhtW0mUJs=">
+</div>
+
+
+<script src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/ca9922116108177aea04abd8936962f9-ddb73fb73149e701ac7db4222df3e8b7-RequestReducedScri.js" type="text/javascript"></script>
+			
+                
+            
+            
+                <div class="header-fragments-header"></div>
+<div class="header-fragments minimal Chrome">   <div class="header-fragment-outer top-bar fiji-header-fragment-outer fiji-top-bar">       <div class="header-fragment-inner top-bar fiji-header-fragment-inner fiji-top-bar">           <div class="header-fragment welcome-message">               <!-- always render -->           </div>           <div class="header-fragment login-logout">               <div class="navigation-list-header"></div>               <ul class="navigation-list">                   <li class="navigation-item">                       <span class="internal-link live-id-button">                           <a class="scarabLink" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=blogs.technet.com&wreply=https%3a%2f%2fblogs.technet.com%2fb%2fcsps%2farchive%2f2011%2f02%2f01%2fhowtoadphonetolineuri.aspx%3fstoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft" title="Sign in">Sign in</a>                       </span>                   </li>               </ul>               <div class="navigation-list-footer"></div>           </div>           <div class="header-fragment user-welcome-without-login">               &nbsp;<!-- always render -->               <span class="user-name">                   <a class="internal-link view-user-profile" href="">                       <span></span>                   </a>               </span>                          </div>       </div>   </div><div class="header-fragment blog-banner">
+  <div class="msdntechnet application-banner site-banner blog-banner">
+	  <h1 class="application-name blog-banner-name"><a href="http://blogs.technet.com/b/csps/default.aspx" class="internal-link view-application weblog"><span></span>Lync PowerShell</a></h1>
+    <div class="application-description blog-banner-description">
+		  
+	  </div>	
+  </div>
+</div></div><div class="header-fragments-footer"></div>
+            
+			
+    <div class="content-fragment-page post" id="ctl00_content_ctl00_page"><div class="layout">
+<div class="layout-header"></div>
+<div class="layout-content content-left-sidebar-right" id="ctl00_content_ctl00_layout">
+<div class="layout-region right-sidebar" id="ctl00_content_ctl00_right-sidebar">
+<div class="layout-region-inner right-sidebar"><div class="content-fragment blog-links full-border with-header" id="fragment-47615">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-header"><div>
+Options
+			</div></div>
+<div class="content-fragment-content">
+
+  
+<div class="navigation-list-header"></div>
+<ul class="navigation-list">
+															<li class="navigation-item"><a href="http://blogs.technet.com/b/csps/default.aspx" class="internal-link view-application"><span></span>Home</a></li>
+																																												<li class="navigation-item"><a href="http://blogs.technet.com/b/csps/contact.aspx" class="internal-link view-contact"><span></span>Email Blog Author</a></li>
+																																<li class="navigation-item"><a href="mailto:?subject=Active%20Directory%20Phone%20Numbers%20and%20Line%20URIs:%20Together%20at%20Last!&body=http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx" class="internal-link email-post"><span></span>Share this</a></li>
+												      																								<li class="navigation-item"><a href="http://blogs.technet.com/b/nexthop/rss.aspx" class="internal-link rss"><span></span>RSS for posts</a></li>
+																													<li class="navigation-item"><a href="http://blogs.technet.com/b/nexthop/rss.aspx" class="internal-link rss"><span></span>Atom</a></li>
+																													<li class="navigation-item"><a href="http://blogs.technet.com/b/csps/rsscomments.aspx" class="internal-link rss"><span></span>RSS for comments</a></li>
+																							</ul>
+<div class="navigation-list-footer"></div>
+			</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment search-form full-border with-header" id="fragment-47616">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-header"><div>
+        Search Blogs
+      </div></div>
+<div class="content-fragment-content">
+
+<div class="field-list-header">
+</div>
+<fieldset class="field-list">
+    <ul class="field-list">
+        <li class="field-item search">
+            <div id="search-allblogs-container" style="display: none;">
+                <span class="field-item-input">
+                    <input id="SearchTextBox_AllBlogs" name="SearchTextBox_AllBlogs" type="text" class="searchField" maxlength="64" size="45" autocomplete="off" title="Search TechNet with Bing" style="color: rgb(170, 170, 170); font-style: italic;">
+                    <input id="SearchButton_AllBlogs" name="SearchButton_AllBlogs" type="button" class="search-button" title="Search TechNet with Bing">
+                <div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: Arial; font-size: 11px;"><div id="SuggestionContainer"><ul style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></span>
+            </div>
+            <div id="search-thisblog-container">
+                <span class="field-item-input">
+                    <input id="SearchTextBox_ThisBlog" name="SearchTextBox_ThisBlog" type="text" class="searchField" maxlength="64" size="45" autocomplete="off" title="Search TechNet with Bing" style="color: rgb(170, 170, 170); font-style: italic;">
+                    <input id="SearchButton_ThisBlog" name="SearchButton_ThisBlog" type="button" class="search-button" title="Search TechNet with Bing">
+               <div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: Arial; font-size: 11px;"><div id="SuggestionContainer"><ul style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></span>
+            </div>
+        </li>
+    </ul>
+</fieldset>
+<div class="field-list-footer">
+    <div id="search-switch-container">
+        <span style="display: inline-block">
+            <input type="radio" name="SearchTypeRadio" value="ThisBlog" id="ThisBlog" checked="checked"><label for="ThisBlog" id="ThisBlogText">Search this blog</label>
+        </span>
+        <span style="display: inline-block">
+            <input type="radio" name="SearchTypeRadio" value="AllBlogs" id="AllBlogs"><label for="AllBlogs" id="AllBlogsText">Search all blogs</label>
+        </span>
+    </div>
+</div>
+<script type="text/javascript">
+(function($){
+  var elmSearchAll = $('#search-allblogs-container').hide();
+  var elmSearchThis = $('#search-thisblog-container');
+  
+  $(document).ready(function() {
+      $('#ThisBlog').click(function () {
+          var self = $(this);
+          if (self.is(':checked')) {
+              elmSearchAll.hide();
+              elmSearchThis.show();
+          }
+      });
+    
+      $('#AllBlogs').click(function () {
+          var self = $(this);
+          if (self.is(':checked')) {
+              elmSearchThis.hide();
+              elmSearchAll.show();
+          }
+      });
+  });
+})(jQuery);
+</script>
+<script type="text/javascript" language="javascript" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/SearchBox.jss"></script>
+  <script type="text/javascript" language="javascript" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/SearchBox(1).jss"></script>
+</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment tag-cloud full-border with-header" id="fragment-47617">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-header"><div>
+Tags
+			</div></div>
+<div class="content-fragment-content">
+
+
+
+
+			
+		
+				
+		
+	
+
+	<div class="tag-list-header"></div>
+	<ul class="tag-list">
+		<li class="tag-item level-6">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/CAC/default.aspx" rel="nofollow tag"><span></span>CAC</a>
+			</li>
+		<li class="tag-item level-1">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Challenge/default.aspx" rel="nofollow tag"><span></span>Challenge</a>
+			</li>
+		<li class="tag-item level-2">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Client/default.aspx" rel="nofollow tag"><span></span>Client</a>
+			</li>
+		<li class="tag-item level-3">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Conferencing/default.aspx" rel="nofollow tag"><span></span>Conferencing</a>
+			</li>
+		<li class="tag-item level-6">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/e911/default.aspx" rel="nofollow tag"><span></span>e911</a>
+			</li>
+		<li class="tag-item level-3">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/General+OCS/default.aspx" rel="nofollow tag"><span></span>General OCS</a>
+			</li>
+		<li class="tag-item level-4">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/General+PowerShell/default.aspx" rel="nofollow tag"><span></span>General PowerShell</a>
+			</li>
+		<li class="tag-item level-1">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Haiku/default.aspx" rel="nofollow tag"><span></span>Haiku</a>
+			</li>
+		<li class="tag-item level-6">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/HowTo/default.aspx" rel="nofollow tag"><span></span>HowTo</a>
+			</li>
+		<li class="tag-item level-1">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Lync+Server+PowerShell/default.aspx" rel="nofollow tag"><span></span>Lync Server PowerShell</a>
+			</li>
+		<li class="tag-item level-1">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/News/default.aspx" rel="nofollow tag"><span></span>News</a>
+			</li>
+		<li class="tag-item level-6">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/OCS+R2/default.aspx" rel="nofollow tag"><span></span>OCS R2</a>
+			</li>
+		<li class="tag-item level-2">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Policies/default.aspx" rel="nofollow tag"><span></span>Policies</a>
+			</li>
+		<li class="tag-item level-6">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/PSReference/default.aspx" rel="nofollow tag"><span></span>PSReference</a>
+			</li>
+		<li class="tag-item level-6">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/RBAC/default.aspx" rel="nofollow tag"><span></span>RBAC</a>
+			</li>
+		<li class="tag-item level-4">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Reference/default.aspx" rel="nofollow tag"><span></span>Reference</a>
+			</li>
+		<li class="tag-item level-3">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Response+Group/default.aspx" rel="nofollow tag"><span></span>Response Group</a>
+			</li>
+		<li class="tag-item level-2">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/script/default.aspx" rel="nofollow tag"><span></span>script</a>
+			</li>
+		<li class="tag-item level-4">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Services/default.aspx" rel="nofollow tag"><span></span>Services</a>
+			</li>
+		<li class="tag-item level-5">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Synthetic+Transactions/default.aspx" rel="nofollow tag"><span></span>Synthetic Transactions</a>
+			</li>
+		<li class="tag-item level-6">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Tips/default.aspx" rel="nofollow tag"><span></span>Tips</a>
+			</li>
+		<li class="tag-item level-4">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/topology/default.aspx" rel="nofollow tag"><span></span>topology</a>
+			</li>
+		<li class="tag-item level-2">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Users/default.aspx" rel="nofollow tag"><span></span>Users</a>
+			</li>
+		<li class="tag-item level-3">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Voice/default.aspx" rel="nofollow tag"><span></span>Voice</a>
+			</li>
+		<li class="tag-item level-6">
+											
+				
+														<a href="http://blogs.technet.com/b/csps/archive/tags/Voice+App/default.aspx" rel="nofollow tag"><span></span>Voice App</a>
+			</li>
+	</ul>
+	<div class="tag-list-footer"></div>
+	</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-archive-list full-border with-header" id="fragment-47618">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-header"><div>
+Archive
+	</div></div>
+<div class="content-fragment-content">
+
+
+
+<div class="content-list-header"></div>
+<div class="content-list-name">Archives</div>
+<ul class="content-list">
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2011/12.aspx">December 2011</a> (2)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2011/11.aspx">November 2011</a> (3)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2011/10.aspx">October 2011</a> (1)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2011/09.aspx">September 2011</a> (15)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2011/08.aspx">August 2011</a> (41)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2011/07.aspx">July 2011</a> (39)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2011/06.aspx">June 2011</a> (54)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2011/05.aspx">May 2011</a> (42)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2011/04.aspx">April 2011</a> (44)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2011/03.aspx">March 2011</a> (62)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2011/02.aspx">February 2011</a> (50)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2011/01.aspx">January 2011</a> (35)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2010/12.aspx">December 2010</a> (24)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2010/11.aspx">November 2010</a> (25)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2010/09.aspx">September 2010</a> (19)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2010/08.aspx">August 2010</a> (4)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2010/07.aspx">July 2010</a> (15)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2010/06.aspx">June 2010</a> (65)
+	</li>
+	<li class="content-item">
+		<a class="internal-link view-post-archive-list" href="http://blogs.technet.com/b/csps/archive/2010/05.aspx">May 2010</a> (1)
+	</li>
+</ul>
+<div class="content-list-footer"></div>
+
+	</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+</div>
+</div>
+<div class="layout-region content" id="ctl00_content_ctl00_content">
+<div class="layout-region-inner content"><div class="content-fragment blog-title full-border" id="fragment-47619">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+	
+	<h1 class="title">Active Directory Phone Numbers and Line URIs: Together at Last!</h1>
+		</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-bread-crumbs no-wrapper" id="fragment-47620">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+
+
+<div class="breadcrumb-list-header"></div>
+<div class="breadcrumb-list">
+	<span class="breadcrumb-item"><a href="http://blogs.technet.com/" class="internal-link view-home"><span></span>TechNet Blogs</a></span>
+
+	
+			<span class="separator"> » </span>
+		<span class="breadcrumb-item"><a href="http://blogs.technet.com/b/csps/default.aspx"><span></span>Lync PowerShell</a></span>
+	
+			<span class="separator"> » </span>
+		<span class="breadcrumb-item"><a href="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs.htm"><span></span>Active Directory Phone Numbers and Line URIs: Together at Last!</a></span>
+	
+	</div>
+<div class="breadcrumb-list-footer"></div>
+			</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-post no-wrapper" id="fragment-47621">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+
+<div class="full-post-header"></div>
+<div class="full-post">
+    <h3 class="post-name">Active Directory Phone Numbers and Line URIs: Together at Last!</h3>
+    <div class="post-rating">
+            <span class="ui-rate rating readonly" data-contentid="47dc4417-cdb3-4fef-9e3d-b4b5444c93ff" data-contenttypeid="f7d226ab-d59f-475c-9d22-4a79e3f0ec07" data-readonly="true" data-initialvalue="1" data-initialcount="1" data-configuration="ReadOnly=true" title="Average rating: 5 out of 1 ratings." style="white-space: nowrap;"><img src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/star-left-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/star-right-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/star-left-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/star-right-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/star-left-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/star-right-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/star-left-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/star-right-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/star-left-on.png" align="absmiddle" border="0" style="border-width: 0px;"><img src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/star-right-on.png" align="absmiddle" border="0" style="border-width: 0px;"></span>
+        </div>    
+     <div class="post-author">      
+          <span class="avatar" style="height:32px;">                                          
+						  <img src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/avatar.jpg" style="width: 32px;height:0;padding:32px 0 0 0;overflow:hidden;background:url(&#39;http://i1.social.microsoft.com/profile/u/avatar.jpg?displayname=cspshell&amp;size=large&#39;) center center no-repeat;background-size:cover;" border="0" alt="CSPShell">                                  
+					</span>	
+          <span class="profile-usercard-hover" data-profile-userid="f332dba480e34666804bb5cd0a77122b" data-profile-rendered="true">                     
+							<span class="user-name">
+								  <a href="http://blogs.technet.com/CSPShell/ProfileUrlRedirect.ashx">CSPShell</a>
+							</span>                 
+					<div class="profile-usercard">            <div class="profile-header">                <span class="profile-userimage">                                            <img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAmACwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlvAVjHda9508ZeO2QyA4yu/IAzx9SPce1er2pjllVGIANedeBRHBplzcAt5ss2xsnjaqgjA9csf0/Hq4rwqc5rqpwvA4q1VKdjorq28obkGVqkZAOwq3p+oR3MflSEEnge9ZeryJazMsZ3YGSB2+tOEXflZNSSS5lsWDMvtVK81S0tZQk80KMVyA7hTj8ayX1V+yD864nxldG51sAxlGhhRG+bO4n5sjjj72O/TPerqxVNXkgoP2jOg0sNBpFlAshcCIPnGMbjux+Ga3NO06e8cYBI7k9BWWfkuGCxbVU4VQuAAOBiugTXxDYpDbW/lsBhm65PrV3cYpRMGlKbci+sC28r28UwiWBN9xPjJUHoq+5qBdV0lIZoTFdzLLyTIVzn1zVGwvIrn7baXcvki8Vdsr9A6nIz7Gq50XUPti2qpG8jIXXbIuCoOM04xjtNmFSVRWdNfr8vu+8s2dtpd/GlsS8N23CswGxj2HHIrz7xDod3FrNx5UTvvcs3T5WJOR+deh2mkTWNzHdanLFbwwsHP7wFmI5wAK4/wAR+IwmtT7bfcXO8gtt255A6ehH50qvs5bvQvDuvC3Kte3l3f8AWpysWoXsMaxw3lxGi9FSVgB36Zp39qaj/wA/91/3+b/GiivPuezZCrquoqwP224bHZ5Cw/I8Voad4mvrO4SR2DFX3eYow6/THH5iiiqjOS2ZnUpQkrtG94r1kzW7XKRC3uJFEbNH0Zu7e3APTvXDE5OTRRWuI0lboc+B1puT3bP/2Q==" alt="Avatar of CSPShell">                                    </span>                <div>                    <p title="CSPShell" class="profile-display-name">CSPShell</p>                                    <p class="profile-company">Microsoft</p>                                    <p class="profile-affiliations"></p>                </div>            </div>            <div class="profile-points-bar">                <span class="profile-points">26,567<span class="points-label"> Points</span></span>                <span class="profile-count profile-bronze-points"><span class="profile-bronze-img" title="Achievements Earned"></span><span>4</span></span>                <span class="profile-count profile-silver-points"><span class="profile-silver-img" title="Achievements Earned"></span><span>2</span></span>                <span class="profile-count profile-gold-points"><span class="profile-gold-img" title="Achievements Earned"></span><span>3</span></span>                        </div>            <div class="profile-achievements-header">                <span class="profile-achievements-title">Recent Achievements</span>            </div>            <div class="profile-achievements-recent">                <div class="profile-achievements-centering">                                                                <span class="profile-achievement profile-achievement-Gold"><span>Blog Party Starter</span></span>                                            <span class="profile-achievement profile-achievement-Gold"><span>Blogs All-Star</span></span>                                            <span class="profile-achievement profile-achievement-Silver"><span>Blog Conversation Starter</span></span>                                                            </div>            </div>            <div class="profile-footer">                                <a href="http://social.technet.microsoft.com/profile/cspshell/?ws=usercard-hover" class="profile-usercard-profileLink" target="_blank">View Profile</a>            </div>        </div></span>             
+    </div>
+    
+    
+
+    <div class="post-date">
+        <span class="value">
+                            1 Feb 2011 10:41 AM
+                    </span>
+    </div>
+    <div class="post-attributes">
+        <div class="attribute-list-header"></div>
+        <ul class="attribute-list">
+             <li class="attribute-item post-reply-count">
+                <span class="attribute-name">Comments</span>
+                <span class="attribute-value"><a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#comments" class="internal-link view-replies"><span></span>1</a></span>
+             </li>
+             <li class="attribute-item post-like-count">
+                <span class="attribute-name">Likes</span>
+                <span class="attribute-value"></span>
+             </li>
+        </ul>
+        <div class="attribute-list-footer"></div>
+    </div>
+    <div class="post-content user-defined-markup"><p>
+<meta content="text/html; charset=windows-1252">
+<meta content="Microsoft Word 14 (filtered)" name="Generator">
+</p>
+
+<div class="WordSection1">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">If you were to tunnel deep enough under the Microsoft campus (note: please don't tunnel under the Microsoft campus, or at least don't tell anyone we suggested it), you would eventually run into the concrete bunker that serves as the Lync PowerShell Fortress of Solitude. </span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<div style="border: solid windowtext 1.0pt; padding: 1.0pt 4.0pt 1.0pt 4.0pt; background: #FFFFCC;">
+<p class="MsoNormal" style="margin-bottom: .0001pt; background: #FFFFCC; border: none; padding: 0in;"><b><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Note</span></b><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">. You'll also find thousands of copies of Windows ME buried down there as well. But that's another story.</span></p>
+</div>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Inside the Fortress of Solitude, teams of dedicated Lync Server PowerShell blog writers monitor the world of Lync Server PowerShell, 24 hours a day, 7 days a week. Whenever they hear about someone who has a problem or a question involving Lync Server PowerShell, they immediately dispatch a highly-trained Lync PowerShell SWAT team, a SWAT team that can be airlifted and parachuted into your facility within hours. Once your facility has been secured, the SWAT team will fix your problem or answer your question, then disappear into the night, awaiting their next assignment.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<div style="border: solid windowtext 1.0pt; padding: 1.0pt 4.0pt 1.0pt 4.0pt; background: #FFFFCC;">
+<p class="MsoNormal" style="margin-bottom: .0001pt; background: #FFFFCC; border: none; padding: 0in;"><b><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Note</span></b><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">. OK, it's possible that the preceding description could be a <i>bit</i> of an exaggeration. But you have to consider things from our point of view: it's mid-year review time here at Microsoft, and the things that we really <i>do</i> do – write a <a href="http://blogs.technet.com/b/csps/archive/2010/11/16/haikudefault.aspx">daily Lync Server PowerShell haiku</a> and ask you <a href="http://blogs.technet.com/b/csps/archive/2011/01/31/challenge003.aspx">which PowerShell cmdlet is not like the others</a> – don't stack up very well against the things other technical writers do around here. </span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; background: #FFFFCC; border: none; padding: 0in;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; background: #FFFFCC; border: none; padding: 0in;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Oh, and in case you're wondering, no, we haven't been able to talk Microsoft into buying us parachutes. However, the company doesn’t seem to have any problem with us jumping out of airplanes without those parachutes.</span></p>
+</div>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">But while we may not have a Fortress of Solitude, from time-to-time we <i>do</i> get questions about Lync Server PowerShell, and while we might not be a real SWAT team, whenever we <i>do</i> get a question we sit down and try to come up with an answer. (And, before you ask, yes, we usually try to come up with the <i>right</i> answer.)</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">For example, just the other day we received this email:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">"Do you have or can you post a PowerShell script that will go through AD and find all enabled Lync users and then set their LineURI as a normalized version of their Office Phone number? … This would help us out, otherwise we are going to have to sit and do this by hand, not to mention when the Office Number changes it will have to be manually changed in Lync. I’m sure I’m not the only one who could use something like this."</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">So <i>can</i> we do that? Can we write a script that will find each user who has been enabled for Lync Server, grab that user's phone number (as currently configured in Active Directory), and then assign that phone number to their LineUri attribute? Beats us. But we'll definitely give it the old college try.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<div style="border: solid windowtext 1.0pt; padding: 1.0pt 4.0pt 1.0pt 4.0pt; background: #FFFFCC;">
+<p class="MsoNormal" style="margin-bottom: .0001pt; background: #FFFFCC; border: none; padding: 0in;"><b><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Note</span></b><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">. Which sounds pretty good, unless you know how hard we actually tried when we <i>were</i> in college.</span></p>
+</div>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Let's start with a very simple scenario. Suppose we have two user accounts that have been enabled for Lync Server. Those two users, and the Active Directory phone numbers that have been assigned to them, are shown below:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<table cellpadding="0" cellspacing="0" border="1" class="MsoNormalTable" style="border-collapse: collapse; border: none;">
+<tbody>
+<tr>
+<td width="319" valign="top" style="width: 239.4pt; border: solid windowtext 1.0pt; background: black; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><b><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Display Name</span></b></p>
+</td>
+<td width="319" valign="top" style="width: 239.4pt; border: solid windowtext 1.0pt; border-left: none; background: black; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><b><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Phone Number</span></b></p>
+</td>
+</tr>
+<tr>
+<td width="319" valign="top" style="width: 239.4pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Ken Myer</span></p>
+</td>
+<td width="319" valign="top" style="width: 239.4pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;"><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-(206)-555-1219<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-(206)-555-1219" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span></span></p>
+</td>
+</tr>
+<tr>
+<td width="319" valign="top" style="width: 239.4pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Pilar Ackerman</span></p>
+</td>
+<td width="319" valign="top" style="width: 239.4pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;"><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-(425)-555-0712<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-(425)-555-0712" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">What we want to do is take those existing phone numbers, convert them to the line URI format, and then assign those line URIs to their respective users. For example, Ken Myer has the phone number <span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-(206)-555-1219<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-(206)-555-1219" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span>. When our script finishes running, he should also have the LineURI TEL:+12065551219. What kind of script can do that for us? This kind of script:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">$enabledUsers = Get-CsAdUser -Filter {Enabled -ne $Null}</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">foreach ($user in $enabledUsers)</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp; {</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $phoneNumber = $user.Phone</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $phoneNumber = $phoneNumber -replace "[^0-9]"</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $phonenumber = "TEL:+" + $phoneNumber</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set-CsUser -Identity $user.Identity -LineUri $phoneNumber</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp; } </span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Let's see if we can figure out what's going on here. To begin with, we use the following command to return information about all the users who have been enabled for Lync Server:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">$enabledUsers = Get-CsAdUser -Filter {Enabled -ne $Null}</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Now, you might be looking at the preceding command and wondering: a) why did they use Get-CsAdUser instead of Get-CsUser; and, b) why did they use the filter <b>{Enabled –ne $Null}</b>? After all, if all we want to get back are the users who have been enabled for Lync Server, shouldn't we use this filter instead: <b>{Enabled –eq $True}</b>?</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Believe it or not, we have good reasons for using Get-CsAdUser and for using the filter we chose. (And yes, that might be the first time we <i>ever</i> had a good reason for doing something.) Because we're interested only in users who have been enabled for Lync Server, you might have expected us to use the Get-CsUser cmdlet; after all, those are the only kind of users Get-CsUser <i>can</i> return. However, if we want this script to actually work (which we do), then we need to retrieve each user's current Active Directory phone number. Get-CsAdUser returns that phone number for us; Get-CsUser doesn't. That's why we need to use Get-CsAdUser.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">As for the filter we chose, well, the Enabled attribute tells whether or not a user has been enabled for Lync Server. The Enabled attribute can have one of three values:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>$True</b>, which means the user has been enabled for Lync Server.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>$False</b>, which means the user has been enabled for Lync Server, but his or her Lync account is temporarily disabled.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>$Null</b>, which means that the user has <i>not</i> been enabled for Lync Server.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">As you can see, if we looked for users where the Enabled attribute is equal to $True, we wouldn't get back users whose accounts have been enabled for Lync Server but are temporarily disabled. Therefore, we decided to look for all the users where the Enabled attribute is equal to either $True or $False; in other words, where the attribute is <i>not</i> equal to (-ne) $Null.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<div style="border: solid windowtext 1.0pt; padding: 1.0pt 4.0pt 1.0pt 4.0pt; background: #FFFFCC;">
+<p class="MsoNormal" style="margin-bottom: .0001pt; background: #FFFFCC; border: none; padding: 0in;"><b><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Note</span></b><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">. Confused? We don't blame you. For more information on how the Enabled attribute works take a look at the article <a href="http://blogs.technet.com/b/csps/archive/2010/12/08/refenableuserboolean.aspx">When is a Boolean Not a Boolean?</a></span></p>
+</div>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">After we execute the first line in our script we should have information about all the users who have been enabled for Lync Server; that collection of data then gets safely tucked away in the variable $enabledUsers. In the next line of code, we set up a foreach loop that loops through all the users in that collection. Inside that loop, the first thing we do is grab the user's Active Directory phone number (for example, <span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-(206)-555-1219<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-(206)-555-1219" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span>) and stash that in a variable named $phoneNumber:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">$phoneNumber = $user.Phone</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">This is where it gets interesting. (Or, should we say, this is where it gets even <i>more</i> interesting.) As you know, line URIs are finicky little things: they have to be formatted just right or Lync Server will reject them. In particularly, line URIs must start with the prefix <i>TEL:</i>+ and then be followed by a phone number consisting of the country code, area code, and the actual phone number. Oh, and that country code, area code, and phone number? Digits only. No blank spaces, no parentheses, no hyphens, nothing but numbers.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Which means we have two problems here. First, Ken Myer's Active Directory phone number – <span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-(206)-555-1219<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-(206)-555-1219" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span> – doesn't start with the <i>TEL:+</i> prefix. Second, that phone number contains some invalid characters: (, ), and -. Before we can turn this phone number into a line URI we need to fix both of these problems.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Let's start off by tackling the second problem: the presence of invalid characters. What we need to do here is take our Active Directory phone number and remove everything that isn't a number. That sounds like a pretty daunting task; the truth is, it requires just one line of code:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">$phoneNumber = $phoneNumber -replace "[^0-9]"</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">What we're doing here is using the –replace operator and the regular expression <b>[^0-9]</b> to locate everything that isn't a number and replace it with, well, nothing. We know that we're searching for everything that isn't a number because of the regular expression <b>[^0-9]</b>; that value tells PowerShell to use the numeric range 0 through 9. The caret symbol (<b>^</b>) tells PowerShell to look for characters that <i>aren't</i> in the range 0-9. If we wanted to look for characters that <i>are</i> in the range 0-9 (which we don't) we'd simply omit the caret:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">"[0-9]"</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">And to make sure that non-digit characters are deleted (that is, replaced by nothing) we don't include a replacement parameter. Suppose, for some reason, we wanted to replace non-digit characters with the letter <i>X</i>. In that case, we'd use this syntax:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">-replace "[^0-9]", "X"</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Which is probably more than you really need to know at the moment.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">And so what do we end up with when we remove all the non-digit characters? This:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">12065551219</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">As you can see, that's <i>almost</i> a line URI; the only problem is that it doesn't start with the <i>TEL:+</i> prefix. But that's easy enough to fix:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">$phonenumber = "TEL:+" + $phoneNumber</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Needless to say, there's nothing too terribly complicated about <i>that</i> command. All we're doing is adding the prefix <i>TEL:+</i> to the value stored in the variable $phoneNumber. That means $phoneNumber now looks like this:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">TEL:+12065551219</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">And that value <i>does</i> look like a line URI, doesn't it? Which, in turn, means that all we have to do now is assign this value to the LineUri attribute. You know, like this:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">Set-CsUser -Identity $user.Identity -LineUri $phoneNumber</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">If we take a peek at Active Directory right now we should see something that looks like this:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<table cellpadding="0" cellspacing="0" border="1" class="MsoNormalTable" style="border-collapse: collapse; border: none;">
+<tbody>
+<tr style="height: 13.0pt;">
+<td width="218" valign="top" style="width: 163.75pt; border: solid windowtext 1.0pt; background: black; padding: 0in 5.4pt 0in 5.4pt; height: 13.0pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><b><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Display Name</span></b></p>
+</td>
+<td width="211" valign="top" style="width: 158.3pt; border: solid windowtext 1.0pt; border-left: none; background: black; padding: 0in 5.4pt 0in 5.4pt; height: 13.0pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><b><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Phone Number</span></b></p>
+</td>
+<td width="209" valign="top" style="width: 156.75pt; border: solid windowtext 1.0pt; border-left: none; background: black; padding: 0in 5.4pt 0in 5.4pt; height: 13.0pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><b><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Line URI</span></b></p>
+</td>
+</tr>
+<tr>
+<td width="218" valign="top" style="width: 163.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Ken Myer</span></p>
+</td>
+<td width="211" valign="top" style="width: 158.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;"><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-(206)-555-1219<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-(206)-555-1219" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span></span></p>
+</td>
+<td width="209" valign="top" style="width: 156.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">TEL:+12065551219</span></p>
+</td>
+</tr>
+<tr>
+<td width="218" valign="top" style="width: 163.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Pilar Ackerman</span></p>
+</td>
+<td width="211" valign="top" style="width: 158.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;"><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-(425)-555-0712<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-(425)-555-0712" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span></span></p>
+</td>
+<td width="209" valign="top" style="width: 156.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">As you can see, Ken Myer now has a line URI based on his Active Directory phone number. Granted, Pilar Ackerman doesn't have a line URI yet. But that's because we've only made one trip through our foreach loop. As soon as we loop around we'll repeat the process with Pilar's account and she'll end up with a line URI based on <i>her</i> Active Directory phone number:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<table cellpadding="0" cellspacing="0" border="1" class="MsoNormalTable" style="border-collapse: collapse; border: none;">
+<tbody>
+<tr style="height: 13.0pt;">
+<td width="218" valign="top" style="width: 163.75pt; border: solid windowtext 1.0pt; background: black; padding: 0in 5.4pt 0in 5.4pt; height: 13.0pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><b><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Display Name</span></b></p>
+</td>
+<td width="211" valign="top" style="width: 158.3pt; border: solid windowtext 1.0pt; border-left: none; background: black; padding: 0in 5.4pt 0in 5.4pt; height: 13.0pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><b><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Phone Number</span></b></p>
+</td>
+<td width="209" valign="top" style="width: 156.75pt; border: solid windowtext 1.0pt; border-left: none; background: black; padding: 0in 5.4pt 0in 5.4pt; height: 13.0pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><b><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Line URI</span></b></p>
+</td>
+</tr>
+<tr>
+<td width="218" valign="top" style="width: 163.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Ken Myer</span></p>
+</td>
+<td width="211" valign="top" style="width: 158.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;"><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-(206)-555-1219<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-(206)-555-1219" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span></span></p>
+</td>
+<td width="209" valign="top" style="width: 156.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">TEL:+12065551219</span></p>
+</td>
+</tr>
+<tr>
+<td width="218" valign="top" style="width: 163.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Pilar Ackerman</span></p>
+</td>
+<td width="211" valign="top" style="width: 158.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;"><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-(425)-555-0712<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-(425)-555-0712" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span></span></p>
+</td>
+<td width="209" valign="top" style="width: 156.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">TEL:+14255550712</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Etc., etc.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Now, we should note that there <i>is</i> one potential complication here. Our script assumes that you've been storing complete phone numbers in Active Directory; that is, phone numbers that have the country code, area code, <i>and</i> the phone number. As long as you use that format our script will work; for example, it can convert any of these phone numbers to line URIs:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;"><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-(206)-555-1219<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-(206)-555-1219" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span></span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;"><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-206-555-1219<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-206-555-1219" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span></span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;"><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1.206.555.1219<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1.206.555.1219" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span></span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">1(206)555-1219</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">And so on. </span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Now that's great, but what if you don't use the same format we used in our preceding example? Well, in that case, you're going to have to modify the script a little. But don't despair; we'll make a deal with you. We'll show you two additional examples for normalizing your Active Directory phone numbers to the E.164 format used in a line URI. If those examples don't work for you, send an email to <a href="mailto:cspshell@microsoft.com">cspshell@microsoft.com</a>, making sure to give us an example of how your phone numbers <i>are</i> formatted in Active Directory. We'll hand that email over to one of the SWAT teams and with any luck, within a day or two someone will parachute into your office and hand you the solution.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Or, depending on the budget, someone will email that solution to you. </span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<div style="border: solid windowtext 1.0pt; padding: 1.0pt 4.0pt 1.0pt 4.0pt; background: #FFFFCC;">
+<p class="MsoNormal" style="margin-bottom: .0001pt; background: #FFFFCC; border: none; padding: 0in;"><b><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Note</span></b><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">. And we'll also publish any additional scripts here in the Lync Server PowerShell blog, just in case anyone else is interested.</span></p>
+</div>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Let's start by looking at an organization that formats phone numbers like this:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<table cellpadding="0" cellspacing="0" border="1" class="MsoNormalTable" style="border-collapse: collapse; border: none;">
+<tbody>
+<tr>
+<td width="319" valign="top" style="width: 239.4pt; border: solid windowtext 1.0pt; background: black; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><b><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Display Name</span></b></p>
+</td>
+<td width="319" valign="top" style="width: 239.4pt; border: solid windowtext 1.0pt; border-left: none; background: black; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><b><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Phone Number</span></b></p>
+</td>
+</tr>
+<tr>
+<td width="319" valign="top" style="width: 239.4pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Ken Myer</span></p>
+</td>
+<td width="319" valign="top" style="width: 239.4pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">51219</span></p>
+</td>
+</tr>
+<tr>
+<td width="319" valign="top" style="width: 239.4pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Pilar Ackerman</span></p>
+</td>
+<td width="319" valign="top" style="width: 239.4pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">60712</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">As you can see, this organization doesn't store complete phone numbers in Active Directory; instead, they store only extension numbers. And just to make things a little more complicated, it turns out that the area code varies depending on your extension number: if your extension starts with the number <i>5</i> then you're in area code 206. If your extension starts with the number <i>6</i> then you're in area code 425. </span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">So how are going to go about assigning line URIs in <i>this</i> organization? We're going to go about it like this:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">$enabledUsers = Get-CsAdUser -Filter {Enabled -ne $Null}</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">foreach ($user in $enabledUsers)</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp; {</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $phoneNumber = $user.Phone</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $phoneNumber = $phoneNumber -replace "[^0-9]"</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $extension = $phoneNumber -match "^5"</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($extension)</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $phoneNumber = "TEL:+120655" + $phoneNumber</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $phoneNumber = "TEL:+142556" + $phoneNumber</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set-CsUser -Identity $user.Identity -LineUri $phoneNumber</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp; }</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Most of that script should look familiar to you; after all, much of it is copied line-for-line from our previous script. (Of course, we're assuming that you <i>did</i> look at our previous script.) The only real difference comes here:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">$extension = $phoneNumber -match "^5"</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">if ($extension)</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp; {</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $phoneNumber = "TEL:+120655" + $phoneNumber</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp; }</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">else</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp; {</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $phoneNumber = "TEL:+142556" + $phoneNumber</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp; }</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">In this block of code we're checking to see if the extension number starts with a 5; that's what the regular expression <b>^5</b> is for. Suppose the first number in the extension <i>is</i> a 5. In that case, that means that the user is in the 206 area code and also has the telephone prefix <i>555</i>. In that case, and in order to turn this phone extension into a line URI, we need to prefix the extension number with <i>TEL:+120655</i>. Like this:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">$phoneNumber = "TEL:+120655" + $phoneNumber</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">If we do that, we'll end up with a phone number that like this one:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">TEL:+12065551219</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">And if the extension <i>doesn’t</i> start with a 5? Well, in this somewhat-simplistic example, that can only mean that the number is in the 425 area code and must have the telephone prefix <i>556. </i>This line of code takes care of formatting extensions that don't start with a <i>5</i>:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">$phoneNumber = "TEL:+1425556" + $phoneNumber</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Got all that? Good. Now let's do one more. Here's a fairly typical way of storing phone numbers in Active Directory; it includes the complete phone number <i>plus</i> an extension number (the number following the <i>x</i>):</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<table cellpadding="0" cellspacing="0" border="1" class="MsoNormalTable" style="border-collapse: collapse; border: none;">
+<tbody>
+<tr>
+<td width="319" valign="top" style="width: 239.4pt; border: solid windowtext 1.0pt; background: black; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><b><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Display Name</span></b></p>
+</td>
+<td width="319" valign="top" style="width: 239.4pt; border: solid windowtext 1.0pt; border-left: none; background: black; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><b><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Phone Number</span></b></p>
+</td>
+</tr>
+<tr>
+<td width="319" valign="top" style="width: 239.4pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Ken Myer</span></p>
+</td>
+<td width="319" valign="top" style="width: 239.4pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;"><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-206-555-1111<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-206-555-1111" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span> x1219</span></p>
+</td>
+</tr>
+<tr>
+<td width="319" valign="top" style="width: 239.4pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Pilar Ackerman</span></p>
+</td>
+<td width="319" valign="top" style="width: 239.4pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;">
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;"><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-206-555-0712<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-206-555-0712" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">So how do we deal with Ken Myer's phone number, which is a phone number <i>and</i> an extension? Well, for starters, we need to tell you that we might have … misled … you earlier in this article, back when we said line URIs can only contain numbers. That's <i>mostly</i> true, but there are exceptions. For example, this is not only a valid line URI, but it's <i>the</i> way you need to format line URIs that include both a phone number and an extension:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">TEL:+12065551111;ext=1219</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">We need to make Ken Myer's phone number look like that. And here's how we're going to do it:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">$enabledUsers = Get-CsAdUser -Filter {Enabled -ne $Null}</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">foreach ($user in $enabledUsers)</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp; {</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $phoneNumber = $user.Phone</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $phoneNumber = $phoneNumber -replace "[^0-9|^x]"</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $phoneNumber = $phoneNumber –replace "x", ";ext="</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $phonenumber = "TEL:+" + $phoneNumber</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set-CsUser -Identity $user.Identity -LineUri $phoneNumber</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">&nbsp;&nbsp;&nbsp; } </span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">There are two differences between this script and the script we originally showed you. For starters, there's this line of code:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">$phoneNumber = $phoneNumber -replace "[^0-9|^x]"</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">What's the deal with that line of code? Well, as we know, Ken's phone number starts off looking like this:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;"><span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap;">1-206-555-1111<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" title="Call: 1-206-555-1111" style="position: static !important; margin: 0px; width: 16px; bottom: 0px; display: inline; white-space: nowrap; float: none; height: 16px; vertical-align: middle; overflow: hidden; top: 0px; cursor: hand; right: 0px; left: 0px;"></a></span> x1219</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">As we also know, we need to remove all the non-digit characters from this number – well, all of them <i>except</i> the letter <i>x</i>. Why can't remove the letter <i>x</i>? We need to keep the letter <i>x</i> in there so we know where the extension part of Ken's phone number begins. That's why we use the regular expression [^0-9|^x]; that pattern tells PowerShell to replace everything that doesn't fall into the numeric range 0-9 <i>or</i> that isn't the letter <i>x</i> (<b>^x</b>). After we execute this line of code Ken's phone number should look like this:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">12065551111x1219</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">That's step 1. Now we need to replace the letter <i>x</i> with the string <i>;ext=</i>. Which is what we do here:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">$phoneNumber = $phoneNumber –replace "x", ";ext="</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">That gives Ken a phone number that looks like this:</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Courier New&#39;;">12065551111;ext=1219</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">That also makes it easy for us to add the <i>TEL:+</i> prefix and then assign Ken his new line URI. </span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Oh, and what about Pilar's phone number, a phone number that <i>doesn't</i> use an extension? That's fine. If the script finds an extension it will deal with and, if it doesn't find an extension, it will deal with <i>that</i>.</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Which, all in all, really <i>is</i> a heck of a deal, isn't it?</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">That's all we have time for today; it's time for our shift down in the Lync PowerShell Fortress of Solitude. If you need additional help just send an email to <a href="mailto:cspshell@microsoft.com">cspshell@microsoft.com</a>. Remember: the SWAT teams are standing by!</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+<div style="border: solid windowtext 1.0pt; padding: 1.0pt 4.0pt 1.0pt 4.0pt; background: #FFFFCC;">
+<p class="MsoNormal" style="margin-bottom: .0001pt; background: #FFFFCC; border: none; padding: 0in;"><b><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">Note</span></b><span lang="EN" style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">. Well, to be honest, Greg is probably checking basketball scores and Jean is probably playing Mahjong. But, despite that hectic schedule, we'll try and answer your question as quickly as we can.</span></p>
+</div>
+<p class="MsoNormal" style="margin-bottom: .0001pt;"><span style="font-size: 10.0pt; line-height: 115%; font-family: &#39;Verdana&#39;,&#39;sans-serif&#39;;">&nbsp;</span></p>
+</div><div style="clear:both;"></div></div>
+    <div class="post-attachment-viewer">
+            </div>
+    <div class="post-actions">
+        <div class="navigation-list-header"></div>
+        <ul class="navigation-list">            
+            <li class="navigation-item"><a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#comments" class="internal-link view-replies"><span></span>1 Comments</a></li>
+                                </ul>
+        <div class="navigation-list-footer"></div>
+    </div>
+            <div class="post-tags">
+                        <span class="ui-tag" data-contentid="47dc4417-cdb3-4fef-9e3d-b4b5444c93ff" data-contenttypeid="f7d226ab-d59f-475c-9d22-4a79e3f0ec07" data-urlformat="http://blogs.technet.com/b/csps/archive/tags/{tag}/default.aspx" data-readonly="true" data-tags="Lync Server PowerShell,Users,Active Directory,Voice" data-configuration=""><span><a rel="nofollow tag" href="http://blogs.technet.com/b/csps/archive/tags/Lync+Server+PowerShell/default.aspx">Lync Server PowerShell</a>, <a rel="nofollow tag" href="http://blogs.technet.com/b/csps/archive/tags/Users/default.aspx">Users</a>, <a rel="nofollow tag" href="http://blogs.technet.com/b/csps/archive/tags/Active+Directory/default.aspx">Active Directory</a>, <a rel="nofollow tag" href="http://blogs.technet.com/b/csps/archive/tags/Voice/default.aspx">Voice</a></span></span>
+        </div>
+    
+			<div class="post-like">
+	    
+	</div>
+</div>
+<div class="full-post-footer"></div></div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment msdntechnet-socialmediasharing no-wrapper" id="fragment-47622">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+
+ 
+
+
+
+<style type="text/css">
+  @import url(/cfs-file.ashx/__key/defaultwidgets/03960eaa523b43e68db2c642abc1fa61-bc406418780444579c37881d2143a9eb/sharethis.css);
+</style>
+<script src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/ShareThis.js" type="text/javascript"></script>
+<div class="ShareThisMainPanel">
+  <div class="ShareThis_ChildRootPanel" onmouseover="ShareThisChildRootPanelOnmouseOver();" onmouseout="ShareThisChildRootPanelOnmouseOut();">
+    <div class="tierOnePanel">
+      <div class="buttonPanel">
+        <a title="Share on Facebook" class="iconsOnPanel" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fblogs.technet.com%2Fb%2Fcsps%2Farchive%2F2011%2F02%2F01%2Fhowtoadphonetolineuri.aspx&t=Active%20Directory%20Phone%20Numbers%20and%20Line%20URIs:%20Together%20at%20Last!" target="_blank">
+          <img title="Share on Facebook" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/facebook.gif" style="border-width:0px;">
+        </a>
+      </div>
+      <div class="buttonPanel">
+       <a title="Share on LinkedIn" class="iconsOnPanel" href="http://www.linkedin.com/shareArticle?mini=true&ro=true&summary=&source=Microsoft&armin=armin&url=http%3A%2F%2Fblogs.technet.com%2Fb%2Fcsps%2Farchive%2F2011%2F02%2F01%2Fhowtoadphonetolineuri.aspx&title=Active%20Directory%20Phone%20Numbers%20and%20Line%20URIs:%20Together%20at%20Last!" target="_blank">
+         <img title="Share on LinkedIn" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/linkedin.gif" style="border-width:0px;">
+       </a>
+      </div>
+       <div class="buttonPanel">
+          <a title="Share on Reddit" class="iconsOnPanel" href="http://www.reddit.com/submit?url=http%3A%2F%2Fblogs.technet.com%2Fb%2Fcsps%2Farchive%2F2011%2F02%2F01%2Fhowtoadphonetolineuri.aspx&title=Active%20Directory%20Phone%20Numbers%20and%20Line%20URIs:%20Together%20at%20Last!" target="_blank">
+            <img title="Share on Reddit" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/reddit.gif" style="border-width:0px;">
+          </a>
+        </div>
+      <div class="buttonPanel">
+          <a title="Share on Twitter" class="iconsOnPanel" href="https://twitter.com/share?status=Active%20Directory%20Phone%20Numbers%20and%20Line%20URIs:%20Together%20at%20Last!%20:%20http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx" target="_blank">
+            <img title="Share on Twitter" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/twitter.gif" style="border-width:0px;">
+          </a>
+        </div>
+      <div class="buttonPanel">
+        <div id="___plus_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 78px; height: 15px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 78px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 15px;" tabindex="0" vspace="0" width="100%" id="I0_1389066544288" name="I0_1389066544288" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/sharebutton.htm" data-gapiattached="true" title="+Share"></iframe></div>
+        <script type="text/javascript">
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+      </div>
+    </div>
+    <div class="tierTwoPanel" onclick="TierTwoPanelOnclick();" onkeypress="if (event.keyCode == 13) TierTwoPanelOnclick();" onmouseover="TierTwoPanelOnmouseOver();" onmouseout="TierTwoPanelOnmouseOut();">
+      <div class="tierTwoRowPanel">       
+        <div class="buttonPanel">
+          <a title="Share on Digg" class="iconsOnPanel" href="http://digg.com/submit?url=http%3A%2F%2Fblogs.technet.com%2Fb%2Fcsps%2Farchive%2F2011%2F02%2F01%2Fhowtoadphonetolineuri.aspx&title=Active%20Directory%20Phone%20Numbers%20and%20Line%20URIs:%20Together%20at%20Last!" target="_blank">
+            <img title="Share on Digg" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/digg.gif" style="border-width:0px;">
+          </a>
+        </div>
+        <div id="tumblrBox" class="buttonPanel">
+          <a id="tmblr_btn" title="Share on Tumblr" class="iconsOnPanel" href="http://www.tumblr.com/share/photo?source=&caption=Active%20Directory%20Phone%20Numbers%20and%20Line%20URIs%3A%20Together%20at%20Last!&click_thru=http%3A%2F%2Fblogs.technet.com%2Fb%2Fcsps%2Farchive%2F2011%2F02%2F01%2Fhowtoadphonetolineuri.aspx" target="_blank" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:20px; height:20px; background:url(&#39;http://platform.tumblr.com/v1/share_4.png&#39;) top left no-repeat transparent;">
+            <img title="Share on Digg" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/digg.gif" style="border-width:0px;">
+          </a>
+        </div>
+        <script type="text/javascript">  
+            var firstImage = $('.post-content.user-defined-markup').find('img:first');
+            var tumblr_photo_source = '';
+            if($(firstImage).length > 0)
+              tumblr_photo_source = $(firstImage).attr('src');            
+            var tumblr_photo_caption = 'Active Directory Phone Numbers and Line URIs: Together at Last!';
+            var tumblr_photo_click_thru = 'http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx';            
+            $("#tmblr_btn").attr("href", "http://www.tumblr.com/share/photo?source=" + encodeURIComponent(tumblr_photo_source) + "&caption=" + encodeURIComponent(tumblr_photo_caption) + "&click_thru=" + encodeURIComponent(tumblr_photo_click_thru));
+        </script>
+        <script type="text/javascript" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/share.js"></script>        
+        <div class="buttonPanel">
+          <a title="Share on StumbleUpon" class="iconsOnPanel" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fblogs.technet.com%2Fb%2Fcsps%2Farchive%2F2011%2F02%2F01%2Fhowtoadphonetolineuri.aspx&title=Active%20Directory%20Phone%20Numbers%20and%20Line%20URIs:%20Together%20at%20Last!" target="_blank">
+            <img title="Share on StumbleUpon" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/stumbleupon.gif" style="border-width:0px;">
+          </a>
+        </div>
+      </div>
+      <div class="tierTwoRowPanel">       
+      </div>
+    </div>
+  </div>
+  <div tabindex="1" class="ShowMoreLessButtonsPanel" onclick="ShowMoreLessButtonsPanelOnClick();" onkeypress="if (event.keyCode == 13) ShowMoreLessButtonsPanelOnClick();" onmouseover="ShowMoreLessButtonsPanelOnmouseOver();" onmouseout="ShowMoreLessButtonsPanelOnmouseOut();">
+    <a class="buttonMoreLess btnMore" id="btn_more">
+      <img title="More" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/more.gif" style="border-width:0px;">
+    </a>
+    <a class="buttonMoreLess btnLess" id="btn_less">
+      <img title="Less" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/less.gif" style="border-width:0px;">
+    </a>
+  </div>
+</div>
+<div style="clear:both;"></div><!----></div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-feedback-list no-wrapper-with-spacing with-header" id="fragment-47623">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-header"><div>Comments</div></div>
+<div class="content-fragment-content">
+
+
+<div id="pi47623-paged-content">
+	<a name="comments"></a>
+	<div class="content-list-header"></div>
+	<div class="content-list-name">
+							<a class="internal-link rss" href="http://blogs.technet.com/b/csps/rsscomments.aspx?WeblogPostID=3384219">
+				<span></span>
+				Comments
+			</a>
+			</div>
+
+	<ul id="commentList" class="content-list">
+			
+			<li id="commentItem372868" class="content-item anonymous" data-commentid="372868">    
+				<div class="full-post-outer fiji-full-post-outer">
+							<div class="full-post-header">
+					<div class="r fiji-r"></div>
+				</div>         
+				<div class="full-post">
+								<div class="full-post-inner fiji-full-post-inner">             
+						<div class="post-author">                 
+							<span class="avatar" style="height:32px;">                                          
+								<img src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/anonymous.gif" style="width: 32px;height:0;padding:32px 0 0 0;overflow:hidden;background:url(&#39;http://blogs.technet.com/utility/anonymous.gif&#39;) center center no-repeat;background-size:cover;" border="0" alt="Anonymous">                                  
+							</span>
+						                            <span class="user-name">soder</span>          
+					    						</div>            
+						<div class="post-date">                 
+							<span class="value">2 Sep 2011 12:59 PM</span>             
+						</div>             						
+						<div class="post-content user-defined-markup">                 
+							<p></p><p>I would be very cautious with the uppercase "TEL:" string: it may break compatibility with some 3rd parties, that depend strictly on the case-sensitive recognition of the lowercase "tel:" string. I dont know if the SIP standard accepts both "TEL:" and "tel:" otherwise only a fully valid representation should be advertised and used here on Technet. </p>
+<p></p>
+							<div style="clear:both;"></div>             
+						</div>        
+						<div class="post-actions">                                  
+							<div class="navigation-list-header"></div>                 
+													</div>          						
+					</div> 
+					<div class="full-post-footer">                      
+						<div class="r fiji-r"></div>         
+					</div>     
+				</div>
+			</div>
+		</li>	
+	</ul>	
+	<div class="content-list-footer"></div>
+
+
+
+<div class="pager ui-page" data-currentpage="0" data-pagesize="15" data-totalitems="1" data-pagekey="pi47623" data-pagedcontenturl="/utility/scripted-file.ashx?WeblogApp=csps&amp;y=2011&amp;m=02&amp;d=01&amp;WeblogPostName=howtoadphonetolineuri&amp;GroupKeys=&amp;_cf=load.vm&amp;_fid=47623&amp;_ct=page&amp;_cp=post&amp;_ctt=a3b17ab0af5f11dda3501fcf55d89593&amp;_ctc=8362&amp;_ctn=be9e9543a7654f49848c719c4baa2a43&amp;_cc=0&amp;AppType=Weblog" data-pagedcontentwrapperid="pi47623-paged-content" data-pagedcontentpagingevent="ui.page.pi47623.paging" data-pagedcontentpagedevent="ui.page.pi47623.paged" data-configuration="Target=comments&amp;BaseUrl=%2Fb%2Fcsps%2Farchive%2F2011%2F02%2F01%2Fhowtoadphonetolineuri.aspx&amp;PagedContentFile=load.vm&amp;Transition=none">  </div>
+</div>
+
+
+<input type="hidden" id="bflBlogPostId" value="3384219">
+</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+<div class="content-fragment blog-post-comment-form no-wrapper-with-spacing" id="fragment-47624">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+
+
+<div id="fragment-47624_successMessage" class="message success">
+	Your comment has been posted. &nbsp;
+	<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" class="internal-link close-message" title="Close"><span></span>Close</a>
+</div>
+
+<div id="fragment-47624_moderateMessage" class="message warning">
+	Thank you, your comment requires moderation so it may take a while to appear. &nbsp;
+	<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" class="internal-link close-message" title="Close"><span></span>Close</a>
+</div>
+
+<div id="fragment-47624_errorMessage" class="message error" style="display: none;"></div>
+
+<div id="fragment-47624_form">
+	<div class="field-list-header"></div>
+	<fieldset class="field-list">
+		<legend class="field-list-description">Leave a Comment</legend>
+		<ul class="field-list">
+			<li class="field-item post-body">
+									<label class="field-item-header" for="post-body">Comment</label>
+								<span class="field-item-input">
+					<textarea id="fragment-47624_body" rows="3" name="fragment-47624_body" style="resize: none; overflow-y: hidden;"></textarea>
+				</span>
+				<span class="field-item-validation" style="display: none;"></span>
+			</li>
+			<li class="field-item post-submit">
+				<span class="field-item-input">
+					<a href="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx#" onclick="return false;" class="internal-link add-reply submit-button" id="fragment-47624_save">
+						<span></span>Post
+					</a>
+					<span class="processing" style="visibility: hidden;"></span>
+				</span>
+			</li>
+		</ul>
+	</fieldset>
+	<div class="field-list-footer"></div>
+</div>
+
+</div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="layout-footer"></div>
+</div></div>
+
+            
+			    <div class="footer-fragments-header"></div>
+<div class="footer-fragments" id="ctl00_footer_ctl00_page"><div class="layout">
+<div class="layout-header"></div>
+<div class="layout-content content" id="ctl00_footer_ctl00_layout">
+<div class="layout-region content" id="ctl00_footer_ctl00_content">
+<div class="layout-region-inner content"><div id="footer-268"></div>
+<div id="footer-269"></div>
+<div class="content-fragment blog-post no-wrapper 
+ 
+      " id="footer-270">
+<div class="content-fragment-inner fiji-content-fragment-inner msdn-content-fragment-inner msdntechnet"><div class="content-fragment-top fiji-content-fragment-top msdn-content-fragment-top"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div><div class="content-fragment-content">
+
+          <div data-chameleon-template="epxfooter" data-minimal="true" class="minimal"></div>
+          <div data-chameleon-template="footer" data-minimal="true" class="minimal">
+   <div id="ux-footer" class=" ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+    <div class="ux-footer-clear"></div>
+    <div id="footerRight">
+        <div id="FooterLogoContainer"><div id="FooterLogo"></div></div>
+        <div id="FooterCopyright">© 2014 Microsoft</div>
+    </div>
+    <div id="footerLeft">
+        <div id="footerProfileLink">
+        <div data-fragmentname="ManageProfileLink" id="Fragment_ManageProfileLink" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="http://go.microsoft.com/?linkid=8786243" xmlns="http://www.w3.org/1999/xhtml">Manage Your Profile</a>
+</div>
+        </div>
+        <div id="footerGroup">
+            <div id="LinkGroup">
+                <div id="Links1"><div data-fragmentname="FooterLinks" id="Fragment_FooterLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="LinkList">
+    <div class="Links">
+      <ul class="LinkColumn horizontal">
+        <li>
+          <a href="http://technet.microsoft.com/cc543196.aspx" xmlns="http://www.w3.org/1999/xhtml">Newsletter</a>
+        </li>
+        <li>
+          <div class="LinksDivider">|</div>
+          <a href="http://technet.microsoft.com/cc512759.aspx" xmlns="http://www.w3.org/1999/xhtml">Contact Us</a>
+        </li>
+        <li>
+          <div class="LinksDivider">|</div>
+          <a href="http://go.microsoft.com/fwlink/?linkid=248681" xmlns="http://www.w3.org/1999/xhtml">Privacy Statement</a>
+        </li>
+        <li>
+          <div class="LinksDivider">|</div>
+          <a href="http://technet.microsoft.com/cc300389.aspx" xmlns="http://www.w3.org/1999/xhtml">Terms of Use</a>
+        </li>
+        <li>
+          <div class="LinksDivider">|</div>
+          <a href="http://www.microsoft.com/About/Legal/EN/US/IntellectualProperty/Trademarks/EN-US.aspx" xmlns="http://www.w3.org/1999/xhtml">Trademarks</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div></div>
+            </div>
+            <div id="Feedback">
+                <div class="feedbackListItem">
+                    <div class="LinksDivider">|</div>
+                    <div class="LinkColumn">
+                        
+<style type="text/css">
+    #ux-footer .feedbackListItem {
+        display: none;
+    }
+</style>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <div id="Links2"></div>
+    </div>
+</div> 
+<script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+/*<![CDATA[*/
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "http://i.technet.microsoft.com", 
+	"js": "http://i2.technet.microsoft.com", 
+	"css": "http://i3.technet.microsoft.com"
+});
+/**/
+/*]]>*/
+</script></div>
+      </div>
+<div class="content-fragment-footer"></div>
+<div class="content-fragment-bottom fiji-content-fragment-bottom msdn-content-fragment-bottom msdntechnet"><div class="r1 fiji-r1 msdn-r1"></div><div class="r2 fiji-r2 msdn-r2"></div><div class="r3 fiji-r3 msdn-r3"></div><div class="r4 fiji-r4 msdn-r4"></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="layout-footer"></div>
+</div></div><div class="footer-fragments-footer"></div>
+            
+		
+<script type="text/javascript">
+// <![CDATA[
+ctl00_header_ctl00 = new ContentFragmentContainerCustomCallback('ctl00_header_ctl00',new Function('mode','parameters','callback','errorCallback','context','ctl00_header_ctl00_ctl00._doCallback(mode+\':\'+parameters,callback,context,errorCallback);'));
+// ]]>
+</script>	<script type="text/javascript" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/ui.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	jQuery(document).ready(function()
+	{
+		var ctxt = {
+			wrapper:jQuery('#pi47623-paged-content'),
+			widget:jQuery('#fragment-47623'),
+			baseUrl:'/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx',
+			loadCommentsUrl:'/utility/scripted-file.ashx?WeblogApp=csps\u0026y=2011\u0026m=02\u0026d=01\u0026WeblogPostName=howtoadphonetolineuri\u0026GroupKeys=\u0026_cf=load.vm\u0026_fid=47623\u0026_ct=page\u0026_cp=post\u0026_ctt=a3b17ab0af5f11dda3501fcf55d89593\u0026_ctc=8362\u0026_ctn=be9e9543a7654f49848c719c4baa2a43\u0026_cc=0\u0026AppType=Weblog',
+			deleteVerificationText:'Are you sure you want to delete this comment?',
+			errorText:'There was an error saving your comment.',
+			loadingText:'Publishing',
+			blogId: 8362,
+			blogPostId: 3384219,
+			pagedMessage: 'ui.page.pi47623.paged',
+			pageIndexQueryStringKey: 'pi47623'
+		};
+		jQuery.telligent.evolution.widgets.blogFeedbackList.register(ctxt);
+	});
+	//]]>
+	</script>
+	<script type="text/javascript" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/autoresize.jquery.min.js"></script>
+	<script type="text/javascript" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/ui(1).js"></script>
+	<script type="text/javascript">
+	jQuery(document).ready(function(j){
+		j.telligent.evolution.widgets.blogPostCommentForm.register({
+			wrapperId: 'fragment-47624',
+			blogId: 8362,
+			postId: 3384219,
+			publishErrorText: 'There was an error saving your comment.',
+			publishingText: 'Publishing',
+			publishText: 'Post',
+			bodyRequiredText: 'Please enter a comment',
+			save: j('#fragment-47624_save'),
+			bodySelector: '#fragment-47624_body',
+			successMessage: j('#fragment-47624_successMessage'),
+			moderateMessage: j('#fragment-47624_moderateMessage'),
+			errorMessage: j('#fragment-47624_errorMessage')
+		});
+	});
+	</script>
+<script type="text/javascript">
+// <![CDATA[
+ctl00_content_ctl00 = new ContentFragmentContainerCustomCallback('ctl00_content_ctl00',new Function('mode','parameters','callback','errorCallback','context','ctl00_content_ctl00_ctl00._doCallback(mode+\':\'+parameters,callback,context,errorCallback);'));
+// ]]>
+</script>	        <script type="text/javascript" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/omni_5F00_rsid_5F00_technet_5F00_current.js"></script>
+          <noscript>
+          &lt;a href="http://www.omniture.com" title="Web Analytics"&gt;
+            &lt;img src="http://msstonojssocial.112.2O7.net/b/ss/msstonojssocial/1/H.20.2--NS/0" height="1" width="1" border="0" alt=""&gt;
+          &lt;/a&gt;                
+	        </noscript>
+        	        <script type="text/javascript" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/omni_5F00_rsid_5F00_technet_5F00_current.js"></script>
+          <noscript>
+          &lt;a href="http://www.omniture.com" title="Web Analytics"&gt;
+            &lt;img src="http://msstonojssocial.112.2O7.net/b/ss/msstonojssocial/1/H.20.2--NS/0" height="1" width="1" border="0" alt=""&gt;
+          &lt;/a&gt;                
+	        </noscript>
+        <script type="text/javascript">
+// <![CDATA[
+ctl00_footer_ctl00 = new ContentFragmentContainerCustomCallback('ctl00_footer_ctl00',new Function('mode','parameters','callback','errorCallback','context','ctl00_footer_ctl00_ctl00._doCallback(mode+\':\'+parameters,callback,context,errorCallback);'));
+// ]]>
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+rdf:about="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx"
+dc:identifier="http://blogs.technet.com/b/csps/archive/2011/02/01/howtoadphonetolineuri.aspx"
+dc:title="Active Directory Phone Numbers and Line URIs: Together at Last!"
+trackback:ping="http://blogs.technet.com/b/csps/trackback.ashx?WeblogPostID=3384219" />
+</rdf:RDF>
+-->
+<script src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/rss.aspx" type="text/javascript" charset="utf-8"></script> <script type="text/javascript">
+// <![CDATA[
+window.ctl00_header_ctl00_ctl00 = new Telligent_CallbackManager('ctl00_header_ctl00_ctl00','ctl00$header$ctl00$ctl00','aspnetForm');
+// ]]>
+</script><script type="text/javascript">
+// <![CDATA[
+window.ctl00_content_ctl00_ctl00 = new Telligent_CallbackManager('ctl00_content_ctl00_ctl00','ctl00$content$ctl00$ctl00','aspnetForm');
+// ]]>
+</script><script type="text/javascript">
+// <![CDATA[
+window.ctl00_footer_ctl00_ctl00 = new Telligent_CallbackManager('ctl00_footer_ctl00_ctl00','ctl00$footer$ctl00$ctl00','aspnetForm');
+// ]]>
+</script></form><iframe name="oauth2relay692098137" id="oauth2relay692098137" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/postmessageRelay.htm" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe>
+	
+
+<div id="_WEDCSInsertedData" style="display: none;"><iframe id="_msnFrame" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/c.gif" style="z-index:-1;height:1px;width:1px;display:none;visibility:hidden;" onload="javascript:MscomBeacon();"></iframe><iframe id="_msnFrame" src="./Active Directory Phone Numbers and Line URIs  Together at Last! - Lync PowerShell - Site Home - TechNet Blogs_files/c.gif" style="z-index:-1;height:1px;width:1px;display:none;visibility:hidden;" onload="javascript:MscomBeacon();"></iframe></div></body></html>

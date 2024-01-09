@@ -1,0 +1,19 @@
+Identity                       : \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK\/o=Tui Ora Ltd/cn=addrlists/cn=oabs/cn=Default Web-Based Offline Address Book
+IsValid                        : True
+OriginatingServer              : tolms01
+
+Identity                       : \NON_IPM_SUBTREE\OWAScratchPad{B1C909BE-0BE2-4394-B87D-3596B01025D9}
+IsValid                        : True
+OriginatingServer              : tolms01
+
+Identity                       : \NON_IPM_SUBTREE\StoreEvents{B1C909BE-0BE2-4394-B87D-3596B01025D9}
+IsValid                        : True
+OriginatingServer              : tolms01
+
+Identity                       : \NON_IPM_SUBTREE\StoreEvents{B1C909BE-0BE2-4394-B87D-3596B01025D9}\globalevents
+IsValid                        : True
+OriginatingServer              : tolms01
+
+Identity                       : \NON_IPM_SUBTREE\StoreEvents{B1C909BE-0BE2-4394-B87D-3596B01025D9}\internal
+IsValid                        : True
+OriginatingServer              : tolms01

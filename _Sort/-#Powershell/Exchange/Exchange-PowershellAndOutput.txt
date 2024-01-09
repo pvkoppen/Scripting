@@ -1,0 +1,243 @@
+
+         Welcome to the Exchange Management Shell!
+
+ Full list of cmdlets:          get-command
+ Only Exchange cmdlets:         get-excommand
+ Cmdlets for a specific role:   get-help -role *UM* or *Mailbox*
+ Get general help:              help
+ Get help for a cmdlet:         help <cmdlet-name> or <cmdlet-name> -?
+ Show quick reference guide:    quickref
+ Exchange team blog:            get-exblog
+ Show full output for a cmd:    <cmd> | format-list
+
+Tip of the day #76:
+
+Do you want to see everything that occurs when you run a command? Include the Ve
+rbose parameter with the command. This parameter instructs the Exchange Manageme
+nt Shell to display detailed information about each action that the server takes
+ to complete the command. This information can be useful in troubleshooting.
+
+[PS] C:\Documents and Settings\admin-peter>Get-WebServicesVirtualDirectory
+
+Name                       Server                     InternalUrl
+----                       ------                     -----------
+EWS (Default Web Site)     TOLMS01                    https://tolms01.tol.lo...
+
+
+[PS] C:\Documents and Settings\admin-peter>Get-WebServicesVirtualDirectory |form
+at-list
+
+
+InternalNLBBypassUrl          : https://tolms01.tol.local/ews/exchange.asmx
+Name                          : EWS (Default Web Site)
+InternalAuthenticationMethods : {Ntlm, WindowsIntegrated}
+ExternalAuthenticationMethods : {Ntlm, WindowsIntegrated}
+BasicAuthentication           : False
+DigestAuthentication          : False
+WindowsAuthentication         : True
+MetabasePath                  : IIS://TOLMS01.tol.local/W3SVC/1/ROOT/EWS
+Path                          : C:\Program Files\Microsoft\Exchange Server\Clie
+                                ntAccess\exchweb\EWS
+Server                        : TOLMS01
+InternalUrl                   : https://tolms01.tol.local/EWS/Exchange.asmx
+ExternalUrl                   :
+AdminDisplayName              :
+ExchangeVersion               : 0.1 (8.0.535.0)
+DistinguishedName             : CN=EWS (Default Web Site),CN=HTTP,CN=Protocols,
+                                CN=TOLMS01,CN=Servers,CN=Exchange Administrativ
+                                e Group (FYDIBOHF23SPDLT),CN=Administrative Gro
+                                ups,CN=Tui Ora Ltd,CN=Microsoft Exchange,CN=Ser
+                                vices,CN=Configuration,DC=tol,DC=local
+Identity                      : TOLMS01\EWS (Default Web Site)
+Guid                          : 652ce171-42c8-44a0-8270-befafa0b1670
+ObjectCategory                : tol.local/Configuration/Schema/ms-Exch-Web-Serv
+                                ices-Virtual-Directory
+ObjectClass                   : {top, msExchVirtualDirectory, msExchWebServices
+                                VirtualDirectory}
+WhenChanged                   : 4/11/2011 11:17:44 a.m.
+WhenCreated                   : 30/09/2009 10:52:30 p.m.
+OriginatingServer             : TOLDM01.tol.local
+IsValid                       : True
+
+
+
+[PS] C:\Documents and Settings\admin-peter>Set-WebServicesVirtualDirectory -Inte
+rnalURL "https://tolms01.tol.local/EWS/Exchange.asmx" -ExternalURL "https://remo
+te.tuiora.co.nz/EWS/Exchange.asmx"
+
+cmdlet Set-WebServicesVirtualDirectory at command pipeline position 1
+Supply values for the following parameters:
+Identity:
+Set-WebServicesVirtualDirectory : Cannot bind parameter 'Identity'. Cannot conv
+ert value "" to type "Microsoft.Exchange.Configuration.Tasks.VirtualDirectoryId
+Parameter". Error: "The parameter value of this type Microsoft.Exchange.Configu
+ration.Tasks.VirtualDirectoryIdParameter cannot be empty.
+Parameter name: identity"
+At line:1 char:32
++ Set-WebServicesVirtualDirectory  <<<< -InternalURL "https://tolms01.tol.local
+/EWS/Exchange.asmx" -ExternalURL "https://remote.tuiora.co.nz/EWS/Exchange.asmx
+"
+[PS] C:\Documents and Settings\admin-peter>Get-WebServicesVirtualDirectory | Set
+-WebServicesVirtualDirectory -InternalURL "https://tolms01.tol.local/EWS/Exchang
+e.asmx" -ExternalURL "https://remote.tuiora.co.nz/EWS/Exchange.asmx"
+[PS] C:\Documents and Settings\admin-peter>help history
+
+NAME
+    Get-History
+
+SYNOPSIS
+    Gets a list of the commands entered during the current session.
+
+
+SYNTAX
+    Get-History [[-id] <long[]>] [[-count] <int>] [<CommonParameters>]
+
+
+DETAILED DESCRIPTION
+    The Get-History cmdlet gets the session history, that is, the list of comma
+    nds entered during the current session. Windows PowerShell automatically ma
+    intains a history of each session. You can save the session history in XML
+    or CSV format. By default, history files are saved in the home directory, b
+    ut you can save the file in any location.
+
+
+RELATED LINKS
+    Invoke-History
+    Add-History
+
+[PS] C:\Documents and Settings\admin-peter>get-history -count 1000 | format-list
+
+
+
+Id                 : 1
+CommandLine        : . 'C:\Program Files\Microsoft\Exchange Server\bin\Exchange
+                     .ps1'
+ExecutionStatus    : Completed
+StartExecutionTime : 4/03/2013 5:09:18 p.m.
+EndExecutionTime   : 4/03/2013 5:09:20 p.m.
+
+Id                 : 2
+CommandLine        : Get-WebServicesVirtualDirectory
+ExecutionStatus    : Completed
+StartExecutionTime : 4/03/2013 5:09:27 p.m.
+EndExecutionTime   : 4/03/2013 5:09:29 p.m.
+
+Id                 : 3
+CommandLine        : Get-WebServicesVirtualDirectory |format-list
+ExecutionStatus    : Completed
+StartExecutionTime : 4/03/2013 5:09:35 p.m.
+EndExecutionTime   : 4/03/2013 5:09:35 p.m.
+
+Id                 : 4
+CommandLine        : Set-WebServicesVirtualDirectory -InternalURL "https://tolm
+                     s01.tol.local/EWS/Exchange.asmx" -ExternalURL "https://rem
+                     ote.tuiora.co.nz/EWS/Exchange.asmx"
+ExecutionStatus    : Completed
+StartExecutionTime : 4/03/2013 5:10:42 p.m.
+EndExecutionTime   : 4/03/2013 5:10:52 p.m.
+
+Id                 : 5
+CommandLine        : Get-WebServicesVirtualDirectory | Set-WebServicesVirtualDi
+                     rectory -InternalURL "https://tolms01.tol.local/EWS/Exchan
+                     ge.asmx" -ExternalURL "https://remote.tuiora.co.nz/EWS/Exc
+                     hange.asmx"
+ExecutionStatus    : Completed
+StartExecutionTime : 4/03/2013 5:11:24 p.m.
+EndExecutionTime   : 4/03/2013 5:11:25 p.m.
+
+Id                 : 6
+CommandLine        : help history
+ExecutionStatus    : Completed
+StartExecutionTime : 4/03/2013 5:11:50 p.m.
+EndExecutionTime   : 4/03/2013 5:11:54 p.m.
+
+
+
+[PS] C:\Documents and Settings\admin-peter>get-history -count 1000 | format-list
+ Commandline
+
+
+CommandLine : . 'C:\Program Files\Microsoft\Exchange Server\bin\Exchange.ps1'
+
+CommandLine : Get-WebServicesVirtualDirectory
+
+CommandLine : Get-WebServicesVirtualDirectory |format-list
+
+CommandLine : Set-WebServicesVirtualDirectory -InternalURL "https://tolms01.tol
+              .local/EWS/Exchange.asmx" -ExternalURL "https://remote.tuiora.co.
+              nz/EWS/Exchange.asmx"
+
+CommandLine : Get-WebServicesVirtualDirectory | Set-WebServicesVirtualDirectory
+               -InternalURL "https://tolms01.tol.local/EWS/Exchange.asmx" -Exte
+              rnalURL "https://remote.tuiora.co.nz/EWS/Exchange.asmx"
+
+CommandLine : help history
+
+CommandLine : get-history -count 1000 | format-list
+
+
+
+[PS] C:\Documents and Settings\admin-peter>get-history -count 1000 | format-list
+ Commandline
+
+
+CommandLine : . 'C:\Program Files\Microsoft\Exchange Server\bin\Exchange.ps1'
+
+CommandLine : Get-WebServicesVirtualDirectory
+
+CommandLine : Get-WebServicesVirtualDirectory |format-list
+
+CommandLine : Set-WebServicesVirtualDirectory -InternalURL "https://tolms01.tol
+              .local/EWS/Exchange.asmx" -ExternalURL "https://remote.tuiora.co.
+              nz/EWS/Exchange.asmx"
+
+CommandLine : Get-WebServicesVirtualDirectory | Set-WebServicesVirtualDirectory
+               -InternalURL "https://tolms01.tol.local/EWS/Exchange.asmx" -Exte
+              rnalURL "https://remote.tuiora.co.nz/EWS/Exchange.asmx"
+
+CommandLine : help history
+
+CommandLine : get-history -count 1000 | format-list
+
+CommandLine : get-history -count 1000 | format-list Commandline
+
+
+
+[PS] C:\Documents and Settings\admin-peter>Get-WebServicesVirtualDirectory |form
+at-list
+
+
+InternalNLBBypassUrl          : https://tolms01.tol.local/ews/exchange.asmx
+Name                          : EWS (Default Web Site)
+InternalAuthenticationMethods : {Ntlm, WindowsIntegrated}
+ExternalAuthenticationMethods : {Ntlm, WindowsIntegrated}
+BasicAuthentication           : False
+DigestAuthentication          : False
+WindowsAuthentication         : True
+MetabasePath                  : IIS://TOLMS01.tol.local/W3SVC/1/ROOT/EWS
+Path                          : C:\Program Files\Microsoft\Exchange Server\Clie
+                                ntAccess\exchweb\EWS
+Server                        : TOLMS01
+InternalUrl                   : https://tolms01.tol.local/EWS/Exchange.asmx
+ExternalUrl                   : https://remote.tuiora.co.nz/EWS/Exchange.asmx
+AdminDisplayName              :
+ExchangeVersion               : 0.1 (8.0.535.0)
+DistinguishedName             : CN=EWS (Default Web Site),CN=HTTP,CN=Protocols,
+                                CN=TOLMS01,CN=Servers,CN=Exchange Administrativ
+                                e Group (FYDIBOHF23SPDLT),CN=Administrative Gro
+                                ups,CN=Tui Ora Ltd,CN=Microsoft Exchange,CN=Ser
+                                vices,CN=Configuration,DC=tol,DC=local
+Identity                      : TOLMS01\EWS (Default Web Site)
+Guid                          : 652ce171-42c8-44a0-8270-befafa0b1670
+ObjectCategory                : tol.local/Configuration/Schema/ms-Exch-Web-Serv
+                                ices-Virtual-Directory
+ObjectClass                   : {top, msExchVirtualDirectory, msExchWebServices
+                                VirtualDirectory}
+WhenChanged                   : 4/03/2013 5:11:25 p.m.
+WhenCreated                   : 30/09/2009 10:52:30 p.m.
+OriginatingServer             : TOLDM01.tol.local
+IsValid                       : True
+
+
+
+[PS] C:\Documents and Settings\admin-peter>

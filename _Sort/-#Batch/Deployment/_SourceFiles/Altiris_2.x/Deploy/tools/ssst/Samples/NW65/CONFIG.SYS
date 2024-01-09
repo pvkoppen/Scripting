@@ -1,8 +1,0 @@
-DEVICE=A:\himem.sys /testmem:off 
-DEVICE=A:\himempro.sys /v
-FILES=40
-BUFFERS=30
-DOS=HIGH,UMB
-Device=a:\cpqidecd.sys /D:CPQCDROM
-LASTDRIVE=Z
-stacks=9,256

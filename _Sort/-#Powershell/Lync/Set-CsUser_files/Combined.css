@@ -1,0 +1,2481 @@
+body {
+	font: 0.87em/1.35 "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+h1 {
+	font: 100 2.57em/1.167 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; color: rgb(112, 112, 112); margin-top: 0px; font-size-adjust: none; font-stretch: normal;
+}
+h2 {
+	margin: 0px; color: rgb(219, 113, 0); padding-top: 5px; padding-bottom: 5px; font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 1.28em; font-weight: normal;
+}
+h3 {
+	margin: 0px; color: rgb(219, 113, 0); padding-top: 5px; padding-bottom: 5px; font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 1.28em; font-weight: normal;
+}
+.contentWrapper h2 a {
+	margin: 0px; color: rgb(219, 113, 0); padding-top: 5px; padding-bottom: 5px; font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 1.28em; font-weight: normal;
+}
+.contentWrapper h3 a {
+	margin: 0px; color: rgb(219, 113, 0); padding-top: 5px; padding-bottom: 5px; font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 1.28em; font-weight: normal;
+}
+.heading {
+	margin: 0px; color: rgb(219, 113, 0); padding-top: 5px; padding-bottom: 5px; font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 1.28em; font-weight: normal;
+}
+h4 {
+	margin: 0px; color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 0.85em; font-weight: bold;
+}
+.subheading {
+	margin: 0px; color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 0.85em; font-weight: bold;
+}
+h5 {
+	margin: 0px; line-height: 130%; font-size: 0.85em; font-weight: normal;
+}
+h6 {
+	margin: 0px; line-height: 130%; font-size: 0.85em; font-weight: normal;
+}
+a:link {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+img {
+	border: 0px currentColor;
+}
+div#body {
+	padding-top: 35px; clear: both;
+}
+div#content {
+	overflow-x: auto !important; word-wrap: break-word; min-height: 300px;
+}
+.BostonPostCard > div + div + div {
+	width: auto !important;
+}
+*:first-child + html .BostonPostCard > div + div + div {
+	width: 740px !important; height: 30px !important;
+}
+*:first-child + html #contentFeedback {
+	height: 20px !important;
+}
+*:first-child + html div#content {
+	overflow: hidden;
+}
+*:first-child + html div#nstext img[usemap='#excel2'] {
+	border: currentColor;
+}
+div#nstext img[usemap='#excel2'] {
+	border: 0px currentColor;
+}
+.clear {
+	clear: both;
+}
+.majorTitle {
+	display: none;
+}
+.parameter {
+	font-style: italic;
+}
+.multicol th {
+	padding: 0px 12px 0px 0px; border: currentColor;
+}
+.multicol td {
+	padding: 0px 12px 0px 0px; border: currentColor;
+}
+td.innercol {
+	padding: 0px 12px 0px 0px; border: currentColor;
+}
+.innercol table td {
+	padding: 0px 12px 0px 0px; border: currentColor;
+}
+#mainBody ul li {
+	list-style-image: none;
+}
+p {
+	color: rgb(42, 42, 42); line-height: 18px; padding-bottom: 15px; margin-top: 0px; margin-bottom: 0px;
+}
+.topic a {
+	color: rgb(0, 112, 159); text-decoration: none;
+}
+.topic a:link {
+	color: rgb(0, 112, 159); text-decoration: none;
+}
+.topic a:visited {
+	color: rgb(3, 105, 122); text-decoration: none;
+}
+.topic a:active {
+	color: rgb(3, 105, 122); text-decoration: none;
+}
+.topic a:hover {
+	color: rgb(51, 144, 177); text-decoration: none;
+}
+.topic a.active {
+	color: rgb(42, 42, 42);
+}
+.topic a.active:link {
+	color: rgb(42, 42, 42);
+}
+.topic a.active:hover {
+	color: rgb(42, 42, 42);
+}
+.topic a.active:visited {
+	color: rgb(42, 42, 42);
+}
+.topic a.active:active {
+	color: rgb(42, 42, 42);
+}
+table {
+	padding-top: 20px; padding-bottom: 20px; border-collapse: collapse;
+}
+div#content table {
+	width: 100%;
+}
+td {
+	margin: 10px; padding: 10px 8px; border-bottom-color: rgb(219, 219, 219); border-bottom-width: 1px; border-bottom-style: solid;
+}
+th {
+	margin: 10px; padding: 10px 8px; border-bottom-color: rgb(219, 219, 219); border-bottom-width: 1px; border-bottom-style: solid;
+}
+th {
+	text-align: left; color: rgb(99, 99, 99); background-color: rgb(237, 237, 237);
+}
+td {
+	color: rgb(42, 42, 42); vertical-align: top;
+}
+table p {
+	padding-bottom: 0px;
+}
+.errorMessage {
+	color: rgb(112, 112, 112); font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 36px;
+}
+.errormessageSpacing {
+	margin-top: 3px;
+}
+table .BostonPostCard p {
+	padding-bottom: 5px;
+}
+table.members {
+	width: 100%;
+}
+table.members td {
+	min-width: 72px;
+}
+span.sup {
+	vertical-align: super;
+}
+span.sub {
+	font-size: smaller; vertical-align: sub;
+}
+.summary {
+	margin-top: 15px;
+}
+div.mtps-table {
+	display: inline-table;
+}
+div.mtps-thead {
+	display: table-header-group;
+}
+span.mtps-caption {
+	padding: 4pt; display: table-caption;
+}
+div.mtps-row {
+	padding: 4pt; display: table-row;
+}
+span.mtps-cell {
+	padding: 4pt; display: table-cell;
+}
+span.mtps-th {
+	padding: 4pt; display: table-cell;
+}
+div.alert > table {
+	border-width: 0px;
+}
+div.alert th {
+	border-width: 0px; border-style: hidden; padding: 10px 11px 5px; font-weight: bold; border-collapse: collapse; border-spacing: 0; background-color: rgb(237, 237, 237);
+}
+div.alert td {
+	border-width: 0px; padding: 10px 8px;
+}
+div.alert img {
+	border: 0px currentColor; padding-right: 5px;
+}
+div.alert p {
+	margin: 0px;
+}
+div.FVB_date {
+	color: rgb(85, 85, 85); font-size: smaller; font-style: italic; margin-bottom: 5px;
+}
+.controlPlaceholder {
+	padding: 10px; color: rgb(170, 170, 170); font-style: italic; background-color: rgb(238, 238, 238);
+}
+.input {
+	font-weight: 700;
+}
+.label {
+	font-weight: 700;
+}
+div.footerPrintView {
+	padding-top: 10px; clear: both; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; display: none;
+}
+.code {
+	color: rgb(0, 100, 0); font-family: Consolas,Courier,monospace;
+}
+.multiViewItemHeading {
+	font-style: italic; margin-top: 15px; margin-bottom: 3px;
+}
+.topic .title {
+	font-family: Segoe UI,Verdana,Arial;
+}
+#curversion {
+	color: rgb(93, 93, 93); font-size: 13px;
+}
+ol ol {
+	list-style-type: lower-alpha;
+}
+ol ol ol {
+	list-style-type: lower-roman;
+}
+.codeSnippetContainer {
+	clear: both; min-width: 260px;
+}
+.codeSnippetContainerTabs {
+	height: 23px; vertical-align: middle; position: relative; z-index: 1;
+}
+.codeSnippetContainerTab {
+	padding: 0px 15px; width: auto; height: 22px; color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; font-size: 12px; font-style: normal !important; vertical-align: baseline; float: left;
+}
+.codeSnippetContainerTabActive {
+	background: rgb(248, 248, 248); padding: 0px 15px; width: auto; height: 22px; color: rgb(112, 112, 112); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; font-size: 12px; font-style: normal !important; vertical-align: baseline; border-top-color: rgb(147, 147, 147); border-right-color: rgb(147, 147, 147); border-left-color: rgb(147, 147, 147); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid; float: left;
+}
+.codeSnippetContainerTabPhantom {
+	background: rgb(248, 248, 248); padding: 0px 15px; width: auto; height: 22px; color: rgb(194, 194, 194); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; font-size: 12px; font-style: normal !important; vertical-align: baseline; border-top-color: rgb(147, 147, 147); border-right-color: rgb(147, 147, 147); border-left-color: rgb(147, 147, 147); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid; float: left;
+}
+.codeSnippetContainerTabSingle {
+	padding: 0px 8px; left: 7px; top: 14px; width: auto; height: 22px; color: rgb(112, 112, 112); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; font-size: 12px; font-style: normal !important; vertical-align: baseline; float: left; position: relative; background-color: rgb(255, 255, 255);
+}
+.codeSnippetContainerTab a {
+	top: 2px; color: rgb(42, 42, 42); text-decoration: none; position: relative;
+}
+.codeSnippetContainerTab a:link {
+	top: 2px; color: rgb(42, 42, 42); text-decoration: none; position: relative;
+}
+.codeSnippetContainerTab a:visited {
+	top: 2px; color: rgb(42, 42, 42); text-decoration: none; position: relative;
+}
+.codeSnippetContainerTab a:active {
+	top: 2px; color: rgb(42, 42, 42); text-decoration: none; position: relative;
+}
+.codeSnippetContainerTabActive a {
+	top: 2px; color: rgb(112, 112, 112); text-decoration: none; position: relative;
+}
+.codeSnippetContainerTabActive a:link {
+	top: 2px; color: rgb(112, 112, 112); text-decoration: none; position: relative;
+}
+.codeSnippetContainerTabActive a:visited {
+	top: 2px; color: rgb(112, 112, 112); text-decoration: none; position: relative;
+}
+.codeSnippetContainerTabActive a:active {
+	top: 2px; color: rgb(112, 112, 112); text-decoration: none; position: relative;
+}
+.codeSnippetContainerTabPhantom a {
+	top: 2px; color: rgb(139, 139, 139) !important; text-decoration: none; position: relative;
+}
+.codeSnippetContainerTabPhantom a:link {
+	top: 2px; color: rgb(139, 139, 139) !important; text-decoration: none; position: relative;
+}
+.codeSnippetContainerTabPhantom a:visited {
+	top: 2px; color: rgb(139, 139, 139) !important; text-decoration: none; position: relative;
+}
+.codeSnippetContainerTabPhantom a:active {
+	top: 2px; color: rgb(139, 139, 139) !important; text-decoration: none; position: relative;
+}
+.codeSnippetContainerTabSingle a {
+	top: 2px; color: rgb(112, 112, 112); text-decoration: none; position: relative;
+}
+.codeSnippetContainerTabSingle a:link {
+	top: 2px; color: rgb(112, 112, 112); text-decoration: none; position: relative;
+}
+.codeSnippetContainerTabSingle a:visited {
+	top: 2px; color: rgb(112, 112, 112); text-decoration: none; position: relative;
+}
+.codeSnippetContainerTabSingle a:active {
+	top: 2px; color: rgb(112, 112, 112); text-decoration: none; position: relative;
+}
+.codeSnippetContainerTab a:hover {
+	top: 2px; color: rgb(112, 112, 112); position: relative;
+}
+.codeSnippetContainerTabActive a:hover {
+	top: 2px; color: rgb(112, 112, 112); position: relative;
+}
+.codeSnippetContainerTabPhantom a:hover {
+	top: 2px; color: rgb(194, 194, 194); position: relative;
+}
+.codeSnippetContainerTabSingle a:hover {
+	top: 2px; color: rgb(112, 112, 112); position: relative;
+}
+.codeSnippetContainerCodeContainer {
+	border: 1px solid rgb(147, 147, 147); top: -1px; clear: both; margin-bottom: 12px; position: relative;
+}
+.codeSnippetToolBar {
+	width: auto; height: auto;
+}
+.codeSnippetToolBarText {
+	top: -8px; width: auto; height: 0px; padding-right: 0px; padding-left: 0px; vertical-align: top; float: right; position: relative; background-color: rgb(255, 255, 255);
+}
+.codeSnippetToolBarText a:link {
+	color: rgb(42, 42, 42); padding-right: 8px; padding-left: 8px; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; font-size: 10px; font-style: normal !important; text-decoration: none; margin-right: 15px; margin-left: 15px; background-color: rgb(255, 255, 255);
+}
+.codeSnippetToolBarText a:visited {
+	color: rgb(42, 42, 42); padding-right: 8px; padding-left: 8px; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; font-size: 10px; font-style: normal !important; text-decoration: none; margin-right: 15px; margin-left: 15px; background-color: rgb(255, 255, 255);
+}
+.codeSnippetToolBarText a:active {
+	color: rgb(42, 42, 42); padding-right: 8px; padding-left: 8px; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; font-size: 10px; font-style: normal !important; text-decoration: none; margin-right: 15px; margin-left: 15px; background-color: rgb(255, 255, 255);
+}
+.codeSnippetToolBarText a:hover {
+	color: rgb(112, 112, 112);
+}
+.codeSnippetContainerCode {
+	margin: 0px; padding: 10px 21px; width: auto;
+}
+.codeSnippetContainerCode div {
+	margin: 0px; padding: 0px;
+}
+.codeSnippetContainerCode pre {
+	margin: 0px; padding: 5px; overflow: auto; font-family: Consolas,Courier,monospace !important; font-style: normal; font-weight: normal; word-wrap: normal;
+}
+.highlight {
+	background: rgb(255, 255, 198);
+}
+.LW_CollapsibleArea_TitleDiv {
+	padding-top: 20px; padding-bottom: 5px; font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; font-size: 18px; font-style: normal !important;
+}
+.LW_CollapsibleArea_TitleDiv_Collapsed {
+	padding-top: 20px; padding-bottom: 20px; font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; font-size: 18px; font-style: normal !important;
+}
+.LW_CollapsibleArea_TitleDiv a:hover {
+	color: rgb(219, 113, 0); text-decoration: none;
+}
+.LW_CollapsibleArea_TitleDiv_Collapsed a:hover {
+	color: rgb(219, 113, 0); text-decoration: none;
+}
+.LW_CollapsibleArea_Title {
+	padding-left: 10px;
+}
+.LW_CollapsibleArea_HrDiv {
+	padding-top: 0px;
+}
+.LW_CollapsibleArea_Hr {
+	color: rgb(229, 229, 229);
+}
+.sectionblock {
+	padding-bottom: 20px; padding-left: 15px; display: block;
+}
+.sectionblock ol {
+	list-style-type: decimal;
+}
+.sectionblock ol ol {
+	list-style-type: lower-alpha;
+}
+.sectionblock ol ol ol {
+	list-style-type: lower-roman;
+}
+.sectionnone {
+	padding-left: 15px; display: none;
+}
+.LW_CollapsibleArea_TitleAhref {
+	
+}
+.LW_CollapsibleArea_Img {
+	border-width: 0px; margin-top: 7px; margin-bottom: 0px; vertical-align: middle; float: left; display: inline-block;
+}
+.LW_CollapsibleArea_TitleDiv div a:link {
+	color: rgb(219, 113, 0); text-decoration: none;
+}
+.LW_CollapsibleArea_TitleDiv div a:hover {
+	color: rgb(219, 113, 0); text-decoration: none;
+}
+.LW_CollapsibleArea_TitleDiv div a:visited {
+	color: rgb(219, 113, 0); text-decoration: none;
+}
+.LW_CollapsibleArea_TitleDiv div a:focus {
+	color: rgb(219, 113, 0); text-decoration: none;
+}
+.LW_CollapsibleArea_TitleDiv_Collapsed div a:link {
+	color: rgb(219, 113, 0); text-decoration: none;
+}
+.LW_CollapsibleArea_TitleDiv_Collapsed div a:hover {
+	color: rgb(219, 113, 0); text-decoration: none;
+}
+.LW_CollapsibleArea_TitleDiv_Collapsed div a:visited {
+	color: rgb(219, 113, 0); text-decoration: none;
+}
+.LW_CollapsibleArea_TitleDiv_Collapsed div a:focus {
+	color: rgb(219, 113, 0); text-decoration: none;
+}
+.LW_CollapsibleArea_TitleDiv a span {
+	overflow: hidden; display: block;
+}
+.communityContentContainer {
+	clear: both; margin-top: 34px; border-top-color: rgb(219, 219, 219); border-top-width: 1px; border-top-style: solid; min-height: 40px;
+}
+.communityContentHeader {
+	padding: 16px 0px; border-bottom-color: rgb(213, 213, 213); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.communityContentHeaderTitle {
+	color: rgb(219, 113, 0); font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 18px;
+}
+.communityContentAddButton {
+	padding: 12px 16px 0px; text-align: center; color: rgb(44, 114, 156); float: left; cursor: pointer;
+}
+a.communityContentAddLink {
+	font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+.communityContentAnnotationTitle {
+	font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+.communityContentAnnotationBody {
+	font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+.communityContentAnnotationUserContainer {
+	font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+.communityContentAnnotationDateContainer {
+	font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+a.communityContentCommentEditLink {
+	font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+a.communityContentDeleteLink {
+	font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+a.communityContentAddLink {
+	color: rgb(255, 255, 255); font-size: 12px; display: block; cursor: pointer;
+}
+.communityContentAnnotation {
+	color: rgb(42, 42, 42); padding-top: 20px; padding-bottom: 10px; border-bottom-color: rgb(219, 219, 219); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.communityContentAnnotationTitle {
+	padding-bottom: 5px; font-size: 14px;
+}
+.communityContentAnnotationBody {
+	line-height: 18px; padding-bottom: 10px; font-size: 12px; word-wrap: break-word;
+}
+.communityContentAnnotationBody > pre {
+	white-space: pre-wrap;
+}
+.communityContentAnnotationAvatarContainer {
+	width: 34px; padding-right: 5px; float: left;
+}
+.communityContentAnnotationAvatar img {
+	border: 0px currentColor;
+}
+.communityContentAnnotationUserDateContainer {
+	padding-top: 3px;
+}
+.communityContentAnnotationUserContainer {
+	line-height: 1.35; padding-bottom: 5px; font-size: 10px;
+}
+.communityContentAnnotationUserContainer {
+	color: rgb(44, 114, 156);
+}
+.communityContentAnnotationUserContainer a {
+	color: rgb(44, 114, 156);
+}
+.communityContentAnnotationDateContainer {
+	line-height: 1.35; font-size: 10px;
+}
+a.communityContentCommentEditLink {
+	color: rgb(44, 114, 156); padding-left: 20px; font-size: 10px;
+}
+a.communityContentDeleteLink {
+	color: rgb(44, 114, 156); padding-left: 20px; font-size: 10px;
+}
+.communityContentHeaderTitleContainer h2 {
+	color: green; font-size: 18px; float: left;
+}
+.topicNotInScope {
+	padding-bottom: 10px; clear: both; position: relative;
+}
+.topicNotInScopeDisclaimer {
+	padding: 9px 10px; border: 1px solid rgb(147, 147, 147); color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 12px; background-color: rgb(239, 238, 239);
+}
+.topicNotInScopeDisclaimerText {
+	padding-right: 0px; padding-left: 26px;
+}
+.topicNotInScopeSwitchCollectionContainer {
+	float: right;
+}
+.topicNotInScopeSwitchCollection {
+	padding-right: 5px; padding-left: 5px; float: left;
+}
+.topicNotInScopeCollectionPicker {
+	margin: 0px; border: 1px solid rgb(147, 147, 147); top: 30px; width: auto; right: 10px; padding-top: 5px; padding-right: 10px; padding-left: 10px; display: none; list-style-type: none; position: absolute; z-index: 2; background-color: rgb(255, 255, 255);
+}
+.topicNotInScopeCollectionPickerItem {
+	height: 20px; margin-bottom: 2px;
+}
+.topicNotInScopeImageContainer {
+	float: left;
+}
+.topicNotInScopeImageContainer2 {
+	margin-top: 5px; float: left;
+}
+.topicNotInScopeImageContainer > img {
+	max-width: none !important;
+}
+.feedViewerBulletList ul {
+	padding-top: 0px; padding-bottom: 0px;
+}
+.feedViewerBulletList ul li {
+	padding-bottom: 0px;
+}
+.feedViewerBasic {
+	
+}
+.feedViewerItem {
+	padding-bottom: 15px;
+}
+a.feedViewerLink {
+	font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 12px;
+}
+a.feedViewerLink {
+	color: rgb(0, 112, 159);
+}
+a.feedViewerLink:active {
+	color: rgb(0, 112, 159);
+}
+a.feedViewerLink:hover {
+	color: rgb(51, 144, 177);
+}
+a.feedViewerLink:visited {
+	color: rgb(3, 105, 122);
+}
+.feedViewerDescription {
+	padding-top: 5px;
+}
+.feedViewerDescription {
+	color: rgb(42, 42, 42); line-height: 18px; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 12px; margin-top: 0px; margin-bottom: 0px;
+}
+.feedViewerDateAuthor {
+	color: rgb(42, 42, 42); line-height: 18px; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 12px; margin-top: 0px; margin-bottom: 0px;
+}
+.feedViewerDate {
+	
+}
+.feedViewerAuthor {
+	
+}
+.clip10x10 {
+	overflow: hidden; position: relative;
+}
+.clip10x46 {
+	overflow: hidden; position: relative;
+}
+.clip11x6 {
+	overflow: hidden; position: relative;
+}
+.clip11x12 {
+	overflow: hidden; position: relative;
+}
+.clip16x16 {
+	overflow: hidden; position: relative;
+}
+.clip20x20 {
+	overflow: hidden; position: relative;
+}
+.clip20x21 {
+	overflow: hidden; position: relative;
+}
+.clip22x30 {
+	overflow: hidden; position: relative;
+}
+.clip23x23 {
+	overflow: hidden; position: relative;
+}
+.clip25x25 {
+	overflow: hidden; position: relative;
+}
+.clip26x23 {
+	overflow: hidden; position: relative;
+}
+.clip29x29 {
+	overflow: hidden; position: relative;
+}
+.clip30x24 {
+	overflow: hidden; position: relative;
+}
+.clip30x25 {
+	overflow: hidden; position: relative;
+}
+.clip31x24 {
+	overflow: hidden; position: relative;
+}
+.clip32x24 {
+	overflow: hidden; position: relative;
+}
+.clip38x23 {
+	overflow: hidden; position: relative;
+}
+.clip51x24 {
+	overflow: hidden; position: relative;
+}
+.clip10x10 {
+	width: 10px; height: 10px;
+}
+.clip10x46 {
+	width: 10px; height: 46px;
+}
+.clip11x6 {
+	width: 11px; height: 6px;
+}
+.clip11x12 {
+	width: 11px; height: 12px;
+}
+.clip16x16 {
+	width: 16px; height: 16px;
+}
+.clip20x20 {
+	width: 20px; height: 20px;
+}
+.clip20x21 {
+	width: 20px; height: 21px;
+}
+.clip22x30 {
+	width: 22px; height: 30px;
+}
+.clip23x23 {
+	width: 23px; height: 23px;
+}
+.clip25x25 {
+	width: 25px; height: 25px;
+}
+.clip26x23 {
+	width: 26px; height: 23px;
+}
+.clip29x29 {
+	width: 29px; height: 29px;
+}
+.clip30x24 {
+	width: 30px; height: 24px;
+}
+.clip30x25 {
+	width: 30px; height: 25px;
+}
+.clip31x24 {
+	width: 31px; height: 24px;
+}
+.clip32x24 {
+	width: 32px; height: 24px;
+}
+.clip38x23 {
+	width: 38px; height: 23px;
+}
+.clip51x24 {
+	width: 51px; height: 24px;
+}
+.clip10x10 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip10x10 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip10x46 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip10x46 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip11x6 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip11x6 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip11x12 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip11x12 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip16x16 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip16x16 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip20x20 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip20x20 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip20x21 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip20x21 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip22x30 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip22x30 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip23x23 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip23x23 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip25x25 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip25x25 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip26x23 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip26x23 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip29x29 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip29x29 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip30x24 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip30x24 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip30x25 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip30x25 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip31x24 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip31x24 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip32x24 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip32x24 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip38x23 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip38x23 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip51x24 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip51x24 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.cl_footer_logo {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -3px -3px; width: 90px; height: 16px; overflow: hidden;
+}
+.isd_search {
+	left: -99px; top: -3px;
+}
+.search_icon_technet {
+	left: -125px; top: -3px;
+}
+.search_gray {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -160px -3px; width: 17px; height: 17px; overflow: hidden;
+}
+.cl_footer_feedback_icon {
+	left: -183px; top: -3px;
+}
+.cl_ContentFallback_Alert {
+	left: -209px; top: -3px;
+}
+.cl_msdn_close {
+	left: -240px; top: -3px;
+}
+.cl_printhelp_logo {
+	left: -268px; top: -3px;
+}
+.cl_nav_resize_close {
+	left: -297px; top: -3px;
+}
+.cl_nav_resize_open {
+	left: -313px; top: -3px;
+}
+.toc_collapsed {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -329px -3px; width: 17px; height: 17px; overflow: hidden;
+}
+.toc_expanded {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -352px -3px; width: 17px; height: 17px; overflow: hidden;
+}
+.toc_empty {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -375px -3px; width: 17px; height: 17px; overflow: hidden;
+}
+.cl_rss_button {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -398px -3px; width: 17px; height: 17px; overflow: hidden;
+}
+.cl_CollapsibleArea_expanding {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -421px -3px; width: 9px; height: 12px; overflow: hidden;
+}
+.cl_CollapsibleArea_collapsing {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -436px -3px; width: 9px; height: 12px; overflow: hidden;
+}
+.topicNotInScopeInformationImage {
+	left: -451px; top: -3px;
+}
+.cl_lw_vs_seperator {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -473px -3px; width: 1px; height: 17px; overflow: hidden;
+}
+.cl_lw_vs_arrow {
+	left: -480px; top: -3px;
+}
+.isd_settings {
+	left: -496px; top: -3px;
+}
+.isd_print {
+	left: -528px; top: -3px;
+}
+.isd_print_arrow {
+	left: -560px; top: -3px;
+}
+.closedCaptionImage {
+	left: -604px; top: -3px;
+}
+.muteImage {
+	left: -642px; top: -3px;
+}
+.pausedImage {
+	left: -679px; top: -3px;
+}
+.playImage {
+	left: -736px; top: -3px;
+}
+.restartImage {
+	left: -793px; top: -3px;
+}
+.rewindImage {
+	left: -831px; top: -3px;
+}
+.skipImage {
+	left: -867px; top: -3px;
+}
+.soundImage {
+	left: -904px; top: -3px;
+}
+.tickImage {
+	left: -940px; top: -3px;
+}
+.topicNotInScopeDropdownImage {
+	left: -957px; top: -3px;
+}
+.cl_IC46226 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -974px -3px; width: 11px; height: 11px; overflow: hidden;
+}
+.cl_IC28506 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -991px -3px; width: 11px; height: 11px; overflow: hidden;
+}
+.cl_IC90381 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1008px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC131682 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1030px -3px; width: 15px; height: 15px; overflow: hidden;
+}
+.cl_IC160177 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1051px -3px; width: 10px; height: 10px; overflow: hidden;
+}
+.cl_IC131792 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1067px -3px; width: 17px; height: 11px; overflow: hidden;
+}
+.cl_IC128933 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1090px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC169559 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1112px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC116110 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1134px -3px; width: 12px; height: 10px; overflow: hidden;
+}
+.cl_IC101471 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1152px -3px; width: 16px; height: 14px; overflow: hidden;
+}
+.cl_IC103139 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1174px -3px; width: 10px; height: 10px; overflow: hidden;
+}
+.cl_IC6709 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1190px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC115567 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1212px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC155188 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1234px -3px; width: 17px; height: 16px; overflow: hidden;
+}
+.cl_IC9948 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1257px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC100399 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1279px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC166620 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1301px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC29808 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1323px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC11304 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1345px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC134134 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1367px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC90369 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1389px -3px; width: 10px; height: 12px; overflow: hidden;
+}
+.cl_IC79755 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1405px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC157541 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1427px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC141795 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1449px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC89523 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1471px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC157062 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1493px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC34952 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1515px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC91302 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1537px -3px; width: 16px; height: 11px; overflow: hidden;
+}
+.cl_IC53205 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1559px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC148674 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1581px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC74937 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1603px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC82306 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1625px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC36774 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1647px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC169559 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1669px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC101171 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1691px -3px; width: 7px; height: 10px; overflow: hidden;
+}
+.cl_IC130242 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1704px -3px; width: 13px; height: 10px; overflow: hidden;
+}
+.cl_IC150820 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1723px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC25161 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1745px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC64394 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1767px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC153696 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1789px -3px; width: 14px; height: 18px; overflow: hidden;
+}
+.cl_IC37116 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1809px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+#ux-header {
+	margin: 0px; padding: 0px; height: auto; color: rgb(0, 0, 0); clear: both; font-family: "Segoe UI",Verdana,Arial; font-size: 0.75em; font-style: normal;
+}
+.TechNetPageBody #ux-header {
+	margin-top: -20px;
+}
+#ux-header a:link {
+	text-decoration: none;
+}
+#ux-header a:visited {
+	text-decoration: none;
+}
+#ux-header .logoText {
+	color: rgb(51, 51, 51); font-size: 18px; font-weight: 500;
+}
+#ux-header img {
+	border: 0px currentColor;
+}
+#ux-header div.upperBand {
+	height: 73px; margin-top: 40px; margin-bottom: 14px;
+}
+#ux-header > div.upperBand > a {
+	top: 38px; float: left; position: relative;
+}
+#ux-header div.upperBand a[title='Microsoft TechNet'] {
+	top: 0px; height: 86px;
+}
+#ux-header *:first-child + html div.upperBand {
+	margin: 39px 20px 16px;
+}
+#ux-header a {
+	color: rgb(102, 102, 102); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 14px;
+}
+#ux-header a:visited {
+	color: rgb(102, 102, 102); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 14px;
+}
+#ux-header div.tabContainer a:hover {
+	color: rgb(219, 113, 0);
+}
+#ux-header div.tabContainer a:active {
+	color: rgb(219, 113, 0);
+}
+#ux-header div.tabContainer a:hover {
+	color: rgb(219, 113, 0);
+}
+#ux-header div.tabContainer a.active {
+	color: rgb(219, 113, 0);
+}
+#ux-header div.SearchBox {
+	background: rgb(255, 255, 255); padding: 0px; border: 1px solid rgb(204, 204, 204); top: 10px; width: 426px; height: 32px; clear: both;
+}
+#ux-header .SearchBox input {
+	border-width: 0px; margin: 4px 8px 0px; width: 376px; height: 20px; color: rgb(112, 112, 112) !important; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 14px; font-style: normal !important; vertical-align: middle; -moz-outline: none;
+}
+#ux-header .SearchBox button {
+	background: url("/Areas/Sto/Content/Theming/technet/tn_metro/Images/Imagesprite.png") no-repeat -73px -20px rgb(255, 255, 255) !important; border-width: 0px; margin: 2px 1px; padding: 0px; width: 29px; height: 29px; text-align: right; vertical-align: top; float: right; display: inline-block; cursor: pointer;
+}
+#ux-header div.upperRight {
+	top: -3px; float: right; position: relative; max-height: 32px;
+}
+#ux-header div.upperRight a {
+	font-size: 12px; text-decoration: none; margin-left: 12px;
+}
+#ux-header div.upperRight .controls {
+	float: right; min-height: 32px;
+}
+.library #ux-header div.upperRight .controls {
+	float: right; min-height: 42px;
+}
+#ux-header div.upperRight .selectLocale {
+	display: inline-block;
+}
+#ux-header .ux-nav a {
+	background: rgb(255, 255, 255); margin: 0px 0px 0px 5px; padding: 6px 10px 3px; color: rgb(102, 102, 102); float: none;
+}
+.ux-nav a:link {
+	background: rgb(255, 255, 255); margin: 0px 0px 0px 5px; padding: 6px 10px 3px; color: rgb(102, 102, 102); float: none;
+}
+.ux-nav a:visited {
+	background: rgb(255, 255, 255); margin: 0px 0px 0px 5px; padding: 6px 10px 3px; color: rgb(102, 102, 102); float: none;
+}
+#ux-header .ux-nav a:first-child {
+	margin: 0px;
+}
+.ux-nav a:first-child:link {
+	margin: 0px;
+}
+.ux-nav a:first-child:visited {
+	margin: 0px;
+}
+#ux-header div.ux-nav {
+	background-position: right top; margin: 3px 0px 0px; padding: 0px 0px 10px; line-height: 1.75; font-size: 14px; white-space: nowrap; position: relative; background-repeat: no-repeat;
+}
+#ux-header div.TocNavigation .toclevel1 {
+	padding-bottom: 16px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#ux-header div.TocNavigation .toclevel2 {
+	background-position: right top; font: bold 11px/normal "Segoe UI Semibold", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; padding: 5px 0px; height: auto; text-transform: uppercase; overflow: hidden; margin-left: 0px; border-bottom-color: rgb(217, 217, 217); border-bottom-width: 1px; border-bottom-style: solid; white-space: nowrap; position: relative; font-size-adjust: none; font-stretch: normal; background-repeat: no-repeat;
+}
+#ux-header div.TocNavigation .toclevel2 a {
+	font: bold 11px/normal "Segoe UI Semibold", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; float: left; white-space: nowrap; cursor: pointer; font-size-adjust: none; font-stretch: normal;
+}
+#ux-header div.TocNavigation .toclevel2 a:link {
+	color: rgb(0, 116, 158);
+}
+#ux-header div.TocNavigation .toclevel2 a:hover {
+	color: rgb(0, 149, 196); background-color: rgb(255, 255, 255);
+}
+#ux-header div.TocNavigation {
+	margin-right: 5px;
+}
+#ux-header div.TocNavigation a {
+	padding: 3px 10px;
+}
+#ux-header div.TocNavigation a:hover {
+	color: rgb(0, 0, 0); background-color: rgb(204, 204, 204);
+}
+#ux-header div.TocNavigation a.active {
+	color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);
+}
+.isd#ux-header div.TocNavigation a:hover {
+	color: rgb(102, 102, 102); background-color: rgb(255, 255, 255);
+}
+.isd#ux-header div.TocNavigation a.active {
+	color: rgb(203, 75, 27); background-color: rgb(255, 255, 255);
+}
+#ux-header a.createProfileLink {
+	font-weight: bold; float: right;
+}
+.rtl#ux-header > div.upperBand > a {
+	float: right;
+}
+.rtl#ux-header div.TocNavigation .toclevel2 a {
+	float: right;
+}
+.rtl#ux-header div.upperRight {
+	float: left;
+}
+.rtl#ux-header div.upperRight .controls {
+	float: left;
+}
+.rtl#ux-header a.createProfileLink {
+	float: left;
+}
+.rtl#ux-header .SearchBox button {
+	float: left;
+}
+.rtl#ux-header div.upperRight a {
+	margin-right: 12px; margin-left: 0px;
+}
+.clip10x10 {
+	overflow: hidden; position: relative;
+}
+.clip10x46 {
+	overflow: hidden; position: relative;
+}
+.clip11x6 {
+	overflow: hidden; position: relative;
+}
+.clip11x12 {
+	overflow: hidden; position: relative;
+}
+.clip16x16 {
+	overflow: hidden; position: relative;
+}
+.clip20x20 {
+	overflow: hidden; position: relative;
+}
+.clip20x21 {
+	overflow: hidden; position: relative;
+}
+.clip22x30 {
+	overflow: hidden; position: relative;
+}
+.clip23x23 {
+	overflow: hidden; position: relative;
+}
+.clip25x25 {
+	overflow: hidden; position: relative;
+}
+.clip26x23 {
+	overflow: hidden; position: relative;
+}
+.clip29x29 {
+	overflow: hidden; position: relative;
+}
+.clip30x24 {
+	overflow: hidden; position: relative;
+}
+.clip30x25 {
+	overflow: hidden; position: relative;
+}
+.clip31x24 {
+	overflow: hidden; position: relative;
+}
+.clip32x24 {
+	overflow: hidden; position: relative;
+}
+.clip38x23 {
+	overflow: hidden; position: relative;
+}
+.clip51x24 {
+	overflow: hidden; position: relative;
+}
+.clip10x10 {
+	width: 10px; height: 10px;
+}
+.clip10x46 {
+	width: 10px; height: 46px;
+}
+.clip11x6 {
+	width: 11px; height: 6px;
+}
+.clip11x12 {
+	width: 11px; height: 12px;
+}
+.clip16x16 {
+	width: 16px; height: 16px;
+}
+.clip20x20 {
+	width: 20px; height: 20px;
+}
+.clip20x21 {
+	width: 20px; height: 21px;
+}
+.clip22x30 {
+	width: 22px; height: 30px;
+}
+.clip23x23 {
+	width: 23px; height: 23px;
+}
+.clip25x25 {
+	width: 25px; height: 25px;
+}
+.clip26x23 {
+	width: 26px; height: 23px;
+}
+.clip29x29 {
+	width: 29px; height: 29px;
+}
+.clip30x24 {
+	width: 30px; height: 24px;
+}
+.clip30x25 {
+	width: 30px; height: 25px;
+}
+.clip31x24 {
+	width: 31px; height: 24px;
+}
+.clip32x24 {
+	width: 32px; height: 24px;
+}
+.clip38x23 {
+	width: 38px; height: 23px;
+}
+.clip51x24 {
+	width: 51px; height: 24px;
+}
+.clip10x10 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip10x10 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip10x46 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip10x46 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip11x6 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip11x6 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip11x12 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip11x12 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip16x16 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip16x16 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip20x20 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip20x20 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip20x21 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip20x21 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip22x30 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip22x30 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip23x23 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip23x23 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip25x25 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip25x25 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip26x23 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip26x23 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip29x29 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip29x29 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip30x24 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip30x24 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip30x25 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip30x25 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip31x24 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip31x24 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip32x24 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip32x24 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip38x23 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip38x23 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip51x24 img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.clip51x24 input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.cl_footer_logo {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -3px -3px; width: 90px; height: 16px; overflow: hidden;
+}
+.isd_search {
+	left: -99px; top: -3px;
+}
+.search_icon_technet {
+	left: -125px; top: -3px;
+}
+.search_gray {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -160px -3px; width: 17px; height: 17px; overflow: hidden;
+}
+.cl_footer_feedback_icon {
+	left: -183px; top: -3px;
+}
+.cl_ContentFallback_Alert {
+	left: -209px; top: -3px;
+}
+.cl_msdn_close {
+	left: -240px; top: -3px;
+}
+.cl_printhelp_logo {
+	left: -268px; top: -3px;
+}
+.cl_nav_resize_close {
+	left: -297px; top: -3px;
+}
+.cl_nav_resize_open {
+	left: -313px; top: -3px;
+}
+.toc_collapsed {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -329px -3px; width: 17px; height: 17px; overflow: hidden;
+}
+.toc_expanded {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -352px -3px; width: 17px; height: 17px; overflow: hidden;
+}
+.toc_empty {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -375px -3px; width: 17px; height: 17px; overflow: hidden;
+}
+.cl_rss_button {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -398px -3px; width: 17px; height: 17px; overflow: hidden;
+}
+.cl_CollapsibleArea_expanding {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -421px -3px; width: 9px; height: 12px; overflow: hidden;
+}
+.cl_CollapsibleArea_collapsing {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -436px -3px; width: 9px; height: 12px; overflow: hidden;
+}
+.topicNotInScopeInformationImage {
+	left: -451px; top: -3px;
+}
+.cl_lw_vs_seperator {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -473px -3px; width: 1px; height: 17px; overflow: hidden;
+}
+.cl_lw_vs_arrow {
+	left: -480px; top: -3px;
+}
+.isd_settings {
+	left: -496px; top: -3px;
+}
+.isd_print {
+	left: -528px; top: -3px;
+}
+.isd_print_arrow {
+	left: -560px; top: -3px;
+}
+.closedCaptionImage {
+	left: -604px; top: -3px;
+}
+.muteImage {
+	left: -642px; top: -3px;
+}
+.pausedImage {
+	left: -679px; top: -3px;
+}
+.playImage {
+	left: -736px; top: -3px;
+}
+.restartImage {
+	left: -793px; top: -3px;
+}
+.rewindImage {
+	left: -831px; top: -3px;
+}
+.skipImage {
+	left: -867px; top: -3px;
+}
+.soundImage {
+	left: -904px; top: -3px;
+}
+.tickImage {
+	left: -940px; top: -3px;
+}
+.topicNotInScopeDropdownImage {
+	left: -957px; top: -3px;
+}
+.cl_IC46226 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -974px -3px; width: 11px; height: 11px; overflow: hidden;
+}
+.cl_IC28506 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -991px -3px; width: 11px; height: 11px; overflow: hidden;
+}
+.cl_IC90381 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1008px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC131682 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1030px -3px; width: 15px; height: 15px; overflow: hidden;
+}
+.cl_IC160177 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1051px -3px; width: 10px; height: 10px; overflow: hidden;
+}
+.cl_IC131792 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1067px -3px; width: 17px; height: 11px; overflow: hidden;
+}
+.cl_IC128933 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1090px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC169559 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1112px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC116110 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1134px -3px; width: 12px; height: 10px; overflow: hidden;
+}
+.cl_IC101471 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1152px -3px; width: 16px; height: 14px; overflow: hidden;
+}
+.cl_IC103139 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1174px -3px; width: 10px; height: 10px; overflow: hidden;
+}
+.cl_IC6709 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1190px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC115567 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1212px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC155188 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1234px -3px; width: 17px; height: 16px; overflow: hidden;
+}
+.cl_IC9948 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1257px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC100399 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1279px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC166620 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1301px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC29808 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1323px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC11304 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1345px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC134134 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1367px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC90369 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1389px -3px; width: 10px; height: 12px; overflow: hidden;
+}
+.cl_IC79755 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1405px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC157541 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1427px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC141795 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1449px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC89523 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1471px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC157062 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1493px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC34952 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1515px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC91302 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1537px -3px; width: 16px; height: 11px; overflow: hidden;
+}
+.cl_IC53205 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1559px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC148674 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1581px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC74937 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1603px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC82306 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1625px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC36774 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1647px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC169559 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1669px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC101171 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1691px -3px; width: 7px; height: 10px; overflow: hidden;
+}
+.cl_IC130242 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1704px -3px; width: 13px; height: 10px; overflow: hidden;
+}
+.cl_IC150820 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1723px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC25161 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1745px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC64394 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1767px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+.cl_IC153696 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1789px -3px; width: 14px; height: 18px; overflow: hidden;
+}
+.cl_IC37116 {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") no-repeat -1809px -3px; width: 16px; height: 16px; overflow: hidden;
+}
+div.printExportMenus {
+	font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 10px; margin-right: 9px; float: right;
+}
+div.printExportMenus a {
+	margin: 3px 3px 0px; padding: 0px 7px; color: rgb(255, 255, 255); background-color: rgb(102, 102, 102);
+}
+div.printExportMenus a:visited {
+	margin: 3px 3px 0px; padding: 0px 7px; color: rgb(255, 255, 255); background-color: rgb(102, 102, 102);
+}
+div.printExportMenus a:link {
+	margin: 3px 3px 0px; padding: 0px 7px; color: rgb(255, 255, 255); background-color: rgb(102, 102, 102);
+}
+div.printExportMenus a:hover {
+	margin: 3px 3px 0px; padding: 0px 7px; color: rgb(255, 255, 255); background-color: rgb(102, 102, 102);
+}
+div.printExportMenus a:active {
+	margin: 3px 3px 0px; padding: 0px 7px; color: rgb(255, 255, 255); background-color: rgb(102, 102, 102);
+}
+div.printExportMenus a#isd_printABook {
+	display: none;
+}
+div.printExportMenus a.exportToolBarShown {
+	border-width: 3px 3px 5px; border-style: solid; border-color: rgb(229, 229, 229); margin: 0px;
+}
+div.printExportMenus.rtl {
+	float: left;
+}
+div.printExportMenus.rtl {
+	margin-right: 0px; margin-left: 9px;
+}
+div#leftNav {
+	margin: 0px 28px 0px 0px; width: 215px; float: left; position: relative; min-height: 10px;
+}
+div#tocnav {
+	line-height: normal; font-family: "Segoe UI",Verdana,Arial; font-size: 1em; overflow-x: hidden;
+}
+div#tocnav > div {
+	width: auto; margin-bottom: 10px; white-space: normal; overflow-x: hidden;
+}
+div#leftNav a {
+	color: rgb(19, 100, 196); text-decoration: none;
+}
+div#leftNav a:link {
+	color: rgb(19, 100, 196); text-decoration: none;
+}
+div#leftNav a:visited {
+	color: rgb(19, 100, 196); text-decoration: none;
+}
+div#tocnav > div > a {
+	overflow: hidden; margin-left: 22px; display: block;
+}
+div#tocnav > div > a:link {
+	overflow: hidden; margin-left: 22px; display: block;
+}
+div#tocnav > div > a:visited {
+	overflow: hidden; margin-left: 22px; display: block;
+}
+div#tocnav > div > span.emptyHref {
+	overflow: hidden; text-decoration: none; margin-left: 22px; display: block;
+}
+div#tocnav > div.current > a {
+	color: rgb(230, 106, 56); text-decoration: none;
+}
+div#tocnav > div.current > a:link {
+	color: rgb(230, 106, 56); text-decoration: none;
+}
+div#tocnav > div.current > a:visited {
+	color: rgb(230, 106, 56); text-decoration: none;
+}
+div#tocnav > div > a.toc_expanded {
+	margin-left: 0px; vertical-align: top; float: left; display: inline-block;
+}
+div#tocnav > div > a.toc_collapsed {
+	margin-left: 0px; vertical-align: top; float: left; display: inline-block;
+}
+div#tocnav > div > span.toc_empty {
+	margin-left: 0px; vertical-align: top; float: left; display: inline-block;
+}
+div#tocnav > div > span.toc_empty {
+	
+}
+div#tocnav > div.toclevel1 {
+	padding-left: 13px;
+}
+div#tocnav > div.toclevel2 {
+	padding-left: 26px;
+}
+div#tocnav > div.toclevel3 {
+	padding-left: 39px;
+}
+div#tocnav > div.toclevel4 {
+	padding-left: 52px;
+}
+div#tocnav > div.toclevel5 {
+	padding-left: 65px;
+}
+div#tocnav > div.toclevel6 {
+	padding-left: 78px;
+}
+div#tocnav > div.toclevel7 {
+	padding-left: 91px;
+}
+div#tocnav > div.toclevel8 {
+	padding-left: 104px;
+}
+div#tocnav > div.toclevel9 {
+	padding-left: 117px;
+}
+div#tocnav > div.toclevel10 {
+	padding-left: 130px;
+}
+a#NavigationResize {
+	margin: 0px; top: 12px; width: 7px; height: 22px; overflow: hidden; display: none; position: absolute; cursor: pointer;
+}
+a#NavigationResize > img {
+	border: currentColor; position: relative; max-width: none;
+}
+div#leftNav {
+	margin: 0px -1px 0px 0px; border-right-color: rgb(182, 182, 182); border-right-width: 1px; border-right-style: solid;
+}
+div.leftNavResize0#leftNav > div {
+	display: none !important;
+}
+div#content {
+	margin: 0px; padding-left: 20px; border-left-color: rgb(182, 182, 182); border-left-width: 1px; border-left-style: solid;
+}
+div#content .navpage div > hr {
+	border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+div#toc-resizable-ew {
+	top: 0px; width: 15px; height: 100%; right: -7px; font-size: 0.5px; display: block; position: absolute; cursor: e-resize;
+}
+div.rtl#toc-resizable-ew {
+	left: -7px; right: auto;
+}
+#ratingCounter {
+	margin: 0px 0px 12px; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 1em; display: none;
+}
+#ratingCounter a {
+	text-decoration: none;
+}
+#ratingCounter .ratingText {
+	color: rgb(93, 93, 93);
+}
+.lw_vs {
+	padding-bottom: 2px; margin-top: -8px; margin-bottom: 10px; position: relative;
+}
+.lw_vs div {
+	float: left;
+}
+.cl_lw_vs_seperator {
+	margin-left: 10px;
+}
+.cl_lw_vs_seperatorhide {
+	width: 8px; height: 17px; overflow: hidden;
+}
+#vsLink {
+	font-size: 1em; margin-right: 4px; margin-left: 10px;
+}
+.cl_vs_arrow {
+	margin-top: 5px; margin-right: 5px; cursor: pointer;
+}
+#vsPanel {
+	margin: 0px; padding: 10px; border: 1px solid rgb(189, 189, 189); top: 20px; display: none; list-style-type: none; position: absolute; z-index: 2; background-color: rgb(255, 255, 255);
+}
+#vsPanel a:visited {
+	color: rgb(150, 11, 180);
+}
+#vsPanel li {
+	font-size: 1em; margin-bottom: 2px;
+}
+#contentFeedback {
+	margin: 30px 0px; padding: 10px; border: 1px solid rgb(210, 210, 210); color: rgb(112, 112, 112); clear: both; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 12px; background-color: rgb(241, 241, 241);
+}
+#contentFeedbackQAContainer {
+	margin-top: 10px; display: none;
+}
+#contentFeedback .FeedbackTitleContainer {
+	color: rgb(99, 99, 99); font-family: "Segoe UI"; font-size: 0.92em;
+}
+#contentFeedback .FeedbackTitleContainer > input[type='radio'] {
+	margin-right: 10px; margin-left: 20px;
+}
+#contentFeedback .FeedbackListContainer {
+	padding-top: 10px; padding-bottom: 20px;
+}
+#contentFeedback .FeedbackListContainer > div {
+	color: rgb(99, 99, 99); font-family: "Segoe UI"; font-size: 0.92em;
+}
+#contentFeedback .FeedbackTellUsMoreContainer {
+	width: 100%; overflow: hidden; clear: both; margin-bottom: 10px; display: table;
+}
+#contentFeedback label {
+	display: inline;
+}
+#contentFeedback input[type='submit'] {
+	padding: 1px 6px; font-size: 13px;
+}
+.FeedbackTellUsMoreContainer > textarea {
+	margin: 0px; padding: 5px; border: 1px solid currentColor; width: 98%; height: 100px; color: rgb(99, 99, 99); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; font-size: 0.92em;
+}
+.FeedbackTellUsMoreContainer .TellUsMoreTextBoxSearch {
+	color: rgb(0, 0, 0);
+}
+.FeedbackTellUsMoreContainer .TellUsMoreTextBoxSearchLoaded {
+	color: rgb(148, 148, 148);
+}
+#contentFeedback span.counter {
+	color: rgb(99, 99, 99); font-family: "Segoe UI"; font-size: 0.84em; font-style: italic;
+}
+#contentFeedback input[type='submit'] {
+	float: right;
+}
+.libraryMemberFilter {
+	overflow: auto; margin-bottom: 5px; display: none;
+}
+.libraryMemberFilter .filterContainer {
+	float: right;
+}
+.libraryMemberFilter .filterContainer label {
+	display: inline;
+}
+.libraryMemberFilter .libraryFilterInherited {
+	margin: 0px 5px; vertical-align: middle;
+}
+.libraryMemberFilter .libraryFilterProtected {
+	margin: 0px 5px 0px 15px; vertical-align: middle;
+}
+html[dir='rtl'] .libraryMemberFilter .filterContainer {
+	float: left;
+}
+#ux-footer {
+	margin: auto; padding: 0px; width: 100%; line-height: 1; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 0.91em; z-index: 9999;
+}
+.ux-footer-clear {
+	clear: both; border-bottom-color: rgb(187, 187, 187); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#ux-footer #footerRight {
+	padding-top: 21px; float: right; min-height: 70px;
+}
+#ux-footer #footerLeft {
+	padding-top: 25px; margin-right: 15px; float: right; min-height: 70px; max-width: 735px;
+}
+#ux-footer #footerLeft a {
+	color: rgb(0, 0, 0); text-decoration: none; vertical-align: middle;
+}
+#ux-footer #footerLeft a:hover {
+	color: rgb(0, 0, 0); text-decoration: underline;
+}
+#ux-footer #LinkGroup {
+	clear: both;
+}
+#ux-footer #Feedback {
+	float: left;
+}
+#ux-footer #LinkGroup {
+	float: left;
+}
+#ux-footer #FooterLogo {
+	background: url("/Areas/Epx/Content/Images/ImageSprite.png") -3px -3px; width: 90px; height: 16px; overflow: hidden; float: right;
+}
+.library #ux-footer #FooterCopyright {
+	padding-top: 24px;
+}
+#ux-footer #FooterCopyright {
+	padding-top: 30px;
+}
+.IE7#ux-footer #FooterLogoContainer {
+	width: 100px;
+}
+.IE7#ux-footer #FooterCopyright {
+	padding-top: 30px;
+}
+.IE7#ux-footer #FooterRight {
+	width: 300px;
+}
+.IE7#ux-footer .FooterSiteFeedBack {
+	width: auto; float: right;
+}
+#ux-footer-cols ul {
+	padding: 0px; list-style-type: none;
+}
+#ux-footer-cols .linksContainer ul.links li.linksTitle a {
+	padding: 0px; color: rgb(68, 68, 68);
+}
+#ux-footer-cols .linksContainer a {
+	padding: 0px; color: rgb(136, 136, 136); text-decoration: none;
+}
+#Footer .linksContainer a:link {
+	padding: 0px; color: rgb(136, 136, 136); text-decoration: none;
+}
+#Footer .linksContainer a:visited {
+	padding: 0px; color: rgb(136, 136, 136); text-decoration: none;
+}
+#ux-footer-cols .linksContainer a:hover {
+	color: rgb(0, 122, 204);
+}
+#Footer .linksContainer a:focus {
+	color: rgb(0, 122, 204);
+}
+#Footer .linksTitle a:hover {
+	color: rgb(0, 122, 204);
+}
+#Footer .linksTitle a:focus {
+	color: rgb(0, 122, 204);
+}
+#ux-footer-cols .linksContainer ul:first-child.links {
+	margin-left: 0px;
+}
+#ux-footer-cols .linksContainer ul.links li.linksTitle {
+	text-transform: uppercase; line-height: 1.4; padding-bottom: 0.5em; font-weight: bold;
+}
+#ux-footer-cols li {
+	padding: 0px 0px 3px 12px; line-height: 1.5; list-style-type: none;
+}
+.IE7#ux-footer-cols {
+	clear: both; display: block; min-height: 100%;
+}
+#ux-footer-cols {
+	margin: 0px; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; z-index: 9999;
+}
+#ux-footer-cols .linksContainer {
+	padding: 20px 0px 0px;
+}
+#ux-footer-cols .linksContainer ul.links {
+	width: 193px; margin-bottom: 1.5em; margin-left: 0px; float: left; list-style-type: none;
+}
+#ux-footer .LinkList {
+	padding: 0px 8px; color: rgb(0, 0, 0); float: left;
+}
+#ux-footer .LinksDivider {
+	padding: 0px 8px; color: rgb(0, 0, 0); float: left;
+}
+#ux-footer .LinkList {
+	padding-right: 0px;
+}
+#ux-footer .FooterSiteFeedBack {
+	padding: 2px 0px 0px; color: rgb(0, 0, 0); float: left;
+}
+#ux-footer .LinkColumn {
+	float: left;
+}
+#ux-footer #Fragment_FooterLinks {
+	float: right;
+}
+#ux-footer #Fragment_FooterLinksBottom {
+	float: right;
+}
+#ux-footer .feedbackListItem {
+	margin-left: -4px;
+}
+#ux-footer #footerProfileLink {
+	margin: 0px 0px 8px; width: 100%; clear: both; float: right; min-height: 16px;
+}
+#ux-footer #Fragment_ManageProfileLink {
+	float: right;
+}
+#ux-footer #footerGroup .LinkList {
+	padding-right: 0px; float: right;
+}
+.library #ux-footer {
+	width: 100%;
+}
+.library #ux-footer .FooterSiteFeedBack {
+	padding: 0px;
+}
+.library #ux-footer #footerLeft {
+	padding-top: 22px; margin-right: 15px;
+}
+.rtl#ux-footer #footerGroup {
+	float: left;
+}
+.rtl#ux-footer #footerLeft {
+	float: left;
+}
+.rtl#ux-footer .footerRight {
+	float: left;
+}
+.rtl#ux-footer #footerRight {
+	float: left;
+}
+.rtl#ux-footer #FooterLogo {
+	float: left;
+}
+.rtl#ux-footer .feedbackListItem .LinksDivider {
+	float: left;
+}
+.rtl#ux-footer #Fragment_ManageProfileLink {
+	float: left;
+}
+.rtl#ux-footer #footerProfileLink {
+	margin: 0px 0px 8px 7px; float: left;
+}
+.rtl#ux-footer .LinkList {
+	float: right;
+}
+.rtl#ux-footer .LinkColumn {
+	float: right;
+}
+.rtl#ux-footer .LinksDivider {
+	float: right;
+}
+.rtl#ux-footer .FooterSiteFeedBack .FeedbackButton {
+	margin: -3px 8px 0px 0px; float: left;
+}
+.rtl#ux-footer #FooterCopyright {
+	text-align: left;
+}
+.library .IE7#ux-footer #FooterCopyright {
+	padding-top: 26px;
+}
+.LinkList div.Bulleted a {
+	background: url("/Areas/Epx/Content/Images/Arrow.gif") no-repeat left; padding-left: 24px;
+}
+.LinkList ul {
+	margin: 0px; padding: 0px; float: left; list-style-type: none;
+}
+.LinkList div:last-child.Links ul {
+	float: none;
+}
+.LinkList ul li {
+	margin: 0px; padding: 0px; list-style-type: none;
+}
+.LinkList ul.horizontal li {
+	float: left;
+}
+.rtl .LinkList ul.horizontal li {
+	float: right;
+}
+.LinkList .LinksDivider {
+	float: left;
+}
+.SiteFeedbackLinkButton {
+	overflow: hidden; margin-top: -2px; margin-left: 3px; vertical-align: middle; display: inline-block; position: relative;
+}
+.SiteFeedbackLinkLink {
+	color: rgb(19, 100, 196); margin-left: 1px; vertical-align: top; display: inline-block; cursor: pointer;
+}
+.SiteFeedbackLinkLink .a:hover {
+	text-decoration: underline;
+}
+.SiteFeedbackLinkButton img {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.SiteFeedbackLinkButton input {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.SiteFeedbackLinkContainer {
+	border: 1px solid rgb(125, 125, 125); left: 50%; top: 50%; width: 24.8em; margin-top: -16.7em; margin-left: -5.2em; position: absolute; z-index: 9999; min-height: 25em; background-color: rgb(255, 255, 255);
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkTitleContainer {
+	height: 1.5em; color: rgb(100, 99, 100); padding-left: 11px; font-size: 1.24em; font-weight: bold; background-color: rgb(244, 180, 50);
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkTitle {
+	float: left;
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkCancel {
+	text-align: right; padding-right: 10px; float: right; cursor: pointer;
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkCancel a:link {
+	color: rgb(100, 99, 100); text-decoration: none;
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkCancel a:hover {
+	color: rgb(100, 99, 100); text-decoration: none;
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkCancel a:visited {
+	color: rgb(100, 99, 100); text-decoration: none;
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkData {
+	padding-right: 10px; padding-left: 10px;
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkInfoText {
+	color: rgb(90, 90, 90); padding-top: 11px; font-size: 1.08em;
+}
+.SiteFeedbackLinkContainer .QuestionText {
+	color: rgb(45, 45, 45); font-size: 1.08em; margin-top: 11px;
+}
+.SiteFeedbackLinkContainer .AnswerText {
+	vertical-align: bottom;
+}
+.SiteFeedbackLinkContainer .AnswerText span {
+	color: rgb(90, 90, 90); margin-right: 10px;
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkTextArea {
+	border: 1px solid rgb(187, 187, 187); width: 99%; height: 5.4em; overflow: hidden; font-family: "Segoe UI",Verdana,Arial; background-color: rgb(255, 255, 255);
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkSubmit {
+	font-family: "Segoe UI",Verdana,Arial; font-size: 1.08em; margin-top: 11px; float: right;
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkTextAreaContainer {
+	
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkSiderGraphic {
+	margin: 0px; padding: 0px; width: auto; height: auto; position: absolute;
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkGraphicHolder {
+	overflow: hidden; margin-top: 11px; margin-bottom: 11px; margin-left: 11px; display: inline-block; position: relative;
+}
+.SiteFeedbackLinkContainer .RateRadioOne {
+	width: 40px; float: left;
+}
+.SiteFeedbackLinkContainer .RateRadio {
+	width: 63px; float: left;
+}
+.SiteFeedbackLinkContainer .RateRadioLast {
+	width: 40px; float: left;
+}
+.RateRadioOne input {
+	padding: 0px; margin-left: 5%;
+}
+.RateRadio input {
+	padding: 0px; margin-right: 44%; margin-left: 40%;
+}
+.RateRadioLast input {
+	padding: 0px; margin-right: 1%; margin-left: 65%;
+}
+.SiteFeedbackLinkContainer .TellUsMoreText {
+	padding-top: 11px; clear: both;
+}
+.SiteFeedbackLinkContainer .SiteFeedbackLinkCollapse {
+	display: none;
+}
+.SiteFeedbackLinkContainer .RadioButtonHolder {
+	height: 22px; margin-left: 7px;
+}
+.FooterSiteFeedBack .FeedbackButton {
+	margin: -3px 0px 0px 8px; padding: 0px; width: 21px; height: 21px; overflow: hidden; vertical-align: middle; float: right; display: inline-block; position: relative;
+}
+body {
+	margin: 0px auto; padding-right: 12px; padding-left: 12px; font-size: 12px; max-width: 1220px;
+}
+body.library #megabladeContainer #megabladeContainerCenter {
+	width: 1220px;
+}
+div#body {
+	margin: 0px; padding-top: 19px;
+}
+table {
+	padding: 0px;
+}
+div#content table {
+	border: 1px solid rgb(187, 187, 187);
+}
+div#content th {
+	border: 1px solid rgb(187, 187, 187);
+}
+div#content td {
+	border: 1px solid rgb(187, 187, 187);
+}
+.contentWrapper h2 a {
+	color: rgb(0, 0, 0);
+}
+.contentWrapper h3 a {
+	color: rgb(0, 0, 0);
+}
+.heading {
+	color: rgb(0, 0, 0);
+}
+h1 {
+	color: rgb(112, 112, 112); font-size: 3em;
+}
+h1.heading {
+	color: rgb(112, 112, 112); font-size: 3em;
+}
+h2 {
+	color: rgb(42, 42, 42);
+}
+h3 {
+	color: rgb(42, 42, 42);
+}
+h4 {
+	color: rgb(42, 42, 42);
+}
+h2 {
+	font-size: 1.83em;
+}
+.subheading {
+	font-size: 1.83em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1.33em;
+}
+.topic a {
+	color: rgb(19, 100, 196); text-decoration: none;
+}
+.topic a:link {
+	color: rgb(19, 100, 196); text-decoration: none;
+}
+.topic a:visited {
+	color: rgb(3, 105, 122); text-decoration: none;
+}
+.topic a:active {
+	color: rgb(3, 105, 122); text-decoration: none;
+}
+.topic a:hover {
+	color: rgb(51, 144, 177); text-decoration: none;
+}
+.topic a.active {
+	color: rgb(42, 42, 42);
+}
+.topic a.active:link {
+	color: rgb(42, 42, 42);
+}
+.topic a.active:hover {
+	color: rgb(42, 42, 42);
+}
+.topic a.active:visited {
+	color: rgb(42, 42, 42);
+}
+.topic a.active:active {
+	color: rgb(42, 42, 42);
+}
+.communityContentHeaderTitle {
+	color: rgb(0, 0, 0);
+}
+.communityEditor .additionTopicTitle {
+	color: rgb(0, 0, 0);
+}
+div#leftNav {
+	width: 280px;
+}
+div#tocnav {
+	margin: -20px 0px 0px -4px; font-size: 1.08em;
+}
+:first-child.toclevel0 {
+	margin-top: 16px;
+}
+div#tocnav > div {
+	margin-bottom: 5px;
+}
+div#tocnav > div > a {
+	margin-left: 18px;
+}
+div#tocnav > div > a:link {
+	margin-left: 18px;
+}
+div#tocnav > div > a:visited {
+	margin-left: 18px;
+}
+div#tocnav > div > span.toc_empty {
+	margin-left: 18px;
+}
+div#tocnav > div.current > a {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+div#tocnav > div.current > a:link {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+div#tocnav > div.current > a:hover {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+div#tocnav > div.current > a:focus {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+div#tocnav > div.current > a:visited {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+div#tocnav > div.toclevel1 {
+	padding-left: 17px;
+}
+div#tocnav > div.toclevel2 {
+	padding-left: 34px;
+}
+div#tocnav > div.toclevel3 {
+	padding-left: 51px;
+}
+div#tocnav > div.toclevel4 {
+	padding-left: 68px;
+}
+div#tocnav > div.toclevel5 {
+	padding-left: 85px;
+}
+div#tocnav > div.toclevel6 {
+	padding-left: 102px;
+}
+div#tocnav > div.toclevel7 {
+	padding-left: 119px;
+}
+div#tocnav > div.toclevel8 {
+	padding-left: 136px;
+}
+div#tocnav > div.toclevel9 {
+	padding-left: 153px;
+}
+div#tocnav > div.toclevel10 {
+	padding-left: 170px;
+}
+a#NavigationResize {
+	top: 44px;
+}
+.LW_CollapsibleArea_Title {
+	font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+.LW_CollapsibleArea_TitleDiv {
+	padding: 0px; margin-top: 9px; margin-bottom: 19px;
+}
+.LW_CollapsibleArea_TitleDiv div a {
+	color: rgb(0, 0, 0);
+}
+.LW_CollapsibleArea_TitleDiv div a:link {
+	color: rgb(0, 0, 0);
+}
+.LW_CollapsibleArea_TitleDiv div a:hover {
+	color: rgb(0, 0, 0);
+}
+.LW_CollapsibleArea_TitleDiv div a:visited {
+	color: rgb(0, 0, 0);
+}
+.LW_CollapsibleArea_TitleDiv div a:focus {
+	color: rgb(0, 0, 0);
+}
+.codeSnippetContainerTab {
+	border-width: 1px 1px 1px medium; border-style: solid solid solid none; border-color: rgb(147, 147, 147) rgb(147, 147, 147) rgb(147, 147, 147) currentColor; font-size: 1em; background-color: rgb(239, 245, 255);
+}
+.codeSnippetContainerTab a {
+	color: rgb(19, 100, 196); font-weight: bold;
+}
+.codeSnippetContainerTab a:link {
+	color: rgb(19, 100, 196); font-weight: bold;
+}
+.codeSnippetContainerTab a:hover {
+	color: rgb(19, 100, 196); font-weight: bold;
+}
+.codeSnippetContainerTab a:visited {
+	color: rgb(19, 100, 196); font-weight: bold;
+}
+.codeSnippetContainerTab a:focus {
+	color: rgb(19, 100, 196); font-weight: bold;
+}
+.codeSnippetContainerTabActive {
+	font-size: 1em; border-bottom-color: rgb(255, 255, 255); border-left-color: currentColor; border-bottom-width: 1px; border-left-width: medium; border-bottom-style: solid; border-left-style: none; background-color: rgb(255, 255, 255);
+}
+.codeSnippetContainerTabActive a {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+.codeSnippetContainerTabActive a:link {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+.codeSnippetContainerTabActive a:hover {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+.codeSnippetContainerTabActive a:visited {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+.codeSnippetContainerTabActive a:focus {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+.codeSnippetContainerTabSingle {
+	left: auto; top: auto; font-size: 1em; border-top-color: rgb(147, 147, 147); border-right-color: rgb(147, 147, 147); border-top-width: 1px; border-right-width: 1px; border-top-style: solid; border-right-style: solid; background-color: rgb(255, 255, 255);
+}
+.codeSnippetContainerTabSingle a {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+.codeSnippetContainerTabSingle a:link {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+.codeSnippetContainerTabSingle a:hover {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+.codeSnippetContainerTabSingle a:visited {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+.codeSnippetContainerTabSingle a:focus {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+.codeSnippetContainerTabPhantom {
+	color: rgb(139, 139, 139) !important; font-size: 1em; font-weight: bold; border-bottom-color: rgb(255, 255, 255); border-left-color: currentColor; border-bottom-width: 1px; border-left-width: medium; border-bottom-style: solid; border-left-style: none; background-color: rgb(248, 248, 248);
+}
+.codeSnippetContainerTabs > div:first-child {
+	border-left-color: rgb(147, 147, 147); border-left-width: 1px; border-left-style: solid; border-top-left-radius: 4px;
+}
+.codeSnippetContainerTabs > div:last-child {
+	border-right-color: rgb(147, 147, 147); border-right-width: 1px; border-right-style: solid; border-top-right-radius: 4px;
+}
+div.lw_vs {
+	margin-bottom: 35px;
+}
+div#tocnav > div.current > a {
+	color: rgb(203, 75, 27); text-decoration: none;
+}
+div#tocnav > div.current > a:link {
+	color: rgb(203, 75, 27); text-decoration: none;
+}
+div#tocnav > div.current > a:visited {
+	color: rgb(203, 75, 27); text-decoration: none;
+}
+body {
+	color: rgb(42, 42, 42); font-size: 13px; max-width: none;
+}
+body.library #megabladeContainer #megabladeContainerCenter {
+	padding: 0px; width: 100%; _padding: 0;
+}
+#megabladeContainer #megabladeItems {
+	margin-left: 15px;
+}
+h1 {
+	color: rgb(112, 112, 112); font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 2.76em; font-weight: normal;
+}
+h1.title {
+	color: rgb(112, 112, 112); font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 2.76em; font-weight: normal;
+}
+.topic h1.title {
+	color: rgb(112, 112, 112); font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 2.76em; font-weight: normal;
+}
+h1.heading {
+	color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+h2 {
+	color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+h2.heading {
+	color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+h2.subheading {
+	color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+h3 {
+	color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+h3.subheading {
+	color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+h4 {
+	color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+h4.subheading {
+	color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+h5 {
+	color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+h5.subheading {
+	color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+.LW_CollapsibleArea_Title {
+	color: rgb(42, 42, 42); font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+h1.heading {
+	font-size: 1.69em;
+}
+h2 {
+	font-size: 1.69em;
+}
+h2.heading {
+	font-size: 1.69em;
+}
+h2.subheading {
+	font-size: 1.69em;
+}
+.LW_CollapsibleArea_Title {
+	font-size: 1.69em;
+}
+.LW_CollapsibleArea_TitleDiv {
+	font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 13px;
+}
+.LW_CollapsibleArea_Img {
+	margin-top: 10px;
+}
+h3 {
+	font-size: 1.38em;
+}
+h3.subheading {
+	font-size: 1.38em;
+}
+h4 {
+	font-size: 1.23em; font-weight: normal;
+}
+h4.subheading {
+	font-size: 1.23em; font-weight: normal;
+}
+h5 {
+	font-family: "Segoe UI Semibold","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 1em;
+}
+h5.subheading {
+	font-family: "Segoe UI Semibold","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 1em;
+}
+.topic a {
+	color: rgb(0, 116, 158);
+}
+.topic a:link {
+	color: rgb(0, 116, 158);
+}
+.topic a:visited {
+	color: rgb(0, 102, 221);
+}
+.topic a:hover {
+	color: rgb(0, 149, 196);
+}
+.topic a:active {
+	color: rgb(255, 102, 0);
+}

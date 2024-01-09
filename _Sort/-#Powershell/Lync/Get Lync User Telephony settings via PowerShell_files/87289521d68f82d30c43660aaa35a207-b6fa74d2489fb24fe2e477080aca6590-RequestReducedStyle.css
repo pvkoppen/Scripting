@@ -1,0 +1,5685 @@
+#megabladeContainer {
+	background: rgb(66, 66, 66); left: 0px; top: 0px; width: 100%; height: 20px; text-align: center; color: rgb(255, 255, 255); line-height: 1.2; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; position: absolute; z-index: 2000; min-width: 987px;
+}
+#megabladeContainer ul {
+	background: 0px; margin: 0px; padding: 0px; line-height: normal;
+}
+#megabladeContainer li {
+	background: 0px; margin: 0px; padding: 0px; line-height: normal;
+}
+#megabladeContainer .menuContainerLayout ul {
+	padding-bottom: 1px;
+}
+#megabladeContainer li {
+	list-style: none;
+}
+#megabladeContainer a:focus {
+	outline: 0px;
+}
+#megabladeContainer .bladeItemMenuContainer a:hover {
+	text-decoration: underline;
+}
+#megabladeContainer .bladeItemMenuContainer a:focus {
+	text-decoration: underline;
+}
+#megabladeContainer .Logo a:focus {
+	text-decoration: underline;
+}
+#megabladeContainer #megabladeContainerCenter {
+	margin: 0px auto; padding: 0px 0px 0px 5px; width: 980px; _padding: 0 0 0 11px;
+}
+#megabladeContainer #megabladeItems {
+	margin: 0px; height: 20px; line-height: 1.3; font-size: 11px;
+}
+#megabladeContainer #megabladeItems .Logo {
+	background: 0px; margin: 0px 14px 0px 0px; padding: 3px 0px 0px; height: 17px; float: left;
+}
+#megabladeContainer .bladeItem {
+	list-style: none; padding: 3px 14px 4px; height: 13px; float: left; cursor: pointer;
+}
+#megabladeContainer a {
+	color: rgb(255, 255, 255); font-weight: normal; text-decoration: none;
+}
+#megabladeContainer a:hover {
+	color: rgb(255, 255, 255); font-weight: normal; text-decoration: none;
+}
+#megabladeContainer a:link {
+	color: rgb(255, 255, 255); font-weight: normal; text-decoration: none;
+}
+#megabladeContainer a:active {
+	color: rgb(255, 255, 255); font-weight: normal; text-decoration: none;
+}
+#megabladeContainer a:visited {
+	color: rgb(255, 255, 255); font-weight: normal; text-decoration: none;
+}
+#megabladeContainer .bladeItemActive {
+	background: rgb(102, 102, 102);
+}
+#megabladeContainer .bladeItemExpanded {
+	background: rgb(102, 102, 102);
+}
+#megabladeContainer .bladeItemMenuContainer {
+	background: rgb(102, 102, 102); text-align: left; overflow: hidden; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 5px; border-bottom-style: solid; position: absolute; _margin: 0 0 0 11px;
+}
+#megabladeContainer .bladeItemMenu {
+	padding: 0px 40px 40px; width: 904px; overflow: hidden; min-height: 265px; _width: 980px;
+}
+#megabladeContainer .bladeItemMenu ul {
+	width: 176px; overflow: hidden; padding-right: 20px; float: left;
+}
+#megabladeContainer .bladeItemMenu li {
+	margin: 0px; padding: 15px 0px 0px; line-height: 1.5; _line-height: 1.25;
+}
+#megabladeContainer .bladeItemMenu li a {
+	margin: 0px; padding: 0px; font-size: 90%; display: block; _display: inline;
+}
+#megabladeContainer .bladeItemMenu a img {
+	border: 0px currentColor;
+}
+#megabladeContainer .bladeItemMenu h5 {
+	font: 100 165%/normal "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; margin: 0px; color: rgb(255, 255, 255); white-space: nowrap; min-height: 30px; font-size-adjust: none; font-stretch: normal;
+}
+#megabladeContainer .bladeItem .caret {
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAADBJREFUGFdj+P//vwAQvwdiZGDAAAJAEQMk0QSwIAwAJRKAeD6KIFQXpgRWo3BZDgCRkFcr/VArCwAAAABJRU5ErkJggg==") no-repeat 0px 0px; margin: 0px 0px 2px 4px; width: 6px; height: 3px; font-size: 3px; display: inline-block; _background: url(http://i3.technet.microsoft.com/Areas/Sto/Content/Images/carets.png) 0 0 no-repeat;
+}
+*:first-child + html #megabladeContainer .bladeItem .caret {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1526px 0px;
+}
+#megabladeContainer .bladeItem .caretActive.caret {
+	background-position: 0px -3px;
+}
+#megabladeContainer .menuContainerLayout {
+	margin: 0px 25px 0px 0px; padding: 13px 0px 0px; width: 196px; float: left;
+}
+#megabladeContainer .menuContainerLayoutSplashGuard {
+	margin: 50px 29px 0px -25px; width: 1px; height: 200px; border-left-color: rgb(153, 153, 153); border-left-width: 1px; border-left-style: solid; float: left;
+}
+#megabladeContainer {
+	display: none;
+}
+#BrandDisplayText {
+	width: 410px; display: block;
+}
+.BrandLogo {
+	height: auto; background-image: none;
+}
+.IE6 .BrandLogo {
+	height: auto; background-image: none !important;
+}
+#NetworkTaglineText {
+	display: none;
+}
+#NetworkTaglineLogo {
+	display: block;
+}
+#NetworkLink {
+	display: block;
+}
+html {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+body {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+div {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+span {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+applet {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+object {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+iframe {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+h1 {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+h2 {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+h3 {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+h4 {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+h5 {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+h6 {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+p {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+blockquote {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+pre {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+a {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+abbr {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+acronym {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+address {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+big {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+cite {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+code {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+del {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+dfn {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+em {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+img {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+ins {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+kbd {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+q {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+s {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+samp {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+small {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+strike {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+strong {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+sub {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+sup {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+tt {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+var {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+b {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+u {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+i {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+center {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+dl {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+dt {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+dd {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+ol {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+ul {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+li {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+fieldset {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+form {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+label {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+legend {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+table {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+caption {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+tbody {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+tfoot {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+thead {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+tr {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+th {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+td {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+article {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+aside {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+canvas {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+details {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+embed {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+figure {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+figcaption {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+footer {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+header {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+hgroup {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+menu {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+nav {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+output {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+ruby {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+section {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+summary {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+time {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+mark {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+audio {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+video {
+	font: inherit; margin: 0px; padding: 0px; border: 0px currentColor; vertical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;
+}
+body {
+	line-height: 1;
+}
+ol {
+	list-style: none;
+}
+ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+q {
+	quotes: none;
+}
+blockquote::before {
+	content: none;
+}
+blockquote::after {
+	content: none;
+}
+q::before {
+	content: none;
+}
+q::after {
+	content: none;
+}
+table {
+	border-collapse: collapse; border-spacing: 0;
+}
+.he-il * {
+	font-family: Gisha,"Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.he-il #ux-header .ux-mtps-internav {
+	font-family: Gisha,"Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.ja-jp * {
+	font-family: "Meiryo UI",Meiryo,"Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.ja-jp #ux-header .ux-mtps-internav {
+	font-family: "Meiryo UI",Meiryo,"Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.ko-kr * {
+	font-family: "Malgun Gothic","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.ko-kr #ux-header .ux-mtps-internav {
+	font-family: "Malgun Gothic","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.th-th * {
+	font-family: Leelawadee,"Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.th-th #ux-header .ux-mtps-internav {
+	font-family: Leelawadee,"Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.zh-tw * {
+	font-family: "Microsoft JhengHei UI","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.zh-hk * {
+	font-family: "Microsoft JhengHei UI","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.zh-tw #ux-header .ux-mtps-internav {
+	font-family: "Microsoft JhengHei UI","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.zh-hk #ux-header .ux-mtps-internav {
+	font-family: "Microsoft JhengHei UI","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.zh-cn * {
+	font-family: "Microsoft YaHei UI","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.zh-cn #ux-header .ux-mtps-internav {
+	font-family: "Microsoft YaHei UI","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important;
+}
+.Clear {
+	clear: both;
+}
+#BodyBackground {
+	border-top-color: transparent; border-top-width: 20px; border-top-style: solid;
+}
+body {
+	padding: 0px; color: rgb(42, 42, 42) !important; line-height: 1.538; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-size: 0.81em;
+}
+#MainContent a {
+	text-decoration: none;
+}
+#MainContent a:hover {
+	text-decoration: underline;
+}
+#MainContent a:focus {
+	text-decoration: underline;
+}
+#MainContent a.author:hover {
+	text-decoration: none !important;
+}
+#MainContent a {
+	color: rgb(0, 68, 204);
+}
+#MainContent a:link {
+	color: rgb(0, 68, 204);
+}
+#MainContent #sideNav .section .contributeAction a {
+	color: rgb(0, 68, 204);
+}
+#MainContent .tabHeaders .current a:visited {
+	color: rgb(0, 68, 204);
+}
+#MainContent .bread a:visited {
+	color: rgb(0, 68, 204);
+}
+#MainContent .bread a {
+	color: rgb(0, 68, 204);
+}
+#MainContent a:visited {
+	color: rgb(102, 51, 179);
+}
+#sideNav .section .contributeAction a:visited {
+	color: rgb(102, 51, 179);
+}
+#MainContent .ResultItem .result strong a:hover {
+	color: rgb(255, 102, 0) !important;
+}
+#MainContent .ResultItem .result strong a:focus {
+	color: rgb(255, 102, 0) !important;
+}
+#MainContent .ResultItem .result strong a {
+	color: rgb(112, 112, 112) !important; font-weight: bold !important;
+}
+h1 {
+	color: rgb(64, 65, 66) !important;
+}
+#msdn-technet-en-home .forumsTitle {
+	color: rgb(64, 65, 66) !important;
+}
+h1 .rss.icon {
+	margin-left: 3px;
+}
+.contentLeft h1 {
+	font: 100 2.76em/1.3 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; margin: -9px 0px 15px; font-size-adjust: none !important; font-stretch: normal !important;
+}
+#JelloSizer {
+	margin: 0px auto; padding: 0px; width: 998px !important; position: relative; max-width: none !important;
+}
+.contentLeft {
+	margin-right: 0px !important;
+}
+.rtl .contentLeft {
+	margin-right: 253px !important;
+}
+#rail {
+	width: 215px !important;
+}
+.railRight {
+	margin-left: -215px !important;
+}
+#rail a {
+	font-size: 1em !important;
+}
+#rail div.box > h4 {
+	padding-top: 0px;
+}
+#rail .box {
+	padding-bottom: 25px;
+}
+#rail > div > br {
+	display: none;
+}
+#instantAnswer td.answerContent {
+	margin: 0px !important; padding-top: 1.5em;
+}
+#instantAnswer td.answerContent {
+	
+}
+#instantAnswer td.answerContent ul {
+	padding-top: 7px;
+}
+#instantAnswer td.answerContent ul > li {
+	padding: 3px 0px 13px;
+}
+#instantAnswer .voting .hidden {
+	display: none !important; visibility: hidden !important;
+}
+span[id='feedbacktext'] {
+	display: inline !important;
+}
+.SystemMessage {
+	padding: 4px 6px; color: rgb(255, 255, 255); font-family: "Segoe UI"; background-color: rgb(221, 0, 0);
+}
+.leftcap {
+	display: none;
+}
+.topleftcorner {
+	display: none;
+}
+.toprightcorner {
+	display: none;
+}
+.bottomleftcorner {
+	display: none;
+}
+.bottomrightcorner {
+	display: none;
+}
+.category ul.forum li.forum p {
+	margin: 25px 0px 4px;
+}
+.box {
+	margin: 0px 0px 12px; overflow: hidden;
+}
+.railRight a.help {
+	margin-top: 30px;
+}
+li.forum {
+	margin: 0px 0px 20px !important;
+}
+div.bread {
+	margin: 13px 0px 15px !important; max-width: 875px;
+}
+li.forum h3 {
+	padding: 0px 0px 5px !important;
+}
+li.thread > h3 {
+	font: 1.23em/normal "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(64, 65, 66) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+.box h3 {
+	font: 1.23em/normal "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(64, 65, 66) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+.pagerTop {
+	width: 545px;
+}
+li.thread h3 a.expcol + a {
+	width: auto !important; max-width: 489px !important;
+}
+.box .categoryStatsCol h2 {
+	font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; font-size: 1em !important;
+}
+#content ul.category {
+	padding-top: 10px !important;
+}
+li.category .categoryName {
+	width: 480px !important; float: left !important;
+}
+li.forumheader .stat {
+	margin-left: 3px !important;
+}
+li.forum .stat {
+	margin-left: 3px !important;
+}
+li.category .categoryStatsCol {
+	width: 225px !important; margin-top: 15px !important;
+}
+li.category .categoryName h2.categoryH {
+	padding: 5px 0px 17px !important;
+}
+li.category .categoryStatsCol .statsCategoryHeader {
+	color: rgb(64, 65, 66) !important; font-size: 1.15em !important;
+}
+li.category .categoryStatsCol .statsCategoryHeader .threadsHeader {
+	width: 90px !important;
+}
+li.thread {
+	border: 0px currentColor !important; margin-bottom: 20px !important;
+}
+div.threads .pager {
+	text-align: left !important;
+}
+div.threads .pager span.itemSpan {
+	margin-right: 15px !important;
+}
+.abusive a.popup {
+	padding-left: 0px !important;
+}
+.abusive a.popup {
+	border: 0px currentColor !important;
+}
+.abusive a.popup:hover {
+	border: 0px currentColor !important;
+}
+.abusive a.popup:active {
+	border: 0px currentColor !important;
+}
+.abusive a.popup:focus {
+	border: 0px currentColor !important;
+}
+.abusive ul.popup {
+	max-width: 347px !important;
+}
+.abusive .popup nobr {
+	white-space: normal;
+}
+.message .menu .icon {
+	margin-right: 3px;
+}
+ul.history {
+	margin-left: 0px !important;
+}
+.message .menu nobr {
+	top: 1px; position: relative;
+}
+li.message div.body blockquote {
+	margin: 0px !important; background-color: rgb(238, 238, 238) !important;
+}
+li.message div.body div.quote {
+	margin: 0px !important; background-color: rgb(238, 238, 238) !important;
+}
+li.message > div.container {
+	margin: 12px 0px 0px 56px !important;
+}
+.replies .message.menu > .menu {
+	margin-left: 49px;
+}
+.menu .reply.icon {
+	display: none;
+}
+.menu .quote.icon {
+	display: none;
+}
+#MainContent li.category .categoryName > h2 > a {
+	color: rgb(235, 60, 0) !important;
+}
+#MainContent .categoryH a:visited {
+	color: rgb(235, 60, 0) !important;
+}
+#MainContent .categoryH a:hover {
+	color: rgb(235, 60, 0) !important;
+}
+.box h2 {
+	font: 100 1.84em/1.238 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(235, 60, 0) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+.box h4 {
+	font: 100 1.84em/1.238 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(235, 60, 0) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+.announcement.box h4 {
+	font: 100 1.15em/normal "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+#content .box#controls h4 {
+	color: rgb(64, 65, 66) !important; font-size: 1.25em !important;
+}
+.leaderboards .box .seeMore h4 {
+	font: 12px/normal "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+ul.category li.box.category h2 {
+	font-size: 1em !important;
+}
+ul.category li.category h2 a {
+	font: 100 1.84em/1.238 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+ul.category li.category h2 a:link {
+	font: 100 1.84em/1.238 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+ul.category li.category h2 a:hover {
+	font: 100 1.84em/1.238 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+ul.category li.category h2 a:active {
+	font: 100 1.84em/1.238 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+a.lastReply {
+	font-size: 0.84em !important;
+}
+a.author {
+	font-size: 0.84em !important;
+}
+span.date {
+	font-size: 0.84em !important;
+}
+li.message a.author {
+	vertical-align: inherit !important;
+}
+a.author > span {
+	vertical-align: inherit !important;
+}
+a.author > abbr {
+	vertical-align: inherit !important;
+}
+a.author:hover span.name {
+	color: rgb(49, 117, 47) !important; text-decoration: underline;
+}
+a:active span.name {
+	color: rgb(49, 117, 47) !important; text-decoration: underline;
+}
+a:focus span.name {
+	color: rgb(49, 117, 47) !important; text-decoration: underline;
+}
+a.lastReply {
+	top: 0px !important;
+}
+.content > [name='ThreadMenus'].menu a.popup {
+	padding-left: 0px !important;
+}
+.content > [name='ThreadMenus'].menu a.popup {
+	border: 0px currentColor;
+}
+.content > [name='ThreadMenus'].menu a.popup:hover {
+	border: 0px currentColor;
+}
+.content > [name='ThreadMenus'].menu a.popup .icon {
+	display: none;
+}
+[name='ThreadMenus'].menu .none.icon {
+	display: none !important;
+}
+.date {
+	font-style: normal !important;
+}
+a.author span {
+	color: rgb(49, 117, 47) !important;
+}
+a.author span {
+	font-size: 1em !important;
+}
+a.author:hover span {
+	font-size: 1em !important;
+}
+li.forum a.author > span {
+	vertical-align: inherit !important;
+}
+a.author > abbr {
+	vertical-align: inherit !important;
+}
+li.forum h3 {
+	max-width: none !important;
+}
+.announcement a.expcol {
+	margin: 0px 5px 5px !important;
+}
+.announcement img.expcol {
+	margin: 0px 5px 5px !important;
+}
+#MainContent #askaquestion a.askQuestionLink:hover {
+	background: rgb(0, 68, 204) !important; color: rgb(255, 255, 255) !important; text-decoration: none !important;
+}
+#MainContent #askaquestion a.askQuestionLink {
+	color: rgb(255, 255, 255) !important;
+}
+#MainContent #askaquestion a.askQuestionLink:visited {
+	color: rgb(255, 255, 255) !important;
+}
+#rail {
+	width: 215px !important;
+}
+.railRight {
+	margin-left: -215px !important;
+}
+.IE7 .statGroup label {
+	margin-left: 4px;
+}
+.srchbox #searchImageCell {
+	padding-right: 3px !important;
+}
+.srchbox #searchImageCell input {
+	padding-left: 0px !important; margin-top: 4px !important;
+}
+.stxtcell input {
+	border: 0px currentColor;
+}
+.IE7 .srchbox #searchImageCell input {
+	margin-top: 0px !important;
+}
+#MainContent .tabHeaders div {
+	color: rgb(0, 68, 204) !important;
+}
+.tabHeaders div:hover {
+	text-decoration: underline !important;
+}
+#dashboardPage .contributions .tabContents {
+	padding: 20px 0px 10px !important;
+}
+#requestsPage h2 {
+	font: 100 1.53em/normal "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(64, 65, 66) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+#requestsPage h3 {
+	font: 100 1.53em/normal "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(64, 65, 66) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+#eyebrow {
+	margin-top: 12px; float: left; max-width: 875px !important;
+}
+#MainContent a.EyebrowLeafLink {
+	color: rgb(64, 65, 66) !important; cursor: default;
+}
+#MainContent a.EyebrowLeafLink:visited {
+	color: rgb(64, 65, 66) !important; cursor: default;
+}
+#projectPage #Downloads .button {
+	background: rgb(210, 71, 38) !important;
+}
+#contributeSection .contributeAction img {
+	background: rgb(210, 71, 38) !important;
+}
+#projectPage #Downloads .button:hover {
+	background: rgb(0, 68, 204) !important;
+}
+#contributeSection .contributeAction img:hover {
+	background: rgb(0, 68, 204) !important;
+}
+#MainContent .tabHeaders .current {
+	color: rgb(42, 42, 42) !important; cursor: default;
+}
+#MainContent .tabHeaders .current a {
+	color: rgb(42, 42, 42) !important; cursor: default;
+}
+#MainContent .tabHeaders .current a:visited {
+	color: rgb(42, 42, 42) !important; cursor: default;
+}
+#MainContent a.EyebrowLeafLink:hover {
+	text-decoration: none !important;
+}
+#MainContent #projectPage #Downloads .button:hover {
+	text-decoration: none !important;
+}
+#MainContent .tabHeaders .current a:hover {
+	text-decoration: none !important;
+}
+#MainContent .tabHeaders .current:hover {
+	text-decoration: none !important;
+}
+#MainContent #projectPage #Downloads .button {
+	color: rgb(255, 255, 255) !important;
+}
+#MainContent #projectPage #Downloads .button:visited {
+	color: rgb(255, 255, 255) !important;
+}
+.sidebar h3 {
+	color: rgb(235, 60, 0) !important; font-family: "Segoe UI Light","Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; font-weight: 100 !important;
+}
+#UploadPage .projectTypeChoice div.choice {
+	font: 100 1.53em/normal "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(64, 65, 66) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+#moreFromAuthor h3 {
+	font: 100 1.53em/normal "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(64, 65, 66) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+#descriptionProgressMeter h4 {
+	font: 100 1.53em/normal "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(64, 65, 66) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+.EditStarMode.stackLeft.Rating {
+	margin-top: 3px;
+}
+#projectPage .projectTitle {
+	color: rgb(64, 65, 66) !important;
+}
+#bodyContainer h1 {
+	font: 100 2.76em/1.3 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(64, 65, 66) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+#UploadPage {
+	margin: 0px !important;
+}
+#UploadPage #uploadControl {
+	margin-left: 0px !important;
+}
+#UploadPage fieldset input[type='text'] {
+	margin-left: 0px !important;
+}
+#UploadPage #customizeSummary {
+	margin-left: 0px !important;
+}
+#UploadPage #tagCategoryInput_Topics {
+	margin-left: 0px !important;
+}
+#UploadPage #communityContributionLicenseList {
+	margin-left: 0px !important;
+}
+#UploadPage .fieldsetStyleContainer {
+	margin-left: 0px !important;
+}
+#UploadPage .formSubmitRow {
+	margin-left: 0px !important;
+}
+#UploadPage fieldset h2 {
+	font: 100 1.84em/1.238 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(235, 60, 0) !important; border-bottom-color: currentColor !important; border-bottom-width: 0px !important; border-bottom-style: none !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+#UploadPage .fieldsetStyleContainer h2 {
+	font: 100 1.84em/1.238 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(235, 60, 0) !important; border-bottom-color: currentColor !important; border-bottom-width: 0px !important; border-bottom-style: none !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+#bodyContainer #UploadPage h2 {
+	color: rgb(235, 60, 0) !important;
+}
+#UploadPage fieldset input[type='radio'] {
+	margin-left: 0px;
+}
+#UploadPage fieldset input[type='checkbox'] {
+	margin-left: 0px;
+}
+#descriptionProgressMeter {
+	border: 0px currentColor !important;
+}
+.requestlistitem .resolved {
+	color: rgb(49, 117, 47) !important; font-weight: normal !important;
+}
+.alley {
+	padding-left: 0px !important;
+}
+.EyebrowContainer a:first-child {
+	margin-left: 0px !important;
+}
+.wrapper {
+	padding-right: 0px !important;
+}
+#UploadPage fieldset#summary textarea {
+	margin-left: 0px !important;
+}
+#UploadPage .projectTypeChoice {
+	width: 980px;
+}
+#UploadPage .projectTypeChoice > div {
+	height: auto !important; min-height: 260px;
+}
+#projectPage .projectTitle {
+	float: none !important;
+}
+#bodyContainer #searchPage #mainContentContainer {
+	margin-left: 260px !important;
+}
+.profile-usercard-inline .profile-inline {
+	padding: 0px !important; border: 0px currentColor !important; width: 215px !important;
+}
+div.profile-usercard {
+	font-size: 1em !important;
+}
+.profile-usercard-hover div.profile-usercard {
+	font-size: 1em !important;
+}
+.profile-usercard-inline .profile-inline .profile-inline-header-details {
+	padding-top: 8px !important; clear: both !important; margin-left: 0px !important;
+}
+.profile-usercard .profile-footer .profile-usercard-profileLink {
+	text-align: left !important; clear: both !important; float: none !important; display: block !important;
+}
+.profile-usercard-inline .profile-inline .profile-inline-display-name {
+	font: 100 1.53em/normal "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(64, 65, 66) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+#askaquestion a.askQuestionLink {
+	background: rgb(210, 71, 38) !important; padding: 5px 20px !important; line-height: 1.7 !important;
+}
+.search input.watermark {
+	font-style: normal !important;
+}
+.discover .search {
+	padding: 0px !important; height: 30px !important; min-width: 0px !important; max-width: none !important;
+}
+#forumsSearch input[type='text'] {
+	padding: 0px 30px 1px 9px !important; border: 1px solid rgb(204, 204, 204) !important; width: 431px !important; height: 27px !important; color: rgb(170, 170, 170) !important; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; margin-right: -21px !important;
+}
+#forumsSearch input[type='image'] {
+	background: url("http://i1.social.s-msft.com/contentservice/5baef2f4-6e9f-4249-a864-a09000be6115/search.png") no-repeat 0px 0px !important; left: -3px; top: 5px; width: 20px !important; height: 20px !important; position: relative;
+}
+#forumsSearch img.expcol {
+	margin-top: 9px !important;
+}
+ul.popup {
+	padding: 10px !important; border: 1px solid rgb(204, 204, 204) !important; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; opacity: 1 !important;
+}
+.content .search ul.popup {
+	max-width: 233px !important;
+}
+ul.popup li {
+	margin: 10px 0px 0px !important; line-height: 1.2;
+}
+ul.popup li:first-child {
+	margin-top: 0px !important;
+}
+#rail ul.content > li {
+	margin: 10px 0px 0px !important; line-height: 1.2;
+}
+#rail ul.content > li:first-child {
+	margin-top: 0px !important;
+}
+.search a.popup:hover {
+	border: 1px solid transparent !important;
+}
+.search a.btn:active {
+	border: 1px solid transparent !important;
+}
+.search a.popup:active {
+	border: 1px solid transparent !important;
+}
+.search a.btn:focus {
+	border: 1px solid transparent !important;
+}
+.search a.popup:focus {
+	border: 1px solid transparent !important;
+}
+.Masthead {
+	padding: 20px 0px 0px; clear: right;
+}
+.Masthead > iframe {
+	display: none;
+}
+.Masthead .BrandLogo {
+	font: 20px/1.4 "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; margin: 0px; width: 340px; height: 35px; overflow: hidden; float: left; font-size-adjust: none; font-stretch: normal;
+}
+.Masthead .BrandLogo a {
+	width: auto; color: rgb(0, 0, 0); text-decoration: none; vertical-align: top; display: inline-block; min-height: 35px;
+}
+.IE7 .Masthead .BrandLogo a {
+	display: inline; zoom: 1;
+}
+#BrandDisplayText {
+	background: rgb(255, 255, 255); font: 13px/100% "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; padding: 7px 0px 7px 10px; width: auto !important; height: auto; color: rgb(64, 65, 66); border-left-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; display: block; position: relative; font-size-adjust: none; font-stretch: normal;
+}
+.rtl #BrandDisplayText {
+	padding: 7px 10px 7px 0px; border-right-color: rgb(204, 204, 204); border-left-color: currentColor; border-right-width: 1px; border-left-width: medium; border-right-style: solid; border-left-style: none;
+}
+.Masthead .SearchBox {
+	background: rgb(255, 255, 255); margin: 0px; padding: 2px; border: 1px solid rgb(204, 204, 204); width: 318px; height: 24px; float: left;
+}
+.Masthead #SearchTextBox {
+	padding: 1px 0px 4px 7px; border: 0px currentColor; width: 280px; font-family: "Segoe UI","Lucida Grande",Verdana,Arial,Helvetica,sans-serif !important; font-style: normal !important;
+}
+.Masthead .SearchButton {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -735px 0px rgb(255, 255, 255); border-width: 0px; margin: 2px 0px 0px; padding: 0px; width: 21px; height: 21px; text-align: right; vertical-align: top; float: right; display: inline-block; cursor: pointer;
+}
+.rtl .Masthead .SearchButton {
+	float: left;
+}
+.Masthead .GlobalBar {
+	margin: 0px; top: -3px; width: 330px; line-height: 1.25; font-size: 12px; float: right; position: relative; z-index: 100;
+}
+.Masthead .PassportScarab {
+	padding: 0px; float: right; white-space: nowrap;
+}
+.Masthead .GlobalBar a {
+	color: rgb(102, 102, 102);
+}
+.Masthead .GlobalBar a:hover {
+	text-decoration: underline;
+}
+.LocaleFlyout {
+	font-size: 12px; float: right; white-space: nowrap;
+}
+.Masthead #LocaleSelector {
+	cursor: pointer;
+}
+.Masthead #LocaleSelector #TargetPanel {
+	padding-right: 10px;
+}
+.DropDownArrow {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -21px 0px; top: 6px; width: 6px; height: 4px; padding-left: 8px; position: relative;
+}
+.rtl .DropDownArrow {
+	
+}
+.IE .rtl .DropDownArrow {
+	
+}
+.IE7 .rtl .DropDownArrow {
+	
+}
+.IE8 .rtl .DropDownArrow {
+	
+}
+.IE9 .rtl .DropDownArrow {
+	
+}
+.IE10 .rtl .DropDownArrow {
+	
+}
+.Chrome .rtl .DropDownArrow {
+	
+}
+.Firefox .rtl .DropDownArrow {
+	
+}
+.ContextMenuPanel {
+	padding: 3px; border: 1px solid rgb(204, 204, 204); display: none; position: absolute; cursor: default; min-width: 150px; background-color: rgb(255, 255, 255);
+}
+a.ContextMenuItem {
+	padding: 4px; font-size: 0.85em; text-decoration: none; display: block; white-space: nowrap; cursor: pointer;
+}
+a.ContextMenuItem:hover {
+	text-decoration: underline;
+}
+.Masthead .UserName {
+	width: 100%; text-align: right; overflow: hidden; font-size: 13px; font-weight: bold; float: right; white-space: nowrap;
+}
+.Masthead .Bing {
+	display: none;
+}
+.Masthead .NetworkLogo {
+	display: none;
+}
+.Masthead .internav {
+	font: 14px/normal "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; margin: 13px 0px 0px; padding-bottom: 10px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+.Masthead .internav a {
+	margin: 0px 0px 0px 25px; text-decoration: none;
+}
+.Masthead .GlobalBar a {
+	text-decoration: none;
+}
+.Masthead .internav a:hover {
+	color: rgb(0, 0, 0);
+}
+.Masthead .internav a:hover:link {
+	color: rgb(0, 0, 0);
+}
+.Masthead .internav a:active {
+	color: rgb(0, 0, 0);
+}
+.Masthead .internav a:hover {
+	color: rgb(0, 0, 0);
+}
+.Masthead .internav a:focus {
+	color: rgb(0, 0, 0);
+}
+.Masthead .internav a:first-child {
+	margin-left: 0px;
+}
+.Masthead .internav a {
+	color: rgb(102, 102, 102);
+}
+.Masthead .internav a:link {
+	color: rgb(102, 102, 102);
+}
+.Masthead .internav a:visited {
+	color: rgb(102, 102, 102);
+}
+.Masthead .internav a.active {
+	color: rgb(235, 60, 0);
+}
+.Masthead .internav a.active:hover {
+	color: rgb(235, 60, 0);
+}
+.Masthead .internav a.active:visited {
+	color: rgb(235, 60, 0);
+}
+.Masthead .internav a.active:focus {
+	color: rgb(235, 60, 0);
+}
+div.Technet#MainContent {
+	font-size: 1em;
+}
+div.Msdn#MainContent {
+	font-size: 1em;
+}
+.search .refine .header {
+	border-bottom-color: currentColor !important; border-bottom-width: 0px !important; border-bottom-style: none !important;
+}
+#searchText {
+	font: 100 2.76em/1.3 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; padding: 23px 0px 15px !important; height: auto !important; color: rgb(64, 65, 66) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+#Search .sidebar {
+	width: 215px !important; padding-right: 40px !important;
+}
+.refine {
+	width: 215px !important; background-color: rgb(238, 238, 238) !important;
+}
+#refineBy {
+	padding: 10px 20px 3px !important; color: rgb(64, 65, 66) !important; font-size: 1em !important; font-weight: normal !important;
+}
+.RefinementListContainer {
+	padding: 0px 20px 30px !important; font-size: 1em !important;
+}
+.LoadingContainer {
+	
+}
+.refine .header > h2 {
+	padding: 10px 20px 3px !important;
+}
+.RefinementListContainer .HeaderContainerRefinement {
+	font: 100 1.53em/normal "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(64, 65, 66) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+.RefinementListContainer .ItemContainer {
+	margin: 0px !important; padding: 15px 0px 0px !important; font-size: 1em !important;
+}
+.RefinementLabel {
+	margin: 0px 0px 0px 4px !important; color: rgb(0, 68, 204) !important; padding-top: 0px !important;
+}
+.RefinementLabel > label {
+	display: inline-block; max-width: 148px;
+}
+#ResultsMessageDiv .ResultsMessage {
+	margin-top: 5px;
+}
+.IE7 .RefinementLabel > label {
+	display: inline; zoom: 1;
+}
+#Search .content {
+	padding: 0px 0px 0.2em !important; max-width: 725px;
+}
+#Search .RatingStarContainer {
+	top: 5px; position: relative;
+}
+#Search td.result {
+	max-width: 477px;
+}
+.RefinementCheckBox:hover + .RefinementLabel {
+	text-decoration: underline !important;
+}
+.RefinementCheckBox:focus + .RefinementLabel {
+	text-decoration: underline !important;
+}
+.RefinementLabel label:hover {
+	text-decoration: underline !important; cursor: pointer;
+}
+.RefinementCheckBox {
+	margin-left: 0px !important; float: left;
+}
+.MoreLink {
+	margin: 19px 0px 25px !important; padding: 0px !important; text-align: left !important; font-size: 1em !important; font-weight: bold !important;
+}
+.RefinementListContainer .ItemContainer li:first-child {
+	margin-top: 0px !important;
+}
+.RefinementListContainer .ItemContainer li {
+	margin: 15px 0px 0px !important; padding: 0px !important;
+}
+span.ResultsMessage span {
+	color: rgb(42, 42, 42) !important; font-size: 14px !important;
+}
+#ResultsMessageDiv .ResultsMessage {
+	color: rgb(42, 42, 42) !important; font-size: 14px !important;
+}
+.ResultDescription {
+	color: rgb(42, 42, 42) !important;
+}
+.ResultItemRight {
+	color: rgb(42, 42, 42) !important;
+}
+.ResultItemRight {
+	width: 185px !important;
+}
+.ResultItemThumbnail {
+	padding-left: 0px !important; font-size: 1em !important;
+}
+.ResultItemRight {
+	padding-left: 0px !important; font-size: 1em !important;
+}
+.ResultDescription {
+	padding: 0.2em 0px !important; font-size: 1em !important;
+}
+td.result {
+	padding-right: 40px !important;
+}
+.StatusInfo {
+	margin-top: 0px !important;
+}
+.ResultUrl {
+	color: rgb(49, 117, 47) !important; font-size: 1em !important;
+}
+.inlineRtl a {
+	font-size: 1em !important;
+}
+#RefinementsSidebar .inlineRtl {
+	font-size: 1em !important;
+}
+.StatusInfo span.inlineRtl {
+	font-size: 12px !important;
+}
+.inlineRtl {
+	font: 1.23em/normal "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+.result a {
+	font: 1.23em/normal "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+.result #instantAnswerName a {
+	font: 1.23em/normal "Segoe UI Bold", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+#LibraryRatingsRow > td {
+	padding-left: 0px !important;
+}
+.ResultItemSourceRefinement {
+	background: 0px !important;
+}
+.ResultItemSourceRefinement span.inlineRtl {
+	padding-left: 0px !important;
+}
+.ResultItemRight {
+	padding-left: 35px !important;
+}
+.ResultItemRight .ResultStatusIconCell {
+	width: 25px !important;
+}
+.SearchInfo div {
+	margin: 0px 0px 1em !important;
+}
+.SearchInfo .rssfeed {
+	background-position: 0px 2px; width: 17px; height: 20px; margin-left: 5px; background-image: url("http://i1.social.s-msft.com/contentservice/f34bf759-197e-4eb5-a2aa-a09000be610b/rss.png");
+}
+ResultsNavPanel {
+	padding-top: 20px !important; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid;
+}
+div.PagingDiv {
+	padding-top: 1.5em !important; font-size: 1em !important; margin-right: 0px !important; float: none !important;
+}
+.PagingDiv div:first-child {
+	padding-left: 0px !important;
+}
+.Technet div#ResultsMessageDiv b {
+	color: rgb(42, 42, 42) !important; font-size: 1em !important;
+}
+.ResultStatusText {
+	padding-left: 0px !important;
+}
+#searchBoxContainer {
+	padding: 0px 0px 0.75em !important; margin-top: 0px !important;
+}
+.RefinementListBreak {
+	height: 1.5em !important;
+}
+#MainContent .MetroSearchtextbox {
+	border-color: rgb(204, 204, 204) !important; width: 468px !important; height: 30px !important;
+}
+#ResultsMessageDiv .Elapsed {
+	margin: 0px 0.5em !important; padding-top: 3px !important; font-size: 1em !important;
+}
+#MainContent .TextBoxSearch {
+	margin: 3px 0px 4px !important; width: 425px !important; padding-top: 5px !important; padding-left: 9px !important; font-size: 1em !important;
+}
+#MainContent .Watermark {
+	margin: 3px 0px 4px !important; width: 425px !important; padding-top: 5px !important; padding-left: 9px !important; font-size: 1em !important;
+}
+#MainContent .TextBoxSearch {
+	color: rgb(170, 170, 170) !important;
+}
+#SearchSubmitImage {
+	float: right;
+}
+#SearchSubmitImage:hover {
+	cursor: pointer;
+}
+.MetroButton {
+	background: url("http://i1.social.s-msft.com/contentservice/5baef2f4-6e9f-4249-a864-a09000be6115/search.png") no-repeat 0px 0px !important; margin: 5px 4px 0px !important; width: 20px !important; height: 20px !important;
+}
+.instantAnswerDownloadVersion {
+	display: block;
+}
+#Footer {
+	padding: 15px 0px 70px; font-size: 85%; margin-top: 40px; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid;
+}
+#Footer .FooterLogoContainer {
+	float: right;
+}
+#Footer .FooterLogoContainer .FooterLogo {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -36px 0px; width: 87px; height: 20px;
+}
+#Footer #FooterCopyright {
+	margin: 3px 0px 0px 17px; clear: both; float: right;
+}
+#Footer .FooterLinks {
+	margin-top: 3px; float: right;
+}
+*:first-child + html .IE7 #Footer .FooterLinks {
+	clear: both;
+}
+#Footer .FooterLinks a {
+	color: rgb(0, 0, 0); text-decoration: none; float: left;
+}
+#Footer .FooterLinks a:hover {
+	text-decoration: underline;
+}
+#Footer .FooterLinks a:focus {
+	text-decoration: underline;
+}
+#Footer .Pipe {
+	padding: 0px 8px; top: -1px; color: rgb(68, 68, 68); float: left; position: relative;
+}
+#megabladeContainer .bladeItemMenu li a {
+	font-size: 0.92em !important;
+}
+#megabladeContainer .bladeItemMenu h5 {
+	font: 100 2em/normal "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(255, 255, 255) !important; font-size-adjust: none !important; font-stretch: normal !important;
+}
+.rtl .Masthead .GlobalBar {
+	float: left;
+}
+.rtl .LocaleFlyout {
+	float: left;
+}
+.rtl .Masthead .PassportScarab {
+	float: left;
+}
+.rtl #Footer .FooterLogoContainer {
+	float: left;
+}
+.rtl #Footer #FooterCopyright {
+	float: left;
+}
+.rtl #Footer .FooterLinks {
+	float: left;
+}
+.rtl .Masthead .UserName {
+	text-align: left;
+}
+.rtl #Search .sidebar {
+	padding: 0px 0px 0px 40px !important;
+}
+.rtl td.result {
+	padding: 0px 0px 0px 40px !important;
+}
+.rtl .RefinementCheckbox {
+	float: right;
+}
+.rtl .Masthead .BrandLogo {
+	float: right;
+}
+.rtl .Masthead .SearchBox {
+	float: right;
+}
+.rtl .RefinementLabel {
+	margin: 0px 4px 0px 0px !important;
+}
+.rtl #ux-header .BrandLogo a {
+	display: inline !important;
+}
+.rtl #HeaderSearchButton {
+	right: -272px;
+}
+.rtl .Masthead #LocaleSelector #TargetPanel {
+	padding: 0px 0px 0px 10px;
+}
+.rtl #Footer #FooterCopyright {
+	margin: 3px 17px 0px 0px;
+}
+.rtl .PagingDiv div {
+	float: right !important;
+}
+.rtl .PagingDiv div:first-child {
+	padding: 0px 0px 0px 0.5em !important;
+}
+.rtl .ResultItemSourceRefinement {
+	text-align: right !important;
+}
+.rtl .MoreLink {
+	text-align: right !important;
+}
+.Forums div#sidebar {
+	width: 227px; word-wrap: break-word;
+}
+.Forums div#msdn-technet-en-home div#homePageContentContainer {
+	width: 740px;
+}
+.Forums #threadPageActionsContainer {
+	overflow: hidden; margin-top: 40px;
+}
+.Forums div#threadPageActionsContainer .searchActions {
+	width: 75%; float: right;
+}
+.expandedContent li.threadblock .threadsnippet .details {
+	width: 82%;
+}
+div#msdn-technet-en-home div#homePageSidebarContainer {
+	width: 227px; clear: both; float: left; min-width: 220px;
+}
+div#msdn-technet-en-thread div#threadPageSidebarContainer {
+	width: 227px; clear: both; float: left; min-width: 220px;
+}
+div#threadPageActionsContainer .quickActions {
+	width: 227px; clear: both; float: left; min-width: 220px;
+}
+div#msdn-technet-en-thread div#threadPageContentContainer {
+	border-left-color: rgb(238, 238, 238); border-left-width: 3px; border-left-style: solid;
+}
+.Forums #categoryFilter h3 {
+	font: 100 1.84em/1.238 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(235, 60, 0); padding-right: 15px; font-size-adjust: none !important; font-stretch: normal !important; background-color: transparent;
+}
+.Forums #homepageLeaderboard .box .leaderBoardTitle h4 {
+	font: 100 1.84em/1.238 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(235, 60, 0); padding-right: 15px; font-size-adjust: none !important; font-stretch: normal !important; background-color: transparent;
+}
+#content div.box h4 {
+	font: 100 1.84em/1.238 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(235, 60, 0); padding-right: 15px; font-size-adjust: none !important; font-stretch: normal !important; background-color: transparent;
+}
+#threadPageSidebarContainer h3 {
+	font: 100 1.84em/1.238 "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(235, 60, 0); padding-right: 15px; font-size-adjust: none !important; font-stretch: normal !important; background-color: transparent;
+}
+div#threadPageActionsContainer div.quickActions {
+	width: 22%; float: left; min-width: 135px;
+}
+#homePageQuickActions {
+	width: 22%; float: left; min-width: 135px;
+}
+#searchActionsContainer {
+	width: 74%; float: right;
+}
+div#threadPageActionsContainer div.searchActions {
+	width: 74.5%; float: right;
+}
+div#searchActions {
+	width: 100%;
+}
+div#threadsearchbarContainer {
+	width: 480px;
+}
+.Forums #threadPageActionsContainer .quickActions {
+	z-index: 999;
+}
+.Forums #homePageQuickActions {
+	z-index: 999;
+}
+.Forums #threadPageActionsContainer .section {
+	margin-top: 0px;
+}
+.Forums div#askaquestion {
+	margin-top: 0px;
+}
+.Forums #homePageActionsContainer #askaquestion a.askQuestionLink {
+	color: rgb(255, 255, 255); background-color: rgb(210, 71, 38);
+}
+.Forums #askaquestion {
+	color: rgb(255, 255, 255); background-color: rgb(210, 71, 38);
+}
+.Forums #homePageActionsContainer #askaquestion a.askQuestionLink:hover {
+	background-color: rgb(0, 68, 204);
+}
+.Forums #askaquestion a.askQuestionLink:hover {
+	background-color: rgb(0, 68, 204);
+}
+.Forums #homePageQuickActions #askaquestion {
+	margin-bottom: 6px;
+}
+.Forums #quickLinks #quickLinksText span {
+	color: rgb(0, 0, 0); font-size: 13px;
+}
+.Forums .dropdown#quickLinks .popup a:hover {
+	color: rgb(0, 0, 0);
+}
+.Forums.IE7 #homePageQuickActions #quickLinks {
+	padding-top: 10px;
+}
+div#threadPageActionsContainer {
+	width: 100%;
+}
+div#threadPageActionsContainer .searchActions {
+	width: 73.5%; float: right;
+}
+div#threadPageActionsContainer div.quickActions {
+	width: 22%; float: left; min-width: 135px;
+}
+#homePageQuickActions {
+	width: 22%; float: left; min-width: 135px;
+}
+#searchActionsContainer {
+	width: 76%; float: right;
+}
+div#threadPageActionsContainer div.searchActions {
+	width: 74.5%; float: right;
+}
+div#searchActions {
+	width: 98%;
+}
+div#threadsearchbarContainer {
+	width: 480px;
+}
+div#searchActions {
+	padding-left: 20px;
+}
+#allThreadsContainer {
+	padding-left: 20px;
+}
+#homePageQuickActions div.section {
+	margin-bottom: 0px;
+}
+#threadPageActionsContainer .quickActions {
+	z-index: 999;
+}
+#homePageQuickActions {
+	z-index: 999;
+}
+#MainContent #threadPageActionsContainer .section {
+	margin-top: 0px;
+}
+#MainContent div#askaquestion {
+	margin-top: 0px;
+}
+.IE7 div#askaquestion {
+	float: left;
+}
+.IE .quickActions {
+	position: relative; z-index: 999;
+}
+.IE7 #quickLinks {
+	width: 100px;
+}
+.IE7 #quickLinksText {
+	width: 75px;
+}
+.IE7 #quickLinks #quickLinksText {
+	float: left;
+}
+.IE7 #quickLinks div.arrowcontainer {
+	float: left;
+}
+.IE #quickLinks ul.popup {
+	z-index: 999;
+}
+.IE #sidebar {
+	position: relative; z-index: 0;
+}
+#quickLinks #quickLinksText span {
+	color: rgb(0, 0, 0); font-size: 13px;
+}
+.dropdown#quickLinks .popup a:hover {
+	color: rgb(0, 0, 0);
+}
+.IE7 #homePageQuickActions #quickLinks {
+	padding-top: 10px;
+}
+#searchContent #searchActions #announcementsContainer {
+	background-color: rgb(240, 240, 240);
+}
+.Forums #MainContent #msdn-technet-en-home a#seeAnnouncementsLink {
+	color: rgb(0, 0, 0); padding-top: 0.9em; padding-bottom: 0.8em; padding-left: 0.4em; font-weight: normal; text-decoration: none; display: block;
+}
+.Forums #MainContent #msdn-technet-en-thread a#seeAnnouncementsLink {
+	color: rgb(0, 0, 0); padding-top: 0.9em; padding-bottom: 0.8em; padding-left: 0.4em; font-weight: normal; text-decoration: none; display: block;
+}
+.Forums #MainContent #msdn-technet-en-thread a#seeAnnouncementsText {
+	color: rgb(0, 0, 0); padding-top: 0.9em; padding-bottom: 0.8em; padding-left: 0.4em; font-weight: normal; text-decoration: none; display: block;
+}
+.Forums #msdn-technet-en-thread #threadPageActionsContainer #relatedThreadCountContainer a {
+	color: rgb(0, 0, 0); padding-top: 0.9em; padding-bottom: 0.8em; padding-left: 0.4em; font-weight: normal; text-decoration: none; display: block;
+}
+.Forums.IE7 #MainContent #msdn-technet-en-home a#seeAnnouncementsLink {
+	padding-right: 1em; padding-left: 1em;
+}
+.Forums.IE7 #MainContent #msdn-technet-en-thread a#seeAnnouncementsLink {
+	padding-right: 1em; padding-left: 1em;
+}
+.Forums.IE7 #MainContent #msdn-technet-en-thread a#seeAnnouncementsText {
+	padding-right: 1em; padding-left: 1em;
+}
+.Forums.IE7 #msdn-technet-en-thread #threadPageActionsContainer #relatedThreadCountContainer a {
+	padding-right: 1em; padding-left: 1em;
+}
+.Forums #MainContent #msdn-technet-en-home a#seeAnnouncementsLink:hover {
+	text-decoration: none; background-color: rgb(222, 223, 225);
+}
+.Forums #MainContent #msdn-technet-en-thread a#seeAnnouncementsLink:hover {
+	text-decoration: none; background-color: rgb(222, 223, 225);
+}
+.Forums #msdn-technet-en-thread #threadPageActionsContainer #relatedThreadCountContainer a:hover {
+	text-decoration: none; background-color: rgb(222, 223, 225);
+}
+.Forums #searchContent #searchActions #announcementsContainer {
+	width: 210px; padding-top: 0px; padding-bottom: 0px; padding-left: 0px;
+}
+.Forums #msdn-technet-en-thread #threadPageActionsContainer #relatedThreadCountContainer {
+	width: 210px; padding-top: 0px; padding-bottom: 0px; padding-left: 0px;
+}
+#searchContent .searchbar .searchboxinnercontainer {
+	position: relative; background-color: rgb(222, 223, 225);
+}
+#threadsearchbarContainer .searchbar .searchboxinnercontainer {
+	position: relative; background-color: rgb(222, 223, 225);
+}
+.Forums .searchbar table.searchboxinnercontainer td {
+	padding: 7px 0px 10px 10px;
+}
+.Forums .searchbar table.searchboxinnercontainer td.imageWidth {
+	padding: 0px; top: 8px; right: 5px; position: absolute;
+}
+.Forums .rtl .searchbar table.searchboxinnercontainer td.imageWidth {
+	left: 5px; right: auto;
+}
+.watermark#searchbox {
+	font-style: normal;
+}
+#viewallCategoriesContainer {
+	padding-right: 12px;
+}
+#categoryFilterSection #categoryFilter {
+	padding-top: 2px;
+}
+ul#topCategoryItems {
+	margin-right: 15px;
+}
+#categoryFilterSection .forumFilter {
+	padding: 12px 0px 0px;
+}
+ul#topCategoryItems .forumFilter .forumItem .checkboxText {
+	width: 172px; padding-top: 1px;
+}
+#categoryFilter li.categoryArea {
+	padding-bottom: 18px;
+}
+#categoryFilter li.categoryArea .categoryHeaderText {
+	width: 190px; display: inline-block;
+}
+.selected.categoryHeader {
+	font-family: "Segoe UI Semibold","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-weight: normal;
+}
+#msdn-technet-en-home ul#topCategoryItems a {
+	color: rgb(149, 149, 149); padding-left: 10px; cursor: pointer;
+}
+#msdn-technet-en-home ul#topCategoryItems a:link {
+	color: rgb(149, 149, 149); padding-left: 10px; cursor: pointer;
+}
+#msdn-technet-en-home ul#topCategoryItems a.current {
+	color: rgb(0, 0, 0);
+}
+#msdn-technet-en-home ul#topCategoryItems a:hover {
+	color: rgb(0, 0, 0);
+}
+#msdn-technet-en-home ul#topCategoryItems a:active {
+	color: rgb(0, 0, 0);
+}
+.forumFilter .forumItem div.checkboxContainer {
+	width: 12px;
+}
+#homepageLeaderboard div.seeMore {
+	width: 16%; margin-right: 9px;
+}
+#homepageLeaderboard .leaderboards .box th {
+	text-align: left; color: rgb(0, 0, 0);
+}
+div#sidebar > div#rail {
+	margin: 0px;
+}
+.Forums #homepageLeaderboard .seeMore h4 a {
+	font-size: 13px;
+}
+.viewAllLink {
+	cursor: pointer;
+}
+.arrowdown {
+	cursor: pointer;
+}
+#categoryPopupClose {
+	cursor: pointer;
+}
+#homepageLeaderboard div.seeMore {
+	width: 16%; margin-right: 9px;
+}
+div#homePageContentContainer div.expandedThreadContainer .messageContent {
+	width: 85%;
+}
+div#homePageContentContainer div.expandedThreadContainer .children .messageContent {
+	width: 84%;
+}
+div#homePageContentContainer div.expandedThreadContainer .children .children .messageContent {
+	width: 82%;
+}
+div.expandedContent #homePageResultsContainer div.expandedThreadContainer .messageContent {
+	width: 89%;
+}
+div.expandedContent #homePageResultsContainer div.expandedThreadContainer .children .messageContent {
+	width: 88%;
+}
+div.expandedContent #homePageResultsContainer div.expandedThreadContainer .children .children .messageContent {
+	width: 86%;
+}
+div#threadPageContainer .messageContent {
+	width: 86%; padding-bottom: 10px; border-bottom-color: rgb(238, 238, 238); border-bottom-width: 2px; border-bottom-style: solid;
+}
+div#threadPageContainer .children .messageContent {
+	width: 85%;
+}
+div#threadPageContainer .children .children .messageContent {
+	width: 83%;
+}
+div.expandedContent #threadPageContainer .messageContent {
+	width: 90%;
+}
+div.expandedContent #threadPageContainer .children .messageContent {
+	width: 88%;
+}
+div.expandedContent #threadPageContainer .children .children .messageContent {
+	width: 86%;
+}
+.threadResults .threadsnippet .threadmetricscontainer .status {
+	padding: 3px 2px 6px; width: 75px;
+}
+.de-de .threadResults .threadsnippet .status {
+	line-height: 0.8em; font-size: 15px;
+}
+.Forums.de-de .threadsnippet .votes {
+	line-height: 0.8em; font-size: 15px;
+}
+.Forums .threadmetricscontainer .metrics {
+	overflow: hidden; position: relative; background-color: rgb(236, 236, 236);
+}
+.Forums.de-de .threadsnippet .votes .count {
+	padding: 9px 0px;
+}
+.Forums .threadsnippet .votes {
+	width: 56px; line-height: 1.15em; padding-bottom: 0px;
+}
+.Forums .threadsnippet .votes .count {
+	padding: 9px 0px 4px; font-family: "Segoe UI Semibold","Segoe UI",Arial,Helvetica,sans-serif; font-size: 18px;
+}
+.abusive.status {
+	background-color: rgb(186, 18, 26);
+}
+#msdn-technet-en-thread div.abusive.threadIcon {
+	background-color: rgb(186, 18, 26);
+}
+.Forums .answered.status {
+	background-color: rgb(210, 71, 38);
+}
+.Forums .answeredlocked.status {
+	background-color: rgb(210, 71, 38);
+}
+.Forums .answeredprivate.status {
+	background-color: rgb(210, 71, 38);
+}
+.Forums .sticky.status {
+	background-color: rgb(210, 71, 38);
+}
+.Forums #stickyThreads .threadsnippet .sticky.status {
+	background-color: rgb(210, 71, 38);
+}
+.Forums #msdn-technet-en-thread h1 div.sticky.threadIcon {
+	background-color: rgb(210, 71, 38);
+}
+.Forums div.root.question.messageIcon {
+	background-color: rgb(210, 71, 38);
+}
+.Forums #msdn-technet-en-thread #threadPageContentContainer li.answer div.messageIcon {
+	background-color: rgb(210, 71, 38);
+}
+.Forums #msdn-technet-en-home #homePageResultsContainer div.answer.messageIcon {
+	background-color: rgb(210, 71, 38);
+}
+.Forums a#rssFeed img.rss {
+	background-color: rgb(210, 71, 38);
+}
+.Forums #allCategoryPopupContainer img.rss.icon {
+	background-color: rgb(210, 71, 38);
+}
+.Forums .threadsnippet .details .detailscontainer h3 em {
+	background-color: rgb(210, 71, 38);
+}
+.Forums .threadsnippet .details .detailscontainer .threadSummary em {
+	background-color: rgb(210, 71, 38);
+}
+li.answer .messageSidebar div.messageIcon {
+	background-color: rgb(210, 71, 38);
+}
+.messageSidebar div.answer.messageIcon {
+	background-color: rgb(210, 71, 38);
+}
+.deleted.status {
+	background-color: rgb(150, 150, 150);
+}
+.discussion.status {
+	background-color: rgb(150, 150, 150);
+}
+.discussionlocked.status {
+	background-color: rgb(150, 150, 150);
+}
+.discussionprivate.status {
+	background-color: rgb(150, 150, 150);
+}
+div#msdn-technet-en-thread div.locked.threadIcon {
+	background-color: rgb(150, 150, 150);
+}
+div#msdn-technet-en-thread div.threadIcon {
+	background-color: rgb(150, 150, 150);
+}
+.proposed.status {
+	background-color: rgb(80, 80, 80);
+}
+.proposedlocked.status {
+	background-color: rgb(80, 80, 80);
+}
+.proposedprivate.status {
+	background-color: rgb(80, 80, 80);
+}
+div.replies div.proposed.status.messageIcon {
+	background-color: rgb(80, 80, 80);
+}
+.Forums div.root.question.messageIcon {
+	background-color: rgb(115, 115, 115);
+}
+.unanswered.status {
+	background-color: rgb(115, 115, 115);
+}
+.unansweredlocked.status {
+	background-color: rgb(115, 115, 115);
+}
+.private.status {
+	background-color: rgb(115, 115, 115);
+}
+.unansweredprivate.status {
+	background-color: rgb(115, 115, 115);
+}
+.threadsnippet .threadmetricscontainer .metrics .status {
+	color: rgb(255, 255, 255);
+}
+.Forums #msdn-technet-en-thread li.answer div.messageIcon {
+	background-color: rgb(210, 71, 38);
+}
+.Forums #msdn-technet-en-home div.answer.messageIcon {
+	background-color: rgb(210, 71, 38);
+}
+.Forums div.root.question.messageIcon {
+	background-color: rgb(115, 115, 115);
+}
+.Forums li.threadblock .detailscontainer > h3 {
+	line-height: 100%; font-size: 16px; font-weight: normal;
+}
+.Forums div.threadsnippet div.expandedThreadContainer {
+	font-size: 12px;
+}
+div.section#threadPageContainer {
+	padding: 0px 1em 0.5em;
+}
+#threadPageContainer h1 {
+	font-family: "Segoe UI",Arial,Helvetica,sans-serif; font-weight: normal; margin-top: -10px;
+}
+.Forums #msdn-technet-en-thread #threadPageContainer .messageContent {
+	width: 87%; padding-bottom: 10px; border-bottom-color: rgb(238, 238, 238); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.Forums #msdn-technet-en-thread #threadPageContainer .children .messageContent {
+	width: 85%;
+}
+.Forums #msdn-technet-en-thread #threadPageContainer .children .children .messageContent {
+	width: 83%;
+}
+.Forums #msdn-technet-en-thread .expandedContent #threadPageContainer .messageContent {
+	width: 90%;
+}
+.Forums #msdn-technet-en-thread .expandedContent #threadPageContainer .children .messageContent {
+	width: 88%;
+}
+.Forums #msdn-technet-en-thread .expandedContent #threadPageContainer .children .children .messageContent {
+	width: 86%;
+}
+.Forums #msdn-technet-en-thread #threadPageContainer .root.message .messageContent {
+	padding-bottom: 0px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.Forums #msdn-technet-en-thread #threadPageContainer .answer.message .messageContent {
+	padding-bottom: 0px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.Forums #threadPageContainer ul.message li.message {
+	width: 100%; border-bottom-color: rgb(238, 238, 238); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.Forums #homePageResultsContainer div.expandedThreadContainer li.message {
+	width: 100%; border-bottom-color: rgb(238, 238, 238); border-bottom-width: 2px; border-bottom-style: solid;
+}
+#msdn-technet-en-thread #threadPageContentContainer #threadPageContainer .messageContent {
+	font-size: 13px;
+}
+#threadPageContainer h1 {
+	font-family: "Segoe UI",Arial,Helvetica,sans-serif; font-weight: normal; margin-top: -10px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent .messageFooter .userInfo {
+	margin-right: 5px;
+}
+#msdn-technet-en-thread ul.relatedThreads li {
+	text-indent: 0px; margin-bottom: 10px; margin-left: 0px;
+}
+.Forums .threadsnippet .details {
+	width: 77%;
+}
+.Forums #msdn-technet-en-home div.expandedThreadContainer .messageContent {
+	width: 84%;
+}
+.Forums #msdn-technet-en-home div.expandedThreadContainer .children .messageContent {
+	width: 82%;
+}
+.Forums #msdn-technet-en-home div.expandedThreadContainer .children .children .messageContent {
+	width: 80%;
+}
+#msdn-technet-en-home .threadsnippet .details .detailscontainer .breadcrumb a:hover {
+	color: rgb(0, 149, 196);
+}
+#msdn-technet-en-home div .popup {
+	line-height: 20px; font-size: 14px;
+}
+#quickLinks ul.popup {
+	line-height: 20px; font-size: 14px;
+}
+#msdn-technet-en-thread .abusive ul.popup {
+	line-height: 20px; font-size: 14px;
+}
+#homePageResultsContainer .expandedThreadContainer ul.root.message {
+	margin-top: 0px;
+}
+.expandedContent div.threadsnippet .details div.expandedThreadContainer {
+	max-width: 788px;
+}
+#msdn-technet-en-home .expandedContent #homePageResultsContainer div.expandedThreadContainer .messageContent {
+	width: 88%;
+}
+#msdn-technet-en-home .expandedContent #homePageResultsContainer div.expandedThreadContainer .children .messageContent {
+	width: 86%;
+}
+#msdn-technet-en-home .expandedContent #homePageResultsContainer div.expandedThreadContainer .children .children .messageContent {
+	width: 84%;
+}
+div#sidebar > div#rail {
+	margin: 0px;
+}
+#allThreadsContainer {
+	padding-left: 15px;
+}
+#searchActions {
+	margin-left: 0px !important;
+}
+#threadsearchbarContainer {
+	margin-left: 0px !important;
+}
+div#homePageFilterBarContainer {
+	margin-top: -39px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar {
+	max-width: 45px;
+}
+div.expandedThreadContainer .messageSidebar {
+	max-width: 45px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar div.votinglabel {
+	line-height: 100%;
+}
+div.expandedThreadContainer .messageSidebar div.votinglabel {
+	line-height: 100%;
+}
+div.section#threadPageContainer {
+	word-wrap: break-word;
+}
+#sortFilter ul.popup {
+	background-color: rgb(255, 255, 255);
+}
+#quickLinks ul.popup {
+	line-height: 20px; font-size: 14px; opacity: 1;
+}
+#msdn-technet-en-thread .abusive ul.popup {
+	line-height: 20px; font-size: 14px; opacity: 1;
+}
+#sortFilter .popup {
+	top: 20px;
+}
+#msdn-technet-en-thread #threadPageContainer li.message div.menu > div > a.popup {
+	padding-top: 0px; font-size: 95% !important;
+}
+div.expandedThreadContainer li.message div.menu > div > a.popup {
+	padding-top: 0px; font-size: 95% !important;
+}
+.rtl .popup input[type='radio'] {
+	float: left; cursor: pointer;
+}
+.rtl .popup input[type='checkbox'] {
+	float: left; cursor: pointer;
+}
+.rtl #quickLinks ul.popup {
+	left: 0px;
+}
+div.profile-usercard-inline div.profile-inline {
+	border: currentColor;
+}
+div.profile-usercard-mini .profile-mini .profile-mini-header .profile-mini-display-name {
+	font-size: 12px;
+}
+div.profile-usercard-mini .profile-mini .profile-mini-points {
+	font-size: 12px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent .messageFooter .userInfo {
+	margin-right: 5px;
+}
+div#threadPageSidebarContainer .profile-usercard-inline .profile-inline {
+	padding: 0px; width: 100%;
+}
+div.expandedThreadContainer .messageSidebar div.voting {
+	width: 100%;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar div.voting img.voteup {
+	margin: 0px auto; width: 18px; height: 25px;
+}
+#msdn-technet-en-home div.expandedThreadContainer .messageSidebar div.voting img.voteup {
+	margin: 0px auto; width: 18px; height: 25px;
+}
+#msdn-technet-en-thread #noAnnouncementsTextBox {
+	padding-top: 0.8em; padding-bottom: 0.8em;
+}
+#searchActions .popup.announcement {
+	color: rgb(102, 102, 102);
+}
+.popup.announcement strong {
+	font-family: "Segoe UI Semibold",Helvetica,Garuda,Arial,sans-serif; font-weight: normal;
+}
+.popup.announcement b {
+	font-family: "Segoe UI Semibold",Helvetica,Garuda,Arial,sans-serif; font-weight: normal;
+}
+#searchActions div.popup.announcement li.announcement div.head {
+	margin: 12px 0px 0px 9px;
+}
+.popup.announcement .announcementContainer {
+	line-height: 110%; font-size: 1.2em;
+}
+.popup.announcement div.arrowcontainer {
+	margin-right: 5px;
+}
+#searchActions {
+	margin-left: 0px !important;
+}
+#threadsearchbarContainer {
+	margin-left: 0px !important;
+}
+div#announcementsContainer {
+	padding-top: 0px; padding-bottom: 0px; padding-left: 0px;
+}
+#seeAnnouncementsText {
+	padding-top: 0.8em; padding-bottom: 0.7em; padding-left: 0.4em; display: block;
+}
+#seeAnnouncementsLink {
+	padding-top: 0.8em; padding-bottom: 0.7em; padding-left: 0.4em; display: block;
+}
+div#searchActions .popup.announcement {
+	width: 72%;
+}
+#msdn-technet-en-home div .popup#allCategoryPopupContainer {
+	padding: 1em;
+}
+a#closeAllCategoryPopup {
+	top: 5px; right: 10px; position: absolute;
+}
+#allCategoryPopupContainer #forumDetailsContainer a#submitAllCategories {
+	right: 10px; bottom: 10px; cursor: pointer; background-color: rgb(210, 71, 38);
+}
+#allCategoryPopupContainer #forumDetailsContainer a#submitAllCategories:hover {
+	background-color: rgb(0, 68, 204);
+}
+#allCategoryPopupContainer :first-child#forumsDetailsSelectedHeader {
+	font-family: "Segoe UI Semibold","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; font-weight: normal;
+}
+#allCategoryPopupContainer li.categoryArea a.categoryHeaderText {
+	width: 90%; color: rgb(149, 149, 149); margin-left: 5px;
+}
+#allCategoryPopupContainer li.categoryArea a.categoryHeaderText:hover {
+	color: rgb(0, 0, 0);
+}
+.checkboxText {
+	color: rgb(0, 0, 0);
+}
+#allCategoryPopupContainer div.arrowcontainer {
+	margin-top: 2px;
+}
+#forumDetailsContainerBanner {
+	color: rgb(51, 51, 51);
+}
+.Forums #mySettingsContentContainer {
+	width: 735px;
+}
+.Forums #homePageContentContainer {
+	width: 735px;
+}
+.Forums .pageTitle {
+	margin-left: 259px;
+}
+.contentWrapperFull#contentWrapper {
+	margin-top: 40px;
+}
+#newThreadPage h1 {
+	font-family: "Segoe UI Light",Arial,Helvetica,sans-serif; font-weight: normal;
+}
+#newThreadPage h3 {
+	font-family: "Segoe UI Semibold",Arial,Helvetica,sans-serif; font-weight: normal;
+}
+.users tr.userstitle {
+	font-family: "Segoe UI Semibold",Arial,Helvetica,sans-serif; font-weight: normal;
+}
+#mySettingsContentContainer #myForumsPreferences h5 {
+	font-family: "Segoe UI Semibold",Arial,Helvetica,sans-serif; font-weight: normal;
+}
+.Forums #newThreadPage button#btnSubmit {
+	cursor: pointer; background-color: rgb(210, 71, 38);
+}
+.Forums #mySettingsContentContainer #myForumsPreferences input[type='submit'] {
+	cursor: pointer; background-color: rgb(210, 71, 38);
+}
+.Forums #newThreadPage button#btnSubmit:hover {
+	background-color: rgb(0, 68, 204);
+}
+.Forums #mySettingsContentContainer #myForumsPreferences input[type='submit']:hover {
+	background-color: rgb(0, 68, 204);
+}
+div.myForumsStatsCol .myForumStatsHeader .threadsHeader {
+	width: 61%;
+}
+li.forum .stats div.statsThreads {
+	width: 62%;
+}
+.rtl li.forum .stats div.statsThreads {
+	float: left;
+}
+div.myForumsStatsCol .myForumStatsHeader .messagesHeader {
+	width: 32%;
+}
+li.forum .stats div.statsMessages {
+	width: 38%;
+}
+.rtl li.forumheader div.statGroup {
+	text-align: right;
+}
+.rtl li.forum div.statGroup {
+	text-align: right;
+}
+.rtl .myForumsStatsCol .myForumStatsHeader .messagesHeader {
+	text-align: right;
+}
+.rtl .myForumsStatsCol .myForumStatsHeader .threadsHeader {
+	text-align: right;
+}
+.rtl #content div.myForumsHeaderName.box h4 {
+	padding-right: 0px;
+}
+.relatedThreads .alignMiddle {
+	max-width: 750px;
+}
+.Masthead .BrandLogo {
+	height: 38px;
+}
+.Masthead .BrandLogo a {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -383px 0px; height: 100%; min-width: 108px;
+}
+#BrandDisplayText {
+	left: 108px; padding-top: 11px; max-width: 215px;
+}
+.rtl #BrandDisplayText {
+	display: none;
+}
+a {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+h1 {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+h2 {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+h3 {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+h4 {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+h5 {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+h6 {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+hr {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+img {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+li {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+p {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+pre {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+table {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+td {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+th {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+tr {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+ol {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+ul {
+	margin: 0px; padding: 0px; border: currentColor; text-decoration: none; list-style-type: none;
+}
+a {
+	color: rgb(0, 51, 204);
+}
+a:hover {
+	color: rgb(255, 102, 0);
+}
+a:active {
+	color: rgb(255, 102, 0);
+}
+a:focus {
+	color: rgb(255, 102, 0);
+}
+a {
+	text-decoration: none; cursor: pointer;
+}
+a:link {
+	text-decoration: none; cursor: pointer;
+}
+a:visited {
+	text-decoration: none; cursor: pointer;
+}
+.bold {
+	font-weight: bold;
+}
+div.clear {
+	height: 0px; clear: both; visibility: hidden;
+}
+div.cleft {
+	clear: left;
+}
+input {
+	color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);
+}
+textarea {
+	color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);
+}
+textarea {
+	border: 1px solid rgb(187, 187, 187);
+}
+input[type='submit'] {
+	margin: 0.25em; border: 1px solid rgb(187, 187, 187); background-color: rgb(238, 238, 238);
+}
+button {
+	margin: 0.25em; border: 1px solid rgb(187, 187, 187); background-color: rgb(238, 238, 238);
+}
+h1 {
+	font-size: 1.75em; font-weight: bold;
+}
+h2 {
+	font-size: 1.5em; font-weight: bold;
+}
+h3 {
+	font-size: 1.25em; font-weight: bold;
+}
+h4 {
+	font-size: 1.25em; font-weight: normal;
+}
+h5 {
+	font-size: 1em; font-weight: normal;
+}
+h6 {
+	font-size: 1em; font-weight: normal;
+}
+p {
+	margin: 1em 0px;
+}
+pre {
+	direction: ltr; word-wrap: break-word;
+}
+.body pre {
+	text-align: left;
+}
+span.date {
+	padding-left: 0.5em; font-style: italic; display: inline-block;
+}
+ul.error {
+	margin: 1em; color: red;
+}
+ul.error > li {
+	margin: 0.25em; list-style-type: disc;
+}
+#contentWrapper {
+	width: 100%;
+}
+.contentWrapperLeft {
+	float: left;
+}
+.contentWrapperRight {
+	float: right;
+}
+#content {
+	width: auto; margin-top: 11px; float: none;
+}
+.contentLeft {
+	margin-right: 325px;
+}
+.contentRight {
+	margin-left: 325px;
+}
+#rail {
+	width: 300px; margin-top: 11px;
+}
+.railRight {
+	margin-left: -300px; float: left;
+}
+.railLeft {
+	margin-right: -300px; float: right;
+}
+a.help {
+	margin-top: 0.5em; margin-bottom: 1em; display: block;
+}
+#askaquestion a.askQuestionLink {
+	padding: 0.3em 1em 0.48em; color: rgb(255, 255, 255); line-height: inherit; background-color: rgb(188, 105, 7);
+}
+#askaquestion a.askQuestionLink:hover {
+	color: rgb(255, 255, 255); background-color: rgb(248, 148, 29);
+}
+.searchArea {
+	width: 80%; float: left;
+}
+div#homePageTabsContainer {
+	clear: both;
+}
+a.author {
+	color: green; text-decoration: none; cursor: pointer;
+}
+a.author:hover span.name {
+	color: rgb(255, 102, 0);
+}
+a:active span.name {
+	color: rgb(255, 102, 0);
+}
+a:focus span.name {
+	color: rgb(255, 102, 0);
+}
+a.author > span {
+	vertical-align: top; display: inline-block;
+}
+a.author > abbr {
+	vertical-align: top; display: inline-block;
+}
+li.forumheader a.author abbr {
+	margin-left: 0.5em;
+}
+li.forum a.author abbr {
+	margin-left: 0.5em;
+}
+li.thread a.author abbr {
+	margin-left: 0.5em;
+}
+li.message a.author abbr {
+	margin: 0px;
+}
+li.message a.author span {
+	margin-right: 0.5em;
+}
+a.author > abbr {
+	color: rgb(0, 0, 0);
+}
+a.author > span > abbr {
+	color: rgb(0, 0, 0); display: block;
+}
+span.fullbadge {
+	padding-top: 0.25em; display: inline-block;
+}
+div.medal {
+	padding-top: 0.25em; display: block;
+}
+div.badge span.affil {
+	padding-top: 0.25em; display: block;
+}
+span.fullbadge > span.affil {
+	padding-top: 0.25em; display: block;
+}
+span.fullbadge > span.medals {
+	padding-top: 0.25em; display: block;
+}
+.author > .affil {
+	margin-right: 0.5em; margin-left: 0.5em;
+}
+a.btn > img {
+	margin-right: 0.25em;
+}
+a.popup > img {
+	margin-right: 0.25em;
+}
+a.btn {
+	border: 1px solid transparent;
+}
+a.popup {
+	border: 1px solid transparent;
+}
+a.popup:hover {
+	border: 1px solid rgb(187, 187, 187);
+}
+a.btn:active {
+	border: 1px solid rgb(187, 187, 187);
+}
+a.popup:active {
+	border: 1px solid rgb(187, 187, 187);
+}
+a.btn:focus {
+	border: 1px solid rgb(187, 187, 187);
+}
+a.popup:focus {
+	border: 1px solid rgb(187, 187, 187);
+}
+a.selected.btn {
+	border: 1px solid rgb(187, 187, 187); background-color: rgb(238, 238, 238);
+}
+div.bread {
+	overflow: hidden; margin-bottom: 1.75em;
+}
+div.pager a {
+	margin: 0.25em 0.25em 0.5em 0px; padding: 0.25em; display: inline-block;
+}
+div.pager span {
+	margin: 0.25em 0.25em 0.5em 0px; padding: 0.25em; display: inline-block;
+}
+div.pager a {
+	border: 1px currentColor;
+}
+div.threads .pager {
+	padding-top: 30px; padding-bottom: 40px;
+}
+div.threads .pager span.itemSpan {
+	float: left;
+}
+div.threads .pager {
+	text-align: right;
+}
+hr {
+	margin: 0.5em 0px; width: 40%; height: 1px; text-align: left; border-top-color: rgb(187, 187, 187); border-top-width: 1px; border-top-style: solid;
+}
+hr.sig {
+	margin: 0.5em 0px; width: 40%; height: 1px; text-align: left; border-top-color: rgb(187, 187, 187); border-top-width: 1px; border-top-style: solid;
+}
+img.submitting {
+	background-position: -514px 0px; border: currentColor; width: 24px; height: 24px; background-image: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png"); background-repeat: no-repeat;
+}
+img.abusive {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1484px 0px; width: 20px;
+}
+img.alltypes {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1313px 0px; width: 20px;
+}
+img.ascending {
+	background-position: -539px 0px; width: 20px; height: 20px; display: inline-block; background-image: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png"); background-repeat: no-repeat;
+}
+img.inmaintenance {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1505px 0px; width: 20px;
+}
+img.ascending > hover {
+	background-image: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png");
+}
+img.descending {
+	background-position: -560px 0px; width: 20px; height: 20px; display: inline-block; background-image: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png"); background-repeat: no-repeat;
+}
+.hover {
+	cursor: pointer;
+}
+a.expcol {
+	background-position: -492px 0px; margin: 6px 5px; width: 10px; height: 8px; display: inline-block; background-image: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png"); background-repeat: no-repeat;
+}
+img.expcol {
+	background-position: -492px 0px; margin: 6px 5px; width: 10px; height: 8px; display: inline-block; background-image: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png"); background-repeat: no-repeat;
+}
+.expanded a.expcol {
+	background-position: -503px 0px; margin: 6px 5px; width: 10px; height: 8px; display: inline-block; background-image: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png"); background-repeat: no-repeat;
+}
+div.box {
+	border: 1px solid rgb(187, 187, 187);
+}
+li.box {
+	border: 1px solid rgb(187, 187, 187);
+}
+div.box > h4 {
+	padding: 0.5em;
+}
+div.box > h4 > .help {
+	font-size: 0.75em; font-weight: normal; margin-left: 1em;
+}
+div.box h4 {
+	font-size: 1.48em; font-weight: normal;
+}
+.Msdn .box h4 {
+	font-size: 14px;
+}
+div.box > .help {
+	margin: 0.25em 1em; font-size: 0.8em;
+}
+div.box > .content {
+	margin: 0.5em 0.5em 0.5em 0px;
+}
+div.box > ul.content > li {
+	padding-bottom: 0.25em;
+}
+div.box > table {
+	width: 95%;
+}
+div.box > hr {
+	width: 100%;
+}
+div.stats.box > table th {
+	text-align: right; padding-bottom: 0.25em; text-decoration: underline;
+}
+div.stats.box > table td:first-child {
+	text-align: left;
+}
+div.stats.box > table td {
+	text-align: right; padding-bottom: 0.25em;
+}
+div.thread.menu {
+	border-bottom-color: rgb(187, 187, 187); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(238, 238, 238);
+}
+li.message ul.thread.menu > li {
+	float: left;
+}
+div.expcol {
+	text-align: right; font-size: 0.8em; display: none;
+}
+div.form label {
+	margin: 0.25em 0.5em;
+}
+div.form input {
+	margin: 0.25em 0.5em;
+}
+div.form textarea {
+	width: 98%;
+}
+div.body ol {
+	margin-left: 3em;
+}
+div.body ul {
+	margin-left: 3em;
+}
+div.body ol li {
+	list-style-type: decimal;
+}
+div.body ul li {
+	list-style-type: disc;
+}
+div.body img {
+	max-width: 98%;
+}
+ul.category {
+	padding-top: 1em; clear: both;
+}
+ul.categoryHome {
+	clear: both; min-height: 400px;
+}
+li.categoryHome h4 {
+	padding-top: 6px; font-weight: bold;
+}
+li.category {
+	margin-bottom: 1em;
+}
+li.category > h2 {
+	padding: 0.25em 0.5em 0px;
+}
+li.category > h2 > a {
+	color: rgb(0, 0, 0);
+}
+li.category > h2 > a:hover {
+	color: rgb(255, 102, 0);
+}
+li.category > h2 > a:active {
+	color: rgb(255, 102, 0);
+}
+li.category > h2 > a:focus {
+	color: rgb(255, 102, 0);
+}
+li.category .categoryName > h2 {
+	padding: 0.25em 0.5em 0px;
+}
+li.category .categoryName > h2 > a {
+	color: rgb(0, 0, 0);
+}
+li.category .categoryName > h2 > a:hover {
+	color: rgb(255, 102, 0);
+}
+li.category .categoryName > h2 > a:active {
+	color: rgb(255, 102, 0);
+}
+li.category .categoryName > h2 > a:focus {
+	color: rgb(255, 102, 0);
+}
+li.category .categoryStatsCol .statsCategoryHeader .threadsHeader {
+	float: left;
+}
+ul.category li.category h2 a {
+	font-weight: normal;
+}
+ul.category li.category h2 a:link {
+	font-weight: normal;
+}
+ul.category li.category h2 a:hover {
+	font-weight: normal;
+}
+ul.category li.category h2 a:active {
+	font-weight: normal;
+}
+#MainContent a:hover {
+	color: rgb(0, 149, 196); text-decoration: none;
+}
+li.forumheader {
+	margin: 1em 1em 0px 0px;
+}
+li.forum {
+	margin: 1em;
+}
+li.forumHome {
+	margin: 0px;
+}
+li.forumheader p {
+	margin: 0px; clear: left;
+}
+li.forum p {
+	margin: 0px; clear: left;
+}
+.category ul.forum li.forum p {
+	max-width: 95%;
+}
+li.forum h3 {
+	height: auto; float: left; white-space: normal; max-width: 80%;
+}
+li.forum h3.forumLink {
+	max-width: 100%;
+}
+li.forumHome h5 {
+	float: left; max-width: 90%;
+}
+li.forumheader .stat {
+	margin-left: 0.25em; display: inline-block;
+}
+li.forum .stat {
+	margin-left: 0.25em; display: inline-block;
+}
+div.statGroup > a > img {
+	vertical-align: text-bottom;
+}
+div.statGroup > a > img {
+	margin-left: 1em;
+}
+div.statGroup {
+	padding-bottom: 0.5em;
+}
+li.forumheader div.statsMessages {
+	width: 35%; text-align: left; float: right;
+}
+li.forum div.statsMessages {
+	width: 35%; text-align: left; float: right;
+}
+li.forumheader div.statsThreads {
+	width: 65%; text-align: left;
+}
+li.forum div.statsThreads {
+	width: 65%; text-align: left;
+}
+li.forumheader div.statGroup {
+	padding: 0px; text-align: left;
+}
+li.forum div.statGroup {
+	padding: 0px; text-align: left;
+}
+li.forum div.statsHeader {
+	padding-bottom: 1em;
+}
+.content ul.forum li.forum p {
+	max-width: 95%;
+}
+li.thread div.stats {
+	text-align: right; float: right;
+}
+li.hover.thread div.stats {
+	font-weight: bold;
+}
+li.category > h2 > a.expcol {
+	float: right;
+}
+li.category .forumCategory {
+	width: 100%;
+}
+li.forum .forumSpace {
+	width: 100%;
+}
+li.forum .forumSpace .forumContent {
+	width: 70%; float: left;
+}
+li.forum .forumSpace .forumStats {
+	width: 30%; float: left;
+}
+div.announcement {
+	clear: both; margin-top: 0.5em;
+}
+div.announcement ul.announcement {
+	padding: 7px;
+}
+div.linkContent {
+	padding: 5px 5px 11px; width: 95%; margin-top: 7px; margin-bottom: 7px; margin-left: 1.4em; background-color: rgb(242, 242, 242);
+}
+div.linkContent a {
+	color: rgb(0, 102, 221); font-size: 0.85em;
+}
+div.linkContent label {
+	font-size: 0.85em; font-weight: normal;
+}
+div.linkContent input {
+	border: 1px solid rgb(132, 156, 177);
+}
+.announcementUrl {
+	width: 99%;
+}
+.announcement > a {
+	margin: 0.25em; font-size: 0.8em; float: right; position: relative; z-index: 1;
+}
+ul.announcement > li > h4 > a {
+	vertical-align: middle;
+}
+ul.announcement > li > div.body {
+	margin: 0px 0.25em 0px 20px; padding: 0.25em; display: none;
+}
+li.announcement {
+	clear: both;
+}
+li.announcement div.head {
+	margin-left: 20px; display: none;
+}
+li.thread {
+	padding-top: 0.25em; margin-bottom: 0.5em; border-top-color: rgb(187, 187, 187); border-top-width: 1px; border-top-style: solid;
+}
+li.thread > div.searchresult {
+	margin-left: 21px;
+}
+li.thread > div.author.searchresult {
+	margin-top: 3.5px;
+}
+li.new.thread {
+	background-color: rgb(240, 230, 140);
+}
+li.thread > h3 {
+	margin-right: 10em; margin-left: 20px;
+}
+li.hasUnread.thread > h3 {
+	font-style: italic; font-weight: bold;
+}
+li.viewed.thread > h3 {
+	font-weight: normal;
+}
+li.thread > h3 > img.alert {
+	margin-left: 0.5em;
+}
+li.thread > img.icon {
+	float: left;
+}
+li.thread > div[name='created'] {
+	margin-left: 40px;
+}
+li.thread > div[name='replied'] {
+	margin-left: 40px;
+}
+li.thread > div[name='forum'] {
+	margin-left: 40px;
+}
+a > img.expcol {
+	vertical-align: middle;
+}
+li.thread a.expcol {
+	vertical-align: middle;
+}
+li.thread div.preview {
+	margin-top: 0.5em; margin-left: 40px; display: none;
+}
+li.loading.thread div.preview {
+	background-position: -514px 0px; width: 24px; height: 24px; display: block; background-image: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png"); background-repeat: no-repeat;
+}
+div.preview div.thread.menu {
+	display: none;
+}
+div.preview div.links {
+	text-align: right;
+}
+div.threads {
+	text-align: right;
+}
+div.threads > span {
+	padding: 0.25em 0px; width: 7em; text-align: center; display: inline-block;
+}
+li.thread > div.stats > span {
+	padding: 0.25em 0px; width: 7em; text-align: center; display: inline-block;
+}
+#controls {
+	margin: 1em 0px; clear: right;
+}
+#controls [name='filters'].menu {
+	float: left;
+}
+#controls [name='advancedFilters'].menu {
+	width: 50%; float: left;
+}
+#controls [name='options'].menu {
+	width: 20%; text-align: right; float: right;
+}
+#controls [name='sorts'].menu {
+	text-align: right; float: right;
+}
+#controls ul.menu > li {
+	display: inline;
+}
+#controls ul.menu > li > a {
+	padding: 0.5em; display: inline-block;
+}
+a.popup > img.drop {
+	margin-left: 0.25em;
+}
+ul.popup {
+	padding: 0.5em; border: 1px solid rgb(187, 187, 187); text-align: left; display: none; filter: alpha(opacity=95); position: absolute; z-index: 1000; opacity: 0.95; background-color: rgb(238, 238, 238);
+}
+ul.popup > li > a {
+	display: block;
+}
+p.tag > span.tag {
+	margin-left: 0.5em;
+}
+ul.message {
+	clear: right;
+}
+ul.root {
+	margin-top: 1em;
+}
+div.answers {
+	padding-top: 1em; border-top-color: rgb(97, 170, 52); border-top-width: 2px; border-top-style: solid;
+}
+div.replies {
+	padding-top: 1em; border-top-color: rgb(187, 187, 187); border-top-width: 2px; border-top-style: solid;
+}
+div.answers > h3 {
+	margin-bottom: 3px;
+}
+div.replies > h3 {
+	margin-bottom: 3px;
+}
+.ltr div.answers ul.message {
+	margin-left: 1em;
+}
+.ltr div.replies ul.message {
+	margin-left: 1em;
+}
+ul.answers.message > li.message div.menu {
+	background-color: rgb(224, 240, 192);
+}
+ul.answers.message div.head {
+	background-color: rgb(224, 240, 192);
+}
+li.answer.message > div.menu {
+	background-color: rgb(224, 240, 192);
+}
+li.answer.message div.head {
+	background-color: rgb(224, 240, 192);
+}
+.ltr li.children {
+	margin-left: 3em;
+}
+.rtl div.answers ul.message {
+	margin-right: 1em;
+}
+.rtl div.replies ul.message {
+	margin-right: 1em;
+}
+.rtl li.children {
+	margin-right: 3em;
+}
+li.message {
+	border: 1px solid rgb(187, 187, 187); margin-bottom: 1em; background-color: rgb(255, 255, 255);
+}
+li.answer.message {
+	border: 2px solid rgb(97, 170, 52);
+}
+li.abusive.message {
+	border: 2px solid red;
+}
+li.propose.message {
+	border: 2px solid rgb(13, 134, 185);
+}
+li.new.message {
+	border: 2px solid rgb(136, 136, 136);
+}
+li.submitting.message {
+	position: relative;
+}
+div.submitting.editor {
+	position: relative;
+}
+div.submitting.announcement {
+	position: relative;
+}
+div.forumListResults {
+	margin-top: 0.5em; position: relative;
+}
+div.forumListResults div.loading {
+	height: 300px;
+}
+li.message div.deleted * {
+	vertical-align: middle;
+}
+li.submitting.message > div.submitting {
+	background-position: center; left: 0px; top: 0px; right: 0px; bottom: 0px; filter: alpha(opacity=75); position: absolute; opacity: 0.75; background-image: url("http://i1.social.s-msft.com/Forums/resources/images/loading.gif"); background-repeat: no-repeat; background-color: rgb(255, 255, 255);
+}
+li.message > div.submitting.editor > div.submitting {
+	background-position: center; left: 0px; top: 0px; right: 0px; bottom: 0px; filter: alpha(opacity=75); position: absolute; opacity: 0.75; background-image: url("http://i1.social.s-msft.com/Forums/resources/images/loading.gif"); background-repeat: no-repeat; background-color: rgb(255, 255, 255);
+}
+div.submitting.editor > div.submitting {
+	background-position: center; left: 0px; top: 0px; right: 0px; bottom: 0px; filter: alpha(opacity=75); position: absolute; opacity: 0.75; background-image: url("http://i1.social.s-msft.com/Forums/resources/images/loading.gif"); background-repeat: no-repeat; background-color: rgb(255, 255, 255);
+}
+div.submitting.announcement > div.submitting {
+	background-position: center; left: 0px; top: 0px; right: 0px; bottom: 0px; filter: alpha(opacity=75); position: absolute; opacity: 0.75; background-image: url("http://i1.social.s-msft.com/Forums/resources/images/loading.gif"); background-repeat: no-repeat; background-color: rgb(255, 255, 255);
+}
+li.message > div.head {
+	position: relative;
+}
+li.message > div.head > div.helpful {
+	padding: 0.5em; top: 0px; text-align: right; right: 0px; position: absolute;
+}
+li.message > div.head > div.helpful > span {
+	font-size: 1.5em;
+}
+li.message > div.head > div.helpful > span > img {
+	vertical-align: middle; filter: alpha(opacity=35); opacity: 0.35; background-color: rgb(238, 238, 238);
+}
+li.message > div.head > div.helpful > span > img.submitting {
+	background-position: -514px 0px; width: 24px; height: 24px; filter: alpha(opacity=100); opacity: 1; background-image: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png"); background-color: rgb(255, 255, 255);
+}
+li.message > div.head > div.helpful > a {
+	margin-left: 0.5em; display: block;
+}
+li.message > div.abusive {
+	text-align: right; font-size: 0.85em; margin-right: 0.25em;
+}
+li.message > div.menu {
+	background-color: rgb(238, 238, 238);
+}
+.IE8 li.message > div.menu > ul.menu {
+	display: block;
+}
+li.message > div.menu > ul.menu {
+	display: inline-block;
+}
+li.message > img.answer {
+	margin: 1em 8px; clear: left; float: left;
+}
+li.message > img.proposed {
+	margin: 1em 8px; clear: left; float: left;
+}
+li.message > img.hascode {
+	margin: 1em 8px; clear: left; float: left;
+}
+li.message ul.menu > li {
+	display: inline;
+}
+li.message ul.menu > li > a {
+	padding: 0.25em 0.5em; display: inline-block; white-space: nowrap;
+}
+li.message > div.head > a.author {
+	padding: 0.25em; display: inline-block;
+}
+li.message > div.head > span.date {
+	padding-top: 0.25em; vertical-align: top;
+}
+li.message a.author img {
+	margin-right: 0.5em;
+}
+li.message a.author {
+	vertical-align: top;
+}
+li.message > div.container {
+	margin: 1em 2em 0px 4.5em;
+}
+li.message div.body {
+	overflow: visible; margin-bottom: 2em;
+}
+li.deleted.message div.body {
+	text-decoration: line-through;
+}
+li.message div.body blockquote {
+	padding: 1em; background-color: rgb(208, 208, 208);
+}
+li.message div.body div.quote {
+	padding: 1em; background-color: rgb(208, 208, 208);
+}
+ul.history {
+	margin-left: 20px;
+}
+ul.history > li {
+	padding: 0.25em 0px;
+}
+ul.history > li > span {
+	padding-right: 0.5em; font-size: 0.9em;
+}
+ul.history > li > span.type {
+	color: rgb(68, 68, 68);
+}
+ul.history > li > span.date {
+	color: rgb(68, 68, 68);
+}
+div.badge {
+	margin: 0.5em 0px; padding: 1em; border: 1px solid rgb(187, 187, 187);
+}
+div.badge > img {
+	vertical-align: top;
+}
+div.badge > span {
+	display: inline-block;
+}
+.tagCloud {
+	border: 2px solid rgb(187, 187, 187); text-align: center;
+}
+.tagCloud > h4 {
+	padding: 0.25em; text-align: left; background-color: rgb(238, 238, 238);
+}
+.tagCloud > .tags {
+	margin: 0px 0.2em;
+}
+a.w1 {
+	font-size: 0.85em;
+}
+a.w2 {
+	font-size: 1em;
+}
+a.w3 {
+	font-size: 1.25em;
+}
+a.w4 {
+	font-size: 1.5em;
+}
+a.w5 {
+	font-size: 2em;
+}
+div.tagit > div.content > div {
+	margin: 0.25em 0px;
+}
+div.tagit > div.content > div.submit {
+	text-align: center;
+}
+div.users > .pager {
+	float: left;
+}
+table.users {
+	width: 100%; margin-top: 2em; border-bottom-color: rgb(187, 187, 187); border-bottom-width: 1px; border-bottom-style: solid; border-collapse: collapse;
+}
+tr.userstitle {
+	text-align: center; font-size: 1.25em; font-weight: bold;
+}
+tr.userstitle td a img {
+	vertical-align: middle;
+}
+tr.userslist {
+	height: 50px; text-align: center; padding-top: 0.5em; padding-bottom: 0.5em;
+}
+tr.userslist td {
+	border-top-color: rgb(187, 187, 187); border-top-width: 1px; border-top-style: solid;
+}
+td.displayname {
+	text-align: left;
+}
+td.displayname > a {
+	padding-left: 0.5em; vertical-align: top;
+}
+#rail > div {
+	width: 100%; overflow: hidden; margin-bottom: 1em;
+}
+div.leaderboards > .box {
+	display: block;
+}
+div.leaderboards td.img {
+	text-align: center;
+}
+div.leaderboards td.name {
+	width: 100%; padding-left: 0.5em;
+}
+div.leaderboards .seeMore {
+	text-align: right; float: right;
+}
+.rtl div.leaderboards .seeMore {
+	text-align: left; float: left;
+}
+div.leaderboards .leaderBoardTitle {
+	width: 77%; text-align: left; overflow: hidden; float: left;
+}
+div.leaderboards table.content tr td.img {
+	padding-top: 15px;
+}
+.rtl div.leaderboards .leaderBoardTitle {
+	width: 70%; text-align: right; overflow: hidden; float: right;
+}
+.submitting {
+	background-position: center; background-image: url("http://i1.social.s-msft.com/Forums/resources/images/loading.gif"); background-repeat: no-repeat; background-color: rgb(255, 255, 255);
+}
+.editor {
+	margin-top: 0.5em;
+}
+.editor > .commands {
+	padding: 0.25em; text-align: left; margin-top: 0.25em;
+}
+.editor > .commands > a {
+	margin: 0px 0.5em; padding: 0.5em; border: 1px solid rgb(187, 187, 187); display: inline-block;
+}
+.editor > .commands > input {
+	vertical-align: middle;
+}
+.rte {
+	margin: 0.5em; border: 1px solid rgb(187, 187, 187); width: 98%; height: 300px;
+}
+.discover {
+	width: 100%; padding-top: 0.25em; margin-bottom: 0.5em;
+}
+.discover .search {
+	margin: 0px; padding: 0.5em 0.5em 0.5em 0px; height: 20px; vertical-align: middle; float: left;
+}
+.discover a.btn {
+	white-space: nowrap;
+}
+.colorize .code {
+	margin: 1em; width: 96%;
+}
+.colorize div.code {
+	border: 1px solid rgb(0, 0, 0);
+}
+.textbox {
+	border: 1px solid rgb(0, 0, 0);
+}
+.disabled {
+	background-color: rgb(204, 204, 204);
+}
+div.section .errorMessage {
+	color: red; font-size: 1em; font-weight: bold; margin-left: 2em; display: none; list-style-type: disc; position: relative;
+}
+.error {
+	color: red;
+}
+label.error {
+	padding: 0px;
+}
+.errorBox {
+	border: 0.25em solid red;
+}
+div.section {
+	font-size: 1.2em;
+}
+div.helpbubble {
+	font-size: 1.2em;
+}
+div.section p {
+	margin: 0px 0px 1em;
+}
+div.helpbubble p {
+	margin: 0px 0px 1em;
+}
+div.helpbubble ul {
+	margin: 0px 0px 1em;
+}
+div.helpbubble ul {
+	margin-left: 1.2em;
+}
+div.helpbubble ul li {
+	list-style-type: disc;
+}
+div.section h3 {
+	font-size: 1em;
+}
+div.helpbubble h3 {
+	font-size: 1em;
+}
+div.section {
+	padding: 0.5em 1em;
+}
+div.section img {
+	margin-right: 0.3em;
+}
+div.section select {
+	width: 400px;
+}
+div.section input {
+	vertical-align: middle;
+}
+div.section a.expForumSelector {
+	font-size: 0.75em;
+}
+div.section a#expForumSelector {
+	font-size: 0.75em;
+}
+div.section button#btnSubmit {
+	padding: 0.3em; border: 1px solid rgb(17, 168, 9); background-color: rgb(220, 253, 213);
+}
+div.helpbubble {
+	left: 745px; width: 247px; display: none; position: absolute; z-index: 100;
+}
+div.innerbubble {
+	padding: 1em 1em 0px; border: 2px solid rgb(157, 157, 157); left: 19px; top: 0px; width: 200px; position: absolute; background-color: rgb(255, 255, 224);
+}
+div.innerbubble div.close {
+	float: right;
+}
+div#forumNameLine span.DefaultForumTitle {
+	font-weight: bold;
+}
+div.callout {
+	left: 0px; top: 10px; width: 21px; height: 29px; position: absolute; z-index: 20; background-image: url("http://i1.social.s-msft.com/Forums/resources/images/callout_arrow.png");
+}
+.helpHighlight {
+	background-color: rgb(255, 255, 224);
+}
+div#unauthorized {
+	padding-top: 3em; font-size: 1.5em; font-weight: bold;
+}
+.watermark {
+	color: rgb(153, 153, 153); font-style: italic;
+}
+#searchcontainer {
+	padding: 15px; background-color: rgb(240, 240, 240);
+}
+.searchboxinnercontainer {
+	margin: 0px; padding: 3px; width: 100%; table-layout: fixed; background-color: rgb(255, 255, 255);
+}
+.searchboxinnercontainer #searchbox {
+	margin: 0px; border: 0px currentColor; width: 100%; height: 18px; font-family: "Segoe UI",Tahoma; vertical-align: middle;
+}
+.searchboxinnercontainer #searchBoxTd #searchbox {
+	width: 94%;
+}
+.searchboxinnercontainer #searchBoxImageTd {
+	width: 24px;
+}
+.searchboxinnercontainer #searchBoxTd {
+	width: 100%;
+}
+.searchboxinnercontainer #searchimage {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1210px 0px; margin: 0px; border: currentColor; width: 22px; height: 22px; vertical-align: middle; float: right; cursor: pointer;
+}
+#searchscopecontainer {
+	margin: 7px 0px -5px; padding: 0px; vertical-align: baseline;
+}
+#searchscopecontainer input[type='radio'] {
+	margin: 0px 2px 0px 0px; padding: 0px; background-color: transparent;
+}
+.searchControlWrapper {
+	padding: 0.5em 0px; width: 100%;
+}
+#forumsSearch input[type='text'] {
+	margin: 0px -2px 0px 0px; height: 16px; font-family: "Segoe UI",Tahoma; font-size: 1.2em; vertical-align: middle; border-top-color: rgb(132, 156, 177); border-bottom-color: rgb(132, 156, 177); border-left-color: rgb(132, 156, 177); border-top-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-bottom-style: solid; border-left-style: solid; float: left;
+}
+#forumsSearch input[type='image'] {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -321px 0px; margin: 0px; width: 20px; vertical-align: middle; float: left;
+}
+#forumsSearch #searchRefinements {
+	float: left;
+}
+li.message div.voting {
+	margin: 0.5em 0px 0.25em 0.25em; padding: 4px 0px; border: 1px solid rgb(229, 229, 229); text-align: center; color: rgb(99, 172, 6); clear: left; font-size: 1.5em; float: left; min-width: 2.1em;
+}
+li.message span.votinglabel {
+	width: 50px; clear: left; font-size: 0.9em; float: left;
+}
+li.message div.votingouterbox {
+	margin: 0.5em 0.25em 0.25em; padding: 0px 0.25em; width: auto; clear: left; font-size: 0.85em; float: left;
+}
+.votecount {
+	margin: -0.3em 0px 0px; display: block;
+}
+li.message > div.head {
+	padding-bottom: 0.5em; border-bottom-color: silver; border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(238, 238, 238);
+}
+li.message > div.head > span.date {
+	padding: 35px 0.5em 0px; float: right;
+}
+li.message div.body {
+	clear: right; font-size: 1em;
+}
+span.fullbadge span.name {
+	line-height: 1.25em; font-size: 1.25em;
+}
+span.fullbadge > span.affil {
+	margin-left: 1em; display: inline-block;
+}
+li.message > div.menu {
+	clear: left;
+}
+.voteuphreflink {
+	color: rgb(99, 172, 6); display: block;
+}
+.voteuphreflink:hover {
+	text-decoration: none;
+}
+li.message span.join {
+	color: rgb(255, 255, 255); padding-right: 0.25em; font-weight: bold; vertical-align: middle; display: inline-block; background-color: rgb(140, 198, 62);
+}
+li.thread span.join {
+	color: rgb(255, 255, 255); padding-right: 0.25em; font-weight: bold; vertical-align: middle; display: inline-block; background-color: rgb(140, 198, 62);
+}
+li.thread span.joined {
+	color: rgb(255, 255, 255); padding-right: 0.25em; font-weight: bold; vertical-align: middle; display: inline-block; background-color: rgb(140, 198, 62);
+}
+li.thread span.join {
+	margin-left: 0.5em;
+}
+li.message span.join {
+	padding: 0.25em; line-height: 20px; margin-left: 20px;
+}
+li.message img.join {
+	margin-right: 0.25em;
+}
+li.message span.join a {
+	padding: 0.25em 0.5em; border: 1px solid rgb(115, 113, 115); color: rgb(0, 0, 0); font-weight: bold; margin-left: 0.5em; background-image: url("http://i1.social.s-msft.com/Forums/resources/images/button_bg_green.png"); background-repeat: repeat-x; background-color: rgb(123, 186, 41);
+}
+li.message span.join a.undo {
+	background-image: url("http://i1.social.s-msft.com/Forums/resources/images/button_bg_gray.png"); background-repeat: repeat-x; background-color: rgb(140, 138, 140);
+}
+.IEMobile #JelloWrapper {
+	background-image: none;
+}
+.IEMobile .PassportScarab a {
+	color: blue;
+}
+.AnnouncementTitle {
+	width: 99.3%;
+}
+.IE .AnnouncementTitle {
+	width: 99%; float: right;
+}
+input#ErrorSearchBox {
+	border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(132, 156, 177) currentColor rgb(132, 156, 177) rgb(132, 156, 177); width: 204px; height: 16px; margin-right: -5px; float: left;
+}
+input#ErrorSearchButton {
+	border-width: 0px;
+}
+div.hide {
+	display: none;
+}
+label.hide {
+	display: none;
+}
+li.hide {
+	display: none;
+}
+div.forumSearch {
+	padding: 1em 0px; width: 100%; vertical-align: middle;
+}
+div.forumSearch input[type='text'] {
+	border: 1px solid rgb(132, 156, 177); width: 98.5%; height: 16px; font-family: "Segoe UI",Tahoma; font-size: 1em; vertical-align: middle;
+}
+img.loading {
+	background-position: -514px 0px; border: currentColor; width: 24px; height: 24px; position: absolute; background-image: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png"); background-repeat: no-repeat;
+}
+div.pagerTop {
+	width: 75%; float: left;
+}
+div.pagerTop .pager {
+	padding: 0px;
+}
+#homePageTabs {
+	margin: 0px 0px 0.4em; padding: 0.4em 0px 0px; text-transform: uppercase; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#homePageTabs li {
+	padding: 7px 19px; margin-bottom: -1px; display: inline-block; cursor: pointer;
+}
+.IE7 #homePageTabs li {
+	display: inline; zoom: 1;
+}
+#homePageTabs li:hover {
+	color: rgb(0, 149, 196);
+}
+#homePageTabs li.highlight {
+	color: rgb(42, 42, 42);
+}
+#homePageTabs li.highlight:hover {
+	color: rgb(42, 42, 42);
+}
+#homePageTabs li.highlight {
+	border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(255, 255, 255); cursor: default; background-color: rgb(255, 255, 255);
+}
+#homePageTabs li.highlight a {
+	color: rgb(42, 42, 42); cursor: default;
+}
+.sortPlaceholder {
+	height: 2.7em; line-height: 1.2em; background-color: rgb(101, 156, 210);
+}
+#mask {
+	left: 0px; top: 0px; display: none; position: absolute; z-index: 9000; background-color: rgb(0, 0, 0);
+}
+#boxes .window {
+	padding: 0px 0px 20px; border: 2px solid rgb(187, 187, 187); left: 0px; top: 0px; display: none; position: absolute; z-index: 9999;
+}
+#boxes #dialog {
+	width: 430px; height: 90px; display: block; background-color: rgb(255, 255, 255);
+}
+#boxes .window label {
+	color: rgb(0, 0, 0); font-size: 16px; float: left;
+}
+#boxes .window img {
+	float: right;
+}
+#boxes .window h4 {
+	border: 1px solid rgb(187, 187, 187);
+}
+#boxes .window input[type='text'] {
+	border: 1px solid rgb(0, 0, 0); width: 225px; height: 20px;
+}
+#boxes .window .textSpan {
+	vertical-align: middle; float: left;
+}
+#boxes .window .buttonSpan {
+	vertical-align: middle; float: right;
+}
+.poupTitle {
+	padding-top: 5px; padding-bottom: 25px; padding-left: 0px; margin-bottom: 30px; vertical-align: middle; background-color: rgb(169, 169, 169);
+}
+div.rightRailAnnouncement {
+	overflow: hidden; position: relative; word-break: break-all; max-height: 300px;
+}
+blockquote {
+	padding: 1em; background-color: rgb(208, 208, 208);
+}
+li.message .body .prettyprint {
+	overflow-x: auto; overflow-y: visible; word-wrap: normal; min-height: 70px;
+}
+div.loading {
+	background-position: center; left: 0px; top: 0px; right: 0px; bottom: 0px; filter: alpha(opacity=75); position: absolute; opacity: 0.75; background-image: url("http://i1.social.s-msft.com/Forums/resources/images/loading.gif"); background-repeat: no-repeat; background-color: rgb(255, 255, 255);
+}
+div#forumListContents div.loading {
+	left: inherit; top: inherit; right: inherit; bottom: inherit; position: relative;
+}
+#forumSearchResultsMessage {
+	padding: 5px; margin-top: 5px; margin-bottom: 10px; background-color: rgb(240, 240, 240);
+}
+.forumsTitle {
+	margin-top: -25px; margin-bottom: 20px;
+}
+.searchForumsTitle {
+	text-transform: uppercase; font-weight: bold;
+}
+tr.forumlistsummaryheaderrow {
+	text-transform: uppercase; background-color: rgb(250, 250, 250);
+}
+tr.forumlistsummaryheaderrow td {
+	padding: 0.5em;
+}
+tr.forumlistsummaryrow td {
+	padding-top: 1.5em;
+}
+.forumLastReplyInfo {
+	padding-top: 5px;
+}
+.noForumsMessage {
+	padding: 10px; width: 100%; text-align: center;
+}
+.t-header .t-window-title {
+	right: 2em;
+}
+body .rtl {
+	text-align: right;
+}
+.rtl ul.threads {
+	text-align: right;
+}
+.rtl div.threads {
+	text-align: left;
+}
+.rtl div.pagerTop {
+	width: 75%; float: right;
+}
+.rtl li.thread div {
+	overflow: hidden;
+}
+.rtl li.thread div.stats {
+	text-align: right; float: left;
+}
+.rtl li.thread > img.icon {
+	clear: none; float: right;
+}
+.rtl li.thread > img.none {
+	display: none;
+}
+.rtl li.thread > h3 {
+	margin: 0px; overflow: hidden;
+}
+.rtl li.thread > div[name='created'] {
+	margin-right: 40px; margin-left: 0px;
+}
+.rtl li.thread > div[name='replied'] {
+	margin-right: 40px; margin-left: 0px;
+}
+.rtl li.thread > div[name='forum'] {
+	margin-right: 40px; margin-left: 0px;
+}
+.EyebrowElement {
+	float: left;
+}
+.rtl .EyebrowElement {
+	float: right;
+}
+.rtl .bread span {
+	float: none;
+}
+.trustedUsersContainer {
+	margin: 45px 15px 15px;
+}
+.trustedUsersContainer .trustedUsersContent {
+	padding: 25px 25px 25px 45px;
+}
+.trustedUsersContainer .trustedUsersContent .fail {
+	color: red; font-weight: bold;
+}
+.trustedUsersContainer .trustedUsersContent .pass {
+	color: green; font-weight: bold;
+}
+.trustNewUserContent {
+	position: relative;
+}
+#connect-context {
+	padding: 5px; text-align: center; background-color: rgb(148, 148, 148);
+}
+#connect-context .logo-container {
+	background-position: -581px 0px; left: 0px; top: 0px; width: 153px; height: 61px; margin-right: auto; margin-left: auto; background-image: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png"); background-repeat: no-repeat;
+}
+#connect-context .home-link-container {
+	padding-top: 5px;
+}
+#connect-context .connection-link-container {
+	padding-top: 5px;
+}
+div.ajaxerror {
+	padding: 4px; margin-top: 5px; margin-bottom: 5px; display: none; background-color: rgb(255, 255, 0);
+}
+.forumsTitle {
+	font: 100 2.68em/normal "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif !important; color: rgb(112, 112, 112); font-size-adjust: none !important; font-stretch: normal !important;
+}
+.spWarningfade {
+	position: absolute; background-color: rgb(170, 170, 170);
+}
+div.spWarning {
+	padding: 15px; border-radius: 5px; border: 2px solid rgb(119, 119, 119); width: 400px; position: absolute; background-color: rgb(255, 255, 255); -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+.spWarningclose {
+	display: none;
+}
+.spWarningmessage div {
+	position: relative;
+}
+.spWarningmessage {
+	color: red; line-height: 1.3em; font-weight: normal;
+}
+.spWarningmessage div div + div {
+	text-align: center; padding-right: 20px;
+}
+.spWarningmessage div div:first-child div {
+	margin-left: 50px;
+}
+.spWarningmessage div div:first-child img {
+	margin: -20px 0px 0px; top: 35%; position: absolute;
+}
+.spWarningbuttons {
+	margin: 15px 0px 0px; text-align: center;
+}
+.spWarning button {
+	background: rgb(184, 186, 188); margin: 2px; padding: 4px 8px; border: 1px solid rgb(166, 163, 166); color: rgb(255, 255, 255); font-weight: bold; filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#B8BABC',EndColorStr='#949699');
+}
+img.hascode {
+	background: url("http://i1.social.s-msft.com/Forums/Content/insert-code-icon.png"); width: 20px;
+}
+img.checkmark {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -342px 0px; width: 40px; float: left;
+}
+img.question.icon {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/question_trans.png") no-repeat 0px 0px;
+}
+img.unanswered.icon {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/question_trans.png") no-repeat 0px 0px;
+}
+img.discussion.icon {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/discussion_trans.png") no-repeat 0px 0px;
+}
+div.question.icon {
+	background-color: gray;
+}
+div.answered.icon {
+	background-color: gray;
+}
+div.unanswered.icon {
+	background-color: gray;
+}
+div.discussion.icon {
+	background-color: gray;
+}
+#mySettingsContentContainer #myForumsPreferences img.list.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -222px 0px; width: 35px; height: 35px; float: left;
+}
+#mySettingsContentContainer #myForumsPreferences img.threaded.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -186px 0px; width: 35px; height: 35px; float: left;
+}
+#allCategoryPopupContainer img.rss.icon {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/RSS_SHELL_17_17.png") rgb(0, 118, 163); width: 17px; height: 17px;
+}
+img.icon {
+	width: 30px; height: 30px;
+}
+img.root.icon.question {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/question_trans.png") no-repeat 0px 0px;
+}
+img.unanswered.icon {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/question_trans.png") no-repeat 0px 0px;
+}
+img.root.icon.discussion {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/discussion_trans.png") no-repeat 0px 0px;
+}
+#homePageResultsContainer img.unanswered.icon {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/question_trans.png") no-repeat 0px 0px;
+}
+#threadPageContainer img.unanswered.icon {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/question_trans.png") no-repeat 0px 0px;
+}
+img.answered.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1458px 0px; margin: 0.2em 0px -0.2em 5px; width: 25px;
+}
+img.proposed.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1458px 0px; margin: 0.2em 0px -0.2em 5px; width: 25px;
+}
+#homePageResultsContainer img.discussion.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -993px 0px; margin: 0px; width: 30px;
+}
+#threadPageContainer img.discussion.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -993px 0px; margin: 0px; width: 30px;
+}
+#homePageResultsContainer img.unanswered.icon {
+	margin: 0px;
+}
+#threadPageContainer img.unanswered.icon {
+	margin: 0px;
+}
+.threadsnippet .sticky.status {
+	color: rgb(255, 255, 255); background-color: rgb(254, 146, 1);
+}
+.threadsnippet img.sticky.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -776px 0px; width: 30px; height: 30px;
+}
+.threadsnippet img.abusive.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -931px 0px; width: 30px;
+}
+.threadsnippet img.deleted.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1365px 0px; width: 30px;
+}
+.threadsnippet img.answeredlocked.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1086px 0px; width: 30px;
+}
+.threadsnippet img.proposedlocked.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1086px 0px; width: 30px;
+}
+.threadsnippet img.answeredprivate.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1148px 0px; width: 30px;
+}
+.threadsnippet img.proposedprivate.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1148px 0px; width: 30px;
+}
+.threadsnippet img.discussionlocked.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -155px 0px; width: 30px;
+}
+.threadsnippet img.discussionprivate.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1233px 0px; width: 30px;
+}
+.threadsnippet img.unansweredlocked.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -838px 0px; width: 30px;
+}
+.threadsnippet img.unansweredprivate.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1024px 0px; width: 30px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar img.answer.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1427px 0px; width: 30px; height: 30px;
+}
+div.expandedThreadContainer .messageSidebar img.answer.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1427px 0px; width: 30px; height: 30px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar img.proposed.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1427px 0px; width: 30px; height: 30px;
+}
+div.expandedThreadContainer .messageSidebar img.proposed.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1427px 0px; width: 30px; height: 30px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar .reply.messageIcon {
+	padding: 14px 1px 1px 14px;
+}
+div.expandedThreadContainer .messageSidebar .reply.messageIcon {
+	padding: 14px 1px 1px 14px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar img.reply.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -869px 0px; margin: 0px; width: 30px; height: 33px;
+}
+div.expandedThreadContainer .messageSidebar img.reply.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -869px 0px; margin: 0px; width: 30px; height: 33px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar img.deleted.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1334px 0px; margin: 0px; width: 30px; height: 33px;
+}
+div.expandedThreadContainer .messageSidebar img.deleted.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1334px 0px; margin: 0px; width: 30px; height: 33px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar img.abusive.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -900px 0px; margin: 0px; width: 30px; height: 33px;
+}
+div.expandedThreadContainer .messageSidebar img.abusive.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -900px 0px; margin: 0px; width: 30px; height: 33px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar img.answeredlocked.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1117px 0px; margin: 0px; width: 30px; height: 33px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar img.proposedlocked.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1117px 0px; margin: 0px; width: 30px; height: 33px;
+}
+div.expandedThreadContainer .messageSidebar img.answeredlocked.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1117px 0px; margin: 0px; width: 30px; height: 33px;
+}
+div.expandedThreadContainer .messageSidebar img.proposedlocked.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1117px 0px; margin: 0px; width: 30px; height: 33px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar img.answeredprivate.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1179px 0px; margin: 0px; width: 30px; height: 33px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar img.proposedprivate.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1179px 0px; margin: 0px; width: 30px; height: 33px;
+}
+div.expandedThreadContainer .messageSidebar img.answeredprivate.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1179px 0px; margin: 0px; width: 30px; height: 33px;
+}
+div.expandedThreadContainer .messageSidebar img.proposedprivate.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1179px 0px; margin: 0px; width: 30px; height: 33px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar img.discussionlocked.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -124px 0px; margin: 0px; width: 30px; height: 33px;
+}
+div.expandedThreadContainer .messageSidebar img.discussionlocked.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -124px 0px; margin: 0px; width: 30px; height: 33px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar img.discussionprivate.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1264px 0px; margin: 0px; width: 30px; height: 33px;
+}
+div.expandedThreadContainer .messageSidebar img.discussionprivate.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1264px 0px; margin: 0px; width: 30px; height: 33px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar img.questionlocked.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -807px 0px; margin: 0px; width: 30px; height: 33px;
+}
+div.expandedThreadContainer .messageSidebar img.questionlocked.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -807px 0px; margin: 0px; width: 30px; height: 33px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar img.questionprivate.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1055px 0px; margin: 0px; width: 30px; height: 33px;
+}
+div.expandedThreadContainer .messageSidebar img.questionprivate.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1055px 0px; margin: 0px; width: 30px; height: 33px;
+}
+img.locked {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/LOCKED_TRANS.png") no-repeat 0px 0px; height: 30px; margin-top: -10px; margin-right: 4px; margin-left: 1px;
+}
+img.alert.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -258px 0px; margin: 0px; width: 35px; height: 35px;
+}
+img.alert-small.icon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -757px 0px; margin: 0px; width: 18px; height: 18px;
+}
+#msdn-technet-en-thread div.threadIcon {
+	background-color: rgb(255, 165, 0);
+}
+#msdn-technet-en-thread div.none.threadIcon {
+	display: none;
+}
+#msdn-technet-en-thread div.sticky.threadIcon {
+	margin-top: 5px; margin-right: 10px; float: left; background-color: rgb(255, 165, 0);
+}
+#msdn-technet-en-thread img.sticky.threadIcon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -776px 0px; width: 30px; height: 30px; margin-top: -12px; margin-right: 3px; margin-bottom: 2px;
+}
+#msdn-technet-en-thread div.deleted.threadIcon {
+	margin-top: 5px; margin-right: 10px; float: left;
+}
+#msdn-technet-en-thread img.deleted.threadIcon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1396px 0px; margin: -10px 3px 2px; width: 30px; height: 30px;
+}
+#msdn-technet-en-thread div.abusive.threadIcon {
+	margin-top: 5px; margin-right: 10px; float: left;
+}
+#msdn-technet-en-thread img.abusive.threadIcon {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -962px 0px; width: 30px; height: 30px; margin-top: -10px; margin-right: 3px; margin-left: 3px;
+}
+#msdn-technet-en-thread div.locked.threadIcon {
+	margin-top: 5px; margin-right: 10px; float: left;
+}
+#msdn-technet-en-thread div.threadIcon {
+	padding: 5px;
+}
+#newThreadPage {
+	width: 800px;
+}
+#newThreadPage h1 {
+	margin: 10px 0px;
+}
+#newThreadPage h3 {
+	padding-bottom: 5px;
+}
+#newThreadPage h3.inlineTitle {
+	display: inline;
+}
+#newThreadPage div.section {
+	padding: 1em 0px;
+}
+#newThreadPage .threadType {
+	margin-right: 30px; float: left;
+}
+#newThreadPage div.threadType div.icon {
+	float: left;
+}
+#newThreadPage .threadType img {
+	float: left;
+}
+#newThreadPage .alignMiddle {
+	padding-top: 5px; float: left;
+}
+#newThreadPage #secStepSubject input {
+	width: 100%; height: 30px; padding-left: 5px;
+}
+#newThreadPage #forumSelector {
+	padding-top: 10px;
+}
+#newThreadPage #forumSelector > div {
+	float: left;
+}
+#newThreadPage #forumSelector > div#forums {
+	float: right;
+}
+#newThreadPage div.section select {
+	width: 375px;
+}
+#newThreadPage button#btnSubmit {
+	padding: 10px 20px; border: currentColor; color: rgb(255, 255, 255); background-color: rgb(0, 122, 204);
+}
+div#relatedThreads h4 {
+	font-size: 1em;
+}
+ul.relatedThreads {
+	margin-top: 10px;
+}
+ul.relatedThreads li {
+	margin-bottom: 10px;
+}
+ul.relatedThreads div.messageIcon {
+	margin-right: 5px; float: left;
+}
+#mySettingsSidebarContainer {
+	width: 227px; clear: both; float: left;
+}
+#mySettingsContentContainer {
+	width: 750px; float: right;
+}
+#mySettingsContentContainer #myForumsPreferences div.helpLink {
+	margin-bottom: -20px; float: right;
+}
+.rtl #mySettingsContentContainer #myForumsPreferences div.helpLink {
+	margin-bottom: 0px;
+}
+#mySettingsContentContainer #myForumsPreferences h5 {
+	font-weight: bold; margin-top: 1em; margin-bottom: 1em;
+}
+#mySettingsContentContainer #myForumsPreferences div.settings {
+	padding-top: 10px;
+}
+#mySettingsContentContainer #myForumsPreferences div.setting {
+	padding-top: 5px;
+}
+#mySettingsContentContainer #myForumsPreferences .content > div {
+	margin-bottom: 1em;
+}
+#mySettingsContentContainer #myForumsPreferences label {
+	padding-right: 1em;
+}
+#mySettingsContentContainer #myForumsPreferences .textbox {
+	border: 1px solid rgb(187, 187, 187); width: 200px; height: 20px; padding-left: 5px;
+}
+#mySettingsContentContainer #myForumsPreferences input[type='submit'] {
+	padding: 10px; border: currentColor; color: rgb(255, 255, 255); background-color: rgb(0, 122, 204);
+}
+#mySettingsContentContainer #myForumsPreferences .alignMiddle {
+	padding-top: 10px; float: left;
+}
+.rtl #mySettingsContentContainer #myForumsPreferences img.icon {
+	float: right;
+}
+.rtl #mySettingsContentContainer #myForumsPreferences .alignMiddle {
+	float: right;
+}
+#mySettingsContentContainer #myForumsPreferences textarea#profileSignature {
+	width: 80%;
+}
+input[type='radio'] {
+	cursor: pointer;
+}
+input[type='checkbox'] {
+	cursor: pointer;
+}
+div.dropdown {
+	cursor: pointer;
+}
+div.threadsnippet {
+	width: 100%; margin-bottom: 1em; display: inline-block;
+}
+.threadsnippet .threadmetricscontainer {
+	width: 15%; margin-right: 0.5em;
+}
+.threadsnippet .threadmetricscontainer {
+	float: left;
+}
+.threadsnippet .arrowoutercontainer {
+	float: left;
+}
+.threadsnippet .details {
+	float: left;
+}
+.threadsnippet .arrowcontainer .arrowdown {
+	width: 10px; height: 20px; display: inline-block;
+}
+.invisible {
+	visibility: hidden;
+}
+.visible {
+	visibility: visible;
+}
+.threadsnippet .votes {
+	background-color: rgb(236, 236, 236);
+}
+.searchbar .searchboxinnercontainer {
+	background-color: rgb(236, 236, 236);
+}
+#relatedThreadsLinkContainer {
+	background-color: rgb(236, 236, 236);
+}
+#announcementsContainer {
+	background-color: rgb(236, 236, 236);
+}
+.threadsnippet .votes {
+	width: 60px; color: rgb(54, 54, 54); padding-top: 3px; padding-bottom: 5px; float: left;
+}
+.answered.status {
+	color: rgb(255, 255, 255);
+}
+.answered.status img.checkmark {
+	color: rgb(255, 255, 255);
+}
+div#sidebar .answered.status {
+	width: 19px; height: 19px; float: left;
+}
+.threadsnippet .unanswered.status {
+	color: rgb(255, 255, 255);
+}
+.threadsnippet .discussion.status {
+	color: rgb(255, 255, 255);
+}
+.threadsnippet .proposed.status {
+	color: rgb(255, 255, 255);
+}
+.threadsnippet .threadstatus {
+	padding: 5px 5px 0px; width: 65px; float: left;
+}
+.threadsnippet .votes .count {
+	padding-top: 7px;
+}
+.threadsnippet .threadmetricscontainer {
+	min-width: 138px;
+}
+.threadsnippet .threadmetricscontainer .metrics div {
+	text-align: center; vertical-align: middle;
+}
+.threadsnippet .answered.status .threadmetricscontainer .metrics div {
+	line-height: 100%; margin-top: 0.25em;
+}
+.threadsnippet .details .detailscontainer h3.title {
+	font-size: 1em;
+}
+.threadsnippet .details .detailscontainer .breadcrumb {
+	padding-top: 2px;
+}
+.smallgreytext {
+	color: rgb(149, 149, 149);
+}
+.threadsnippet .details .detailscontainer .breadcrumb a {
+	color: rgb(149, 149, 149);
+}
+.threadsnippet .details {
+	margin-left: 0.5em;
+}
+.threadsnippet .details .detailscontainer {
+	font-size: 0.8em; margin-top: -2px;
+}
+.threadsnippet .details .detailscontainer h3 em {
+	color: rgb(255, 255, 255); padding-right: 3px; padding-left: 3px; font-style: normal; margin-right: 2px; margin-left: 2px;
+}
+.threadsnippet .details .detailscontainer .threadSummary em {
+	color: rgb(255, 255, 255); padding-right: 3px; padding-left: 3px; font-style: normal; margin-right: 2px; margin-left: 2px;
+}
+#msdn-technet-en-home a {
+	color: rgb(0, 118, 163);
+}
+.threadsnippet .spacer {
+	clear: left;
+}
+.categoryFilterSection {
+	margin-top: 10px;
+}
+div#sidebar div.section {
+	padding: 0px;
+}
+.smallwriting {
+	font-size: 0.68em;
+}
+div.threadsnippet div.expandedThreadContainer {
+	display: none;
+}
+.expandedThreadContainer .editor {
+	clear: both;
+}
+#threadPageContainer .editor {
+	clear: both;
+}
+div.expandedThreadContainer .isLoading {
+	width: 24px; height: 24px; margin-top: 10px; display: block;
+}
+li.threadblock .detailscontainer > h3 {
+	font-family: inherit;
+}
+li.viewed.threadblock .detailscontainer > h3 {
+	font-weight: normal;
+}
+img.rss {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -294px 0px rgb(0, 118, 163); width: 26px; height: 26px;
+}
+.searchbar #searchbox {
+	background-color: transparent;
+}
+.searchbar table.searchboxinnercontainer td {
+	padding: 5px;
+}
+.searchbar table.searchboxinnercontainer td.imageWidth {
+	width: 22px;
+}
+div#sidebar div#askaquestion {
+	height: 28px; clear: both; float: inherit;
+}
+#quickActions .section {
+	padding: 0px; clear: both; margin-bottom: 0.25em; float: left;
+}
+#searchActions .section {
+	padding: 0px; clear: both; margin-bottom: 0.25em; float: left;
+}
+#threadPageActionsContainer .section {
+	padding: 0px; clear: both; margin-bottom: 0.25em; float: left;
+}
+#quickActions .section {
+	width: 100%;
+}
+#searchActions .section {
+	margin-top: 0.4em;
+}
+#threadPageActionsContainer .section {
+	margin-top: 0.4em;
+}
+div#sidebar .section h3 {
+	font-weight: normal;
+}
+div.threadResults.section {
+	padding: 0px;
+}
+#filterBar {
+	position: relative;
+}
+#filterBar .section {
+	margin-left: -2em; float: left;
+}
+#filterBar .section:hover {
+	cursor: pointer;
+}
+#filterBar span.bold {
+	font-family: Segoe UI Semibold,Lucida Grande,Verdana,Arial,Helvetica,sans-serif;
+}
+#filterBar span.selectedOption {
+	padding-left: 5px;
+}
+#filterBar .filterdropdown {
+	float: left;
+}
+#filterBar .filterdropdown > div {
+	float: left;
+}
+#filterBar .filterdropdown {
+	margin-right: 1em; cursor: pointer;
+}
+.IE9 #filterBar .dropdown#threadFilter .popup hr {
+	width: 145px;
+}
+#homePageFilterBarContainer .arrowdown {
+	margin-top: 0.5em; margin-right: 0.5em;
+}
+div#sidebar #answeredquestions {
+	margin-top: 25px;
+}
+div#sidebar #answeredquestions img {
+	margin: 0px 0px 0px 2px; width: 14px; height: 18px;
+}
+div#sidebar #answeredquestions h3 {
+	display: inline;
+}
+div#sidebar {
+	width: 280px; margin-left: 0px; vertical-align: top; float: left;
+}
+div#sidebar > div {
+	margin-bottom: 2em;
+}
+#threadPageActionsContainer {
+	width: 100%;
+}
+#threadPageActionsContainer .quickActions {
+	float: left;
+}
+#quickActions {
+	float: left;
+}
+#threadPageActionsContainer .quickActions {
+	width: 25%;
+}
+#searchActions {
+	float: left;
+}
+#threadPageActionsContainer .searchActions {
+	float: right;
+}
+#threadPageActionsContainer a.askQuestionLink {
+	float: left; background-color: rgb(0, 121, 204);
+}
+#threadPageActionsContainer a.askQuestionLink:hover {
+	background-color: rgb(0, 118, 163);
+}
+div#sidebar .actionbox {
+	padding: 10px; border: 1px solid rgb(0, 121, 204); text-align: center;
+}
+#categoryFilter .xClose {
+	text-align: right; padding-right: 10px; font-weight: bold;
+}
+#categoryFilter {
+	padding-top: 12px; padding-bottom: 12px;
+}
+#categoryFilter h3 {
+	color: rgb(0, 0, 0); padding-bottom: 12px; font-weight: bold;
+}
+#homepageLeaderboard .box .leaderBoardTitle h4 {
+	color: rgb(0, 0, 0); padding-bottom: 12px; font-weight: bold;
+}
+#homepageLeaderboard .box .leaderBoardTitle h4 {
+	white-space: normal;
+}
+#categoryFilter .categoryArea {
+	padding-bottom: 12px;
+}
+#categoryFilter .categoryHeader .arrowoutercontainer {
+	width: 12px; float: left;
+}
+.quickActions .arrowoutercontainer {
+	width: 12px; float: left;
+}
+.selected.categoryHeader {
+	font-weight: bold;
+}
+#allCategoryItems div.expandedList {
+	height: 300px; overflow: auto;
+}
+#categoryFilter #allCategoryItems {
+	margin-top: -20px; margin-left: 285px;
+}
+.forumFilter {
+	padding: 12px 0px; margin-left: 15px; display: none;
+}
+.forumFilter h3 {
+	color: rgb(0, 0, 0); padding-bottom: 12px;
+}
+.forumFilter .forumItem {
+	margin-bottom: 5px; display: inline-block;
+}
+.forumFilter .forumItem div.checkboxContainer {
+	width: 25px; float: left;
+}
+.forumFilter .forumItem .checkboxText {
+	width: 230px; float: left; cursor: pointer;
+}
+.allForumItems div.expandedList {
+	height: 300px; overflow: auto;
+}
+div#sidebar #categoryFilterBarContainer {
+	background-color: rgb(238, 238, 238);
+}
+#msdn-technet-en-home {
+	width: 100%; float: left;
+}
+.breadcrumb .separator {
+	float: left;
+}
+.rtl .breadcrumb .separator {
+	float: right;
+}
+#homePageFilterBarContainer {
+	padding-left: 15px; margin-top: -23px; float: left;
+}
+#homePageFilterBarContainer #clearLink {
+	float: left;
+}
+ul#stickyThreads {
+	margin-bottom: 20px; border-bottom-color: rgb(236, 236, 236); border-bottom-width: 2px; border-bottom-style: solid;
+}
+div.sideBarContainer {
+	width: 227px; float: left; min-width: 220px;
+}
+div#threadPageActionsContainer .quickActions {
+	width: 227px; float: left; min-width: 220px;
+}
+.expandedFilterBar {
+	left: 236px; position: absolute;
+}
+div#homePageContentContainer {
+	width: 760px; float: right; position: relative;
+}
+div#msdn-technet-en-thread div#threadPageContentContainer {
+	width: 750px; padding-left: 0px; float: right; position: relative;
+}
+#allThreadsContainer #toggleSidebar {
+	left: -11px; width: 10px; height: 10px; position: absolute;
+}
+#threadPageContentContainer #toggleSidebar {
+	left: -11px; width: 10px; height: 10px; position: absolute;
+}
+.toggleOpen {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/uxrefresh_icon_sprite.png") no-repeat -400px -20px;
+}
+.toggleClose {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/uxrefresh_icon_sprite.png") no-repeat -400px 0px; left: -3px !important;
+}
+#allThreadsContainer {
+	border-left-color: rgb(238, 238, 238); border-left-width: 3px; border-left-style: solid; position: relative; min-height: 400px;
+}
+#topBarImportantInfoContainer {
+	width: 25%; text-align: center; float: left;
+}
+#announcementsContainer {
+	padding-top: 0.8em; padding-bottom: 0.8em; padding-left: 0.4em;
+}
+#searchAnnouncmentContainer {
+	display: none;
+}
+#threadsearchbarContainer {
+	width: 70%; float: right;
+}
+#searchActions #seeAnnouncementsLinkBox {
+	font-weight: bold;
+}
+#searchActions .popup.announcement {
+	width: 71%; margin-top: 11px; margin-left: -5px; overflow-y: auto; max-height: 500px;
+}
+#searchActions .popup.announcement li.announcement {
+	margin-bottom: 1em;
+}
+#searchActions .popup.announcement li.announcement div.head {
+	margin-left: 12px;
+}
+#searchActions .popup.announcement li.announcement div.body {
+	margin-top: 1em; margin-left: 0.7em; display: block;
+}
+#searchActions .popup.announcement li.announcement span.date {
+	padding: 0px;
+}
+#searchActions .popup.announcement li.announcement div.announcementDetails {
+	display: none;
+}
+#quickLinks {
+	color: rgb(149, 149, 149); font-weight: normal; display: inline-block;
+}
+#quickLinksText {
+	float: left;
+}
+#quickLinks #quickLinksText span {
+	font-size: 15px;
+}
+.rtl #quickLinks {
+	float: left;
+}
+.rtl #quickLinksText {
+	float: right;
+}
+#quickLinks {
+	font-size: 1em;
+}
+div#sidebar .section h3 {
+	font-size: 1em;
+}
+#threadPageSidebarContainer #relatedThreads {
+	font-size: 1em;
+}
+.threadsnippet .votes .count {
+	font-size: 1em;
+}
+#categoryFilter h3 {
+	font-size: 1em;
+}
+#searchActions h3 {
+	font-size: 1em;
+}
+#homepageLeaderboard .box h4 {
+	font-size: 1em;
+}
+div.popup {
+	padding: 0.5em; border: 1px solid rgb(187, 187, 187); text-align: left; margin-top: 20px; display: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); position: absolute; z-index: 100001; opacity: 1; background-color: rgb(255, 255, 255);
+}
+#quickLinks ul.popup {
+	padding: 0.5em; border: 1px solid rgb(187, 187, 187); text-align: left; margin-top: 20px; display: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); position: absolute; z-index: 100001; opacity: 1; background-color: rgb(255, 255, 255);
+}
+.abusive ul.popup {
+	padding: 0.5em; border: 1px solid rgb(187, 187, 187); text-align: left; margin-top: 20px; display: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); position: absolute; z-index: 100001; opacity: 1; background-color: rgb(255, 255, 255);
+}
+.rtl div.popup {
+	text-align: right;
+}
+.rtl ul.popup {
+	text-align: right;
+}
+.abusive a.popup {
+	margin: 0px; border: currentColor; display: block; position: relative;
+}
+.abusive ul.popup {
+	margin-top: 0px;
+}
+div.popup .threadFilterItem {
+	padding: 5px;
+}
+ul.popup li {
+	padding: 5px;
+}
+#quickLinks ul.popup li #msdn-technet-en-thread .abusive ul.popup li {
+	padding: 5px;
+}
+#quickLinks .popup a {
+	color: rgb(149, 149, 149); font-size: 14px; font-weight: normal;
+}
+#quickLinks .popup a:link {
+	color: rgb(149, 149, 149); font-size: 14px; font-weight: normal;
+}
+#quickLinks .popup a:visited {
+	color: rgb(149, 149, 149); font-size: 14px; font-weight: normal;
+}
+.abusive ul.popup a {
+	color: rgb(149, 149, 149); font-size: 14px; font-weight: normal;
+}
+.abusive ul.popup a:link {
+	color: rgb(149, 149, 149); font-size: 14px; font-weight: normal;
+}
+.abusive ul.popup a:visited {
+	color: rgb(149, 149, 149); font-size: 14px; font-weight: normal;
+}
+#filterBar .arrowcontainer {
+	padding-left: 10px;
+}
+#threadPageActionsContainer .arrowcontainer {
+	padding-left: 10px;
+}
+#quickLinks .arrowcontainer {
+	padding-left: 10px;
+}
+#quickLinks div.arrowcontainer {
+	padding-top: 5px;
+}
+div.arrowcontainer {
+	float: left;
+}
+#sidebar div.arrowcontainer {
+	margin-right: 5px;
+}
+a.arrowdown {
+	width: 12px; height: 12px; display: inline-block;
+}
+img.arrowdown {
+	width: 12px; height: 12px; display: inline-block;
+}
+a.arrowdown:hover {
+	width: 12px; height: 12px; display: inline-block;
+}
+a.arrowdown:active {
+	width: 12px; height: 12px; display: inline-block;
+}
+a.arrowdown:visited {
+	width: 12px; height: 12px; display: inline-block;
+}
+a.arrowdown:focus {
+	width: 12px; height: 12px; display: inline-block;
+}
+a.arrowdown {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/uxrefresh_icon_sprite.png") no-repeat -400px 0px;
+}
+img.arrowdown {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/uxrefresh_icon_sprite.png") no-repeat -400px 0px;
+}
+a.arrowdown:hover {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/uxrefresh_icon_sprite.png") no-repeat -400px 0px;
+}
+a.arrowdown:active {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/uxrefresh_icon_sprite.png") no-repeat -400px 0px;
+}
+a.arrowdown:visited {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/uxrefresh_icon_sprite.png") no-repeat -400px 0px;
+}
+a.arrowdown:focus {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/uxrefresh_icon_sprite.png") no-repeat -400px 0px;
+}
+a.expanded.arrowdown {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/uxrefresh_icon_sprite.png") no-repeat -80px 0px;
+}
+#homePageSidebarContainer .profile-usercard-inline .profile-inline {
+	border-width: 0px; width: 200px;
+}
+#mySettingsSidebarContainer .profile-usercard-inline .profile-inline {
+	border-width: 0px; width: 200px;
+}
+#homePageSidebarContainer .profile-usercard-inline .profile-inline .profile-inline-secondary {
+	display: none;
+}
+#mySettingsSidebarContainer .profile-usercard-inline .profile-inline .profile-inline-secondary {
+	display: none;
+}
+#threadPageSidebarContainer .profile-inline-header-details {
+	clear: both; margin-left: 0px;
+}
+#homePageSidebarContainer .profile-usercard-inline .profile-inline .profile-inline-header-details {
+	clear: both; margin-left: 0px;
+}
+#mySettingsSidebarContainer .profile-usercard-inline .profile-inline .profile-inline-header-details {
+	clear: both; margin-left: 0px;
+}
+#homePageSidebarContainer .profile-usercard-inline .profile-inline .profile-biography {
+	display: none;
+}
+#mySettingsSidebarContainer .profile-usercard-inline .profile-inline .profile-biography {
+	display: none;
+}
+.threadsnippet .messageContent .messageFooter .userInfo {
+	float: right;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent .messageFooter .userInfo {
+	float: right;
+}
+.threadsnippet .messageContent .messageFooter .userInfo .profile-usercard-mini .profile-mini {
+	font-size: inherit; min-width: 100px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent .messageFooter .userInfo .profile-usercard-mini .profile-mini {
+	font-size: inherit; min-width: 100px;
+}
+.threadsnippet .messageContent .messageFooter .userInfo .profile-usercard-mini .profile-mini .profile-mini-header .profile-mini-userimage {
+	width: 30px; height: 100%; margin-right: 0px; float: right;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent .messageFooter .userInfo .profile-usercard-mini .profile-mini .profile-mini-header .profile-mini-userimage {
+	width: 30px; height: 100%; margin-right: 0px; float: right;
+}
+.threadsnippet .messageContent .messageFooter .userInfo .profile-usercard-mini .profile-mini .profile-mini-header .profile-mini-userimage img {
+	width: 100%;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent .messageFooter .userInfo .profile-usercard-mini .profile-mini .profile-mini-header .profile-mini-userimage img {
+	width: 100%;
+}
+.threadsnippet .messageContent .messageFooter .userInfo .profile-usercard-mini .profile-mini .profile-mini-header .profile-mini-container {
+	clear: both; float: right;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent .messageFooter .userInfo .profile-usercard-mini .profile-mini .profile-mini-header .profile-mini-container {
+	clear: both; float: right;
+}
+.threadsnippet .messageContent .messageFooter .userInfo .profile-usercard-mini .profile-mini .profile-mini-header .profile-mini-content {
+	text-align: right; padding-right: 18px; margin-left: 4px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent .messageFooter .userInfo .profile-usercard-mini .profile-mini .profile-mini-header .profile-mini-content {
+	text-align: right; padding-right: 18px; margin-left: 4px;
+}
+.threadsnippet .messageContent .messageFooter .userInfo .profile-usercard-mini .profile-mini .profile-mini-header .profile-mini-display-name {
+	font-size: inherit; margin-top: 1px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent .messageFooter .userInfo .profile-usercard-mini .profile-mini .profile-mini-header .profile-mini-display-name {
+	font-size: inherit; margin-top: 1px;
+}
+.threadsnippet .messageContent .messageFooter .profile-usercard-hover {
+	position: relative;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent .messageFooter .profile-usercard-hover {
+	position: relative;
+}
+.threadsnippet .messageContent .messageFooter .profile-usercard {
+	right: 0px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent .messageFooter .profile-usercard {
+	right: 0px;
+}
+.messageContent .messageFooter .userInfo .profile-mini-points {
+	text-align: right; font-size: inherit; min-width: 1em;
+}
+#msdn-technet-en-thread {
+	padding: 0px;
+}
+#threadPageSidebarContainer #relatedThreads {
+	color: rgb(51, 51, 51); padding-top: 20px;
+}
+#threadPageSidebarContainer #relatedThreads h4 {
+	
+}
+#relatedThreadsLinkContainer {
+	padding-top: 0.8em; padding-bottom: 0.8em;
+}
+#threadPageActionsContainer #relatedThreadsLinkContainer a {
+	color: rgb(58, 58, 58); font-size: 13px; text-decoration: none;
+}
+#threadPageActionsContainer #relatedThreadsLinkContainer a:active {
+	color: rgb(58, 58, 58); font-size: 13px; text-decoration: none;
+}
+#threadPageActionsContainer #relatedThreadsLinkContainer a:visited {
+	color: rgb(58, 58, 58); font-size: 13px; text-decoration: none;
+}
+#threadPageActionsContainer #relatedThreadsLinkContainer a:link {
+	color: rgb(58, 58, 58); font-size: 13px; text-decoration: none;
+}
+#msdn-technet-en-thread #threadPageContainer .breadcrumb {
+	padding: 10px 0px;
+}
+#msdn-technet-en-thread #threadPageContainer .breadcrumb .separator {
+	float: left;
+}
+.rtl #msdn-technet-en-thread #threadPageContainer .breadcrumb {
+	padding: 10px 0px;
+}
+.rtl #msdn-technet-en-thread #threadPageContainer .breadcrumb .separator {
+	float: right;
+}
+#msdn-technet-en-thread #threadPageContainer li.message {
+	margin: 0px; border: currentColor; display: inline-block;
+}
+div.expandedThreadContainer li.message {
+	margin: 0px; border: currentColor; display: inline-block;
+}
+#msdn-technet-en-thread #threadPageContainer li.message div.thread.menu {
+	padding: 10px 0px 20px; height: 20px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none; background-color: rgb(255, 255, 255);
+}
+#msdn-technet-en-thread #threadPageContainer li.message div.message.menu {
+	padding: 10px 0px 20px; height: 20px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none; background-color: rgb(255, 255, 255);
+}
+div.expandedThreadContainer li.message div.thread.menu {
+	padding: 10px 0px 20px; height: 20px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none; background-color: rgb(255, 255, 255);
+}
+div.expandedThreadContainer li.message div.message.menu {
+	padding: 10px 0px 20px; height: 20px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none; background-color: rgb(255, 255, 255);
+}
+#msdn-technet-en-thread #threadPageContainer li.message div.thread.menu > div {
+	float: left;
+}
+#msdn-technet-en-thread #threadPageContainer li.message div.message.menu > div {
+	float: left;
+}
+div.expandedThreadContainer li.message div.thread.menu > div {
+	float: left;
+}
+div.expandedThreadContainer li.message div.message.menu > div {
+	float: left;
+}
+#msdn-technet-en-thread #threadPageContainer li.message div.menu > div > a {
+	padding: 0.25em 0.5em 0.25em 0px; white-space: nowrap;
+}
+div.expandedThreadContainer li.message div.menu > div > a {
+	padding: 0.25em 0.5em 0.25em 0px; white-space: nowrap;
+}
+#msdn-technet-en-thread #threadPageContainer li.message div.menu > div > span {
+	padding: 0.25em 0.5em 0.25em 0px;
+}
+div.expandedThreadContainer li.message div.menu > div > span {
+	padding: 0.25em 0.5em 0.25em 0px;
+}
+#msdn-technet-en-thread #threadPageContainer li.message div.menu > div.abusive .menu a.popup img.expcol {
+	margin-top: 0px;
+}
+div.expandedThreadContainer li.message div.menu > div.abusive .menu a.popup img.expcol {
+	margin-top: 0px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar {
+	padding-top: 20px; float: left;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent {
+	padding-top: 20px; float: left;
+}
+div.expandedThreadContainer .messageSidebar {
+	padding-top: 20px; float: left;
+}
+div.expandedThreadContainer .messageContent {
+	padding-top: 20px; float: left;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent {
+	padding-left: 20px; word-wrap: break-word;
+}
+div.expandedThreadContainer .messageContent {
+	padding-left: 20px; word-wrap: break-word;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar div.votingouterbox {
+	margin: 0px; padding: 0px; width: auto; clear: none; float: none;
+}
+div.expandedThreadContainer .messageSidebar div.votingouterbox {
+	margin: 0px; padding: 0px; width: auto; clear: none; float: none;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar div.voting {
+	margin: 0px; padding: 10px 0px 5px; border: currentColor; text-align: center; color: rgb(149, 149, 149); clear: none; font-size: 1.5em; float: none; min-width: 30px;
+}
+div.expandedThreadContainer .messageSidebar div.voting {
+	margin: 0px; padding: 10px 0px 5px; border: currentColor; text-align: center; color: rgb(149, 149, 149); clear: none; font-size: 1.5em; float: none; min-width: 30px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar div.voting img.voteup {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1295px 0px; width: 17px; margin-right: 0px;
+}
+div.expandedThreadContainer .messageSidebar div.voting img.voteup {
+	background: url("http://i1.social.s-msft.com/Forums/RequestReduceContent/87289521d68f82d30c43660aaa35a207-d6083c9f71464283c1a0f8e316372829.png") no-repeat -1295px 0px; width: 17px; margin-right: 0px;
+}
+div.expandedThreadContainer .messageSidebar div.voting {
+	display: inline-block;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar div.voting a {
+	color: rgb(149, 149, 149);
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar div.voting a:link {
+	color: rgb(149, 149, 149);
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar div.voting a:visited {
+	color: rgb(149, 149, 149);
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar div.votinglabel {
+	text-align: center; min-width: 30px;
+}
+div.expandedThreadContainer .messageSidebar div.votinglabel {
+	text-align: center; min-width: 30px;
+}
+#msdn-technet-en-thread #threadPageContainer .messageSidebar span.votinglabel {
+	width: 50px; color: rgb(149, 149, 149); clear: none; font-size: 0.9em; float: none;
+}
+div.expandedThreadContainer .messageSidebar span.votinglabel {
+	width: 50px; color: rgb(149, 149, 149); clear: none; font-size: 0.9em; float: none;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent {
+	font-size: 14px !important;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent .messageFooter {
+	font-size: 0.9em; margin-top: 10px;
+}
+.threadsnippet .messageContent .messageFooter .actions {
+	float: left;
+}
+#msdn-technet-en-thread #threadPageContainer .messageContent .messageFooter .actions {
+	float: left;
+}
+.messageContent .messageFooter .actions .abusive img.abusive.icon {
+	display: none;
+}
+.messageContent .messageFooter .date {
+	color: rgb(149, 149, 149);
+}
+div.replies {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+div.answers {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+div.answers > h3 {
+	padding-top: 10px; border-top-color: rgb(236, 236, 236); border-top-width: 2px; border-top-style: solid;
+}
+div.replies > h3 {
+	padding-top: 10px; border-top-color: rgb(236, 236, 236); border-top-width: 2px; border-top-style: solid;
+}
+div.answers ul.message {
+	margin-left: 0px;
+}
+div.replies ul.message {
+	margin-left: 0px;
+}
+div.messageIcon {
+	margin: 0px auto; padding: 5px 10px 10px 5px; width: 30px; height: 30px;
+}
+div.root.question.messageIcon {
+	background-color: rgb(0, 121, 204);
+}
+div.replies div.messageIcon {
+	background-color: rgb(149, 149, 149);
+}
+div.reply.messageIcon {
+	background-color: rgb(149, 149, 149);
+}
+li.answer div.messageIcon {
+	background-color: rgb(141, 199, 63);
+}
+div.answer.messageIcon {
+	background-color: rgb(141, 199, 63);
+}
+ul.history {
+	margin: 0px;
+}
+#askaquestion a.askQuestionLink {
+	padding: 0.3em 1em 0.48em; color: rgb(255, 255, 255); line-height: normal; display: block; background-color: transparent;
+}
+#askaquestion {
+	padding: 0px; margin-top: 0px; margin-bottom: 9px; float: left; display: block; background-color: rgb(0, 122, 204);
+}
+#askaquestion a.askQuestionLink:hover {
+	background-color: rgb(0, 90, 151);
+}
+#viewallCategoriesContainer {
+	text-align: right;
+}
+#viewallCategoriesContainer .arrowcontainer {
+	float: right;
+}
+#viewallCategoriesContainer .viewAllLink {
+	font-size: 0.9em !important;
+}
+.homecategoryPopupOverlay {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/overlay.png") 0px 0px; left: 0px; top: 0px; width: 100%; height: 100%; display: none; position: absolute; z-index: 10000; zoom: 1;
+}
+#allCategoryPopupContainer {
+	left: 320px; top: 220px; width: 600px; position: fixed !important;
+}
+#allCategoryPopupContainer #forumDetailsContainer {
+	width: 44%; float: left;
+}
+#allCategoryPopupContainer #allCategoryListContainer {
+	width: 53%; margin-right: 3%; float: left;
+}
+#allCategoryPopupContainer #forumDetailsContainer a {
+	font-size: 1em;
+}
+#categoriesListing ul {
+	overflow-y: scroll;
+}
+#forumsDetailsSelectedHeader {
+	color: rgb(0, 0, 0); margin-bottom: 15px;
+}
+:first-child#forumsDetailsSelectedHeader {
+	font-family: Segoe UI Semibold,Lucida Grande,Verdana,Arial,Helvetica,sans-serif;
+}
+#allCategoriesSearchContainer {
+	margin-bottom: 1em;
+}
+#forumDetailsContainer h3 {
+	padding: 0px;
+}
+#allCategoriesSearchContainer .searchbar .imageWidth {
+	display: none;
+}
+#forumDetailsTemplate {
+	display: none;
+}
+#manageForumSection {
+	display: none;
+}
+.singleforumdetails {
+	display: none;
+}
+.addRemoveForum {
+	display: none;
+}
+.expandedThreadContainer #threadActionMenu {
+	display: none;
+}
+#allCategoryPopupContainer #forumDetailsContainer #submitAllCategories {
+	padding: 0.3em 1em 0.48em; right: 7px; bottom: 7px; color: rgb(255, 255, 255); line-height: normal; font-size: 1.1em; position: absolute; background-color: rgb(0, 90, 151);
+}
+#viewallCategoriesContainer .arrowcontainer {
+	margin-top: 1px; margin-left: 5px;
+}
+ul.manageForumSection {
+	margin-top: 0.25em; margin-bottom: 0.25em;
+}
+a.selected.categoryHeaderText {
+	font-weight: bold;
+}
+#topbar {
+	width: 100%; display: inline-block;
+}
+#homepageLeaderboard .seeMore {
+	float: right; display: inline;
+}
+#homepageLeaderboard .box h4 {
+	display: inline;
+}
+#homepageLeaderboard .box a {
+	font-size: 0.9em;
+}
+#homepageLeaderboard .box th {
+	color: rgb(149, 149, 149); padding-bottom: 1em; font-weight: normal;
+}
+.forumBreadcrumb {
+	position: relative;
+}
+.forumDetailsTip {
+	padding: 5px 10px 3px; border: 1px solid rgb(204, 204, 204); width: 350px; color: rgb(51, 51, 51); line-height: 1.25em; font-size: 12px; display: none; position: absolute; z-index: 10; box-shadow: 3px 3px 5px #888; background-color: rgb(255, 255, 255); -moz-box-shadow: 3px 3px 5px #888;
+}
+.forumDetailsTip .title {
+	padding-bottom: 5px; font-size: 14px; font-weight: bold;
+}
+.forumDetailsTip h3 {
+	padding-bottom: 3px;
+}
+.forumDetailsTip div.content {
+	padding: 5px 0px 0px;
+}
+.forumDetailsTip div.announcements {
+	padding: 5px 0px 0px;
+}
+.forumDetailsTip .info {
+	padding-top: 5px;
+}
+.forumDetailsTip img.rss.icon {
+	background: url("http://i1.social.s-msft.com/Forums/resources/images/RSS_SHELL_17_17.png") rgb(0, 118, 163); width: 17px; height: 17px; margin-bottom: -4px;
+}
+.forumItem .forumDetailsTip {
+	margin-top: 18px; margin-left: 65px;
+}
+#msdn-technet-en-home ul#topCategoryItems .forumItem .forumDetailsTip a {
+	color: rgb(0, 118, 163); padding-left: 0px;
+}
+#msdn-technet-en-home ul#topCategoryItems .forumItem .forumDetailsTip a:link {
+	color: rgb(0, 118, 163); padding-left: 0px;
+}
+.pageTitle {
+	margin-bottom: -31px; margin-left: 250px; position: absolute;
+}
+.pageTitle .configureLink {
+	font-size: 0.45em;
+}
+.popup.announcement .announcementContainer {
+	width: 80%; font-size: 1em; display: inline-block;
+}
+#seoCategoriesForums {
+	visibility: hidden;
+}
+.profile-usercard-inline .profile-inline .profile-footer a {
+	clear: left; float: left;
+}
+li.threadblock .detailscontainer > h3 {
+	font-family: Segoe UI Semibold,Lucida Grande,Verdana,Arial,Helvetica,sans-serif;
+}
+li.viewed.threadblock .detailscontainer > h3 {
+	font-family: Segoe UI,Lucida Grande,Verdana,Arial,Helvetica,sans-serif; font-weight: normal;
+}
+li.newposts.threadblock .detailscontainer > h3 {
+	font-family: Segoe UI,Lucida Grande,Verdana,Arial,Helvetica,sans-serif; font-weight: normal;
+}
+li.newposts.threadblock .detailscontainer > h3 {
+	font-style: italic;
+}
+.box h1 {
+	margin-bottom: 0px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.box h2 {
+	margin-bottom: 0px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.box h3 {
+	margin-bottom: 0px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.box h4 {
+	margin-bottom: 0px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.box h5 {
+	margin-bottom: 0px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+a {
+	color: rgb(0, 116, 158);
+}
+a:link {
+	color: rgb(0, 116, 158);
+}
+a:visited {
+	color: rgb(0, 116, 158);
+}
+div.box > h4 {
+	padding-left: 0px;
+}
+li.announcement h4 {
+	padding: 0px;
+}
+li.categoryHome > h2 {
+	padding-left: 0px; margin-bottom: 0px;
+}
+li.categoryHome > h2 > a {
+	color: rgb(55, 100, 143);
+}
+li.category > h2 {
+	padding-left: 0px; margin-bottom: 0px;
+}
+#forumsSearch input[type='text'] {
+	width: 75%; font-size: 1em;
+}
+li.category > h2 > a {
+	color: rgb(55, 100, 143);
+}
+li.category .categoryName > h2 {
+	padding-left: 0px; margin-bottom: 0px;
+}
+li.category .categoryName > h2 > a {
+	color: rgb(55, 100, 143);
+}
+li.announcement h4 {
+	
+}
+li.forumHome {
+	margin: 0px;
+}
+li.forum {
+	margin: 0px 1em 1em;
+}
+li.forum a.lastReply {
+	font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;
+}
+.myForumsHeader {
+	width: 100%; padding-bottom: 1.5em;
+}
+.myForumsHeaderName {
+	width: 68%; float: right;
+}
+.myForumsStatsCol {
+	width: 32%; float: right;
+}
+.myForumsStatsCol .myForumStatsHeader {
+	width: 100%; text-align: left; color: rgb(51, 51, 51); font-size: 84%; font-weight: normal;
+}
+.myForumsStatsCol .myForumStatsHeader .threadsHeader {
+	width: 61%; float: right;
+}
+.myForumsStatsCol .myForumStatsHeader .messagesHeader {
+	width: 39%; float: right;
+}
+li.forum div.statsHeaderMyForum {
+	padding-bottom: 1.5em;
+}
+li.forum div.statsHeader {
+	padding-bottom: 0.5em;
+}
+li.category .categoryName {
+	width: 69%; float: right;
+}
+li.category .categoryStatsCol {
+	width: 31%; float: right;
+}
+li.category .categoryStatsCol .statsCategoryHeader {
+	width: 100%; text-align: left; color: rgb(51, 51, 51); font-size: 60%; font-weight: normal;
+}
+li.category .categoryStatsCol .statsCategoryHeader .threadsHeader {
+	width: 57%;
+}
+li.category .categoryStatsCol .statsCategoryHeader .messagesHeader {
+	width: 43%; float: right;
+}
+div.box {
+	border: currentColor; margin-bottom: 0px; background-image: none;
+}
+li.box {
+	border: currentColor; margin-bottom: 0px; background-image: none;
+}
+.discover .search {
+	min-width: 45%; max-width: 65%;
+}
+ul.announcement li.announcement {
+	height: auto;
+}
+#content .announcement > a {
+	font-size: 0.9em;
+}
+ul.forumHome li.forumHome h5 {
+	height: auto; white-space: normal;
+}
+ul.forum li.forum h3 {
+	height: auto; white-space: normal;
+}
+ul.announcement li.announcement h4 {
+	width: 88%; height: auto; color: rgb(38, 8, 89); line-height: normal; clear: none; border-top-color: currentColor; border-top-width: medium; border-top-style: none; white-space: normal;
+}
+#content div.expcol {
+	font-size: 0.9em;
+}
+ul.threads li.thread h3 {
+	clear: none; font-size: 1.15em;
+}
+table.users tr.userstitle {
+	vertical-align: top;
+}
+table.users tr.userstitle td.displayname {
+	width: 40%; vertical-align: middle;
+}
+table.users tr.userstitle td.lastactivedate {
+	width: 25%;
+}
+li.message > div.head > span.date {
+	font-size: 1.1em;
+}
+ul.history > li > span {
+	font-size: 0.9em;
+}
+span.fullbadge > span.affil {
+	font-size: 1.2em;
+}
+ul.category ul.forum {
+	margin-top: -10px;
+}
+ul.message > li.message > div.container {
+	margin: 1em 2em 0px 4.8em;
+}
+ul.message li.message div.votingouterbox {
+	width: 42px;
+}
+li.thread h3 a {
+	width: 83%; display: inline-block;
+}
+#content li.thread img.icon {
+	width: 20px; vertical-align: top;
+}
+#content li.thread a.expcol {
+	margin: 6px 5px; width: 10px; vertical-align: top;
+}
+li.thread a.lastReply {
+	font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;
+}
+.IE7 li.message {
+	overflow: visible;
+}
+.IE7 li.message div.head {
+	overflow: visible;
+}
+.IE7 ul.announcement li.announcement {
+	clear: both;
+}
+.IE7 div.replies li.children {
+	margin-top: -1em;
+}
+.IE7 #content .announcement > a[name='deleteAnnouncement'] {
+	clear: right;
+}
+.IE7 ul.announcement li.announcement h4 {
+	clear: left; float: left;
+}
+.IE7 .announcement .head span.name {
+	clear: left;
+}
+td.displayname span.fullbadge {
+	width: 60%;
+}
+div.head span.fullbadge {
+	width: 55%;
+}
+span.fullbadge span.name {
+	height: auto; line-height: 125%; display: block; white-space: normal; word-break: break-all;
+}
+.FF #BodyText_ifr {
+	width: 99.9%;
+}
+ul.categoryHome li.categoryHome ul.forumHome li.forumHome h5 {
+	padding-top: 0.5em;
+}
+.SystemMessage {
+	width: auto; background-color: rgb(255, 166, 21);
+}
+#rail .SystemMessage {
+	padding: 6px; font-weight: normal;
+}
+#rail {
+	margin-top: 6px;
+}
+.box h1 {
+	height: auto; line-height: 130%; font-weight: normal;
+}
+.box h2 {
+	height: auto; line-height: 130%; font-weight: normal;
+}
+.box h3 {
+	height: auto; line-height: 130%; font-weight: normal;
+}
+.box h4 {
+	height: auto; line-height: 130%; font-weight: normal;
+}
+.box h5 {
+	height: auto; line-height: 130%; font-weight: normal;
+}
+.box h6 {
+	height: auto; line-height: 130%; font-weight: normal;
+}
+.box h1 a {
+	color: rgb(42, 42, 42);
+}
+.box h2 a {
+	color: rgb(42, 42, 42);
+}
+.box h4 a {
+	color: rgb(42, 42, 42);
+}
+.box h5 a {
+	color: rgb(42, 42, 42);
+}
+.box h6 a {
+	color: rgb(42, 42, 42);
+}
+#controls .menu {
+	background-color: rgb(241, 241, 241);
+}
+#content ul.category {
+	padding-top: 30px;
+}
+#content .box h4 {
+	color: rgb(0, 116, 158); font-size: 14px; background-color: rgb(255, 255, 255);
+}
+div.discover {
+	border: currentColor;
+}
+div.box > .content {
+	margin: 0px;
+}
+a.btn:hover {
+	border: 1px solid transparent;
+}
+a.popup:hover {
+	border: 1px solid transparent;
+}
+.discover .search {
+	padding: 0px; height: 26px; clear: both; float: left;
+}
+div#announcement {
+	font-size: 100%;
+}
+div#announcement h2 {
+	margin: 0px 0px 35px; height: auto; line-height: 130%; font-size: 36px; font-weight: 100;
+}
+ul.root {
+	margin-top: 2em;
+}
+img.voteup {
+	margin-bottom: 10px;
+}
+img.reply {
+	width: 0px; height: 0px; background-image: none;
+}
+img.quote {
+	width: 0px; height: 0px; background-image: none;
+}
+img.edit {
+	width: 0px; height: 0px; background-image: none;
+}
+img.move {
+	width: 0px; height: 0px; background-image: none;
+}
+img.merge {
+	width: 0px; height: 0px; background-image: none;
+}
+img.changetype {
+	width: 0px; height: 0px; background-image: none;
+}
+img.split {
+	width: 0px; height: 0px; background-image: none;
+}
+img.assign {
+	width: 0px; height: 0px; background-image: none;
+}
+a.author span {
+	color: rgb(0, 116, 158); font-size: 10px;
+}
+a.author:hover span {
+	color: rgb(0, 116, 158); font-size: 10px;
+}
+span.date {
+	color: rgb(112, 112, 112); font-size: 10px; font-style: normal;
+}
+ul.category li.category > h2 {
+	width: auto; color: rgb(219, 113, 0); float: left; background-color: rgb(255, 255, 255);
+}
+ul.category li.category > h3 {
+	width: auto; color: rgb(219, 113, 0); float: left; background-color: rgb(255, 255, 255);
+}
+ul.category li.category > h4 {
+	width: auto; color: rgb(219, 113, 0); float: left; background-color: rgb(255, 255, 255);
+}
+ul.category li.category > h5 {
+	width: auto; color: rgb(219, 113, 0); float: left; background-color: rgb(255, 255, 255);
+}
+ul.category li.category > h6 {
+	width: auto; color: rgb(219, 113, 0); float: left; background-color: rgb(255, 255, 255);
+}
+ul.category li.category h2 a {
+	margin: 0px 0px 3px; height: auto; color: rgb(219, 113, 0); line-height: 130%; font-size: 110%; font-weight: 100;
+}
+ul.category li.category h2 a:link {
+	margin: 0px 0px 3px; height: auto; color: rgb(219, 113, 0); line-height: 130%; font-size: 110%; font-weight: 100;
+}
+ul.category li.category h2 a:hover {
+	margin: 0px 0px 3px; height: auto; color: rgb(219, 113, 0); line-height: 130%; font-size: 110%; font-weight: 100;
+}
+ul.category li.category h2 a:active {
+	margin: 0px 0px 3px; height: auto; color: rgb(219, 113, 0); line-height: 130%; font-size: 110%; font-weight: 100;
+}
+ul.category ul.forum li.forum h3 {
+	font-size: 14px;
+}
+li.thread > h3 {
+	font-size: 14px;
+}
+li.thread > h3 {
+	font-family: inherit;
+}
+li.category {
+	padding-bottom: 1em;
+}
+ul.forum {
+	width: 100%; margin-bottom: 1.5em; float: left;
+}
+li.forum {
+	margin: 1em 0px 0px;
+}
+li.forum h3 {
+	padding: 0px 0px 5px;
+}
+li.forum div.statsHeader {
+	margin: -2.75em 0px 0px; width: 40%; float: right;
+}
+li.forum .stat {
+	margin-left: 1em;
+}
+li.forum .stat {
+	margin-left: 0px;
+}
+li.thread {
+	border: 1px solid rgb(255, 255, 255);
+}
+li.message div.voting {
+	border: 1px solid rgb(255, 255, 255);
+}
+li.message > div.head {
+	height: 5em;
+}
+span.fullbadge > span.affil {
+	margin-left: 0px; display: block;
+}
+span.fullbadge a.author span {
+	font-size: 18px;
+}
+div.replies {
+	border-top-color: rgb(255, 255, 255); border-top-width: 2px; border-top-style: solid;
+}
+div.box h4 {
+	border: currentColor; color: rgb(42, 42, 42); font-size: 170%;
+}
+#rail div.box > h4 a:link {
+	color: rgb(42, 42, 42);
+}
+.leaderboards img {
+	margin: 0.1em 0px; width: 21px; height: 21px;
+}
+.box#controls > h4 {
+	color: rgb(42, 42, 42); background-color: rgb(255, 255, 255);
+}
+#content ul.announcement li.announcement h4 {
+	background-color: rgb(255, 255, 255);
+}
+ul.announcement li.announcement h4 {
+	color: rgb(42, 42, 42);
+}
+li.category .categoryStatsCol {
+	width: 30%;
+}
+li.category .categoryName {
+	width: 70%;
+}
+li.category .categoryStatsCol .statsCategoryHeader {
+	font-size: 83%;
+}
+li.forum .forumSpace .forumStats {
+	margin-top: 3px;
+}
+.EyebrowContainer {
+	font-size: 10px; margin-top: 2px; margin-bottom: 30px; margin-left: -2px;
+}
+.EyebrowContainer a {
+	margin: 0px 2px; color: rgb(42, 42, 42);
+}
+.EyebrowContainer a:link {
+	margin: 0px 2px; color: rgb(42, 42, 42);
+}
+.EyebrowContainer a:visited {
+	margin: 0px 2px; color: rgb(42, 42, 42);
+}
+.EyebrowContainer a:active {
+	margin: 0px 2px; color: rgb(42, 42, 42);
+}
+.EyebrowContainer a:hover {
+	color: rgb(112, 112, 112); text-decoration: none;
+}
+#sideNav {
+	width: 190px;
+}
+#extraActions {
+	width: 210px;
+}
+#searchPage #mainContentContainer {
+	margin: 0px 230px 0px 210px;
+}
+.subMenu > h2 {
+	margin: 0px 0px 35px; color: rgb(112, 112, 112); padding-bottom: 0px; font-size: 36px;
+}
+#searchPage h2 {
+	font-size: 18px;
+}
+#searchPage h3 {
+	font-size: 18px; font-weight: 100;
+}
+#projectPage .sidebar .section .titleBar {
+	margin: 0px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+#projectPage .sidebar .section .titleBar h3 {
+	margin: 0px; padding: 0px; font-size: 14px;
+}
+.itemRow .itemTitle {
+	font-size: 14px;
+}
+#legalDisclaimer {
+	color: inherit; font-size: 10px;
+}
+#editorPicksSection ul {
+	padding-top: 8px;
+}
+.search h2 {
+	font-size: 18px;
+}
+#Search .sidebar {
+	width: 190px; padding-right: 20px; vertical-align: top; min-width: 190px;
+}
+#Search .sidebar > div {
+	width: 190px;
+}
+.search #searchText {
+	margin: 46px 0px 35px -1px; color: rgb(112, 112, 112); line-height: 130%; font-size: 36px; font-weight: 100;
+}
+.search #searchBoxContainer {
+	padding: 2px 0.75em 0px 0px;
+}
+.search .RefinementListContainer {
+	font-size: 12px;
+}
+.search .SearchHelpContainer {
+	padding-right: 230px;
+}
+.search .inlineRtl {
+	font-size: 12px; font-weight: normal;
+}
+.search .NoResultsMessage strong {
+	color: rgb(219, 113, 0); font-size: 18px;
+}
+.search .NoResultsMessage li a {
+	font-weight: normal;
+}
+.search .RefinementListContainer .HeaderContainer {
+	color: rgb(112, 112, 112); padding-bottom: 10px; font-size: 14px; font-weight: normal;
+}
+.search .labelSourceTopic {
+	color: rgb(112, 112, 112);
+}
+.search #ResultsMessageDiv .ResultsMessage {
+	color: rgb(112, 112, 112);
+}
+.Msdn .search div#ResultsMessageDiv b {
+	font-size: 18px;
+}
+.search #ResultsMessageDiv .Elapsed {
+	margin: 7px 10px 0px 5px; color: rgb(42, 42, 42); font-size: 12px;
+}
+.search .ResultItemsContainer {
+	font-size: 125%;
+}
+.search .result a {
+	font-size: 14px;
+}
+.search .ResultUrl {
+	color: rgb(2, 130, 0); font-size: 12px;
+}
+.search .ResultUrl:active {
+	color: rgb(0, 176, 224); cursor: pointer;
+}
+.search .ResultMetaData {
+	font-size: inherit; min-width: 540px;
+}
+.search .ResultMetaDataItem {
+	min-width: 10em;
+}
+.Msdn #instantAnswer {
+	font-size: 125%;
+}
+.Msdn #instantAnswer .ResultItem {
+	margin: 0px 0px 0.75em; background-image: none;
+}
+.IE7 .rtl #JelloExpander {
+	background: rgb(255, 255, 255); min-width: 943px;
+}
+h1 {
+	height: auto; color: rgb(112, 112, 112); line-height: 130%; font-weight: 100;
+}
+.title {
+	height: auto; color: rgb(112, 112, 112); line-height: 130%; font-weight: 100;
+}
+h2 {
+	height: auto; color: rgb(112, 112, 112); line-height: 130%; font-weight: 100;
+}
+h1 {
+	margin: 0px 0px 35px; font-size: 36px;
+}
+p {
+	margin: 0px 0px 5px;
+}
+.bread a {
+	margin: 0px 2px; color: rgb(42, 42, 42);
+}
+.bread a:link {
+	margin: 0px 2px; color: rgb(42, 42, 42);
+}
+.bread a:visited {
+	margin: 0px 2px; color: rgb(42, 42, 42);
+}
+.bread a:active {
+	margin: 0px 2px; color: rgb(42, 42, 42);
+}
+.BrandLogo {
+	font: 20px/1.4 "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; margin: 0px; font-size-adjust: none; font-stretch: normal;
+}
+.BrandLogo a {
+	color: rgb(0, 0, 0);
+}
+.pln {
+	color: rgb(0, 0, 0);
+}
+.str {
+	color: rgb(0, 136, 0);
+}
+.kwd {
+	color: rgb(0, 0, 136);
+}
+.com {
+	color: rgb(136, 0, 0);
+}
+.typ {
+	color: rgb(102, 0, 102);
+}
+.lit {
+	color: rgb(0, 102, 102);
+}
+.pun {
+	color: rgb(102, 102, 0);
+}
+.opn {
+	color: rgb(102, 102, 0);
+}
+.clo {
+	color: rgb(102, 102, 0);
+}
+.tag {
+	color: rgb(0, 0, 136);
+}
+.atn {
+	color: rgb(102, 0, 102);
+}
+.atv {
+	color: rgb(0, 136, 0);
+}
+.dec {
+	color: rgb(102, 0, 102);
+}
+.var {
+	color: rgb(102, 0, 102);
+}
+.fun {
+	color: red;
+}
+.str {
+	color: rgb(0, 102, 0);
+}
+.kwd {
+	color: rgb(0, 0, 102); font-weight: bold;
+}
+.com {
+	color: rgb(102, 0, 0); font-style: italic;
+}
+.typ {
+	color: rgb(68, 0, 68); font-weight: bold;
+}
+.lit {
+	color: rgb(0, 68, 68);
+}
+.pun {
+	color: rgb(68, 68, 0);
+}
+.opn {
+	color: rgb(68, 68, 0);
+}
+.clo {
+	color: rgb(68, 68, 0);
+}
+.tag {
+	color: rgb(0, 0, 102); font-weight: bold;
+}
+.atn {
+	color: rgb(68, 0, 68);
+}
+.atv {
+	color: rgb(0, 102, 0);
+}
+pre.prettyprint {
+	padding: 2px; border: 1px solid rgb(136, 136, 136);
+}
+ol.linenums {
+	margin-top: 0px; margin-bottom: 0px;
+}
+li.L0 {
+	list-style-type: none;
+}
+li.L1 {
+	list-style-type: none;
+}
+li.L2 {
+	list-style-type: none;
+}
+li.L3 {
+	list-style-type: none;
+}
+li.L5 {
+	list-style-type: none;
+}
+li.L6 {
+	list-style-type: none;
+}
+li.L7 {
+	list-style-type: none;
+}
+li.L8 {
+	list-style-type: none;
+}
+li.L1 {
+	background: rgb(238, 238, 238);
+}
+li.L3 {
+	background: rgb(238, 238, 238);
+}
+li.L5 {
+	background: rgb(238, 238, 238);
+}
+li.L7 {
+	background: rgb(238, 238, 238);
+}
+li.L9 {
+	background: rgb(238, 238, 238);
+}

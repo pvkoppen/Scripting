@@ -1,3 +1,0 @@
-[Commands]
-"attrib.exe -r c:\guicmd.exe"
-"c:\guicmd.exe"

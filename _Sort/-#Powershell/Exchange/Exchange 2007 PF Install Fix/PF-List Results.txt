@@ -1,0 +1,297 @@
+ExternalScript  ReplaceReplicaOnPFRecursive.ps1 C:\Program Files\Microsoft\E...
+ExternalScript  ReplaceUserPermissionOnPFRec... C:\Program Files\Microsoft\E...
+ExternalScript  ReplaceUserWithUserOnPFRecur... C:\Program Files\Microsoft\E...
+Application     TsWpfWrp.exe                    C:\WINDOWS\system32\TsWpfWrp...
+Application     TsWpfWrp.exe                    C:\WINDOWS\sysWOW64\TsWpfWrp...
+Application     wfospf.mib                      C:\WINDOWS\system32\wfospf.mib
+Application     zipfldr.dll                     C:\WINDOWS\sysWOW64\zipfldr.dll
+Application     zipfldr.dll                     C:\WINDOWS\system32\zipfldr.dll
+
+
+[PS] C:\Documents and Settings\peter>addreplicatopfrecursive
+ValidateParams :
+Missing parameter: The -TopPublicFolder parameter is required. Please pass in a
+ valid Public Folder path, name, or entryID.
+Missing parameter: The -ServerToAdd parameter is required. Please pass in a val
+id mailbox server identity
+At C:\Program Files\Microsoft\Exchange Server\Scripts\AddReplicaToPFRecursive.p
+s1:108 char:32
++ $ifValidParams = ValidateParams; <<<<
+
+
+[PS] C:\Documents and Settings\peter>addreplicatopfrecursive -toppublicfolder '\NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK\' -servertoadd toles01
+Get-PublicFolder : A parameter cannot be found that matches parameter name 'ADD
+RESS'.
+At line:1 char:17
++ get-publicfolder  <<<< -identity \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK\ -Recu
+rse -resultsize unlimited
+
+
+[PS] C:\Documents and Settings\peter>addreplicatopfrecursive -toppublicfolder '\NON_IPM_SUBTREE\OWAScratchPad{B1C909BE-0BE2-4394-B87D-3596B01025D9}' -servertoadd toles01
+Get-PublicFolder : A parameter cannot be found that matches parameter name 'B1C
+909BE-0BE2-4394-B87D-3596B01025D9'.
+At line:1 char:17
++ get-publicfolder  <<<< -identity \NON_IPM_SUBTREE\OWAScratchPad{B1C909BE-0BE2
+-4394-B87D-3596B01025D9} -Recurse -resultsize unlimited
+
+
+[PS] C:\Documents and Settings\peter>addreplicatopfrecursive -toppublicfolder \NON_IPM_SUBTREE\OWAScratchPad{B1C909BE-0BE2-4394-B87D-3596B01025D9} -servertoadd toles01
+Exchange server "B1C909BE-0BE2-4394-B87D-3596B01025D9" was not found. Please ma
+ke sure you have typed it correctly.
+At line:1 char:1
++ g <<<< et-publicfolder -server B1C909BE-0BE2-4394-B87D-3596B01025D9 -identity
+ \NON_IPM_SUBTREE\OWAScratchPad -Recurse -resultsize unlimited
+
+
+[PS] C:\Documents and Settings\peter>addreplicatopfrecursive -toppublicfolder '\NON_IPM_SUBTREE\OWAScratchPad{B1C909BE-0BE2-4394-B87D-3596B01025D9}' -servertoadd toles01
+Get-PublicFolder : A parameter cannot be found that matches parameter name 'B1C
+909BE-0BE2-4394-B87D-3596B01025D9'.
+At line:1 char:17
++ get-publicfolder  <<<< -identity \NON_IPM_SUBTREE\OWAScratchPad{B1C909BE-0BE2
+-4394-B87D-3596B01025D9} -Recurse -resultsize unlimited
+
+
+[PS] C:\Documents and Settings\peter>addreplicatopfrecursive -toppublicfolder '\NON_IPM_SUBTREE\StoreEvents{B1C909BE-0BE2-4394-B87D-3596B01025D9}' -servertoadd toles01
+Get-PublicFolder : A parameter cannot be found that matches parameter name 'B1C
+909BE-0BE2-4394-B87D-3596B01025D9'.
+At line:1 char:17
++ get-publicfolder  <<<< -identity \NON_IPM_SUBTREE\StoreEvents{B1C909BE-0BE2-4
+394-B87D-3596B01025D9} -Recurse -resultsize unlimited
+
+
+[PS] C:\Documents and Settings\peter>Get-PublicFolder -recuse -identity '\NON_IPM_SUBTREE'
+Get-PublicFolder : A parameter cannot be found that matches parameter name 'rec
+use'.
+At line:1 char:25
++ Get-PublicFolder -recuse  <<<< -identity '\NON_IPM_SUBTREE'
+[PS] C:\Documents and Settings\peter>Get-PublicFolder -recurse -identity '\NON_I
+PM_SUBTREE'
+
+Name                                    Parent Path
+----                                    -----------
+NON_IPM_SUBTREE
+EFORMS REGISTRY                         \NON_IPM_SUBTREE
+Events Root                             \NON_IPM_SUBTREE
+OFFLINE ADDRESS BOOK                    \NON_IPM_SUBTREE
+OWAScratchPad{B1C909BE-0BE2-4394-B87... \NON_IPM_SUBTREE
+OWAScratchPad{F14911DB-8396-4EB6-ACE... \NON_IPM_SUBTREE
+SCHEDULE+ FREE BUSY                     \NON_IPM_SUBTREE
+StoreEvents{B1C909BE-0BE2-4394-B87D-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{B1C909B...
+internal                                \NON_IPM_SUBTREE\StoreEvents{B1C909B...
+StoreEvents{F14911DB-8396-4EB6-ACE2-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{F14911D...
+internal                                \NON_IPM_SUBTREE\StoreEvents{F14911D...
+
+
+[PS] C:\Documents and Settings\peter>addreplicatopfrecursive -toppublicfolder '\NON_IPM_SUBTREE' -servertoadd tolms01
+Set-PublicFolder : Modification of the '\NON_IPM_SUBTREE' folder is not allowed
+.
+At C:\Program Files\Microsoft\Exchange Server\Scripts\AddReplicaToPFRecursive.p
+s1:126 char:24
++         $_ | set-publicfolder  <<<< -server $_.OriginatingServer;
+Set-PublicFolder : Cannot save the object '\NON_IPM_SUBTREE\EFORMS REGISTRY'. P
+lease make sure that you specified the correct Identity and that you have the n
+ecessary permissions to save it.
+At C:\Program Files\Microsoft\Exchange Server\Scripts\AddReplicaToPFRecursive.p
+s1:126 char:24
++         $_ | set-publicfolder  <<<< -server $_.OriginatingServer;
+Set-PublicFolder : Cannot save the object '\NON_IPM_SUBTREE\OFFLINE ADDRESS BOO
+K'. Please make sure that you specified the correct Identity and that you have
+the necessary permissions to save it.
+At C:\Program Files\Microsoft\Exchange Server\Scripts\AddReplicaToPFRecursive.p
+s1:126 char:24
++         $_ | set-publicfolder  <<<< -server $_.OriginatingServer;
+Set-PublicFolder : Cannot save the object '\NON_IPM_SUBTREE\SCHEDULE+ FREE BUSY
+'. Please make sure that you specified the correct Identity and that you have t
+he necessary permissions to save it.
+At C:\Program Files\Microsoft\Exchange Server\Scripts\AddReplicaToPFRecursive.p
+s1:126 char:24
++         $_ | set-publicfolder  <<<< -server $_.OriginatingServer;
+
+
+[PS] C:\Documents and Settings\peter>Get-PublicFolder -recurse -identity '\NON_IPM_SUBTREE'
+
+Name                                    Parent Path
+----                                    -----------
+NON_IPM_SUBTREE
+EFORMS REGISTRY                         \NON_IPM_SUBTREE
+Events Root                             \NON_IPM_SUBTREE
+OFFLINE ADDRESS BOOK                    \NON_IPM_SUBTREE
+OWAScratchPad{B1C909BE-0BE2-4394-B87... \NON_IPM_SUBTREE
+OWAScratchPad{F14911DB-8396-4EB6-ACE... \NON_IPM_SUBTREE
+SCHEDULE+ FREE BUSY                     \NON_IPM_SUBTREE
+StoreEvents{B1C909BE-0BE2-4394-B87D-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{B1C909B...
+internal                                \NON_IPM_SUBTREE\StoreEvents{B1C909B...
+StoreEvents{F14911DB-8396-4EB6-ACE2-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{F14911D...
+internal                                \NON_IPM_SUBTREE\StoreEvents{F14911D...
+
+
+[PS] C:\Documents and Settings\peter>Get-PublicFolder -recurse -identity '\NON_IPM_SUBTREE' -server toles01
+?The server 'toles01' is running Microsoft Exchange 2003 or earlier.?
+At line:1 char:1
++ G <<<< et-PublicFolder -recurse -identity '\NON_IPM_SUBTREE' -server toles01
+[PS] C:\Documents and Settings\peter>get-command '*pub*'
+
+CommandType     Name                            Definition
+-----------     ----                            ----------
+Cmdlet          Add-PublicFolderAdministrati... Add-PublicFolderAdministrati...
+Cmdlet          Add-PublicFolderClientPermis... Add-PublicFolderClientPermis...
+Cmdlet          Disable-MailPublicFolder        Disable-MailPublicFolder [-I...
+Cmdlet          Enable-MailPublicFolder         Enable-MailPublicFolder [-Id...
+Cmdlet          Get-MailPublicFolder            Get-MailPublicFolder [[-Iden...
+Cmdlet          Get-PublicFolder                Get-PublicFolder [[-Identity...
+Cmdlet          Get-PublicFolderAdministrati... Get-PublicFolderAdministrati...
+Cmdlet          Get-PublicFolderClientPermis... Get-PublicFolderClientPermis...
+Cmdlet          Get-PublicFolderDatabase        Get-PublicFolderDatabase [[-...
+Cmdlet          Get-PublicFolderStatistics      Get-PublicFolderStatistics [...
+Cmdlet          New-PublicFolder                New-PublicFolder [-Name] <St...
+Cmdlet          New-PublicFolderDatabase        New-PublicFolderDatabase [-N...
+Application     pubprn.vbs                      C:\WINDOWS\system32\pubprn.vbs
+Cmdlet          Remove-PublicFolder             Remove-PublicFolder [-Identi...
+Cmdlet          Remove-PublicFolderAdministr... Remove-PublicFolderAdministr...
+Cmdlet          Remove-PublicFolderClientPer... Remove-PublicFolderClientPer...
+Cmdlet          Remove-PublicFolderDatabase     Remove-PublicFolderDatabase ...
+Cmdlet          Resume-PublicFolderReplication  Resume-PublicFolderReplicati...
+Cmdlet          Set-MailPublicFolder            Set-MailPublicFolder [-Ident...
+Cmdlet          Set-PublicFolder                Set-PublicFolder [-Identity]...
+Cmdlet          Set-PublicFolderDatabase        Set-PublicFolderDatabase [-I...
+Application     shrpubw.exe                     C:\WINDOWS\system32\shrpubw.exe
+Application     softpub.dll                     C:\WINDOWS\system32\softpub.dll
+Application     softpub.dll                     C:\WINDOWS\sysWOW64\softpub.dll
+Cmdlet          Suspend-PublicFolderReplication Suspend-PublicFolderReplicat...
+Cmdlet          Update-PublicFolder             Update-PublicFolder [-Identi...
+Cmdlet          Update-PublicFolderHierarchy    Update-PublicFolderHierarchy...
+
+
+[PS] C:\Documents and Settings\peter>Update-PublicFolderHierarchy
+
+cmdlet Update-PublicFolderHierarchy at command pipeline position 1
+Supply values for the following parameters:
+Server: TOLMS01
+[PS] C:\Documents and Settings\peter>Get-PublicFolder -recurse -identity '\NON_IPM_SUBTREE'
+
+Name                                    Parent Path
+----                                    -----------
+NON_IPM_SUBTREE
+EFORMS REGISTRY                         \NON_IPM_SUBTREE
+Events Root                             \NON_IPM_SUBTREE
+OFFLINE ADDRESS BOOK                    \NON_IPM_SUBTREE
+OWAScratchPad{B1C909BE-0BE2-4394-B87... \NON_IPM_SUBTREE
+OWAScratchPad{F14911DB-8396-4EB6-ACE... \NON_IPM_SUBTREE
+SCHEDULE+ FREE BUSY                     \NON_IPM_SUBTREE
+StoreEvents{B1C909BE-0BE2-4394-B87D-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{B1C909B...
+internal                                \NON_IPM_SUBTREE\StoreEvents{B1C909B...
+StoreEvents{F14911DB-8396-4EB6-ACE2-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{F14911D...
+internal                                \NON_IPM_SUBTREE\StoreEvents{F14911D...
+
+
+[PS] C:\Documents and Settings\peter>Get-PublicFolder -recurse -identity '\NON_IPM_SUBTREE'
+
+Name                                    Parent Path
+----                                    -----------
+NON_IPM_SUBTREE
+EFORMS REGISTRY                         \NON_IPM_SUBTREE
+Events Root                             \NON_IPM_SUBTREE
+OFFLINE ADDRESS BOOK                    \NON_IPM_SUBTREE
+/o=Tui Ora Ltd/cn=addrlists/cn=oabs/... \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK
+/o=Tui Ora Ltd/cn=addrlists/cn=oabs/... \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK
+EX:/o=Tui Ora Ltd/ou=Exchange Admini... \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK
+EX:/o=Tui Ora Ltd/ou=First Administr... \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK
+OWAScratchPad{B1C909BE-0BE2-4394-B87... \NON_IPM_SUBTREE
+OWAScratchPad{F14911DB-8396-4EB6-ACE... \NON_IPM_SUBTREE
+SCHEDULE+ FREE BUSY                     \NON_IPM_SUBTREE
+EX:/o=Tui Ora Ltd/ou=Exchange Admini... \NON_IPM_SUBTREE\SCHEDULE+ FREE BUSY
+EX:/o=Tui Ora Ltd/ou=First Administr... \NON_IPM_SUBTREE\SCHEDULE+ FREE BUSY
+StoreEvents{B1C909BE-0BE2-4394-B87D-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{B1C909B...
+internal                                \NON_IPM_SUBTREE\StoreEvents{B1C909B...
+StoreEvents{F14911DB-8396-4EB6-ACE2-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{F14911D...
+internal                                \NON_IPM_SUBTREE\StoreEvents{F14911D...
+
+
+[PS] C:\Documents and Settings\peter>Get-PublicFolder -recurse -identity '\NON_IPM_SUBTREE'
+
+Name                                    Parent Path
+----                                    -----------
+NON_IPM_SUBTREE
+EFORMS REGISTRY                         \NON_IPM_SUBTREE
+Events Root                             \NON_IPM_SUBTREE
+OFFLINE ADDRESS BOOK                    \NON_IPM_SUBTREE
+/o=Tui Ora Ltd/cn=addrlists/cn=oabs/... \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK
+OAB Version 2                           \NON_IPM_SUBTREE\OFFLINE ADDRESS BOO...
+OAB Version 3a                          \NON_IPM_SUBTREE\OFFLINE ADDRESS BOO...
+OAB Version 4                           \NON_IPM_SUBTREE\OFFLINE ADDRESS BOO...
+/o=Tui Ora Ltd/cn=addrlists/cn=oabs/... \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK
+OAB Version 2                           \NON_IPM_SUBTREE\OFFLINE ADDRESS BOO...
+OAB Version 3a                          \NON_IPM_SUBTREE\OFFLINE ADDRESS BOO...
+OAB Version 4                           \NON_IPM_SUBTREE\OFFLINE ADDRESS BOO...
+EX:/o=Tui Ora Ltd/ou=Exchange Admini... \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK
+EX:/o=Tui Ora Ltd/ou=First Administr... \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK
+OWAScratchPad{66822A2C-E55A-40CD-A61... \NON_IPM_SUBTREE
+OWAScratchPad{B1C909BE-0BE2-4394-B87... \NON_IPM_SUBTREE
+OWAScratchPad{F14911DB-8396-4EB6-ACE... \NON_IPM_SUBTREE
+SCHEDULE+ FREE BUSY                     \NON_IPM_SUBTREE
+EX:/o=Tui Ora Ltd/ou=Exchange Admini... \NON_IPM_SUBTREE\SCHEDULE+ FREE BUSY
+EX:/o=Tui Ora Ltd/ou=First Administr... \NON_IPM_SUBTREE\SCHEDULE+ FREE BUSY
+schema-root                             \NON_IPM_SUBTREE
+Default                                 \NON_IPM_SUBTREE\schema-root
+microsoft                               \NON_IPM_SUBTREE\schema-root
+exchangeV1                              \NON_IPM_SUBTREE\schema-root\microsoft
+StoreEvents{66822A2C-E55A-40CD-A614-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{66822A2...
+internal                                \NON_IPM_SUBTREE\StoreEvents{66822A2...
+StoreEvents{B1C909BE-0BE2-4394-B87D-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{B1C909B...
+internal                                \NON_IPM_SUBTREE\StoreEvents{B1C909B...
+StoreEvents{F14911DB-8396-4EB6-ACE2-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{F14911D...
+internal                                \NON_IPM_SUBTREE\StoreEvents{F14911D...
+
+
+[PS] C:\Documents and Settings\peter>Get-PublicFolder -recurse -identity '\NON_IPM_SUBTREE'
+
+Name                                    Parent Path
+----                                    -----------
+NON_IPM_SUBTREE
+EFORMS REGISTRY                         \NON_IPM_SUBTREE
+Events Root                             \NON_IPM_SUBTREE
+OFFLINE ADDRESS BOOK                    \NON_IPM_SUBTREE
+/o=Tui Ora Ltd/cn=addrlists/cn=oabs/... \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK
+OAB Version 2                           \NON_IPM_SUBTREE\OFFLINE ADDRESS BOO...
+OAB Version 3a                          \NON_IPM_SUBTREE\OFFLINE ADDRESS BOO...
+OAB Version 4                           \NON_IPM_SUBTREE\OFFLINE ADDRESS BOO...
+/o=Tui Ora Ltd/cn=addrlists/cn=oabs/... \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK
+/o=Tui Ora Ltd/cn=addrlists/cn=oabs/... \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK
+OAB Version 2                           \NON_IPM_SUBTREE\OFFLINE ADDRESS BOO...
+OAB Version 3a                          \NON_IPM_SUBTREE\OFFLINE ADDRESS BOO...
+OAB Version 4                           \NON_IPM_SUBTREE\OFFLINE ADDRESS BOO...
+EX:/o=Tui Ora Ltd/ou=Exchange Admini... \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK
+EX:/o=Tui Ora Ltd/ou=First Administr... \NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK
+OWAScratchPad{66822A2C-E55A-40CD-A61... \NON_IPM_SUBTREE
+OWAScratchPad{B1C909BE-0BE2-4394-B87... \NON_IPM_SUBTREE
+OWAScratchPad{F14911DB-8396-4EB6-ACE... \NON_IPM_SUBTREE
+SCHEDULE+ FREE BUSY                     \NON_IPM_SUBTREE
+EX:/o=Tui Ora Ltd/ou=Exchange Admini... \NON_IPM_SUBTREE\SCHEDULE+ FREE BUSY
+EX:/o=Tui Ora Ltd/ou=First Administr... \NON_IPM_SUBTREE\SCHEDULE+ FREE BUSY
+schema-root                             \NON_IPM_SUBTREE
+Default                                 \NON_IPM_SUBTREE\schema-root
+microsoft                               \NON_IPM_SUBTREE\schema-root
+exchangeV1                              \NON_IPM_SUBTREE\schema-root\microsoft
+StoreEvents{66822A2C-E55A-40CD-A614-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{66822A2...
+internal                                \NON_IPM_SUBTREE\StoreEvents{66822A2...
+StoreEvents{B1C909BE-0BE2-4394-B87D-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{B1C909B...
+internal                                \NON_IPM_SUBTREE\StoreEvents{B1C909B...
+StoreEvents{F14911DB-8396-4EB6-ACE2-... \NON_IPM_SUBTREE
+globalevents                            \NON_IPM_SUBTREE\StoreEvents{F14911D...
+internal                                \NON_IPM_SUBTREE\StoreEvents{F14911D...
+
+
+[PS] C:\Documents and Settings\peter>

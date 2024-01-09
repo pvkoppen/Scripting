@@ -1,0 +1,17 @@
+[PS] C:\>AddReplicaToPFRecursive -TopPublicFolder \NON_IPM_SUBTREE -ServerToAdd TOLMS01
+
+Set-PublicFolder : Modification of the '\NON_IPM_SUBTREE' folder is not allowed.
+At C:\Program Files\Microsoft\Exchange Server\Scripts\AddReplicaToPFRecursive.ps1:126 char:24
++         $_ | set-publicfolder  <<<< -server $_.OriginatingServer;
+
+Set-PublicFolder : Cannot save the object '\NON_IPM_SUBTREE\EFORMS REGISTRY'. Please make sure that you specified the correct Identity and that you have the necessary permissions to save it.
+At C:\Program Files\Microsoft\Exchange Server\Scripts\AddReplicaToPFRecursive.ps1:126 char:24
++         $_ | set-publicfolder  <<<< -server $_.OriginatingServer;
+
+Set-PublicFolder : Cannot save the object '\NON_IPM_SUBTREE\OFFLINE ADDRESS BOOK'. Please make sure that you specified the correct Identity and that you have the necessary permissions to save it.
+At C:\Program Files\Microsoft\Exchange Server\Scripts\AddReplicaToPFRecursive.ps1:126 char:24
++         $_ | set-publicfolder  <<<< -server $_.OriginatingServer;
+
+Set-PublicFolder : Cannot save the object '\NON_IPM_SUBTREE\SCHEDULE+ FREE BUSY'. Please make sure that you specified the correct Identity and that you have the necessary permissions to save it.
+At C:\Program Files\Microsoft\Exchange Server\Scripts\AddReplicaToPFRecursive.ps1:126 char:24
++         $_ | set-publicfolder  <<<< -server $_.OriginatingServer;

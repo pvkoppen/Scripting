@@ -1,0 +1,58 @@
+html {
+}
+
+body.campaign {
+  margin:0px;
+  padding:0px;
+}
+
+.constraints {
+  width:500px;
+  height:200px;
+  overflow:hidden;
+}
+
+.adboard {
+  width:480px;
+  height:180px;
+  padding:10px;
+  overflow:hidden;
+  background-color: #e2e5e8;
+/*  background-image: -moz-linear-gradient(top, #e7eaec, #ebecef);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e7eaec), to(#ebecef));
+  background-image: -webkit-linear-gradient(top, #e7eaec, #ebecef);
+  background-image: -o-linear-gradient(top, #e7eaec, #ebecef);
+  background-image: linear-gradient(top, #e7eaec, #ebecef);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e7eaec', endColorstr='#ebecef', GradientType=0);*/
+}
+
+
+
+.screenshot {
+  display:inline-block;
+  height:144px;
+  float:left;
+}
+
+.screenshot-img {
+  width:140px;
+  height:144px;
+  border:0;
+}
+
+.adboard-copy {
+  min-height:144px;
+  float:left;
+  display:inline-block;
+  padding-left:15px;
+  width:320px;
+}
+
+.clearfix {
+  clear:both;
+}
+
+.sui-bttn {
+  margin-right:10px;
+}

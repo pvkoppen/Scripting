@@ -1,0 +1,7 @@
+New-SelfSignedCertificate 
+-CertStoreLocation<String>
+-CloneCert<Certificate>
+-DnsName<String>
+
+New-SelfSignedCertificate -CertStoreLocation cert:\LocalMachine\My -DnsName Publishing.RUANUI.local,companyweb,RUANUISBS,RUANUISBS.RUANUI.local,localhost
+---------------------------------------------------------------------------------------

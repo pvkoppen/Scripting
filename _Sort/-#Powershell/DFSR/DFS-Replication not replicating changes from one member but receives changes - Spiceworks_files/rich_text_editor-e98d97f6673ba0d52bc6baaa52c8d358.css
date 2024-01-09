@@ -1,0 +1,49 @@
+/* Blockquotes for topics and the RichTextEditor */
+
+#topic blockquote, blockquote, #topic blockquote p {
+  font-size: 13px;
+  line-height: 18px;
+}
+#topic blockquote, blockquote {
+  color: #888;
+  background: #fff;
+  border: 1px solid #ccc;
+  clear: both;
+  margin: 0 0 10px;
+  padding: 5px 10px;
+  quotes: "" "";
+}
+blockquote:before {
+  content: open-quote;
+  font-weight: bold;
+}
+blockquote:after {
+  content: close-quote;
+  font-weight: bold;
+}
+
+/* Font styles, etc., for the rich text editors */
+
+body.rich_text_editor{
+  font:75% Arial, Sans-Serif; /* 12px */
+  color:#333;
+  padding:5px;
+  margin:0;
+  background:#fff;
+  color:#000;
+  line-height:1.33333em;
+}
+body.rich_text_editor p{
+  margin:0 0 0.8em 0;
+}
+body.rich_text_editor li{
+  margin:0 0 0.8em 0;
+}
+body.rich_text_editor a{
+  color:#2080AD;
+  text-decoration:none;
+  font-weight:normal;
+}
+body.rich_text_editor a:hover{
+  text-decoration:underline;
+}

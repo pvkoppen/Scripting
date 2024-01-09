@@ -1,0 +1,25 @@
+[PS] C:\Documents and Settings\admin-peter>get-history -count 1000 | format-list
+ Commandline
+
+
+CommandLine : . 'C:\Program Files\Microsoft\Exchange Server\bin\Exchange.ps1'
+
+CommandLine : Get-WebServicesVirtualDirectory
+
+CommandLine : Get-WebServicesVirtualDirectory |format-list
+
+CommandLine : Set-WebServicesVirtualDirectory -InternalURL "https://tolms01.tol
+              .local/EWS/Exchange.asmx" -ExternalURL "https://remote.tuiora.co.
+              nz/EWS/Exchange.asmx"
+
+CommandLine : Get-WebServicesVirtualDirectory | Set-WebServicesVirtualDirectory
+               -InternalURL "https://tolms01.tol.local/EWS/Exchange.asmx" -Exte
+              rnalURL "https://remote.tuiora.co.nz/EWS/Exchange.asmx"
+
+CommandLine : help history
+
+CommandLine : get-history -count 1000 | format-list
+
+
+
+[PS] C:\Documents and Settings\admin-peter>

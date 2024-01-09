@@ -1,0 +1,8 @@
+New-StorageGroup -name "Recovery Storage Group" -Recovery -server "TOLMS01"
+
+New-MailboxDatabase -name "Recovery Database" -mailboxdatabasetorecover "TOLMS01\First Storage Group\Mailbox BetterHomes (TOLMS01)" -Storagegroup "Recovery Storage Group" -edbfilepath "X:\Program Files\Microsoft\Exchange Server\Mailbox\Recovery Storage Group\Mailbox BetterHomes.edb"
+
+set-mailboxdatabase -identity "TOLMS01\First Storage Group\Mailbox BetterHomes (TOLMS01)" -AllowFileRestore 1
+
+Recovery Storage Group
+Recovery Database

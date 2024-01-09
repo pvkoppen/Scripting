@@ -1,0 +1,1725 @@
+/* New Community User Flow
+***********************************************************************************/
+/* line 7, ../../app/assets/stylesheets/join.css.scss.erb */
+html.new_user_signup,
+body.new_user_signup {
+  background: #fff;
+}
+
+/* line 10, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup #container {
+  width: 100%;
+  padding: 0;
+}
+
+/* line 14, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup #header {
+  height: 40px;
+  margin: 0 0 20px;
+  padding: 10px 0 0 30px;
+}
+
+/* line 19, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup #content_wrapper {
+  width: 715px;
+  margin: 0 auto;
+}
+
+/* line 23, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.section_wrap h2.box_header {
+  font-size: 1.6em;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 30px;
+  width: 637px;
+}
+
+/* line 30, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.section_wrap div.content {
+  padding: 15px 30px;
+  width: 637px;
+}
+
+/* line 34, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup p {
+  padding: 0 0 1em;
+}
+
+/* line 38, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.register_facebook,
+body.new_user_signup div.register_linkedin {
+  padding: 0 0 0 30px;
+  line-height: 24px;
+  float: right;
+}
+
+/* line 44, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.register_facebook p,
+body.new_user_signup div.register_linkedin p {
+  padding: 0;
+}
+
+/* line 47, ../../app/assets/stylesheets/join.css.scss.erb */
+div.register_facebook p {
+  background: url(//static.spiceworks.com/assets/community/icons/social/facebook_24px-0a6ab22ae71c8686d231f3f6a21d9638.png) left center no-repeat;
+}
+
+/* line 50, ../../app/assets/stylesheets/join.css.scss.erb */
+div.register_linkedin p {
+  background: url(//static.spiceworks.com/assets/community/icons/social/linkedin_24px-e2c65eceb0eaf8b258821d06e70738ea.png) left center no-repeat;
+}
+
+/* line 53, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.register_community_info p {
+  padding: 0;
+}
+
+/* line 56, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup h3 {
+  font-size: 16px;
+}
+
+/* Forms
+***********************************************************************************/
+/* line 62, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup form#register_form {
+  padding-left: 20px;
+}
+
+/* line 66, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup form#register_form p,
+body.new_user_signup form p {
+  overflow: hidden;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+/* line 72, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup form p textarea,
+body.new_user_signup form p input.text {
+  width: 300px;
+}
+
+/* line 75, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup form.account_setup p select {
+  width: 306px;
+}
+
+/* line 78, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup form span.label_text {
+  padding: 0 0 0 5px;
+}
+
+/* line 81, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup form p.it_info_step {
+  padding-bottom: 20px;
+}
+
+/* line 85, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup p.checkbox_option,
+body.new_user_signup p.btn {
+  padding-left: 10em;
+}
+
+/* line 88, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup p.checkbox_option label {
+  float: none;
+  width: auto;
+  display: inline;
+  position: relative;
+  bottom: 2px;
+  left: 3px;
+}
+
+/* line 96, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup p.checkbox_option span.excerpt {
+  display: block;
+  color: #888;
+  padding-left: 20px;
+}
+
+/* line 103, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.register_facebook a,
+body.new_user_signup ul.suggested_sites li a,
+body.new_user_signup p a {
+  color: #2080ad;
+  font-weight: normal;
+}
+
+/* line 107, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup form em.highlight {
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+
+/* line 112, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup form.simple label {
+  width: 10em;
+}
+
+/* line 116, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup form.account_setup input.text,
+body.new_user_signup form.account_setup select {
+  float: left;
+}
+
+/* line 119, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup form.account_setup span.error {
+  float: left;
+  padding-left: 10px;
+  height: 20px;
+}
+
+/* line 124, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup form#register_form p.btn {
+  float: left;
+}
+
+/* line 127, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup form#register_form p.back_link {
+  float: right;
+}
+
+/* line 130, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup form.account_setup p.btn {
+  float: left;
+  padding-top: 10px;
+}
+
+/* line 134, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup p.steps {
+  font-size: 0.9em;
+  color: #888;
+  float: right;
+  padding-top: 10px;
+}
+
+/* line 140, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup p.select_options {
+  text-align: right;
+  font-size: 0.9em;
+}
+
+/* line 144, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup p.select_options a {
+  color: #888;
+}
+
+/* line 148, ../../app/assets/stylesheets/join.css.scss.erb */
+form#verification_form.form-horizontal .control-group {
+  padding-top: 10px;
+}
+/* line 151, ../../app/assets/stylesheets/join.css.scss.erb */
+form#verification_form .error {
+  color: #933;
+}
+/* line 154, ../../app/assets/stylesheets/join.css.scss.erb */
+form#verification_form .controls {
+  margin-left: 120px;
+}
+/* line 158, ../../app/assets/stylesheets/join.css.scss.erb */
+form#verification_form .recaptcha_fields input.text {
+  margin-left: 20px;
+}
+/* line 161, ../../app/assets/stylesheets/join.css.scss.erb */
+form#verification_form .recaptcha_fields .error {
+  text-align: right;
+}
+/* line 165, ../../app/assets/stylesheets/join.css.scss.erb */
+form#verification_form .recaptcha_only_if_image, form#verification_form .recaptcha_only_if_audio, form#verification_form label {
+  width: 100px;
+}
+/* line 168, ../../app/assets/stylesheets/join.css.scss.erb */
+form#verification_form .recaptcha_only_if_image, form#verification_form .recaptcha_only_if_audio {
+  color: gray;
+  float: left;
+  text-align: right;
+}
+
+/* Form errors
+***********************************************************************************/
+/* line 177, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request form.errors_below span.error {
+  padding-left: 122px;
+}
+
+/* line 180, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request form.errors_below p.checkbox_option span.error {
+  padding-left: 0;
+}
+
+/* line 183, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup span.error {
+  padding-left: 10px;
+}
+
+/* line 188, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup p.terms_check span.error,
+body.new_user_signup form#verification_form span.error,
+body.new_user_signup form p.it_info_step span.error {
+  padding: 0;
+  display: block;
+}
+
+/* Captcha
+***********************************************************************************/
+/* line 195, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.recaptcha_fields span {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+/* line 199, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.recaptcha_fields input {
+  width: 150px;
+}
+
+/* line 202, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request form div.recaptcha_fields input.text {
+  width: 200px;
+}
+
+/* line 205, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request form div.recaptcha_fields span {
+  font-weight: bold;
+  float: left;
+  width: 110px;
+}
+
+/* Groups and Digest Page
+***********************************************************************************/
+/* line 213, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup #join_groups {
+  border: 1px solid #cccccc;
+  padding: 5px 10px;
+  overflow: hidden;
+}
+
+/* line 219, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .spicecorps_wrapper ul.groups li,
+body.new_user_signup #join_groups ul.groups li {
+  display: block;
+  width: 130px;
+  padding: 0;
+  margin: 10px;
+  float: left;
+}
+
+/* line 227, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .spicecorps_wrapper ul.groups li label,
+body.new_user_signup #join_groups ul.groups li label {
+  display: block;
+  min-height: 20px;
+  padding-left: 23px;
+  margin-left: 20px;
+  background: transparent none left top no-repeat;
+  width: 110px;
+  line-height: 1em;
+  height: 2em;
+  overflow: visible;
+  /* see hacks.ie7.css */
+}
+
+/* line 240, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .spicecorps_wrapper ul.groups li input.checkbox,
+body.new_user_signup #join_groups ul.groups li input.checkbox {
+  float: left;
+  height: 16px;
+  width: 16px;
+  padding: 2px;
+  /* see hacks.ie7.css */
+}
+
+/* line 247, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup #digest span {
+  padding-right: 20px;
+}
+
+/* line 250, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup #digest span label {
+  position: relative;
+  left: 2px;
+  bottom: 1px;
+}
+
+/* line 255, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup#digest em.highlight {
+  color: #888;
+}
+
+/* line 258, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div#digest {
+  margin-bottom: 15px;
+}
+
+/* line 262, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.dark_hover_wrap,
+body.sui-opt-in div.dark_hover_wrap {
+  width: 200px;
+}
+
+/* line 266, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.dark_hover_wrap p,
+body.sui-opt-in div.dark_hover_wrap p {
+  padding: 2px 0;
+  font-size: 10px;
+  margin-bottom: 0;
+}
+
+/* Page Request
+***********************************************************************************/
+/* line 275, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request form p.name_step label,
+body.new_user_signup div.page_request form label {
+  width: 120px;
+}
+
+/* line 278, ../../app/assets/stylesheets/join.css.scss.erb */
+.page_request form p input#page_request_page_name {
+  width: 175px;
+}
+
+/* line 282, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request form input.text,
+body.new_user_signup div.page_request form textarea {
+  width: 330px;
+}
+
+/* line 285, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request form p.name_step input.text {
+  width: 155px;
+}
+
+/* line 288, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request em.highlight {
+  position: relative;
+  top: 20px;
+  margin-right: 10px;
+}
+
+/* line 294, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request form div#recaptcha_widget,
+body.new_user_signup div.page_request form p {
+  padding-left: 30px;
+}
+
+/* line 297, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request form h3 {
+  font-size: 1.2em;
+  margin: 1.5em 0 0.5em;
+}
+
+/* line 301, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request form h3.about_first {
+  margin-top: 0;
+}
+
+/* line 304, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request_thanks h3 {
+  font-size: 1.4em;
+  margin: 0 0 0.5em;
+}
+
+/* line 308, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request form p.checkbox_option label {
+  font-weight: normal;
+}
+
+/* line 311, ../../app/assets/stylesheets/join.css.scss.erb */
+div.page_request form span.name_status {
+  font-weight: bold;
+  color: #933;
+  height: 20px;
+  padding-left: 5px;
+}
+
+/* line 318, ../../app/assets/stylesheets/join.css.scss.erb */
+div.page_request form span.page_name_field,
+div.page_request form span.name_status {
+  float: left;
+}
+
+/* line 321, ../../app/assets/stylesheets/join.css.scss.erb */
+div.page_request p.page_name span.error {
+  clear: both;
+}
+
+/* line 324, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.page_request form p.btn {
+  text-align: right;
+  padding: 0;
+}
+
+/* line 328, ../../app/assets/stylesheets/join.css.scss.erb */
+div.page_request_thanks div.section_wrap p {
+  line-height: 1.5;
+}
+
+/* line 331, ../../app/assets/stylesheets/join.css.scss.erb */
+div.page_request_thanks div.section_wrap p.ending_note {
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+/* line 335, ../../app/assets/stylesheets/join.css.scss.erb */
+div.page_request_thanks div.section_wrap h4 {
+  font-size: 1em;
+}
+
+/* line 338, ../../app/assets/stylesheets/join.css.scss.erb */
+div.page_request_thanks div.section_wrap ol {
+  margin: 0.5em 0;
+}
+
+/* line 341, ../../app/assets/stylesheets/join.css.scss.erb */
+div.page_request_thanks div.section_wrap ol li {
+  list-style-type: decimal;
+  margin-left: 25px;
+  padding: 2px 0;
+}
+
+/* Vendor Page
+***********************************************************************************/
+/* line 349, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.vendor_page p.steps {
+  padding-top: 20px;
+}
+
+/* line 352, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.vendor_page form p.btn {
+  padding: 20px 30px 0 0;
+  float: left;
+}
+
+/* line 356, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.vendor_page form p.btn input.image_button {
+  position: static!important;
+}
+
+/* line 359, ../../app/assets/stylesheets/join.css.scss.erb */
+body.new_user_signup div.vendor_page form p.btn a {
+  color: #888;
+  font-size: 0.9em;
+  position: relative;
+  top: 3px;
+  left: 5px;
+}
+
+/* Public Oauth
+***********************************************************************************/
+/* line 369, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth {
+  background-color: #F2F2F3;
+}
+
+/* line 371, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth p {
+  margin-bottom: 0;
+}
+
+/* uses .new_user_signup for padding so ignore sui-opt-in's margin (for now) */
+/* line 373, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .fullpage-modal .modal {
+  top: 0;
+  width: 550px;
+}
+
+/* line 374, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .fullpage-modal .modal.authorize-placard {
+  width: 700px;
+}
+
+/* line 375, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .fullpage-modal .modal-body {
+  min-height: 160px;
+  overflow: hidden;
+}
+
+/* line 376, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .fullpage-modal .social-register {
+  display: none;
+}
+
+/* line 377, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .fullpage-modal .or-divider {
+  display: none;
+}
+
+/* line 378, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .fullpage-modal .modal .modal-footer {
+  display: none;
+}
+
+/* line 380, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .public-oauth-login .message-panel {
+  margin-left: 82px;
+  width: 520px;
+}
+
+/* Match width/placemengt to login modal */
+/* line 382, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .oauth_info {
+  float: left;
+  width: 400px;
+  padding-right: 10px;
+  border-right: 1px solid #e8e8e8;
+}
+
+/* line 389, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .oauth_info .form-actions {
+  margin-top: 15px;
+}
+
+/* line 390, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .oauth_info .form-actions > * {
+  margin-left: 5px;
+}
+
+/* line 392, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .oauth_info {
+  padding-top: 1em;
+}
+
+/* line 393, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .oauth_info p.deny strong {
+  color: #970000;
+}
+
+/* line 394, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .oauth_info p.allow strong {
+  color: #0e9700;
+}
+
+/* line 395, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .oauth_info ul {
+  margin: 0.5em 0 1em;
+}
+
+/* line 396, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .oauth_info ul li {
+  margin: 2px 0 0 30px;
+  list-style-type: disc;
+}
+
+/* line 399, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .user_info,
+body.public_oauth .app_info {
+  float: right;
+  width: 230px;
+}
+
+/* line 400, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .user_info {
+  padding-bottom: 2em;
+}
+
+/* line 401, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .app_info img {
+  width: 40px;
+  height: 40px;
+}
+
+/* line 403, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .user_info img.avatar,
+body.public_oauth .app_info img {
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 405, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .user_info p,
+body.public_oauth .app_info p {
+  padding: 0 0 3px;
+}
+
+/* line 407, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .user_info p.title,
+body.public_oauth .app_info p.description {
+  color: #888;
+}
+
+/* line 409, ../../app/assets/stylesheets/join.css.scss.erb */
+body.public_oauth .user_info p.name,
+body.public_oauth .app_info p.title {
+  font-size: 1.2em;
+}
+
+/* line 411, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup {
+  max-height: 230px;
+}
+
+/* line 415, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup img.avatar {
+  width: 80px;
+  height: 80px;
+}
+
+/* Form needs to float and top margin is too much for our tiny window */
+/* line 421, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup form.form-horizontal {
+  margin-top: 5px;
+  float: left;
+  width: 550px;
+}
+
+/* line 427, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup form.form-horizontal .existing-account-msg {
+  height: 30px;
+  /* Need a big enough space to pad out the animation before the sui-alert-list "appears" */
+  margin-bottom: 20px;
+}
+
+/* line 432, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup form.form-horizontal .reset-password-msg {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+/* Override SUI label widths and control section margins to pull labels toward avatar */
+/* line 438, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup form.form-horizontal .control-group label.control-label {
+  width: 115px;
+}
+
+/* line 439, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup form.form-horizontal .control-group .controls {
+  margin-left: 135px;
+}
+
+/* line 440, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup form.form-horizontal .form-actions {
+  padding-left: 135px;
+}
+
+/* Push alert box to the right to lign up with control labels */
+/* line 443, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup form.form-horizontal .sui-alert-list {
+  margin-left: 25px;
+}
+
+/* line 450, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup .password-reset,
+#social-setup .facebook-login,
+#social-setup .app-password-reset,
+#social-setup .password-reset-confirmation {
+  float: left;
+  margin-left: 28px;
+  width: 490px;
+}
+
+/* line 455, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup .app-password-reset {
+  margin-left: 140px;
+  height: 55px;
+  /* Need a big enough space to pad out the animation before the sui-alert-list "appears" */
+}
+
+/* Fixups for the password reset partial */
+/* line 461, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup .password-reset label {
+  width: 5em;
+}
+
+/* line 462, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup .password-reset input.email {
+  width: 250px;
+}
+
+/* line 463, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup .password-reset .btn {
+  padding-left: 6em;
+}
+
+/* line 464, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup .password-reset .error {
+  padding-left: 6em;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+
+/* Override the SUI control margin to pull the "terms" checkbox up close to the email entry */
+/* line 467, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup form.form-horizontal .control-group.terms-control {
+  margin-top: -10px;
+}
+
+/* Override the SUI help-block margin to pull the "terms" error up to the checkbox */
+/* line 471, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup form.form-horizontal .control-group.terms-control .help-block.field-error {
+  margin-top: -10px;
+}
+
+/* Override SUI's standard for "form" to not push the tiny window's border down */
+/* line 476, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup form.form-horizontal {
+  margin-bottom: 0;
+}
+
+/* line 481, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup form.form-horizontal .control-group .help-block.field-error,
+#social-setup form.form-horizontal .control-group .help-block.generic-error {
+  display: none;
+}
+
+/* line 485, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup form.form-horizontal .control-group.error .help-block.field-error,
+#social-setup form.form-horizontal .control-group.error .help-block.generic-error {
+  display: block;
+}
+
+/* line 489, ../../app/assets/stylesheets/join.css.scss.erb */
+#social-setup form.form-horizontal .controls img.busy-indicator {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* line 495, ../../app/assets/stylesheets/join.css.scss.erb */
+#it_captcha {
+  padding-left: 10px;
+}
+
+/* line 496, ../../app/assets/stylesheets/join.css.scss.erb */
+#it_captcha .sui-alert-list {
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+/* line 497, ../../app/assets/stylesheets/join.css.scss.erb */
+#it_captcha h3 {
+  margin-left: 0;
+}
+
+/* line 498, ../../app/assets/stylesheets/join.css.scss.erb */
+#it_captcha img {
+  margin: 12px 5px 0 5px;
+}
+
+/* line 500, ../../app/assets/stylesheets/join.css.scss.erb */
+#verify-email p {
+  margin-right: 120px;
+  margin-bottom: 20px;
+}
+
+/* line 505, ../../app/assets/stylesheets/join.css.scss.erb */
+#verify-email img {
+  position: absolute;
+  right: 0px;
+  top: 48px;
+}
+
+/*******************************************/
+/*             Bundles                     */
+/*******************************************/
+/* line 514, ../../app/assets/stylesheets/join.css.scss.erb */
+ul.bundles {
+  overflow: hidden;
+  margin: 1em 0em 1em 0.1em;
+}
+
+/* line 518, ../../app/assets/stylesheets/join.css.scss.erb */
+#welcome ul.bundles {
+  margin: 0;
+  padding: 0.6em 0em 0.2em 0.1em;
+}
+
+/* line 522, ../../app/assets/stylesheets/join.css.scss.erb */
+ul.bundles li {
+  float: left;
+  width: 135px;
+  background: #f5f5f5;
+  border: 1px solid #dbdbdb;
+  margin: 0 10px 10px 0;
+  padding: 5px;
+  position: relative;
+  height: 50px;
+}
+
+/* line 532, ../../app/assets/stylesheets/join.css.scss.erb */
+#welcome ul.bundles li {
+  width: 122px;
+  margin: 0 9px 10px 0;
+}
+
+/* line 536, ../../app/assets/stylesheets/join.css.scss.erb */
+ul.bundles li.checked {
+  background: #ececec;
+}
+
+/* line 539, ../../app/assets/stylesheets/join.css.scss.erb */
+ul.bundles li img.avatar {
+  float: left;
+}
+
+/* line 542, ../../app/assets/stylesheets/join.css.scss.erb */
+#welcome ul.bundles li img.avatar {
+  width: 20px;
+  height: 20px;
+}
+
+/* line 546, ../../app/assets/stylesheets/join.css.scss.erb */
+ul.bundles li:hover {
+  cursor: pointer;
+}
+
+/* line 549, ../../app/assets/stylesheets/join.css.scss.erb */
+ul.bundles li div.checkbox {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+}
+
+/* line 555, ../../app/assets/stylesheets/join.css.scss.erb */
+#welcome ul.bundles li p,
+form.groups-setup ul.bundles li p {
+  padding: 1px 0;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* line 564, ../../app/assets/stylesheets/join.css.scss.erb */
+#welcome ul.bundles li .title,
+#welcome ul.bundles li .details,
+form.groups-setup ul.bundles li .title,
+form.groups-setup ul.bundles li .details {
+  padding-left: 40px;
+  overflow: visible;
+  margin: 0;
+}
+
+/* line 570, ../../app/assets/stylesheets/join.css.scss.erb */
+#welcome ul.bundles li .title,
+#welcome ul.bundles li .details {
+  padding-left: 25px;
+}
+
+/* line 573, ../../app/assets/stylesheets/join.css.scss.erb */
+ul.bundles li .title {
+  font-weight: bold;
+}
+
+/* line 577, ../../app/assets/stylesheets/join.css.scss.erb */
+#welcome ul.bundles li .details a,
+ul.bundles li p.details a {
+  font-size: 0.9em;
+  color: #888;
+  font-weight: normal;
+}
+
+/*******************************************/
+/*         Account Setup Page              */
+/*******************************************/
+/* line 588, ../../app/assets/stylesheets/join.css.scss.erb */
+form.account-setup .modal {
+  margin-top: 65px;
+  width: 630px;
+}
+/* line 590, ../../app/assets/stylesheets/join.css.scss.erb */
+form.account-setup fieldset {
+  padding: 20px 0;
+}
+/* line 592, ../../app/assets/stylesheets/join.css.scss.erb */
+form.account-setup select {
+  width: 254px;
+}
+/* line 593, ../../app/assets/stylesheets/join.css.scss.erb */
+form.account-setup input[type="text"], form.account-setup input[type="password"] {
+  width: 240px;
+}
+/* line 594, ../../app/assets/stylesheets/join.css.scss.erb */
+form.account-setup .fullname input[type="text"] {
+  width: 112px;
+}
+/* line 596, ../../app/assets/stylesheets/join.css.scss.erb */
+form.account-setup label.sublabel {
+  color: #B3B3B3;
+}
+/* line 598, ../../app/assets/stylesheets/join.css.scss.erb */
+form.account-setup .control-group.get-deals {
+  margin-bottom: 5px;
+}
+/* line 600, ../../app/assets/stylesheets/join.css.scss.erb */
+form.account-setup .required {
+  color: #C3932B;
+  /* this is $warningText but this file is not sass yet */
+}
+/* line 602, ../../app/assets/stylesheets/join.css.scss.erb */
+form.account-setup .modal-body .footer-actions .steps {
+  margin-right: 10px;
+  line-height: 25px;
+}
+
+/* SUI patch, remove when #33536 is fixed */
+/* line 606, ../../app/assets/stylesheets/join.css.scss.erb */
+form.account-setup .footer-actions button.disabled {
+  color: #77b2e0 !important;
+}
+
+/* line 608, ../../app/assets/stylesheets/join.css.scss.erb */
+.ie7 form.account-setup .modal h3 {
+  float: none;
+}
+
+/* ie7 fix from SUI doesn't make sense here */
+/*******************************************/
+/*           Group Setup Page              */
+/*******************************************/
+/* line 614, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .modal {
+  top: 65px;
+  width: 700px;
+}
+
+/* line 615, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .social-site-welcome {
+  overflow: hidden;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 5px 0 15px;
+  margin-bottom: 15px;
+}
+
+/* line 616, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .social-site-welcome > img {
+  float: left;
+}
+
+/* line 617, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .social-site-welcome > div {
+  float: left;
+  margin-left: 20px;
+}
+
+/* line 618, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .social-site-welcome > div p {
+  margin-bottom: 0;
+}
+
+/* line 619, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup ul.bundles {
+  margin-left: 10px;
+}
+
+/* line 620, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup ul.bundles li {
+  margin: 6px;
+}
+
+/* line 621, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup ul.bundles li p {
+  font-size: 12px;
+}
+
+/* line 622, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .digest-frequency {
+  padding-bottom: 40px;
+}
+
+/* line 623, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .digest-frequency p {
+  margin: 8px 0;
+}
+
+/* line 624, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .digest-frequency label {
+  display: inline;
+  margin-right: 8px;
+}
+
+/* line 625, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .modal-body .footer-actions .steps {
+  margin-right: 10px;
+  line-height: 25px;
+}
+
+/* SUI patch, remove when #33536 is fixed */
+/* line 627, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .footer-actions button.disabled {
+  color: #77b2e0 !important;
+}
+
+/* line 629, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .spicecorps_wrapper {
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+/* line 630, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .spicecorps_wrapper ul.groups li {
+  width: auto;
+  margin-left: 20px;
+}
+
+/* line 631, ../../app/assets/stylesheets/join.css.scss.erb */
+form.groups-setup .spicecorps_wrapper ul.groups li label {
+  width: auto;
+  line-height: 20px;
+}
+
+/* line 633, ../../app/assets/stylesheets/join.css.scss.erb */
+.ie7 form.groups-setup .modal h3 {
+  float: none;
+}
+
+/* ie7 fix from SUI doesn't make sense here */
+/***************************************************/
+/* Join box in sidebar of topics.                  */
+/***************************************************/
+/* line 639, ../../app/assets/stylesheets/join.css.scss.erb */
+body.topic #sidebar .join-login-box {
+  width: 270px;
+  padding: 20px 15px 10px;
+  margin-bottom: 20px;
+  background-color: whiteSmoke;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  text-align: center;
+}
+
+/* line 643, ../../app/assets/stylesheets/join.css.scss.erb */
+body.topic #sidebar h3 {
+  font-weight: bold;
+}
+
+/* line 644, ../../app/assets/stylesheets/join.css.scss.erb */
+body.topic #sidebar label {
+  color: gray;
+  font-size: 14px;
+}
+
+/* line 645, ../../app/assets/stylesheets/join.css.scss.erb */
+body.topic #sidebar h3, body.topic #sidebar h4 {
+  border: none;
+}
+
+/* #sidebar has underlines on h* tags */
+/* line 646, ../../app/assets/stylesheets/join.css.scss.erb */
+body.topic #sidebar h4 {
+  display: none;
+}
+
+/* line 648, ../../app/assets/stylesheets/join.css.scss.erb */
+body.topic #sidebar .social-register {
+  margin-top: 17px;
+  margin-bottom: 3px;
+}
+
+/***********************************************************************/
+/* Promotional join modal on topics                                    */
+/***********************************************************************/
+/* line 653, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal {
+  width: 909px;
+  height: 484px;
+  background: url(//static.spiceworks.com/assets/community/join/photo-modal-bg-fab3d6b8f483763b61f0908cf8d5cd10.png) no-repeat;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: none;
+}
+/* line 657, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal .modal-body {
+  width: 909px;
+  height: 327px;
+  padding: 30px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  color: white;
+}
+/* line 658, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal .modal-content {
+  width: 330px;
+  padding: 25px;
+  padding-left: 40px;
+  overflow: hidden;
+}
+/* line 659, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal h1 {
+  color: white;
+  margin-top: 40px;
+  font-size: 21px;
+}
+/* line 660, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal h2 {
+  color: white;
+  font-size: 14px;
+  margin-top: 20px;
+  line-height: 18px;
+}
+/* line 661, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal .close {
+  filter: alpha(opacity=100);
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  opacity: 1;
+}
+/* line 662, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal .close i {
+  background-image: url(//static.spiceworks.com/assets/community/join/white_close_icon-99f4e4e1893084af3f1f9875cf85dbc6.png);
+  background-position: 0 0;
+}
+/* line 663, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal .social-register {
+  margin-top: 28px;
+}
+/* line 665, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal .social-register h4 {
+  display: inline-block;
+  color: white;
+  top: -6px;
+  text-align: right;
+  float: left;
+  line-height: 24px;
+  margin-top: 0;
+  font-size: 13px;
+  width: 90px;
+  margin-right: 19px;
+}
+/* line 670, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal .social-register a {
+  margin-right: 5px;
+}
+/* line 671, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal .or-divider {
+  border-bottom: 1px solid #3d7284;
+  margin: 0 auto 20px;
+  width: 100%;
+}
+/* line 672, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal .or-divider div {
+  position: relative;
+  top: 10px;
+  left: 50%;
+  margin-left: -12px;
+  width: 25px;
+  background-color: #004d63;
+  text-align: center;
+}
+/* line 674, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal form {
+  float: left;
+  width: auto;
+  overflow: hidden;
+  margin-top: -10px;
+}
+/* line 677, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal form .control-group {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+/* line 678, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal form .control-group.email {
+  margin-top: 15px;
+}
+/* line 679, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal form .control-label {
+  float: none;
+  text-align: left;
+  width: auto;
+  margin-bottom: 0;
+  color: #999;
+}
+/* line 680, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal form .controls {
+  margin-left: 0;
+}
+/* line 681, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal form .controls input[type="email"] {
+  width: 178px;
+}
+/* line 682, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal form label.checkbox {
+  white-space: nowrap;
+  color: #ccc;
+}
+/* line 683, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal form .control-group.form-actions {
+  padding-left: 0;
+  display: block;
+}
+/* line 684, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal form .control-group.form-actions span {
+  font-size: 10px;
+  color: gray;
+  margin-left: 3px;
+  color: #999;
+}
+/* line 685, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal form button {
+  margin-left: 10px;
+  width: 125px;
+  height: 26px;
+}
+/* line 688, ../../app/assets/stylesheets/join.css.scss.erb */
+#photo-join-modal .modal-footer {
+  margin-left: 30px;
+  margin-right: 25px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding-left: 40px;
+}
+
+/* line 691, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal {
+  width: 900px;
+  height: 550px;
+  background-image: url(//static.spiceworks.com/assets/community/join/marketer-photo-modal-bg-b92aa5d0dee52db49da796df2b44f469.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-rendering: optimizelegibility;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: none;
+}
+/* line 699, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal .modal-body {
+  width: 900px;
+  height: 550px;
+  padding: 30px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  color: white;
+}
+/* line 700, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal .modal-content {
+  width: 380px;
+  padding: 25px;
+  overflow: hidden;
+}
+/* line 701, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal h1 {
+  color: white;
+  line-height: 25px;
+  white-space: nowrap;
+  font-family: Arial, sans-serif, "Open Sans";
+}
+/* line 702, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal p {
+  line-height: 24px;
+  font-size: 16px;
+}
+/* line 703, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal h4 {
+  display: inline-block;
+  color: white;
+  width: 82px;
+  margin-right: 12px;
+  float: left;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 5px;
+}
+/* line 705, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal .close {
+  filter: alpha(opacity=100);
+  position: absolute;
+  right: 45px;
+  top: 45px;
+  opacity: 1;
+}
+/* line 706, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal .close i {
+  background-image: url(//static.spiceworks.com/assets/community/join/white_close_icon-99f4e4e1893084af3f1f9875cf85dbc6.png);
+  background-position: 0 0;
+}
+/* line 708, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form {
+  float: left;
+  overflow: hidden;
+  margin-top: -10px;
+  text-rendering: optimizelegibility;
+}
+/* line 712, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form .control-group {
+  display: inline-block;
+  margin-bottom: 5px;
+  position: relative;
+}
+/* line 713, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form .control-label {
+  float: none;
+  text-align: left;
+  width: auto;
+  margin-bottom: 0;
+  color: #a7a7a7;
+}
+/* line 714, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form .controls {
+  margin-left: 0;
+}
+/* line 715, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form .controls input[type="text"] {
+  width: 281px;
+  margin-right: 15px;
+}
+/* line 716, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form .controls input[type="email"] {
+  width: 281px;
+  margin-right: 15px;
+}
+/* line 717, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form .controls input[class="company text"] {
+  width: 281px;
+}
+/* line 718, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form .control-group div select {
+  width: 293px;
+  margin-right: 15px;
+}
+/* line 719, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form .control-group.form-actions {
+  padding-left: 0;
+  display: block;
+  font-size: 11px;
+  margin-top: 5px;
+  color: #a7a7a7;
+}
+/* line 720, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form .control-group.form-actions button {
+  margin-right: 10px;
+}
+/* line 723, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form .control-group.error .control-label {
+  color: #ba3b2f;
+  font-weight: bold;
+}
+/* line 724, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form .control-group.error .controls * {
+  color: #ba3b2f;
+}
+/* line 725, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form .control-group.error .controls input, #marketer-photo-join-modal form .control-group.error select {
+  background: white;
+}
+/* line 726, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal form .control-group.error .controls span[class="help-inline"] {
+  font-size: 13px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+/* line 736, ../../app/assets/stylesheets/join.css.scss.erb */
+#marketer-photo-join-modal .login-toggle {
+  position: absolute;
+  left: 55px;
+  bottom: 41px;
+  color: #a7a7a7;
+  font-size: 15px;
+  text-rendering: optimizelegibility;
+}
+
+/**************************************************/
+/*  Main Join Box                                 */
+/**************************************************/
+/* line 742, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.modal {
+  width: 350px;
+}
+
+/* line 744, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.join-mode .join-header {
+  display: block;
+}
+
+/* line 745, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.join-mode .register-form {
+  display: block;
+}
+
+/* line 746, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.join-mode .sign-up-header {
+  display: block;
+}
+
+/* line 747, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.join-mode .login-header {
+  display: none;
+}
+
+/* line 748, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.join-mode .login-form {
+  display: none;
+}
+
+/* line 749, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.join-mode .join-toggle {
+  display: none;
+}
+
+/* line 750, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.join-mode .login-toggle {
+  display: block;
+}
+
+/* line 752, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode .join-header {
+  display: none;
+}
+
+/* line 753, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode .register-form {
+  display: none;
+}
+
+/* line 754, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode .sign-up-header {
+  display: none;
+}
+
+/* line 755, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode .login-header {
+  display: block;
+}
+
+/* line 756, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode .login-form {
+  display: block;
+}
+
+/* line 757, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode .join-toggle {
+  display: block;
+}
+
+/* line 758, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode .login-toggle {
+  display: none;
+}
+
+/* line 760, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode.password-reset-mode .login-header span {
+  display: none;
+}
+
+/* line 761, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode.password-reset-mode .login-header span.password-reset-header {
+  display: block;
+}
+
+/* line 762, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode.password-reset-mode .login-form .form-actions button {
+  display: none;
+}
+
+/* Really just want to hide 'Log In' button */
+/* line 763, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode.password-reset-mode .login-form .form-actions .password-reset-submit {
+  display: inline-block;
+}
+
+/* line 764, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode.password-reset-mode .login-form .form-actions .password-reset-cancel {
+  display: inline-block;
+}
+
+/* line 765, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode.password-reset-mode .password-reset-link {
+  display: none;
+}
+
+/* line 766, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.login-mode.password-reset-mode .desktop-password-reset {
+  display: block;
+}
+
+/* line 768, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box .join-body {
+  text-align: center;
+  min-height: 280px;
+}
+
+/* line 769, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.password-reset-mode .join-body {
+  min-height: 0;
+}
+
+/* line 771, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box .join-body .message {
+  text-align: left;
+}
+
+/* line 773, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box .social-register > h4 {
+  margin-bottom: 16px;
+}
+
+/* line 774, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box .social-register a {
+  margin: 0 2px;
+}
+
+/* line 776, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box .or-divider {
+  border-bottom: 1px solid lightgrey;
+  margin: 0 auto 20px;
+  width: 94%;
+}
+
+/* line 777, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box .or-divider > div {
+  position: relative;
+  top: 10px;
+  left: 50%;
+  margin-left: -12px;
+  width: 25px;
+  background-color: white;
+}
+
+/* line 779, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box form {
+  margin-top: 15px;
+  text-align: left;
+}
+
+/* line 781, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box .form-horizontal .control-group {
+  margin-bottom: 13px;
+}
+
+/* line 782, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box .form-horizontal .control-group > label {
+  width: 70px;
+}
+
+/* line 783, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box .form-horizontal .controls {
+  margin-left: 80px;
+}
+
+/* line 784, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box .form-horizontal .form-actions {
+  padding-left: 80px;
+}
+
+/* line 788, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box .form-horizontal .controls input[type="text"],
+.join-login-box .form-horizontal .controls input[type="email"],
+.join-login-box .form-horizontal .controls input[type="password"] {
+  width: 220px;
+}
+
+/* line 789, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box .form-horizontal .controls label.checkbox {
+  width: 210px;
+}
+
+/* line 791, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box .login-form .desktop-password-reset {
+  margin-top: 10px;
+  margin-left: -80px;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* line 793, ../../app/assets/stylesheets/join.css.scss.erb */
+.fullpage-modal {
+  margin-top: 65px;
+}
+
+/* line 794, ../../app/assets/stylesheets/join.css.scss.erb */
+.fullpage-modal .modal {
+  display: block;
+  z-index: 1;
+}
+
+/* line 795, ../../app/assets/stylesheets/join.css.scss.erb */
+.fullpage-modal .modal .modal-header .close {
+  display: none;
+}
+
+/* line 797, ../../app/assets/stylesheets/join.css.scss.erb */
+.ie7 .fullpage-modal .modal h3 {
+  float: none;
+}
+
+/* line 799, ../../app/assets/stylesheets/join.css.scss.erb */
+#share_a_link.fullpage-modal {
+  margin-top: 15px;
+}
+
+/* line 800, ../../app/assets/stylesheets/join.css.scss.erb */
+#share_a_link.fullpage-modal .modal-body {
+  min-height: 230px;
+}
+
+/* line 801, ../../app/assets/stylesheets/join.css.scss.erb */
+#share_a_link.fullpage-modal .social-register {
+  display: none;
+}
+
+/* line 802, ../../app/assets/stylesheets/join.css.scss.erb */
+#share_a_link.fullpage-modal .or-divider {
+  display: none;
+}
+
+/* line 804, ../../app/assets/stylesheets/join.css.scss.erb */
+.bare-join-form {
+  background-color: white;
+  height: 100%;
+}
+
+/* line 805, ../../app/assets/stylesheets/join.css.scss.erb */
+.bare-join-form .join-login-box {
+  padding: 15px;
+}
+
+/*********************************************************************/
+/*  Mobile Rules                                                     */
+/*********************************************************************/
+/* line 810, ../../app/assets/stylesheets/join.css.scss.erb */
+body.mobile_version .fullpage-modal {
+  margin-top: 0;
+}
+
+/* line 811, ../../app/assets/stylesheets/join.css.scss.erb */
+body.mobile_version .fullpage-modal .modal {
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+  border-radius: 0;
+  width: 320px;
+  margin-left: -5px;
+  /* .mobile_version .container has a 5px padding */
+}
+
+/* line 819, ../../app/assets/stylesheets/join.css.scss.erb */
+body.mobile_version .fullpage-modal .modal .modal-header {
+  border-radius: 0;
+}
+
+/* line 820, ../../app/assets/stylesheets/join.css.scss.erb */
+body.mobile_version .fullpage-modal .modal .modal-footer {
+  border-radius: 0;
+}
+
+/* line 824, ../../app/assets/stylesheets/join.css.scss.erb */
+body.mobile_version .fullpage-modal .modal input[type="text"],
+body.mobile_version .fullpage-modal .modal input[type="email"],
+body.mobile_version .fullpage-modal .modal input[type="password"] {
+  width: 200px;
+}
+
+/***************************************************/
+/* For the Marketer version of the join dialog     */
+/***************************************************/
+/* line 830, ../../app/assets/stylesheets/join.css.scss.erb */
+.join-login-box.marketer-join .join-body .social-register,
+.join-login-box.marketer-join .join-body .or-divider {
+  display: none;
+}

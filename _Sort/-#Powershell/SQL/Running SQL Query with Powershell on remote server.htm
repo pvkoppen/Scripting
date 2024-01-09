@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<!-- saved from url=(0151)http://social.technet.microsoft.com/Forums/windowsserver/en-US/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" class=" js no-flexbox flexbox-legacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./Running SQL Query with Powershell on remote server_files/b08e4b45aab4762c66ee00bf054f7f1a-2d9a40bd737e3f9b71fbd6afe22b769f-RequestReducedStyle.css" rel="Stylesheet" type="text/css"><meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    
+        <link rel="shortcut icon" href="http://i4.social.s-msft.com/Forums/GlobalResources/images/Technet/favicon.ico" type="image/x-icon"> 
+    <meta name="CommunityInfo" content=" B=Technet;A=Forums;L=en-US;">
+    <script type="text/javascript" async="" src="./Running SQL Query with Powershell on remote server_files/ms2.js"></script><script src="./Running SQL Query with Powershell on remote server_files/jquery-1.7.1.min.js" type="text/javascript" language="javascript"></script>
+    <script src="./Running SQL Query with Powershell on remote server_files/639c98f293cddc68fad3f7399d532455-6584225de39c1527dd5dd7bce11792ab-RequestReducedScript.js" type="text/javascript"></script>    
+    <title>
+    Running SQL Query with Powershell on remote server
+</title>
+	
+        <!--[if IE 6]>
+    <link type="text/css" rel="Stylesheet" href="http://i3.social.s-msft.com/Forums/resources/styles/IE6Core.css?cver=0%0d%0a" />
+    <![endif]-->
+        <script type="text/javascript">
+    //<![CDATA[
+        var fms_site_culture = 'en-US'; var fms_site_lcid = '1033';
+    //]]>
+     </script>
+    
+    
+    <script src="./Running SQL Query with Powershell on remote server_files/resources.js" type="text/javascript" language="javascript"></script>
+    
+    
+<script type="text/javascript" src="./Running SQL Query with Powershell on remote server_files/prettify.js"></script>
+<script type="text/javascript" src="./Running SQL Query with Powershell on remote server_files/lang-ml.js"></script>
+<script type="text/javascript" src="./Running SQL Query with Powershell on remote server_files/lang-vb.js"></script>
+<script type="text/javascript" src="./Running SQL Query with Powershell on remote server_files/lang-sql.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        prettyPrint();
+    });
+</script>
+    <link rel="alternate" type="application/rss+xml" title="Running SQL Query with Powershell on remote server" href="http://social.technet.microsoft.com/Forums/en-US/winserverpowershell/thread/e580a1e1-f116-4fc5-9344-bebf4489dc75?outputAs=rss">
+
+        <meta name="Search.MSForums.Iroot" content="windowsserver">
+        <meta name="Search.MSForums.CategoryID" content="19b487c4-b7a6-4b9c-80e9-3dd64e753638">
+        <meta name="Search.MSForums.CategoryName" content="windowsserver">
+    
+            <link rel="canonical" href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/e580a1e1-f116-4fc5-9344-bebf4489dc75/action?threadDisplayName=running-sql-query-with-powershell-on-remote-server&forum=winserverpowershell">
+    
+
+<!--
+Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx.
+-->
+<script type="text/javascript" src="./Running SQL Query with Powershell on remote server_files/jquery.tmpl.min.js"></script><link href="./Running SQL Query with Powershell on remote server_files/usercard.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="./Running SQL Query with Powershell on remote server_files/widgets.js"></script></head>
+<body class="Chrome en-us Forums " dir="ltr">
+    
+    <div id="BodyBackground" class="ltr">
+        <div id="JelloSizer">    
+            <div id="JelloExpander">
+                <div id="JelloWrapper">
+                    <div class="Clear"> </div>
+                    
+                   
+                    
+                        <div class="Masthead">
+                            <div id="BrandLogo" class="BrandLogo"><a class="BrandLogoLink" href="http://technet.microsoft.com/en-us/windowsserver/bb250589.aspx"><span id="BrandDisplayText">Windows Server TechCenter</span></a></div>
+                                 
+                        <div class="Search">
+                            <div id="SearchBox" class="SearchBox"><input name="SearchTextBox" type="text" id="SearchTextBox" class="TextBoxSearch TextBoxSearchIE7" autocomplete="off" title="Search Windows Server with Bing" style="color: rgb(170, 170, 170); font-style: italic;"><input type="image" name="SearchButton" id="SearchButton" class="SearchButton" src="./Running SQL Query with Powershell on remote server_files/trans.gif" title="Search Windows Server with Bing"><span class="Bing">&nbsp;</span><div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: &#39;Segoe UI&#39;, &#39;Lucida Grande&#39;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px;"><div id="SuggestionContainer"><ul style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></div>
+                        </div>
+
+                        <div class="GlobalBar">                       
+                            <div class="PassportScarab">
+                            <a id="idPPScarab" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.technet.microsoft.com&wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fstoAI%3d10&wp=MBI_FED_SSL&wlcxt=Technet%24Technet%24Technet">Sign in</a>
+                            </div> 
+                                
+                            <div id="LocaleFlyout" class="LocaleFlyout">
+                                <div id="LocaleSelector">
+                    <div id="TargetPanel">
+                        <a>United States (English)</a><span class="DropDownArrow">&nbsp;</span>
+                    </div>
+                    <div id="PopupPanel" class="ContextMenuPanel">
+                        <a href="http://social.technet.microsoft.com/Forums/windowsserver/pt-BR/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">Brasil (Português)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/cs-CZ/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">Česká&nbsp;republika (Čeština)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/de-DE/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">Deutschland (Deutsch)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/es-ES/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">España (Español)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/fr-FR/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">France (Français)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/id-ID/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">Indonesia (Bahasa)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/it-IT/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">Italia (Italiano)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/ro-RO/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">România (Română)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/tr-TR/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">Türkiye (Türkçe)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/ru-RU/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">Россия (Русский)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/he-IL/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">ישראל (עברית)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/ar-SA/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">المملكة العربية السعودية (العربية)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/th-TH/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">ไทย (ไทย)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/ko-KR/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">대한민국 (한국어)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/zh-CN/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">中华人民共和国 (中文)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/zh-TW/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">台灣 (中文)</a><a href="http://social.technet.microsoft.com/Forums/windowsserver/ja-JP/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?Thread%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.Data.Models.Discussion&ThreadViewModel%3Ae580a1e1-f116-4fc5-9344-bebf4489dc75=Microsoft.Forums.CachedViewModels.ThreadPageViewModel" class="ContextMenuItem" rel="nofollow">日本 (日本語)</a>
+                    </div>
+                 </div>
+                            </div>
+                            
+                            <div class="Clear"> </div>
+
+                            
+                            <div class="UserName" id="UserName"><a id="ctl02_UserNameLink"></a></div>
+                             
+
+                        </div>
+                    
+                        <div class="Clear"> </div>
+
+                        <div id="NetworkTagLineArea" class="NetworkLogo">
+                            <a id="NetworkLink" href="http://technet.microsoft.com/en-US">
+                                &nbsp;
+                            </a>
+                        </div>
+
+                        <div class="leftcap" xmlns:msxsl="urn:schemas-microsoft-com:xslt">&nbsp;</div><div class="internav" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><a href="http://technet.microsoft.com/en-us/windowsserver/bb250589.aspx">Home</a><a href="http://technet.microsoft.com/en-us/windowsserver/hh534429.aspx">Windows Server 2012</a><a href="http://technet.microsoft.com/en-us/windowsserver/bb310558.aspx">Windows Server 2008 R2</a><a href="http://technet.microsoft.com/en-us/windowsserver/bb512919.aspx">Windows Server 2003</a><a href="http://technet.microsoft.com/en-us/library/bb625087.aspx">Library</a><a class="
+          active
+        " href="http://social.technet.microsoft.com/Forums/en-US/category/windowsserver">Forums</a></div>
+                        </div>
+                         
+                    
+                    
+                    <div class="Clear"> </div>
+                          
+                    <div class="topleftcorner"></div>           
+                    <div class="toprightcorner"></div>                                
+                    <div class="alley"> <!-- Left Side -->
+                        <div class="wrapper"> <!-- Right Side -->
+                            <div class="inner">  
+                            
+                                                 
+                                <div class="Clear"></div>   
+
+
+                                
+                                
+                                
+                                
+                                <div id="MainContent" class="Technet">
+                                    
+    
+
+    <div id="contentWrapper" class="contentWrapperFull">
+        <div id="content" class="contentFull">
+            <div id="forumsMessage"></div>
+            
+    <input type="hidden" name="IsTrusted" id="trustedU" value="False">
+<input type="hidden" name="IsTrustedCheckEnabled" id="isTrustedCheckEnabled" value="True">
+<input type="hidden" name="isSpamCheckEnabled" id="isSpamCheckEnabled" value="True">
+    <form id="__AjaxAntiForgeryForm" action="http://social.technet.microsoft.com/Forums/windowsserver/en-US/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server/#" method="post"><input name="__RequestVerificationToken" type="hidden" value="sZG6DZ_ldUDAuIBRA8PG67jMp3lApSJ_bzla1SgFdEiszy0FCahMCGdVWnNI6bXG--uESj4GNiQ_eB49VFD-XT0JTeOuiqIy8bSl4w2OO-aelvc_vwix3SuT30X0GZo3qjEfdw2"></form>
+    
+     <div id="msdn-technet-en-thread">
+          <div id="topbar">
+    <div id="quickActions">
+        <div class="section">
+    <div id="askaquestion">
+        <a data-askurlbase="http://social.technet.microsoft.com/Forums/windowsserver/en-US/newthread" class="btn askQuestionLink" title="Ask a question" href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/newthread?category=windowsserver&forum=winserverpowershell" name="ask" rel="nofollow">
+            Ask a question
+        </a>
+    </div>
+
+        </div>
+        <div class="section">
+    <div id="quickLinks" class="dropdown">
+        <div id="quickLinksText">
+            <span>Quick access</span>
+        </div>
+        <div id="quickLinksArrow" class="arrowcontainer">
+            <a class="arrowdown expanded"></a>
+        </div>
+        <ul class="popup">
+                    <li><a id="Home" href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/home">Forums home</a></li>
+                    <li><a id="AllUsers" href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/browseusers">Browse forums users</a></li>
+                    <li><a id="Faq" href="http://social.technet.microsoft.com/wiki/contents/articles/7359.forums-help-faq.aspx">FAQ</a></li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    
+
+        </div>
+    </div>
+    <div id="searchActionsContainer">
+        <div id="searchActions">
+            <div id="topBarImportantInfoContainer">
+<div id="relatedThreadsLinkContainer">
+    <a id="relatedThreadsLink" href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/home?searchTerm=Running%20SQL%20Query%20with%20Powershell%20on%20remote%20server" value="related threads link">Search related threads</a>
+</div>
+
+            </div>
+                        
+            <div id="threadsearchbarContainer">
+<form action="http://social.technet.microsoft.com/Forums/windowsserver/en-US/home?sort=relevancedesc&brandIgnore=True" data-clientrefresh="true" data-refreshcontent="Search" id="homesearchform" method="get"><div class="searchbar">
+    <table class="searchboxinnercontainer">
+        <tbody><tr>
+            <td id="searchBoxTd">
+                <input id="searchbox" type="text" name="searchTerm" value="" class="watermark">
+            </td>
+            <td class="imageWidth">
+                <input id="searchimage" type="submit" value="">
+            </td>
+        </tr>
+    </tbody></table>
+</div>   </form>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+
+</div>
+
+        <script>
+            $(function() {
+                Forums.Homepage.wireTopBar('Search forum questions');
+            });
+        </script>
+    
+
+        <div id="threadPageSidebarContainer" class="sideBarContainer" style="display: block;">
+            <div id="sidebar">
+    <section>
+        <h3>Answered by:</h3>
+        <div id="userCard" class="section">
+            <div class="profile-usercard-inline" data-profile-usercard-customlink="{&quot;href&quot;:&quot;http://social.technet.microsoft.com/Forums/windowsserver/en-US/user/threads?user=cmille19&quot;, &quot;text&quot;:&quot;cmille19&#39;s threads&quot;}" data-profile-userid="d43ee0fe9af64189896a92676f4e5c07" data-profile-rendered="true"><div class="profile-usercard profile-inline">            <div class="profile-inline-header">                <span class="profile-userimage-large">                    <img src="./Running SQL Query with Powershell on remote server_files/avatar.jpg" alt="Avatar of cmille19" style="width: 135px; display: inline-block;">                </span>                <div class="profile-inline-header-details">                    <div title="cmille19" class="profile-inline-display-name">cmille19</div>                                <div class="profile-affiliations profile-inline-secondary">MVP</div>                                <div class="profile-inline-url profile-inline-secondary">                        <a title="http://sev17.com/" href="http://sev17.com/" target="_blank">sev17.com/</a></div>                            </div>            </div>            <div class="profile-statline">                <span class="profile-points">3,474<span class="points-label"> Points</span></span>                <span class="profile-count profile-bronze-points"><span class="profile-bronze-img" title="Achievements Earned"></span><span>14</span></span>                <span class="profile-count profile-silver-points"><span class="profile-silver-img" title="Achievements Earned"></span><span>5</span></span>                <span class="profile-count profile-gold-points"><span class="profile-gold-img" title="Achievements Earned"></span><span>0</span></span>            </div>                        <div class="profile-biography"></div>                        <div class="profile-footer">                                <a href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/user/threads?user=cmille19" title="cmille19&#39;s threads" target="_blank" class="profile-usercard-custom-link">cmille19's threads</a>                                <a href="http://social.technet.microsoft.com/profile/cmille19/?ws=usercard-inline" class="profile-usercard-profileLink" target="_blank">View Profile</a>            </div>        </div></div>
+        </div>
+    </section>
+        <section>
+            <div id="relatedThreads" data-url="/Forums/windowsserver/en-US/search/RelatedThreadsByThread?searchTerm=Running%20SQL%20Query%20with%20Powershell%20on%20remote%20server&amp;threadId=e580a1e1-f116-4fc5-9344-bebf4489dc75&amp;allLanguages=False">
+
+
+
+    
+
+    <div>
+        <h4>Top related threads</h4>
+
+        
+        <ul class="content relatedThreads">
+
+                <li id="relatedThread_0">
+                    <div>
+                        <div class="alignMiddle">
+                            <a href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/5ebe468e-ffc5-4be8-a2e7-adbe603dbae1/powershell-script-to-query-remote-wmi-runs-via-sql-server-agent-job-but-not-when-run-manually?forum=sqltools" target="_blank" title="Posted to SQL Server Tools forum">Powershell script to query remote WMI runs via sql server agent job but not when run manually</a>
+                        </div>
+                    </div>
+                    <div class="Clear"></div>
+                </li>
+                <li id="relatedThread_1">
+                    <div>
+                        <div class="alignMiddle">
+                            <a href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/794d6d95-f2ac-459f-88f0-fbe6abe31890/running-sql-query-with-powershell?forum=winserverpowershell" target="_blank" title="Posted to Windows PowerShell forum">running sql query with powershell</a>
+                        </div>
+                    </div>
+                    <div class="Clear"></div>
+                </li>
+                <li id="relatedThread_2">
+                    <div>
+                        <div class="alignMiddle">
+                            <a href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/8e96e59b-95e6-47f4-aa88-82ee4738a308/running-sql-server-job-against-remote-host?forum=sqltools" target="_blank" title="Posted to SQL Server Tools forum">Running SQL Server job against remote host?</a>
+                        </div>
+                    </div>
+                    <div class="Clear"></div>
+                </li>
+                <li id="relatedThread_3">
+                    <div>
+                        <div class="alignMiddle">
+                            <a href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/3f5b3ff2-cbca-4bd4-badc-287696e8740c/query-status-of-sql-server-job-on-remote-machine?forum=ITCG" target="_blank" title="Posted to The Official Scripting Guys Forum! forum">Query status of SQL Server job on remote machine</a>
+                        </div>
+                    </div>
+                    <div class="Clear"></div>
+                </li>
+                <li id="relatedThread_4">
+                    <div>
+                        <div class="alignMiddle">
+                            <a href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/f8e4eea3-b645-4b0b-b1ac-5da5540b392d/how-do-i-execute-sql-transact-query-statements-remotely-from-powershell?forum=sqldataaccess" target="_blank" title="Posted to SQL Server Data Access forum">How do I Execute SQL Transact query statements remotely from Powershell?</a>
+                        </div>
+                    </div>
+                    <div class="Clear"></div>
+                </li>
+        </ul>
+    </div>
+</div>
+        </section>
+</div>
+        </div>
+        <div id="threadPageContentContainer">
+            <a id="toggleSidebar" href="javascript:void(0)" class="toggleOpen" data-state="1"></a>
+            <section>
+                <div id="threadPageContainer" class="section">
+                    
+
+
+
+             
+
+
+<h1>
+    <div class="threadIcon icon  none" title="">
+        <img class="threadIcon icon  none" src="./Running SQL Query with Powershell on remote server_files/trans(1).gif" alt=" none">
+    </div>
+    <span name="subject">Running SQL Query with Powershell on remote server</span>
+                         
+        <a id="rssFeed" href="http://social.technet.microsoft.com/Forums/en-US/winserverpowershell/thread/e580a1e1-f116-4fc5-9344-bebf4489dc75?outputAs=rss" rel="nofollow"><img src="./Running SQL Query with Powershell on remote server_files/trans(1).gif" class="icon rss"></a>
+</h1>   
+
+
+                
+
+
+<div class="breadcrumb">
+    
+
+    
+    
+            <div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="EyebrowElement">
+                <a id="categoryBreadcrumb" href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/home?category=windowsserver" itemprop="url">
+                    <span itemprop="title">Windows Server forums</span> 
+                </a>
+            </div>
+        <span class="separator">&nbsp;&gt;&nbsp;</span>
+            <div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="EyebrowElement forumBreadcrumb" data-forumdetailsurl="/Forums/api/category/getsingleforumdetails?forum=winserverpowershell">
+                <a id="forumBreadcrumb_winserverpowershell" href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=winserverpowershell" itemprop="url">
+                    <span itemprop="title">Windows PowerShell</span> 
+                
+                </a>
+                <div class="forumDetailsTip" style="display: none;">
+                    
+<div id="forumDetailsTip_winserverpowershell" class="">
+        <h3 class="header">Windows PowerShell
+            <a href="http://social.technet.microsoft.com/Forums/en-US/winserverpowershell/threads?outputAs=rss" rel="nofollow"><img class="icon rss" src="./Running SQL Query with Powershell on remote server_files/trans(1).gif"></a>
+        </h3>
+        <div>
+            <ul class="manageForumSection">
+                <li><a href="javascript:void(0);" rel="nofollow" class="manageForumLink"></a></li>
+                <li><a href="javascript:void(0);" rel="nofollow" class="manageRolesLink"></a></li>
+                <li><a href="javascript:void(0);" rel="nofollow" class="addAnnouncementLink"></a></li>
+                <li><a class="addRemoveForum" title="Remove From My Forums" href="http://social.technet.microsoft.com/Forums/en-US/user/favorite?forumName=winserverpowershell" rel="nofollow">Remove From My Forums</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    <div class="content">Discussion on Windows Server Windows Powershell</div>
+    <div class="announcements"><span class="bold">Announcements: 2</span></div>
+</div>
+                </div>
+            </div>
+    
+    
+    
+    <div class="clear"></div>
+</div>
+
+
+
+
+
+
+
+
+    
+
+
+    <ul id="rootMessage" class="message root">
+        
+
+        <h3>Question</h3>
+
+
+
+
+
+
+
+    <li id="e580a1e1-f116-4fc5-9344-bebf4489dc75" class="message  root">
+        <div class="messageContentContainer">
+        
+        
+            <div class="messageSidebar">
+
+                <div class="iconWrapper">
+                    <div class="status messageIcon  question root">
+                        <img class="icon  question root" src="./Running SQL Query with Powershell on remote server_files/trans(1).gif" alt="Question">
+                    </div>
+                </div>
+                <div class="votingouterbox">                <div class="voting">
+                            <a class="voteuphreflink" name="voteup" title="Vote as helpful" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.technet.microsoft.com&wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft">
+                                <img class="icon voteup" alt="Sign in to vote" title="Sign in to vote" src="./Running SQL Query with Powershell on remote server_files/trans(1).gif">
+                                <div class="votenumber" style="display: block;">0</div>
+                            </a>
+
+                </div>
+                <div class="votinglabel">
+                    <span class="votinglabel type">
+                                <a title="Sign in to vote" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.technet.microsoft.com&wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft">Sign in to vote</a>
+                    </span>
+                </div>
+</div>
+            </div>
+        
+            <div class="messageContent">
+                <div class="container">
+                    <div class="body"><p>Hi all,</p>
+<p>I want to run a SQL query&nbsp;with Powershell on a remote server (named VCOM)&nbsp;in our domain. The server has Win2008 R2 SP1 and MS SQL Server 2008 R2.</p>
+<p>My aim is to count the columns&nbsp;of the table "dbo.Comm_Configstore" in the database "VCOM_Comm"&nbsp;&nbsp;and get the number in the Powershell window.</p>
+<p>The query is called :</p>
+<p>SELECT COUNT(*) FROM [VCOM_Comm].[dbo].[COMM_ConfigStore]</p>
+<p>This query actually works&nbsp;, if i run it directly in the SQl Server Management Studio.</p>
+<p>So I googled a lot and found a script, which might be useful and adjusted it for my demands :</p>
+<p>$cn = New-Object System.Data.SQLClient.SQLConnection&nbsp;<br>
+$cn.ConnectionString = "Server=&nbsp;VCOM ;Database=VCOM_Comm ;User ID=&nbsp;User Name&nbsp; ;Password=&nbsp;Password of user&nbsp; ;Trusted_Connection=True"<br>
+$cn.Open() <br>
+$sql = "SELECT COUNT(*) FROM [VCOM_Comm].[dbo].[COMM_ConfigStore]"<br>
+$cmd = new-object System.Data.SqlClient.SqlCommand <br>
+$cmd.Connection = $cn<br>
+$cmd.CommandText = $sql<br>
+$cmd.CommandTimeout = 600<br>
+$cmd.ExecuteNonQuery()<br>
+$cn.Close()</p>
+<p>The result on the display : -1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (</p>
+<p>&nbsp;</p>
+<p>I can connect to the server via Remote Desktop Session&nbsp;and run the sql database. The right number of columns must be 148. The problem is that i dont get the number shown on the Powershell screen. Can someone tell my the mistake in my script?</p>
+<p>Thanks for answering.</p></div>
+                        <input type="hidden" id="e580a1e1-f116-4fc5-9344-bebf4489dc75_attachments" value="">
+
+                </div>
+                
+                <div class="messageFooter">
+                     <div class="actions">
+                        <div class="date">Thursday, September 29, 2011 8:49 AM</div>
+                        <div class="menu message">
+                                            <div value="reply">
+                    <a href="javascript:void();" title="Reply" name="reply" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.technet.microsoft.com&amp;wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        Reply</a>
+                </div>
+                    <div class="separator"><span>|</span></div>
+                <div value="quote">
+                    <a href="javascript:void();" title="" name="quote" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.technet.microsoft.com&amp;wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        Quote</a>
+                </div>
+
+                                         <div class="separator"><span>|</span></div>
+        <div class="abusive">
+        </div>
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <div class="profile-usercard-mini" data-profile-userid="50ae813ccb4043ee8a5f77a033c1c346" data-profile-usercard-customlink="{&quot;href&quot;:&quot;http://social.technet.microsoft.com/Forums/windowsserver/en-US/user/threads?user=ATAlex&quot;, &quot;text&quot;:&quot;ATAlex&#39;s threads&quot;}" data-profile-rendered="true"><div class="profile-mini">            <div class="profile-mini-header">            <div class="profile-mini-userimage">                            <img src="data:image/jpg;base64,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" alt="Avatar of ATAlex">                        </div>            <div class="profile-mini-container">                <div title="ATAlex" class="profile-mini-display-name"><div class="profile-usercard-hover" data-profile-userid="50ae813ccb4043ee8a5f77a033c1c346" data-profile-rendered="true"><a href="http://social.technet.microsoft.com/profile/atalex/?ws=usercard-mini" target="_blank">ATAlex</a><div class="profile-usercard">            <div class="profile-header">                <span class="profile-userimage">                                            <img src="data:image/jpg;base64,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" alt="Avatar of ATAlex">                                    </span>                <div>                    <p title="ATAlex" class="profile-display-name">ATAlex</p>                                    <p class="profile-affiliations">Partner</p>                </div>            </div>            <div class="profile-points-bar">                <span class="profile-points">135<span class="points-label"> Points</span></span>                <span class="profile-count profile-bronze-points"><span class="profile-bronze-img" title="Achievements Earned"></span><span>6</span></span>                <span class="profile-count profile-silver-points"><span class="profile-silver-img" title="Achievements Earned"></span><span>0</span></span>                <span class="profile-count profile-gold-points"><span class="profile-gold-img" title="Achievements Earned"></span><span>0</span></span>                        </div>            <div class="profile-achievements-header">                <span class="profile-achievements-title">Recent Achievements</span>            </div>            <div class="profile-achievements-recent">                <div class="profile-achievements-centering">                                                                <span class="profile-achievement profile-achievement-Bronze"><span>Forums Answerer I</span></span>                                            <span class="profile-achievement profile-achievement-Bronze"><span>First Answer Confirmed</span></span>                                            <span class="profile-achievement profile-achievement-Bronze"><span>Code Answerer I</span></span>                                                            </div>            </div>            <div class="profile-footer">                                    <a href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/user/threads?user=ATAlex" title="ATAlex&#39;s threads" class="profile-usercard-custom-link" target="_blank">ATAlex's threads</a>                                <a href="http://social.technet.microsoft.com/profile/atalex/?ws=usercard-hover" class="profile-usercard-profileLink" target="_blank">View Profile</a>            </div>        </div></div></div>                            <div class="profile-mini-affiliations">                                    (Partner)                                </div>                <span class="profile-mini-points">135<span class="points-label"> Points</span></span>                </div>                <div class="profile-mini-content">
+                            <div class="profile-mini-content">
+                            </div>
+                        </div>            </div>        </div></div>
+
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </li> 
+    <div class="clear"></div>
+
+    </ul>
+
+
+        <div id="answers" class="answers">
+            <h3>
+                Answers
+            </h3>
+            <ul id="answersList" class="message">
+
+
+
+
+
+
+
+    <li id="241e7be4-02f5-486e-bd04-435835d7db8a" class="message  answer">
+        <div class="messageContentContainer">
+        
+        
+            <div class="messageSidebar">
+
+                <div class="iconWrapper">
+                    <div class="status messageIcon  question answered">
+                        <img class="icon  question answered" src="./Running SQL Query with Powershell on remote server_files/trans(1).gif" alt="Question">
+                    </div>
+                </div>
+                <div class="votingouterbox">                <div class="voting">
+                            <a class="voteuphreflink" name="voteup" title="Vote as helpful" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.technet.microsoft.com&wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft">
+                                <img class="icon voteup" alt="Sign in to vote" title="Sign in to vote" src="./Running SQL Query with Powershell on remote server_files/trans(1).gif">
+                                <div class="votenumber" style="display: block;">4</div>
+                            </a>
+
+                </div>
+                <div class="votinglabel">
+                    <span class="votinglabel type">
+                                <a title="Sign in to vote" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.technet.microsoft.com&wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft">Sign in to vote</a>
+                    </span>
+                </div>
+</div>
+            </div>
+        
+            <div class="messageContent">
+                <div class="container">
+                    <div class="body"><p>The problem is you are using an ExecuteNonQuery which by definition does not return a result. It is used for non-queries (insert, updated, delete) instead of select.</p>
+<p>Here's some code to return a result set:</p>
+<p>&nbsp;</p>
+<div style="color:Black;background-color:White;"><pre><span style="color:OrangeRed;">$ServerInstance</span> <span style="color:Gray;">=</span> <span style="color:#A31515;">"VCOM "</span>
+<span style="color:OrangeRed;">$Database</span> <span style="color:Gray;">=</span> <span style="color:#A31515;">"VCOM "</span>
+<span style="color:OrangeRed;">$ConnectionTimeout</span> <span style="color:Gray;">=</span> 30
+<span style="color:OrangeRed;">$Query</span> <span style="color:Gray;">=</span> <span style="color:#A31515;">"SELECT COUNT(*) FROM [VCOM_Comm].[dbo].[COMM_ConfigStore]"</span>
+<span style="color:OrangeRed;">$QueryTimeout</span> <span style="color:Gray;">=</span> 120
+
+<span style="color:OrangeRed;">$conn</span><span style="color:Gray;">=</span>new<span style="color:Gray;">-</span>object System.Data.SqlClient.SQLConnection
+<span style="color:OrangeRed;">$ConnectionString</span> <span style="color:Gray;">=</span> <span style="color:#A31515;">"Server={0};Database={1};Integrated Security=True;Connect Timeout={2}"</span> <span style="color:Gray;">-</span>f <span style="color:OrangeRed;">$ServerInstance</span>,<span style="color:OrangeRed;">$Database</span>,<span style="color:OrangeRed;">$ConnectionTimeout</span>
+<span style="color:OrangeRed;">$conn</span>.ConnectionString<span style="color:Gray;">=</span><span style="color:OrangeRed;">$ConnectionString</span>
+<span style="color:OrangeRed;">$conn</span>.Open()
+<span style="color:OrangeRed;">$cmd</span><span style="color:Gray;">=</span>new<span style="color:Gray;">-</span>object system.Data.SqlClient.SqlCommand(<span style="color:OrangeRed;">$Query</span>,<span style="color:OrangeRed;">$conn</span>)
+<span style="color:OrangeRed;">$cmd</span>.CommandTimeout<span style="color:Gray;">=</span><span style="color:OrangeRed;">$QueryTimeout</span>
+<span style="color:OrangeRed;">$ds</span><span style="color:Gray;">=</span>New<span style="color:Gray;">-</span>Object system.Data.DataSet
+<span style="color:OrangeRed;">$da</span><span style="color:Gray;">=</span>New<span style="color:Gray;">-</span>Object system.Data.SqlClient.SqlDataAdapter(<span style="color:OrangeRed;">$cmd</span>)
+<span style="color:Gray;">[</span><span style="color:Teal;">void</span><span style="color:Gray;">]</span><span style="color:OrangeRed;">$da</span>.fill(<span style="color:OrangeRed;">$ds</span>)
+<span style="color:OrangeRed;">$conn</span>.Close()
+<span style="color:OrangeRed;">$ds</span>.Tables
+</pre></div>
+<p>&nbsp;</p></div>
+                        <input type="hidden" id="241e7be4-02f5-486e-bd04-435835d7db8a_attachments" value="">
+
+                </div>
+                        <div>
+            <ul class="history">
+                    <li><span class="type">Marked as answer by</span>
+                            <a class="author" href="http://social.technet.microsoft.com/profile/atalex/?type=forum&referrer=http://social.technet.microsoft.com/Forums/windowsserver/en-US/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?forum=winserverpowershell" rel="nofollow" title="About ATAlex"><span>ATAlex</span><abbr class="affil"></abbr></a>
+                        <span class="date">Thursday, September 29, 2011 12:18 PM</span>
+                    </li>
+            </ul>
+        </div>
+
+                <div class="messageFooter">
+                     <div class="actions">
+                        <div class="date">Thursday, September 29, 2011 11:49 AM</div>
+                        <div class="menu message">
+                                            <div value="reply">
+                    <a href="javascript:void();" title="Reply" name="reply" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.technet.microsoft.com&amp;wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        Reply</a>
+                </div>
+                    <div class="separator"><span>|</span></div>
+                <div value="quote">
+                    <a href="javascript:void();" title="" name="quote" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.technet.microsoft.com&amp;wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        Quote</a>
+                </div>
+
+                                         <div class="separator"><span>|</span></div>
+        <div class="abusive">
+        </div>
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <div class="profile-usercard-mini" data-profile-userid="d43ee0fe9af64189896a92676f4e5c07" data-profile-usercard-customlink="{&quot;href&quot;:&quot;http://social.technet.microsoft.com/Forums/windowsserver/en-US/user/threads?user=cmille19&quot;, &quot;text&quot;:&quot;cmille19&#39;s threads&quot;}" data-profile-rendered="true"><div class="profile-mini">            <div class="profile-mini-header">            <div class="profile-mini-userimage">                            <img src="data:image/jpg;base64,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" alt="Avatar of cmille19">                        </div>            <div class="profile-mini-container">                <div title="cmille19" class="profile-mini-display-name"><div class="profile-usercard-hover" data-profile-userid="d43ee0fe9af64189896a92676f4e5c07" data-profile-rendered="true"><a href="http://social.technet.microsoft.com/profile/cmille19/?ws=usercard-mini" target="_blank">cmille19</a><div class="profile-usercard">            <div class="profile-header">                <span class="profile-userimage">                                            <img src="data:image/jpg;base64,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" alt="Avatar of cmille19">                                    </span>                <div>                    <p title="cmille19" class="profile-display-name">cmille19</p>                                    <p class="profile-affiliations">MVP</p>                </div>            </div>            <div class="profile-points-bar">                <span class="profile-points">3,474<span class="points-label"> Points</span></span>                <span class="profile-count profile-bronze-points"><span class="profile-bronze-img" title="Achievements Earned"></span><span>14</span></span>                <span class="profile-count profile-silver-points"><span class="profile-silver-img" title="Achievements Earned"></span><span>5</span></span>                <span class="profile-count profile-gold-points"><span class="profile-gold-img" title="Achievements Earned"></span><span>0</span></span>                        </div>            <div class="profile-achievements-header">                <span class="profile-achievements-title">Recent Achievements</span>            </div>            <div class="profile-achievements-recent">                <div class="profile-achievements-centering">                                                                <span class="profile-achievement profile-achievement-Silver"><span>Forums Answerer III</span></span>                                            <span class="profile-achievement profile-achievement-Bronze"><span>New Blog Rater</span></span>                                            <span class="profile-achievement profile-achievement-Silver"><span>Gallery Storyteller II</span></span>                                                            </div>            </div>            <div class="profile-footer">                                    <a href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/user/threads?user=cmille19" title="cmille19&#39;s threads" class="profile-usercard-custom-link" target="_blank">cmille19's threads</a>                                <a href="http://social.technet.microsoft.com/profile/cmille19/?ws=usercard-hover" class="profile-usercard-profileLink" target="_blank">View Profile</a>            </div>        </div></div></div>                            <div class="profile-mini-affiliations">                                    (MVP)                                </div>                <span class="profile-mini-points">3,474<span class="points-label"> Points</span></span>                </div>                <div class="profile-mini-content">
+                            <div class="profile-mini-content">
+                            </div>
+                        </div>            </div>        </div></div>
+
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </li> 
+    <div class="clear"></div>
+                        
+            </ul>
+        </div>
+
+      <div id="allReplies" class="replies">
+            <h3>
+                All replies
+            </h3>
+
+
+
+
+
+    <ul class="message">
+
+
+
+
+
+
+
+    <li id="241e7be4-02f5-486e-bd04-435835d7db8a" class="message  answer">
+        <div class="messageContentContainer">
+        
+        
+            <div class="messageSidebar">
+
+                <div class="iconWrapper">
+                    <div class="status messageIcon  question answered">
+                        <img class="icon  question answered" src="./Running SQL Query with Powershell on remote server_files/trans(1).gif" alt="Question">
+                    </div>
+                </div>
+                <div class="votingouterbox">                <div class="voting">
+                            <a class="voteuphreflink" name="voteup" title="Vote as helpful" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.technet.microsoft.com&wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft">
+                                <img class="icon voteup" alt="Sign in to vote" title="Sign in to vote" src="./Running SQL Query with Powershell on remote server_files/trans(1).gif">
+                                <div class="votenumber" style="display: block;">4</div>
+                            </a>
+
+                </div>
+                <div class="votinglabel">
+                    <span class="votinglabel type">
+                                <a title="Sign in to vote" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.technet.microsoft.com&wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft">Sign in to vote</a>
+                    </span>
+                </div>
+</div>
+            </div>
+        
+            <div class="messageContent">
+                <div class="container">
+                    <div class="body"><p>The problem is you are using an ExecuteNonQuery which by definition does not return a result. It is used for non-queries (insert, updated, delete) instead of select.</p>
+<p>Here's some code to return a result set:</p>
+<p>&nbsp;</p>
+<div style="color:Black;background-color:White;"><pre><span style="color:OrangeRed;">$ServerInstance</span> <span style="color:Gray;">=</span> <span style="color:#A31515;">"VCOM "</span>
+<span style="color:OrangeRed;">$Database</span> <span style="color:Gray;">=</span> <span style="color:#A31515;">"VCOM "</span>
+<span style="color:OrangeRed;">$ConnectionTimeout</span> <span style="color:Gray;">=</span> 30
+<span style="color:OrangeRed;">$Query</span> <span style="color:Gray;">=</span> <span style="color:#A31515;">"SELECT COUNT(*) FROM [VCOM_Comm].[dbo].[COMM_ConfigStore]"</span>
+<span style="color:OrangeRed;">$QueryTimeout</span> <span style="color:Gray;">=</span> 120
+
+<span style="color:OrangeRed;">$conn</span><span style="color:Gray;">=</span>new<span style="color:Gray;">-</span>object System.Data.SqlClient.SQLConnection
+<span style="color:OrangeRed;">$ConnectionString</span> <span style="color:Gray;">=</span> <span style="color:#A31515;">"Server={0};Database={1};Integrated Security=True;Connect Timeout={2}"</span> <span style="color:Gray;">-</span>f <span style="color:OrangeRed;">$ServerInstance</span>,<span style="color:OrangeRed;">$Database</span>,<span style="color:OrangeRed;">$ConnectionTimeout</span>
+<span style="color:OrangeRed;">$conn</span>.ConnectionString<span style="color:Gray;">=</span><span style="color:OrangeRed;">$ConnectionString</span>
+<span style="color:OrangeRed;">$conn</span>.Open()
+<span style="color:OrangeRed;">$cmd</span><span style="color:Gray;">=</span>new<span style="color:Gray;">-</span>object system.Data.SqlClient.SqlCommand(<span style="color:OrangeRed;">$Query</span>,<span style="color:OrangeRed;">$conn</span>)
+<span style="color:OrangeRed;">$cmd</span>.CommandTimeout<span style="color:Gray;">=</span><span style="color:OrangeRed;">$QueryTimeout</span>
+<span style="color:OrangeRed;">$ds</span><span style="color:Gray;">=</span>New<span style="color:Gray;">-</span>Object system.Data.DataSet
+<span style="color:OrangeRed;">$da</span><span style="color:Gray;">=</span>New<span style="color:Gray;">-</span>Object system.Data.SqlClient.SqlDataAdapter(<span style="color:OrangeRed;">$cmd</span>)
+<span style="color:Gray;">[</span><span style="color:Teal;">void</span><span style="color:Gray;">]</span><span style="color:OrangeRed;">$da</span>.fill(<span style="color:OrangeRed;">$ds</span>)
+<span style="color:OrangeRed;">$conn</span>.Close()
+<span style="color:OrangeRed;">$ds</span>.Tables
+</pre></div>
+<p>&nbsp;</p></div>
+                        <input type="hidden" id="241e7be4-02f5-486e-bd04-435835d7db8a_attachments" value="">
+
+                </div>
+                        <div>
+            <ul class="history">
+                    <li><span class="type">Marked as answer by</span>
+                            <a class="author" href="http://social.technet.microsoft.com/profile/atalex/?type=forum&referrer=http://social.technet.microsoft.com/Forums/windowsserver/en-US/e580a1e1-f116-4fc5-9344-bebf4489dc75/running-sql-query-with-powershell-on-remote-server?forum=winserverpowershell" rel="nofollow" title="About ATAlex"><span>ATAlex</span><abbr class="affil"></abbr></a>
+                        <span class="date">Thursday, September 29, 2011 12:18 PM</span>
+                    </li>
+            </ul>
+        </div>
+
+                <div class="messageFooter">
+                     <div class="actions">
+                        <div class="date">Thursday, September 29, 2011 11:49 AM</div>
+                        <div class="menu message">
+                                            <div value="reply">
+                    <a href="javascript:void();" title="Reply" name="reply" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.technet.microsoft.com&amp;wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        Reply</a>
+                </div>
+                    <div class="separator"><span>|</span></div>
+                <div value="quote">
+                    <a href="javascript:void();" title="" name="quote" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.technet.microsoft.com&amp;wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        Quote</a>
+                </div>
+
+                                         <div class="separator"><span>|</span></div>
+        <div class="abusive">
+        </div>
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <div class="profile-usercard-mini" data-profile-userid="d43ee0fe9af64189896a92676f4e5c07" data-profile-usercard-customlink="{&quot;href&quot;:&quot;http://social.technet.microsoft.com/Forums/windowsserver/en-US/user/threads?user=cmille19&quot;, &quot;text&quot;:&quot;cmille19&#39;s threads&quot;}" data-profile-rendered="true"><div class="profile-mini">            <div class="profile-mini-header">            <div class="profile-mini-userimage">                            <img src="data:image/jpg;base64,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" alt="Avatar of cmille19">                        </div>            <div class="profile-mini-container">                <div title="cmille19" class="profile-mini-display-name"><div class="profile-usercard-hover" data-profile-userid="d43ee0fe9af64189896a92676f4e5c07" data-profile-rendered="true"><a href="http://social.technet.microsoft.com/profile/cmille19/?ws=usercard-mini" target="_blank">cmille19</a><div class="profile-usercard">            <div class="profile-header">                <span class="profile-userimage">                                            <img src="data:image/jpg;base64,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" alt="Avatar of cmille19">                                    </span>                <div>                    <p title="cmille19" class="profile-display-name">cmille19</p>                                    <p class="profile-affiliations">MVP</p>                </div>            </div>            <div class="profile-points-bar">                <span class="profile-points">3,474<span class="points-label"> Points</span></span>                <span class="profile-count profile-bronze-points"><span class="profile-bronze-img" title="Achievements Earned"></span><span>14</span></span>                <span class="profile-count profile-silver-points"><span class="profile-silver-img" title="Achievements Earned"></span><span>5</span></span>                <span class="profile-count profile-gold-points"><span class="profile-gold-img" title="Achievements Earned"></span><span>0</span></span>                        </div>            <div class="profile-achievements-header">                <span class="profile-achievements-title">Recent Achievements</span>            </div>            <div class="profile-achievements-recent">                <div class="profile-achievements-centering">                                                                <span class="profile-achievement profile-achievement-Silver"><span>Forums Answerer III</span></span>                                            <span class="profile-achievement profile-achievement-Bronze"><span>New Blog Rater</span></span>                                            <span class="profile-achievement profile-achievement-Silver"><span>Gallery Storyteller II</span></span>                                                            </div>            </div>            <div class="profile-footer">                                    <a href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/user/threads?user=cmille19" title="cmille19&#39;s threads" class="profile-usercard-custom-link" target="_blank">cmille19's threads</a>                                <a href="http://social.technet.microsoft.com/profile/cmille19/?ws=usercard-hover" class="profile-usercard-profileLink" target="_blank">View Profile</a>            </div>        </div></div></div>                            <div class="profile-mini-affiliations">                                    (MVP)                                </div>                <span class="profile-mini-points">3,474<span class="points-label"> Points</span></span>                </div>                <div class="profile-mini-content">
+                            <div class="profile-mini-content">
+                            </div>
+                        </div>            </div>        </div></div>
+
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </li> 
+    <div class="clear"></div>
+
+
+
+
+
+
+
+    <li id="ea758574-3171-49c5-ac2f-288ca3161645" class="message ">
+        <div class="messageContentContainer">
+        
+        
+            <div class="messageSidebar">
+
+                <div class="iconWrapper">
+                    <div class="status messageIcon  question reply">
+                        <img class="icon  question reply" src="./Running SQL Query with Powershell on remote server_files/trans(1).gif" alt="Question">
+                    </div>
+                </div>
+                <div class="votingouterbox">                <div class="voting">
+                            <a class="voteuphreflink" name="voteup" title="Vote as helpful" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.technet.microsoft.com&wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft">
+                                <img class="icon voteup" alt="Sign in to vote" title="Sign in to vote" src="./Running SQL Query with Powershell on remote server_files/trans(1).gif">
+                                <div class="votenumber" style="display: block;">0</div>
+                            </a>
+
+                </div>
+                <div class="votinglabel">
+                    <span class="votinglabel type">
+                                <a title="Sign in to vote" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.technet.microsoft.com&wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft">Sign in to vote</a>
+                    </span>
+                </div>
+</div>
+            </div>
+        
+            <div class="messageContent">
+                <div class="container">
+                    <div class="body"><p>Thanks, your answer really helped me.</p>
+<p>There is so much to learn........</p></div>
+                        <input type="hidden" id="ea758574-3171-49c5-ac2f-288ca3161645_attachments" value="">
+
+                </div>
+                
+                <div class="messageFooter">
+                     <div class="actions">
+                        <div class="date">Thursday, September 29, 2011 12:18 PM</div>
+                        <div class="menu message">
+                                            <div value="reply">
+                    <a href="javascript:void();" title="Reply" name="reply" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.technet.microsoft.com&amp;wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        Reply</a>
+                </div>
+                    <div class="separator"><span>|</span></div>
+                <div value="quote">
+                    <a href="javascript:void();" title="" name="quote" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.technet.microsoft.com&amp;wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        Quote</a>
+                </div>
+
+                                         <div class="separator"><span>|</span></div>
+        <div class="abusive">
+        </div>
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <div class="profile-usercard-mini" data-profile-userid="50ae813ccb4043ee8a5f77a033c1c346" data-profile-usercard-customlink="{&quot;href&quot;:&quot;http://social.technet.microsoft.com/Forums/windowsserver/en-US/user/threads?user=ATAlex&quot;, &quot;text&quot;:&quot;ATAlex&#39;s threads&quot;}" data-profile-rendered="true"><div class="profile-mini">            <div class="profile-mini-header">            <div class="profile-mini-userimage">                            <img src="data:image/jpg;base64,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" alt="Avatar of ATAlex">                        </div>            <div class="profile-mini-container">                <div title="ATAlex" class="profile-mini-display-name"><div class="profile-usercard-hover" data-profile-userid="50ae813ccb4043ee8a5f77a033c1c346" data-profile-rendered="true"><a href="http://social.technet.microsoft.com/profile/atalex/?ws=usercard-mini" target="_blank">ATAlex</a><div class="profile-usercard">            <div class="profile-header">                <span class="profile-userimage">                                            <img src="data:image/jpg;base64,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" alt="Avatar of ATAlex">                                    </span>                <div>                    <p title="ATAlex" class="profile-display-name">ATAlex</p>                                    <p class="profile-affiliations">Partner</p>                </div>            </div>            <div class="profile-points-bar">                <span class="profile-points">135<span class="points-label"> Points</span></span>                <span class="profile-count profile-bronze-points"><span class="profile-bronze-img" title="Achievements Earned"></span><span>6</span></span>                <span class="profile-count profile-silver-points"><span class="profile-silver-img" title="Achievements Earned"></span><span>0</span></span>                <span class="profile-count profile-gold-points"><span class="profile-gold-img" title="Achievements Earned"></span><span>0</span></span>                        </div>            <div class="profile-achievements-header">                <span class="profile-achievements-title">Recent Achievements</span>            </div>            <div class="profile-achievements-recent">                <div class="profile-achievements-centering">                                                                <span class="profile-achievement profile-achievement-Bronze"><span>Forums Answerer I</span></span>                                            <span class="profile-achievement profile-achievement-Bronze"><span>First Answer Confirmed</span></span>                                            <span class="profile-achievement profile-achievement-Bronze"><span>Code Answerer I</span></span>                                                            </div>            </div>            <div class="profile-footer">                                    <a href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/user/threads?user=ATAlex" title="ATAlex&#39;s threads" class="profile-usercard-custom-link" target="_blank">ATAlex's threads</a>                                <a href="http://social.technet.microsoft.com/profile/atalex/?ws=usercard-hover" class="profile-usercard-profileLink" target="_blank">View Profile</a>            </div>        </div></div></div>                            <div class="profile-mini-affiliations">                                    (Partner)                                </div>                <span class="profile-mini-points">135<span class="points-label"> Points</span></span>                </div>                <div class="profile-mini-content">
+                            <div class="profile-mini-content">
+                            </div>
+                        </div>            </div>        </div></div>
+
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </li> 
+    <div class="clear"></div>
+
+
+
+
+
+
+
+    <li id="45dad7ea-35a7-4627-8b49-687c29e9d7bb" class="message ">
+        <div class="messageContentContainer">
+        
+        
+            <div class="messageSidebar">
+
+                <div class="iconWrapper">
+                    <div class="status messageIcon  question reply">
+                        <img class="icon  question reply" src="./Running SQL Query with Powershell on remote server_files/trans(1).gif" alt="Question">
+                    </div>
+                </div>
+                <div class="votingouterbox">                <div class="voting">
+                            <a class="voteuphreflink" name="voteup" title="Vote as helpful" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.technet.microsoft.com&wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft">
+                                <img class="icon voteup" alt="Sign in to vote" title="Sign in to vote" src="./Running SQL Query with Powershell on remote server_files/trans(1).gif">
+                                <div class="votenumber" style="display: block;">0</div>
+                            </a>
+
+                </div>
+                <div class="votinglabel">
+                    <span class="votinglabel type">
+                                <a title="Sign in to vote" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.technet.microsoft.com&wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft">Sign in to vote</a>
+                    </span>
+                </div>
+</div>
+            </div>
+        
+            <div class="messageContent">
+                <div class="container">
+                    <div class="body"><p>hi cmille19,</p>
+<p>your script worked perfect, can you tell me how to use this script&nbsp; if i have to run a query against multiple SQL instnaces (may be by providing&nbsp; the list of instancess through a csv file/txt file)
+</p>
+<p></p>
+<p>Thanks</p>
+<p>Kvelpuri</p></div>
+                        <input type="hidden" id="45dad7ea-35a7-4627-8b49-687c29e9d7bb_attachments" value="">
+
+                </div>
+                
+                <div class="messageFooter">
+                     <div class="actions">
+                        <div class="date">Wednesday, June 12, 2013 2:25 PM</div>
+                        <div class="menu message">
+                                            <div value="reply">
+                    <a href="javascript:void();" title="Reply" name="reply" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.technet.microsoft.com&amp;wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        Reply</a>
+                </div>
+                    <div class="separator"><span>|</span></div>
+                <div value="quote">
+                    <a href="javascript:void();" title="" name="quote" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.technet.microsoft.com&amp;wreply=https%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        Quote</a>
+                </div>
+
+                                         <div class="separator"><span>|</span></div>
+        <div class="abusive">
+        </div>
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <div class="profile-usercard-mini" data-profile-userid="fd31973975ee4b6596e169ce7c8623b0" data-profile-usercard-customlink="{&quot;href&quot;:&quot;http://social.technet.microsoft.com/Forums/windowsserver/en-US/user/threads?user=Kvelpuri&quot;, &quot;text&quot;:&quot;Kvelpuri&#39;s threads&quot;}" data-profile-rendered="true"><div class="profile-mini">            <div class="profile-mini-header">            <div class="profile-mini-userimage">                            <img src="data:image/jpg;base64,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" alt="Avatar of Kvelpuri">                        </div>            <div class="profile-mini-container">                <div title="Kvelpuri" class="profile-mini-display-name"><div class="profile-usercard-hover" data-profile-userid="fd31973975ee4b6596e169ce7c8623b0" data-profile-rendered="true"><a href="http://social.technet.microsoft.com/profile/kvelpuri/?ws=usercard-mini" target="_blank">Kvelpuri</a><div class="profile-usercard">            <div class="profile-header">                <span class="profile-userimage">                                            <img src="data:image/jpg;base64,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" alt="Avatar of Kvelpuri">                                    </span>                <div>                    <p title="Kvelpuri" class="profile-display-name">Kvelpuri</p>                                    <p class="profile-affiliations"></p>                </div>            </div>            <div class="profile-points-bar">                <span class="profile-points">0<span class="points-label"> Points</span></span>                <span class="profile-count profile-bronze-points"><span class="profile-bronze-img" title="Achievements Earned"></span><span>3</span></span>                <span class="profile-count profile-silver-points"><span class="profile-silver-img" title="Achievements Earned"></span><span>0</span></span>                <span class="profile-count profile-gold-points"><span class="profile-gold-img" title="Achievements Earned"></span><span>0</span></span>                        </div>            <div class="profile-achievements-header">                <span class="profile-achievements-title">Recent Achievements</span>            </div>            <div class="profile-achievements-recent">                <div class="profile-achievements-centering">                                                                <span class="profile-achievement profile-achievement-Bronze"><span>New Gallery Contributor</span></span>                                            <span class="profile-achievement profile-achievement-Bronze"><span>First Marked Answer</span></span>                                            <span class="profile-achievement profile-achievement-Bronze"><span>First Forums Reply</span></span>                                                            </div>            </div>            <div class="profile-footer">                                    <a href="http://social.technet.microsoft.com/Forums/windowsserver/en-US/user/threads?user=Kvelpuri" title="Kvelpuri&#39;s threads" class="profile-usercard-custom-link" target="_blank">Kvelpuri's threads</a>                                <a href="http://social.technet.microsoft.com/profile/kvelpuri/?ws=usercard-hover" class="profile-usercard-profileLink" target="_blank">View Profile</a>            </div>        </div></div></div>                            <div class="profile-mini-affiliations">                                </div>                <span class="profile-mini-points">0<span class="points-label"> Points</span></span>                </div>                <div class="profile-mini-content">
+                            <div class="profile-mini-content">
+                            </div>
+                        </div>            </div>        </div></div>
+
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </li> 
+    <div class="clear"></div>
+    </ul>
+
+        </div>
+
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>  
+    <div id="nrSurvey">
+        
+    </div>  
+    
+                                    <div class="Clear"></div>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="Clearbottom"></div>          
+                    <div class="bottomleftcorner"></div>            
+                    <div class="bottomrightcorner"></div> 
+                    
+                     
+               
+                         <div id="Footer">
+                            <div class="FooterLogoContainer"><a href="http://www.microsoft.com/en/us/default.aspx"><div class="FooterLogo" title="Microsoft Corporation">&nbsp;</div></a></div><div id="FooterCopyright" class="FooterCopyright">© 2013  Microsoft. All rights reserved.</div><div class="FooterLinks"><span class="FooterAnchorList"><a href="http://technet.microsoft.com/cc543196.aspx">Newsletter</a><span class="Pipe">|</span><a href="http://technet.microsoft.com/cc512759.aspx">Contact Us</a><span class="Pipe">|</span><a href="http://go.microsoft.com/fwlink/?LinkId=248681">Privacy Statement</a><span class="Pipe">|</span><a href="http://technet.microsoft.com/cc300389.aspx">Terms of Use</a><span class="Pipe">|</span><a href="http://www.microsoft.com/About/Legal/EN/US/IntellectualProperty/Trademarks/EN-US.aspx">Trademarks</a><span class="Pipe">|</span><a href="https://lab.msdn.microsoft.com/mailform/contactus.aspx?refurl=http%3a%2f%2fsocial.technet.microsoft.com%2fForums%2fwindowsserver%2fen-US%2fe580a1e1-f116-4fc5-9344-bebf4489dc75%2frunning-sql-query-with-powershell-on-remote-server%2f" target="_blank">Site Feedback</a></span></div>
+                            
+    
+
+ 
+                        </div>  
+                    
+
+                           
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <div data-chameleon-template="megablade">    
+        
+
+    <div id="megabladeContainer" xmlns="http://www.w3.org/1999/xhtml">
+        <div id="megabladeContainerCenter">
+            <ul id="megabladeItems">
+                <li class="Logo"><a href="http://technet.microsoft.com/" title="TechNet">TechNet</a></li>
+                        <li data-value="hh326172" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">Products</a><span class="caret"></span></li>
+                        <li data-value="hh880860" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">IT Resources</a><span class="caret"></span></li>
+                        <li data-value="hh371326" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">Downloads</a><span class="caret"></span></li>
+                        <li data-value="jj837158" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">Training</a><span class="caret"></span></li>
+                        <li data-value="hh371327" class="bladeItem bladeItemWithMenu"><a class="label" href="" onclick="return false;">Support</a><span class="caret"></span></li>
+            </ul>
+            <div class="bladeItemMenuContainer">
+                    <div data-value="hh326172" class="bladeItemMenu" style="display: none;">
+                        <div class="menuContainerLayout">
+  <h5>Products</h5>
+  <ul>
+    <li>
+      <a href="http://technet.microsoft.com/windows">Windows</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/windowsserver">Windows Server</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/systemcenter">System Center</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/ie">Internet Explorer</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="http://technet.microsoft.com/office">Office</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/office365">Office 365</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/exchange">Exchange Server</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="http://technet.microsoft.com/sql">SQL Server</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/sharepoint">SharePoint Products</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/lync">Lync</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/en-us/bb421517.aspx?wt.svl=more_centers_link">See all products »</a>
+    </li>
+  </ul>
+</div>
+                    </div>
+                    <div data-value="hh880860" class="bladeItemMenu" style="display: none;">
+                        <div class="menuContainerLayout">
+  <h5>Resources</h5>
+  <ul>
+    <li>
+      <a href="https://curah.microsoft.com/" title="Curah!">Curah! curation service</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200157772">Evaluation Center</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/bb291022">Learning Resources</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/en-us/dn440144">Microsoft Tech Companion App</a>
+    </li>
+    <li>
+      <a href="https://www.technicalcommunity.com/" title="Microsoft Technical Communities">Microsoft Technical Communities</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200157774">Microsoft Virtual Academy</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/scriptcenter">Script Center</a>
+    </li>
+    <li>
+      <a href="http://blogs.technet.com/serverandtools">Server and Tools Blogs</a>
+    </li>
+    <li>
+      <a href="http://blogs.technet.com/">TechNet Blogs</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="http://technet.microsoft.com/cc543196">TechNet Flash Newsletter</a>
+    </li>
+    <li>
+      <a href="http://gallery.technet.microsoft.com/">TechNet Gallery</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/library/default.aspx">TechNet Library</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/magazine">TechNet Magazine</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/subscriptions">TechNet Subscriptions</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/video">TechNet Video</a>
+    </li>
+    <li>
+      <a href="http://social.technet.microsoft.com/wiki">TechNet Wiki</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/sysinternals">Windows Sysinternals</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/virtuallabs">Virtual Labs</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Solutions</h5>
+  <ul>
+    <li>
+      <a href="http://technet.microsoft.com/network">Networking</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/cloud/private-cloud">Cloud and Datacenter</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/security">Security</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/virtualization">Virtualization</a>
+    </li>
+  </ul>
+</div>
+                    </div>
+                    <div data-value="hh371326" class="bladeItemMenu" style="display: none;">
+                        <div class="menuContainerLayout">
+  <h5>Updates</h5>
+  <ul>
+    <li>
+      <a href="http://support.microsoft.com/default.aspx?id=fh;en-us;sp&fr=0&sd=gn&ln=en-us&ct=sd&se=nona">Service Packs</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/security/bulletin">Security Bulletins</a>
+    </li>
+    <li>
+      <a href="http://fe1.update.microsoft.com/microsoftupdate/v6/vistadefault.aspx?ln=en-US">Microsoft Update</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Trials</h5>
+  <ul>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200229291">Windows Server 2012 R2</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200229349">System Center 2012 R2</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200156426">Microsoft SQL Server 2012 SP1</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/en-us/evalcenter/hh699156">Windows 8.1 Enterprise</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200157775" title="See all trials">See all trials »</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Related Sites</h5>
+  <ul>
+    <li>
+      <a href="http://www.microsoft.com/downloads/search.aspx">Microsoft Download Center</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200157776">TechNet Evaluation Center</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/download/driver.aspx?q=driver">Drivers</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/download/compatibility.aspx?q=compatibility">Compatability &amp; Converters</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/sysinternals">Windows Sysinternals</a>
+    </li>
+    <li>
+      <a href="http://gallery.technet.microsoft.com/">TechNet Gallery</a>
+    </li>
+  </ul>
+</div>
+                    </div>
+                    <div data-value="jj837158" class="bladeItemMenu" style="display: none;">
+                        <div class="menuContainerLayout">
+  <h5>Training</h5>
+  <ul>
+    <li>
+      <a href="http://learning.microsoft.com/Manager/BrowseCatalog.aspx?browse=PT">Training Catalog</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/classlocator.aspx">Class Locator</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200155695">Microsoft Virtual Academy</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200155696">Free Windows Server 2012 courses</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200155697" title="Free Windows 8 courses">Free Windows 8 courses</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/training/sql-server.aspx">SQL Server training</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/training/format-online.aspx">e-Learning overview</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Certifications</h5>
+  <ul>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/certification/cert-overview.aspx">Certification overview</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/windows-certification.aspx" title="MCSA: Windows 8 ">MCSA: Windows 8</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/certification/cert-windowsserver.aspx">Windows Server Certification (MCSE)</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/certification/cert-private-cloud.aspx">Private Cloud Certification (MCSE)</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/certification/cert-sql-server.aspx">SQL Server Certification (MCSE)</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Other resources</h5>
+  <ul>
+    <li>
+      <a href="http://www.technetevents.com/">TechNet Events</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/learning/en/us/offers/secondshot.aspx">Second shot for certification</a>
+    </li>
+    <li>
+      <a href="http://borntolearn.mslearn.net/btl/b/default.aspx">Born To Learn blog</a>
+    </li>
+    <li>
+      <a href="https://www.technicalcommunity.com/Map.aspx" title="Microsoft Technical Communities">Find technical communities in your area</a>
+    </li>
+  </ul>
+</div>
+                    </div>
+                    <div data-value="hh371327" class="bladeItemMenu" style="display: none;">
+                        <div class="menuContainerLayout">
+  <h5>Support by product</h5>
+  <ul>
+    <li>
+      <a href="http://support.microsoft.com/ph/730">Exchange Server</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/13029">Forefront Server</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/815">Forefront Edge Security</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/14783/sl">Forefront Server Security</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/807">Internet Explorer</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/8753">Office</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/935/en-us">SharePoint</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="http://support.microsoft.com/ph/1044">SQL Server</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/16340/en-us">System Center</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/1163">Windows Server</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/1173">Windows XP</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/11732">Windows Vista</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/ph/14019">Windows 7</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/find-solutions/windows/windows-8/">Windows 8</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Other support links</h5>
+  <ul>
+    <li>
+      <a href="https://premier.microsoft.com/">Microsoft Premier Online</a>
+    </li>
+    <li>
+      <a href="http://fixitcenter.support.microsoft.com/Portal">Microsoft Fix It Center</a>
+    </li>
+    <li>
+      <a href="http://social.technet.microsoft.com/Forums/en-us/categories/">TechNet Forums</a>
+    </li>
+    <li>
+      <a href="http://social.msdn.microsoft.com/Forums/en-US/categories/">MSDN Forums</a>
+    </li>
+    <li>
+      <a href="http://technet.microsoft.com/en-us/security/bulletin">Security Bulletins &amp; Advisories</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/common/international.aspx">International support solutions</a>
+    </li>
+    <li>
+      <a href="http://support.microsoft.com/select/default.aspx?target=assistance">Log a support ticket</a>
+    </li>
+    <li>
+      <a href="http://www.microsoft.com/technet/support/ee/ee_advanced.aspx">Look up event IDs and error codes</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Not an IT pro?</h5>
+  <ul>
+    <li>
+      <a href="http://support.microsoft.com/">Microsoft Customer Support</a>
+    </li>
+    <li>
+      <a href="http://answers.microsoft.com/en-us">Microsoft Community Forums</a>
+    </li>
+  </ul>
+</div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+<script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+/*<![CDATA[*/
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "http://i.technet.microsoft.com", 
+	"js": "http://i2.technet.microsoft.com", 
+	"css": "http://i3.technet.microsoft.com"
+});
+/**/
+/*]]>*/
+</script><script type="text/javascript" src="./Running SQL Query with Powershell on remote server_files/Utilities.js" xmlns="http://www.w3.org/1999/xhtml"></script><script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+/*<![CDATA[*/
+var omnitureTracking = true;
+/*]]>*/
+</script><script type="text/javascript" src="./Running SQL Query with Powershell on remote server_files/megablade.1.js" xmlns="http://www.w3.org/1999/xhtml"></script></div>
+    
+    
+    
+
+    <script src="./Running SQL Query with Powershell on remote server_files/core.js" type="text/javascript" language="javascript"></script>
+    <script type="text/javascript" src="./Running SQL Query with Powershell on remote server_files/jquery-impromptu.3.1.min.js"></script>
+   
+    
+<script type="text/javascript" language="javascript">
+var railItems = ["/Forums/en-US/rightrailannouncement/Technet/19b487c4-b7a6-4b9c-80e9-3dd64e753638"];
+
+</script>
+
+    <script type="text/javascript" language="javascript">
+            var pageData = {"validUser":false,"autoSubscribe":false};
+    </script>
+     <script type="text/javascript" language="javascript">
+         var userEmailConfigured = false;
+     </script>  
+    <script src="./Running SQL Query with Powershell on remote server_files/messages.js" type="text/javascript" language="javascript"></script>
+    <script src="./Running SQL Query with Powershell on remote server_files/forumdetails.js" type="text/javascript" language="javascript"></script>
+    <script>
+        $(document).ready(function () {
+            Forums.ThreadPage.wirePageElements('Search forum questions');
+            Forums.ForumDetails.wireAllBreadcrumbs();
+        });
+    </script>
+
+    
+    <script src="./Running SQL Query with Powershell on remote server_files/webtrends.js" type="text/javascript"></script>
+    <noscript>
+        &lt;img alt="" border="0" id="DCSIMG" width="1" height="1" src="http://m.webtrends.com/dcsour5e80000008ybade4ttg_1i1l/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No"&gt;
+    </noscript>
+     
+    <script type="text/javascript" src="./Running SQL Query with Powershell on remote server_files/broker.js"></script>    
+    
+                <script src="./Running SQL Query with Powershell on remote server_files/loader.js" type="text/javascript" language="javascript"></script>
+
+    
+    <script src="./Running SQL Query with Powershell on remote server_files/SearchBox.jss" type="text/javascript" language="javascript"></script>
+    <script src="./Running SQL Query with Powershell on remote server_files/common.js" type="text/javascript" language="javascript"></script>
+    <script src="./Running SQL Query with Powershell on remote server_files/localepop.js" type="text/javascript" language="javascript"></script>
+    
+        <script src="./Running SQL Query with Powershell on remote server_files/omni_rsid_social.js" type="text/javascript" language="javascript"></script>
+        <script src="./Running SQL Query with Powershell on remote server_files/ms2(1).js" type="text/javascript" language="javascript"></script>
+        <noscript>&lt;a href="http://www.omniture.com" title="Web Analytics"&gt;
+        &lt;img src="http://msstonojssocial.112.2O7.net/b/ss/msstonojssocial/1/H.20.2--NS/0" height="1" width="1" alt="" /&gt;
+        &lt;/a&gt;</noscript>
+    
+
+
+<script src="./Running SQL Query with Powershell on remote server_files/broker-config.js"></script><div id="_WEDCSInsertedData" style="display: none;"><iframe id="_msnFrame" src="./Running SQL Query with Powershell on remote server_files/c.gif" style="z-index:-1;height:1px;width:1px;display:none;visibility:hidden;" onload="javascript:MscomBeacon();"></iframe></div></body></html>
