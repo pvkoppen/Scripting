@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <rewrite>
+            <rules>
+                <rule name="Redirect [root] to CertSrv" enabled="false">
+                    <match url="^$" />
+                    <action type="Rewrite" url="/certsrv" logRewrittenUrl="true" />
+                </rule>
+            </rules>
+        </rewrite>
+        <httpRedirect enabled="true" destination="https://server.domain.nz/certsrv/" exactDestination="true" childOnly="true" />
+    </system.webServer>
+</configuration>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <rewrite>
+            <rules>
+                <rule name="HTTP to HTTPS redirect" enabled="false" stopProcessing="true">
+                    <match url="(.*)" />
+                    <conditions>
+                        <add input="{HTTPS}" pattern="^OFF$" />
+                    </conditions>
+                    <action type="Redirect" url="https://{HTTP_HOST}/{REQUEST_URI}" appendQueryString="false" />
+                </rule>
+            </rules>
+        </rewrite>
+    </system.webServer>
+</configuration>
