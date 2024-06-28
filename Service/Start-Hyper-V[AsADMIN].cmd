@@ -1,6 +1,0 @@
-@ECHO OFF
-
-NET START HvHost
-NET START vmms
-
-Pause

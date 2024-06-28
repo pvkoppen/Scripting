@@ -1,4 +1,5 @@
 Connect-VIServer -Server [name]
+#Connect-VIServer -Server [name2]
 
 #
 $VMHosts = Get-VMHost | Sort-Object
@@ -38,4 +39,6 @@ foreach ($VMHost in $VMHosts) {
     }
 }
 $VMHostKeys
-Disconnect-VIServer
+
+#
+Disconnect-VIServer -Server * -Confirm:$False
